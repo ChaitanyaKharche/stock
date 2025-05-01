@@ -1,0 +1,14 @@
+fastapi>=0.111
+uvicorn[standard]>=0.29
+pandas<3
+numpy<2
+pandas-ta==0.3.14b0
+yfinance
+finnhub-python
+httpx[http2]
+asyncpraw
+requests-cache
+transformers
+torch
+openai
+python-dotenv
