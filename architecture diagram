@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 720">
+  <!-- Background -->
+  <rect width="1000" height="720" fill="#f8f9fa"/>
+  
+  <!-- Grid lines -->
+  <g stroke="#e0e0e0" stroke-width="1">
+    <g id="grid-x">
+      <line x1="0" y1="100" x2="1000" y2="100"/>
+      <line x1="0" y1="200" x2="1000" y2="200"/>
+      <line x1="0" y1="300" x2="1000" y2="300"/>
+      <line x1="0" y1="400" x2="1000" y2="400"/>
+      <line x1="0" y1="500" x2="1000" y2="500"/>
+      <line x1="0" y1="600" x2="1000" y2="600"/>
+    </g>
+  </g>
+
+  <!-- Main Application Border -->
+  <rect x="50" y="50" width="900" height="640" rx="15" ry="15" fill="none" stroke="#232f3e" stroke-width="2"/>
+  <text x="80" y="80" font-family="Arial" font-size="20" font-weight="bold" fill="#232f3e">Stock Gap Predictor Architecture</text>
+
+  <!-- Client Layer -->
+  <rect x="400" y="10" width="200" height="50" rx="10" ry="10" fill="#ffffff" stroke="#232f3e" stroke-width="1"/>
+  <text x="500" y="40" font-family="Arial" font-size="14" fill="#232f3e" text-anchor="middle">Client (Browser/cURL)</text>
+  
+  <!-- HTTP Request Path -->
+  <path d="M 500 60 L 500 110" stroke="#232f3e" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <text x="510" y="90" font-family="Arial" font-size="12" fill="#666666">HTTP Request</text>
+
+  <!-- FastAPI Layer -->
+  <rect x="100" y="110" width="800" height="80" rx="10" ry="10" fill="#ffe4b5" stroke="#ff9900" stroke-width="2"/>
+  <text x="120" y="140" font-family="Arial" font-size="16" font-weight="bold" fill="#232f3e">FastAPI Endpoint Layer (api.py)</text>
+  <text x="120" y="165" font-family="Arial" font-size="12" fill="#666666">Handles HTTP requests, coordinates application logic, error handling</text>
+
+  <!-- Core Application Components -->
+  <rect x="100" y="210" width="800" height="370" rx="10" ry="10" fill="#f0f8ff" stroke="#1166BB" stroke-width="2"/>
+  <text x="120" y="235" font-family="Arial" font-size="16" font-weight="bold" fill="#232f3e">Core Application Components</text>
+
+  <!-- Data Acquisition Module -->
+  <rect x="120" y="250" width="250" height="160" rx="8" ry="8" fill="#ffffff" stroke="#999999" stroke-width="1"/>
+  <text x="130" y="270" font-family="Arial" font-size="14" font-weight="bold" fill="#232f3e">Data Acquisition (data.py)</text>
+  
+  <!-- Stock Data Component -->
+  <rect x="135" y="280" width="110" height="60" rx="5" ry="5" fill="#e6f7ff" stroke="#1166BB" stroke-width="1"/>
+  <text x="190" y="310" font-family="Arial" font-size="12" fill="#232f3e" text-anchor="middle">Stock Data</text>
+  <text x="190" y="325" font-family="Arial" font-size="10" fill="#232f3e" text-anchor="middle">(yfinance)</text>
+  
+  <!-- News Data Component -->
+  <rect x="135" y="345" width="110" height="55" rx="5" ry="5" fill="#e6f7ff" stroke="#1166BB" stroke-width="1"/>
+  <text x="190" y="375" font-family="Arial" font-size="12" fill="#232f3e" text-anchor="middle">News API</text>
+  <text x="190" y="390" font-family="Arial" font-size="10" fill="#232f3e" text-anchor="middle">(Finnhub)</text>
+  
+  <!-- Reddit Data Component -->
+  <rect x="250" y="280" width="110" height="60" rx="5" ry="5" fill="#e6f7ff" stroke="#1166BB" stroke-width="1"/>
+  <text x="305" y="310" font-family="Arial" font-size="12" fill="#232f3e" text-anchor="middle">Reddit Data</text>
+  <text x="305" y="325" font-family="Arial" font-size="10" fill="#232f3e" text-anchor="middle">(PRAW)</text>
+  
+  <!-- Cache Component -->
+  <rect x="250" y="345" width="110" height="55" rx="5" ry="5" fill="#e6f7ff" stroke="#1166BB" stroke-width="1"/>
+  <text x="305" y="375" font-family="Arial" font-size="12" fill="#232f3e" text-anchor="middle">Caching</text>
+  <text x="305" y="390" font-family="Arial" font-size="10" fill="#232f3e" text-anchor="middle">(cache.py)</text>
+  
+  <!-- Technical Analysis Module -->
+  <rect x="380" y="250" width="245" height="110" rx="8" ry="8" fill="#ffffff" stroke="#999999" stroke-width="1"/>
+  <text x="390" y="270" font-family="Arial" font-size="14" font-weight="bold" fill="#232f3e">Technical Analysis (indicators.py)</text>
+  
+  <!-- TA Indicators Component -->
+  <rect x="395" y="280" width="215" height="70" rx="5" ry="5" fill="#fff0f5" stroke="#ff69b4" stroke-width="1"/>
+  <text x="410" y="305" font-family="Arial" font-size="12" fill="#232f3e">• ADX, DMI+, DMI-</text>
+  <text x="410" y="325" font-family="Arial" font-size="12" fill="#232f3e">• EMA, Volume Analysis</text>
+  <text x="410" y="345" font-family="Arial" font-size="10" fill="#232f3e">pandas_ta library</text>
+
+  <!-- Sentiment Analysis Module -->
+  <rect x="380" y="370" width="245" height="110" rx="8" ry="8" fill="#ffffff" stroke="#999999" stroke-width="1"/>
+  <text x="390" y="390" font-family="Arial" font-size="14" font-weight="bold" fill="#232f3e">Sentiment Analysis (sentiment.py)</text>
+  
+  <!-- FinBERT Component -->
+  <rect x="395" y="400" width="215" height="70" rx="5" ry="5" fill="#e6ffe6" stroke="#33aa33" stroke-width="1"/>
+  <text x="410" y="425" font-family="Arial" font-size="12" fill="#232f3e">• News Sentiment</text>
+  <text x="410" y="445" font-family="Arial" font-size="12" fill="#232f3e">• Reddit Sentiment</text>
+  <text x="410" y="465" font-family="Arial" font-size="10" fill="#232f3e">FinBERT Model (HuggingFace)</text>
+
+  <!-- LLM Prediction Module -->
+  <rect x="635" y="250" width="250" height="230" rx="8" ry="8" fill="#ffffff" stroke="#999999" stroke-width="1"/>
+  <text x="645" y="270" font-family="Arial" font-size="14" font-weight="bold" fill="#232f3e">LLM Prediction (llm.py)</text>
+  
+  <!-- OpenAI Component -->
+  <rect x="650" y="280" width="110" height="90" rx="5" ry="5" fill="#f8f0ff" stroke="#9932cc" stroke-width="1"/>
+  <text x="705" y="315" font-family="Arial" font-size="12" fill="#232f3e" text-anchor="middle">OpenAI API</text>
+  <text x="705" y="335" font-family="Arial" font-size="10" fill="#232f3e" text-anchor="middle">GPT-4o</text>
+  <text x="705" y="355" font-family="Arial" font-size="10" fill="#232f3e" text-anchor="middle">(Primary)</text>
+  
+  <!-- Local LLM Component -->
+  <rect x="765" y="280" width="110" height="90" rx="5" ry="5" fill="#f8f0ff" stroke="#9932cc" stroke-width="1"/>
+  <text x="820" y="315" font-family="Arial" font-size="12" fill="#232f3e" text-anchor="middle">Local LLM</text>
+  <text x="820" y="335" font-family="Arial" font-size="10" fill="#232f3e" text-anchor="middle">Llama-3.2-3B</text>
+  <text x="820" y="355" font-family="Arial" font-size="10" fill="#232f3e" text-anchor="middle">(Fallback)</text>
+  
+  <!-- Prediction Result Component -->
+  <rect x="650" y="380" width="225" height="90" rx="5" ry="5" fill="#f8f0ff" stroke="#9932cc" stroke-width="1"/>
+  <text x="665" y="405" font-family="Arial" font-size="12" fill="#232f3e">• Stock Gap Direction: UP/DOWN/FLAT</text>
+  <text x="665" y="425" font-family="Arial" font-size="12" fill="#232f3e">• Based on Technical & Sentiment</text>
+  <text x="665" y="445" font-family="Arial" font-size="12" fill="#232f3e">• Type-safe Response Handling</text>
+  <text x="665" y="465" font-family="Arial" font-size="10" fill="#232f3e">Consistent Type Conversions</text>
+
+  <!-- Common Issues and Fixes -->
+  <rect x="100" y="590" width="800" height="90" rx="10" ry="10" fill="#fff8dc" stroke="#ff9900" stroke-width="2"/>
+  <text x="120" y="610" font-family="Arial" font-size="16" font-weight="bold" fill="#232f3e">Common Issues & Fixes</text>
+  <text x="130" y="630" font-family="Arial" font-size="12" fill="#666666">• yFinance MultiIndex Columns: Use column.get_level_values(1) to extract correct column names</text>
+  <text x="130" y="650" font-family="Arial" font-size="12" fill="#666666">• DataFrame Creation from API Results: Handle empty or dict responses with proper index</text>
+  <text x="130" y="670" font-family="Arial" font-size="12" fill="#666666">• Type Consistency: Enforce consistent type conversions between module boundaries</text>
+
+  <!-- External Services -->
+  <rect x="70" y="430" width="300" height="140" rx="10" ry="10" fill="#f0ffff" stroke="#232f3e" stroke-width="1"/>
+  <text x="90" y="450" font-family="Arial" font-size="14" font-weight="bold" fill="#232f3e">External Services</text>
+  
+  <!-- yFinance API -->
+  <rect x="85" y="460" width="130" height="50" rx="5" ry="5" fill="#ffffff" stroke="#1166BB" stroke-width="1"/>
+  <text x="150" y="490" font-family="Arial" font-size="12" fill="#232f3e" text-anchor="middle">yFinance API</text>
+  
+  <!-- Finnhub API -->
+  <rect x="85" y="515" width="130" height="50" rx="5" ry="5" fill="#ffffff" stroke="#33aa33" stroke-width="1"/>
+  <text x="150" y="545" font-family="Arial" font-size="12" fill="#232f3e" text-anchor="middle">Finnhub API</text>
+  
+  <!-- Reddit API -->
+  <rect x="225" y="460" width="130" height="50" rx="5" ry="5" fill="#ffffff" stroke="#ff9900" stroke-width="1"/>
+  <text x="290" y="490" font-family="Arial" font-size="12" fill="#232f3e" text-anchor="middle">Reddit API</text>
+  
+  <!-- OpenAI API -->
+  <rect x="225" y="515" width="130" height="50" rx="5" ry="5" fill="#ffffff" stroke="#9932cc" stroke-width="1"/>
+  <text x="290" y="545" font-family="Arial" font-size="12" fill="#232f3e" text-anchor="middle">OpenAI API</text>
+
+  <!-- Data Flow Section -->
+  <rect x="635" y="490" width="250" height="90" rx="8" ry="8" fill="#ffffff" stroke="#999999" stroke-width="1"/>
+  <text x="645" y="510" font-family="Arial" font-size="14" font-weight="bold" fill="#232f3e">Data Flow</text>
+  <text x="655" y="530" font-family="Arial" font-size="12" fill="#666666">1. Fetch market & sentiment data</text>
+  <text x="655" y="550" font-family="Arial" font-size="12" fill="#666666">2. Calculate technical indicators</text>
+  <text x="655" y="570" font-family="Arial" font-size="12" fill="#666666">3. Generate prediction via LLM</text>
+
+  <!-- Backtest Component -->
+  <rect x="380" y="490" width="245" height="90" rx="8" ry="8" fill="#ffffff" stroke="#999999" stroke-width="1"/>
+  <text x="390" y="510" font-family="Arial" font-size="14" font-weight="bold" fill="#232f3e">Backtest Module (backtest.py)</text>
+  <text x="400" y="530" font-family="Arial" font-size="12" fill="#666666">• Testing prediction accuracy</text>
+  <text x="400" y="550" font-family="Arial" font-size="12" fill="#666666">• Historical gap analysis</text>
+  <text x="400" y="570" font-family="Arial" font-size="12" fill="#666666">• Performance metrics</text>
+
+  <!-- Data Flow Arrows -->
+  <!-- API to Components -->
+  <path d="M 500 190 L 500 240" stroke="#232f3e" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- Data to Technical Analysis -->
+  <path d="M 370 310 L 380 310" stroke="#232f3e" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- Technical Analysis to LLM -->
+  <path d="M 625 310 L 635 310" stroke="#232f3e" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- Data to Sentiment -->
+  <path d="M 370 400 L 380 400" stroke="#232f3e" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- Sentiment to LLM -->
+  <path d="M 625 420 L 635 420" stroke="#232f3e" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- LLM to API Response -->
+  <path d="M 765 250 L 765 190" stroke="#232f3e" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- External Services to Data -->
+  <path d="M 220 460 L 220 410" stroke="#232f3e" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 290 460 L 290 410" stroke="#232f3e" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- Response to Client -->
+  <path d="M 500 110 L 500 60" stroke="#232f3e" stroke-width="2" fill="none" stroke-dasharray="5,5" marker-end="url(#arrow)"/>
+  <text x="430" y="90" font-family="Arial" font-size="12" fill="#666666">JSON Response</text>
+
+  <!-- Arrow Definitions -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#232f3e"/>
+    </marker>
+  </defs>
+
+  <!-- Legend -->
+  <rect x="800" y="10" width="180" height="90" rx="5" ry="5" fill="#ffffff" stroke="#232f3e" stroke-width="1"/>
+  <text x="810" y="30" font-family="Arial" font-size="14" fill="#232f3e" font-weight="bold">Legend</text>
+  
+  <rect x="810" y="40" width="15" height="15" fill="#ffe4b5" stroke="#ff9900" stroke-width="1"/>
+  <text x="835" y="53" font-family="Arial" font-size="12" fill="#232f3e">API Layer</text>
+  
+  <rect x="810" y="60" width="15" height="15" fill="#e6f7ff" stroke="#1166BB" stroke-width="1"/>
+  <text x="835" y="73" font-family="Arial" font-size="12" fill="#232f3e">Data Components</text>
+  
+  <rect x="810" y="80" width="15" height="15" fill="#f8f0ff" stroke="#9932cc" stroke-width="1"/>
+  <text x="835" y="93" font-family="Arial" font-size="12" fill="#232f3e">Prediction Engine</text>
+
+  <!-- Footer -->
+  <text x="500" y="700" font-family="Arial" font-size="12" fill="#666666" text-anchor="middle">Stock Gap Predictor: Microservices Architecture with Separation of Concerns</text>
+</svg>
