@@ -13,20 +13,51 @@ class Resp(BaseModel):
 async def predict(symbol:str=Query(...,examples={"sym":{"value":"AAPL"}})):
     try:
         async with httpx.AsyncClient() as c:
-            stk=await data.fetch_stock(symbol); last=stk["Close"].iloc[-1]
+            stk=await data.fetch_stock(symbol)
+            last=stk["Close"].iloc[-1]
+            
             ind=indicators.enrich(stk).iloc[-1][["ADX","DMI_Plus","DMI_Minus","EMA_9_Close","EMA_9_Volume"]].fillna(0).to_dict()
-
-            news_json,_=await data.fetch_news(symbol,c); news_df=sentiment.annotate(sentiment.pd.DataFrame(news_json),"headline")
-            news_avg,news_cnt=sentiment.aggregate(news_df)
-
-            red_json,_=await data.fetch_reddit(symbol); red_df=sentiment.annotate(sentiment.pd.DataFrame(red_json),"title")
-            red_avg,red_cnt=sentiment.aggregate(red_df)
-
-            dir=llm.predict(symbol,last,ind,news_avg,red_avg,news_cnt,red_cnt)
+            
+            # Fix for news data
+            news_json,_=await data.fetch_news(symbol,c)
+            print(f"DEBUG - news_json type: {type(news_json)}")
+            
+            # Create DataFrame with proper index handling
+            if isinstance(news_json, list):
+                news_df = sentiment.pd.DataFrame(news_json)
+            elif isinstance(news_json, dict):
+                # For a single dictionary, create a DataFrame with one row
+                news_df = sentiment.pd.DataFrame([news_json], index=[0])
+            else:
+                # Handle empty or unexpected data
+                news_df = sentiment.pd.DataFrame()
+            
+            news_df = sentiment.annotate(news_df, "headline")
+            news_avg, news_cnt = sentiment.aggregate(news_df)
+            
+            # Similar fix for Reddit data
+            red_json,_ = await data.fetch_reddit(symbol)
+            if isinstance(red_json, list):
+                red_df = sentiment.pd.DataFrame(red_json)
+            elif isinstance(red_json, dict):
+                red_df = sentiment.pd.DataFrame([red_json], index=[0])
+            else:
+                red_df = sentiment.pd.DataFrame()
+                
+            red_df = sentiment.annotate(red_df, "title")
+            red_avg, red_cnt = sentiment.aggregate(red_df)
+            
+            # Force type conversions
+            last = float(last)
+            news_avg = float(news_avg)
+            red_avg = float(red_avg)
+            
+            dir = llm.predict(symbol, last, ind, news_avg, red_avg, news_cnt, red_cnt)
             return Resp(symbol=symbol,
-                        prediction_input=dict(last_close=last,indicators=ind,
-                                              news_sentiment_avg=news_avg,news_count=news_cnt,
-                                              reddit_sentiment_avg=red_avg,reddit_count=red_cnt),
-                        predicted_direction=dir,status="Success" if dir else "Error",error_message=None)
+                        prediction_input=dict(last_close=last, indicators=ind,
+                                             news_sentiment_avg=news_avg, news_count=news_cnt,
+                                             reddit_sentiment_avg=red_avg, reddit_count=red_cnt),
+                        predicted_direction=dir, status="Success" if dir else "Error", error_message=None)
     except Exception as e:
-        raise HTTPException(status_code=500,detail=str(e))
+        print(f"ERROR in predict endpoint: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
