@@ -35,7 +35,6 @@ pip-selfcheck.json
 
 # Jupyter Notebook
 .ipynb_checkpoints/
-*.ipynb
 
 # IDE
 .vscode/
