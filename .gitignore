@@ -1,0 +1,77 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv*/
+env*/
+venv_py310/
+env/
+bin/
+include/
+lib/
+lib64/
+pyvenv.cfg
+pip-selfcheck.json
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment files
+.env
+.venv
+env.txt
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Logs
+lightning_logs/
+*.log
+logs/
+
+# Cache
+.cache/
+
+# Data files
+*.csv
+*.pickle
+*.pkl
+*.h5
+*.hdf5
+*.npy
+*.npz
+
+# ONNX models
+*.onnx
+
+# OS
+.DS_Store
+Thumbs.db
