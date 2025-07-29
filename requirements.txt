@@ -115,7 +115,7 @@ numpy==1.26.4
 onnx==1.17.0
 onnxconverter-common==1.14.0
 onnxmltools==1.11.1
-onnxruntime-gpu==1.22.0
+onnxruntime==1.17.0
 openai==1.77.0
 optuna==3.5.0
 osqp==1.0.4
@@ -196,7 +196,7 @@ tokenizers==0.21.1
 tomlkit==0.13.2
 torch==2.6.0
 torchaudio==2.6.0
-torchvision==0.18.1
+torchvision==0.21.0
 torchcde==0.2.5
 torchdiffeq==0.2.5
 torchmetrics==1.7.1
