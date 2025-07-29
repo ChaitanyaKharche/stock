@@ -1,13 +1,16 @@
 FROM python:3.12-slim
-
 WORKDIR /app
+
 COPY requirements.txt .
 
-# upgrade pip & add PyTorch CUDA index
+# remove all nvidia‑* lines and gpu runtimes
+RUN sed -i '/^nvidia-/d;/onnxruntime-gpu/d' requirements.txt
+
+# upgrade pip & add PyTorch CUDA index (optional)
 RUN pip install --upgrade pip \
  && pip config set global.extra-index-url https://download.pytorch.org/whl/cu121
 
-# now install all deps (including torch==2.5.1+cu121 etc)
+# install the cleaned requirements
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY app app
