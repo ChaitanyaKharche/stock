@@ -196,7 +196,7 @@ tokenizers==0.21.1
 tomlkit==0.13.2
 torch==2.6.0
 torchaudio==2.6.0
-torchvision==0.17.2
+torchvision==0.18.1
 torchcde==0.2.5
 torchdiffeq==0.2.5
 torchmetrics==1.7.1
