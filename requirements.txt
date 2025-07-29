@@ -219,7 +219,7 @@ threadpoolctl==3.6.0
 tinycss2==1.4.0
 tokenizers==0.21.1
 tomlkit==0.13.2
-torch==2.5.1+cu121
+torch==2.5.1
 torchaudio==2.5.1+cu121
 torchcde==0.2.5
 torchdiffeq==0.2.5
