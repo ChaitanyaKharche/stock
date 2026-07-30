@@ -1,0 +1,112 @@
+[2025-11-05 12:27:38] ======================================================================
+[2025-11-05 12:27:38] DUAL TRADING SYSTEM STARTED
+[2025-11-05 12:27:38] Mode: PAPER
+[2025-11-05 12:27:38] Daily Strategy Symbols: ['TSLA', 'NVDA', 'AAPL', 'SPY', 'QQQ', 'AMZN']
+[2025-11-05 12:27:38] Intraday Options Symbols: ['SPY', 'QQQ', 'TSLA', 'NVDA']
+[2025-11-05 12:27:38] TRADING SESSION STARTED
+[2025-11-05 12:27:39] Account: Equity $100,000 | Cash $100,000
+[2025-11-05 12:39:14] STOPPED BY USER
+[2025-11-05 12:39:16] ======================================================================
+[2025-11-05 12:39:16] DUAL TRADING SYSTEM STARTED
+[2025-11-05 12:39:16] Mode: PAPER
+[2025-11-05 12:39:16] Daily Strategy Symbols: ['TSLA', 'NVDA', 'AAPL', 'SPY', 'QQQ', 'AMZN']
+[2025-11-05 12:39:16] Intraday Options Symbols: ['SPY', 'QQQ', 'TSLA', 'NVDA']
+[2025-11-05 12:39:16] 
+======================================================================
+[2025-11-05 12:39:16] RUNNING DIAGNOSTICS - API & DATA VERIFICATION
+[2025-11-05 12:39:16] ======================================================================
+[2025-11-05 12:39:16] 
+[TEST 1] API Connectivity
+[2025-11-05 13:08:01] ======================================================================
+[2025-11-05 13:08:01] DUAL TRADING SYSTEM STARTED
+[2025-11-05 13:08:01] Mode: PAPER
+[2025-11-05 13:08:01] Daily Strategy Symbols: ['TSLA', 'NVDA', 'AAPL', 'SPY', 'QQQ', 'AMZN']
+[2025-11-05 13:08:01] Intraday Options Symbols: ['SPY', 'QQQ', 'TSLA', 'NVDA']
+[2025-11-05 13:08:01] 
+======================================================================
+[2025-11-05 13:08:01] RUNNING DIAGNOSTICS - API & DATA VERIFICATION
+[2025-11-05 13:08:01] ======================================================================
+[2025-11-05 13:08:01] 
+[TEST 1] API Connectivity
+[2025-11-05 13:08:01] [OK] API Connected: PA3UQL9LR2BV
+[2025-11-05 13:08:01] [OK] Account Status: AccountStatus.ACTIVE
+[2025-11-05 13:08:01] [OK] Equity: $100,000.00
+[2025-11-05 13:08:01] [OK] Cash: $100,000.00
+[2025-11-05 13:08:01] [OK] Buying Power: $200,000.00
+[2025-11-05 13:08:01] 
+[TEST 2] Historical Data Access
+[2025-11-05 13:08:01] [FAIL] Historical data failed: 'TradingClient' object has no attribute 'get_stock_bars'
+[2025-11-05 13:10:11] ======================================================================
+[2025-11-05 13:10:11] DUAL TRADING SYSTEM STARTED
+[2025-11-05 13:10:11] Mode: PAPER
+[2025-11-05 13:10:11] Daily Strategy Symbols: ['TSLA', 'NVDA', 'AAPL', 'SPY', 'QQQ', 'AMZN']
+[2025-11-05 13:10:11] Intraday Options Symbols: ['SPY', 'QQQ', 'TSLA', 'NVDA']
+[2025-11-05 13:10:11] 
+======================================================================
+[2025-11-05 13:10:11] RUNNING DIAGNOSTICS - API & DATA VERIFICATION
+[2025-11-05 13:10:11] ======================================================================
+[2025-11-05 13:10:11] 
+[TEST 1] API Connectivity
+[2025-11-05 13:10:11] [OK] API Connected: PA3UQL9LR2BV
+[2025-11-05 13:10:11] [OK] Account Status: AccountStatus.ACTIVE
+[2025-11-05 13:10:11] [OK] Equity: $100,000.00
+[2025-11-05 13:10:11] [OK] Cash: $100,000.00
+[2025-11-05 13:10:11] [OK] Buying Power: $200,000.00
+[2025-11-05 13:10:11] 
+[TEST 2] Historical Data Access
+[2025-11-05 13:10:11] [FAIL] No bars returned for TSLA
+[2025-11-05 13:10:29] ======================================================================
+[2025-11-05 13:10:29] DUAL TRADING SYSTEM STARTED
+[2025-11-05 13:10:29] Mode: PAPER
+[2025-11-05 13:10:29] Daily Strategy Symbols: ['TSLA', 'NVDA', 'AAPL', 'SPY', 'QQQ', 'AMZN']
+[2025-11-05 13:10:29] Intraday Options Symbols: ['SPY', 'QQQ', 'TSLA', 'NVDA']
+[2025-11-05 13:10:29] 
+======================================================================
+[2025-11-05 13:10:29] RUNNING DIAGNOSTICS - API & DATA VERIFICATION
+[2025-11-05 13:10:29] ======================================================================
+[2025-11-05 13:10:29] 
+[TEST 1] API Connectivity
+[2025-11-05 13:10:30] [OK] API Connected: PA3UQL9LR2BV
+[2025-11-05 13:10:30] [OK] Account Status: AccountStatus.ACTIVE
+[2025-11-05 13:10:30] [OK] Equity: $100,000.00
+[2025-11-05 13:10:30] [OK] Cash: $100,000.00
+[2025-11-05 13:10:30] [OK] Buying Power: $200,000.00
+[2025-11-05 13:10:30] 
+[TEST 2] Historical Data Access
+[2025-11-05 13:10:30] [FAIL] No bars returned for TSLA
+[2025-11-05 13:12:52] ======================================================================
+[2025-11-05 13:12:52] DUAL TRADING SYSTEM STARTED
+[2025-11-05 13:12:52] Mode: PAPER
+[2025-11-05 13:12:52] Daily Strategy Symbols: ['TSLA', 'NVDA', 'AAPL', 'SPY', 'QQQ', 'AMZN']
+[2025-11-05 13:12:52] Intraday Options Symbols: ['SPY', 'QQQ', 'TSLA', 'NVDA']
+[2025-11-05 13:12:52] 
+======================================================================
+[2025-11-05 13:12:52] RUNNING DIAGNOSTICS - API CONNECTION TEST
+[2025-11-05 13:12:52] ======================================================================
+[2025-11-05 13:12:52] 
+[TEST 1] API Connectivity
+[2025-11-05 13:12:53] [OK] API Connected: PA3UQL9LR2BV
+[2025-11-05 13:12:53] [OK] Account Status: AccountStatus.ACTIVE
+[2025-11-05 13:12:53] [OK] Equity: $100,000.00
+[2025-11-05 13:12:53] [OK] Cash: $100,000.00
+[2025-11-05 13:12:53] [OK] Buying Power: $200,000.00
+[2025-11-05 13:12:53] 
+[TEST 2] Real-Time Quote Access
+[2025-11-05 13:12:53] [WARN] Could not get TSLA quote: 'TradingClient' object has no attribute 'get_latest_trade'
+[2025-11-05 13:12:53] [INFO] No live quotes available (market closed or pre-market)
+[2025-11-05 13:12:53] 
+[TEST 3] Account Assets & Positions
+[2025-11-05 13:12:53] [OK] No open positions (fresh account)
+[2025-11-05 13:12:53] 
+[TEST 4] Market Status
+[2025-11-05 13:12:53] [OK] Market Open: True
+[2025-11-05 13:12:53]      Timestamp: 2025-11-05 13:12:53.993950-05:00
+[2025-11-05 13:12:53]      Next Open: 2025-11-06 09:30:00-05:00
+[2025-11-05 13:12:53]      Next Close: 2025-11-05 16:00:00-05:00
+[2025-11-05 13:12:53] 
+======================================================================
+[2025-11-05 13:12:53] DIAGNOSTICS COMPLETE - API IS WORKING
+[2025-11-05 13:12:53] System ready for trading tomorrow at 9:30 AM
+[2025-11-05 13:12:53] ======================================================================
+
+[2025-11-05 13:12:53] ERROR: name 'self' is not defined

@@ -1,0 +1,216 @@
+{
+  "events": {
+    "BTC": [
+      {
+        "date": "2024-01-10",
+        "event": "SEC Bitcoin ETF Approval",
+        "type": "REGULATORY",
+        "context": "Post-approval rally",
+        "lookback_days": 30,
+        "event_price": "$46669.78",
+        "future_price": "$45312.39",
+        "actual_impact": "DOWN 2.91%",
+        "baseline_vol": "1.82%",
+        "period_vol": "1.60%",
+        "vol_ratio": "0.88x",
+        "market_regime": "STRONG_BULL",
+        "significance": "1.60\u03c3",
+        "event_volume": "2.30x"
+      },
+      {
+        "date": "2024-05-23",
+        "event": "ETH ETF Approval",
+        "type": "REGULATORY",
+        "context": "Post-approval momentum",
+        "lookback_days": 30,
+        "event_price": "$67905.78",
+        "future_price": "$64101.95",
+        "actual_impact": "DOWN 5.60%",
+        "baseline_vol": "2.54%",
+        "period_vol": "1.04%",
+        "vol_ratio": "0.41x",
+        "market_regime": "BULL",
+        "significance": "2.20\u03c3",
+        "event_volume": "0.79x"
+      },
+      {
+        "date": "2024-04-20",
+        "event": "Bitcoin Halving",
+        "type": "CRYPTO_EVENT",
+        "context": "6-month post-halving cycle",
+        "lookback_days": 60,
+        "event_price": "$65029.73",
+        "future_price": "$65153.32",
+        "actual_impact": "UP 0.19%",
+        "baseline_vol": "2.57%",
+        "period_vol": "1.69%",
+        "vol_ratio": "0.66x",
+        "market_regime": "BULL",
+        "significance": "0.07\u03c3",
+        "event_volume": "0.13x"
+      },
+      {
+        "date": "2025-07-31",
+        "event": "SEC Pro-Crypto Stance",
+        "type": "REGULATORY",
+        "context": "Regulatory tailwind",
+        "lookback_days": 30,
+        "event_price": "$115753.11",
+        "future_price": "$108366.22",
+        "actual_impact": "DOWN 6.38%",
+        "baseline_vol": "1.22%",
+        "period_vol": "1.54%",
+        "vol_ratio": "1.26x",
+        "market_regime": "MIXED",
+        "significance": "5.22\u03c3",
+        "event_volume": "2.67x"
+      },
+      {
+        "date": "2025-11-10",
+        "event": "XRP ETF Approval",
+        "type": "REGULATORY",
+        "context": "Altseason catalyst",
+        "lookback_days": 30,
+        "event_price": "$105989.36",
+        "future_price": "$101664.35",
+        "actual_impact": "DOWN 4.08%",
+        "baseline_vol": "1.41%",
+        "period_vol": "2.06%",
+        "vol_ratio": "1.46x",
+        "market_regime": "BEAR",
+        "significance": "2.89\u03c3",
+        "event_volume": "1.64x"
+      }
+    ],
+    "ETH": [
+      {
+        "date": "2024-05-23",
+        "event": "Ethereum ETF Approval",
+        "type": "REGULATORY",
+        "context": "Post-approval rally",
+        "lookback_days": 30,
+        "event_price": "$3781.20",
+        "future_price": "$3516.93",
+        "actual_impact": "DOWN 6.99%",
+        "baseline_vol": "2.72%",
+        "period_vol": "1.45%",
+        "vol_ratio": "0.53x",
+        "market_regime": "MIXED",
+        "significance": "2.57\u03c3",
+        "event_volume": "2.52x"
+      },
+      {
+        "date": "2024-04-20",
+        "event": "Bitcoin Halving (altseason)",
+        "type": "CRYPTO_EVENT",
+        "context": "6-month altseason bull",
+        "lookback_days": 60,
+        "event_price": "$3156.30",
+        "future_price": "$3484.62",
+        "actual_impact": "UP 10.40%",
+        "baseline_vol": "2.62%",
+        "period_vol": "2.04%",
+        "vol_ratio": "0.78x",
+        "market_regime": "BULL",
+        "significance": "3.97\u03c3",
+        "event_volume": "0.57x"
+      },
+      {
+        "date": "2025-07-31",
+        "event": "Pro-crypto SEC Stance",
+        "type": "REGULATORY",
+        "context": "Alt beneficiary",
+        "lookback_days": 30,
+        "event_price": "$3698.26",
+        "future_price": "$4360.19",
+        "actual_impact": "UP 17.90%",
+        "baseline_vol": "2.43%",
+        "period_vol": "3.85%",
+        "vol_ratio": "1.59x",
+        "market_regime": "STRONG_BULL",
+        "significance": "7.37\u03c3",
+        "event_volume": "1.29x"
+      }
+    ],
+    "SOL": [
+      {
+        "date": "2024-01-10",
+        "event": "BTC ETF kickstarts altseason",
+        "type": "MARKET_CATALYST",
+        "context": "Altseason begins",
+        "lookback_days": 60,
+        "event_price": "$157.25",
+        "future_price": "$177.19",
+        "actual_impact": "UP 12.68%",
+        "baseline_vol": "1.50%",
+        "period_vol": "2.69%",
+        "vol_ratio": "1.79x",
+        "market_regime": "UNKNOWN",
+        "significance": "8.45\u03c3",
+        "event_volume": "nanx"
+      },
+      {
+        "date": "2024-05-23",
+        "event": "ETH ETF approval, alt rally",
+        "type": "MARKET_CATALYST",
+        "context": "Altseason peak",
+        "lookback_days": 60,
+        "event_price": "$157.25",
+        "future_price": "$177.19",
+        "actual_impact": "UP 12.68%",
+        "baseline_vol": "1.50%",
+        "period_vol": "2.69%",
+        "vol_ratio": "1.79x",
+        "market_regime": "UNKNOWN",
+        "significance": "8.45\u03c3",
+        "event_volume": "nanx"
+      },
+      {
+        "date": "2025-11-10",
+        "event": "Multiple altcoin ETF approvals",
+        "type": "REGULATORY",
+        "context": "Altseason extension",
+        "lookback_days": 60,
+        "event_price": "$167.27",
+        "future_price": "$153.30",
+        "actual_impact": "DOWN 8.35%",
+        "baseline_vol": "3.38%",
+        "period_vol": "4.20%",
+        "vol_ratio": "1.24x",
+        "market_regime": "STRONG_BEAR",
+        "significance": "2.47\u03c3",
+        "event_volume": "2.35x"
+      }
+    ]
+  },
+  "patterns": {
+    "regulatory_approval": {
+      "count": 7,
+      "impacts": [
+        2.91,
+        5.6,
+        6.38,
+        4.08,
+        6.99,
+        17.9,
+        8.35
+      ]
+    },
+    "crypto_event": {
+      "count": 2,
+      "impacts": [
+        0.19,
+        10.4
+      ]
+    },
+    "market_catalyst": {
+      "count": 2,
+      "impacts": [
+        12.68,
+        12.68
+      ]
+    }
+  },
+  "methodology": "Event-specific lookback windows + market regime adjustment + volatility normalization",
+  "generated_at": "2025-11-12T13:15:55.042621"
+}

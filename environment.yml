@@ -1,0 +1,7 @@
+name: trade-venv
+channels:
+  - defaults
+dependencies:
+  - pip
+  - python=3.11
+prefix: /home/kharche.c/.conda/envs/trade-venv

@@ -1,0 +1,1708 @@
+{
+    "news_data": [
+        {
+            "category": "company",
+            "datetime": 1756986845,
+            "headline": "Salesforce: A Unique Buying Opportunity",
+            "id": 136637830,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2191397434/image_2191397434.jpg?io=getty-c-w1536",
+            "related": "MSFT",
+            "source": "SeekingAlpha",
+            "summary": "Salesforce, Inc. beat Q2 estimates with solid AI-driven growth and profitability, and trades at an attractive valuation. Click for my CRM post-earnings update.",
+            "url": "https://finnhub.io/api/news?id=efddfc305d512c3d374991200f430bdf934d6d0443a5dfd219a8cb043a0fbda7"
+        },
+        {
+            "category": "company",
+            "datetime": 1756984950,
+            "headline": "ShutterStock: Generative AI Disruptors Have Caused Deep Merger Arbitrage",
+            "id": 136637713,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1300319609/image_1300319609.jpg?io=getty-c-w1536",
+            "related": "MSFT",
+            "source": "SeekingAlpha",
+            "summary": "ShutterStock\u00e2\u0080\u0099s merger with Getty Images could yield 40%+ returns. Explore undervaluation, M&A insights, and AI risks.",
+            "url": "https://finnhub.io/api/news?id=3333ec44916180d570784d64e0f35ff1c96db77faa0c7e1dad2eed1c8c44e07d"
+        },
+        {
+            "category": "company",
+            "datetime": 1756982269,
+            "headline": "Alphabet Has Just Received Game-Changing News",
+            "id": 136637589,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1415832512/image_1415832512.jpg?io=getty-c-w1536",
+            "related": "MSFT",
+            "source": "SeekingAlpha",
+            "summary": "Alphabet Inc. remains undervalued after an antitrust win, securing Chrome & Android. Click for my GOOGL update after the latest court ruling.",
+            "url": "https://finnhub.io/api/news?id=6b28224a487376c16fe73a79f0bc232c3c831be494a7f5f812cfebeef56e94f2"
+        },
+        {
+            "category": "company",
+            "datetime": 1756979543,
+            "headline": "Case Closed: What's Next For Alphabet? (Rating Downgrade)",
+            "id": 136637417,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1415832512/image_1415832512.jpg?io=getty-c-w1536",
+            "related": "MSFT",
+            "source": "SeekingAlpha",
+            "summary": "Alphabet\u00c2\u00a0Inc. won't be forced to sell off its Chrome search engine, meaning its bread and butter is safe. Click here to read an analysis of GOOGL stock now.",
+            "url": "https://finnhub.io/api/news?id=9edd3bd2a682d10c457168d278010dc6213668c39f6890a5ae6a5d061d8bd73b"
+        },
+        {
+            "category": "company",
+            "datetime": 1756977641,
+            "headline": "The Great Disconnect: AI Stocks Soar While The Economy Stalls",
+            "id": 136637301,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2034638463/image_2034638463.jpg?io=getty-c-w1536",
+            "related": "MSFT",
+            "source": "SeekingAlpha",
+            "summary": "AI is driving stock market highs, but economic reality lags behind, raising questions about sustainability and risk. Find out why investors should watch closely.",
+            "url": "https://finnhub.io/api/news?id=c7d7ebd7d591bef56bc20276536c5c8e503df9c09daa567793ea20ba0774e4af"
+        },
+        {
+            "category": "company",
+            "datetime": 1756971300,
+            "headline": "A.I. Field Of Dreams",
+            "id": 136636866,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2186726328/image_2186726328.jpg?io=getty-c-w1536",
+            "related": "MSFT",
+            "source": "SeekingAlpha",
+            "summary": "The AI boom has already reshaped markets with all three benchmarks (AI models, applications, and users) hitting record highs. Read more here.",
+            "url": "https://finnhub.io/api/news?id=71167ed8b837d1c7b104ede03111b321fedf51a9e006f49fed8cc17bf04aca46"
+        },
+        {
+            "category": "company",
+            "datetime": 1756954575,
+            "headline": "Salesforce Remains A Buy As Market Digests Its Maturity",
+            "id": 136635652,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1479379116/image_1479379116.jpg?io=getty-c-w1536",
+            "related": "MSFT",
+            "source": "SeekingAlpha",
+            "summary": "Salesforce is shifting to sustainable profit growth and rising margins. Valuation is reasonable, even cheap. Learn if CRM stock is still a smart buy for investors.",
+            "url": "https://finnhub.io/api/news?id=7f5bc672488b5a0cbed94636a4149a84a20c664939800a3e14ad971836e18ee1"
+        },
+        {
+            "category": "company",
+            "datetime": 1756943286,
+            "headline": "Microsoft: Computing Demand To Outpace Supply Until Year End",
+            "id": 136634665,
+            "image": "",
+            "related": "MSFT",
+            "source": "SeekingAlpha",
+            "summary": "",
+            "url": "https://finnhub.io/api/news?id=ac7ca07d90f7d5e436f219e6759ab1f5ad479c30f07786b2932e25afd650938e"
+        },
+        {
+            "category": "company",
+            "datetime": 1756926360,
+            "headline": "Why Google Stock Would Have Been Better Off if Alphabet Had Been Broken Up.",
+            "id": 136631051,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Alphabet likely won\u2019t be split up in any meaningful way. Investors are relieved, but they might have done better with a full dismantling of the tech giant.",
+            "url": "https://finnhub.io/api/news?id=ff191ccf0ede17f432477383bf3fc586324a55d1956294537ee16d052f7a889b"
+        },
+        {
+            "category": "company",
+            "datetime": 1756926360,
+            "headline": "Former Microsoft UK Envisioning Officer Dave Coplin to Keynote at Info-Tech LIVE 2025 in Barcelona",
+            "id": 136631050,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Info-Tech Research Group, a global leader in IT research and advisory, has confirmed that Dave Coplin, Founder of The Envisioners and former Chief Envisioning Officer at Microsoft UK, will join the keynote lineup for the firm's popular flagship IT conference, Info-Tech LIVE 2025 in Barcelona. Taking place October 21\u201322 at the SLS Barcelona, the two-day event marks the first-ever European edition of Info-Tech LIVE, which will bring together CIOs, senior IT executives, and technology leaders from",
+            "url": "https://finnhub.io/api/news?id=5db10c0ecae59e3c98ea0cbbbf15eb04664951c475ba26ae3c28c7c41657e164"
+        },
+        {
+            "category": "company",
+            "datetime": 1756920942,
+            "headline": "Why Paramount (PSKY) Stock Is Up Today",
+            "id": 136617120,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Shares of multinational media and entertainment corporation Paramount (NASDAQ:PARA) jumped 3.1% in the afternoon session after the company announced a major film deal with Microsoft-owned Activision to bring the popular \u201cCall of Duty\u201d video game franchise to the big screen.",
+            "url": "https://finnhub.io/api/news?id=04d2d4820ca4ceae6c6b6267c5994c716503d757db92e7983395d7da8cb43bab"
+        },
+        {
+            "category": "company",
+            "datetime": 1756920900,
+            "headline": "Successful UK leader Chris Mean is appointed new CEO for Columbus in the US",
+            "id": 136616816,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "With over 20 years of experience within the company, Chris Mean, CEO for Columbus UK, will now take on the additional role of CEO for Columbus US. This strategic move is to strengthen the collaboration between Europe and the US further.",
+            "url": "https://finnhub.io/api/news?id=0f6e1e52dcfd03c1a2b6f388ab3c50d4761cfb0c86ececc0be15ceb1de25fdb6"
+        },
+        {
+            "category": "company",
+            "datetime": 1756920444,
+            "headline": "JetBrains CEO on capturing return on enterprise AI investment while preserving the dignity of the engineer",
+            "id": 136616817,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "As a privately held, profitable European tech company with products embedded in the daily workflows of millions of developers globally, JetBrains defies Silicon Valley's formula for success.",
+            "url": "https://finnhub.io/api/news?id=33a4fdd30eaf2af52f65cfb2d603e0312a5c8e7ad5004953f53d860c11c193fb"
+        },
+        {
+            "category": "company",
+            "datetime": 1756919520,
+            "headline": "OMV Energy and DeepIQ Announce Collaboration with Microsoft to Deploy Agentic AI in OMV Energy Drilling Operations",
+            "id": 136616818,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "HOUSTON, Sept. 03, 2025 (GLOBE NEWSWIRE) -- DeepIQ and OMV Energy today announce a collaboration with Microsoft aimed at transforming OMV Energy drilling operations through the deployment of agentic AI. This collaboration unites DeepIQ\u2019s Agentic AI solutions, Microsoft Azure OpenAI Service, and OMV\u2019s deep industry knowledge to enhance operational efficiencies across the board. The first solution delivered under this collaboration will be well construction optimization by automating the corporate",
+            "url": "https://finnhub.io/api/news?id=0c0f1d1704063a7e2a90b7c84fe4cacc446aabd75e536ca2610b45d0341cc096"
+        },
+        {
+            "category": "company",
+            "datetime": 1756919280,
+            "headline": "Baidu's Core Ad Business Falters: Can AI Growth Offset Weakness?",
+            "id": 136631053,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "BIDU's ad revenues tumble 15% in Q2 2025, but soaring AI Cloud and non-ad growth highlight its evolving path to recovery.",
+            "url": "https://finnhub.io/api/news?id=8977401b85d08472b7f88425fb53eab1857755ab3c4a2d6cbf44aae96f7aeb0d"
+        },
+        {
+            "category": "company",
+            "datetime": 1756918487,
+            "headline": "What's Going On With Arm Holdings Stock Wednesday?",
+            "id": 136616819,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Arm Holdings (NASDAQ:ARM) drew investor attention on Wednesday as optimism over artificial intelligence continued to drive activity across semiconductor stocks. The British chipmaker, whose energy-efficient processor blueprints power the majority of the world's smartphones, also has a growing presence in automotive, data center, and Internet of Things applications. Its technology underpins much of the current AI infrastructure boom. Despite that positioning, Arm shares are up only 8% year-to-dat",
+            "url": "https://finnhub.io/api/news?id=565ad42448cc175e92304e09136ee7f63c9e524827da87d48882ccc341404647"
+        },
+        {
+            "category": "company",
+            "datetime": 1756916760,
+            "headline": "Alphabet Survives Breakup Attempt. That\u2019s a Bummer for the Stock.",
+            "id": 136616820,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Alphabet likely won\u2019t be split up in any meaningful way. Investors are relieved, but they might have done better with a full dismantling of the tech giant.",
+            "url": "https://finnhub.io/api/news?id=1a98ef55472db6798886a34abd24abb8005f2f635cb4c944a4a42684b030dcfc"
+        },
+        {
+            "category": "company",
+            "datetime": 1756916040,
+            "headline": "RiverMeadow Expands Microsoft Cloud Coverage by Introducing Full Migration Support for Hyper-V",
+            "id": 136616821,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "RiverMeadow Software, a leader in cloud migration and modernization solutions, today announced the release of its enhanced Workload Mobility Platform, now with full migration support for Microsoft Hyper-V. This marks a major milestone in RiverMeadow's commitment to delivering complete workload mobility across all Microsoft private and public cloud platforms.",
+            "url": "https://finnhub.io/api/news?id=3201b010601bf6e105d2c1f88c8da0981c287fee96a99f10411e8755d8717a17"
+        },
+        {
+            "category": "company",
+            "datetime": 1756914342,
+            "headline": "Alphabet (GOOGL) Shares Skyrocket, What You Need To Know",
+            "id": 136616813,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Shares of online advertising giant Alphabet (NASDAQ:GOOGL) jumped 8.3% in the morning session after a U.S. judge's ruling in a major antitrust case eased fears of a forced break-up of the company.",
+            "url": "https://finnhub.io/api/news?id=f028ff79d0e0299bfba219cfa0301b147dd767e6a4fae16f7d2406094067c571"
+        },
+        {
+            "category": "company",
+            "datetime": 1756912566,
+            "headline": "Do New Microsoft Products Make It Worth Investing in the Stock?",
+            "id": 136615580,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Here's a look at the company's recent development and whether or not it might be a good time to pick up shares of Microsoft.",
+            "url": "https://finnhub.io/api/news?id=92de7d0abb4bc64d2eec1fc97e4f9207fbed427ec431a84a32b370958069d648"
+        },
+        {
+            "category": "company",
+            "datetime": 1756910143,
+            "headline": "Salesforce\u2019s Struggling Stock Needs Earnings to Show AI Progress",
+            "id": 136615569,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Salesforce shares are down 23% this year, putting them among the 30 worst-performing stocks in the S&P 500 Index.  The plunge has been particularly dramatic in light of the strong showings by software giants like Microsoft Corp., Oracle Corp., and Palantir Technologies Inc., all of whom are considered to be stronger in AI.  While Salesforce, which makes customer relationship management software, has its own AI products, concerns about its long-term trajectory mean the shares may languish even if the company posts strong earnings when it reports after the bell on Wednesday.",
+            "url": "https://finnhub.io/api/news?id=329249c8e090f426a617bb0028a5834176b633360c15d8feceda503de1694a6b"
+        },
+        {
+            "category": "company",
+            "datetime": 1756909800,
+            "headline": "Portfolio Positioning For An Uncertain Market With Next Gen Investors",
+            "id": 136630999,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1472999290/image_1472999290.jpg?io=getty-c-w1536",
+            "related": "MSFT",
+            "source": "SeekingAlpha",
+            "summary": "Rob Isbitts from Sungarden Investors Club talks again to analysts Julia Ostian, Jack Bowman, and Kenio Fontes about buying dips, market positioning and yield curve steepening.",
+            "url": "https://finnhub.io/api/news?id=a410147236b70f32fffdb9553d9ebbdae6879e57806a13b893c2c1bda74823b0"
+        },
+        {
+            "category": "company",
+            "datetime": 1756909500,
+            "headline": "Balfour Beatty plans stateside AI hackathon",
+            "id": 136631054,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Following on its push in the U.K., the firm\u2019s American initiative will target solutions for key business areas including safety, quality and business development.",
+            "url": "https://finnhub.io/api/news?id=ed68e6ce8114011cd3924783b946064086cbbee209de5d5f376776facd0e8209"
+        },
+        {
+            "category": "company",
+            "datetime": 1756908300,
+            "headline": "Does Innodata's Raised Guidance Signal Stronger Growth Ahead in 2025?",
+            "id": 136616823,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Can INOD's raised 2025 guidance, fueled by generative AI wins and agentic AI push, signal stronger growth ahead?",
+            "url": "https://finnhub.io/api/news?id=75e153a6caf016b2e60469fad710d93ecea016c1b4541b80a31fd51586b003ac"
+        },
+        {
+            "category": "company",
+            "datetime": 1756908108,
+            "headline": "Microsoft Lands $6 Billion GSA Deal, Adds Free Copilot",
+            "id": 136615582,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "GSA pact covers Office, Azure, cybersecurity tools and AI",
+            "url": "https://finnhub.io/api/news?id=6d6d4bf3332cbf5652015fbdb81c38b14ca7a1e6b93eef3ab791dfa2e06f0c89"
+        },
+        {
+            "category": "company",
+            "datetime": 1756908000,
+            "headline": "Symmetri Launches Agentic Marketing Platform To Empower Brands In The Agent Economy",
+            "id": 136615584,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Symmetri, the agentic marketing platform built to empower brands in the agent economy, today announced seed funding led by super(set).",
+            "url": "https://finnhub.io/api/news?id=3b8e1e89ae7b48d2b9bef07331e7b76f91899e3d89e2740696145d50f7771ee6"
+        },
+        {
+            "category": "company",
+            "datetime": 1756908000,
+            "headline": "WSO2 Appoints Kristian Gy\u00f6rk\u00f6s as Senior Vice President & Global Head of Channel",
+            "id": 136615583,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "New appointment supports long-term expansion goals of WSO2\u2019s global partner ecosystemAustin, TX , Sept. 03, 2025 (GLOBE NEWSWIRE) -- WSO2, the leader in enterprise digital infrastructure technology, today announced the appointment of Kristian Gy\u00f6rk\u00f6s as Senior Vice President & Global Head of Channel. In this strategic leadership role, Kristian will be responsible for shaping and accelerating the growth of WSO2\u2019s global channel and partner ecosystem as the company continues to expand its reach ac",
+            "url": "https://finnhub.io/api/news?id=7c701499db0f752eb9fcabdb025fb4eaf12ffa473f2c9ea0072ee1daa384a4a1"
+        },
+        {
+            "category": "company",
+            "datetime": 1756906644,
+            "headline": "Alphabet: The Market Is Slowly Getting It (But Only Halfway There)",
+            "id": 136619520,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2222268492/image_2222268492.jpg?io=getty-c-w1536",
+            "related": "MSFT",
+            "source": "SeekingAlpha",
+            "summary": "Explore why Alphabet Inc.'s shares may be undervalued, with a $300 target by 2027 amid fading antitrust threats. Click for my updated look at GOOGL stock.",
+            "url": "https://finnhub.io/api/news?id=91db3b3afd06b4209ab7f00eb1c5a2356a995c186fd4ec27d0a05d3aef89ced5"
+        },
+        {
+            "category": "company",
+            "datetime": 1756906387,
+            "headline": "A $20B Sword Of Damocles Hangs Over Apple",
+            "id": 136619584,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1213764535/image_1213764535.jpg?io=getty-c-w1536",
+            "related": "MSFT",
+            "source": "SeekingAlpha",
+            "summary": "Judge Mehta\u00e2\u0080\u0099s ruling secures Apple\u00e2\u0080\u0099s $20B from Google, but raises concerns over long-term AI strategy. Check out the implications of this ruling on AAPL stock.",
+            "url": "https://finnhub.io/api/news?id=a0407a49229c0c98862252633354c2d2d6ce48a2a2ba4c02c74d2b41ef2104d3"
+        },
+        {
+            "category": "company",
+            "datetime": 1756904820,
+            "headline": "Eurasian Bank First to Implement Diebold Nixdorf's Latest Generation Self-Service Application Software",
+            "id": 136615585,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Diebold Nixdorf (NYSE: DBD), a world leader in transforming the way people bank and shop, announced today that Eurasian Bank, a leading financial institution in Kazakhstan, is the first to implement VCP-Lite 7, part of the company's latest generation multi-vendor self-service software family (Vynamic\u00ae Connection Points). The successful pilot was implemented on a DN Series\u00ae 450V cash recycler operating Microsoft\u00ae Windows 11\u00ae. Installation and services for this implementation were provided by BS/2",
+            "url": "https://finnhub.io/api/news?id=ad2895cb3932c7e82badf911dd706130283f8c3f6e1c659ab2f6267ac3b8f9ba"
+        },
+        {
+            "category": "company",
+            "datetime": 1756904400,
+            "headline": "These Were the Market's 5 Biggest Giants of 1985 -- Here's Who Holds the Crown Now",
+            "id": 136615579,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Not a single name has held its spot as a top dog over the course of the past four decades.",
+            "url": "https://finnhub.io/api/news?id=48b01204be3354dfc9c072f82f8e77783f198fda11179e83552485b9b2586db7"
+        },
+        {
+            "category": "company",
+            "datetime": 1756903506,
+            "headline": "GXC Vs SPY And Why China Won't Dominate The World",
+            "id": 136616777,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2204624068/image_2204624068.jpg?io=getty-c-w1536",
+            "related": "MSFT",
+            "source": "SeekingAlpha",
+            "summary": "China will continue to rise, but global dominance is unlikely. Check out my ratings on SPDR S&P China ETF (GXC) and SPDR S&P 500 ETF (SPY).",
+            "url": "https://finnhub.io/api/news?id=be3ce944d7b5f03fee3fbfd3b31ea4ef37007f7aaa8e0eed74369a196fbfc7fc"
+        },
+        {
+            "category": "company",
+            "datetime": 1756902632,
+            "headline": "Alphabet: Breakup Risk Is Dead, Wall Street Upgrades Are Just The Beginning",
+            "id": 136616695,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1694532155/image_1694532155.jpg?io=getty-c-w1536",
+            "related": "MSFT",
+            "source": "SeekingAlpha",
+            "summary": "Alphabet Inc. stock surges as antitrust risks fade. Click for why regulatory clarity and growth make GOOGL a compelling Buy before the next market rerating.",
+            "url": "https://finnhub.io/api/news?id=0dd4b2cff0de81c0b6a917d3175e68eb25a3be0cb081b8f6048149909187b052"
+        },
+        {
+            "category": "company",
+            "datetime": 1756899547,
+            "headline": "Alibaba Won't Disrupt Nvidia With 7nm Chips.",
+            "id": 136616487,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1020075066/image_1020075066.jpg?io=getty-c-w1536",
+            "related": "MSFT",
+            "source": "SeekingAlpha",
+            "summary": "Alibaba Group Holding Limited\u00e2\u0080\u0099s weak earnings and limited cloud growth signal long-term concerns. Click here to read an analysis of BABA stock now.",
+            "url": "https://finnhub.io/api/news?id=b5a544ef7ca27ff7aaaaa4ab98458b5da008fb74591fbe781645237540ea4515"
+        },
+        {
+            "category": "company",
+            "datetime": 1756898154,
+            "headline": "Apple: No Longer Bullish For The First Time In 7 Years Despite The Google Ruling (Downgrade)",
+            "id": 136616376,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1705316992/image_1705316992.jpg?io=getty-c-w1536",
+            "related": "MSFT",
+            "source": "SeekingAlpha",
+            "summary": "Downgrading Apple to neutral from very bullish due to underinvestment in AI and cloud, despite strong Q3 results and positive antitrust ruling impact.",
+            "url": "https://finnhub.io/api/news?id=4e517fa90bd9b11a20b60a5ea44b20ef3fbb9d0d6cc304da6283929a3cbbf1c7"
+        },
+        {
+            "category": "company",
+            "datetime": 1756897499,
+            "headline": "Alphabet: The Antitrust Threat Just Mostly Vanished",
+            "id": 136616344,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2210768067/image_2210768067.jpg?io=getty-c-w1536",
+            "related": "MSFT",
+            "source": "SeekingAlpha",
+            "summary": "Alphabet Inc.\u00e2\u0080\u0099s Q2 2025 earnings soar with AI and Cloud growth, while antitrust relief boosts market outlook. Click for my GOOGL stock update.",
+            "url": "https://finnhub.io/api/news?id=d2a7f5ccb1759e36621510573fa992ff18c351b31b7ee7c0fdd5bf94c74291ef"
+        },
+        {
+            "category": "company",
+            "datetime": 1756896219,
+            "headline": "CHAT: A High-Risk, Speculative Buy On The AI Infrastructure Supercycle",
+            "id": 136616048,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2217030312/image_2217030312.jpg?io=getty-c-w1536",
+            "related": "MSFT",
+            "source": "SeekingAlpha",
+            "summary": "Discover if CHAT ETF is right for you\u00e2\u0080\u0094get insights on AI sector growth, risks, and smart investing strategies.",
+            "url": "https://finnhub.io/api/news?id=14937d9fc01cfeddace202175a038033d9f969a1552a9b492a2d149f6ada2de3"
+        },
+        {
+            "category": "company",
+            "datetime": 1756895704,
+            "headline": "Apple: It's Time To Buy (Rating Upgrade)",
+            "id": 136615537,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1496154596/image_1496154596.jpg?io=getty-c-w1536",
+            "related": "MSFT",
+            "source": "SeekingAlpha",
+            "summary": "Discover why Apple Inc.\u00e2\u0080\u0099s recent pullback could signal a buying opportunity. Explore technical analysis, earnings strength, and risks. Click for my AAPL update.",
+            "url": "https://finnhub.io/api/news?id=2495b2e03fa47181dccf127f09661f2ec37b3ecb8b8891d72da2c0a1affae689"
+        },
+        {
+            "category": "company",
+            "datetime": 1756887300,
+            "headline": "The Best Trillion-Dollar Stock to Buy Now, According to Wall Street (Hint: Not Nvidia)",
+            "id": 136612693,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Nvidia is the largest company in the world, but most Wall Street analysts anticipate more upside in Microsoft stock.",
+            "url": "https://finnhub.io/api/news?id=ae69faa67759610001d145c67ad0fc1e927d1bb854a87c87aea305cc68ae9ef7"
+        },
+        {
+            "category": "company",
+            "datetime": 1756886820,
+            "headline": "Global tech supply chains are being reshaped by three key 'battlefields', says DIGITIMES analysts",
+            "id": 136612694,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Semiconductor and electronics supply chains are undergoing a major transformation, driven by the rapid growth of artificial intelligence (AI), changing market leadership, and global supply chain relocation, according to DIGITIMES.",
+            "url": "https://finnhub.io/api/news?id=8dd29d0498503e4dd81f0f2d984a04510696b7231c1395c218df43646fe4d018"
+        },
+        {
+            "category": "company",
+            "datetime": 1756886400,
+            "headline": "Credo Reports Earnings Later Today. The AI Stock Is Up 80% This Year.",
+            "id": 136616824,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Credo is a leader in connectivity crucial to AI, and its dominance in active electrical cables promises to be a source of great growth.",
+            "url": "https://finnhub.io/api/news?id=290378595b49ac0af5e7b15a1de4d37379a80edcef6e552604c60252de10aede"
+        },
+        {
+            "category": "company",
+            "datetime": 1756886400,
+            "headline": "Microsoft: Buy This Pullback (Rating Upgrade)",
+            "id": 136614718,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2191725662/image_2191725662.jpg?io=getty-c-w1536",
+            "related": "MSFT",
+            "source": "SeekingAlpha",
+            "summary": "Microsoft's Q4 results showed robust revenue growth, a significant EPS beat, and strong margins. See why MSFT stock presents a compelling buy the dip opportunity.",
+            "url": "https://finnhub.io/api/news?id=17a0b7cb39002ca8494a455552e8bfd9a5b450173d98a361913bdce1a6b4739b"
+        },
+        {
+            "category": "company",
+            "datetime": 1756886400,
+            "headline": "Credo Reports Earnings Today. Expect Stellar Growth.",
+            "id": 136612709,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Credo is a leader in connectivity crucial to AI, and its dominance in active electrical cables promises to be a source of great growth.",
+            "url": "https://finnhub.io/api/news?id=0ebaf8dc143d7ff3977b9666264f43641263ebc5c07483cf89431b79b6b60333"
+        },
+        {
+            "category": "company",
+            "datetime": 1756885980,
+            "headline": "Hanshow and CGF Host DDVC Springboard EU, Spotlighting Retail Media Networks and AI-Powered In-Store Innovation",
+            "id": 136612710,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "AMSTERDAM, September 03, 2025--Hanshow, a global leader in digital retail solutions, in partnership with The Consumer Goods Forum (CGF), hosted the Data-Driven Value Chain (DDVC) Springboard EU workshop at the Hanshow Amsterdam office on August 28, following a networking dinner on August 27. The curated program convened over 30 senior decision-makers from retailers, CPGs, media agencies and technology leaders under the theme \"Integration Power: Synergy of Shopper, In-Store, and Retail Media for",
+            "url": "https://finnhub.io/api/news?id=17975191288b48cf68a872f476c8501ae08e98b6f2234cd02284e2d4c9f83a86"
+        },
+        {
+            "category": "company",
+            "datetime": 1756864735,
+            "headline": "How Stocks, Bonds, And Fed Might React To Preliminary Estimates For Annual Benchmark Revision",
+            "id": 136611227,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/157316792/image_157316792.jpg?io=getty-c-w1536",
+            "related": "MSFT",
+            "source": "SeekingAlpha",
+            "summary": "The upcoming BLS annual benchmark revision to non-farm payrolls is more meaningful for labor market health than monthly reports. Learn more about the revision here.",
+            "url": "https://finnhub.io/api/news?id=98a935aa8ac812d1bca185b393d4fa301db6d4ed8fbf861d5703bc1eab1e1270"
+        },
+        {
+            "category": "company",
+            "datetime": 1756852762,
+            "headline": "Factbox-What Apple, Samsung wanted from Google search case",
+            "id": 136612711,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "A ruling in the U.S. search antitrust case against Alphabet's Google on Tuesday is a win for mobile phone manufacturers including Apple and Samsung, who a judge said Google can keep paying\u00a0 to be the default search engine on new devices.  Google has said it will file an appeal in the case, meaning the ruling is not likely to take effect immediately.  The iPhone maker supported requiring Google to share its search data with artificial intelligence competitors such as OpenAI, Anthropic, Perplexity, and said it plans to offer more AI-driven options in search.",
+            "url": "https://finnhub.io/api/news?id=279de26c105893ffbcf552d0f9d71a6243865f73ddd5d015a82d1774caccbdc1"
+        },
+        {
+            "category": "company",
+            "datetime": 1756852593,
+            "headline": "OpenAI Targets India For Stargate AI Expansion",
+            "id": 136612712,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "New hub could rival data centers of Microsoft and Google",
+            "url": "https://finnhub.io/api/news?id=84e20ae108319c33fe348043b193281e58474a4d66cb5cae4c910b5f7e582d25"
+        },
+        {
+            "category": "company",
+            "datetime": 1756851954,
+            "headline": "Coinbase's New Futures Index Tracks Bitcoin, Ethereum\u2014Plus 'Mag 7' Stocks Like Nvidia",
+            "id": 136612704,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Coinbase is debuting futures in the U.S. that will give traders exposure to Bitcoin and Ethereum along with major \"Magnificent 7\" tech stocks.",
+            "url": "https://finnhub.io/api/news?id=d15d7a39e7a0f444b60efd94ff2d7e8e5a31eae12dfe9bdd221a027036f6a33e"
+        },
+        {
+            "category": "company",
+            "datetime": 1756850886,
+            "headline": "Factbox-How Big Tech is faring against US antitrust lawsuits",
+            "id": 136612706,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "(Reuters) -A U.S. lawsuit where Alphabet's Google was ordered on Tuesday to share search data with competitors is just one of the major efforts by U.S. antitrust enforcers to challenge Big Tech companies over their dominance.  Here are the statuses of the U.S. antitrust cases or probes against some of the world's most valuable companies: Alphabet's Google, Meta Platforms, Apple, Amazon, Microsoft and Nvidia.",
+            "url": "https://finnhub.io/api/news?id=1ee83edcbd306feb5f8add0a9aa8457e57dc9699c87f7e591a4a38c4cbb3fdc5"
+        },
+        {
+            "category": "company",
+            "datetime": 1756850538,
+            "headline": "Alphabet stock soars after judge doesn't force Google to sell Chrome browser in landmark antitrust case",
+            "id": 136615587,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Google won't be forced to sell Chrome after a federal district judge ruled divestment a 'poor fit' in a landmark antitrust case, but it will have to make a number of changes.",
+            "url": "https://finnhub.io/api/news?id=301820b51a3b57f07698df34b63231640d8ebd0b8ef9ee9aa860c99d9c8937d3"
+        },
+        {
+            "category": "company",
+            "datetime": 1756850538,
+            "headline": "Google won't be forced to sell Chrome after judge rules divestment a 'poor fit' in landmark antitrust case",
+            "id": 136612715,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Google won't be forced to sell Chrome after a federal district judge ruled divestment a 'poor fit\" in a landmark antitrust case, but it will have make a number of changes.",
+            "url": "https://finnhub.io/api/news?id=4854f256c87306dcd03a7e812a35bc155fd3e826771de4d7f91499cb7aaad71d"
+        },
+        {
+            "category": "company",
+            "datetime": 1756849047,
+            "headline": "Tracking Stanley Druckenmiller's Duquesne Family Office Portfolio - Q2 2025 Update",
+            "id": 136609890,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1473159542/image_1473159542.jpg?io=getty-c-w1536",
+            "related": "MSFT",
+            "source": "SeekingAlpha",
+            "summary": "Duquesne Family Office's Q2 2025 portfolio updates: key bets in tech & healthcare, new positions, and Druckenmiller's trend-driven investment strategy. See more.",
+            "url": "https://finnhub.io/api/news?id=315d9f22e7d3c057f52bab7338e438e39f181b472233cbb7ba0439567411a854"
+        },
+        {
+            "category": "company",
+            "datetime": 1756848660,
+            "headline": "Lucid Stock Is Tanking. It\u2019s Not About Fundamentals.",
+            "id": 136612716,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "FEATURE   Lucid\u2019s stock was very weak on Tuesday. Nothing fundamental happened. Instead, the company completed its one-for-10 reverse stock split.  Shares of the electric vehicle maker fell 10.8%, closing at $17.",
+            "url": "https://finnhub.io/api/news?id=85635ea784ebaccb471819ee00313494c8046e5eb384c4cfc86744616a76bed5"
+        },
+        {
+            "category": "company",
+            "datetime": 1756847533,
+            "headline": "As Microsoft Takes Aim at OpenAI, Should You Buy, Sell, or Hold MSFT Stock?",
+            "id": 136612717,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Following heavy investments in the ChatGPT maker, Microsoft is now testing its own AI model.",
+            "url": "https://finnhub.io/api/news?id=14292fc9d30bd3ae5c39ce74d9ec0a223ab0829cb263d9c3cd5390fe4b9a6262"
+        },
+        {
+            "category": "company",
+            "datetime": 1756845833,
+            "headline": "Sector Update: Tech Stocks Drop Late Afternoon",
+            "id": 136612718,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Tech stocks retreated late Tuesday afternoon with the Technology Select Sector SPDR Fund (XLK) falli",
+            "url": "https://finnhub.io/api/news?id=4289ac58f5b0aa996a97210cd6e76197700d6f9c6809fd86ad9dbbf6867cc36e"
+        },
+        {
+            "category": "company",
+            "datetime": 1756845343,
+            "headline": "Why Opendoor (OPEN) Stock Is Trading Up Today",
+            "id": 136612719,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Shares of technology real estate company Opendoor (NASDAQ:OPEN) jumped 11.3% in the afternoon session after heightened interest from retail investors, fueled by social media activity and its status as a \"meme stock.\"",
+            "url": "https://finnhub.io/api/news?id=75a3388af87022ab155bbc561350db6d6be6ee69cdf40e799ad3a70815396d42"
+        },
+        {
+            "category": "company",
+            "datetime": 1756843778,
+            "headline": "Coinbase Equity Futures to Blend Mag 7 Tech Stocks With Crypto ETFs",
+            "id": 136612720,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Mag7 + Crypto Equity Index Futures are coming to the crypto exchange on September 22.",
+            "url": "https://finnhub.io/api/news?id=d339e4ae9f45e0160b18fa72d29f23a13260e9f720c73bbfde7ab77b353cf26b"
+        },
+        {
+            "category": "company",
+            "datetime": 1756839780,
+            "headline": "AI stocks face a reality check after a $1.5 billion implosion",
+            "id": 136612721,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Markets now question whether hype is outrunning AI stock fundamentals.",
+            "url": "https://finnhub.io/api/news?id=a4ff077b93520f400c000de99cafcca947e59510bcdb78e3c5d659aa00782332"
+        },
+        {
+            "category": "company",
+            "datetime": 1756839540,
+            "headline": "The S&P 500 Is Falling. Here\u2019s When You Should Snap Up Stocks.",
+            "id": 136612722,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "The drop has largely been driven by tech worries: China\u2019s  Alibaba Group Holding  is now developing an artificial intelligence chip, posing a threat to leading chip makers like  Nvidia  Tech companies expected to benefit from selling new AI-powered software offerings\u2014  Microsoft Oracle Amazon.com, and  Alphabet  \u2014saw their shares fall, too.  The S&P 500 should keep chugging higher, thanks to the potential for continued earnings growth.  Consistent with the narrative of long-term earnings growth, investors should remember that Big Tech companies are just in the early stages of benefiting from AI.",
+            "url": "https://finnhub.io/api/news?id=87eb37892e2e874da9227785f7bed3dd0d69a2646c59657fd376d05592d8d808"
+        },
+        {
+            "category": "company",
+            "datetime": 1756838348,
+            "headline": "Anthropic valued at $183 bn in new funding round",
+            "id": 136612723,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Anthropic announced Tuesday that it raised $13 billion in a funding round valuing the artificial intelligence startup at $183 billion.A federal judge in June sided with Anthropic regarding training its artificial intelligence models on copyrighted books without authors' permission.",
+            "url": "https://finnhub.io/api/news?id=1ec654e1337c165144649f2aef2b54eb7e7c3e408e14378e8ee1cda283bf543b"
+        },
+        {
+            "category": "company",
+            "datetime": 1756837800,
+            "headline": "ADBE's AI-Focus Aids Subscription Revenues: Is the Growth Sustainable?",
+            "id": 136612724,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Adobe's subscription revenues jump 11.5% to $5.64B, with Acrobat and Express driving user growth past 700M monthly actives.",
+            "url": "https://finnhub.io/api/news?id=ad16647f3fa23f4f55d66a8aa4a84c075443561183c7f5e83cba0739adbfaf2c"
+        },
+        {
+            "category": "company",
+            "datetime": 1756837237,
+            "headline": "Alphabet (GOOGL) Stock Trades Down, Here Is Why",
+            "id": 136612725,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Shares of online advertising giant Alphabet (NASDAQ:GOOGL) fell 2.1% in the afternoon session after the stock was caught in a broader tech-sector downturn fueled by renewed uncertainty over U.S. trade tariffs.",
+            "url": "https://finnhub.io/api/news?id=076fa16014ab32a15608820037575aa0cc0217a55f9c5809078d25b6d8a765ea"
+        },
+        {
+            "category": "company",
+            "datetime": 1756836846,
+            "headline": "Microsoft (MSFT) Unveils In-House AI Models MAI-Voice-1 And MAI-1 Preview",
+            "id": 136612726,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Microsoft (MSFT) recently launched its in-house AI models, MAI-Voice-1 and MAI-1 Preview, entering the competitive AI landscape as it moves away from reliance on OpenAI's GPT models. The company's shares rose 9% over the last quarter, which aligns with broader market trends. This period also saw notable financial achievements, with revenue and net income growth as well as a successful share buyback. These developments likely added positive momentum against a backdrop of a generally...",
+            "url": "https://finnhub.io/api/news?id=dfd297232d7a7ec8dc8905b3f14917f777161f101f2b1abb4fce780cbd2dbe43"
+        },
+        {
+            "category": "company",
+            "datetime": 1756824817,
+            "headline": "We Asked ChatGPT To Pick Between Apple and Microsoft Stock: Here\u2019s What It Chose",
+            "id": 136606409,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Find out which tech stock -- Apple or Microsoft -- ChatGPT said is a better pick.",
+            "url": "https://finnhub.io/api/news?id=710d743910cb4059166f4698b85665171d7a64e5e8754debda83f3da875e9fe5"
+        },
+        {
+            "category": "company",
+            "datetime": 1756823395,
+            "headline": "AI Spending Is Masking Significant Economic Weakness",
+            "id": 136607361,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2221915427/image_2221915427.jpg?io=getty-c-w1536",
+            "related": "MSFT",
+            "source": "SeekingAlpha",
+            "summary": "Soaring AI-driven investments are masking broader U.S. economic weaknesses. Read about what this means for stock market stability. Access the full article and more like it here.",
+            "url": "https://finnhub.io/api/news?id=293ef3569a6f2628cd664fce8c154464d689096ebc56cc5106304626ccdc763c"
+        },
+        {
+            "category": "company",
+            "datetime": 1756822827,
+            "headline": "Microsoft to discount cloud services for US government",
+            "id": 136606410,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "WASHINGTON (Reuters) -Microsoft has agreed to give U.S. agencies a discount on its cloud services, the General Services Administration said Tuesday, as part of the administration\u2019s push to sign deals with tech companies for departments across the executive branch.  The deal will save the U.S. government up to $3 billion in the first year, according to GSA and Microsoft.  As part of the agreement, the company will offer free access to Microsoft Copilot, its generative AI chatbot, to existing federal government users, according to the company.",
+            "url": "https://finnhub.io/api/news?id=cdaf407429b593fbb4c781e89bc1ec36a7e2c4d4496c18f1073648b1ee0301a1"
+        },
+        {
+            "category": "company",
+            "datetime": 1756819745,
+            "headline": "Nvidia: Further Weakness To Come",
+            "id": 136607024,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1879228542/image_1879228542.jpg?io=getty-c-w1536",
+            "related": "MSFT",
+            "source": "SeekingAlpha",
+            "summary": "Nvidia Corporation's growth faces challenges as major customers build alternatives. Click for why experts recommend avoiding NVDA stock now.",
+            "url": "https://finnhub.io/api/news?id=3c177fb1cd6aca39b84b8f4206e03af202d8f8ff1ddb41c76c2944fd2c926394"
+        },
+        {
+            "category": "company",
+            "datetime": 1756818219,
+            "headline": "Trust us: This week's jobs report is a really big deal",
+            "id": 136606411,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Here are the stakes for everyone involved.",
+            "url": "https://finnhub.io/api/news?id=98c0d87b5907714a894caeda71ca54958f6475350e3daba0349175a98553331c"
+        },
+        {
+            "category": "company",
+            "datetime": 1756818000,
+            "headline": "Owl Labs\u2019 Meeting Owl 4+ Earns Microsoft Teams Certification, Expanding Enterprise-Ready Hybrid Meeting Solutions",
+            "id": 136606412,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "BOSTON, September 02, 2025--Owl Labs, the leader in 360-degree AI-powered video conferencing and hybrid collaboration technology, today announced its Meeting Owl 4+ has achieved Microsoft Teams certification. With this milestone, the Meeting Owl 4+ joins the Meeting Owl 3 and Owl Bar as peripherals that are certified for Microsoft Teams. With its full ecosystem now certified, Owl Labs provides IT professionals with a comprehensive suite of industry-leading hybrid collaboration solutions.",
+            "url": "https://finnhub.io/api/news?id=4d6aa93ae1a4e6b590aa08591675e3bd5e88e9b009b5b9e5d9c83d2cb6960f92"
+        },
+        {
+            "category": "company",
+            "datetime": 1756818000,
+            "headline": "Tredence Recognized as a 'Leader' in Everest Group Data and AI Services Specialists - North America PEAK Matrix\u00ae Assessment 2025",
+            "id": 136603901,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Tredence, a global leader in data science and AI solutions, has been recognized as a Leader and a Star Performer in Everest Group's Data and AI Services Specialists \u2013 North America PEAK Matrix\u00ae Assessment 2025.",
+            "url": "https://finnhub.io/api/news?id=20396871f19a4830dbcd5763a0dbdf34364d341568aa233d6a6e44fcbacb41c9"
+        },
+        {
+            "category": "company",
+            "datetime": 1756817293,
+            "headline": "Big Tech companies \u2018driving innovation in agentic AI\u2019",
+            "id": 136603883,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Big Tech companies have been rolling out tools to enable developers in recognition of them as co-architects of agentic AI.",
+            "url": "https://finnhub.io/api/news?id=4d966386ce2798c192f92194dfabbc8260134653e04b1c640c821257599167b4"
+        },
+        {
+            "category": "company",
+            "datetime": 1756816666,
+            "headline": "Latest News In Cloud AI - Rezolve Ai Expands Retail Power With Brain Suite Technology",
+            "id": 136606413,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Rezolve Ai recently announced strong results for the first half of 2025, underscoring the rapid adoption of its AI platform in the global retail sector. The company highlighted its successful integration of AI innovations, crypto-enabled checkout, and its expansion efforts in the U.S. and Europe as key drivers of accelerated revenue growth and increased market presence. Positioned at the intersection of AI and retail, Rezolve Ai is capitalizing on a $30 trillion global opportunity by...",
+            "url": "https://finnhub.io/api/news?id=36cca79698c214e1fb5eb41e94a41bc7c5d48d36e8de517450be0bea0f802615"
+        },
+        {
+            "category": "company",
+            "datetime": 1756814400,
+            "headline": "Alithya selected by Roskam Foods to support ERP modernization initiative",
+            "id": 136603904,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Alithya (TSX: ALYA) has been selected by Roskam Foods, a leading contract manufacturer for world-renowned food brands, retailers, and food service providers, as the strategic partner for its enterprise systems modernization. Alithya will lead the implementation of Microsoft Dynamics 365 for Finance and Supply Chain Management, enabling Roskam Foods to streamline operations, improve supply chain visibility, and harness new Cloud capabilities as the company pursues its expansion goals.",
+            "url": "https://finnhub.io/api/news?id=ab8c3472c4af1ed92122b1cf58e6ece2ef692aeffb652213c5f2b22a901ada70"
+        },
+        {
+            "category": "company",
+            "datetime": 1756814400,
+            "headline": "Knox Launches on Microsoft Azure Marketplace: SaaS Companies Can Now Achieve FedRAMP in 90 Days Using Their Existing Azure App and Budget",
+            "id": 136603903,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Knox, the largest and longest-running managed federal cloud provider, today announced the availability of its FedRAMP Boundary Platform on Azure Marketplace. This listing gives Azure SaaS vendors a clear, accelerated path to FedRAMP and DISA IL4 compliance using their existing Azure application architecture and cloud budget.",
+            "url": "https://finnhub.io/api/news?id=06370666fa93f32b189b826facb51903a611c4538c23ae24b98aeb96d889fdfa"
+        },
+        {
+            "category": "company",
+            "datetime": 1756817100,
+            "headline": "3 Top AI Stocks to Buy and Hold Forever",
+            "id": 136603884,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "The companies that own the chips, the models, and the cloud infrastructure are building the most powerful monopolies in market history.",
+            "url": "https://finnhub.io/api/news?id=9549031171e43ec8151d38b8dc52785e180eb6d02f9db98ef7a1adcc631a4b85"
+        },
+        {
+            "category": "company",
+            "datetime": 1756812180,
+            "headline": "EWR Digital Launches Generative AI SEO Services and Introduces Proprietary LLM Visibility\u2122 Framework by Matthew Bertram",
+            "id": 136603905,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "EWR Digital, a Houston-based digital growth consultancy and SEO agency, today announced the launch of its Generative AI SEO Services. At the center of this offering is the proprietary LLM Visibility\u2122 framework, created by Matthew Bertram (also known as Matt Bertram), Lead Digital Strategist at EWR Digital, and is now filed as a U.S. trademark.",
+            "url": "https://finnhub.io/api/news?id=f678f545ff9d18df568c1750272907d1600606d433a2135d7013cfc0a6d7b330"
+        },
+        {
+            "category": "company",
+            "datetime": 1756812168,
+            "headline": "Big Tech\u2019s Market Dominance Stirs Debate on Concentration Risks",
+            "id": 136603891,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "The debate is becoming more urgent as Nividia, Microsoft, Apple Inc., Alphabet Inc., Amazon.com Inc. and Meta Platforms Inc. account for more than 30% of the benchmark index, more than three times their weighting from a decade ago.  For Scott Chronert, Citi Research\u2019s managing director, the concentration is a badge of honor, well-deserved for a group that continues to deliver unparalleled growth in sales and earnings.",
+            "url": "https://finnhub.io/api/news?id=33c3c720b25abf19f20211a23611c852cc6a56439308b14523dc0b3b3d7aa344"
+        },
+        {
+            "category": "company",
+            "datetime": 1756810181,
+            "headline": "UMG G\u00f6ttingen in Germany set to enhance enterprise imaging with Sectra AI",
+            "id": 136603907,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Sectra Amplifier Service allows the healthcare provider to incorporate third-party AI applications into clinical operations.",
+            "url": "https://finnhub.io/api/news?id=4abe3924f17c149e9cc055ae5e5ded94150bb88e6e3ac3b59920ca5d24348a01"
+        },
+        {
+            "category": "company",
+            "datetime": 1756809540,
+            "headline": "Big Data and Artificial Intelligence Market Report 2025: Edge Computing, Fraud Detection, and Predictive Analytics Trends",
+            "id": 136603908,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "The big data and artificial intelligence market is projected to grow from $385.89 billion in 2024 to $884.42 billion in 2029, driven by increased data generation and AI investments. Key players include Amazon, Microsoft, and Intel. Key trends involve ethical AI, cloud adoption, and strategic tech collaborations. Big Data and Artificial Intelligence Market Big Data and Artificial Intelligence Market Dublin, Sept. 02, 2025 (GLOBE NEWSWIRE) -- The \"Big Data and Artificial Intelligence Market Report",
+            "url": "https://finnhub.io/api/news?id=e64abab05750d68c35d788334f7c14fd2e7661f81f5a3c8e89c29416a28d66ef"
+        },
+        {
+            "category": "company",
+            "datetime": 1756805831,
+            "headline": "\u2018I\u2019ve applied for more than 5,000 jobs \u2013 it\u2019s brutal out there\u2019",
+            "id": 136603909,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "When lay-offs hit my role as a senior copywriter at Virgin Media O2 in August 2023, I knew the job hunt wouldn\u2019t be easy. But two years, a drained bank account and a psychiatric unit later, I never imagined it would be this brutal.",
+            "url": "https://finnhub.io/api/news?id=1c96c9516324a702ebce1bb100ef338b69baea74195c719e25ca61774b803cd1"
+        },
+        {
+            "category": "company",
+            "datetime": 1756803600,
+            "headline": "Games Peripherals and Accessories Will Be a $20 Billion Market in 2025, Omdia Finds",
+            "id": 136603910,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "LONDON, September 02, 2025--Total spend on games peripherals and accessories will surpass $20 billion in 2025, according to newly published research from Omdia. Further strong growth will see the total global figure nudging $25 billion by 2030.",
+            "url": "https://finnhub.io/api/news?id=ecc75d6d3430b77202ebeccb8616a545aec7fd88ac213f91bb36415e2313bc28"
+        },
+        {
+            "category": "company",
+            "datetime": 1756800583,
+            "headline": "Microsoft (MSFT) Expands AI Capabilities With MAI-Voice-1 and MAI-1-Preview Testing",
+            "id": 136603911,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Microsoft Corporation (NASDAQ:MSFT) ranks among the best predictive analytics stocks to buy right now. Microsoft Corporation (NASDAQ:MSFT) unveiled two new internal AI models on August 28 as part of its goal to develop AI that empowers people everywhere. The company introduced MAI-Voice-1, a speech generation model that uses a single GPU to produce a complete [\u2026]",
+            "url": "https://finnhub.io/api/news?id=f8d83086f34eb53a214fc29f6c5202e05a7d4063839efe0606b8597596682e3d"
+        },
+        {
+            "category": "company",
+            "datetime": 1756800566,
+            "headline": "UBS Maintains Buy on Microsoft (MSFT) Amid AI Dominance",
+            "id": 136603912,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Microsoft Corporation (NASDAQ:MSFT) ranks among the best software stocks to buy right now. UBS maintained its $650 price target and Buy rating for Microsoft Corporation (NASDAQ:MSFT) on August 20, highlighting the company\u2019s dominant position in artificial intelligence. The firm also stated that Microsoft\u2019s recent price and license adjustments are anticipated to boost cloud revenues. The [\u2026]",
+            "url": "https://finnhub.io/api/news?id=53435401deb5b62d45699b6f65b108f432cdffb4a5ac3f5f9d3f9b4a07f5c291"
+        },
+        {
+            "category": "company",
+            "datetime": 1756793135,
+            "headline": "Piper Sandler Boosts Snowflake (SNOW) Price Target Following 31.5% Product Growth",
+            "id": 136603913,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Snowflake Inc. (NYSE:SNOW) ranks among the best predictive analytics stocks to buy right now. On August 28, Piper Sandler maintained its Overweight rating on Snowflake Inc. (NYSE:SNOW) and raised its price target from $215 to $285. The firm reported faster product growth, up 31.5% year-over-year from 26.2% in the prior period, with Snowflake now reaching [\u2026]",
+            "url": "https://finnhub.io/api/news?id=7a908e249a89e435f2501576929a8f86127b0cca0b757518dd940b33fe256427"
+        },
+        {
+            "category": "company",
+            "datetime": 1756793096,
+            "headline": "Microsoft (MSFT) Integrates Copilot AI into Samsung TVs",
+            "id": 136603914,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Microsoft Corporation (NASDAQ:MSFT) is one of the top tech stocks to buy now according to Goldman Sachs. On August 27, the company integrated its Copilot AI assistant into select 2025 Samsung TVs and monitors. The service is free to use and will be available on models including Micro RGB, Neo QLED, OLED, The Frame Pro, [\u2026]",
+            "url": "https://finnhub.io/api/news?id=b36d83a7708029eb7d5d3039d306c25b0e6c9426ad810bd107d93d2bc26630c0"
+        },
+        {
+            "category": "company",
+            "datetime": 1756789081,
+            "headline": "Robo.ai (AIIO) Strengthens Global Leadership with Appointment of Xuan Yan",
+            "id": 136602235,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Robo.ai Inc. (NASDAQ:AIIO) is one of the must-buy penny stocks to invest in. On August 27, Robo.ai Inc. announced the appointment of Mr. Xuan Yan as Chief Legal and Compliance Officer, Corporate Secretary, and President of Americas. Reporting directly to CEO Benjamin Zhai, Yan\u2019s appointment marks a strategic move to accelerate the company\u2019s transformation and [\u2026]",
+            "url": "https://finnhub.io/api/news?id=4d9aa29f6bc6af19f28a9f9baa901ad664d0b002b86ae30f04ed52b3735808d8"
+        },
+        {
+            "category": "company",
+            "datetime": 1756791465,
+            "headline": "1 Mid-Cap Stock Worth Your Attention and 2 We Find Risky",
+            "id": 136603916,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Many investors pay attention to mid-cap stocks because they have established business models and expansive market opportunities. However, their paths to becoming $100 billion corporations are ripe with competition, ranging from giants with vast resources to agile upstarts eager to disrupt the status quo.",
+            "url": "https://finnhub.io/api/news?id=6b7afcbfbe3123d54df244fe72d310f4613db29cbd20ef758e306e51b568b4c1"
+        },
+        {
+            "category": "company",
+            "datetime": 1756789281,
+            "headline": "2 Reasons to Watch AMZN and 1 to Stay Cautious",
+            "id": 136603917,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Amazon trades at $228.79 and has moved in lockstep with the market. Its shares have returned 11.6% over the last six months while the S&P 500 has gained 10.5%.",
+            "url": "https://finnhub.io/api/news?id=51cfadf865a97df282c9f81fc5f5964292e5d96aa76e42eddc640ca5834517e8"
+        },
+        {
+            "category": "company",
+            "datetime": 1756752600,
+            "headline": "GTLB Stock Set to Report Q2 Earnings: A Smart Buy or Risky Investment?",
+            "id": 136603918,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "GitLab projects 24% revenue growth in Q2, driven by AI-driven DevSecOps momentum, but faces valuation concerns and tough competition.",
+            "url": "https://finnhub.io/api/news?id=ef7c12b2857bb0ae714b3f91c5742a9f62b42d20f268e12e84bda8be3535a964"
+        },
+        {
+            "category": "company",
+            "datetime": 1756748340,
+            "headline": "Can META's Focus on AI-Optimized Data Centers Push the Stock Higher?",
+            "id": 136603920,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Meta Platforms boosts 2025 capex to up to $72B, launches renewable-powered data centers, and eyes AI-driven expansion.",
+            "url": "https://finnhub.io/api/news?id=2fd2c503491daff305be770944b935bd327c1a93eca5bbaabfc3edfe0f727781"
+        },
+        {
+            "category": "company",
+            "datetime": 1756731600,
+            "headline": "Allen Lee Transforms Handyman Chaos With Launch of Handyman Champion CRM",
+            "id": 136595926,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Made by Handymen, For Handymen - A Handyman-Dedicated CRM That Solves Real Business Problems SAINT PAUL PARK, MN / ACCESS Newswire / September 1, 2025 / When Allen Lee, founder of Handyman Journey, launched his handyman business in 2016, his \"CRM\" ...",
+            "url": "https://finnhub.io/api/news?id=a607f6cb4e9b9c86dfab3aa3f5f82672d935a8908c91137f78f06d2115cf5cf3"
+        },
+        {
+            "category": "company",
+            "datetime": 1756730698,
+            "headline": "Abu Dhabi-backed G42 aims to diversify chip suppliers for AI campus, Semafor reports",
+            "id": 136595910,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "The group is still negotiating with major American technology firms including Amazon's AWS cloud, Microsoft, Meta and Elon Musk's xAI to become tenants at the data center, with Google being the furthest along in negotiations, according to the report.  G42 is looking to chipmakers AMD, Cerebras Systems and Qualcomm to supply some of the computing capacity at the campus, the report said.  The campus was announced during U.S. President Donald Trump's visit to the Emirates in May when he announced deals with the Gulf state totaling over $200 billion.",
+            "url": "https://finnhub.io/api/news?id=f6d2ea10b05d0afa09be3afc8f5ff39214c150187da32254663a7f18550b94f7"
+        },
+        {
+            "category": "company",
+            "datetime": 1756725071,
+            "headline": "SIMULATOR Digital Twin Launch Could Be a Game Changer for AtkinsR\u00e9alis Group (TSX:ATRL)",
+            "id": 136595915,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "AtkinsR\u00e9alis Group recently launched its advanced SIMULATOR digital resilience planning suite at the 2025 ITS World Congress in Atlanta, unveiling new tools to help cities and asset owners predict, prepare for, and recover from infrastructure threats such as extreme weather and cyberattacks. The platform\u2019s ability to integrate diverse data sources into digital twins has already informed impactful infrastructure decisions for several U.S. regions, highlighting its real-world application and...",
+            "url": "https://finnhub.io/api/news?id=558436d543e2e535a8c4f8f73d990e7af39a17a846531d0e858c64463d208d32"
+        },
+        {
+            "category": "company",
+            "datetime": 1756724934,
+            "headline": "Fiber Sale and New CEO Could Be a Game Changer for Crown Castle (CCI)",
+            "id": 136595916,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Crown Castle recently announced plans to sell its fiber division, appoint a new CEO, and highlighted improved carrier activity, which together are shaping the company\u2019s evolving business strategy. This set of changes points to a shift toward becoming a pure-play U.S. tower company, signaling a potential reorientation of Crown Castle\u2019s long-term operational priorities. We'll explore how the planned fiber division sale could influence Crown Castle's investment narrative and future growth...",
+            "url": "https://finnhub.io/api/news?id=90693fca60e1d4ea0ac6c5cf72b929ede5e8a510cd166d5d3bbab0b03e19f684"
+        },
+        {
+            "category": "company",
+            "datetime": 1756724824,
+            "headline": "PVH Corp. Raises Full-Year Outlook Amid Tariff Pressures Could Be A Game Changer For PVH (PVH)",
+            "id": 136595917,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "PVH Corp. recently reported second quarter 2025 earnings, with sales reaching US$2.17 billion and net income rising to US$224.2 million compared to the prior year, alongside raising its full-year earnings guidance to reflect expected low single-digit revenue growth despite higher tariffs. The company highlighted strong momentum from product innovation and successful marketing in key categories such as Calvin Klein\u2019s underwear and denim, with ongoing investments in supply chain efficiency and...",
+            "url": "https://finnhub.io/api/news?id=a09be4d58828c5fee9d728890a4cefac2a0c0cc58da5327a19fb6f72cdb4e3c0"
+        },
+        {
+            "category": "company",
+            "datetime": 1756720140,
+            "headline": "AI in Media and Entertainment Company Evaluation Report 2025 | Google, Microsoft, and IBM Dominate with Gemini, Azure AI, and Watsonx Innovations",
+            "id": 136595931,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "The \"AI in Media and Entertainment Companies Quadrant\" report delivers a thorough industry analysis, spotlighting key players and trends in the AI-driven media sector. It evaluates over 100 companies, recognizing the top 20 leaders in advancing AI applications like personalized streaming, automated editing, and ad placements, enhancing user engagement. Giants like Google, Microsoft, and IBM lead with breakthrough technologies boosting content strategy and audience interaction. The 360 Quadrant a",
+            "url": "https://finnhub.io/api/news?id=c69c073525071a82c7915c45704207229b464e2e46e51fbce9caeca730083231"
+        },
+        {
+            "category": "company",
+            "datetime": 1756719840,
+            "headline": "3 Stocks That Could Join the $3 Trillion Club Alongside Apple, Microsoft, and Nvidia",
+            "id": 136595921,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "The small club at the top of the stock market could soon become more crowded.",
+            "url": "https://finnhub.io/api/news?id=cef86f8edf2d8657d38d868358bfdd6df236eb5c49ae5e099b0dd00399010f26"
+        },
+        {
+            "category": "company",
+            "datetime": 1756713600,
+            "headline": "k-ID Strengthens Leadership Team with Former Xbox Family Product Lead Mike Mongeau",
+            "id": 136595933,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "SINGAPORE, September 01, 2025--Former Head of Family at Xbox, Mike Mongeau, joins k-ID as Head of Product to accelerate global online safety technology.",
+            "url": "https://finnhub.io/api/news?id=fc68ac4754aac6d1ef85cf45e67efe583210a4b8539bed7a6c92dba6603f2267"
+        },
+        {
+            "category": "company",
+            "datetime": 1756712880,
+            "headline": "University medical center in Germany expands use of Sectra's solution with AI service--accelerates adoption of AI for enhanced efficiency and patient care",
+            "id": 136595934,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "International medical imaging IT and cybersecurity company Sectra (STO: SECT B) announces that Universit\u00e4tsmedizin G\u00f6ttingen (UMG G\u00f6ttingen) in Germany will expand its enterprise imaging solution to include Sectra's AI service, Sectra Amplifier Service. The AI service, operated within Microsoft Azure's public cloud environment, will enable them to seamlessly integrate selected AI applications into their clinical workflows\u2014enhancing workflow efficiency and improving patient care.",
+            "url": "https://finnhub.io/api/news?id=6982e4e05d93d9b921d391d37df3b8d71229d7bc396b4be3a78faa14029aa372"
+        },
+        {
+            "category": "company",
+            "datetime": 1756710155,
+            "headline": "OpenAI plans India data center with at least 1 gigawatt capacity, Bloomberg News reports",
+            "id": 136595935,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "OpenAI, backed by Microsoft, has formally registered as a legal entity in India and has begun building a local team.  The company said in August it plans to open its first India office in New Delhi later this year, expanding its presence in its second-largest market by user base.  The plan to build a large new data center could mark a major step forward in Asia for OpenAI's Stargate-branded artificial intelligence infrastructure push, Bloomberg News reported.",
+            "url": "https://finnhub.io/api/news?id=57acdfa69748b98b25b6907fe3d60e60005c3e84cf34a04af16cb522ccb295d7"
+        },
+        {
+            "category": "company",
+            "datetime": 1756704995,
+            "headline": "3 Stocks Under $50 with Open Questions",
+            "id": 136595936,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "The $10-50 price range often includes mid-sized businesses with proven track records and plenty of growth runway ahead. They also usually carry less risk than penny stocks, though they\u2019re not immune to volatility as many lack the scale advantages of their larger peers.",
+            "url": "https://finnhub.io/api/news?id=67bb3bf899cb37c88039d746ffd06df1a9bcfad7daefb415c366d2c94733b3d3"
+        },
+        {
+            "category": "company",
+            "datetime": 1756699260,
+            "headline": "This Giant German Tech Stock Can Run With the Mag 7. The Case to Buy in.",
+            "id": 136594499,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "The U.S. has the Magnificent Seven, but Europe has \u201cder Eine,\u201d or the One\u2014German software provider  SAP  After an earnings-related pullback, the stock now looks like it\u2019s worth buying.  In fact, SAP is the only stock that deserves mention with the great U.S. tech companies, whether Microsoft and the rest of the  or smaller ones like Oracle and Salesforce.  Although nothing was obviously wrong with them, the results still triggered a 10% pullback since then as investors fretted about the impact of a weakening dollar and a miss on cloud revenue growth.",
+            "url": "https://finnhub.io/api/news?id=89134d1544d3b642181485632e45b4a6f275e8cb210b04128a027de010a42bf1"
+        },
+        {
+            "category": "company",
+            "datetime": 1756692078,
+            "headline": "Blizzard Co-Founder Mike Morhaime Slashes Wildgate Price After Selling Only 130K Copies",
+            "id": 136595938,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Legendary Blizzard co-founder Mike Morhaime, who helped create \"World of Warcraft\" and \"Overwatch,\" now faces a survival battle at Dreamhaven after \"Wildgate\" and \"Sunderfolk\" sold far fewer copies than expected, according to Bloomberg. Wildgate and Sunderfolk Miss the Mark Dreamhaven launched its multiplayer shooter, \"Wildgate,\" in July, but sales reached only 130,000 units, despite positive reviews, Bloomberg reported. The company's earlier release, \"Sunderfolk,\" fared even worse, selling just",
+            "url": "https://finnhub.io/api/news?id=5b92cbe9eab99e41cb3f97528ea8873e15cf1ab8e54a95a59496dcbb8e7c3001"
+        },
+        {
+            "category": "company",
+            "datetime": 1756692000,
+            "headline": "Alphabet Lands $10 Billion Meta Cloud Deal, a Win for Google's Artificial Intelligence Ambitions and Investors",
+            "id": 136595941,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Meta's six-year deal with Google Cloud is indicative of where hyperscalers are headed.",
+            "url": "https://finnhub.io/api/news?id=c446bafb709a3ebf37ee54fbeebe1c3e7d0a57ae70a35d9dbacabebe1b815e87"
+        },
+        {
+            "category": "company",
+            "datetime": 1756692000,
+            "headline": "U.S. Stocks Are Now Pricier Than They Were in the Dot-Com Era",
+            "id": 136595940,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "The S&P 500\u2019s march to a record high this year hasn\u2019t come cheap: By some measures, stocks have never been pricier.  Price-to-earnings ratios aren\u2019t quite at records\u2014thanks to juicy profit margins at many of the index\u2019s most valuable companies\u2014but they still sit at the extreme end of history.  The S&P 500 currently trades at 22.5 times its projected earnings over the next 12 months, compared with the average of 16.8 times since 2000.",
+            "url": "https://finnhub.io/api/news?id=ff4a05248b912b3a696b4abc2c56e4ff20bdb41371dcd7674ba7b8d2b3646c16"
+        },
+        {
+            "category": "company",
+            "datetime": 1756692000,
+            "headline": "Digital Edge Appoints Emmeline Tang as Chief Product Officer to Drive Innovation and Growth Across Regional Data Center Portfolio",
+            "id": 136595939,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Digital Edge (Singapore) Holdings Pte. Ltd. (\"Digital Edge\"), a leading pan-Asian data center platform backed by global infrastructure investor Stonepeak, today announced the appointment of Emmeline Tang as Chief Product Officer (CPO). With two decades of global leadership experience in the data center industry, Emmeline will be responsible for shaping the company's product vision and roadmap, accelerating innovation across its hyperscale and retail offerings, and delivering next-generation infr",
+            "url": "https://finnhub.io/api/news?id=e2580acaa5daa2c9046ad49d37c4357191382c66d0209e6206518fee2c6e03ab"
+        },
+        {
+            "category": "company",
+            "datetime": 1756686600,
+            "headline": "Billionaire Steve Mandel Just Sold Microsoft Stock to Buy This Dominant Artificial Intelligence (AI) Stock Up Nearly 800% Over the Past Decade",
+            "id": 136595942,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "MSFT",
+            "source": "Yahoo",
+            "summary": "Mandel increased his Amazon stake by a sizable amount.",
+            "url": "https://finnhub.io/api/news?id=82e9acd26eb278992de36849c9d1917c142b199947cece205bbb6b0a2592de7c"
+        }
+    ],
+    "reddit_data": [
+        {
+            "title": "Thoughts on why $MSFT has been weak since blowout earnings?",
+            "score": 0,
+            "url": "https://www.reddit.com/r/stocks/comments/1my86pq/thoughts_on_why_msft_has_been_weak_since_blowout/",
+            "created_utc": 1755971631.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "$OSCR INSTITUTIONAL OWNERSHIP IS SKYROCKETING IN 2025.",
+            "score": 0,
+            "url": "https://www.reddit.com/r/stocks/comments/1mtbbxy/oscr_institutional_ownership_is_skyrocketing_in/",
+            "created_utc": 1755488398.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Summarize your 2025 YTD: 1 thing done right vs 1 thing done wrong",
+            "score": 32,
+            "url": "https://www.reddit.com/r/stocks/comments/1mrd697/summarize_your_2025_ytd_1_thing_done_right_vs_1/",
+            "created_utc": 1755298427.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Bridgewater Retreats From China, Shifts Billions Into US Mega-Cap Tech",
+            "score": 176,
+            "url": "https://www.reddit.com/r/stocks/comments/1mq2rt3/bridgewater_retreats_from_china_shifts_billions/",
+            "created_utc": 1755182910.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Best stocks to bet against if you are bearish on AI.",
+            "score": 24,
+            "url": "https://www.reddit.com/r/stocks/comments/1moen3c/best_stocks_to_bet_against_if_you_are_bearish_on/",
+            "created_utc": 1755018729.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "CENTENE (CNC) is a good long term opportunity at this level",
+            "score": 17,
+            "url": "https://www.reddit.com/r/stocks/comments/1mmwihz/centene_cnc_is_a_good_long_term_opportunity_at/",
+            "created_utc": 1754865951.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Rebalancing porfolio",
+            "score": 5,
+            "url": "https://www.reddit.com/r/stocks/comments/1mjbkv0/rebalancing_porfolio/",
+            "created_utc": 1754502673.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Msft stock and Open AI",
+            "score": 2,
+            "url": "https://www.reddit.com/r/stocks/comments/1mja0rz/msft_stock_and_open_ai/",
+            "created_utc": 1754499204.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "If recession is certain, would one divest away from VGT into few individual stocks?",
+            "score": 49,
+            "url": "https://www.reddit.com/r/stocks/comments/1mgek5n/if_recession_is_certain_would_one_divest_away/",
+            "created_utc": 1754211475.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "How come Azure manages to still grow 33%, while GCP 32% (1/3 of size) and AWS only 17%",
+            "score": 117,
+            "url": "https://www.reddit.com/r/stocks/comments/1mest36/how_come_azure_manages_to_still_grow_33_while_gcp/",
+            "created_utc": 1754043802.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "GOOG - when will it take off?",
+            "score": 313,
+            "url": "https://www.reddit.com/r/stocks/comments/1me866i/goog_when_will_it_take_off/",
+            "created_utc": 1753983703.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Absolutely everything you need to know about AMZN earnings today",
+            "score": 123,
+            "url": "https://www.reddit.com/r/stocks/comments/1me5q6m/absolutely_everything_you_need_to_know_about_amzn/",
+            "created_utc": 1753978189.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Is MSFT still a buy?",
+            "score": 53,
+            "url": "https://www.reddit.com/r/stocks/comments/1me3nil/is_msft_still_a_buy/",
+            "created_utc": 1753973456.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Healthcare and tech stock, what's going on?",
+            "score": 28,
+            "url": "https://www.reddit.com/r/stocks/comments/1mdwtm4/healthcare_and_tech_stock_whats_going_on/",
+            "created_utc": 1753953516.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Microsoft posts Q4 beat on top and bottom line on cloud, AI strength",
+            "score": 353,
+            "url": "https://www.reddit.com/r/stocks/comments/1mdhcpx/microsoft_posts_q4_beat_on_top_and_bottom_line_on/",
+            "created_utc": 1753906863.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "EURUSD falls to lowest since early July What does this mean for equities and macro?",
+            "score": 1,
+            "url": "https://www.reddit.com/r/stocks/comments/1md6cp4/eurusd_falls_to_lowest_since_early_july_what_does/",
+            "created_utc": 1753881433.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "MSFT reports 30July",
+            "score": 20,
+            "url": "https://www.reddit.com/r/stocks/comments/1mcfr28/msft_reports_30july/",
+            "created_utc": 1753805746.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Stocks rose as the S&P 500 hit an intraday high. Key movers:",
+            "score": 11,
+            "url": "https://www.reddit.com/r/stocks/comments/1m7sqjy/stocks_rose_as_the_sp_500_hit_an_intraday_high/",
+            "created_utc": 1753324697.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "For the first time in a long time\u2026 I didn\u2019t feel dumb for holding.",
+            "score": 359,
+            "url": "https://www.reddit.com/r/stocks/comments/1m75wma/for_the_first_time_in_a_long_time_i_didnt_feel/",
+            "created_utc": 1753267472.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Verizon Beats Estimates, Microsoft in Security Crisis, Equinix Gets Aggressive Buy as Tech Earnings Week Begins",
+            "score": 10,
+            "url": "https://www.reddit.com/r/stocks/comments/1m5j9e5/verizon_beats_estimates_microsoft_in_security/",
+            "created_utc": 1753105369.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Morgan Stanley: AMZN Top Pick, Boosts Internet Stock Outlook",
+            "score": 12,
+            "url": "https://www.reddit.com/r/stocks/comments/1m5j83u/morgan_stanley_amzn_top_pick_boosts_internet/",
+            "created_utc": 1753105277.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "MS Report: OpenAI Targets $700 Billion TAM by 2030 - Which Listed Companies Will Benefit?",
+            "score": 58,
+            "url": "https://www.reddit.com/r/stocks/comments/1m32k1f/ms_report_openai_targets_700_billion_tam_by_2030/",
+            "created_utc": 1752845845.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "What strategies do you guys use to exit/take profit on an all time high stock?",
+            "score": 29,
+            "url": "https://www.reddit.com/r/stocks/comments/1m2gp3h/what_strategies_do_you_guys_use_to_exittake/",
+            "created_utc": 1752780125.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Anyone sold small lots on the way up?",
+            "score": 1,
+            "url": "https://www.reddit.com/r/stocks/comments/1m1c201/anyone_sold_small_lots_on_the_way_up/",
+            "created_utc": 1752671037.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Where would you invest $1.2 million for the next 10+ years?",
+            "score": 0,
+            "url": "https://www.reddit.com/r/stocks/comments/1m10uo0/where_would_you_invest_12_million_for_the_next_10/",
+            "created_utc": 1752632354.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "I f*d up really bad this time",
+            "score": 1259,
+            "url": "https://i.redd.it/l5mojql8nelf1.jpeg",
+            "created_utc": 1756231942.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Are you winning son?",
+            "score": 57,
+            "url": "https://i.redd.it/t57hmxdu4akf1.png",
+            "created_utc": 1755741479.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Bought 9k in MSFT/NVDA weekly puts into the close - figuring an AI crash will happen after people spend all weekend ripping GPT5 a new ahole",
+            "score": 504,
+            "url": "https://i.redd.it/s3l9wphrwwhf1.jpeg",
+            "created_utc": 1754709792.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "+$40k MSFT Puts",
+            "score": 189,
+            "url": "https://www.reddit.com/gallery/1mj6kbh",
+            "created_utc": 1754491437.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "ALL IN and Max Margins on SMCI !! My Rent Money, Dog's Eye Surgery Fund, Jacked to the Tits!  Either A5 or Instantaneous Ramen",
+            "score": 620,
+            "url": "https://i.redd.it/991cfpwwxvgf1.jpeg",
+            "created_utc": 1754262152.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Thanks Satya",
+            "score": 20,
+            "url": "https://i.redd.it/48qyvxmtu9gf1.jpeg",
+            "created_utc": 1753994717.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "$MSFT dub",
+            "score": 18,
+            "url": "https://i.redd.it/b179cl8z28gf1.jpeg",
+            "created_utc": 1753973246.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "MSFT Calls Went Nuclear \ud83d\udca5 +148% Today!",
+            "score": 71,
+            "url": "https://i.redd.it/imvnbwtht7gf1.jpeg",
+            "created_utc": 1753970181.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "MICROSOFT $MSFT JUST REPORTED EARNINGS",
+            "score": 783,
+            "url": "https://www.cnbc.com/2025/07/30/microsoft-msft-q4-earnings-report-2025.html",
+            "created_utc": 1753905940.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Weekly Earnings Thread 7/28 - 8/1",
+            "score": 445,
+            "url": "https://i.redd.it/jj477h3yw0ff1.jpeg",
+            "created_utc": 1753450621.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "NVDA hits $4 Trillion Market Cap",
+            "score": 2473,
+            "url": "https://i.redd.it/e5cv39vlrubf1.png",
+            "created_utc": 1752068701.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "I\u2019m short MSFT here",
+            "score": 98,
+            "url": "https://www.reddit.com/gallery/1lkchfu",
+            "created_utc": 1750873800.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Powell praying AI paying, boomers buying  and you wanna short this",
+            "score": 629,
+            "url": "https://www.reddit.com/r/wallstreetbets/comments/1l6dfob/powell_praying_ai_paying_boomers_buying_and_you/",
+            "created_utc": 1749392799.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "NVIDIA Artificial Intelligence",
+            "score": 257,
+            "url": "https://www.reddit.com/gallery/1kvuqnj",
+            "created_utc": 1748267142.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Sold 23 MSFT $450 Calls expiring tomorrow @ $4.55  Genius or Autist?",
+            "score": 15,
+            "url": "https://www.reddit.com/gallery/1knb1i0",
+            "created_utc": 1747322820.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "From $437 to $120K Plus Since the Start of May.",
+            "score": 1841,
+            "url": "https://www.reddit.com/gallery/1kmq80n",
+            "created_utc": 1747255998.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Premium list. Do you like it?",
+            "score": 23,
+            "url": "https://i.redd.it/h0lgwtem5e0f1.png",
+            "created_utc": 1747073315.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "ELI5: How MSFT ~2X higher PE vs GOOG, while generating 25% less profits?",
+            "score": 52,
+            "url": "https://www.reddit.com/r/wallstreetbets/comments/1kko2ij/eli5_how_msft_2x_higher_pe_vs_goog_while/",
+            "created_utc": 1747041422.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Microsoft wins FTC appeal challenging $69 bln Activision Blizzard deal",
+            "score": 102,
+            "url": "https://www.reuters.com/legal/microsoft-wins-ftc-appeal-challenging-69-bln-activision-blizzard-deal-2025-05-07/",
+            "created_utc": 1746635621.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Everything about AMD's earnings tonight",
+            "score": 9,
+            "url": "https://www.reddit.com/r/wallstreetbets/comments/1kgc2e3/everything_about_amds_earnings_tonight/",
+            "created_utc": 1746556585.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Cheeky 13x Bagger on MSFT Calls. $167-> $2495",
+            "score": 150,
+            "url": "https://i.redd.it/ozxvnobcbbye1.jpeg",
+            "created_utc": 1746167115.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "MSFT earnings",
+            "score": 59,
+            "url": "https://i.redd.it/k3s817r5f8ye1.jpeg",
+            "created_utc": 1746132078.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "My best trade. MSFT earnings.",
+            "score": 61,
+            "url": "https://i.redd.it/4ocbz1epf7ye1.jpeg",
+            "created_utc": 1746120154.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "MSFT Earnings Just Fixed My Portfolio in One Night",
+            "score": 28,
+            "url": "https://i.redd.it/gjctyl07x6ye1.jpeg",
+            "created_utc": 1746113929.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "TY $MSFT $460 > $12k 2560% gain overnight",
+            "score": 188,
+            "url": "https://i.redd.it/bk19uqv9m6ye1.jpeg",
+            "created_utc": 1746110385.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "GOOGL 6 month 180C Paid Out",
+            "score": 176,
+            "url": "https://i.redd.it/4b14wf3488jf1.jpeg",
+            "created_utc": 1755282517.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "MSFT Aug 22/Sept 19 showing some promising calendar spread opportunities",
+            "score": 4,
+            "url": "https://www.reddit.com/r/options/comments/1mq607t/msft_aug_22sept_19_showing_some_promising/",
+            "created_utc": 1755189998.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Cheap Calls, Puts and Earnings Plays for this week",
+            "score": 60,
+            "url": "https://www.reddit.com/r/options/comments/1mndwjv/cheap_calls_puts_and_earnings_plays_for_this_week/",
+            "created_utc": 1754921115.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Generate income with options on an $8 million dollar account",
+            "score": 0,
+            "url": "https://www.reddit.com/r/options/comments/1miq3pq/generate_income_with_options_on_an_8_million/",
+            "created_utc": 1754439699.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "My covered call strategy for MSFT shares post-layoff \u2014 am I missing anything?",
+            "score": 21,
+            "url": "https://www.reddit.com/r/options/comments/1mippis/my_covered_call_strategy_for_msft_shares/",
+            "created_utc": 1754438632.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Does this constitute \"PDT\"?",
+            "score": 0,
+            "url": "https://www.reddit.com/r/options/comments/1mfqt78/does_this_constitute_pdt/",
+            "created_utc": 1754142018.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Absolutely everything you need to know about AMZN earnings today",
+            "score": 30,
+            "url": "https://www.reddit.com/r/options/comments/1me5lue/absolutely_everything_you_need_to_know_about_amzn/",
+            "created_utc": 1753977919.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Questions about a modified PMCC idea",
+            "score": 6,
+            "url": "https://www.reddit.com/r/options/comments/1m94r5n/questions_about_a_modified_pmcc_idea/",
+            "created_utc": 1753463066.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Cheap Calls, Puts and Earnings Plays for this week",
+            "score": 33,
+            "url": "https://www.reddit.com/r/options/comments/1m5jt56/cheap_calls_puts_and_earnings_plays_for_this_week/",
+            "created_utc": 1753106714.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Bad Time to Buy a LEAP?",
+            "score": 25,
+            "url": "https://www.reddit.com/r/options/comments/1lya1et/bad_time_to_buy_a_leap/",
+            "created_utc": 1752351537.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Wheel strategy with SPY, anyone experienced with it?",
+            "score": 9,
+            "url": "https://www.reddit.com/r/options/comments/1lvd3nk/wheel_strategy_with_spy_anyone_experienced_with_it/",
+            "created_utc": 1752048127.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Cheap Calls, Puts and Earnings Plays for this week",
+            "score": 55,
+            "url": "https://www.reddit.com/r/options/comments/1ltv1qa/cheap_calls_puts_and_earnings_plays_for_this_week/",
+            "created_utc": 1751897119.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Need guidance on a MSFT - Poor Man's Covered call",
+            "score": 9,
+            "url": "https://i.redd.it/r7rt2a1voq8f1.png",
+            "created_utc": 1750712124.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Cheap Calls, Puts and Earnings Plays for this week",
+            "score": 24,
+            "url": "https://www.reddit.com/r/options/comments/1lihgod/cheap_calls_puts_and_earnings_plays_for_this_week/",
+            "created_utc": 1750687515.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Selling weekly options on Friday",
+            "score": 25,
+            "url": "https://www.reddit.com/r/options/comments/1lf9vs8/selling_weekly_options_on_friday/",
+            "created_utc": 1750337060.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Rolling ATM/ITM CSPs and Covered Calls on Long-Term Bullish Stocks \u2013 Thoughts on Risks and Edge",
+            "score": 1,
+            "url": "https://www.reddit.com/r/options/comments/1l9eb6w/rolling_atmitm_csps_and_covered_calls_on_longterm/",
+            "created_utc": 1749705526.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Cheap Calls, Puts and Earnings Plays for this week",
+            "score": 117,
+            "url": "https://www.reddit.com/r/options/comments/1l75olc/cheap_calls_puts_and_earnings_plays_for_this_week/",
+            "created_utc": 1749477917.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Just Closed My SPY & Msft Positions Ahead of Macros this week",
+            "score": 16,
+            "url": "https://www.reddit.com/r/options/comments/1l2c4dm/just_closed_my_spy_msft_positions_ahead_of_macros/",
+            "created_utc": 1748957858.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Cheap Calls, Puts and Earnings Plays for this week",
+            "score": 60,
+            "url": "https://www.reddit.com/r/options/comments/1l1iw79/cheap_calls_puts_and_earnings_plays_for_this_week/",
+            "created_utc": 1748873113.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Cheap Calls, Puts and Earnings Plays for this week",
+            "score": 45,
+            "url": "https://www.reddit.com/r/options/comments/1kvv6zw/cheap_calls_puts_and_earnings_plays_for_this_week/",
+            "created_utc": 1748268316.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Will i get smoked with adbe and spy?",
+            "score": 1,
+            "url": "https://i.redd.it/m5iuzeoaly1f1.png",
+            "created_utc": 1747756465.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Notable Flow NVDA",
+            "score": 2,
+            "url": "https://www.reddit.com/r/options/comments/1kqueoq/notable_flow_nvda/",
+            "created_utc": 1747709148.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "The structure and the 90% success rate that follows",
+            "score": 248,
+            "url": "https://www.reddit.com/r/options/comments/1kq9tu2/the_structure_and_the_90_success_rate_that_follows/",
+            "created_utc": 1747655881.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Need ideas to limit loss from selling MSFT 450 call",
+            "score": 23,
+            "url": "https://www.reddit.com/r/options/comments/1kc2bil/need_ideas_to_limit_loss_from_selling_msft_450/",
+            "created_utc": 1746081790.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "$270 MSFT PUT SOS!",
+            "score": 123,
+            "url": "https://www.reddit.com/r/options/comments/1k1p92r/270_msft_put_sos/",
+            "created_utc": 1744928002.0,
+            "subreddit": "options"
+        }
+    ]
+}

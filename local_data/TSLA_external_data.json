@@ -1,0 +1,1192 @@
+{
+    "news_data": [
+        {
+            "category": "company",
+            "datetime": 1756131044,
+            "headline": "Elon Musk Sounds This FSD Warning As Tesla Remains All-In On Autonomy",
+            "id": 136507727,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "Tesla stock jumped more than 6% on Friday and retail investor interest is up ahead of Monday's stock market open.",
+            "url": "https://finnhub.io/api/news?id=ccd1e733825f6486f6ce868cafda1086554d66021bdf4f8945f2ea7d6f78c0e8"
+        },
+        {
+            "category": "company",
+            "datetime": 1756129620,
+            "headline": "Tesla Stock Slips. Why Shares Could Be Headed for a Breakout Anyway.",
+            "id": 136507861,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "Tesla  stock was slipping in premarket trading Monday as shares aim for four consecutive weekly gains this week.  Getting above $338 is important, according to Mark Newton, head of technical strategy at Fundstrat.  Newton isn\u2019t making a fundamental call on Tesla stock, he\u2019s looking at market history and stock charts to identify inflections in investor sentiment.",
+            "url": "https://finnhub.io/api/news?id=13b3ad7185b6b6c417a0f561a112af805f16446353d6332df1fd3eb442ed573f"
+        },
+        {
+            "category": "company",
+            "datetime": 1756125816,
+            "headline": "Jerome Powell\u2019s rate cut hint puts tech stock rally to the test",
+            "id": 136507741,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "Will easier money become fuel for another leg of Big Tech\u2019s historic surge? Or is it the signal that tech has peaked?",
+            "url": "https://finnhub.io/api/news?id=aae70ed2f7779ebff9935c492da20ddb4d994b48aff4d806de175a5534c45563"
+        },
+        {
+            "category": "company",
+            "datetime": 1756125000,
+            "headline": "TSLA or F: Which Stock Deserves a Place in Your EV Portfolio?",
+            "id": 136507791,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "Tesla faces sliding deliveries and shrinking margins, while Ford's EV reset aims at scale and affordability to attract the next wave of buyers.",
+            "url": "https://finnhub.io/api/news?id=06101377a73aef119a452a85f7b82dcf6fb10a33522cdd3f33d36be4d41a5749"
+        },
+        {
+            "category": "company",
+            "datetime": 1756120500,
+            "headline": "Is Rivian Stock a Buy Now?",
+            "id": 136507868,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "Rivian provided a negative revision to its 2025 guidance, but the underlying business remains on track.",
+            "url": "https://finnhub.io/api/news?id=01c0d7c8d71143f83ebd646ec4d8e9af5512d7ecb150ba9a1845a3f835c685c4"
+        },
+        {
+            "category": "company",
+            "datetime": 1756117008,
+            "headline": "How Tesla's (TSLA) Robotaxi, AI Deals and U.K. Energy Push Could Shape Software Revenue Growth",
+            "id": 136507870,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "In recent days, Tesla announced new AI and voice command partnerships with DeepSeek and ByteDance\u2019s Doubao in China, plans to publicly launch its robotaxi service in Austin next month, and an application to become a power supplier in the U.K. amid rising competition and changing market dynamics. By combining software innovation, energy expansion, and global collaborations, Tesla is seeking to diversify revenue streams and respond to pressure in key markets like China and the U.K. We\u2019ll...",
+            "url": "https://finnhub.io/api/news?id=9918a12ead3d906feb278e3f4ef3f234325b95bed482a876723bce5593cef8ab"
+        },
+        {
+            "category": "company",
+            "datetime": 1756116471,
+            "headline": "Stocks Set to Open Lower as Fed Rate-Cut Optimism Fades, Nvidia Earnings and U.S. PCE Inflation Data Awaited",
+            "id": 136507828,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "September S&P 500 E-Mini futures (ESU25) are down -0.24%, and September Nasdaq 100 E-Mini futures (NQU25) are down -0.32% this morning, pointing to a slightly lower open on Wall Street after last Friday\u2019s rally as some of the optimism around expectations for Federal Reserve interest rate cuts faded.",
+            "url": "https://finnhub.io/api/news?id=a6253d5f42e051684b24f47f8e8df3176b4e462365071952131b6e994dbeadff"
+        },
+        {
+            "category": "company",
+            "datetime": 1756113240,
+            "headline": "BYD Is Quietly Building a Global EV Empire -- Here's What Investors Should Know",
+            "id": 136507872,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "Thinking about investing in the EV revolution? BYD isn't just China's biggest EV maker anymore -- it's quietly becoming a global player.",
+            "url": "https://finnhub.io/api/news?id=44960d73c3b44279537bb41d829d696d6274f0c5b3402b3dcdb5ba6473ddabb1"
+        },
+        {
+            "category": "company",
+            "datetime": 1756101600,
+            "headline": "Tesla\u2019s $29 Billion Stock Grant to Musk Could Be Costly in the Long Run",
+            "id": 136507873,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "Academic research has found that giving massive compensation to already-rich CEOs doesn\u2019t increase their motivation, and actually leads to worse outcomes for their companies.",
+            "url": "https://finnhub.io/api/news?id=914c36bd3cde100cdc32efdf7db124671d7fc9f3d770f3e8db1ca5913f31cb54"
+        },
+        {
+            "category": "company",
+            "datetime": 1756096980,
+            "headline": "Could Buying Tesla Stock Today Set You Up for Life?",
+            "id": 136507875,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "The company's declining sales and margins are concerning, but they underscore the need for robotaxis to become a significant part of the business.",
+            "url": "https://finnhub.io/api/news?id=0bba028a9ca89b8405d96a91c20c77e4c75901a81099a944becd394a50fb34fd"
+        },
+        {
+            "category": "company",
+            "datetime": 1756095677,
+            "headline": "Tesla (TSLA) Offers 40% Leasing Discounts to Bolster Europe Sales",
+            "id": 136507876,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "Tesla, Inc. (NASDAQ:TSLA) is one of the top 10 stocks to buy now according to Cathie Wood. On August 17, the company moved to shore up its market share in the UK and Europe by offering steep discounts to leasing firms. The electric vehicle giant is offering up to 40% in discounts to leasing firms. [\u2026]",
+            "url": "https://finnhub.io/api/news?id=30ae5e6f14254e8d817f43dd61b3fbb13b92f8af97afbf94b1fce672635d2493"
+        },
+        {
+            "category": "company",
+            "datetime": 1756088516,
+            "headline": "ETV: Decent Price Right Now, But Not As Diversified As I Would Like",
+            "id": 136506262,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2153687482/image_2153687482.jpg?io=getty-c-w1536",
+            "related": "TSLA",
+            "source": "SeekingAlpha",
+            "summary": "ETV's strategy relies on writing index options, but its heavy technology weighting reduces diversification. Read why ETV CEF is a Hold.",
+            "url": "https://finnhub.io/api/news?id=e609d8759451296d6349d17fdd99438fa94156eeb9a23a86f2d0e912ae4441a0"
+        },
+        {
+            "category": "company",
+            "datetime": 1756083600,
+            "headline": "Tech Rally Shows Signs of Losing Steam",
+            "id": 136507772,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "Nvidia and other stocks in the Magnificent Seven have been buffeted recently by growing doubts about their valuations and the potential of artificial intelligence.",
+            "url": "https://finnhub.io/api/news?id=0f8fa3e29ac4bd95c89354949c4161a2d35db2381f83831109a9b2f473e5024f"
+        },
+        {
+            "category": "company",
+            "datetime": 1756077120,
+            "headline": "Prediction: All \"Ten Titans\" Stocks Will Surpass $1 Trillion in Market Cap by 2030",
+            "id": 136507773,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "The Ten Titans already make up 38% of the S&P 500, but their share could grow if companies keep delivering on investor expectations.",
+            "url": "https://finnhub.io/api/news?id=21506a32bd26bd2e8cb299d0693e1834738da72b97c33b4ccc8a045bbd406e21"
+        },
+        {
+            "category": "company",
+            "datetime": 1756076700,
+            "headline": "1 Popular AI Stock to Sell Before It Falls 45% According to 1 Wall Street Analyst (Hint: It's Not Nvidia)",
+            "id": 136507880,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "This hot growth stock, which has a sky-high valuation due to the hype surrounding its plans for an autonomous ride-sharing network, could plummet.",
+            "url": "https://finnhub.io/api/news?id=f43db0a6ab79beef8b8f3ecc94266b6a97fa96b9f2d5e55cfbd0577d3287ae4a"
+        },
+        {
+            "category": "company",
+            "datetime": 1756074672,
+            "headline": "HOA Told Homeowner They Couldn't Charge a Tesla in Their Own Driveway \u2014Not Because of the Vehicle, But Because the Extension Cord Looked Ugly",
+            "id": 136507881,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "HOAs have a reputation for micromanaging everything from mailbox colors to holiday decorations. One homeowner learned that even charging a visiting family member's Tesla wasn't safe from scrutiny. In a Reddit post, the townhouse resident said a family ...",
+            "url": "https://finnhub.io/api/news?id=d65c596d8f3db96f4f0aecd97bd521afa8d2f18ae101588446d2a356b573acc7"
+        },
+        {
+            "category": "company",
+            "datetime": 1756064768,
+            "headline": "Kobe Bryant On How Elon Musk Inspired Him: 'A Genius By All Accounts'",
+            "id": 136507884,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "Basketball legend Kobe Bryant expressed deep admiration for Elon Musk, often sharing how the billionaire served as a source of inspiration for him. What Happened: Bryant, renowned for his voracious appetite for knowledge, was always on the lookout for inspiration from the best in various fields. Musk, known for his innovative approach and relentless quest for solutions to complex problems, caught Bryant\u2019s attention. Bryant once expressed his admiration for Musk, stating, \u201cElon Musk is a genius b",
+            "url": "https://finnhub.io/api/news?id=7c1c9b70a30c4d0e612fc2a5338c4c6a56c74af93a711ff79b77e1390664f1a6"
+        },
+        {
+            "category": "company",
+            "datetime": 1756058700,
+            "headline": "Prediction: Lucid Group Sales Will Soar 500% Over the Next 5 Years if This Happens",
+            "id": 136502638,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "Lucid Group is preparing to follow Tesla's master plan for growth.",
+            "url": "https://finnhub.io/api/news?id=ba6a4151921de9645e903aba9f242e4d00fa341befaab80a446e3c5b871a4bc4"
+        },
+        {
+            "category": "company",
+            "datetime": 1756058427,
+            "headline": "Kimbal Musk talks tariff strategy for Tesla & his drone company",
+            "id": 136502639,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "Nova Sky Stories co-founder and CEO Kimbal Musk, who is also a member of Tesla's (TSLA) board of directors, discusses navigating the Trump administration's tariff policies. Check out Yahoo Finance's full interview with Musk and WndrCo founding partner Jeffrey Katzenberg. To watch more expert insights and analysis on the latest market action, check out more Market Catalysts.",
+            "url": "https://finnhub.io/api/news?id=c638b8f90123c033f78741ef19f81a627f950ce438e3e22d7a8109c0dad9fe5e"
+        },
+        {
+            "category": "company",
+            "datetime": 1756058400,
+            "headline": "Prediction: These 2 Trillion-Dollar Artificial Intelligence (AI) Stocks Could Strike a Megadeal That Wall Street Isn't Ready For",
+            "id": 136502572,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "Most of the \"Magnificent Seven\" companies have built and scaled legitimate artificial intelligence (AI) platforms, but two outliers in big tech remain.",
+            "url": "https://finnhub.io/api/news?id=4aa61de7969df2e537fcbf75911a5d0975ee96cf94d45ea916556d38a6a8a54d"
+        },
+        {
+            "category": "company",
+            "datetime": 1756048080,
+            "headline": "Will Tesla's Bet on Bigger Vehicles in China Pay Off?",
+            "id": 136502641,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "Tesla may have a little trick up its sleeve when it comes to China's challenging market.",
+            "url": "https://finnhub.io/api/news?id=2936d35191790654d8b72270395d70c12bbae77c55633afe1a18845b2366d8f3"
+        },
+        {
+            "category": "company",
+            "datetime": 1756047600,
+            "headline": "The \"Ten Titans\" Stocks Now Make Up 38% of the S&P 500. Here's What It Means for Your Investment Portfolio",
+            "id": 136502531,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "Massive growth stocks are driving the performance of the S&P 500, for better or for worse.",
+            "url": "https://finnhub.io/api/news?id=0beed2ea303bafdbcdee6489b172454ab0df5c2c868733b172d80693a4b795d7"
+        },
+        {
+            "category": "company",
+            "datetime": 1756026900,
+            "headline": "Prediction: Rivian Sales Will Soar 300%-Plus Over the Next 3 Years If This Happens",
+            "id": 136502643,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "2026 will be a transformational year for Rivian's sales growth.",
+            "url": "https://finnhub.io/api/news?id=4b00ea7ce9957a04bbd5999b2399bcf265d8e3d0af0c543774c7515e50ff2212"
+        },
+        {
+            "category": "company",
+            "datetime": 1756026900,
+            "headline": "Ben Graham's Folly:\u00a0The Stock Market Is Never A Voting Machine",
+            "id": 136501180,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2179435357/image_2179435357.jpg?io=getty-c-w1536",
+            "related": "TSLA",
+            "source": "SeekingAlpha",
+            "summary": "Discover why market prices reflect extreme optimism and how to succeed in investing by understanding the auction-like nature of the stock market.",
+            "url": "https://finnhub.io/api/news?id=a34628f003f0544ccfef11d5d1cd1bdb774ba4330064ab91cc36fdbe2181028b"
+        },
+        {
+            "category": "company",
+            "datetime": 1756023300,
+            "headline": "Where Will Lucid Stock Be in 3 Years?",
+            "id": 136502644,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "The luxury electric vehicle (EV) maker faces a lot of long-term challenges.",
+            "url": "https://finnhub.io/api/news?id=10fd54dc61d573f55bd6a3dd2cb3edea2b336cd0a727393a8aa7f1963357ecf5"
+        },
+        {
+            "category": "company",
+            "datetime": 1756012898,
+            "headline": "FCG Investment Co Lifts Tesla, Inc. (TSLA) Stake by 547%",
+            "id": 136502645,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "Tesla, Inc. (NASDAQ:TSLA) is among the best stocks to buy now according to AI. FCG Investment Co has increased its stake in Tesla, Inc. (NASDAQ:TSLA) by a whopping 546.9% in the first quarter, according to the latest Form 13F filing with the SEC. With the acquisition of 7,050 shares of the company\u2019s stock, the firm [\u2026]",
+            "url": "https://finnhub.io/api/news?id=549c383372631d5cd3a278351c75ca9df6f4923de1619e6991b6e86eb764789b"
+        },
+        {
+            "category": "company",
+            "datetime": 1755990000,
+            "headline": "Elon Musk drops shock U-turn on AI disruptor",
+            "id": 136502646,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "Tesla CEO flips the script on an AI rival he once warned could never deliver.",
+            "url": "https://finnhub.io/api/news?id=7bef6424a51c82a84dabd95f23a7a87ad136a8e8c13e56bcc3ceb65a6240662f"
+        },
+        {
+            "category": "company",
+            "datetime": 1755974783,
+            "headline": "Elon Musk's xAI To Simulate Software Giants Like Microsoft, Calling It 'Macrohard'",
+            "id": 136495857,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "Elon Musk has announced plans to simulate software companies such as Microsoft Corporation (NASDAQ:MSFT) using artificial intelligence (AI). What Happened: Musk\u2019s AI firm, xAI, is said to be creating an AI-only software company named \u201cMacrohard.\u201d Musk characterized the project as \u201cvery real\u201d, implying that software companies like Microsoft, which do not produce physical hardware, could theoretically be entirely simulated using AI. Join @xAI and help build a purely AI software company called Macr",
+            "url": "https://finnhub.io/api/news?id=d980898fda41c6674486c93cb725b6dbc16359a03e22cc82cab841339d70cced"
+        },
+        {
+            "category": "company",
+            "datetime": 1755967620,
+            "headline": "Prediction: This Quantum Computing Stock Will Still Be Worth More Than Berkshire Hathaway, Palantir, and Tesla Combined in 2030",
+            "id": 136495839,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "Quantum computing could become the next frontier of the artificial intelligence revolution.",
+            "url": "https://finnhub.io/api/news?id=963004d4b5e80bab2c5fff729f22be257f34cf9ebb2bedd4c494b9da856a2d25"
+        },
+        {
+            "category": "company",
+            "datetime": 1755967400,
+            "headline": "$7,500 EV Tax Credit Extended For Tesla, Other Automakers \u2014 Kind Of",
+            "id": 136495982,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "The U.S. $7,500 EV tax credit expires Sept. 30, but the IRS just gave buyers a little more time to get electric vehicles from Tesla and others.",
+            "url": "https://finnhub.io/api/news?id=92a2e59e54a85463cb95481a87e52e6df1a5ba2b358a1227b4dcb0334968e5a7"
+        },
+        {
+            "category": "company",
+            "datetime": 1755965100,
+            "headline": "Better EV Stock: Rivian vs. Tesla",
+            "id": 136495983,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "Tesla has been the EV market leader, but Rivian has a big opportunity with the R2.",
+            "url": "https://finnhub.io/api/news?id=04cc6bb357dd406ca9e41c3123cef8def8b943648b87bcf15ba3b546feeb641f"
+        },
+        {
+            "category": "company",
+            "datetime": 1755950820,
+            "headline": "If You'd Invested $10,000 in Tesla Stock 3 Years Ago, Here's How Much You'd Have Today",
+            "id": 136495984,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "Depending on when investors decided to hitch a ride with Tesla stock, they have seen wildly different returns.",
+            "url": "https://finnhub.io/api/news?id=660817c678a4d53380afa4442556f9ebec98f7e05c89531915b9580e7c6d2231"
+        },
+        {
+            "category": "company",
+            "datetime": 1755944100,
+            "headline": "3 Top Bargain Stocks Ready for a Bull Run",
+            "id": 136495985,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "ChargePoint, Intuitive Machines, and BYD still look like bargains in this frothy market.",
+            "url": "https://finnhub.io/api/news?id=8a5376216ae13d370e23739a0249ba3890de23c7857716b6d57f743161b63328"
+        },
+        {
+            "category": "company",
+            "datetime": 1755943172,
+            "headline": "The Weekend: Russia pours water on Ukraine peace hopes as tech trade takes a hit from AI doubts",
+            "id": 136495852,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "Key moments from the last seven days, plus a glimpse at the week ahead",
+            "url": "https://finnhub.io/api/news?id=6b5aa366cb1051ac9bb2d9399d012745b68522492a334e8b158138e43dc61f9c"
+        },
+        {
+            "category": "company",
+            "datetime": 1755941340,
+            "headline": "I\u2019m a widow with $200,000 in a brokerage account. So why am I treated so poorly?",
+            "id": 136495987,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "\u201cI had to hunt high and low to have them sell my Tesla stock because it was tanking.\u201d",
+            "url": "https://finnhub.io/api/news?id=22175b2f2ec03369ed76de84ad226440fa63ef43640f4be5674cb531adf16390"
+        },
+        {
+            "category": "company",
+            "datetime": 1755920761,
+            "headline": "Morgan Stanley Predicts Record Q3 Sales for Nio (NIO) Amid Robust Demand",
+            "id": 136495988,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "Nio Inc. (NYSE:NIO) is one of the best high growth consumer stocks to buy now. On August 16, Morgan Stanley said that it expects Nio Inc. (NYSE:NIO) to report record Q3 sales guidance given the strong order backlog for the Chinese EV maker\u2019s new Onvo L90 SUV. The company is expected to report its Q2 financial [\u2026]",
+            "url": "https://finnhub.io/api/news?id=32c921e4de3ad53dfdefa5329b3e8e8bad9189c583c44f5998a0ddda16c0d2f4"
+        },
+        {
+            "category": "company",
+            "datetime": 1755911152,
+            "headline": "Tesla (TSLA) Robotaxi Demo Wows Analysts Ahead of September Launch",
+            "id": 136495989,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "Tesla, Inc. (NASDAQ:TSLA) is one of the Must-Watch AI Stocks for Investors. On August 19, William Blair analyst Jed Dorsheimer reiterated a Market Perform rating on the stock. The rating affirmation follows the demo of Tesla\u2019s robotaxi service in Austin prior to the September public launch. \u201cOur main takeaway was that we experienced a glimpse of the [\u2026]",
+            "url": "https://finnhub.io/api/news?id=b48bf6adb76c889179b90e027e72d739514b07760fd790230f8729c907d8c44f"
+        },
+        {
+            "category": "company",
+            "datetime": 1755910800,
+            "headline": "I Drove an EV Deep Into the Wilderness. I Never Feared Running Out of Juice.",
+            "id": 136495990,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "Charging deserts are going away. It\u2019s now possible to embark on a Great American Road Trip in an electric vehicle.",
+            "url": "https://finnhub.io/api/news?id=0a1d3456edcc0190815f7657482ab7e08f8f250760d3b54b24906086c4981978"
+        },
+        {
+            "category": "company",
+            "datetime": 1755904016,
+            "headline": "Tesla Leads Mega-Cap Tech Stock Rally After Powell Points to Possible Rate Cut",
+            "id": 136495991,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "Shares of Tesla surged Friday, amid a broader market rally fueled by optimism about the prospect that the Federal Reserve could soon cut interest rates.",
+            "url": "https://finnhub.io/api/news?id=01f75a87cb09d296fcd8901ff97b22bf7b20a63223f26c33bd8fe75e7a88efc8"
+        },
+        {
+            "category": "company",
+            "datetime": 1755896922,
+            "headline": "Stocks to Watch Recap: Tesla, Carnival, Intuit, Nvidia",
+            "id": 136495956,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "\u2197\ufe0fTesla (TSLA): The EV-maker's stock led gains for the Magnificent Seven during the broad market rally, rising 6.2%. Alphabet picked up 3.2%. Nvidia (NVDA) turned around early losses and finished 1.7% higher.",
+            "url": "https://finnhub.io/api/news?id=10f42a142e971a55dd9196be021bd2c0b03ac98c5f79d14204a2dfd61507d5ff"
+        },
+        {
+            "category": "company",
+            "datetime": 1755896497,
+            "headline": "Dow Hits Record High as Powell's Dovish Tilt Fuels Stock Market Rally",
+            "id": 136495871,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "Wall Street's equity indexes rallied on Friday, with the Dow Jones Industrial Average hitting a reco",
+            "url": "https://finnhub.io/api/news?id=c45ffc6ab579368ee4943ead165a214976c8fd630c32c9e71cd71bd0eb4b2699"
+        },
+        {
+            "category": "company",
+            "datetime": 1755891042,
+            "headline": "Why Is Tesla (TSLA) Stock Rocketing Higher Today",
+            "id": 136495994,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "Shares of electric vehicle pioneer Tesla (NASDAQ:TSLA) jumped 6.1% in the afternoon session after dovish comments from Federal Reserve Chair Jerome Powell sparked a broad market rally, boosting investor sentiment for risk assets. Powell's remarks at the Jackson Hole Symposium were interpreted by traders as hinting at a potential interest rate cut, which is often seen as a positive for stocks. The news lifted risk assets and sparked a broad market rally, with large technology companies seeing sig",
+            "url": "https://finnhub.io/api/news?id=ef95cfdd9731a05cea16cf863093575a2c9258719a536501bdee0493d591e007"
+        },
+        {
+            "category": "company",
+            "datetime": 1755888688,
+            "headline": "This Nvidia-Backed Stock Just Announced a New Technical Breakthrough That Could Rival Tesla",
+            "id": 136495995,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "WeRide is an autonomous driving company backed by Nvidia. Here's why you should consider investing in WRD stock right now.",
+            "url": "https://finnhub.io/api/news?id=3b7e934da5d499e60930de70b7c1d98b392324ee5c67a4c70213299e163e50db"
+        },
+        {
+            "category": "company",
+            "datetime": 1755886345,
+            "headline": "Powell's Hint at Fed Policy Easing Sends Equities Higher Intraday; Yields Decline",
+            "id": 136479922,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "US benchmark equity indexes surged intraday, while Treasury yields slumped, after Federal Reserve Ch",
+            "url": "https://finnhub.io/api/news?id=0b244a31e909aa829c681da2c719ab869e45baae62f4da882b8a033776660198"
+        },
+        {
+            "category": "company",
+            "datetime": 1755884330,
+            "headline": "US Equity Indexes Jump as Powell's Jackson Hole Speech Sends September Rate-Cut Bets Sharply Higher",
+            "id": 136479172,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "US equity indexes soared as bets favoring monetary policy easing in September rose after a potential",
+            "url": "https://finnhub.io/api/news?id=9ca4e7037352f5272be20376503d20649837d976e62dc618e0132665d3ae278f"
+        },
+        {
+            "category": "company",
+            "datetime": 1755883163,
+            "headline": "Why Shares of Tesla Are Soaring Today",
+            "id": 136478878,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "Tesla joined in the broader market rally today.",
+            "url": "https://finnhub.io/api/news?id=66128b00130ff8e7befae4d8d380cb629f8a0d0a4882a2d051a42d00958d0fd0"
+        },
+        {
+            "category": "company",
+            "datetime": 1755882068,
+            "headline": "Elon Musk Says Success Comes Down To 'Simple Math.' Putting In 100 Hours A Week Means You'll Achieve Twice As Much As Those Working 50",
+            "id": 136478879,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "Elon Musk's philosophy on success doesn't rely on buzzwords or vague motivation. Instead, it comes down to what he calls \"simple math.\" If You Work Twice As Much, You Get Twice As Much Done In a 2014 commencement speech at the University of Southern California's Marshall School of Business, Tesla Inc. (NASDAQ:TSLA) CEO told graduates that extreme effort is often the key to success\u2014especially for anyone building a company. \u201cIf somebody else is working 50 hours and you\u2019re working 100, you\u2019ll get t",
+            "url": "https://finnhub.io/api/news?id=7542c2f84e29ee3f9df6a1a214298d90028b771d239abc08058f3e1e0542184c"
+        },
+        {
+            "category": "company",
+            "datetime": 1755881741,
+            "headline": "Tesla's AI Gamble in China: Local Models, Slipping Sales, and a Silent Software Shift",
+            "id": 136478880,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "To stay in the race, Tesla ditches Grok in China and plugs into Bytedance's AI engine--will it be enough?",
+            "url": "https://finnhub.io/api/news?id=c8c4b8931721e50afed663beee2a0a68846273fee18f893aab3d216b16e85d12"
+        },
+        {
+            "category": "company",
+            "datetime": 1755880680,
+            "headline": "Billionaire Stanley Druckenmiller Just Dumped Tesla and Piled Into a \"Magnificent Seven\" Stock That's Crushing the Stock Market This Year",
+            "id": 136478809,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "Druckenmiller is considered one of the best investors of all time.",
+            "url": "https://finnhub.io/api/news?id=787723882be108f021ca66c9e0381bcdc8e046f01d5c85b2427470362cfb9f32"
+        },
+        {
+            "category": "company",
+            "datetime": 1755880284,
+            "headline": "Here's Why Chinese Electric Vehicle Maker Nio Shot Up Today",
+            "id": 136478882,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "Electric vehicle makers need to lower the price of their vehicles, and this company just released a more affordable model.",
+            "url": "https://finnhub.io/api/news?id=74873c891cba141d4db8038f2ed7932d6577fc58e465377e64dbc3b4f3b6d8af"
+        },
+        {
+            "category": "company",
+            "datetime": 1755879540,
+            "headline": "NIO Stock Soars. How the Tesla Rival Has Escalated the EV War.",
+            "id": 136487994,
+            "image": "",
+            "related": "TSLA",
+            "source": "MarketWatch",
+            "summary": "NIO Stock Soars. How the Tesla Rival Has Escalated the EV War.",
+            "url": "https://finnhub.io/api/news?id=ed1cf8482b3ec8f3dc731c1c71200c2d37845ac5bee2e17d687654b973620896"
+        },
+        {
+            "category": "company",
+            "datetime": 1755879180,
+            "headline": "Tesla Stock Soars. Interest Rates Are What Really Matter.",
+            "id": 136487995,
+            "image": "",
+            "related": "TSLA",
+            "source": "MarketWatch",
+            "summary": "Tesla Stock Soars. Interest Rates Are What Really Matter.",
+            "url": "https://finnhub.io/api/news?id=e60952016b666372af57bf6ea97dfc8dd6d95ef058a1c690c5e5728b440e2089"
+        },
+        {
+            "category": "company",
+            "datetime": 1755876889,
+            "headline": "Top Stock Movers Now: Enphase Energy, Zoom, Intuit, and More",
+            "id": 136477522,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "U.S. equities took off at midday as Fed Chair Jerome Powell indicated interest-rate cuts may be appropriate now.",
+            "url": "https://finnhub.io/api/news?id=53feea184e777e75b5daf27a8d1c6877901689eeaa6ffb9aa9e13327c917a616"
+        },
+        {
+            "category": "company",
+            "datetime": 1755876780,
+            "headline": "Tesla Stock Soars. Interest Rates Are What Really Matters.",
+            "id": 136478884,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "Tesla  stock soared midday Friday, along with most of the market, after Fed chair Jerome Powell spoke in Jackson Hole, Wyo.  The \u201cCyberbeast\u201d version of the Cybertruck is getting more expensive.  Tesla stock was up in early trading.",
+            "url": "https://finnhub.io/api/news?id=daf7c9e9e3738f26bdcec2a00cb6bd9e7012ac20d3f3df164a6525862dd302b9"
+        },
+        {
+            "category": "company",
+            "datetime": 1755876672,
+            "headline": "Top Midday Stories: Stocks Soar on Powell Speech; Cenovus Energy to Acquire MEG Energy for $5.68 Billion",
+            "id": 136478812,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "All three major US stock indexes were up sharply in late-morning trading Friday after Federal Reserv",
+            "url": "https://finnhub.io/api/news?id=fd87f69ff848abb6c702631ab084def9675613e018c32fcab138322093d583af"
+        },
+        {
+            "category": "company",
+            "datetime": 1755876615,
+            "headline": "Why Is Tesla (TSLA) Up 4.9% Since Last Earnings Report?",
+            "id": 136478886,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "Tesla (TSLA) reported earnings 30 days ago. What's next for the stock? We take a look at earnings estimates for some clues.",
+            "url": "https://finnhub.io/api/news?id=a1bef1d65656b72a5803dc9c9b705b2dd20cb4b7b0d5b1071aed0175b6b875d7"
+        },
+        {
+            "category": "company",
+            "datetime": 1755874620,
+            "headline": "Nio Stock Soars Further on SUV Challenge to Tesla Model Y L",
+            "id": 136478887,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "U.S.-listed shares of Chinese EV maker Nio continued to get a boost Friday as the Tesla rival gets ready to launch its challenger to the Model Y L SUV.",
+            "url": "https://finnhub.io/api/news?id=923d933f92a0f9330ffce9a41ab56e29f26c7f47bd8bd24abd8082535e7a8e7e"
+        },
+        {
+            "category": "company",
+            "datetime": 1755873015,
+            "headline": "BC-Most Active Stocks",
+            "id": 136476416,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "Raytech Holding Ltd. 4,324,683 2.61",
+            "url": "https://finnhub.io/api/news?id=6f0bfafe2b757ad843722319b976da4baa2d23d20e75cc99cd0328d3ebb41b84"
+        },
+        {
+            "category": "company",
+            "datetime": 1755872372,
+            "headline": "A Reverse Stock Split Won\u2019t End Lucid\u2019s Woes: Should You Buy LCID Stock or Steer Clear?",
+            "id": 136478888,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "Lucid Group has announced a 1-for-10 reverse stock split. How should you play the stock here?",
+            "url": "https://finnhub.io/api/news?id=ffca859fc1faadad109aae5dd3b3e586710cb9dc2ce580701b23f2761bfb7726"
+        },
+        {
+            "category": "company",
+            "datetime": 1755871680,
+            "headline": "Tesla Stock Rises. It Has a Strategy to Sell More Cybertrucks.",
+            "id": 136476567,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "Tesla  has spent the past few years slashing prices in a bid to improve affordability and outsell its rivals\u2014but the electric-vehicle maker appears to be adopting a different strategy with its fastest Cybertruck.  Essentially, Tesla is bundling its highest-level driver-assistance product into the purchase price.  With other Tesla models, customers can pay a one-time fee of $8,000 or $99 a month for FSD.",
+            "url": "https://finnhub.io/api/news?id=72dfeba9aaf308f1258d2efcd8ac3dd43f96989fcfcd913e0c14321f510c7c64"
+        },
+        {
+            "category": "company",
+            "datetime": 1755871487,
+            "headline": "Competitive pressures are rising for this Chinese EV manufacturer says Macquarie",
+            "id": 136476569,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "Investing.com -- Li Auto faces mounting headwinds as weaker sales, tougher competition, and execution risks weigh on its outlook, according to Macquarie.",
+            "url": "https://finnhub.io/api/news?id=3660cbe5dcdc1fcc2efe1cf5ec80d6120b0a1c47998b72366f7860f435377bfd"
+        },
+        {
+            "category": "company",
+            "datetime": 1755871200,
+            "headline": "Meet the Unstoppable Vanguard ETF With 55% Invested in \"Ten Titans\" Growth Stocks",
+            "id": 136476419,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "The Vanguard S&P 500 Growth ETF has especially high weightings in select \"Ten Titans\" stocks.",
+            "url": "https://finnhub.io/api/news?id=5ca186cfc0502126d6873ca3ceec89c7428c922342b104a6f94ff4b550759b22"
+        },
+        {
+            "category": "company",
+            "datetime": 1755870908,
+            "headline": "Nio Stock Rocketed Higher This Week. Is It Time to Buy?",
+            "id": 136476571,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "Nio just took a shot across the bow at Tesla.",
+            "url": "https://finnhub.io/api/news?id=225ae864aeea01f3f6835a692028d3fc6857ddb7505df52fd6a69d5ae0814ea0"
+        },
+        {
+            "category": "company",
+            "datetime": 1755867658,
+            "headline": "Jeffrey Katzenberg and Kimbal Musk are bringing sky-high storytelling to life",
+            "id": 136476572,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "The DreamWorks co-founder is backing Musk's drone startup.",
+            "url": "https://finnhub.io/api/news?id=72cd770b58a5f1d5cdf729689b64b2890b3e778113b6499ba8c308ff9c2d2777"
+        },
+        {
+            "category": "company",
+            "datetime": 1755866940,
+            "headline": "Micron Technology and Albany have been highlighted as Zacks Bull and Bear of the Day",
+            "id": 136476535,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "Micron surges on AI memory demand and bullish estimates, while Albany faces cash burn, EPS cuts and operational headwinds.",
+            "url": "https://finnhub.io/api/news?id=0f370258f8321ce5391d2c12dfd9cd25d2d8a7e782c8357ec00f9b4f8cc9325a"
+        },
+        {
+            "category": "company",
+            "datetime": 1755865868,
+            "headline": "NIO Stock Hits New 2025 Peak-- What's Going On?",
+            "id": 136476574,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "NIO Shares Soar 10% to 2025 High After New ES8 Reveal",
+            "url": "https://finnhub.io/api/news?id=0e0f72ed1e375b38e2f0652982f1034b8d2f4dcc16d45a37d0fa8c851ee750d9"
+        },
+        {
+            "category": "company",
+            "datetime": 1755865500,
+            "headline": "Why you can lose a lot of money from Tech\u2019s AI splurge",
+            "id": 136487996,
+            "image": "",
+            "related": "TSLA",
+            "source": "MarketWatch",
+            "summary": "Why you can lose a lot of money from Tech\u2019s AI splurge",
+            "url": "https://finnhub.io/api/news?id=c310d44717750e1d1bee2041ca615ea4518cdfbf9a0bcef797dff35a75fed9f3"
+        },
+        {
+            "category": "company",
+            "datetime": 1755862263,
+            "headline": "Elon Musk Must Face Lawsuit Over Alleged $1 Million Election Lottery As Judge Cites Voter Fraud Claims, Data Harvesting Concerns",
+            "id": 136476575,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "On Wednesday, a federal judge ordered Tesla Inc. (NASDAQ:TSLA) CEO Elon Musk to face a lawsuit accusing him of running an illegal $1 million-a-day election giveaway during the 2024 presidential campaign. Musk Faces Plausible Claims of Misleading Voters With Fake Lottery Scheme U.S. District Judge Robert Pitman in Austin, Texas, ruled that plaintiff Jacqueline McAferty plausibly alleged Musk and his political action committee, America PAC, misled voters into believing they were entering a legitim",
+            "url": "https://finnhub.io/api/news?id=6755e4adc063575f1b89f2279b0ade89899f78ef80b610067102c5ecdd6c529a"
+        },
+        {
+            "category": "company",
+            "datetime": 1755859686,
+            "headline": "Electric Vehicles Update - Federal Boost Sparks Opportunity in EV Infrastructure Expansion",
+            "id": 136476576,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "Recent federal guidance from the U.S. Department of Transportation and the Federal Highway Administration has directed $5 billion toward establishing dependable electric vehicle (EV) charging infrastructure. This initiative aims to enforce quality standards for EV charging, reflecting existing practices implemented by Orion's Voltrek division. With a significant portion of these funds still unallocated, it underscores a substantial opportunity for the wider deployment and maintenance of EV...",
+            "url": "https://finnhub.io/api/news?id=1abb12f4b5bb53e4ca002a3aaf4ad8fabb89e98827527df1f2cf514f20cebcd2"
+        },
+        {
+            "category": "company",
+            "datetime": 1755859218,
+            "headline": "Trending tickers: Nvidia, Zoom, Tesla, Starbucks",
+            "id": 136476320,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "The latest investor updates on stocks that are trending on Friday.",
+            "url": "https://finnhub.io/api/news?id=973829ae95a51edd5e6bca7d04575d809044f66782c2d1ef543a95bb9163aafe"
+        },
+        {
+            "category": "company",
+            "datetime": 1755858462,
+            "headline": "Tech stocks see a big rebound on Powell speech",
+            "id": 136487997,
+            "image": "",
+            "related": "TSLA",
+            "source": "MarketWatch",
+            "summary": "Tech stocks see a big rebound on Powell speech",
+            "url": "https://finnhub.io/api/news?id=dd9c9a57340c6ac1e796dc07319c24e8faedfc757a6799043ce4c9ac09dd1338"
+        },
+        {
+            "category": "company",
+            "datetime": 1755856800,
+            "headline": "Ethereum leads gains as large cryptocurrencies start mixed",
+            "id": 136487998,
+            "image": "",
+            "related": "TSLA",
+            "source": "MarketWatch",
+            "summary": "Ethereum leads gains as large cryptocurrencies start mixed",
+            "url": "https://finnhub.io/api/news?id=092059d8f14758ce1bd439ee1b2aeee8f8236dcdd7ca9db65334cee9e8d93c42"
+        },
+        {
+            "category": "company",
+            "datetime": 1755852300,
+            "headline": "Do Extreme Concentration And Bad Breadth Signify A Bubble?",
+            "id": 136475952,
+            "image": "",
+            "related": "TSLA",
+            "source": "SeekingAlpha",
+            "summary": "",
+            "url": "https://finnhub.io/api/news?id=7157f6bce8ab4cae4100f74e195d5e82876e640cbc5f8436d773bb24af2eee88"
+        },
+        {
+            "category": "company",
+            "datetime": 1755840600,
+            "headline": "Will Tesla Robotaxis Kill Auto Insurers? Hardly.",
+            "id": 136476578,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "BofA Securities analyst Joshua Shanker took a deep dive into self-driving car tech to understand the impact on auto insurers he covers like Progressive and Allstate.",
+            "url": "https://finnhub.io/api/news?id=9ece39363d8739fabddcd43f82d28f9610c2b973befa3d2e3a02fe3e1688b001"
+        },
+        {
+            "category": "company",
+            "datetime": 1755838133,
+            "headline": "Tesla raises price of most-expensive Cybertruck by $15,000 in US",
+            "id": 136476579,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "The sharp increase follows a long-delayed rollout in which the pickup has struggled to meet Tesla's early promises, with sales so far trailing expectations.  The Cyberbeast variant, which now costs $114,990, comes with a new \"Luxe Package\" that includes Supervised Full Self-Driving and free access to its Supercharger network.  The pricing of the model is well above CEO Elon Musk's 2019 pitch of a roughly $40,000 starting price.",
+            "url": "https://finnhub.io/api/news?id=c4f79ab83348ff55c69768ae1679f46b72dfc8707b09fb42863c27a61b91724d"
+        },
+        {
+            "category": "company",
+            "datetime": 1755823031,
+            "headline": "Musk Tried to Enlist Zuckerberg to Help Finance Bid for OpenAI",
+            "id": 136476580,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "TSLA",
+            "source": "Yahoo",
+            "summary": "OpenAI said Musk identified Zuckerberg, the chief executive officer of Meta Platforms Inc., as one of the people with whom he had communicated about potentially financing a deal to purchase the ChatGPT maker.  Neither Zuckerberg nor Meta signed the letter of intent or participated in the $97.4 billion bid, OpenAI said in the filing.",
+            "url": "https://finnhub.io/api/news?id=90a48036b42178c9e15a7831cfb994e7271a52ed8b3112434467a050f7c636a3"
+        }
+    ],
+    "reddit_data": [
+        {
+            "title": "TSLA Short YOLO incl retirement",
+            "score": 10,
+            "url": "https://i.redd.it/2dnoernyc7lf1.png",
+            "created_utc": 1756143910.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Good enough to screenshot good enough to sell ?",
+            "score": 50,
+            "url": "https://www.reddit.com/r/wallstreetbets/comments/1mzugux/good_enough_to_screenshot_good_enough_to_sell/",
+            "created_utc": 1756137612.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Trading portfolio is up 25% YTD, resulting in $3,800,000 gains. Let's keep it up! (major positions included this time)",
+            "score": 598,
+            "url": "https://www.reddit.com/r/wallstreetbets/comments/1mzcxac/trading_portfolio_is_up_25_ytd_resulting_in/",
+            "created_utc": 1756083598.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Let\u2019s Goooooll",
+            "score": 58,
+            "url": "https://i.redd.it/qw7o7v2r4lkf1.jpeg",
+            "created_utc": 1755874626.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Betting the majority of my check on a 0DTE PT.2",
+            "score": 75,
+            "url": "https://www.reddit.com/gallery/1mx7j3v",
+            "created_utc": 1755871710.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "It will never go down :(",
+            "score": 123,
+            "url": "https://i.redd.it/evvz4gf87wif1.jpeg",
+            "created_utc": 1755136940.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "AI model investing update for the week!",
+            "score": 1455,
+            "url": "https://www.reddit.com/gallery/1mou3r0",
+            "created_utc": 1755056865.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "25k in Tesla",
+            "score": 13,
+            "url": "https://i.redd.it/27vyq11mrlif1.jpeg",
+            "created_utc": 1755010616.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Tesla bankrupt my ass twice",
+            "score": 110,
+            "url": "https://i.redd.it/2n0nhbee3jif1.png",
+            "created_utc": 1754978312.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "I flipped bearish early",
+            "score": 30,
+            "url": "https://i.redd.it/l310tlwkgvhf1.png",
+            "created_utc": 1754692127.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "TSLA 0DTE won so much I finally lost. We\u2019ll see if NVDA earnings can bring me back to life \ud83d\ude02",
+            "score": 121,
+            "url": "https://www.reddit.com/gallery/1ml1cwl",
+            "created_utc": 1754673878.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Put half my work check on a 0dte",
+            "score": 28,
+            "url": "https://i.redd.it/0h6fg9v1vshf1.jpeg",
+            "created_utc": 1754660673.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Tesler",
+            "score": 82,
+            "url": "https://i.redd.it/rbz2d586hghf1.jpeg",
+            "created_utc": 1754510723.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "what goes up must come down $100K -> $371K -> $54K",
+            "score": 1592,
+            "url": "https://www.reddit.com/gallery/1mj7uud",
+            "created_utc": 1754494344.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Lost $83k CAD trying to short Tesla this summer",
+            "score": 686,
+            "url": "https://i.redd.it/1k7naw8suahf1.jpeg",
+            "created_utc": 1754442659.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "$PTLO come for the earnings, stay for the value",
+            "score": 107,
+            "url": "https://www.reddit.com/r/wallstreetbets/comments/1mha61j/ptlo_come_for_the_earnings_stay_for_the_value/",
+            "created_utc": 1754304724.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Not stopping until we reach half a mili",
+            "score": 1016,
+            "url": "https://www.reddit.com/gallery/1mgzoa6",
+            "created_utc": 1754268720.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "TSLA Long Calls - Currently Down",
+            "score": 33,
+            "url": "https://i.redd.it/sumatra1gmgf1.jpeg",
+            "created_utc": 1754147134.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "I\u2019m straight up not having a good time anymore",
+            "score": 401,
+            "url": "https://i.redd.it/pt6phbriphgf1.jpeg",
+            "created_utc": 1754089789.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Yell at me",
+            "score": 9,
+            "url": "https://i.redd.it/ptdrfy45lhgf1.jpeg",
+            "created_utc": 1754088317.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Thank you TSLA for giving the shorts a break",
+            "score": 23,
+            "url": "https://i.redd.it/w9xngopvvggf1.jpeg",
+            "created_utc": 1754079981.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Fucking META \ud83d\udcc8\ud83d\uddff",
+            "score": 403,
+            "url": "https://i.redd.it/23bsmwlx78gf1.jpeg",
+            "created_utc": 1753974912.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "$MSFT dub",
+            "score": 17,
+            "url": "https://i.redd.it/b179cl8z28gf1.jpeg",
+            "created_utc": 1753973246.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "TSLA",
+            "score": 0,
+            "url": "https://i.redd.it/swuyp4tvcnff1.jpeg",
+            "created_utc": 1753722333.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "12k gains on TSLA calls while sipping my morning coffee",
+            "score": 223,
+            "url": "https://i.redd.it/mxe51hruemff1.jpeg",
+            "created_utc": 1753710915.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Today same day expiry options",
+            "score": 5,
+            "url": "https://www.reddit.com/r/options/comments/1mxegy7/today_same_day_expiry_options/",
+            "created_utc": 1755887485.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "I have been trying to trade this strategy",
+            "score": 17,
+            "url": "https://i.redd.it/82ufd1cc7akf1.jpeg",
+            "created_utc": 1755742320.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Options Questions Safe Haven periodic megathread | August 18 2025",
+            "score": 2,
+            "url": "https://www.reddit.com/r/options/comments/1mtpntn/options_questions_safe_haven_periodic_megathread/",
+            "created_utc": 1755531819.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Missing something",
+            "score": 9,
+            "url": "https://www.reddit.com/r/options/comments/1mm688u/missing_something/",
+            "created_utc": 1754790349.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "decided to do long strangle, anything to consider",
+            "score": 0,
+            "url": "https://www.reddit.com/r/options/comments/1mlrjl4/decided_to_do_long_strangle_anything_to_consider/",
+            "created_utc": 1754751688.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Generate income with options on an $8 million dollar account",
+            "score": 0,
+            "url": "https://www.reddit.com/r/options/comments/1miq3pq/generate_income_with_options_on_an_8_million/",
+            "created_utc": 1754439699.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Options Questions Safe Haven periodic megathread | August 4 2025",
+            "score": 7,
+            "url": "https://www.reddit.com/r/options/comments/1mhf1gn/options_questions_safe_haven_periodic_megathread/",
+            "created_utc": 1754317868.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Cheap Calls, Puts and Earnings Plays for this week",
+            "score": 13,
+            "url": "https://www.reddit.com/r/options/comments/1mhedmz/cheap_calls_puts_and_earnings_plays_for_this_week/",
+            "created_utc": 1754316316.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Long straddle TSLA",
+            "score": 1,
+            "url": "https://www.reddit.com/r/options/comments/1m9wu14/long_straddle_tsla/",
+            "created_utc": 1753545365.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "RSI or Stochastics?",
+            "score": 3,
+            "url": "https://www.reddit.com/r/options/comments/1m5y2a8/rsi_or_stochastics/",
+            "created_utc": 1753139334.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Trying to figure out risk and sizing",
+            "score": 15,
+            "url": "https://www.reddit.com/r/options/comments/1m5kcj5/trying_to_figure_out_risk_and_sizing/",
+            "created_utc": 1753107998.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Options Questions Safe Haven periodic megathread | July 21 2025",
+            "score": 8,
+            "url": "https://www.reddit.com/r/options/comments/1m5k77l/options_questions_safe_haven_periodic_megathread/",
+            "created_utc": 1753107648.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "\"Advanced\" option strategies (e.g. straddles) for the earnings week",
+            "score": 26,
+            "url": "https://www.reddit.com/r/options/comments/1m570if/advanced_option_strategies_eg_straddles_for_the/",
+            "created_utc": 1753064432.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "New TSLA Collar Trade",
+            "score": 6,
+            "url": "https://www.reddit.com/r/options/comments/1m46p9f/new_tsla_collar_trade/",
+            "created_utc": 1752958239.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "TSLA unusual sweep trades today - Any idea?",
+            "score": 2,
+            "url": "https://www.reddit.com/r/options/comments/1lxn5tm/tsla_unusual_sweep_trades_today_any_idea/",
+            "created_utc": 1752280718.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "RATE ME.....",
+            "score": 0,
+            "url": "https://i.redd.it/l1b66bjqh9cf1.jpeg",
+            "created_utc": 1752246936.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Any here holding calls since April?",
+            "score": 8,
+            "url": "https://www.reddit.com/r/options/comments/1lwplzf/any_here_holding_calls_since_april/",
+            "created_utc": 1752184936.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Is straddle 295 (30.88+-)on TSLA a good strategy now?",
+            "score": 1,
+            "url": "https://www.reddit.com/r/options/comments/1lvoemd/is_straddle_295_3088on_tsla_a_good_strategy_now/",
+            "created_utc": 1752081222.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Options Questions Safe Haven periodic megathread | July 8 2025",
+            "score": 1,
+            "url": "https://www.reddit.com/r/options/comments/1lusq7e/options_questions_safe_haven_periodic_megathread/",
+            "created_utc": 1751991189.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "TSLA Put Sell Option 8/1/2025 -  250 Strike earning $5",
+            "score": 10,
+            "url": "https://www.reddit.com/r/options/comments/1ltv1dn/tsla_put_sell_option_812025_250_strike_earning_5/",
+            "created_utc": 1751897095.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "RATE ME...",
+            "score": 23,
+            "url": "https://i.redd.it/opo7ehkixqaf1.png",
+            "created_utc": 1751586377.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Close 7/3 covered call tsla?",
+            "score": 5,
+            "url": "https://www.reddit.com/r/options/comments/1lq5268/close_73_covered_call_tsla/",
+            "created_utc": 1751484760.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "TSLA puts potential for tomorrow",
+            "score": 62,
+            "url": "https://i.redd.it/yrdzlfdgn5af1.jpeg",
+            "created_utc": 1751328723.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Rate me....",
+            "score": 56,
+            "url": "https://i.redd.it/0giispcap69f1.png",
+            "created_utc": 1750905598.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Always execute too early",
+            "score": 19,
+            "url": "https://www.reddit.com/r/options/comments/1lk7tse/always_execute_too_early/",
+            "created_utc": 1750863261.0,
+            "subreddit": "options"
+        }
+    ]
+}

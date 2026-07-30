@@ -1,0 +1,916 @@
+{
+    "news_data": [
+        {
+            "category": "company",
+            "datetime": 1756964546,
+            "headline": "AMD: No Longer A No-Brainer But Still A Buy",
+            "id": 136636533,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2191006237/image_2191006237.jpg?io=getty-c-w1536",
+            "related": "AMD",
+            "source": "SeekingAlpha",
+            "summary": "AMD\u00e2\u0080\u0099s Q2 showed solid revenue but EPS and data center weakness from export limits, while MI308 approvals and AI growth support upside. Read why AMD stock is a buy.",
+            "url": "https://finnhub.io/api/news?id=359c62b38d44846c4bdb2c36c440befce6e1fb270e6cf72bc08021edbaac75ac"
+        },
+        {
+            "category": "company",
+            "datetime": 1756927660,
+            "headline": "AMD AI Surge Faces China Roadblock as Nvidia Sees $50B Market Boom",
+            "id": 136631137,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "AMD",
+            "source": "Yahoo",
+            "summary": "AI Chip Battle Heats Up: AMD Targets $500B Market as Nvidia Dominates Training",
+            "url": "https://finnhub.io/api/news?id=cc8a5e309a6e10f0bd452a60029d1f182bfb65de92d468cb4325eea26cf47ae9"
+        },
+        {
+            "category": "company",
+            "datetime": 1756918526,
+            "headline": "Think It's Too Late to Buy Nvidia? Here's the 1 Reason Why There's Still Time",
+            "id": 136616807,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "AMD",
+            "source": "Yahoo",
+            "summary": "Share prices of the semiconductor giant are up, and its historic AI-fueled run isn't over yet.",
+            "url": "https://finnhub.io/api/news?id=60492f743e2d644c1f3ecff2c3de63b14f0c40e001e2ad908ae16f20362987d5"
+        },
+        {
+            "category": "company",
+            "datetime": 1756917917,
+            "headline": "AMD most under-owned chip stock despite sales growth outlook",
+            "id": 136616920,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "AMD",
+            "source": "Yahoo",
+            "summary": "Investing.com -- Advanced Micro Devices has become the most under-owned U.S. semiconductor stock among active managers, Bank of America said, even as the company\u2019s shares have outperformed the sector this year.",
+            "url": "https://finnhub.io/api/news?id=fba74de207ccc5472f0fbb9f577dba5baf481d9576f830cc4e279893338951e4"
+        },
+        {
+            "category": "company",
+            "datetime": 1756917840,
+            "headline": "Can Intel Cash in on Getac's F120 Launch to Scale AI-Enhanced Tasks?",
+            "id": 136616810,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "AMD",
+            "source": "Yahoo",
+            "summary": "INTC powers Getac's rugged F120 Copilot+PC tablet with AI Boost NPU and Core Ultra 200V chips, but margin pressures and China risks cloud growth.",
+            "url": "https://finnhub.io/api/news?id=792dd738238bf9f5c96533ebfc38a7a28f7c68f0baefbe69617958088ba63f76"
+        },
+        {
+            "category": "company",
+            "datetime": 1756914340,
+            "headline": "Why Apple (AAPL) Stock Is Trading Up Today",
+            "id": 136616814,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "AMD",
+            "source": "Yahoo",
+            "summary": "Shares of iPhone and iPad maker Apple (NASDAQ:AAPL) jumped 2.6% in the morning session after a court ruling ordered competitor Google to share some of its search data.",
+            "url": "https://finnhub.io/api/news?id=f7e656d6005a5484a25e31c2d117d01f54ef3dadb79fd6006ed486a28868c980"
+        },
+        {
+            "category": "company",
+            "datetime": 1756914300,
+            "headline": "Lenovo Joins Coalition for Sustainable AI to Address Intersection of AI and Sustainability",
+            "id": 136616298,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "AMD",
+            "source": "Yahoo",
+            "summary": "The coalition brings together global stakeholders committed to aligning AI development with sustainability goals and fostering responsible AI that supports the environmental policies. NORTHAMPTON, MA / ACCESS Newswire / September 3, 2025 / At the ...",
+            "url": "https://finnhub.io/api/news?id=9e6c7ab0f09ca310e0e0f192e16d301fe131520148b22bcfad44b0b8f7cd5b7c"
+        },
+        {
+            "category": "company",
+            "datetime": 1756912500,
+            "headline": "Prediction: These AI Chip Stocks Can Soar in September (Hint: It's Not Nvidia or Broadcom)",
+            "id": 136615568,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "AMD",
+            "source": "Yahoo",
+            "summary": "These AI chip players can be smart near-term picks for retail investors.",
+            "url": "https://finnhub.io/api/news?id=8c49286618a07f2ba716a620bf6ebafb834485d9d941eeecb15c34f09ed4d0ce"
+        },
+        {
+            "category": "company",
+            "datetime": 1756912380,
+            "headline": "Should You Buy, Sell or Hold MRVL Stock Post Strong Q2 Earnings?",
+            "id": 136616851,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "AMD",
+            "source": "Yahoo",
+            "summary": "Marvell Technology posts strong Q2 earnings on AI-driven data center gains, but margin pressure and fierce competition keep the stock a hold.",
+            "url": "https://finnhub.io/api/news?id=fb4b504f840424e7cf66454427874b7b3aa512d101ec00df06da2af86c661b67"
+        },
+        {
+            "category": "company",
+            "datetime": 1756909800,
+            "headline": "Portfolio Positioning For An Uncertain Market With Next Gen Investors",
+            "id": 136630999,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1472999290/image_1472999290.jpg?io=getty-c-w1536",
+            "related": "AMD",
+            "source": "SeekingAlpha",
+            "summary": "Rob Isbitts from Sungarden Investors Club talks again to analysts Julia Ostian, Jack Bowman, and Kenio Fontes about buying dips, market positioning and yield curve steepening.",
+            "url": "https://finnhub.io/api/news?id=a410147236b70f32fffdb9553d9ebbdae6879e57806a13b893c2c1bda74823b0"
+        },
+        {
+            "category": "company",
+            "datetime": 1756908000,
+            "headline": "Migraine and Back-to-School: Experts Share Tips to Reduce Triggers and Support Students",
+            "id": 136615706,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "AMD",
+            "source": "Yahoo",
+            "summary": "With routines shifting and stressors rising, the Association of Migraine Disorders shares strategies to support children and teens with migraine Migraine and Back-to-School The transition back to school can be challenging for students with migraine. AMD offers strategies to support families and schools. Providence, RI, Sept. 03, 2025 (GLOBE NEWSWIRE) -- As the school year begins, the Association of Migraine Disorders (AMD) is highlighting the challenges students with migraine face during the bac",
+            "url": "https://finnhub.io/api/news?id=2e3099aacac41a29223235960356a224c1212e97c94bc6355bae20e9321f0188"
+        },
+        {
+            "category": "company",
+            "datetime": 1756905614,
+            "headline": "Advanced Micro Devices, Inc. (AMD) Presents At Citi's 2025 Global Technology, Media And Telecommunications Conference Transcript",
+            "id": 136617552,
+            "image": "https://static.seekingalpha.com/assets/og_image_1200-29b2bfe1a595477db6826bd2126c63ac2091efb7ec76347a8e7f81ba17e3de6c.png",
+            "related": "AMD",
+            "source": "SeekingAlpha",
+            "summary": "Get the latest on AMD's AI growth, supply strategies, and market outlook from",
+            "url": "https://finnhub.io/api/news?id=f4e9ea84e73024a1ee5ec6ae9234fead2bb7fbad7b1b970c9d707c716e7fcb75"
+        },
+        {
+            "category": "company",
+            "datetime": 1756903046,
+            "headline": "AI Chips Today - BluSky AI Expands with New Colorado Factory Acquisition",
+            "id": 136612689,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "AMD",
+            "source": "Yahoo",
+            "summary": "BluSky AI Inc. has entered a Purchase and Sale Agreement for a 36-acre site in Walsenburg, Colorado, marking their fifth AI factory location. This expansion highlights their strategy to enhance AI computing capabilities through scalable infrastructures, capitalizing on the site's access to regional energy and transmission resources. The Walsenburg site, designed for up to 15 megawatts of compute capacity, aligns with the company's efforts in AI deployment while considering local economic and...",
+            "url": "https://finnhub.io/api/news?id=5c4a554b2b2db0507f63f559a9526410780166061b8afdcfa5b86ca5a0d0e027"
+        },
+        {
+            "category": "company",
+            "datetime": 1756899960,
+            "headline": "Nvidia Stock Gains as Earnings Slump Bottoms Out. What Comes Next.",
+            "id": 136612690,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "AMD",
+            "source": "Yahoo",
+            "summary": "Nvidia's stock drop after its earnings report looks to be coming to an end. Broadcom could provide the next AI chip catalyst.",
+            "url": "https://finnhub.io/api/news?id=55cc7f19aa549eb32ba0590189e7b387ba8540fd9f2c5d98b6dfe8715ea20dc0"
+        },
+        {
+            "category": "company",
+            "datetime": 1756849748,
+            "headline": "Stocks to Watch Recap: Alphabet, Nvidia, Comerica, Constellation Brands",
+            "id": 136612873,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "AMD",
+            "source": "Yahoo",
+            "summary": "\u2197\ufe0fAlphabet (GOOGL): The Google parent's stock rose 8% postmarket after a federal judge issued remedies in a monopoly case that were initially viewed as manageable for the search giant. Apple (AAPL) shares also advanced 3%.",
+            "url": "https://finnhub.io/api/news?id=a252163d16f7b4eee573a937e6f44f3b05f91b8fe355da00647518dabb8a19d1"
+        },
+        {
+            "category": "company",
+            "datetime": 1756848332,
+            "headline": "Advanced Micro Devices, Inc. (AMD) is Attracting Investor Attention: Here is What You Should Know",
+            "id": 136612988,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "AMD",
+            "source": "Yahoo",
+            "summary": "Advanced Micro (AMD) has been one of the stocks most watched by Zacks.com users lately. So, it is worth exploring what lies ahead for the stock.",
+            "url": "https://finnhub.io/api/news?id=251146807dfedbc4e081aae8cdbc9165bce2599e6fcbd4fd2ef741674ad0b607"
+        },
+        {
+            "category": "company",
+            "datetime": 1756845867,
+            "headline": "Forget AI chips: Nvidia beats rival AMD in another key way",
+            "id": 136612989,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "AMD",
+            "source": "Yahoo",
+            "summary": "Nvidia's moat against competition from AMD is deeper than you think.",
+            "url": "https://finnhub.io/api/news?id=bb4ac14cdf186b21214e2e1b283363e11301611ad5eb7039bce15e9ffa851f21"
+        },
+        {
+            "category": "company",
+            "datetime": 1756843233,
+            "headline": "AMD: Nvidia Signals Lasting AI Boom",
+            "id": 136609396,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2163697948/image_2163697948.jpg?io=getty-c-w1536",
+            "related": "AMD",
+            "source": "SeekingAlpha",
+            "summary": "Advanced Micro Devices' AI chip demand is set to surge, regardless of unresolved China issues. Click here to read why AMD stock is a Strong Buy.",
+            "url": "https://finnhub.io/api/news?id=fab659dbed8c19ee7c3ccc6520f4d0c8a1e0f6f69e5acf0f8c76d0a49b025da8"
+        },
+        {
+            "category": "company",
+            "datetime": 1756838954,
+            "headline": "Why Nvidia and Other Chip Stocks' Slump Is an Opportunity for Investors, UBS Says",
+            "id": 136612794,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "AMD",
+            "source": "Yahoo",
+            "summary": "Semiconductor stocks are taking a chip out of U.S. equities indexes to start September, and some Wall Street bulls say that could mean it's time to buy. Here's why.",
+            "url": "https://finnhub.io/api/news?id=05564ff06a679ea7d6432b40adb789c21a0e8d13ad8ed7ce7402db2a5ded5109"
+        },
+        {
+            "category": "company",
+            "datetime": 1756837860,
+            "headline": "AMD Rides on Accelerating Data Center Growth: A Sign of More Upside?",
+            "id": 136612796,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "AMD",
+            "source": "Yahoo",
+            "summary": "AMD's surging EPYC adoption, cloud wins, and Instinct GPU traction fuel strong Data Center growth despite AI export headwinds.",
+            "url": "https://finnhub.io/api/news?id=d8f1298105efa240120957c2ac7d76b8d100cd384d2ac86641c726f83c4c8d42"
+        },
+        {
+            "category": "company",
+            "datetime": 1756829880,
+            "headline": "MRVL's AI and Optics Ambitions are Growing: What Lies Ahead?",
+            "id": 136612799,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "AMD",
+            "source": "Yahoo",
+            "summary": "Marvell Technology posts 69% data center revenue surge as AI chip demand and optics innovation drive growth momentum.",
+            "url": "https://finnhub.io/api/news?id=a4a1209094418d18a9f20e704de25b86129af0593ce5ba38c0815232434b177e"
+        },
+        {
+            "category": "company",
+            "datetime": 1756821960,
+            "headline": "NVIDIA's Q2 Sales Hit $46B: Can Blackwell Ramp-Up Deliver $54B in Q3?",
+            "id": 136612784,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "AMD",
+            "source": "Yahoo",
+            "summary": "NVDA posts $46.7B Q2 revenues as Blackwell adoption surges, with a $54B Q3 forecast and margin gains despite higher production costs.",
+            "url": "https://finnhub.io/api/news?id=15d36502b3b7b2ec827b01f0e485031baf71470bb7b49da911878b58ce269ab7"
+        },
+        {
+            "category": "company",
+            "datetime": 1756817791,
+            "headline": "How Is Intel\u2019s Stock Performance Compared to Other Semiconductor Stocks?",
+            "id": 136612994,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "AMD",
+            "source": "Yahoo",
+            "summary": "Despite Intel outperforming its industry peers over the past year, analysts maintain a cautious outlook on the stock\u2019s future prospects.",
+            "url": "https://finnhub.io/api/news?id=82e34a0c6d74508d41fefac7f5059900f0c5ab817102f8ff5b1a54e9e411e267"
+        },
+        {
+            "category": "company",
+            "datetime": 1756816200,
+            "headline": "Big Tech's $4 Trillion Artificial Intelligence (AI) Spending Spree Could Make These 3 Chip Stocks Huge Winners",
+            "id": 136603885,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "AMD",
+            "source": "Yahoo",
+            "summary": "Big tech companies continue to race to build out AI capacity.",
+            "url": "https://finnhub.io/api/news?id=a99d3c30a9e3041d727dacc99eebbde46961386668b0ea4a2cc080003968ecf0"
+        },
+        {
+            "category": "company",
+            "datetime": 1756812168,
+            "headline": "Big Tech\u2019s Market Dominance Stirs Debate on Concentration Risks",
+            "id": 136603891,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "AMD",
+            "source": "Yahoo",
+            "summary": "The debate is becoming more urgent as Nividia, Microsoft, Apple Inc., Alphabet Inc., Amazon.com Inc. and Meta Platforms Inc. account for more than 30% of the benchmark index, more than three times their weighting from a decade ago.  For Scott Chronert, Citi Research\u2019s managing director, the concentration is a badge of honor, well-deserved for a group that continues to deliver unparalleled growth in sales and earnings.",
+            "url": "https://finnhub.io/api/news?id=33c3c720b25abf19f20211a23611c852cc6a56439308b14523dc0b3b3d7aa344"
+        },
+        {
+            "category": "company",
+            "datetime": 1756811760,
+            "headline": "Nvidia Stock Falls. Why the Post-Earnings Slump Is Rolling On.",
+            "id": 136603892,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "AMD",
+            "source": "Yahoo",
+            "summary": "Nvidia stock looked to be continuing its post-earnings report slump, although it was moving broadly in line with the wider market.",
+            "url": "https://finnhub.io/api/news?id=372fa4331b3c9ea54aade85f8209f2d3dcc78aac3171c32d4495c358eb95d514"
+        },
+        {
+            "category": "company",
+            "datetime": 1756742402,
+            "headline": "This Under-the-Radar Chip Stock Is Beating the Market in 2025",
+            "id": 136604121,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "AMD",
+            "source": "Yahoo",
+            "summary": "With this under-the-radar chip stock up 16% in 2025, it is worth investor attention here.",
+            "url": "https://finnhub.io/api/news?id=b7971302d532d7293a741c3067f3dbd2b4db69fec8324cec8083b8ac29229a58"
+        },
+        {
+            "category": "company",
+            "datetime": 1756735860,
+            "headline": "Automotive AI Markets, Competition and Case Study Analysis 2025-2030 - Computer Vision Tech Dominates Automotive AI Market for Real-Time Environmental Perception",
+            "id": 136595906,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "AMD",
+            "source": "Yahoo",
+            "summary": "Industry fueled by advancements in autonomous vehicles and AI-driven analytics. With a projected CAGR of 15.3%, demand for intelligent systems is rising along with in-vehicle data needs. Automotive Artificial Intelligence (AI) Market Automotive Artificial Intelligence (AI) Market Dublin, Sept. 01, 2025 (GLOBE NEWSWIRE) -- The \"Automotive AI Market by Offerings (Compute, Memory, Software), Level of Autonomy (L1, L2, L3, L4, L5), Technology (Deep Learning, ML, Computer Vision, Context-aware Comput",
+            "url": "https://finnhub.io/api/news?id=d4fb0b981d855f31e4a865314886a7535e2769eeee250ee020598819338a7daa"
+        },
+        {
+            "category": "company",
+            "datetime": 1756730698,
+            "headline": "Abu Dhabi-backed G42 looks beyond Nvidia for chip suppliers at its AI campus: Semafor",
+            "id": 136603970,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "AMD",
+            "source": "Yahoo",
+            "summary": "The group is negotiating with major American technology firms, including Amazon's AWS cloud, Microsoft, Meta, and Elon Musk's xAI to become tenants at the data center, with Google the furthest along in negotiations, according to the report.  G42 is looking to chipmakers AMD, Cerebras Systems, and Qualcomm to supply some of the computing capacity at the campus, the report said.  The tech firms, AMD, Cerebras, Qualcomm, and G42 did not respond to Reuters' requests for comment, while an Nvidia spokesperson declined to comment.",
+            "url": "https://finnhub.io/api/news?id=089040e4e4e39e46de3bbfabfedebdedd4be4651f33020fb1f12e1ee67b5ea53"
+        },
+        {
+            "category": "company",
+            "datetime": 1756730698,
+            "headline": "Abu Dhabi-backed G42 aims to diversify chip suppliers for AI campus, Semafor reports",
+            "id": 136603969,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "AMD",
+            "source": "Yahoo",
+            "summary": "The group is negotiating with major American technology firms, including Amazon's AWS cloud, Microsoft, Meta, and Elon Musk's xAI to become tenants at the data center, with Google the furthest along in negotiations, according to the report.  G42 is looking to chipmakers AMD, Cerebras Systems, and Qualcomm to supply some of the computing capacity at the campus, the report said.  The tech firms, AMD, Cerebras, Qualcomm, and G42 did not respond to Reuters' requests for comment, while an Nvidia spokesperson declined to comment.",
+            "url": "https://finnhub.io/api/news?id=e86a4adf209fa250daa09b3d09d03e6fb494c5da592e550e49b446b0ac80409e"
+        },
+        {
+            "category": "company",
+            "datetime": 1756730244,
+            "headline": "AI Chips Today - Applied Digital Expands Capacity to Boost AI Infrastructure",
+            "id": 136595911,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "AMD",
+            "source": "Yahoo",
+            "summary": "Applied Digital has finalized a new lease agreement for an additional 150MW at its Polaris Forge 1 Campus in North Dakota, aimed at supporting CoreWeave's AI and high-performance computing efforts. This expansion brings the total critical IT capacity at the campus to 400MW, reinforcing Applied Digital\u2019s commitment to advancing AI infrastructure. The Polaris Forge 1 Campus is designed to scale up to 1 gigawatt and will use renewable power and the cool North Dakota climate to prioritize...",
+            "url": "https://finnhub.io/api/news?id=86267e399dcfddf564bf7c26eb66fe8cdb3a6dc8e12a068de2f256980773607d"
+        },
+        {
+            "category": "company",
+            "datetime": 1756721923,
+            "headline": "Advanced Micro Devices Stock: Is AMD Outperforming the Technology Sector?",
+            "id": 136595919,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "AMD",
+            "source": "Yahoo",
+            "summary": "Advanced Micro Devices has outpaced the broader technology sector over the past year, and analysts are reasonably upbeat about the stock\u2019s prospects.",
+            "url": "https://finnhub.io/api/news?id=44b9ff32050635b63e8ba1cd4a218ca3d2f892f909436313e4cc54bed64c291c"
+        },
+        {
+            "category": "company",
+            "datetime": 1756695954,
+            "headline": "Dow Jones Futures: Trump Tariff Ruling May Not Affect Markets. Alibaba News Hits Nvidia, AI.",
+            "id": 136595113,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "AMD",
+            "source": "Yahoo",
+            "summary": "The major indexes gave up weekly gains Friday as Alibaba hit Nvidia and AI stocks. Most Trump tariffs were ruled illegal late Friday.",
+            "url": "https://finnhub.io/api/news?id=bcc4d938ce2f07d9235e8086e2cb58d8ad3375caf1d27d05bc83c5dd722b6109"
+        },
+        {
+            "category": "company",
+            "datetime": 1756698180,
+            "headline": "Semiconductor Heavyweights Descend on Taipei for SEMICON Taiwan 2025",
+            "id": 136596080,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "AMD",
+            "source": "Yahoo",
+            "summary": "SEMICON Taiwan 2025 is just two weeks away, and this year's forums will welcome an extraordinary lineup of speakers. Silicon Valley \"chip legend\" Jim Keller will take the stage at the CEO Summit, while Dr. Chin-Tay Shih, a pioneering force in Taiwan's semiconductor development, is confirmed to join the SEMI 20 Under 40 Awards Ceremony and Tech Master Forum. As the industry builds its central role in the AI era, global leaders will gather in Taipei to chart the future of semiconductor innovation.",
+            "url": "https://finnhub.io/api/news?id=b77723fbf54e534ca9eb43e33aacd9484277b8a4311a5dd5779b4f42d2101cde"
+        },
+        {
+            "category": "company",
+            "datetime": 1756692000,
+            "headline": "Alphabet Lands $10 Billion Meta Cloud Deal, a Win for Google's Artificial Intelligence Ambitions and Investors",
+            "id": 136595941,
+            "image": "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png",
+            "related": "AMD",
+            "source": "Yahoo",
+            "summary": "Meta's six-year deal with Google Cloud is indicative of where hyperscalers are headed.",
+            "url": "https://finnhub.io/api/news?id=c446bafb709a3ebf37ee54fbeebe1c3e7d0a57ae70a35d9dbacabebe1b815e87"
+        }
+    ],
+    "reddit_data": [
+        {
+            "title": "Is Marvell a good investment",
+            "score": 29,
+            "url": "https://www.reddit.com/r/stocks/comments/1n7960y/is_marvell_a_good_investment/",
+            "created_utc": 1756887765.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Looking for feedback for my stock portfolio",
+            "score": 4,
+            "url": "https://www.reddit.com/r/stocks/comments/1n6cctp/looking_for_feedback_for_my_stock_portfolio/",
+            "created_utc": 1756795233.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "IBM and AMD Join Forces to Build the Future of Computing",
+            "score": 145,
+            "url": "https://www.reddit.com/r/stocks/comments/1n2y9of/ibm_and_amd_join_forces_to_build_the_future_of/",
+            "created_utc": 1756442828.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Recent INTC stock investments strengthen the company's balance sheet but make a short-term sale of its foundry business",
+            "score": 26,
+            "url": "https://www.reddit.com/r/stocks/comments/1n27k9u/recent_intc_stock_investments_strengthen_the/",
+            "created_utc": 1756373178.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Nvidia's Earnings Day: Beyond the Numbers What Could Threaten the AI Boom?",
+            "score": 154,
+            "url": "https://www.reddit.com/r/stocks/comments/1n1l7x7/nvidias_earnings_day_beyond_the_numbers_what/",
+            "created_utc": 1756310873.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Investors already appeared hopeful about the prospect of lower interest rates coming in September, as hinted at by Powell last week.",
+            "score": 42,
+            "url": "https://www.reddit.com/r/stocks/comments/1n14040/investors_already_appeared_hopeful_about_the/",
+            "created_utc": 1756258198.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Do you think AMD goes back on bull run from IBM partnership and Nvidia earnings tomorrow?",
+            "score": 150,
+            "url": "https://www.reddit.com/r/stocks/comments/1n0kcmg/do_you_think_amd_goes_back_on_bull_run_from_ibm/",
+            "created_utc": 1756210948.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "$CRWV The early surge was a welcome, albeit brief, reprieve for investors, as CoreWeave\u2019s stock has tumbled since the earnings report.",
+            "score": 11,
+            "url": "https://www.reddit.com/r/stocks/comments/1mx1uwg/crwv_the_early_surge_was_a_welcome_albeit_brief/",
+            "created_utc": 1755855084.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "(08/19) Interesting Stocks Today - Softbank's Takes Stake in INTC!",
+            "score": 47,
+            "url": "https://www.reddit.com/r/stocks/comments/1muhtwm/0819_interesting_stocks_today_softbanks_takes/",
+            "created_utc": 1755608625.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "What might Trumpian meddling mean for Intel?",
+            "score": 94,
+            "url": "https://www.reddit.com/r/stocks/comments/1mrklgt/what_might_trumpian_meddling_mean_for_intel/",
+            "created_utc": 1755318260.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Trump says semiconductor tariffs coming soon, could reach 300%",
+            "score": 1504,
+            "url": "https://www.reddit.com/r/stocks/comments/1mqz4cs/trump_says_semiconductor_tariffs_coming_soon/",
+            "created_utc": 1755267387.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Treasury Secretary Bessent suggests the US may expand export taxes to more industries (beyond just Nvidia and AMD)",
+            "score": 462,
+            "url": "https://www.reddit.com/r/stocks/comments/1mpb9x8/treasury_secretary_bessent_suggests_the_us_may/",
+            "created_utc": 1755107133.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Do you actually sell when your stock hits your target price?",
+            "score": 169,
+            "url": "https://www.reddit.com/r/stocks/comments/1mnxlpk/do_you_actually_sell_when_your_stock_hits_your/",
+            "created_utc": 1754968137.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Trump Administration to Take 15% Cut of Nvidia and AMD Chip Sales to China",
+            "score": 2013,
+            "url": "https://www.reddit.com/r/stocks/comments/1mn1uxq/trump_administration_to_take_15_cut_of_nvidia_and/",
+            "created_utc": 1754881095.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "How do 3x shares work, they don't seem to be 3x",
+            "score": 248,
+            "url": "https://www.reddit.com/r/stocks/comments/1mkxvzn/how_do_3x_shares_work_they_dont_seem_to_be_3x/",
+            "created_utc": 1754666037.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "I\u2019m seriously considering consolidating my entire portfolio into Apple (AAPL)",
+            "score": 0,
+            "url": "https://www.reddit.com/r/stocks/comments/1mkcur7/im_seriously_considering_consolidating_my_entire/",
+            "created_utc": 1754602595.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "[BRAINSTORMING/WISDOM OF THE CROWD] Investing in the AI echosystem using the 80/20 rule",
+            "score": 5,
+            "url": "https://www.reddit.com/r/stocks/comments/1mj8uy7/brainstormingwisdom_of_the_crowd_investing_in_the/",
+            "created_utc": 1754496591.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "AMD reports weaker-than-expected earnings even as revenue tops estimates",
+            "score": 497,
+            "url": "https://www.reddit.com/r/stocks/comments/1mikuzi/amd_reports_weakerthanexpected_earnings_even_as/",
+            "created_utc": 1754426751.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Analyst bullish on Palantir stock before earnings",
+            "score": 40,
+            "url": "https://www.reddit.com/r/stocks/comments/1mh92z4/analyst_bullish_on_palantir_stock_before_earnings/",
+            "created_utc": 1754300795.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Is there going to be anymore nvidia /palantir type stocks",
+            "score": 0,
+            "url": "https://www.reddit.com/r/stocks/comments/1mfmxbu/is_there_going_to_be_anymore_nvidia_palantir_type/",
+            "created_utc": 1754129161.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Thoughts on Monday open after tariff news?",
+            "score": 209,
+            "url": "https://www.reddit.com/r/stocks/comments/1mfde4s/thoughts_on_monday_open_after_tariff_news/",
+            "created_utc": 1754096123.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "AMD is evolving from a chip supplier to a full-fledged AI computing platform player",
+            "score": 104,
+            "url": "https://www.reddit.com/r/stocks/comments/1mey6ge/amd_is_evolving_from_a_chip_supplier_to_a/",
+            "created_utc": 1754059016.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Why the dip in tech today?",
+            "score": 269,
+            "url": "https://www.reddit.com/r/stocks/comments/1mepwll/why_the_dip_in_tech_today/",
+            "created_utc": 1754032733.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Absolutely everything you need to know about AMZN earnings today",
+            "score": 118,
+            "url": "https://www.reddit.com/r/stocks/comments/1me5q6m/absolutely_everything_you_need_to_know_about_amzn/",
+            "created_utc": 1753978189.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Nvidia\u2019s first-mover advantage is real but AMD is now ready to capture a significant share of the AI GPU market",
+            "score": 46,
+            "url": "https://www.reddit.com/r/stocks/comments/1me1y8x/nvidias_firstmover_advantage_is_real_but_amd_is/",
+            "created_utc": 1753969412.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "6 figures profit 3 years in a row 50%+ annual returns",
+            "score": 682,
+            "url": "https://i.redd.it/28x0wrsbh2mf1.jpeg",
+            "created_utc": 1756520518.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "GOOGL, AAPL, SNOW and Some SPY Gains over July and Aug'25.",
+            "score": 14,
+            "url": "https://www.reddit.com/r/wallstreetbets/comments/1n2l5og/googl_aapl_snow_and_some_spy_gains_over_july_and/",
+            "created_utc": 1756407918.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "I f*d up really bad this time",
+            "score": 1267,
+            "url": "https://i.redd.it/l5mojql8nelf1.jpeg",
+            "created_utc": 1756231942.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Solid Year So Far ,Portfolio Holding Up Well",
+            "score": 291,
+            "url": "https://i.redd.it/b7qsn8h4gmkf1.jpeg",
+            "created_utc": 1755890557.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "AMD - How insider Phillip Guido made 750k in 3 months off legal insider trading!",
+            "score": 177,
+            "url": "https://www.reddit.com/r/wallstreetbets/comments/1mwj47i/amd_how_insider_phillip_guido_made_750k_in_3/",
+            "created_utc": 1755800959.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "NVDA +84K; AMD +76K",
+            "score": 103,
+            "url": "https://www.reddit.com/gallery/1mu9gnv",
+            "created_utc": 1755580455.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Its not gone well",
+            "score": 44,
+            "url": "https://i.redd.it/g08k5s1a91jf1.jpeg",
+            "created_utc": 1755198161.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "$AMD calls just getting started",
+            "score": 359,
+            "url": "https://i.redd.it/mmt1hz1lcvif1.jpeg",
+            "created_utc": 1755126632.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "5000% GAIN \ud83d\ude80\ud83d\ude80\ud83d\ude80",
+            "score": 775,
+            "url": "https://www.reddit.com/gallery/1mpez4o",
+            "created_utc": 1755115349.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Buying CRWV",
+            "score": 7,
+            "url": "https://i.redd.it/307bbcgwmsif1.jpeg",
+            "created_utc": 1755093780.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "I\u2019ve 10x\u2019d my \u201cfun\u201d account this year",
+            "score": 8449,
+            "url": "https://i.redd.it/ow6f0vzn7fif1.jpeg",
+            "created_utc": 1754931267.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Picked up another AMD 3 bagger",
+            "score": 60,
+            "url": "https://i.redd.it/824fsmkoheif1.jpeg",
+            "created_utc": 1754922528.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "NVDA and AMD hit with 15% Tariff on China Revenues",
+            "score": 1042,
+            "url": "https://i.redd.it/3czwr5fxd9if1.jpeg",
+            "created_utc": 1754860731.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "+27k last week HOOD AMD",
+            "score": 157,
+            "url": "https://www.reddit.com/gallery/1mm6kba",
+            "created_utc": 1754791358.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "$600,000 $AMD call option trade + $1.2m hedge",
+            "score": 1285,
+            "url": "https://www.reddit.com/gallery/1mlap84",
+            "created_utc": 1754696479.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Analysis of Earnings Reports for Week 08/04",
+            "score": 89,
+            "url": "https://www.reddit.com/r/wallstreetbets/comments/1ml9qje/analysis_of_earnings_reports_for_week_0804/",
+            "created_utc": 1754693904.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Road to the 500k goal going well.",
+            "score": 424,
+            "url": "https://www.reddit.com/gallery/1ml66yo",
+            "created_utc": 1754685048.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Missed my 50% same day gain on AMD",
+            "score": 24,
+            "url": "https://www.reddit.com/gallery/1mkd94q",
+            "created_utc": 1754603568.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "First 10k month ever \ud83d\ude80",
+            "score": 109,
+            "url": "https://i.redd.it/x6ch0mfwpmhf1.jpeg",
+            "created_utc": 1754586299.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "AMD yolo before close last night. Sold right at open. Up 13.4K",
+            "score": 22,
+            "url": "https://i.redd.it/vxikwef0plhf1.jpeg",
+            "created_utc": 1754573893.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Guys AMD saved my $15K loss yesterday and gave me some profits. \ud83e\udec2",
+            "score": 198,
+            "url": "https://i.redd.it/ojophyknolhf1.jpeg",
+            "created_utc": 1754573774.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "I don\u2019t feel so good either",
+            "score": 79,
+            "url": "https://i.redd.it/rph3fnfdfihf1.jpeg",
+            "created_utc": 1754534332.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Guh moment. If $AMD goes to $165 tomorrow I will be saved!!!!",
+            "score": 254,
+            "url": "https://www.reddit.com/gallery/1mjkeqx",
+            "created_utc": 1754523362.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "AMD yolo",
+            "score": 115,
+            "url": "https://i.redd.it/zlxrvmj7ighf1.jpeg",
+            "created_utc": 1754511071.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Meta to 800+",
+            "score": 49,
+            "url": "https://i.redd.it/irq0kes2efhf1.jpeg",
+            "created_utc": 1754497575.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Record month for option income",
+            "score": 22,
+            "url": "https://www.reddit.com/r/options/comments/1n50k79/record_month_for_option_income/",
+            "created_utc": 1756661099.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Favorite stocks to trade options on? Need some fresh ideas!",
+            "score": 59,
+            "url": "https://www.reddit.com/r/options/comments/1n3a2r2/favorite_stocks_to_trade_options_on_need_some/",
+            "created_utc": 1756480300.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "NVIDIA\u2019s Earnings: Cautious Guidance or Just a Buying Opportunity?",
+            "score": 4,
+            "url": "https://www.reddit.com/r/options/comments/1n2f937/nvidias_earnings_cautious_guidance_or_just_a/",
+            "created_utc": 1756394612.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Anyone here using spreads to hedge earnings trades?",
+            "score": 8,
+            "url": "https://www.reddit.com/r/options/comments/1ms8hdw/anyone_here_using_spreads_to_hedge_earnings_trades/",
+            "created_utc": 1755380029.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "GOOGL 6 month 180C Paid Out",
+            "score": 178,
+            "url": "https://i.redd.it/4b14wf3488jf1.jpeg",
+            "created_utc": 1755282517.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Misery loves company, so lemme tell you about a huge loss I'm about to take",
+            "score": 89,
+            "url": "https://www.reddit.com/r/options/comments/1monxft/misery_loves_company_so_lemme_tell_you_about_a/",
+            "created_utc": 1755039745.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "All Bad Options ($167 cost -> $100 strike)",
+            "score": 5,
+            "url": "https://www.reddit.com/r/options/comments/1molm9z/all_bad_options_167_cost_100_strike/",
+            "created_utc": 1755034167.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Probably gonna quit buying options while I\u2019m ahead \ud83d\udc80",
+            "score": 211,
+            "url": "https://www.reddit.com/gallery/1mllfnh",
+            "created_utc": 1754732322.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "I wrote 56 8/8 $172.5 AMD covered call, and only 29 are executed.",
+            "score": 8,
+            "url": "https://www.reddit.com/r/options/comments/1mljj0l/i_wrote_56_88_1725_amd_covered_call_and_only_29/",
+            "created_utc": 1754724545.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "NVDA OTM calls leading into earnings",
+            "score": 11,
+            "url": "https://www.reddit.com/r/options/comments/1mlb7sb/nvda_otm_calls_leading_into_earnings/",
+            "created_utc": 1754697870.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "NVDA earnings?",
+            "score": 13,
+            "url": "https://www.reddit.com/r/options/comments/1mkzaal/nvda_earnings/",
+            "created_utc": 1754669180.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Escalating quickly- would love input",
+            "score": 5,
+            "url": "https://i.redd.it/irdzadso3chf1.jpeg",
+            "created_utc": 1754457761.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Can someone help predict price of options for AMD once IV crush happens?",
+            "score": 17,
+            "url": "https://www.reddit.com/r/options/comments/1minxk3/can_someone_help_predict_price_of_options_for_amd/",
+            "created_utc": 1754434097.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "AMD & ANET",
+            "score": 9,
+            "url": "https://www.reddit.com/r/options/comments/1milqu6/amd_anet/",
+            "created_utc": 1754428793.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Close w/ profit or hold through earnings? AMD 1/15/27 - 180/220/250 C",
+            "score": 10,
+            "url": "https://www.reddit.com/r/options/comments/1mhz5bb/close_w_profit_or_hold_through_earnings_amd_11527/",
+            "created_utc": 1754366431.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Long Straddle on AMD pre ER",
+            "score": 11,
+            "url": "https://www.reddit.com/r/options/comments/1mh56le/long_straddle_on_amd_pre_er/",
+            "created_utc": 1754285772.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Absolutely everything you need to know about AMZN earnings today",
+            "score": 32,
+            "url": "https://www.reddit.com/r/options/comments/1me5lue/absolutely_everything_you_need_to_know_about_amzn/",
+            "created_utc": 1753977919.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Teradyne ($TER) $107.65 ~ AI Chip Testing Company. Quick Look + Options Analysis",
+            "score": 3,
+            "url": "https://www.reddit.com/r/options/comments/1mdrhi6/teradyne_ter_10765_ai_chip_testing_company_quick/",
+            "created_utc": 1753933956.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "I hope I made the right choice?",
+            "score": 0,
+            "url": "https://i.redd.it/eqo28hr512gf1.png",
+            "created_utc": 1753900782.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Recovering from about to be deep ITM AMD covered call",
+            "score": 6,
+            "url": "https://www.reddit.com/r/options/comments/1mbv39s/recovering_from_about_to_be_deep_itm_amd_covered/",
+            "created_utc": 1753743322.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Rate My Positions",
+            "score": 21,
+            "url": "https://i.redd.it/x5bcls6v5vdf1.jpeg",
+            "created_utc": 1752945133.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "AMD earnings",
+            "score": 10,
+            "url": "https://www.reddit.com/r/options/comments/1m3njam/amd_earnings/",
+            "created_utc": 1752900333.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Deep AMD short calls expiring today",
+            "score": 7,
+            "url": "https://www.reddit.com/r/options/comments/1llquix/deep_amd_short_calls_expiring_today/",
+            "created_utc": 1751021481.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "AMD 120C Up 331%, I Finally Feel I'm on the Right Side of Options Trading",
+            "score": 130,
+            "url": "https://i.redd.it/1qil1rlnwh7f1.jpeg",
+            "created_utc": 1750169839.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "$AMD ($126.39): AI Event + Retail Euphoria (Options Analysis)",
+            "score": 32,
+            "url": "https://i.redd.it/2w23xtgzke7f1.png",
+            "created_utc": 1750129500.0,
+            "subreddit": "options"
+        }
+    ]
+}

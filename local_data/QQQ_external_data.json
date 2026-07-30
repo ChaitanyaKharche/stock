@@ -1,0 +1,1059 @@
+{
+    "news_data": [
+        {
+            "category": "company",
+            "datetime": 1756646049,
+            "headline": "3 Market Predictions For September",
+            "id": 136588878,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2205178605/image_2205178605.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "Discover 3 expert market predictions for September. Will the stock rally continue despite historical trends? Read now for insights and investment tips.",
+            "url": "https://finnhub.io/api/news?id=628bdbfab9e67488380c4f7ce1fd6f658afcb428fd6b2c34503d49b51e8eb3d6"
+        },
+        {
+            "category": "company",
+            "datetime": 1756634100,
+            "headline": "Flawed Jobs Data Threatens Fed's September Rate Cut",
+            "id": 136588113,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2225545768/image_2225545768.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "Market tension is high as September's Fed rate decision hinges on the upcoming, unreliable August jobs report. Learn more about the market here.",
+            "url": "https://finnhub.io/api/news?id=8e0e47e121f273df17adf262e29946c62dc4f50a2ad678ab4fcd7f0155abbda8"
+        },
+        {
+            "category": "company",
+            "datetime": 1756632600,
+            "headline": "11 Ways To Profit From Nvidia, Regardless Of What Happens From Here",
+            "id": 136587958,
+            "image": "",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "",
+            "url": "https://finnhub.io/api/news?id=d99b0d83f21b2fbafc130b9ad6a8a80e9f38ec9be50a432e5f3c9c8ba699d598"
+        },
+        {
+            "category": "company",
+            "datetime": 1756631914,
+            "headline": "Inflation: Stable Now",
+            "id": 136587889,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2229591985/image_2229591985.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "July results came in strong, with key metrics beating expectations and supporting a bullish economic outlook. Find out why future performance looks promising.",
+            "url": "https://finnhub.io/api/news?id=d6dbbe681b2e13c0d8fd50363877f9c70ddc105a0f1a9146b4eb28f30e7a9920"
+        },
+        {
+            "category": "company",
+            "datetime": 1756631700,
+            "headline": "August Job Report Preview: Weak Report To Cement The September Fed Cut",
+            "id": 136587891,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2226866961/image_2226866961.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "Job losses in cyclical sectors point to a recession and support a Fed rate cut in September, though labor force shifts could complicate things. See why data may diverge.",
+            "url": "https://finnhub.io/api/news?id=f67acd64313fa6aaf41e490e179110b4216afe2f729f198ec6797759d4348abd"
+        },
+        {
+            "category": "company",
+            "datetime": 1756631700,
+            "headline": "QQQI: The Right Way To Play The Tech Game",
+            "id": 136587890,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2158153564/image_2158153564.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "QQQI offers ~14% monthly yield and better value compared to QQQ amidst a 'hated' bull market. See why QQQI is an attractive option for value and income investors.",
+            "url": "https://finnhub.io/api/news?id=f79e74eaf3e92c9c006869efb325039da82cd1abdd301d57c6b845f74f5d41cf"
+        },
+        {
+            "category": "company",
+            "datetime": 1756630800,
+            "headline": "Market Efficiency Is Impossible: Here Is Why And Why It Matters",
+            "id": 136587841,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1223598227/image_1223598227.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "Stock price efficiency is theoretically impossible due to Hayek\u00e2\u0080\u0099s Knowledge Problem, challenging EMH at its core. See why valuation gaps enable profitable strategies.",
+            "url": "https://finnhub.io/api/news?id=7bb14df67bd5441f08064b2b389141db205b006d7c0d43018e9e438e55272080"
+        },
+        {
+            "category": "company",
+            "datetime": 1756630463,
+            "headline": "How To Time The Peak Of A Bubble",
+            "id": 136587809,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1448013771/image_1448013771.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "Timing the AI supercycle peak is possible with clear signals, unlike the 2000s bust, as power\u00e2\u0080\u0094not capital\u00e2\u0080\u0094is the limit today. Read why I remain hyper-bullish on markets.",
+            "url": "https://finnhub.io/api/news?id=f7b0a81edaa9672ee5351f415224a45a4ad25265f6f4eb7484dad7852c8b62e1"
+        },
+        {
+            "category": "company",
+            "datetime": 1756627200,
+            "headline": "Is \u202fThe\u202fConsumer Finally Starting To Crack?",
+            "id": 136587581,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1618673807/image_1618673807.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "America\u00e2\u0080\u0099s $18 trillion consumer debt bomb is at risk of blowing a hole in the economy. Click here to read why how I am positioning my portfolio.",
+            "url": "https://finnhub.io/api/news?id=9e041080728645a0eef2c41bf10e95f548628fea0d601d8435a61216482a6b73"
+        },
+        {
+            "category": "company",
+            "datetime": 1756619700,
+            "headline": "Meme Markets: Investing Vs. Entertainment",
+            "id": 136587188,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2193834780/image_2193834780.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "Options volumes at meme\u00e2\u0080\u0091linked names are at records, with short-dated, zero-day-to-expiration contracts now accounting for more than 61 percent of daily S&P 500 option volume.",
+            "url": "https://finnhub.io/api/news?id=ba42a459780e4bb87c662640353ebfde2e867e7606cf2bf8c429abef77118e64"
+        },
+        {
+            "category": "company",
+            "datetime": 1756544700,
+            "headline": "Intrinsic Value Is Subjective: A Big Problem And A Big Opportunity For Investors",
+            "id": 136580579,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/652567306/image_652567306.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "Discover why market prices deviate from intrinsic value, disproving EMH.",
+            "url": "https://finnhub.io/api/news?id=8c7548e6fee21f0944ce1990205b42c8b5ab923cb216467775efcda60e12fd31"
+        },
+        {
+            "category": "company",
+            "datetime": 1756542600,
+            "headline": "What Investors Should Expect From The August 2025 Job Report",
+            "id": 136580409,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1499779071/image_1499779071.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "Nonfarm payroll data shows volatility, with healthcare and defense stocks benefiting from policy shifts. Check out why these sectors offer opportunities amid uncertainty.",
+            "url": "https://finnhub.io/api/news?id=3ef56e8fe7541daabcb80f384f783887acd9a157b8ebe542c544194b873350c1"
+        },
+        {
+            "category": "company",
+            "datetime": 1756541400,
+            "headline": "Peak Humans: The Megatrend No One Is Talking About (Yet)",
+            "id": 136580351,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1481121115/image_1481121115.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "Read here for insights on how global population decline will impact the economy, and how to invest accordingly.",
+            "url": "https://finnhub.io/api/news?id=99b6ccbcda87772723e93b9a94cc27243102d95f7c4baf9533077fbec8f7ed97"
+        },
+        {
+            "category": "company",
+            "datetime": 1756540800,
+            "headline": "4 Big Reasons Why American Markets Continue To Rise",
+            "id": 136580318,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1388924581/image_1388924581.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "US equities thrive in 2025 despite macro risks. Major US indices, gold, and Bitcoin have posted strong YTD gains, reflecting broad market strength. See more.",
+            "url": "https://finnhub.io/api/news?id=240d3b8a1123e31e23e9bef9013f8ede2c76f624037d9684649a94b2a7c7a935"
+        },
+        {
+            "category": "company",
+            "datetime": 1756513800,
+            "headline": "Core PCE Inflation Rises 2.9% In July, As Expected",
+            "id": 136578109,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2167124135/image_2167124135.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "The Fed\u00e2\u0080\u0099s preferred inflation gauge, the core PCE price index, rose 2.9% year-over-year in July. Read more here.",
+            "url": "https://finnhub.io/api/news?id=957da3e7faf95c97d683b39ce81e593f58eeb8c162ffb542135fb7f5e22dd713"
+        },
+        {
+            "category": "company",
+            "datetime": 1756508100,
+            "headline": "Markets Weekly Outlook: U.S. Non-Farm Payrolls, U.S. ISM Services PMIs And Eurozone Inflation",
+            "id": 136577686,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1427537698/image_1427537698.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "Action in Forex markets was almost nonexistent, with low-volatility and volumes ranges, while equities went higher step by step.",
+            "url": "https://finnhub.io/api/news?id=62a7c443daf6c4cc95727282e1a3e5dee9da1a20e121a36fb3ea5b8ef1a4ae41"
+        },
+        {
+            "category": "company",
+            "datetime": 1756500000,
+            "headline": "Consumer Sentiment Drops Amid Worsening Economic Views",
+            "id": 136577146,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2169235748/image_2169235748.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "The Michigan Consumer Sentiment Index fell by 3.5 points, or nearly 6%, to 58.2 in August. The latest reading was lower than the forecast of 58.6.",
+            "url": "https://finnhub.io/api/news?id=3c1b29c597fa7169c2e5404859c685d666b5084d3325e96dcc3f6be196de9354"
+        },
+        {
+            "category": "company",
+            "datetime": 1756484463,
+            "headline": "Tariffs Are Taxes",
+            "id": 136575687,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2204768051/image_2204768051.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "Discover how Trump's tariffs act as hidden taxes, impacting inflation and consumer costs.",
+            "url": "https://finnhub.io/api/news?id=62b06f4af41cab59ac1fbafe7b51b7ad4fb4c8a84f67493356715ebd7437f9c2"
+        },
+        {
+            "category": "company",
+            "datetime": 1756484198,
+            "headline": "Federal Reserve Watch: How Things Are Shaping Up",
+            "id": 136575694,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2162438640/image_2162438640.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "The declining U.S. dollar signals a loss in global trust in the U.S., posing future challenges for the Fed's policy and the broader economic outlook. Read what investors need to know.",
+            "url": "https://finnhub.io/api/news?id=fc1dca74fd1897ca845ca0ae26896d5964c2c63adb21d84b930aa986d97c6f81"
+        },
+        {
+            "category": "company",
+            "datetime": 1756483212,
+            "headline": "Markets Brace For September Showdown: Fed Meeting Looms As Small Caps Lead",
+            "id": 136575409,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2201625581/image_2201625581.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "Discover key market insights: August saw small-cap surges, gold soaring, and mixed crypto results. Click for where the markets have been and where they're going.",
+            "url": "https://finnhub.io/api/news?id=5ce0b9cf11a7c0be696e3fbc55acecf4e09024fca6df312cd96b2f10f7e7b247"
+        },
+        {
+            "category": "company",
+            "datetime": 1756481260,
+            "headline": "The Coming White-Collar Recession",
+            "id": 136574797,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2165485835/image_2165485835.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "Examine how AI impacts white-collar jobs and the improving outlook for blue-collar workers. Click for my look at the economy and how that affects markets.",
+            "url": "https://finnhub.io/api/news?id=3a8ce49ebef30eaf58c47a9c96d796af83a4648fafae42387bf487be8d96d976"
+        },
+        {
+            "category": "company",
+            "datetime": 1756472153,
+            "headline": "July PCE Data: Unfolding Stagflation Should Worry The Fed",
+            "id": 136572212,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2227749330/image_2227749330.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "July PCE data show core inflation rising to 2.9%, despite lower non-durable goods prices in July, as service inflation accelerates. Read what investors need to know.",
+            "url": "https://finnhub.io/api/news?id=f20e119f594eabad49bf1bc3ba43447fd03b5e0fa401434e3e447a1ffc826e27"
+        },
+        {
+            "category": "company",
+            "datetime": 1756470973,
+            "headline": "The Market Is Teaching The Bears A Lesson",
+            "id": 136571491,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1371723531/image_1371723531.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "Stay informed on market trends with insights into tech insider confidence, AI-driven growth, and the resilient US economy\u00e2\u0080\u0094an update for bullish investors. Read the full analysis here.",
+            "url": "https://finnhub.io/api/news?id=ec0f8ee77792fa283a49e91432d3a0d8fad833bd8f37f64564ae92fa8f39604f"
+        },
+        {
+            "category": "company",
+            "datetime": 1756465200,
+            "headline": "Who's In Charge Of The U.S. Economy (If Not The Fed)?",
+            "id": 136568913,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2148939119/image_2148939119.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "In this episode, Lyn Alden Schwartzer discusses fiscal dominance - the rising influence of government deficits and spending over central banks on markets and inflation. Read more here.",
+            "url": "https://finnhub.io/api/news?id=350878c80b8bf631a9361022b5f99ee55deab3669d7eea2200d3aa48bbcdd05d"
+        },
+        {
+            "category": "company",
+            "datetime": 1756464286,
+            "headline": "The Liquidity Drain Could Be About To Hit Markets",
+            "id": 136568742,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2171457497/image_2171457497.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "See how declining reserve balances, TGA refills, and liquidity tightening may signal rising market stress and impact financing costs this September. Click for more.",
+            "url": "https://finnhub.io/api/news?id=208a3951c5b3103980156d99906a866ecf4c9fc32c6bbdcc9d3f17b337416fd7"
+        },
+        {
+            "category": "company",
+            "datetime": 1756461949,
+            "headline": "Inflation Revival - Tariffs Start Hitting Consumers Directly Today",
+            "id": 136568609,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1551007220/image_1551007220.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "Boeing and Airbus aside, markets hit highs despite weak data, inflation, and tariff risks that threaten spending and growth. See why headwinds may slow gains ahead.",
+            "url": "https://finnhub.io/api/news?id=f9b80472489a5104b67e1835f0dd3f377d683ce63a3c18e4c46a7e153f959c0a"
+        },
+        {
+            "category": "company",
+            "datetime": 1756459800,
+            "headline": "SCHD + ADX: Growth, Value, And Income Without Compromise",
+            "id": 136568488,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/640351099/image_640351099.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "Boost your portfolio with SCHD and ADX for dividend growth, stability, and an 8% managed yield.",
+            "url": "https://finnhub.io/api/news?id=f72286ce0c77293ef69d8327807c9e2b6c988111473707689bb31f87767413fb"
+        },
+        {
+            "category": "company",
+            "datetime": 1756455600,
+            "headline": "Energy Price As An Economic Indicator",
+            "id": 136568243,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1338921291/image_1338921291.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "The outlook for economic growth in the major oil consumption economies, the U.S. and the Eurozone, is very weak. Click here to read more.",
+            "url": "https://finnhub.io/api/news?id=b168dc9306195551bcbb60147c00638a6d9ca176c4167c8df629bc9b7790bed5"
+        },
+        {
+            "category": "company",
+            "datetime": 1756454700,
+            "headline": "U.S. Economic Boom Or Bust? Indicators Every Investor Needs To Watch",
+            "id": 136568183,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1308271745/image_1308271745.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "Coincident indicators move in step with the economy, providing real-time insights into economic activity. Click to read.",
+            "url": "https://finnhub.io/api/news?id=9ee37f77dfd7f0e4641c4608e2bf4648a86a702c64200637f236af6e740cc681"
+        },
+        {
+            "category": "company",
+            "datetime": 1756452600,
+            "headline": "Chop Fest In FX Continues",
+            "id": 136568096,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1363842522/image_1363842522.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "Ahead of the long holiday weekend in North America, the US dollar is trading with a slightly firmer bias in narrow trading ranges. Click to read.",
+            "url": "https://finnhub.io/api/news?id=fcc6076e7cdc65cdd21a152b857631a035f39a0ff13eff23c11ef3b8c22837f4"
+        },
+        {
+            "category": "company",
+            "datetime": 1756450800,
+            "headline": "The Coming Slowdown In Growth And Liquidity: What It Means For Investors In H2 2025",
+            "id": 136568006,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/168522145/image_168522145.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "We believe twin slowdowns in economic growth and global liquidity could weigh on various risk assets in the second half of 2025. Click here to read more.",
+            "url": "https://finnhub.io/api/news?id=9eacd98054a7c6a16e7b39614d0862d540537edf4902ca897b269c1cabcb984e"
+        },
+        {
+            "category": "company",
+            "datetime": 1756436100,
+            "headline": "Why A Government Shutdown Is Unlikely To Alter The Stock Market's Course",
+            "id": 136566973,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1645337624/image_1645337624.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "With less than two months until the end of the fiscal year, concerns about a government shutdown this fall could add to market noise and volatility.",
+            "url": "https://finnhub.io/api/news?id=d49c61c22480d8f937697a6e87cac85a80495594e688c3c4300712b37b098eeb"
+        },
+        {
+            "category": "company",
+            "datetime": 1756415100,
+            "headline": "Q2 GDP Second Estimate: Real GDP At 3.3%, Higher Than Expected",
+            "id": 136565551,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2221150138/image_2221150138.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "The BEA's second estimate of real gross domestic product showed economic growth increased at an annual rate of 3.3% in Q2 2025.",
+            "url": "https://finnhub.io/api/news?id=3e09d741c8954b3a6f3af0cebde87f1fd8b62ceae00750f148159c543c49a206"
+        },
+        {
+            "category": "company",
+            "datetime": 1756410300,
+            "headline": "Nasdaq Leads U.S. Indices In Indecisive Moves Post Nvidia Earnings: Dow Jones, S&P 500, Nasdaq Overview (Technical Analysis)",
+            "id": 136565176,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1040865674/image_1040865674.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "US Indices are rising but in an unassertive fashion, and the same has happened throughout the whole week.",
+            "url": "https://finnhub.io/api/news?id=cdb18b66b5178601cf73d9c017244105d46f5cfed476fc5066934ccfdb4ea67c"
+        },
+        {
+            "category": "company",
+            "datetime": 1756399598,
+            "headline": "Fresh Bond Market Stress Is A Big Potential Warning Sign For Stocks",
+            "id": 136564215,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1140147076/image_1140147076.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "Explore why today's market resembles 1987, with risks like high valuations, bond stress, and Fed concerns signaling a potential correction.",
+            "url": "https://finnhub.io/api/news?id=a00e6da1d8d26fa08751a17363dbceff030b8892986e4446373aa20cf38aec0e"
+        },
+        {
+            "category": "company",
+            "datetime": 1756399286,
+            "headline": "AAII Sentiment Survey: Pessimism Pulls Back",
+            "id": 136564222,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2205719811/image_2205719811.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "Explore the latest investor sentiment trends: bullish up to 34.6%, neutral at 26.0%, and bearish dips to 39.4%.",
+            "url": "https://finnhub.io/api/news?id=bbf75f6f76a8692e681b28cc4e6921c92ad14192311475074987ac2feb17bfc7"
+        },
+        {
+            "category": "company",
+            "datetime": 1756399205,
+            "headline": "New GDP Numbers: What Do They Show?",
+            "id": 136564228,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2160196586/image_2160196586.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "U.S. GDP grows 2.1% in Q2 2025; inflation nears 2% Fed target.",
+            "url": "https://finnhub.io/api/news?id=5802206cac0d7ac3d4e1ac25abc48f0a0a5c274a3259017af523f1fc6c0a464b"
+        },
+        {
+            "category": "company",
+            "datetime": 1756399022,
+            "headline": "Trump's Fed Makeover And What It Means For Markets",
+            "id": 136564117,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2197459622/image_2197459622.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "Trump's push to reshape the Fed by 2026 could spark aggressive rate cuts, boosting small caps, crypto, and gold.",
+            "url": "https://finnhub.io/api/news?id=fe07c9a4e934d25f0f294b62f76b781e7bc85b611c31cb45e40f2bdf4c0cabff"
+        },
+        {
+            "category": "company",
+            "datetime": 1756397693,
+            "headline": "The Yield Curve Is Steepening",
+            "id": 136563777,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1740828861/image_1740828861.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "Learn how the US Treasury yield curve steepening impacts investments.",
+            "url": "https://finnhub.io/api/news?id=2ea7e58655b147baee04d31cf206ae2b311bbd5605aa62c7e794326f5c17e56e"
+        },
+        {
+            "category": "company",
+            "datetime": 1756380808,
+            "headline": "Housing: 5 More Signs Of A Rapidly Deteriorating Market",
+            "id": 136559205,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1825344045/image_1825344045.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "Discover 5 alarming signs of a worsening housing market crisis linked to economic impacts and consumer confidence.",
+            "url": "https://finnhub.io/api/news?id=31d3be68d1a7d51550bfe424545dd3171bd4309703a7ed80e75e79da0da00fae"
+        },
+        {
+            "category": "company",
+            "datetime": 1756379106,
+            "headline": "Fed Narrows 11th Consecutive Quarterly Loss Due To Quantitative Tightening",
+            "id": 136558451,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1367635996/image_1367635996.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "Explore the Fed's 11-quarter loss streak, driven by QE policies and rising rates, and the impact on its independence, policy tools, and future flexibility.",
+            "url": "https://finnhub.io/api/news?id=d896a67e8605a1e11b59493717b905fc283c943b95885d2a0cad0856d5e3b2ff"
+        },
+        {
+            "category": "company",
+            "datetime": 1756378726,
+            "headline": "Updating Gold Ratios To Cyclical Markets",
+            "id": 136558459,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2207933187/image_2207933187.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "Gold's consolidation vs. stocks signals a potential shift to a countercyclical economy.",
+            "url": "https://finnhub.io/api/news?id=45f3bc2dd85576ff6e748f80c249086c43d1c6273f0b7e0e738892f457e43212"
+        },
+        {
+            "category": "company",
+            "datetime": 1756377702,
+            "headline": "I Was Right About The Fed And Gold",
+            "id": 136557771,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2207933187/image_2207933187.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "Discover how Jerome Powell's dovish stance, potential rate cuts, and inflation trends could impact gold prices, stocks, and the broader market outlook.",
+            "url": "https://finnhub.io/api/news?id=9efb344615475595f94877561d65ec063bcf7b1b7c7870022a45db7a68de96f0"
+        },
+        {
+            "category": "company",
+            "datetime": 1756376951,
+            "headline": "Losing Speed On The AI Superhighway",
+            "id": 136557826,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2219007409/image_2219007409.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "Nvidia's $4T valuation raises sustainability concerns amid slowing growth in data centers and China.",
+            "url": "https://finnhub.io/api/news?id=b464adae40d65c0412c179862404ea07b941b1f0e6480cc9fbaa30a7cf7fe23e"
+        },
+        {
+            "category": "company",
+            "datetime": 1756372200,
+            "headline": "Markets Continue To Expect Fed Will Cut Rates Next Month",
+            "id": 136557488,
+            "image": "",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "",
+            "url": "https://finnhub.io/api/news?id=0393a508a1313a1c7150b0e24ac36aeb0fd106b7c053cdc101ddc73cd1955cb1"
+        },
+        {
+            "category": "company",
+            "datetime": 1756365300,
+            "headline": "Invesco Equity And Income Fund Q2 2025 Commentary",
+            "id": 136557079,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2187991365/image_2187991365.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "Stock selection information technology, communication services and consumer staples contributed to relative performance. Read more here.",
+            "url": "https://finnhub.io/api/news?id=b26a21a1b62dcf7fd6c3a458f936f373d724121e85101d5c9253906b13f927d2"
+        },
+        {
+            "category": "company",
+            "datetime": 1756348760,
+            "headline": "Say It With Me.\u00a0We Are In An 'Everything' Bubble",
+            "id": 136555976,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1264544465/image_1264544465.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "Everything looks so expensive these days. Learn why U.S. asset prices are in bubble territory, and what should give investors pause.",
+            "url": "https://finnhub.io/api/news?id=2db01a53d6e3c1d72fbc910bc4b800210d2b4d5dc8ddc9a564571cf4d237d85f"
+        },
+        {
+            "category": "company",
+            "datetime": 1756346700,
+            "headline": "Powell Scraps 'Make-Up' Inflation Playbook In Jackson Hole",
+            "id": 136555823,
+            "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2175876380/image_2175876380.jpg?io=getty-c-w1536",
+            "related": "QQQ",
+            "source": "SeekingAlpha",
+            "summary": "Federal Reserve Chair Jerome Powell used his Jackson Hole podium on August 22 to declare the end of the central bank\u00e2\u0080\u0099s three-year experiment with \u00e2\u0080\u009cflexible average-inflation targeting.\u00e2\u0080\u009d",
+            "url": "https://finnhub.io/api/news?id=d078d06f766b5b0462739bcdf1f0f248462e264258b5df713298daa3a6a63fb7"
+        }
+    ],
+    "reddit_data": [
+        {
+            "title": "2X Leverage on 401k",
+            "score": 80,
+            "url": "https://www.reddit.com/r/stocks/comments/1ms0xfo/2x_leverage_on_401k/",
+            "created_utc": 1755363452.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "I just sold a decent amount of stock..",
+            "score": 0,
+            "url": "https://www.reddit.com/r/stocks/comments/1mohbkg/i_just_sold_a_decent_amount_of_stock/",
+            "created_utc": 1755024552.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Trump lashed out at Powell again, but this time he might not be wrong? $SPY $QQQ $TLT",
+            "score": 0,
+            "url": "https://www.reddit.com/r/stocks/comments/1me1eux/trump_lashed_out_at_powell_again_but_this_time_he/",
+            "created_utc": 1753968074.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Quick QQQ options question",
+            "score": 5,
+            "url": "https://www.reddit.com/r/stocks/comments/1mdhv9y/quick_qqq_options_question/",
+            "created_utc": 1753908067.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "The rally is losing steam, I'm watching these levels for SPY & QQQ",
+            "score": 0,
+            "url": "https://www.reddit.com/r/stocks/comments/1mck70z/the_rally_is_losing_steam_im_watching_these/",
+            "created_utc": 1753815545.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Trump: \u201cChina Deal Is Close\u201d Ahead of EU and Stockholm Trade Talks  Tariffs, Semis, and Rare Earths on the Table",
+            "score": 58,
+            "url": "https://www.reddit.com/r/stocks/comments/1mbhncr/trump_china_deal_is_close_ahead_of_eu_and/",
+            "created_utc": 1753712833.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Opinions on my \u201cUltimate Wealth\u201d portfolio",
+            "score": 2,
+            "url": "https://www.reddit.com/r/stocks/comments/1m8rces/opinions_on_my_ultimate_wealth_portfolio/",
+            "created_utc": 1753422891.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "What\u2019s your all time favourite ETF?",
+            "score": 6,
+            "url": "https://www.reddit.com/r/stocks/comments/1m5rfa7/whats_your_all_time_favourite_etf/",
+            "created_utc": 1753123832.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Looking for a good pairing with VT",
+            "score": 6,
+            "url": "https://www.reddit.com/r/stocks/comments/1m0n61b/looking_for_a_good_pairing_with_vt/",
+            "created_utc": 1752598614.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Trump posted: \u2018The stock market is at an all-time high and interest rates should be cut immediately\u2019!",
+            "score": 890,
+            "url": "https://www.reddit.com/r/stocks/comments/1lx6tfx/trump_posted_the_stock_market_is_at_an_alltime/",
+            "created_utc": 1752240238.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Which is better now: Buy TLT  vs QQQ?",
+            "score": 5,
+            "url": "https://www.reddit.com/r/stocks/comments/1lw8dyh/which_is_better_now_buy_tlt_vs_qqq/",
+            "created_utc": 1752139880.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Betting Against Financial Influencers Stock Picks? Good Return or Too Risky?",
+            "score": 11,
+            "url": "https://www.reddit.com/r/stocks/comments/1lnp55l/betting_against_financial_influencers_stock_picks/",
+            "created_utc": 1751230015.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Simple easy TQQQ strategy using the 200 SMA from QQQ with a few modifications",
+            "score": 0,
+            "url": "https://www.reddit.com/r/stocks/comments/1lmv9fj/simple_easy_tqqq_strategy_using_the_200_sma_from/",
+            "created_utc": 1751139097.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "TSLA has been a terrible buy and hold",
+            "score": 0,
+            "url": "https://www.reddit.com/r/stocks/comments/1ljhbcx/tsla_has_been_a_terrible_buy_and_hold/",
+            "created_utc": 1750786105.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Opportunities in the short-term market volatility? I'm sharing a low-risk offensive strategy that I've been tracking recently",
+            "score": 14,
+            "url": "https://www.reddit.com/r/stocks/comments/1lih12j/opportunities_in_the_shortterm_market_volatility/",
+            "created_utc": 1750686437.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "What is the fair value for RBLX?",
+            "score": 16,
+            "url": "https://www.reddit.com/r/stocks/comments/1lex4uo/what_is_the_fair_value_for_rblx/",
+            "created_utc": 1750292821.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "S&P 500 ETFs and Individual Stocks",
+            "score": 8,
+            "url": "https://www.reddit.com/r/stocks/comments/1l4y9et/sp_500_etfs_and_individual_stocks/",
+            "created_utc": 1749230914.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "(05/29) Tariffs and Teslas and Takeovers!",
+            "score": 2,
+            "url": "https://www.reddit.com/r/stocks/comments/1kyaiiu/0529_tariffs_and_teslas_and_takeovers/",
+            "created_utc": 1748524528.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "35% CAGR Since 2022 - Stock Picking Port",
+            "score": 4,
+            "url": "https://www.reddit.com/r/stocks/comments/1kwuttd/35_cagr_since_2022_stock_picking_port/",
+            "created_utc": 1748370517.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Nvda (Nvidia) upcoming earnings will either pump or dump the market",
+            "score": 102,
+            "url": "https://www.reddit.com/r/stocks/comments/1kuq2nn/nvda_nvidia_upcoming_earnings_will_either_pump_or/",
+            "created_utc": 1748133402.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "(05/23) Trump Comments Causing Market Volatility! - Interesting Stocks Today",
+            "score": 6,
+            "url": "https://www.reddit.com/r/stocks/comments/1ktj7v1/0523_trump_comments_causing_market_volatility/",
+            "created_utc": 1748005884.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Question about long term etf\u2019s and index funds.",
+            "score": 6,
+            "url": "https://www.reddit.com/r/stocks/comments/1ksm9ps/question_about_long_term_etfs_and_index_funds/",
+            "created_utc": 1747905395.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Innodata (INOD) for growth potential?",
+            "score": 6,
+            "url": "https://www.reddit.com/r/stocks/comments/1kl32rm/innodata_inod_for_growth_potential/",
+            "created_utc": 1747081715.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "Thoughts and feedback on my proposed portfolio?",
+            "score": 3,
+            "url": "https://www.reddit.com/r/stocks/comments/1kfl5a5/thoughts_and_feedback_on_my_proposed_portfolio/",
+            "created_utc": 1746474806.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "(04/30) Interesting Stocks Today - GDP Shrinks Amid Trade Turmoil",
+            "score": 8,
+            "url": "https://www.reddit.com/r/stocks/comments/1kbfv7l/0430_interesting_stocks_today_gdp_shrinks_amid/",
+            "created_utc": 1746017990.0,
+            "subreddit": "stocks"
+        },
+        {
+            "title": "6 figures profit 3 years in a row 50%+ annual returns",
+            "score": 522,
+            "url": "https://i.redd.it/28x0wrsbh2mf1.jpeg",
+            "created_utc": 1756520518.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "TA on my portfolio tells me a breakout has occurred.",
+            "score": 133,
+            "url": "https://i.redd.it/u912uakv72mf1.jpeg",
+            "created_utc": 1756517340.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "555% for the month \ud83d\ude05",
+            "score": 437,
+            "url": "https://www.reddit.com/gallery/1n2hhar",
+            "created_utc": 1756399639.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "$300->$49k since 7/7/25",
+            "score": 3892,
+            "url": "https://www.reddit.com/gallery/1n2gqki",
+            "created_utc": 1756397966.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "The swing on this \ud83d\ude13",
+            "score": 94,
+            "url": "https://www.reddit.com/gallery/1n20ia0",
+            "created_utc": 1756348115.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Unveiling my short position",
+            "score": 0,
+            "url": "https://i.redd.it/jrw6vmmc88lf1.jpeg",
+            "created_utc": 1756154293.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Small gain",
+            "score": 54,
+            "url": "https://www.reddit.com/gallery/1mxfebs",
+            "created_utc": 1755889617.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Somehow managed to time the V today lol",
+            "score": 628,
+            "url": "https://www.reddit.com/gallery/1mvxwlw",
+            "created_utc": 1755740691.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "QQQ puts in and out - ~$1700 to $10k",
+            "score": 156,
+            "url": "https://www.reddit.com/gallery/1mvq14v",
+            "created_utc": 1755721030.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Hit QQQ Puts From Last Week",
+            "score": 25,
+            "url": "https://www.reddit.com/gallery/1mvkmr4",
+            "created_utc": 1755709403.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "From 2k to 20k",
+            "score": 970,
+            "url": "https://www.reddit.com/gallery/1mvgiv4",
+            "created_utc": 1755700494.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Call Credit Spread QQQ",
+            "score": 25,
+            "url": "https://i.redd.it/671sjral01kf1.jpeg",
+            "created_utc": 1755631087.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "1.4m DD GAINZ - $RDDT is still cheap",
+            "score": 518,
+            "url": "https://www.reddit.com/r/wallstreetbets/comments/1mq2eeo/14m_dd_gainz_rddt_is_still_cheap/",
+            "created_utc": 1755182061.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "$870k QQQ yolo!",
+            "score": 465,
+            "url": "https://i.redd.it/c6a6gfcoknif1.jpeg",
+            "created_utc": 1755032497.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Not looking so hot qqq",
+            "score": 92,
+            "url": "https://i.redd.it/ovnb5nmphfif1.jpeg",
+            "created_utc": 1754934645.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "fall  down cpi please 10k on the line",
+            "score": 101,
+            "url": "https://i.redd.it/t6evhdneieif1.png",
+            "created_utc": 1754922826.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "From $20K to $170k. YTD 771%",
+            "score": 1466,
+            "url": "https://www.reddit.com/gallery/1mlzzlb",
+            "created_utc": 1754772811.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "I bought puts... Apparently everyone else did too",
+            "score": 262,
+            "url": "https://i.redd.it/08uwgqdtt1if1.png",
+            "created_utc": 1754769219.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Road to the 500k goal going well.",
+            "score": 431,
+            "url": "https://www.reddit.com/gallery/1ml66yo",
+            "created_utc": 1754685048.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Am I good, well done, or cooked?",
+            "score": 10,
+            "url": "https://i.redd.it/cr3da9c7whgf1.jpeg",
+            "created_utc": 1754092036.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Yell at me",
+            "score": 12,
+            "url": "https://i.redd.it/ptdrfy45lhgf1.jpeg",
+            "created_utc": 1754088317.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Call me Madame Zeroni",
+            "score": 102,
+            "url": "https://www.reddit.com/gallery/1mey987",
+            "created_utc": 1754059196.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Sell.",
+            "score": 77,
+            "url": "https://i.redd.it/zpgbdt6h0fgf1.jpeg",
+            "created_utc": 1754057153.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Do you also enjoy avoiding big drops more than taking positive trades?",
+            "score": 103,
+            "url": "https://i.redd.it/m2wo4j4mldgf1.png",
+            "created_utc": 1754040071.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "22K gains on 0DTE calls on $SPY and $QQQ",
+            "score": 44,
+            "url": "https://i.redd.it/mdonvsms6nff1.jpeg",
+            "created_utc": 1753720285.0,
+            "subreddit": "wallstreetbets"
+        },
+        {
+            "title": "Liquidity Shapes Options Pricing",
+            "score": 5,
+            "url": "https://www.reddit.com/r/options/comments/1n53ctu/liquidity_shapes_options_pricing/",
+            "created_utc": 1756667731.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Hedging portfolio with puts",
+            "score": 1,
+            "url": "https://www.reddit.com/r/options/comments/1n37td1/hedging_portfolio_with_puts/",
+            "created_utc": 1756474996.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Anyone do SPY/QQQ 15m ORB Trading?",
+            "score": 6,
+            "url": "https://www.reddit.com/r/options/comments/1mzwtct/anyone_do_spyqqq_15m_orb_trading/",
+            "created_utc": 1756142739.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Retail buying covered call ETFs (JEPI) = Retail selling puts?",
+            "score": 14,
+            "url": "https://www.reddit.com/r/options/comments/1mzbtft/retail_buying_covered_call_etfs_jepi_retail/",
+            "created_utc": 1756080466.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "1 Year later: still standing, finally green..!",
+            "score": 129,
+            "url": "https://www.reddit.com/gallery/1my5ika",
+            "created_utc": 1755965474.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "My return this month: 1%, buy and hold does better",
+            "score": 0,
+            "url": "https://www.reddit.com/r/options/comments/1mxjo9x/my_return_this_month_1_buy_and_hold_does_better/",
+            "created_utc": 1755899725.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Who's buying puts on spx and QQQ for tomorrow",
+            "score": 44,
+            "url": "https://www.reddit.com/r/options/comments/1mwt8mj/whos_buying_puts_on_spx_and_qqq_for_tomorrow/",
+            "created_utc": 1755825842.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "QQQ & SPY options for tomorrow am - much higher than normal?",
+            "score": 0,
+            "url": "https://www.reddit.com/r/options/comments/1mwrs4o/qqq_spy_options_for_tomorrow_am_much_higher_than/",
+            "created_utc": 1755821815.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Barbell strategy specific ideas",
+            "score": 7,
+            "url": "https://www.reddit.com/r/options/comments/1mvjfdj/barbell_strategy_specific_ideas/",
+            "created_utc": 1755706804.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Daily SPY, QQQ, IWM Vertical Spreads",
+            "score": 0,
+            "url": "https://www.reddit.com/r/options/comments/1mv4h1l/daily_spy_qqq_iwm_vertical_spreads/",
+            "created_utc": 1755662186.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "QQQ 0 dte options Trade",
+            "score": 12,
+            "url": "https://www.reddit.com/r/options/comments/1mtctym/qqq_0_dte_options_trade/",
+            "created_utc": 1755493214.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Key levels for SPX, SPY, QQQ - August 15th OPEX",
+            "score": 4,
+            "url": "https://www.reddit.com/r/options/comments/1mqwosp/key_levels_for_spx_spy_qqq_august_15th_opex/",
+            "created_utc": 1755261674.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Acquiring Capital to Trade CSPs",
+            "score": 1,
+            "url": "https://www.reddit.com/r/options/comments/1mo722z/acquiring_capital_to_trade_csps/",
+            "created_utc": 1755000872.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Put Condors - am I missing something?",
+            "score": 0,
+            "url": "https://www.reddit.com/r/options/comments/1mnhjgp/put_condors_am_i_missing_something/",
+            "created_utc": 1754929342.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "I'm an EMA scalper.",
+            "score": 0,
+            "url": "https://www.reddit.com/r/options/comments/1ml5n8e/im_an_ema_scalper/",
+            "created_utc": 1754683745.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Trading 0DTE Opening Range",
+            "score": 20,
+            "url": "https://www.reddit.com/r/options/comments/1mk6xmg/trading_0dte_opening_range/",
+            "created_utc": 1754589023.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Scalping QQQ/SPY, best to do OTM or ITM for this type of play?",
+            "score": 4,
+            "url": "https://www.reddit.com/r/options/comments/1mdruwq/scalping_qqqspy_best_to_do_otm_or_itm_for_this/",
+            "created_utc": 1753935110.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Does QQQ & SPY move together?",
+            "score": 0,
+            "url": "https://www.reddit.com/r/options/comments/1mdprvm/does_qqq_spy_move_together/",
+            "created_utc": 1753928827.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Is there a simple way to find the historical price of an expired option at a specific time?",
+            "score": 7,
+            "url": "https://www.reddit.com/r/options/comments/1mc1mqx/is_there_a_simple_way_to_find_the_historical/",
+            "created_utc": 1753761863.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Market at All-Time Highs\u2026 but Options Flow Showing Caution + Earnings Week",
+            "score": 64,
+            "url": "https://www.reddit.com/r/options/comments/1man2o9/market_at_alltime_highs_but_options_flow_showing/",
+            "created_utc": 1753624969.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "QQQ Put spread idea",
+            "score": 7,
+            "url": "https://www.reddit.com/r/options/comments/1m8q2cy/qqq_put_spread_idea/",
+            "created_utc": 1753418488.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "SPY or QQQ calls?",
+            "score": 4,
+            "url": "https://www.reddit.com/r/options/comments/1m7mo9a/spy_or_qqq_calls/",
+            "created_utc": 1753308142.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Want to try my hand at scalping.",
+            "score": 3,
+            "url": "https://www.reddit.com/r/options/comments/1m6zve4/want_to_try_my_hand_at_scalping/",
+            "created_utc": 1753244952.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "Triple stacking call/put premium Data!",
+            "score": 3,
+            "url": "https://www.reddit.com/r/options/comments/1m64iqj/triple_stacking_callput_premium_data/",
+            "created_utc": 1753157901.0,
+            "subreddit": "options"
+        },
+        {
+            "title": "I discovered fees.",
+            "score": 26,
+            "url": "https://www.reddit.com/r/options/comments/1m3is3v/i_discovered_fees/",
+            "created_utc": 1752885477.0,
+            "subreddit": "options"
+        }
+    ]
+}

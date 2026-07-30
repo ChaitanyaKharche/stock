@@ -1,0 +1,54 @@
+🧹 Starting comprehensive cache cleanup for trade-venv environment...
+✅ Detected trade-venv environment at: /home/kharche.c/.conda/envs/trade-venv
+
+🔄 Step 1: Cleaning HuggingFace cache...
+Found HuggingFace cache at: /home/kharche.c/.cache/huggingface
+44G	/home/kharche.c/.cache/huggingface
+Using huggingface-cli for safe cleanup...
+usage: huggingface-cli <command> [<args>]
+huggingface-cli: error: unrecognized arguments: --yes
+After cleanup:
+44G	/home/kharche.c/.cache/huggingface
+
+🔄 Step 2: Cleaning PyTorch cache...
+No PyTorch cache found
+
+🔄 Step 3: Cleaning pip cache...
+Found pip cache at: /home/kharche.c/.cache/pip
+617K	/home/kharche.c/.cache/pip
+Files removed: 8 (629 kB)
+Pip cache cleaned
+
+🔄 Step 4: Cleaning conda cache...
+There are no unused tarball(s) to remove.
+There are no index cache(s) to remove.
+There are no unused package(s) to remove.
+There are no tempfile(s) to remove.
+There are no logfile(s) to remove.
+
+🔄 Step 5: Clearing GPU memory...
+No CUDA available
+
+🔄 Step 6: Cleaning temporary files...
+
+📊 Final disk usage summary:
+Home directory usage:
+44G	/home/kharche.c/.cache
+vast1-mghpcc-eth.neu.edu:/discovery/home  155T  139T   17T  90% /home
+
+✅ Cleanup complete! Your trade-venv environment cache has been cleaned.
+
+🔧 Next steps:
+1. Set your environment variables:
+   export FINNHUB_API_KEY="d09qkn1r01qus8reqi2gd09qkn1r01qus8reqi30"
+   export TWELVE_KEY="b6dbb92e551a46f2b20de27540aeef0a"
+   export REDDIT_CLIENT_ID="xQ9vvcYzweGxj2i0RIybPA"
+   export REDDIT_CLIENT_SECRET="XU1eF6bwfj0Fhtm8JW5oHzPi34kPIA"
+   export REDDIT_USER_AGENT="script:stock-opinion-analyzer:v1.0 (by /u/PunbeilevableGenius)"
+
+2. Also fix the model identifier in your code:
+   Change: 'FinGPT/fingpt-mt_llama2-13b_lora'
+   To: 'FinGPT/fingpt-sentiment_llama2-13b_lora'
+
+3. Then restart your API server:
+   python -m uvicorn trade_analysis.enhanced_api:app --host 0.0.0.0 --port 8000
