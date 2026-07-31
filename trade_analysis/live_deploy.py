@@ -45,7 +45,33 @@ class MultiStrategyTrader:
         self.default_stop_pct = 0.5   # OPTIMIZED from 0.3
         self.retest_dist_pct = 0.2    # OPTIMIZED from 0.15
         # --- END OPTIMIZED PARAMETERS ---
-        
+
+        # ATR-based risk (scales target/stop to current volatility instead
+        # of the fixed percentages above, which are used only as a fallback
+        # when ATR isn't available yet)
+        self.atr_period = 14
+        self.target_atr_mult = 2.5
+        self.stop_atr_mult = 1.0
+        self.atr = {}            # {symbol: atr_value}
+        self.yesterday_close = {}  # {symbol: float}, gap-regime baseline
+
+        # Multi-day S/R confluence: a breakout level that lines up with
+        # another recent level (session or premarket, last N days) is
+        # higher-conviction and gets sized up
+        self.confluence_lookback_days = 3
+        self.confluence_zone_pct = 0.15  # % tolerance to count as the same zone
+        self.confluence_size_mult = 1.5
+
+        # Gap / volatility regime filter: a headline/news-driven gap well
+        # beyond the recent ATR derates size instead of trusting static
+        # S/R levels to hold
+        self.gap_atr_mult_threshold = 2.0
+        self.elevated_regime_size_mult = 0.5
+        self.gap_regime = {}      # {symbol: "NORMAL" | "ELEVATED"}
+        self.regime_checked_today = False
+
+        self.base_shares = 100
+
         # Cached Data
         self.key_levels = {} # {symbol: {'support': [], 'resistance': []}}
         self.last_level_update = None
@@ -155,14 +181,26 @@ class MultiStrategyTrader:
         for symbol in self.symbols:
             self.key_levels[symbol] = {'support': [], 'resistance': []}
             
-            # 1. Daily bars for PM and Yesterday's levels
-            daily_df = self.get_bars(symbol, TimeFrame(1, TimeFrameUnit.Day), lookback_days=5)
+            # 1. Daily bars for PM, Yesterday's, and multi-day confluence levels
+            daily_df = self.get_bars(
+                symbol, TimeFrame(1, TimeFrameUnit.Day),
+                lookback_days=max(5, self.confluence_lookback_days + 3)
+            )
             if daily_df is None or len(daily_df) < 2:
                 continue
-                
+
             yesterday = daily_df.iloc[-2]
             self.key_levels[symbol]['resistance'].append((f"Y-High", yesterday['high']))
             self.key_levels[symbol]['support'].append((f"Y-Low", yesterday['low']))
+            self.yesterday_close[symbol] = yesterday['close']
+
+            # 1b. Prior sessions (day -2, -3, ...) for multi-day S/R confluence
+            for i in range(2, self.confluence_lookback_days + 1):
+                idx = -(i + 1)
+                if abs(idx) <= len(daily_df):
+                    session = daily_df.iloc[idx]
+                    self.key_levels[symbol]['resistance'].append((f"Session High -{i}d", session['high']))
+                    self.key_levels[symbol]['support'].append((f"Session Low -{i}d", session['low']))
 
             # 2. Premarket Levels
             try:
@@ -240,6 +278,75 @@ class MultiStrategyTrader:
                 
         self.last_orb_calc = now
 
+    def update_atr(self):
+        """5-min ATR(14) per symbol, so target/stop/retest zones scale with
+        current volatility instead of the fixed default_target_pct/stop_pct."""
+        for symbol in self.symbols:
+            df_5m = self.get_bars(symbol, TimeFrame(5, TimeFrameUnit.Minute), lookback_days=3)
+            if df_5m is None or len(df_5m) < 2:
+                continue
+
+            high, low, close = df_5m['high'], df_5m['low'], df_5m['close']
+            prev_close = close.shift(1)
+            true_range = pd.concat(
+                [high - low, (high - prev_close).abs(), (low - prev_close).abs()],
+                axis=1
+            ).max(axis=1)
+
+            atr = true_range.tail(self.atr_period).mean()
+            if pd.notna(atr) and atr > 0:
+                self.atr[symbol] = atr
+
+    def check_confluence(self, symbol, level_price, side):
+        """Does level_price line up with another recent S/R zone (within
+        confluence_zone_pct)? Multiple touches = higher-conviction breakout."""
+        levels = self.key_levels.get(symbol, {}).get(side, [])
+        if not levels or level_price is None:
+            return False, []
+
+        matches = [
+            name for name, price in levels
+            if price != level_price and abs(price - level_price) / level_price <= self.confluence_zone_pct / 100
+        ]
+        return len(matches) > 0, matches
+
+    def check_gap_regime(self, symbol, current_price):
+        """Classify today's gap vs yesterday's close relative to ATR. A
+        headline/news-driven gap well beyond the recent ATR flags an
+        ELEVATED regime so size gets derated instead of trusting static
+        S/R levels to hold."""
+        y_close = self.yesterday_close.get(symbol)
+        atr = self.atr.get(symbol)
+
+        if y_close is None or not atr:
+            self.gap_regime[symbol] = "NORMAL"
+            return self.gap_regime[symbol]
+
+        gap = abs(current_price - y_close)
+        self.gap_regime[symbol] = "ELEVATED" if gap > self.gap_atr_mult_threshold * atr else "NORMAL"
+        return self.gap_regime[symbol]
+
+    def score_signal_size(self, symbol, signal):
+        """Combine multi-day confluence + gap regime into a size multiplier
+        for a detected signal, and attach it to the signal dict."""
+        side = 'support' if signal['direction'] == 'UP' else 'resistance'
+        level_price = signal.get('level_price')
+
+        has_confluence, matches = self.check_confluence(symbol, level_price, side)
+        size_mult = self.confluence_size_mult if has_confluence else 1.0
+
+        note = None
+        if self.gap_regime.get(symbol) == "ELEVATED":
+            size_mult *= self.elevated_regime_size_mult
+            note = "ELEVATED gap regime, size derated"
+        elif has_confluence:
+            note = f"confluence with {matches}"
+
+        signal['size_multiplier'] = size_mult
+        if note:
+            signal['level_name'] = f"{signal['level_name']} | {note}"
+
+        return signal
 
     def can_trade(self, symbol, strategy_name):
         """Check position and cooldown"""
@@ -258,27 +365,27 @@ class MultiStrategyTrader:
         return True
 
     def place_trade(self, symbol, signal):
-        """Universal trade placement, accepts % or price for T/S"""
+        """Universal trade placement. Target/stop scale with ATR (fixed
+        default_target_pct/stop_pct are only a fallback), and shares scale
+        with the confluence/gap-regime size_multiplier from score_signal_size."""
         try:
             entry_price = signal['entry_price']
-            
-            # --- Dynamic Target/Stop ---
+            atr = self.atr.get(symbol)
+            size_mult = signal.get('size_multiplier', 1.0)
+
             if 'target_price' in signal:
                 target = signal['target_price']
             else:
-                if signal['direction'] == "UP":
-                    target = entry_price * (1.0 + self.default_target_pct / 100.0)
-                else:
-                    target = entry_price * (1.0 - self.default_target_pct / 100.0)
-            
+                target_dist = (self.target_atr_mult * atr) if atr else entry_price * (self.default_target_pct / 100.0)
+                target = entry_price + target_dist if signal['direction'] == "UP" else entry_price - target_dist
+
             if 'stop_price' in signal:
                 stop = signal['stop_price']
             else:
-                if signal['direction'] == "UP":
-                    stop = entry_price * (1.0 - self.default_stop_pct / 100.0)
-                else:
-                    stop = entry_price * (1.0 + self.default_stop_pct / 100.0)
-            # --- End Dynamic T/S ---
+                stop_dist = (self.stop_atr_mult * atr) if atr else entry_price * (self.default_stop_pct / 100.0)
+                stop = entry_price - stop_dist if signal['direction'] == "UP" else entry_price + stop_dist
+
+            shares = int(self.base_shares * size_mult)
 
             self.positions[symbol] = {
                 'type': signal['type'],
@@ -286,109 +393,7 @@ class MultiStrategyTrader:
                 'entry': entry_price,
                 'target': target,
                 'stop': stop,
-                'entry_time': signal['time'],
-                'strategy': signal['strategy_name']
-            }
-            self.entry_cooldown[symbol] = datetime.now(self.tz)
-
-            self.log("\n" + "="*70)
-            self.log("LIVE SCANNING STARTED")
-            self.log(f"🚀 [{signal['strategy_name']} {signal['type']} ENTRY]")
-            self.log(f"  Symbol: {symbol} @ ${entry_price:.2f}")
-            self.log(f"  Trigger: {signal['level_name']}")
-            self.log(f"  Target: ${target:.2f}")
-            self.log(f"  Stop: ${stop:.2f}")
-            self.log("="*70 + "\n")
-            
-            # TODO: Add actual Alpaca order execution here
-            
-        except Exception as e:
-            self.log(f"[ERROR] place_trade: {e}")
-
-    def check_exits(self):
-        """Universal exit checker, now with cooldown on exit."""
-        if not self.positions:
-            return
-            
-        for symbol in list(self.positions.keys()):
-            try:
-                pos = self.positions[symbol]
-                bars = self.bar_data.get(f"{symbol}_1m") 
-                if bars is None or bars.empty:
-                    continue
-                
-                current_price = bars.iloc[-1]['close']
-                
-                realized_pnl = 0.0
-                exit_type = None
-                
-                if pos['direction'] == "UP":
-                    if current_price >= pos['target']:
-                        exit_type = "TARGET"
-                        realized_pnl = (pos['target'] - pos['entry']) * 100 # Assuming 100 shares
-                    elif current_price <= pos['stop']:
-                        exit_type = "STOP"
-                        realized_pnl = (pos['stop'] - pos['entry']) * 100
-                
-                else: # DOWN
-                    if current_price <= pos['target']:
-                        exit_type = "TARGET"
-                        realized_pnl = (pos['entry'] - pos['target']) * 100
-                    elif current_price >= pos['stop']:
-                        exit_type = "STOP"
-                        realized_pnl = (pos['entry'] - pos['stop']) * 100
-                
-                if exit_type:
-                    self.daily_pnl += realized_pnl
-                    
-                    self.log("\n" + "="*70)
-                    self.log(f"🛑 [{exit_type} EXIT] ({pos['strategy']})")
-                    self.log(f"  Symbol: {symbol} @ ${current_price:.2f}")
-                    self.log(f"  Entry: ${pos['entry']:.2f}")
-                    self.log(f"  P&L: ${realized_pnl:+.2f}")
-                    self.log(f"  Daily Total P&L: ${self.daily_pnl:.2f}")
-                    self.log("="*70 + "\n")
-                    
-                    # --- THIS IS THE FIX ---
-                    del self.positions[symbol]
-                    self.entry_cooldown[symbol] = datetime.now(self.tz)
-                    # ---------------------
-                    
-                    # TODO: Add actual Alpaca exit order here
-
-            except Exception as e:
-                self.log(f"[ERROR] check_exits {symbol}: {e}")
-
-
-    def place_trade(self, symbol, signal):
-        """Universal trade placement, accepts % or price for T/S"""
-        try:
-            entry_price = signal['entry_price']
-            
-            # --- Dynamic Target/Stop ---
-            if 'target_price' in signal:
-                target = signal['target_price']
-            else:
-                if signal['direction'] == "UP":
-                    target = entry_price * (1.0 + self.default_target_pct / 100.0)
-                else:
-                    target = entry_price * (1.0 - self.default_target_pct / 100.0)
-            
-            if 'stop_price' in signal:
-                stop = signal['stop_price']
-            else:
-                if signal['direction'] == "UP":
-                    stop = entry_price * (1.0 - self.default_stop_pct / 100.0)
-                else:
-                    stop = entry_price * (1.0 + self.default_stop_pct / 100.0)
-            # --- End Dynamic T/S ---
-
-            self.positions[symbol] = {
-                'type': signal['type'],
-                'direction': signal['direction'],
-                'entry': entry_price,
-                'target': target,
-                'stop': stop,
+                'shares': shares,
                 'entry_time': signal['time'],
                 'strategy': signal['strategy_name']
             }
@@ -398,12 +403,12 @@ class MultiStrategyTrader:
             self.log(f"🚀 [{signal['strategy_name']} {signal['type']} ENTRY]")
             self.log(f"  Symbol: {symbol} @ ${entry_price:.2f}")
             self.log(f"  Trigger: {signal['level_name']}")
-            self.log(f"  Target: ${target:.2f}")
-            self.log(f"  Stop: ${stop:.2f}")
+            self.log(f"  Shares: {shares} (size x{size_mult:.2f}, regime: {self.gap_regime.get(symbol, 'NORMAL')})")
+            self.log(f"  Target: ${target:.2f} | Stop: ${stop:.2f}" + (f" (ATR: {atr:.3f})" if atr else ""))
             self.log("="*70 + "\n")
-            
+
             # TODO: Add actual Alpaca order execution here
-            
+
         except Exception as e:
             self.log(f"[ERROR] place_trade: {e}")
 
@@ -411,38 +416,39 @@ class MultiStrategyTrader:
         """Universal exit checker, now with cooldown on exit."""
         if not self.positions:
             return
-            
+
         for symbol in list(self.positions.keys()):
             try:
                 pos = self.positions[symbol]
-                bars = self.bar_data.get(f"{symbol}_1m") 
+                bars = self.bar_data.get(f"{symbol}_1m")
                 if bars is None or bars.empty:
                     continue
-                
+
                 current_price = bars.iloc[-1]['close']
-                
+                shares = pos.get('shares', self.base_shares)
+
                 realized_pnl = 0.0
                 exit_type = None
-                
+
                 if pos['direction'] == "UP":
                     if current_price >= pos['target']:
                         exit_type = "TARGET"
-                        realized_pnl = (pos['target'] - pos['entry']) * 100 # Assuming 100 shares
+                        realized_pnl = (pos['target'] - pos['entry']) * shares
                     elif current_price <= pos['stop']:
                         exit_type = "STOP"
-                        realized_pnl = (pos['stop'] - pos['entry']) * 100
-                
+                        realized_pnl = (pos['stop'] - pos['entry']) * shares
+
                 else: # DOWN
                     if current_price <= pos['target']:
                         exit_type = "TARGET"
-                        realized_pnl = (pos['entry'] - pos['target']) * 100
+                        realized_pnl = (pos['entry'] - pos['target']) * shares
                     elif current_price >= pos['stop']:
                         exit_type = "STOP"
-                        realized_pnl = (pos['entry'] - pos['stop']) * 100
-                
+                        realized_pnl = (pos['entry'] - pos['stop']) * shares
+
                 if exit_type:
                     self.daily_pnl += realized_pnl
-                    
+
                     self.log("\n" + "="*70)
                     self.log(f"🛑 [{exit_type} EXIT] ({pos['strategy']})")
                     self.log(f"  Symbol: {symbol} @ ${current_price:.2f}")
@@ -450,12 +456,12 @@ class MultiStrategyTrader:
                     self.log(f"  P&L: ${realized_pnl:+.2f}")
                     self.log(f"  Daily Total P&L: ${self.daily_pnl:.2f}")
                     self.log("="*70 + "\n")
-                    
+
                     # --- THIS IS THE FIX ---
                     del self.positions[symbol]
                     self.entry_cooldown[symbol] = datetime.now(self.tz)
                     # ---------------------
-                    
+
                     # TODO: Add actual Alpaca exit order here
 
             except Exception as e:
@@ -503,6 +509,7 @@ class MultiStrategyTrader:
                             'direction': 'UP',
                             'entry_price': current_close,
                             'level_name': f"Retest of {level_name} (${level_price:.2f})",
+                            'level_price': level_price,
                             'time': latest_bar.name,
                             'strategy_name': 'Hourly_Retest'
                         }
@@ -523,6 +530,7 @@ class MultiStrategyTrader:
                             'direction': 'DOWN',
                             'entry_price': current_close,
                             'level_name': f"Retest of {level_name} (${level_price:.2f})",
+                            'level_price': level_price,
                             'time': latest_bar.name,
                             'strategy_name': 'Hourly_Retest'
                         }
@@ -605,10 +613,11 @@ class MultiStrategyTrader:
                     'direction': 'DOWN',
                     'entry_price': latest_bar['open'],
                     'level_name': f"False Breakout Fade (Resist {level_name})",
+                    'level_price': level_price,
                     'time': latest_bar.name,
                     'strategy_name': 'Fade_Key_Level'
                 }
-                
+
         # CALL Signal: Failed break of Support
         for level_name, level_price in self.key_levels[symbol]['support']:
             if (prev_bar.low < level_price and prev_bar.close > level_price):
@@ -617,6 +626,7 @@ class MultiStrategyTrader:
                     'direction': 'UP',
                     'entry_price': latest_bar['open'],
                     'level_name': f"False Breakout Fade (Support {level_name})",
+                    'level_price': level_price,
                     'time': latest_bar.name,
                     'strategy_name': 'Fade_Key_Level'
                 }
@@ -634,14 +644,15 @@ class MultiStrategyTrader:
 
         for symbol in list(self.positions.keys()):
             pos = self.positions[symbol]
-            bars = self.bar_data.get(f"{symbol}_1m") 
+            bars = self.bar_data.get(f"{symbol}_1m")
             current_price = bars.iloc[-1]['close'] if bars is not None and not bars.empty else pos['entry']
-            
+            shares = pos.get('shares', self.base_shares)
+
             realized_pnl = 0.0
             if pos['direction'] == "UP":
-                realized_pnl = (current_price - pos['entry']) * 100 
+                realized_pnl = (current_price - pos['entry']) * shares
             else: # DOWN
-                realized_pnl = (pos['entry'] - current_price) * 100
+                realized_pnl = (pos['entry'] - current_price) * shares
                 
             self.daily_pnl += realized_pnl
 
@@ -692,17 +703,19 @@ class MultiStrategyTrader:
 
         # Run once at start
         self.get_key_levels(force_update=True)
+        self.update_atr()
         self.update_bar_data() # Initial data load
-        
+
         self.log("\n" + "="*70)
         self.log("LIVE SCANNING STARTED")
         self.log("="*70 + "\n")
-        
+
         last_bar_update = datetime.now(self.tz)
         last_level_update = datetime.now(self.tz)
-        
+
         orb_calculated_today = False
         eod_liquidated = False # --- NEW FLAG for EOD ---
+        gap_regime_checked_today = False
 
         while True:
             now = datetime.now(self.tz)
@@ -735,6 +748,7 @@ class MultiStrategyTrader:
             if now.hour < 9:
                 orb_calculated_today = False
                 eod_liquidated = False
+                gap_regime_checked_today = False
                 self.log("Pre-market. Sleeping...")
                 time.sleep(60)
                 continue
@@ -743,42 +757,54 @@ class MultiStrategyTrader:
                 self.log("Pre-market. Sleeping...")
                 time.sleep(30)
                 continue
-                
+
             try:
                 # --- DATA & STATE UPDATES ---
-                
+
+                # --- GAP/VOLATILITY REGIME CHECK (once, right at the open) ---
+                if not gap_regime_checked_today:
+                    self.update_bar_data()
+                    for symbol in self.symbols:
+                        bars_1m = self.bar_data.get(f"{symbol}_1m")
+                        if bars_1m is not None and not bars_1m.empty:
+                            regime = self.check_gap_regime(symbol, bars_1m.iloc[-1]['close'])
+                            self.log(f"[GAP REGIME] {symbol}: {regime}")
+                    gap_regime_checked_today = True
+
                 # --- ORB CALCULATION (BUG 1 FIX) ---
                 if now.time() >= dt_time(9, 45) and not orb_calculated_today:
                     self.log("\n[INFO] Market open past 9:45. Updating bar data and calculating ORB...")
-                    self.update_bar_data() 
+                    self.update_bar_data()
                     self.calculate_orb_levels()
-                    orb_calculated_today = True 
+                    orb_calculated_today = True
                     self.log("[INFO] ORB calculation complete.\n")
-                
+
                 # --- DATA REFRESH & EXIT CHECK (BUG 2 FIX IS IN check_exits) ---
                 if (now - last_bar_update).total_seconds() >= 30:
                     self.update_bar_data()
                     last_bar_update = now
-                    
+
                     self.check_exits()
 
-                # Update key levels every 30 minutes
+                # Update key levels + ATR every 30 minutes
                 if (now - last_level_update).total_seconds() >= 1800:
                     self.get_key_levels()
+                    self.update_atr()
                     last_level_update = now
 
                 # --- SIGNAL SCANNING ---
                 for symbol in self.symbols:
                     if not self.can_trade(symbol, "any"):
                         continue
-                        
+
                     for strategy_func in self.strategy_functions:
                         signal = strategy_func(symbol)
-                        
+
                         if signal:
                             if self.can_trade(symbol, signal['strategy_name']):
+                                signal = self.score_signal_size(symbol, signal)
                                 self.place_trade(symbol, signal)
-                                break 
+                                break
                 
                 time.sleep(2) 
 

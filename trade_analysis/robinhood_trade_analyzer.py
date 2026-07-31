@@ -145,17 +145,6 @@ def parse_robinhood_csv(filepath):
     return trades
 
 
-def group_trades_by_day(trades):
-    """Group trades by date and underlying for analysis"""
-    grouped = defaultdict(list)
-    
-    for trade in trades:
-        key = (trade['date'], trade['underlying'])
-        grouped[key].append(trade)
-    
-    return grouped
-
-
 # ============================================================================
 # DATA CLIENT
 # ============================================================================

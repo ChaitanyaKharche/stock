@@ -55,7 +55,7 @@ class RetestBreakoutSystemV2:
         
         self.target_pct = 0.4
         self.stop_pct = 0.3
-        
+
         # RETEST LOGIC - Extended windows
         self.level_breaks = {}
         self.break_expiry = {
@@ -64,14 +64,39 @@ class RetestBreakoutSystemV2:
             'power_hour': 25 # 25min for close
         }
         self.retest_distance_pct = 0.15
-        
+
         # Scale out targets
         self.scale_out_1 = 0.2  # 50% at 0.2%
         self.scale_out_2 = 0.3  # 25% at 0.3%
-        
+
         # Historical levels cache
         self.cached_levels = {}
         self.last_level_update = None
+
+        # ATR-based risk: target/stop/retest zone scale with current
+        # volatility (fixed target_pct/stop_pct/retest_distance_pct above
+        # are used only as a fallback when ATR isn't available yet)
+        self.atr_period = 14
+        self.target_atr_mult = 2.5
+        self.stop_atr_mult = 1.0
+        self.retest_atr_mult = 0.15
+        self.atr = {}             # {symbol: atr_value}
+        self.yesterday_close = {}  # {symbol: float}, gap-regime baseline
+
+        # Multi-day S/R confluence: get_historical_levels already tracks
+        # 3 days of session + premarket highs/lows - a broken level that
+        # clusters with another one of those (within confluence_zone_pct)
+        # is higher-conviction and gets sized up
+        self.confluence_zone_pct = 0.15
+        self.confluence_size_mult = 1.5
+
+        # Gap / volatility regime filter: a headline/news-driven gap well
+        # beyond the recent ATR derates size instead of trusting static
+        # S/R levels to hold
+        self.gap_atr_mult_threshold = 2.0
+        self.elevated_regime_size_mult = 0.5
+        self.gap_regime = {}          # {symbol: "NORMAL" | "ELEVATED"}
+        self.gap_regime_checked = {}  # {symbol: date_str} - once per day
         
         # WebSocket tracking
         self.ws_bars = {sym: [] for sym in self.symbols}
@@ -206,7 +231,10 @@ class RetestBreakoutSystemV2:
                 return None
             
             recent_days = df.iloc[-(days_back+1):-1]
-            
+
+            if len(recent_days) > 0:
+                self.yesterday_close[symbol] = float(recent_days.iloc[-1]['close'])
+
             levels = {
                 'market_highs': [],
                 'market_lows': [],
@@ -286,7 +314,82 @@ class RetestBreakoutSystemV2:
         except Exception as e:
             self.log(f"[ERROR {symbol}] get_historical_levels: {str(e)[:80]}")
             return None
-    
+
+    def update_atr(self, symbol, lookback_days=3):
+        """5-min ATR from the past few sessions, so target/stop/retest
+        scale with current volatility instead of the fixed pct fallbacks."""
+        try:
+            now = datetime.now(self.tz)
+            request = StockBarsRequest(
+                symbol_or_symbols=symbol,
+                timeframe=TimeFrame(5, TimeFrameUnit.Minute),
+                start=now - timedelta(days=lookback_days + 1),
+                end=now,
+                feed="sip"
+            )
+            bars_response = self.data_client.get_stock_bars(request)
+            if bars_response is None or bars_response.df.empty:
+                return None
+
+            df = bars_response.df
+            if isinstance(df.index, pd.MultiIndex):
+                df = df.reset_index()
+
+            if len(df) < 2:
+                return None
+
+            high, low, close = df['high'], df['low'], df['close']
+            prev_close = close.shift(1)
+            true_range = pd.concat(
+                [high - low, (high - prev_close).abs(), (low - prev_close).abs()],
+                axis=1
+            ).max(axis=1)
+
+            atr = true_range.tail(self.atr_period).mean()
+            if pd.notna(atr) and atr > 0:
+                self.atr[symbol] = float(atr)
+                return self.atr[symbol]
+            return None
+        except Exception as e:
+            self.log(f"[ERROR {symbol}] update_atr: {str(e)[:80]}")
+            return None
+
+    def check_confluence(self, levels, level_price):
+        """Does level_price line up with another recent S/R zone (within
+        confluence_zone_pct) across the full multi-day level set? Multiple
+        touches = higher-conviction breakout."""
+        if not levels or level_price is None:
+            return False, 0
+
+        all_prices = (
+            [p for _, p in levels.get('market_highs', [])] +
+            [p for _, p in levels.get('market_lows', [])] +
+            [p for _, p in levels.get('pm_highs', [])] +
+            [p for _, p in levels.get('pm_lows', [])]
+        )
+
+        matches = [
+            p for p in all_prices
+            if p != level_price and abs(p - level_price) / level_price <= self.confluence_zone_pct / 100
+        ]
+        return len(matches) > 0, len(matches)
+
+    def check_gap_regime(self, symbol, current_price):
+        """Classify today's gap vs yesterday's close relative to ATR. A
+        headline/news-driven gap well beyond the recent ATR flags an
+        ELEVATED regime so size gets derated instead of trusting static
+        S/R levels to hold."""
+        y_close = self.yesterday_close.get(symbol)
+        atr = self.atr.get(symbol)
+
+        if y_close is None or not atr:
+            self.gap_regime[symbol] = "NORMAL"
+            return self.gap_regime[symbol]
+
+        gap = abs(current_price - y_close)
+        self.gap_regime[symbol] = "ELEVATED" if gap > self.gap_atr_mult_threshold * atr else "NORMAL"
+        return self.gap_regime[symbol]
+
     async def handle_ws_message(self, message):
         """Handle WebSocket bar data"""
         try:
@@ -333,11 +436,20 @@ class RetestBreakoutSystemV2:
             }
             
             self.ws_bars[symbol].append(bar)
-            
+
             # Keep last 100 bars
             if len(self.ws_bars[symbol]) > 100:
                 self.ws_bars[symbol] = self.ws_bars[symbol][-100:]
-            
+
+            # Gap/volatility regime check, once per symbol per day at the open
+            now = datetime.now(self.tz)
+            today_str = now.date().isoformat()
+            if self.gap_regime_checked.get(symbol) != today_str and now.time() >= dt_time(9, 30):
+                atr = self.update_atr(symbol)
+                regime = self.check_gap_regime(symbol, float(bar['close']))
+                self.log(f"[GAP REGIME] {symbol}: {regime}" + (f" (ATR: {atr:.3f})" if atr else " (ATR unavailable)"))
+                self.gap_regime_checked[symbol] = today_str
+
             # Check for signals every bar
             await self.check_retest_signal_ws(symbol)
         
@@ -435,21 +547,28 @@ class RetestBreakoutSystemV2:
                 
                 level_price = break_info['level']
                 level_type = break_info['type']
-                
+                atr = self.atr.get(symbol)
+                retest_dist_pct = (self.retest_atr_mult * atr / level_price * 100) if atr else self.retest_distance_pct
+
                 if level_type == 'CALL':
-                    retest_range_low = level_price * (1 - self.retest_distance_pct / 100)
-                    retest_range_high = level_price * (1 + self.retest_distance_pct / 100)
-                    
+                    retest_range_low = level_price * (1 - retest_dist_pct / 100)
+                    retest_range_high = level_price * (1 + retest_dist_pct / 100)
+
                     in_retest_zone = retest_range_low <= current_low <= retest_range_high
                     rejecting_up = current_close > prev_close and current_close > current_low
-                    
+
                     if in_retest_zone and rejecting_up:
                         if vol_ratio < vol_threshold:
                             self.log(f"[SKIP] {symbol}: Vol {vol_ratio:.2f}x < {vol_threshold}x")
                             continue
-                        
+
                         del self.level_breaks[level_key]
-                        
+
+                        has_confluence, confluence_count = self.check_confluence(levels, level_price)
+                        size_mult = self.confluence_size_mult if has_confluence else 1.0
+                        if self.gap_regime.get(symbol) == "ELEVATED":
+                            size_mult *= self.elevated_regime_size_mult
+
                         signal = {
                             'type': 'CALL',
                             'direction': 'UP',
@@ -459,25 +578,32 @@ class RetestBreakoutSystemV2:
                             'time': current_time,
                             'strength': break_info['strength'],
                             'volume': current_volume,
-                            'vol_ratio': vol_ratio
+                            'vol_ratio': vol_ratio,
+                            'confluence_count': confluence_count,
+                            'size_multiplier': size_mult
                         }
-                        
+
                         await self.place_entry(symbol, signal)
-                
+
                 else:  # PUT
-                    retest_range_low = level_price * (1 - self.retest_distance_pct / 100)
-                    retest_range_high = level_price * (1 + self.retest_distance_pct / 100)
-                    
+                    retest_range_low = level_price * (1 - retest_dist_pct / 100)
+                    retest_range_high = level_price * (1 + retest_dist_pct / 100)
+
                     in_retest_zone = retest_range_low <= current_high <= retest_range_high
                     rejecting_down = current_close < prev_close and current_close < current_high
-                    
+
                     if in_retest_zone and rejecting_down:
                         if vol_ratio < vol_threshold:
                             self.log(f"[SKIP] {symbol}: Vol {vol_ratio:.2f}x < {vol_threshold}x")
                             continue
-                        
+
                         del self.level_breaks[level_key]
-                        
+
+                        has_confluence, confluence_count = self.check_confluence(levels, level_price)
+                        size_mult = self.confluence_size_mult if has_confluence else 1.0
+                        if self.gap_regime.get(symbol) == "ELEVATED":
+                            size_mult *= self.elevated_regime_size_mult
+
                         signal = {
                             'type': 'PUT',
                             'direction': 'DOWN',
@@ -487,9 +613,11 @@ class RetestBreakoutSystemV2:
                             'time': current_time,
                             'strength': break_info['strength'],
                             'volume': current_volume,
-                            'vol_ratio': vol_ratio
+                            'vol_ratio': vol_ratio,
+                            'confluence_count': confluence_count,
+                            'size_multiplier': size_mult
                         }
-                        
+
                         await self.place_entry(symbol, signal)
         
         except Exception as e:
@@ -506,18 +634,28 @@ class RetestBreakoutSystemV2:
                 return
             
             entry_price = signal['entry_price']
-            
+            atr = self.atr.get(symbol)
+
+            # ATR-based target/stop (fallback to fixed pct if ATR unavailable);
+            # scale-outs stay proportional (50%/75%) to the ATR-based final target
+            target_pct = (self.target_atr_mult * atr / entry_price * 100) if atr else self.target_pct
+            stop_pct = (self.stop_atr_mult * atr / entry_price * 100) if atr else self.stop_pct
+            scale_out_1_pct = target_pct * 0.5
+            scale_out_2_pct = target_pct * 0.75
+
             if signal['direction'] == "UP":
-                target_final = entry_price * (1.0 + self.target_pct / 100.0)
-                stop = entry_price * (1.0 - self.stop_pct / 100.0)
-                target_1 = entry_price * (1.0 + self.scale_out_1 / 100.0)
-                target_2 = entry_price * (1.0 + self.scale_out_2 / 100.0)
+                target_final = entry_price * (1.0 + target_pct / 100.0)
+                stop = entry_price * (1.0 - stop_pct / 100.0)
+                target_1 = entry_price * (1.0 + scale_out_1_pct / 100.0)
+                target_2 = entry_price * (1.0 + scale_out_2_pct / 100.0)
             else:
-                target_final = entry_price * (1.0 - self.target_pct / 100.0)
-                stop = entry_price * (1.0 + self.stop_pct / 100.0)
-                target_1 = entry_price * (1.0 - self.scale_out_1 / 100.0)
-                target_2 = entry_price * (1.0 - self.scale_out_2 / 100.0)
-            
+                target_final = entry_price * (1.0 - target_pct / 100.0)
+                stop = entry_price * (1.0 + stop_pct / 100.0)
+                target_1 = entry_price * (1.0 - scale_out_1_pct / 100.0)
+                target_2 = entry_price * (1.0 - scale_out_2_pct / 100.0)
+
+            size_multiplier = signal.get('size_multiplier', 1.0)
+
             self.positions[symbol] = {
                 'type': signal['type'],
                 'direction': signal['direction'],
@@ -530,16 +668,18 @@ class RetestBreakoutSystemV2:
                 'level_name': signal['level_name'],
                 'strength': signal['strength'],
                 'size': 100,
+                'size_multiplier': size_multiplier,
                 'scaled_out': []
             }
-            
+
             self.log(f"\n{'='*70}")
             self.log(f"[{signal['strength']} {signal['type']} ENTRY]")
             self.log(f"  {symbol} @ ${entry_price:.2f}")
             self.log(f"  Level: {signal['level_name']} (${signal['level']:.2f})")
-            self.log(f"  Vol: {signal['vol_ratio']:.2f}x")
+            self.log(f"  Vol: {signal['vol_ratio']:.2f}x | Confluence: {signal.get('confluence_count', 0)} | Regime: {self.gap_regime.get(symbol, 'NORMAL')}")
+            self.log(f"  Size multiplier: x{size_multiplier:.2f}")
             self.log(f"  Targets: ${target_1:.2f} / ${target_2:.2f} / ${target_final:.2f}")
-            self.log(f"  Stop: ${stop:.2f}")
+            self.log(f"  Stop: ${stop:.2f}" + (f" (ATR: {atr:.3f})" if atr else ""))
             self.log(f"{'='*70}\n")
         
         except Exception as e:
@@ -554,54 +694,55 @@ class RetestBreakoutSystemV2:
                 
                 current_price = float(self.ws_bars[symbol][-1]['close'])
                 pos = self.positions[symbol]
-                
+                size_mult = pos.get('size_multiplier', 1.0)
+
                 if pos['direction'] == "UP":
                     pnl_pct = ((current_price - pos['entry']) / pos['entry']) * 100
-                    
+
                     if 1 not in pos['scaled_out'] and current_price >= pos['target_1']:
-                        self.daily_pnl += pnl_pct * 0.5
+                        self.daily_pnl += pnl_pct * 0.5 * size_mult
                         pos['scaled_out'].append(1)
                         pos['size'] = 50
                         self.log(f"[EXIT-1] {symbol} 50% @ ${current_price:.2f} (+{pnl_pct:.2f}%)")
-                    
+
                     elif 2 not in pos['scaled_out'] and current_price >= pos['target_2']:
-                        self.daily_pnl += pnl_pct * 0.25
+                        self.daily_pnl += pnl_pct * 0.25 * size_mult
                         pos['scaled_out'].append(2)
                         pos['size'] = 25
                         self.log(f"[EXIT-2] {symbol} 25% @ ${current_price:.2f} (+{pnl_pct:.2f}%)")
-                    
+
                     elif current_price >= pos['target_final']:
-                        self.daily_pnl += pnl_pct * (pos['size'] / 100.0)
+                        self.daily_pnl += pnl_pct * (pos['size'] / 100.0) * size_mult
                         self.log(f"[EXIT-FINAL] {symbol} @ ${current_price:.2f} | P&L: ${self.daily_pnl:.2f}")
                         del self.positions[symbol]
-                    
+
                     elif current_price <= pos['stop']:
-                        self.daily_pnl += pnl_pct * (pos['size'] / 100.0)
+                        self.daily_pnl += pnl_pct * (pos['size'] / 100.0) * size_mult
                         self.log(f"[STOP] {symbol} @ ${current_price:.2f} ({pnl_pct:.2f}%) | P&L: ${self.daily_pnl:.2f}")
                         del self.positions[symbol]
-                
+
                 else:  # DOWN
                     pnl_pct = ((pos['entry'] - current_price) / pos['entry']) * 100
-                    
+
                     if 1 not in pos['scaled_out'] and current_price <= pos['target_1']:
-                        self.daily_pnl += pnl_pct * 0.5
+                        self.daily_pnl += pnl_pct * 0.5 * size_mult
                         pos['scaled_out'].append(1)
                         pos['size'] = 50
                         self.log(f"[EXIT-1] {symbol} 50% @ ${current_price:.2f} (+{pnl_pct:.2f}%)")
-                    
+
                     elif 2 not in pos['scaled_out'] and current_price <= pos['target_2']:
-                        self.daily_pnl += pnl_pct * 0.25
+                        self.daily_pnl += pnl_pct * 0.25 * size_mult
                         pos['scaled_out'].append(2)
                         pos['size'] = 25
                         self.log(f"[EXIT-2] {symbol} 25% @ ${current_price:.2f} (+{pnl_pct:.2f}%)")
-                    
+
                     elif current_price <= pos['target_final']:
-                        self.daily_pnl += pnl_pct * (pos['size'] / 100.0)
+                        self.daily_pnl += pnl_pct * (pos['size'] / 100.0) * size_mult
                         self.log(f"[EXIT-FINAL] {symbol} @ ${current_price:.2f} | P&L: ${self.daily_pnl:.2f}")
                         del self.positions[symbol]
-                    
+
                     elif current_price >= pos['stop']:
-                        self.daily_pnl += pnl_pct * (pos['size'] / 100.0)
+                        self.daily_pnl += pnl_pct * (pos['size'] / 100.0) * size_mult
                         self.log(f"[STOP] {symbol} @ ${current_price:.2f} ({pnl_pct:.2f}%) | P&L: ${self.daily_pnl:.2f}")
                         del self.positions[symbol]
             
@@ -669,7 +810,10 @@ class RetestBreakoutSystemV2:
             levels = self.get_historical_levels(symbol, days_back=3)
             if levels:
                 self.log(f"{symbol}: {len(levels['market_highs'])} resistance, {len(levels['market_lows'])} support")
-        
+
+            atr = self.update_atr(symbol)
+            self.log(f"{symbol}: ATR(5min) = {atr:.3f}" if atr else f"{symbol}: ATR unavailable, using fixed pct fallback")
+
         self.log("\n[READY] Waiting for 9:30 market open...")
         
         market_open = datetime.combine(now.date(), dt_time(9, 30), tzinfo=self.tz)
