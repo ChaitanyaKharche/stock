@@ -1,7 +1,31 @@
 {
   "permissions": {
     "allow": [
-      "PowerShell(Get-ChildItem -Path \"c:\\\\Users\\\\chaitanyakharche\\\\Documents\\\\stock\" -Recurse -File | Where-Object { $_.Extension -ne \".ipynb\" } | Select-Object FullName, Length | Format-Table -AutoSize)"
+      "PowerShell(Get-ChildItem -Path \"c:\\\\Users\\\\chaitanyakharche\\\\Documents\\\\stock\" -Recurse -File | Where-Object { $_.Extension -ne \".ipynb\" } | Select-Object FullName, Length | Format-Table -AutoSize)",
+      "Bash(powershell -Command ' *)",
+      "Bash(python \"C:\\\\Users\\\\CHAITA~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-chaitanyakharche-Documents-stock\\\\bda6ddc5-b729-44e1-8a53-19f7168c58d1\\\\scratchpad\\\\inspect.py\")",
+      "Bash(python -c \"import json; nb=json.load\\(open\\('stock3.3.ipynb', encoding='utf-8'\\)\\); print\\(len\\(nb['cells']\\)\\); print\\(nb.get\\('metadata',{}\\).get\\('kernelspec'\\)\\)\")",
+      "PowerShell(python -c \"import json; nb=json.load\\(open\\('C:/Users/chaitanyakharche/Documents/stock/stock3.3.3.ipynb', encoding='utf-8'\\)\\); print\\('num cells:', len\\(nb['cells']\\)\\); [print\\('CELL', i, c['cell_type'], 'exec_count=', c.get\\('execution_count'\\), 'len\\(outputs\\)=', len\\(c.get\\('outputs', []\\)\\)\\) for i,c in enumerate\\(nb['cells']\\)]\")",
+      "Bash(python \"C:/Users/CHAITA~1/AppData/Local/Temp/claude/C--Users-chaitanyakharche-Documents-stock/bda6ddc5-b729-44e1-8a53-19f7168c58d1/scratchpad/overview.py\")",
+      "Bash(python -c ' *)",
+      "Bash(python \"C:\\\\Users\\\\CHAITA~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-chaitanyakharche-Documents-stock\\\\bda6ddc5-b729-44e1-8a53-19f7168c58d1\\\\scratchpad\\\\inspect2.py\")",
+      "Bash(python \"C:/Users/CHAITA~1/AppData/Local/Temp/claude/C--Users-chaitanyakharche-Documents-stock/bda6ddc5-b729-44e1-8a53-19f7168c58d1/scratchpad/full.py\")",
+      "Bash(python \"C:/Users/CHAITA~1/AppData/Local/Temp/claude/C--Users-chaitanyakharche-Documents-stock/bda6ddc5-b729-44e1-8a53-19f7168c58d1/scratchpad/full2.py\")",
+      "Bash(SCRATCH=\"C:\\\\Users\\\\chaitanyakharche\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-chaitanyakharche-Documents-stock\\\\bda6ddc5-b729-44e1-8a53-19f7168c58d1\\\\scratchpad\" *)",
+      "Bash(python -)",
+      "Bash(python3 -)",
+      "Bash(PYTHONIOENCODING=utf-8 python -)",
+      "Bash(python \"C:\\\\Users\\\\CHAITA~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-chaitanyakharche-Documents-stock\\\\bda6ddc5-b729-44e1-8a53-19f7168c58d1\\\\scratchpad\\\\inspect3.py\")",
+      "Bash(powershell -Command \"\\(Get-Content 'C:\\\\Users\\\\chaitanyakharche\\\\Documents\\\\stock\\\\stock3.3.4.1.ipynb'\\).Count\")",
+      "Bash(PYTHONIOENCODING=utf-8 python3 -)",
+      "Bash(python \"C:/Users/CHAITA~1/AppData/Local/Temp/claude/C--Users-chaitanyakharche-Documents-stock/bda6ddc5-b729-44e1-8a53-19f7168c58d1/scratchpad/meta.py\")",
+      "Bash(python \"C:\\\\Users\\\\CHAITA~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-chaitanyakharche-Documents-stock\\\\bda6ddc5-b729-44e1-8a53-19f7168c58d1\\\\scratchpad\\\\inspect4.py\")",
+      "Bash(powershell -Command \"Get-Content 'C:\\\\Users\\\\chaitanyakharche\\\\Documents\\\\stock\\\\stock3.3.4.1.ipynb' | Select-Object -Skip 4100 -First 171\")",
+      "Bash(PYTHONIOENCODING=utf-8:replace python -)",
+      "Bash(powershell -Command \"Get-Content 'C:\\\\Users\\\\chaitanyakharche\\\\Documents\\\\stock\\\\stock3.3.4.1.ipynb' | Select-Object -First 60\")",
+      "Bash(python \"C:\\\\Users\\\\CHAITA~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-chaitanyakharche-Documents-stock\\\\bda6ddc5-b729-44e1-8a53-19f7168c58d1\\\\scratchpad\\\\inspect5.py\")",
+      "Bash(powershell -Command \"Get-Content 'C:\\\\Users\\\\chaitanyakharche\\\\Documents\\\\stock\\\\stock3.3.4.1.ipynb' | Select-Object -Skip 595 -First 70\")",
+      "Bash(powershell -Command \"Get-Content 'C:\\\\Users\\\\chaitanyakharche\\\\Documents\\\\stock\\\\stock3.3.4.1.ipynb' | Select-Object -Skip 2495 -First 60\")"
     ]
   }
 }

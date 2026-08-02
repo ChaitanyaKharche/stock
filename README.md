@@ -1,11 +1,62 @@
-# Updated README.md
-
-```markdown
-# Quantitative Finance Advanced Trading System
+# Quantitative Finance Trading System
 
 ## Overview
 
-This repository combines advanced AI models (Temporal Fusion Transformer, LLM ensembles), momentum-based strategies, enhanced sentiment analysis, and sophisticated trading infrastructure. The system is designed for professional-grade quantitative trading with integrated backtesting and real-time monitoring.
+Personal research + live-trading codebase for a 0DTE SPY/QQQ retest-breakout
+options strategy, with supporting backtests, alt-data collection, a dealer
+gamma-exposure (GEX) signal, and ML research (LightGBM/PatchTST notebook,
+reconstructed TFT checkpoints).
+
+---
+
+## Project layout
+
+```
+stock/
+├── app1.py                    # Standalone FastAPI/data-fetch service (news, sentiment, OHLCV)
+├── stock3.3.4.ipynb           # ML research notebook (LightGBM + PatchTST, MSFT/AAPL/GOOGL)
+├── trained_models/            # Trained TFT checkpoints (.pth/.joblib) - see caveats below
+├── local_data/                # Collected alt-data JSON per symbol (news/reddit)
+├── .cache/                    # Shared disk cache (trade_analysis/utils/cache.py)
+└── trade_analysis/
+    ├── config.py               # API keys / env config
+    ├── paths.py                # Shared LOGS_DIR/DATA_DIR/CACHE_DIR/TRAINED_MODELS_DIR constants
+    ├── utils/
+    │   └── cache.py             # Generic disk cache (used by data_sources + signals)
+    ├── data_sources/            # Data ingestion
+    │   ├── unified_data_provider.py    # Alt-data (news/reddit/VIX/sector), was data.py
+    │   ├── collect_alt_data.py         # CLI: dump alt-data to local_data/, was collect_data.py
+    │   ├── download_5min_alpaca.py     # Alpaca 5-min OHLCV bulk download, was 5min_alpaca.py
+    │   ├── download_daily_yfinance.py  # yfinance daily OHLCV bulk download, was download_historical_data.py
+    │   ├── crypto_history.py           # Crypto event/history analyzer
+    │   ├── crypto_live_polling.py      # Live crypto WS predictor, was crypto_trading_polling.py
+    │   └── forex_signal_generator.py   # EUR/USD, GBP/JPY, USD/JPY signals, was crypto_live_monitoring.py (misnamed)
+    ├── signals/
+    │   └── gamma_exposure.py    # Dealer GEX regime + gamma-strike levels (yfinance option chain)
+    ├── live_trading/             # Production/live entry points
+    │   ├── swing_breakout_trader.py       # Single-symbol swing validation layer, was livebreakout.py
+    │   ├── multi_strategy_trader.py       # SPY/QQQ multi-strategy live trader, was live_deploy.py
+    │   ├── retest_breakout_websocket.py   # WebSocket retest system, was live_deploy_v2.py
+    │   └── options_strategy_engine.py     # Options strategy scaffolding, was momentum_trading_engine.py
+    ├── backtesting/
+    │   ├── multi_strategy_backtest.py     # `backtesting` lib param sweep, was 5min_backtest.py
+    │   ├── walk_forward_nautilus.py       # nautilus_trader walk-forward engine
+    │   ├── walk_forward_slippage.py       # Walk-forward with slippage/commission modeling, was walkforwardlive.py
+    │   ├── confirmation_filter_backtest.py # Proves the AM confirmation filter doesn't hurt edge, was confirmation.py
+    │   ├── signal_validator.py            # Post-mortem log parser -> HTML report
+    │   └── replay_simulator.py            # Replays multi_strategy_trader against a historical day
+    ├── models/
+    │   ├── tft_model.py          # Reconstructed GapPredictionTFT architecture (see caveats)
+    │   └── tft_backtest.py       # Out-of-sample backtest of the trained_models/ checkpoints
+    ├── trade_journal/
+    │   ├── robinhood_trade_analyzer.py    # Parses Robinhood CSV exports
+    │   ├── trade_input_parser.py          # Converts a simple trade log into trade_journal_analyzer's format
+    │   └── trade_journal_analyzer.py      # Manual TRADES list -> technicals-at-entry report
+    ├── logs/                     # Generated logs, trade CSVs, HTML reports (gitignored patterns apply)
+    ├── data/                     # Cached historical/crypto data pulled by data_sources scripts
+    └── scripts/
+        └── clean_trade_venv.sh   # HPC conda env cache cleanup
+```
 
 ---
 
@@ -34,205 +85,75 @@ $env:PYTHONUTF8="1"
 4. **Environment Variables**
 ```
 $env:FINNHUB_API_KEY="your-finnhub-key"
-$env:TWELVE_KEY="your-twelve-data-key"  
+$env:TWELVE_KEY="your-twelve-data-key"
 $env:REDDIT_CLIENT_ID="your-reddit-client-id"
 $env:REDDIT_CLIENT_SECRET="your-reddit-secret"
 $env:REDDIT_USER_AGENT="script:stock-opinion-analyzer:v1.0 (by /u/YourUsername)"
-$env:HF_TOKEN="your-huggingface-token"
-$env:FLASH_ATTN_SKIP_CUDA_BUILD="TRUE"  # Skip flash-attention on Windows
+$env:ALPACA_API_KEY="your-alpaca-key"
+$env:ALPACA_SECRET_KEY="your-alpaca-secret"
 ```
 
 5. **Data Collection**
 ```
-python -m trade_analysis.collect_data --symbol MSFT
-python -m trade_analysis.collect_data --symbol TSLA
-python -m trade_analysis.collect_data --symbol QQQ
-python -m trade_analysis.collect_data --symbol SPY
-python -m trade_analysis.collect_data --symbol NVDA
-python -m trade_analysis.collect_data --symbol META
-python -m trade_analysis.collect_data --symbol AMD
+python -m trade_analysis.data_sources.collect_alt_data --symbol MSFT
+python -m trade_analysis.data_sources.collect_alt_data --symbol QQQ
+python -m trade_analysis.data_sources.collect_alt_data --symbol SPY
 ```
 
-6. **Model Training** (Optional - can be done on HPC)
+6. **Live trading (paper) entry points**
 ```
-python -m trade_analysis.train_tft --symbol MSFT --save_path trained_models/tft_MSFT_validated.pth --epochs 75
-```
-
----
-
-### HPC Cluster (GPU Training & API)
-
-1. **Request GPU Resources**
-```
-srun --partition=sharing --gres=gpu:h100:1 --time=1:00:00 --mem=64G --pty bash
-```
-
-2. **Activate Environment**
-```
-conda activate trade-venv
-```
-
-3. **Environment Variables**
-```
-export FINNHUB_API_KEY="your-finnhub-key"
-export TWELVE_KEY="your-twelve-data-key"
-export REDDIT_CLIENT_ID="your-reddit-client-id"
-export REDDIT_CLIENT_SECRET="your-reddit-secret"
-export REDDIT_USER_AGENT="script:stock-opinion-analyzer:v1.0 (by /u/YourUsername)"
-export HF_TOKEN="your-huggingface-token"
-```
-
-4. **Upload Data** (if collected locally)
-Upload your `local_data` folder to `/scratch/username/username/trade_analysis/local_data/`
-
-5. **Train TFT Models**
-```
-# Train individual models
-python -m trade_analysis.train_tft --symbol QQQ --save_path trained_models/tft_QQQ_validated.pth --epochs 75
-python -m trade_analysis.train_tft --symbol SPY --save_path trained_models/tft_SPY_validated.pth --epochs 75
-python -m trade_analysis.train_tft --symbol MSFT --save_path trained_models/tft_MSFT_validated.pth --epochs 75
-python -m trade_analysis.train_tft --symbol TSLA --save_path trained_models/tft_TSLA_validated.pth --epochs 75
-python -m trade_analysis.train_tft --symbol NVDA --save_path trained_models/tft_NVDA_validated.pth --epochs 75
-python -m trade_analysis.train_tft --symbol META --save_path trained_models/tft_META_validated.pth --epochs 75
-```
-
-6. **Launch Trading API**
-```
-python -m uvicorn trade_analysis.enhanced_api:app --host 0.0.0.0 --port 8000
+python -m trade_analysis.live_trading.swing_breakout_trader
+python -m trade_analysis.live_trading.multi_strategy_trader
+python -m trade_analysis.live_trading.retest_breakout_websocket
 ```
 
 ---
 
-## File Structure
+## TFT models (`trained_models/`) — important caveats
 
-```
-/scratch/username/username/
-├── trade_analysis/
-│   ├── local_data/                    # Collected market data (JSON)
-│   │   ├── QQQ_external_data.json
-│   │   ├── SPY_external_data.json
-│   │   ├── MSFT_external_data.json
-│   │   ├── TSLA_external_data.json
-│   │   ├── NVDA_external_data.json
-│   │   ├── META_external_data.json
-│   │   └── AMD_external_data.json
-│   ├── trained_models/               # Trained TFT models
-│   │   ├── tft_QQQ_validated.pth     # Model weights
-│   │   ├── tft_QQQ_validated.joblib  # Scalers
-│   │   ├── tft_SPY_validated.pth
-│   │   ├── tft_SPY_validated.joblib
-│   │   └── ... (for each symbol)
-│   └── enhanced_api.py               # Main API server
-└── trading_dashboard.html            # Web dashboard
-```
+`trained_models/*.pth` / `*.joblib` are checkpoints from an earlier HPC training
+run (`srun --gres=gpu:h100:1`) whose original model-definition source file was
+lost. `trade_analysis/models/tft_model.py` is a **reverse-engineered
+reconstruction** of that architecture from the checkpoints' tensor shapes and
+embedded config — the weights load correctly, but:
 
----
+- The "static" branch (market cap/beta/sector/VIX/liquidity) was trained on a
+  **constant placeholder**, not real varying data — it carries no signal.
+- An out-of-sample backtest (`python -m trade_analysis.models.tft_backtest`)
+  shows **no real directional edge** (~50% hit rate, gap-classifier accuracy
+  at or below a trivial majority-class baseline on every symbol tested).
 
-## API Endpoints
+These checkpoints are kept for reference/reconstruction purposes, not as a
+production-ready model. See `trade_analysis/models/tft_model.py`'s docstring
+for the full reconstruction methodology.
 
-Once the API is running, access these endpoints:
-
-- **Health Check**: `GET http://localhost:8000/`
-- **Live Signals**: `POST http://localhost:8000/predict/enhanced/?symbol=QQQ&timeframe=5m&strategy_mode=momentum`
-- **Strategy Comparison**: `POST http://localhost:8000/strategy_comparison/?symbol=QQQ`
-- **Market Regimes**: `GET http://localhost:8000/market_regimes/?symbols=QQQ,SPY,IWM`
-- **Detailed Health**: `GET http://localhost:8000/health/detailed`
+There is currently **no working training script** for these models — the
+original `train_tft.py` depended on the same lost model-definition file and
+was removed as non-functional. `enhanced_api.py` (a FastAPI serving layer
+referenced in earlier versions of this README) no longer exists in the
+source tree either.
 
 ---
 
-## Trading Dashboard
+## `stock3.3.4.ipynb`
 
-1. **Save the provided HTML as `trading_dashboard.html`**
-2. **Open in web browser while API is running**
-3. **Features:**
-   - Real-time trading signals
-   - Strategy comparison (your momentum vs institutional)
-   - Market regime detection
-   - System health monitoring
-   - Auto-refresh every 30 seconds
-
----
-
-## Model Training Results
-
-Expected training output:
-```
-🚀 Starting Enhanced Trading Engine...
-🤖 Loading TFT models...
-✅ Loaded pretrained TFT model for QQQ
-✅ Loaded pretrained TFT model for SPY
-✅ Loaded pretrained TFT model for MSFT
-✅ Loaded pretrained TFT model for TSLA
-✅ Loaded pretrained TFT model for NVDA
-✅ Loaded pretrained TFT model for META
-```
-
-Training typically achieves:
-- **Training Loss**: ~0.0003-0.0004
-- **Validation Loss**: ~0.0003-0.0005
-- **Early Stopping**: Around epoch 35-50
-- **Processing Time**: ~5-10 seconds per prediction (vs 60+ without pretrained models)
+A LightGBM + PatchTST research notebook (MSFT/AAPL/GOOGL, daily bars, 5-day
+direction classification). Kept as the single best-working iteration of a
+larger family of near-identical notebook drafts (all superseded/removed).
+Per literature review, raw price/technical-indicator direction prediction
+has a well-documented ~50% ceiling — this notebook is exploratory, not a
+production signal source. See the GEX-based signal in
+`trade_analysis/signals/gamma_exposure.py` for the more evidence-backed
+direction this project moved toward instead.
 
 ---
 
-## Troubleshooting
+## Known outstanding issues
 
-### Windows Issues
-- **UnicodeEncodeError**: Run `chcp 65001` and `$env:PYTHONUTF8="1"`
-- **Flash-attention fails**: Set `$env:FLASH_ATTN_SKIP_CUDA_BUILD="TRUE"`
-- **Packages keep reinstalling**: Make sure your venv stays activated
-
-### HPC Issues
-- **Models not loading**: Check file paths match between training `--save_path` and API loading
-- **GPU not available**: Verify `srun` allocated GPU with `nvidia-smi`
-- **Environment variables reset**: Re-export them in each new session
-
-### API Issues
-- **422 Validation Error**: Normal FastAPI behavior, not an actual error
-- **Models training on-the-fly**: Load pretrained models in startup event
-- **Slow responses**: Ensure TFT models are properly loaded at startup
-
----
-
-## Next Steps
-
-### Immediate Enhancements
-1. **Risk Management**: Add position sizing limits and VaR calculations
-2. **Trade Execution**: Log simulated trades with slippage modeling
-3. **Real-time PnL**: WebSocket streaming for live P&L tracking
-4. **Options Greeks**: Black-Scholes calculations for options strategies
-
-### Advanced Features
-1. **Kill Switch**: Emergency position flattening
-2. **Compliance Logging**: Audit trail for every decision
-3. **Latency Monitoring**: Track execution speeds
-4. **Cross-Asset Correlation**: Monitor SPY/VIX/DXY relationships
-
----
-
-## Performance Benchmarks
-
-With pretrained TFT models:
-- **API Response Time**: 5-10 seconds
-- **TFT Inference**: <1 second
-- **Memory Usage**: ~8GB GPU, ~16GB RAM
-- **Concurrent Users**: 10+ (with proper load balancing)
-
----
-
-For support, check logs and ensure all environment variables are correctly set. The system is designed for institutional-grade reliability and performance.
-```
-
-This updated README provides:
-
-1. **Clear platform-specific instructions** for both Windows and HPC
-2. **Exact commands** for data collection and model training
-3. **Proper environment variable setup** for both platforms
-4. **File structure explanation** showing where everything gets saved
-5. **Complete API endpoint documentation**
-6. **Dashboard integration instructions**
-7. **Troubleshooting section** addressing common issues
-8. **Performance expectations** and benchmarks
-9. **Future enhancement roadmap**
-
-The README now accurately reflects your current system architecture and provides step-by-step instructions for both local development and HPC deployment.
+- `trade_analysis/data_sources/download_5min_alpaca.py` previously had a
+  hardcoded Alpaca API key/secret in source (now reads from
+  `ALPACA_API_KEY`/`ALPACA_SECRET_KEY` env vars) — **rotate that key**, since
+  it was committed to local git history before the fix.
+- Several live-trading scripts (`live_trading/`, `backtesting/replay_simulator.py`,
+  `trade_journal/*`) depend on `alpaca-py`, `ta`, and other packages not
+  necessarily installed in every environment — check `requirements.txt`.
