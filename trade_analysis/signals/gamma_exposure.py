@@ -64,6 +64,58 @@ def bs_gamma(spot, strike, t_years, iv, r=RISK_FREE_RATE):
     return _norm_pdf(d1) / (spot * iv * np.sqrt(t_years))
 
 
+def _norm_cdf(x):
+    return 0.5 * (1 + np.vectorize(math.erf)(x / math.sqrt(2)))
+
+
+def _d1_d2(spot, strike, t_years, iv, r):
+    t_years = max(t_years, MIN_T_YEARS)
+    iv = np.maximum(iv, 1e-4)
+    d1 = (np.log(spot / strike) + (r + 0.5 * iv ** 2) * t_years) / (iv * np.sqrt(t_years))
+    d2 = d1 - iv * np.sqrt(t_years)
+    return d1, d2
+
+
+def bs_price(spot, strike, t_years, iv, r=RISK_FREE_RATE, option_type='call'):
+    """Black-Scholes premium for a European call/put (0DTE American-style
+    index/ETF options are conventionally priced this way at this level of
+    approximation - early-exercise premium is negligible for SPY/QQQ)."""
+    t_years = max(t_years, MIN_T_YEARS)
+    d1, d2 = _d1_d2(spot, strike, t_years, iv, r)
+    if option_type == 'call':
+        return spot * _norm_cdf(d1) - strike * np.exp(-r * t_years) * _norm_cdf(d2)
+    return strike * np.exp(-r * t_years) * _norm_cdf(-d2) - spot * _norm_cdf(-d1)
+
+
+def bs_delta(spot, strike, t_years, iv, r=RISK_FREE_RATE, option_type='call'):
+    """Black-Scholes delta for a call/put."""
+    d1, _ = _d1_d2(spot, strike, t_years, iv, r)
+    return _norm_cdf(d1) if option_type == 'call' else _norm_cdf(d1) - 1
+
+
+def solve_strike_for_delta(spot, t_years, iv, target_delta, option_type='call', r=RISK_FREE_RATE):
+    """Finds the strike whose BS delta matches target_delta (e.g. 0.20-0.30
+    for the kind of OTM 0DTE contracts this project actually trades), via
+    bisection - bs_delta is monotonic in strike so this is well-behaved."""
+    target_delta = abs(target_delta)
+    lo, hi = spot * 0.5, spot * 1.5
+    for _ in range(60):
+        mid = (lo + hi) / 2
+        d = abs(bs_delta(spot, mid, t_years, iv, r, option_type))
+        if d > target_delta:
+            # higher strike -> lower call delta / less-negative put delta magnitude moves away from ATM
+            if option_type == 'call':
+                lo = mid
+            else:
+                hi = mid
+        else:
+            if option_type == 'call':
+                hi = mid
+            else:
+                lo = mid
+    return (lo + hi) / 2
+
+
 def _time_to_expiry_years(expiry_str: str, tz=ZoneInfo("America/New_York")) -> float:
     now = datetime.now(tz)
     expiry_close = datetime.strptime(expiry_str, "%Y-%m-%d").replace(
@@ -156,7 +208,7 @@ def compute_gex(symbol: str, expiry: str = None, include_next_n_expiries: int = 
     two ways so calling this more than once/day doesn't hammer yfinance:
       - in-memory, for MEMORY_CACHE_TTL_SECONDS (protects repeated calls
         within the same process, e.g. accidental tight polling loops)
-      - on disk via trade_analysis.cache, keyed by today's date (protects
+      - on disk via trade_analysis.utils.cache, keyed by today's date (protects
         against a same-day process restart re-fetching everything)
 
     expiry: specific 'YYYY-MM-DD' expiry, or None to use the nearest

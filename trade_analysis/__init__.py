@@ -1,3 +1,5 @@
-from importlib.metadata import version
-__all__ = ["data", "cache"]
-__version__ = "0.4.0"
+__all__ = [
+    "config", "paths", "utils", "data_sources", "signals",
+    "live_trading", "backtesting", "models", "trade_journal",
+]
+__version__ = "0.5.0"
