@@ -31,7 +31,9 @@ class LiveBreakoutTrader:
         self.atr_period = 14
         self.stop_atr_mult = 1.0
         self.target_atr_mult = 2.5
-        self.retest_atr_mult = 0.15  # confirmation retest zone, in ATRs
+        # retest_atr_mult removed: its only use was a condition that could never
+        # fail (see check_morning_confirmation). retest_breakout_websocket.py
+        # keeps its own, where the retest is implemented for real.
 
         # Multi-day S/R confluence
         self.confluence_lookback_days = 3
@@ -104,7 +106,7 @@ class LiveBreakoutTrader:
     def fetch_premarket_and_atr(self):
         """
         Fetch premarket high (4:00-9:30 AM) and compute a 5-min ATR from
-        recent intraday bars, so the retest/target/stop scale with current
+        recent intraday bars, so the target/stop scale with current
         volatility instead of a fixed percentage.
         """
         try:
@@ -249,14 +251,32 @@ class LiveBreakoutTrader:
 
     def check_morning_confirmation(self, current_price, current_time):
         """
-        Morning confirmation filter (9:30-9:45), retest zone scaled to ATR.
+        Morning-window gate (9:30-9:45). That is all this does.
 
-        Entry signals:
-        1. Price retests yesterday's high (within retest_atr_mult * ATR)
-        2. Price gaps up and stays above yesterday's high
-        3. Any price touches premarket high (strongest confirmation)
+        `current_price` is accepted for signature stability but not tested here:
+        the only caller, check_entry_signal, has already established
+        current_price > self.yesterday_high before calling.
 
-        This removes the "shakeout fear" by confirming buyers are interested.
+        HISTORY - this function used to claim a "retest confirmation" and did
+        not perform one. It tested
+            current_price >= self.yesterday_high - retest_atr_mult * ATR
+        which, given the caller's guarantee that current_price is ALREADY above
+        yesterday_high, is true unconditionally. A premarket-high branch sat
+        below it and was therefore unreachable, as was the final
+        "No confirmation yet" return.
+
+        Removing it was measured first, not assumed. A genuine two-phase retest
+        (break the level, pull back into a bounded zone around it, then require
+        a rejection candle - the logic retest_breakout_websocket.py implements
+        correctly) was run head-to-head against this gap-and-go on 500 sessions
+        of real 1-minute SPY/QQQ data in
+        backtesting/retest_vs_gapandgo_backtest.py. The real retest cut trade
+        count 5-6x and came out WORSE on win rate, mean R and target-hit rate on
+        both symbols. So live behaviour is deliberately preserved exactly as it
+        traded before; only the misleading name and the dead branches are gone.
+
+        What this strategy actually is: a gap-and-go breakout, entered on the
+        first qualifying price inside the morning window.
         """
 
         if self.yesterday_high is None:
@@ -267,21 +287,13 @@ class LiveBreakoutTrader:
         if not (self.morning_start <= current_hours <= self.morning_end):
             return False, f"Not in morning window (current: {current_hours:.2f}h)"
 
-        retest_buffer = (self.retest_atr_mult * self.atr) if self.atr else self.yesterday_high * 0.003
-        retest_level = self.yesterday_high - retest_buffer
-
-        if current_price >= retest_level:
-            return True, "Retest confirmed"
-
-        if current_price > self.premarket_high * 0.998:
-            return True, "Premarket high touch confirmed"
-
-        return False, "No confirmation yet"
+        return True, "Breakout held inside morning window"
 
     def check_entry_signal(self, current_price, current_time):
         """
         Daily signal (premarket): close yesterday above yesterday_high.
-        Intraday confirmation (9:30-9:45): retest or gap-hold.
+        Intraday confirmation (9:30-9:45): price is above the level inside the
+        morning window (a gap-and-go breakout - see check_morning_confirmation).
         On confirmation, scores position size via confluence + gap regime.
         """
 
@@ -415,7 +427,7 @@ class LiveBreakoutTrader:
         Flow:
         1. Before 9:30: fetch yesterday/premarket levels, multi-day confluence, ATR
         2. At open: classify gap regime (normal vs elevated volatility)
-        3. 9:30-9:45: wait for confirmation (retest or gap-hold), sized by confluence/regime
+        3. 9:30-9:45: wait for the breakout to hold in-window, sized by confluence/regime
         4. Throughout day: monitor position, exit on ATR-based target/stop
         """
 
@@ -491,8 +503,8 @@ if __name__ == "__main__":
 
     - Entry trigger stays anchored to previous-day high/low + premarket
       (fastest-reacting, most-watched levels)
-    - Target/stop/retest zone scale with 5-min ATR instead of fixed %,
-      so risk adapts to the current volatility regime
+    - Target/stop scale with 5-min ATR instead of fixed %, so risk adapts
+      to the current volatility regime
     - Breakouts that align with a 3-day support/resistance zone, or with
       a major dealer gamma-concentration strike, get sized up (confluence)
     - Breakouts during an elevated gap regime (headline/news-driven) or a
