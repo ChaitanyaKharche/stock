@@ -55,6 +55,9 @@ env.txt
 lightning_logs/
 *.log
 logs/
+# Job scheduler output. slurm-1612669.out was committed once with exported
+# credentials in it; the pattern is ignored so a future job log cannot re-leak.
+slurm-*.out
 
 # Cache
 .cache/
@@ -74,3 +77,28 @@ logs/
 # OS
 .DS_Store
 Thumbs.db
+# Broker order-history dumps: full personal trade history, never commit
+research/order_history_raw.json
+research/order_history_raw.txt
+order_history_raw.*
+
+# Live lab. The frozen record IS versioned -- FREEZE.json, config/, daily/ and the
+# append-only *.jsonl are the experiment itself and cannot be regenerated. Everything
+# below either rebuilds from the vendor feed or is transient runtime state.
+live_lab_data/bars_cache/
+live_lab_data/quote_cache/
+live_lab_data/optcache/
+live_lab_data/ext_cache/
+live_lab_data/namebars/
+live_lab_data/recovery_archive/
+live_lab_data/logs/
+live_lab_data/sharewf_trades*.json
+live_lab_data/walkforward_signals.json
+live_lab_data/levels_trades.json
+live_lab_data/imb_option_pnl*.json
+live_lab_data/positions_open.json
+live_lab_data/shares/positions_open.json
+
+# Runtime single-instance locks
+*.lock
+*.lock.info

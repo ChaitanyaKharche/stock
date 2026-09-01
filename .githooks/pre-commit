@@ -1,0 +1,64 @@
+#!/bin/sh
+# Block commits containing credential literals.
+#
+# Exists because an Alpaca key/secret was committed in trade_analysis/5min_alpaca.py
+# and pushed to a PUBLIC remote before anyone noticed. Rotation fixed the key;
+# this stops the next one. Scans STAGED content only, so it cannot be fooled by
+# a clean working tree.
+#
+# Enable once per clone:   git config core.hooksPath .githooks
+# Bypass (deliberately):   git commit --no-verify
+#
+# Patterns are deliberately narrow -- a hook that cries wolf gets disabled.
+
+fail=0
+
+# vendor-specific key shapes: Alpaca (PK/AK...), ThetaData, OpenAI, HuggingFace,
+# Slack, AWS, and generic long assignments to credential-named variables.
+patterns='
+(API_KEY|SECRET_KEY|CLIENT_SECRET|ACCESS_TOKEN)[A-Za-z0-9_]*[[:space:]]*=[[:space:]]*["\x27](PK|AK)[A-Z0-9]{10,}
+td1_prod_[a-f0-9]{16,}
+sk-[A-Za-z0-9]{20,}
+hf_[A-Za-z0-9]{20,}
+xox[baprs]-[A-Za-z0-9-]{10,}
+AKIA[0-9A-Z]{16}
+'
+
+staged=$(git diff --cached --name-only --diff-filter=ACM)
+[ -z "$staged" ] && exit 0
+
+for pat in $patterns; do
+    # -I skips binary; only added lines matter, hence the diff scan
+    hits=$(git diff --cached -U0 --diff-filter=ACM -- $staged \
+           | grep -E '^\+' | grep -vE '^\+\+\+' \
+           | grep -nEI "$pat" 2>/dev/null)
+    if [ -n "$hits" ]; then
+        # print WHICH pattern and how many, never the matching text
+        n=$(printf '%s\n' "$hits" | wc -l | tr -d ' ')
+        echo "BLOCKED: $n staged line(s) match credential pattern: $pat"
+        fail=1
+    fi
+done
+
+# second net: anything that looks like a real value assigned to a secret-named
+# variable, excluding obvious placeholders and env lookups
+generic=$(git diff --cached -U0 --diff-filter=ACM -- $staged \
+    | grep -E '^\+' | grep -vE '^\+\+\+' \
+    | grep -EI '(API_KEY|SECRET_KEY|CLIENT_SECRET|CLIENT_ID|_TOKEN)[A-Za-z0-9_]*[[:space:]]*=[[:space:]]*["\x27][A-Za-z0-9_-]{16,}["\x27]' \
+    | grep -viE 'your-|yourusername|xxx|placeholder|example|changeme|<|os\.getenv|os\.environ|getenv\(')
+if [ -n "$generic" ]; then
+    n=$(printf '%s\n' "$generic" | wc -l | tr -d ' ')
+    echo "BLOCKED: $n staged line(s) assign a long literal to a credential-named variable."
+    echo "         Use os.getenv() and put the value in .env (already gitignored)."
+    fail=1
+fi
+
+if [ "$fail" -ne 0 ]; then
+    echo ""
+    echo "Commit aborted. Nothing was printed above by design -- inspect with:"
+    echo "    git diff --cached"
+    echo "If this is a false positive:  git commit --no-verify"
+    exit 1
+fi
+
+exit 0
