@@ -1,0 +1,11 @@
+{"seq":307,"ts":"2026-08-28T16:42:49.068606","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":308,"ts":"2026-08-28T16:42:49.072734","kind":"tick","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":316,"ts":"2026-08-28T17:44:45.363643","kind":"feed","detail":"ConnectError('[WinError 10061] No connection could be made because the target machine actively refused it')","path":"/stock/history/ohlc"}
+{"seq":317,"ts":"2026-08-28T17:45:31.588385","kind":"feed","detail":"ConnectError('[WinError 10061] No connection could be made because the target machine actively refused it')","path":"/stock/history/ohlc"}
+{"seq":318,"ts":"2026-08-28T17:45:31.591405","kind":"warmup","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: ConnectError('[WinError 10061] No connection could be made because the target machine actively refused it')\")","symbol":"QQQ"}
+{"seq":356,"ts":"2026-08-31T10:14:10.411622","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":357,"ts":"2026-08-31T10:14:10.414637","kind":"tick","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":358,"ts":"2026-08-31T11:46:48.137861","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":359,"ts":"2026-08-31T11:46:48.773465","kind":"tick","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":580,"ts":"2026-08-31T13:33:10.993419","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":581,"ts":"2026-08-31T13:33:10.995419","kind":"tick","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}

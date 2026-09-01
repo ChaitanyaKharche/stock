@@ -1,0 +1,45 @@
+{
+  "frozen_at": "2026-08-28T17:00:00-04:00",
+  "frozen_by": "forward_test_preregistration.md",
+  "start_date": "2026-08-28",
+  "note": "Day 1 (2026-08-28) IS INCLUDED. It was collected prospectively under these exact definitions with a feed verified real-time (0 stale-quote outages across 14,853 calls). It lost $1,201.18. Excluding a losing day collected under the frozen rules would be the precise failure this experiment forbids.",
+  "accepted_config_hashes": {
+    "1f7247d7839d9950": "current -- hash over DEFINITIONS only",
+    "1d7c5a9fc71d67fa": "day 1 -- definitionally IDENTICAL. Differs only in that git_sha and spec_version were mistakenly inside the hash. Setups, arms, fees, family and caps are byte-identical."
+  },
+  "checkpoints": {
+    "50_total": "diagnostic only -- pipeline health, NO effect claims",
+    "100_total": "diagnostic only -- pipeline health, NO effect claims",
+    "200_per_setup": "first serious evaluation; promotion bar becomes live",
+    "377_per_setup": "powered for a +10% mean return at Holm m=13, 80% power"
+  },
+  "promotion_bar": {
+    "min_n": 200,
+    "holm_alpha": 0.05,
+    "family_size": 13,
+    "effect_must_exceed_mde": true,
+    "split_half_must_agree": true
+  },
+  "clock_rule": "The trade counter NEVER resets. It is cumulative from start_date over the accepted hashes. There is no mechanism to exclude a session, a setup, or a date, and none may be added. A setup performing badly is a RESULT, not a reason to restart its clock.",
+  "primary_arm": "ATM",
+  "family_size": 13,
+  "symbols": [
+    "QQQ",
+    "SPY"
+  ],
+  "setups": [
+    "ORB_5min",
+    "ORB_15min",
+    "VWAP_Reclaim",
+    "MOMO_CHASE",
+    "IntradayMomentumBoundary",
+    "TTM_Squeeze",
+    "PDH_PDL_Breakout",
+    "PDH_PDL_FailedBreak",
+    "VWAP_2sigma_Fade",
+    "EMA_9_20_Pullback",
+    "ThreeBarPlay",
+    "Crabel_Stretch",
+    "Gap_Fade"
+  ]
+}

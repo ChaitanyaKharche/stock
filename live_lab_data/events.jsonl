@@ -1,0 +1,12 @@
+{"seq":1,"ts":"2026-08-28T09:20:06.695560","kind":"start","config_hash":"1d7c5a9fc71d67fa","symbols":["QQQ","SPY"],"spec":"live_lab_specification.md @ 2026-08-27"}
+{"seq":2,"ts":"2026-08-28T09:20:32.680296","kind":"warmup","symbol":"QQQ","sessions_used":25,"has_stretch":true,"prior_day":{"date":"2026-08-27","open":716.93,"high":721.35,"low":714.525,"close":721.06}}
+{"seq":3,"ts":"2026-08-28T09:20:54.318354","kind":"warmup","symbol":"SPY","sessions_used":25,"has_stretch":true,"prior_day":{"date":"2026-08-27","open":768.5,"high":772.355,"low":767.16,"close":771.07}}
+{"seq":315,"ts":"2026-08-28T17:44:30.188460","kind":"start","config_hash":"1f7247d7839d9950","symbols":["QQQ","SPY"],"spec":"live_lab_specification.md @ 2026-08-27"}
+{"seq":316,"ts":"2026-08-28T17:45:16.396747","kind":"start","config_hash":"1f176363aeff8f40","symbols":["QQQ"],"spec":"live_lab_specification.md @ 2026-08-27"}
+{"seq":319,"ts":"2026-08-28T17:45:31.592911","kind":"aborted","reason":"warmup_feed_unreachable"}
+{"seq":320,"ts":"2026-08-28T17:46:21.880854","kind":"start","config_hash":"1f7247d7839d9950","symbols":["QQQ","SPY"],"spec":"live_lab_specification.md @ 2026-08-27"}
+{"seq":321,"ts":"2026-08-28T17:46:50.587683","kind":"warmup","symbol":"QQQ","sessions_used":25,"has_stretch":true,"prior_day":{"date":"2026-08-27","open":716.93,"high":721.35,"low":714.525,"close":721.06}}
+{"seq":322,"ts":"2026-08-28T17:47:11.276918","kind":"warmup","symbol":"SPY","sessions_used":25,"has_stretch":true,"prior_day":{"date":"2026-08-27","open":768.5,"high":772.355,"low":767.16,"close":771.07}}
+{"seq":323,"ts":"2026-08-31T09:33:10.937153","kind":"start","config_hash":"1f7247d7839d9950","symbols":["QQQ","SPY"],"spec":"live_lab_specification.md @ 2026-08-27"}
+{"seq":324,"ts":"2026-08-31T09:34:02.927433","kind":"warmup","symbol":"QQQ","sessions_used":25,"has_stretch":true,"prior_day":{"date":"2026-08-28","open":719.74,"high":724.125,"low":715.085,"close":716.44}}
+{"seq":325,"ts":"2026-08-31T09:34:43.205241","kind":"warmup","symbol":"SPY","sessions_used":25,"has_stretch":true,"prior_day":{"date":"2026-08-28","open":771.76,"high":775.3,"low":768.3076,"close":769.34}}
