@@ -109,11 +109,11 @@ echo "✅ Cleanup complete! Your trade-venv environment cache has been cleaned."
 echo ""
 echo "🔧 Next steps:"
 echo "1. Set your environment variables:"
-echo '   export FINNHUB_API_KEY="d09qkn1r01qus8reqi2gd09qkn1r01qus8reqi30"'
-echo '   export TWELVE_KEY="b6dbb92e551a46f2b20de27540aeef0a"'
-echo '   export REDDIT_CLIENT_ID="xQ9vvcYzweGxj2i0RIybPA"'
-echo '   export REDDIT_CLIENT_SECRET="XU1eF6bwfj0Fhtm8JW5oHzPi34kPIA"'
-echo '   export REDDIT_USER_AGENT="script:stock-opinion-analyzer:v1.0 (by /u/PunbeilevableGenius)"'
+echo '   export FINNHUB_API_KEY="your-finnhub-key"'
+echo '   export TWELVE_KEY="your-twelve-data-key"'
+echo '   export REDDIT_CLIENT_ID="your-reddit-client-id"'
+echo '   export REDDIT_CLIENT_SECRET="your-reddit-client-secret"'
+echo '   export REDDIT_USER_AGENT="script:stock-opinion-analyzer:v1.0 (by /u/your-reddit-username)"'
 echo ""
 echo "2. Also fix the model identifier in your code:"
 echo "   Change: 'FinGPT/fingpt-mt_llama2-13b_lora'"

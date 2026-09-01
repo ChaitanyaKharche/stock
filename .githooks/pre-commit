@@ -41,11 +41,20 @@ for pat in $patterns; do
 done
 
 # second net: anything that looks like a real value assigned to a secret-named
-# variable, excluding obvious placeholders and env lookups
+# variable, excluding obvious placeholders and env lookups.
+#
+# Also excluded: a value that is entirely ALL-CAPS, which by convention names an
+# environment variable rather than holding a secret. Narrow on purpose -- real keys from
+# every vendor listed above contain lowercase or hyphens, and the one all-caps shape that
+# matters (AWS) already has its own dedicated pattern above.
+#
+# Do not put a quoted example in these comments: the net scans added lines, including
+# lines of this file, and an example with trailing prose defeats the end-of-line anchor.
 generic=$(git diff --cached -U0 --diff-filter=ACM -- $staged \
     | grep -E '^\+' | grep -vE '^\+\+\+' \
     | grep -EI '(API_KEY|SECRET_KEY|CLIENT_SECRET|CLIENT_ID|_TOKEN)[A-Za-z0-9_]*[[:space:]]*=[[:space:]]*["\x27][A-Za-z0-9_-]{16,}["\x27]' \
-    | grep -viE 'your-|yourusername|xxx|placeholder|example|changeme|<|os\.getenv|os\.environ|getenv\(')
+    | grep -viE 'your-|yourusername|xxx|placeholder|example|changeme|<|os\.getenv|os\.environ|getenv\(' \
+    | grep -vE '=[[:space:]]*["\x27][A-Z][A-Z0-9_]+["\x27][[:space:]]*$')
 if [ -n "$generic" ]; then
     n=$(printf '%s\n' "$generic" | wc -l | tr -d ' ')
     echo "BLOCKED: $n staged line(s) assign a long literal to a credential-named variable."

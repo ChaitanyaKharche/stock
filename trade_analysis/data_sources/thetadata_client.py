@@ -1,22 +1,25 @@
 """
 ThetaData v3 client - OPTIONS ENDPOINTS ONLY.
 
-SUBSCRIPTION REALITY (from the Terminal's own startup banner):
-    Stock: FREE   Options: VALUE   Index: FREE   Rate: FREE
+SUBSCRIPTION REALITY (re-measured 2026-08-15 after the Stock STANDARD upgrade):
+    Stock: STANDARD   Options: VALUE   Index: FREE
 
-Only the OPTIONS line is paid. That means:
-  - /option/*  -> available at Value: 1-minute bid/ask quotes and OHLC,
-                  history from 2020-01-01, whole-chain fetches via strike=*
-  - /stock/history/ohlc, /stock/history/quote -> 403, needs Stock Value
-  - /index/history/ohlc  (SPX/VIX intraday)   -> 403, needs Index STANDARD
-  - /stock/history/eod, /index/history/eod    -> work on FREE, daily only
+  - /option/*  -> Value: 1-minute bid/ask quotes and OHLC, whole-chain fetches
+                  via strike=*. History floor 2020-01-01 (see below).
+  - /stock/*   -> Standard: 1-minute OHLC verified back to 2016.
+  - /index/*   -> still FREE, so SPX/VIX/VIX1D intraday all 403 with
+                  "requires a standard subscription". EOD only.
 
-`get()` therefore HARD-REJECTS any path outside /option/. This is enforced in
-code rather than left as a convention so a future edit cannot silently
-reintroduce a call that 403s at runtime - or worse, that quietly implies an
-upgrade is needed. Underlying prices come from Massive's free tier instead
-(see massive_client.py); we already have 2 years of SPY/QQQ minute bars cached
-there, so nothing here needs a stock endpoint.
+`get()` HARD-REJECTS any path outside /option/ and /stock/. Enforced in code
+rather than left as a convention so a future edit cannot silently reintroduce
+a call that 403s at runtime - or worse, that quietly implies an upgrade is
+needed. Index is deliberately excluded: it is the one line still unpaid.
+
+THE BINDING CONSTRAINT HAS FLIPPED. Stock used to be the floor at 2021-01-01
+and options reached further back; after the upgrade it is the reverse, and
+OPTIONS now decides how far any joint study can go. Do not assume the stock
+floor is the study floor - it is not, and it was the other way round for the
+entire 2021-2026 run.
 
 TRANSPORT: v3 is a LOCAL gateway, not a cloud API. The Theta Terminal must be
 running:
@@ -57,12 +60,20 @@ HISTORY_START = "2020-01-01"
 _ALLOWED_PREFIXES = ("/option/", "/stock/")
 
 # Earliest data each paid line will serve, established by binary search against
-# the live terminal rather than taken from marketing copy:
-#   options 1-min quotes -> 2020-03-04 works
-#   stock   1-min OHLC   -> 2021-01-01 (2020 returns "requires STANDARD")
-# Stock is therefore the binding constraint on any study needing both.
-OPTION_HISTORY_START = "2020-03-04"
-STOCK_HISTORY_START = "2021-01-01"
+# the live terminal rather than taken from marketing copy. Re-measured
+# 2026-08-15 after the Stock STANDARD upgrade:
+#   options 1-min quotes -> 2019-12-20 = 403 tier, 2020-01-03 = data.
+#                           Floor is 2020-01-01. (The previous 2020-03-04 here
+#                           was simply the earliest date anyone had tried, not
+#                           a measured boundary - it understated reach by 2mo.)
+#   stock   1-min OHLC   -> verified back to 2016; no longer binding.
+# OPTIONS is therefore now the binding constraint on any study needing both.
+OPTION_HISTORY_START = "2020-01-01"
+STOCK_HISTORY_START = "2016-01-01"
+
+# The floor that actually matters for an options study needing underlying bars.
+# Use this rather than either constant above so the two can never drift apart.
+JOINT_HISTORY_START = max(OPTION_HISTORY_START, STOCK_HISTORY_START)
 
 
 class ThetaTerminalNotRunning(RuntimeError):
@@ -118,14 +129,31 @@ class ThetaDataClient:
         # the first full run - 40 of 256 SPY sessions vanished and the reported
         # n was 216, with no error surfaced anywhere.
         resp = None
+        data = None
         last_exc = None
         for attempt in range(4):
             try:
                 resp = self._client.get(self.base_url + path, params=params)
+                # Parse INSIDE the retry. A 200 whose body is truncated mid-array
+                # raises JSONDecodeError, which is not an httpx error and so used
+                # to escape the loop and kill the run outright - observed on a
+                # large premarket chunk at char 184935. It is the same failure
+                # class as the transport errors above (big payload, 2-concurrent
+                # Value tier) and deserves the same treatment, not a crash.
+                # 5xx from the local gateway is transient - it proxies an
+                # upstream that intermittently returns "io exception" under
+                # sustained load on the 2-concurrent Value tier. Observed
+                # killing a 10-year run after the first symbol had completed.
+                # Retry rather than propagate, same as the transport errors.
+                if resp.status_code in (500, 502, 503, 504):
+                    raise httpx.ReadError(f"HTTP {resp.status_code}: {resp.text[:80]}")
+                if resp.status_code == 200:
+                    data = resp.json()
                 break
             except (httpx.ConnectError, httpx.ReadTimeout, httpx.RemoteProtocolError,
-                    httpx.ReadError) as exc:
+                    httpx.ReadError, json.JSONDecodeError) as exc:
                 last_exc = exc
+                resp = None
                 self.transport_retries += 1
                 time.sleep(1.5 * (attempt + 1))
         if resp is None:
@@ -140,7 +168,7 @@ class ThetaDataClient:
 
         self.live_calls += 1
         if resp.status_code == 200:
-            data = resp.json()
+            pass  # already parsed inside the retry loop above
         elif resp.status_code in (472, 404):
             # documented "no data for this request" - a permanent fact, cache it
             data = {"response": [], "_note": "no data"}

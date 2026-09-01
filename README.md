@@ -150,10 +150,34 @@ direction this project moved toward instead.
 
 ## Known outstanding issues
 
-- `trade_analysis/data_sources/download_5min_alpaca.py` previously had a
-  hardcoded Alpaca API key/secret in source (now reads from
-  `ALPACA_API_KEY`/`ALPACA_SECRET_KEY` env vars) — **rotate that key**, since
-  it was committed to local git history before the fix.
+- **Credentials committed to PUBLIC git history — rotation still outstanding.**
+  Audited 2026-08-16. The working tree is clean; the history is not, and every
+  affected commit is an ancestor of `origin/main` on the public remote, so
+  "local git history" in the earlier note was wrong.
+
+  | Credential | Where in history | Rotated? |
+  |---|---|---|
+  | `ALPACA_API_KEY` / `ALPACA_SECRET_KEY` | `trade_analysis/5min_alpaca.py:10-11` in `f384d81`, `e17df27` | **NO — do this first, it is a brokerage credential** |
+  | `FINNHUB_API_KEY` | `README.md`, `clean_trade_venv.sh` (14 occurrences) | NO |
+  | `TWELVE_KEY` | same | NO |
+  | `REDDIT_CLIENT_ID` / `REDDIT_CLIENT_SECRET` | same | NO |
+  | `HF_TOKEN` | `README.md` in `f384d81`, `e17df27` | NO |
+
+  Also present in history: `trade_analysis/slurm-1612669.out`, a job log that
+  captured exported env vars. Both that file and `5min_alpaca.py` are deleted
+  from the tree but remain in history.
+
+  Verified clean, no action needed: `.env` was never tracked, and no ThetaData
+  (`td1_prod_*`) or Massive key literal appears anywhere in history.
+
+  History was **deliberately not rewritten**. Once a key is published, rotation
+  is the only real remediation — a rewrite does not un-leak anything already
+  scraped, and GitHub retains old objects in cached views until Support purges
+  them. Current source correctly reads from env vars
+  (`download_5min_alpaca.py:12-13`).
+
+  Prevention is in place: `.githooks/pre-commit` blocks staged credential
+  literals. Enable per clone with `git config core.hooksPath .githooks`.
 - Several live-trading scripts (`live_trading/`, `backtesting/replay_simulator.py`,
   `trade_journal/*`) depend on `alpaca-py`, `ta`, and other packages not
   necessarily installed in every environment — check `requirements.txt`.
