@@ -45,7 +45,7 @@ import argparse
 import numpy as np
 import pandas as pd
 
-from ..data_sources.thetadata_client import ThetaDataClient, STOCK_HISTORY_START
+from ..data_sources.thetadata_client import ThetaDataClient, JOINT_HISTORY_START
 from .options_premium_backtest import find_entries, CONTRACT_MULTIPLIER
 from .spy_qqq_0dte_real_backtest import (
     SYMBOLS, TARGET_PREMIUM, CONTRACTS, PROFIT_TARGET_GRID,
@@ -69,7 +69,7 @@ MIN_EXIT_BID_SIZE = CONTRACTS
 FEE_PER_CONTRACT = 0.65  # typical retail options commission, per contract per side
 
 
-def fetch_underlying_theta(theta, symbol, start=STOCK_HISTORY_START, end=None):
+def fetch_underlying_theta(theta, symbol, start=JOINT_HISTORY_START, end=None):
     """Minute bars from the Stock Value tier, in 1-month chunks.
 
     Replaces the Massive free-tier loader for this file. Two reasons that
@@ -179,7 +179,7 @@ def simulate(entry, chain, pick, profit_target=None):
     }
 
 
-def run_symbol(symbol, theta, max_entries=None, start=STOCK_HISTORY_START):
+def run_symbol(symbol, theta, max_entries=None, start=JOINT_HISTORY_START):
     minute = fetch_underlying_theta(theta, symbol, start=start)
     five = regular_hours_5min(minute)
     daily = daily_from_minute(minute)
@@ -227,8 +227,9 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--symbols", nargs="*", default=SYMBOLS)
     ap.add_argument("--max-entries", type=int, default=None)
-    ap.add_argument("--start", default=STOCK_HISTORY_START,
-                    help="earliest session; Stock Value serves from 2021-01-01")
+    ap.add_argument("--start", default=JOINT_HISTORY_START,
+                    help="earliest session; OPTIONS is the binding line and "
+                         "serves from 2020-01-01 (stock reaches 2016)")
     args = ap.parse_args()
 
     theta = ThetaDataClient()
