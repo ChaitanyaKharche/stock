@@ -1,0 +1,120 @@
+{
+ "saved_at": "2026-09-02T15:03:09.231664",
+ "session_date": "2026-09-02",
+ "positions": [
+  {
+   "setup_id": "EMA_9_20_Pullback",
+   "symbol": "SPY",
+   "direction": "long",
+   "entry_ts": "2026-09-02T10:00:05.774195",
+   "entry_bar_ts": "2026-09-02T09:59:00",
+   "entry_px": 762.93,
+   "shares": 13.10736240546315,
+   "spread_bp": 0.39322087216353685,
+   "stop": 761.8242212766072,
+   "target": 766.7873361701786,
+   "time_exit_min": null,
+   "bar_exit": null,
+   "trailing": null,
+   "state": {
+    "ema9": 762.2373231959227,
+    "ema20": 761.8242212766072
+   },
+   "timeframe": "5m",
+   "entry_quote_ts": "2026-09-02T10:00:06.791000",
+   "signal_id": "8516aeba2acc48588ad9f0e334e32571"
+  },
+  {
+   "setup_id": "Crabel_Stretch",
+   "symbol": "SPY",
+   "direction": "long",
+   "entry_ts": "2026-09-02T10:08:03.778168",
+   "entry_bar_ts": "2026-09-02T10:07:00",
+   "entry_px": 764.04,
+   "shares": 13.08831998324695,
+   "spread_bp": 0.13088319983235047,
+   "stop": 760.85526,
+   "target": null,
+   "time_exit_min": null,
+   "bar_exit": null,
+   "trailing": null,
+   "state": {
+    "buy": 764.04474,
+    "sell": 760.85526,
+    "stretch": 1.594740000000013
+   },
+   "timeframe": "1m",
+   "entry_quote_ts": "2026-09-02T10:08:05.049000",
+   "signal_id": "9173f061a86645e7be1d8df591b80b36"
+  },
+  {
+   "setup_id": "Crabel_Stretch",
+   "symbol": "QQQ",
+   "direction": "long",
+   "entry_ts": "2026-09-02T10:24:03.492934",
+   "entry_bar_ts": "2026-09-02T10:23:00",
+   "entry_px": 709.1,
+   "shares": 14.102383302778168,
+   "spread_bp": 0.28204766605530684,
+   "stop": 705.17763,
+   "target": null,
+   "time_exit_min": null,
+   "bar_exit": null,
+   "trailing": null,
+   "state": {
+    "buy": 709.04237,
+    "sell": 705.17763,
+    "stretch": 1.9323699999999917
+   },
+   "timeframe": "1m",
+   "entry_quote_ts": "2026-09-02T10:24:03.977000",
+   "signal_id": "54e49e2b43b940929bf8d6f20e1b58f8"
+  },
+  {
+   "setup_id": "PDH_PDL_FailedBreak",
+   "symbol": "SPY",
+   "direction": "short",
+   "entry_ts": "2026-09-02T13:20:07.455465",
+   "entry_bar_ts": "2026-09-02T13:19:00",
+   "entry_px": 764.59,
+   "shares": 13.078905034070548,
+   "spread_bp": 0.26157810068117304,
+   "stop": 766.43,
+   "target": 760.9400000000002,
+   "time_exit_min": null,
+   "bar_exit": null,
+   "trailing": null,
+   "state": {
+    "pdh": 764.67,
+    "atr14": 0.484401309734968
+   },
+   "timeframe": "5m",
+   "entry_quote_ts": "2026-09-02T13:20:08.711000",
+   "signal_id": "0767d27ea4694d22834de2e7cdf9c35e"
+  },
+  {
+   "setup_id": "IntradayMomentumBoundary",
+   "symbol": "SPY",
+   "direction": "long",
+   "entry_ts": "2026-09-02T15:01:26.938445",
+   "entry_bar_ts": "2026-09-02T10:00:00",
+   "entry_px": 764.76,
+   "shares": 13.075997698624406,
+   "spread_bp": 0.3922799309583754,
+   "stop": null,
+   "target": null,
+   "time_exit_min": null,
+   "bar_exit": null,
+   "trailing": "imb",
+   "state": {
+    "ub": 763.3693450988226,
+    "lb": 760.7416074654478,
+    "sigma": 0.0012057775576400484,
+    "vwap": 764.6744915102352
+   },
+   "timeframe": "1m",
+   "entry_quote_ts": "2026-09-02T15:01:29.053000",
+   "signal_id": "8efa2e93a1874080a05051d1b73bf404"
+  }
+ ]
+}

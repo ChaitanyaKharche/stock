@@ -223,6 +223,41 @@ class LabStore:
             return [], why
         return pos, ""
 
+    def decision_counts(self, day) -> tuple[dict, dict]:
+        """Per-day signal counts for `day`, rebuilt from the durable DECISION record.
+
+        Returns ({(setup_id, symbol): n}, {(setup_id, symbol, direction): n}), which is
+        exactly what max_per_day and max_per_direction are counted against.
+
+        This exists because rebuilding those caps from recovered OPEN positions is wrong in
+        two opposite ways, and both bugs were live:
+
+          * every signal that already CLOSED is forgotten, so a mid-session restart resets
+            the cap to zero and the setup fires again. On 2026-09-02 the shares arm
+            restarted at 15:00 and re-entered ORB_5min and ORB_15min, each of which has
+            max_per_day = 1 and had already traded that morning.
+          * the options arm opens THREE positions per signal (ATM, ATM+-1), so counting one
+            per recovered position triples the count and over-suppresses instead.
+
+        signals.jsonl carries exactly one DECISION per signal in both arms, fsynced before
+        any price is requested, so it is the authoritative count for both.
+        """
+        d = day.isoformat() if hasattr(day, "isoformat") else str(day)
+        per, per_dir = {}, {}
+        for s in self.read("signals.jsonl"):
+            if s.get("phase") != "DECISION":
+                continue
+            stamp = str(s.get("bar_ts") or s.get("ts") or "")[:10]
+            if stamp != d:
+                continue
+            sid, sym, direc = s.get("setup_id"), s.get("symbol"), s.get("direction")
+            if not sid or not sym:
+                continue
+            per[(sid, sym)] = per.get((sid, sym), 0) + 1
+            if direc:
+                per_dir[(sid, sym, direc)] = per_dir.get((sid, sym, direc), 0) + 1
+        return per, per_dir
+
     # ------------------------------------------------------------------ reading
 
     def read(self, name: str) -> list[dict]:

@@ -1,0 +1,14 @@
+{"seq":1,"ts":"2026-09-01T09:33:14.766667","kind":"start","config_hash":"53229d6f1f24df10","symbols":["QQQ","SPY"],"spec":"shares_lab_preregistration.md @ 2026-08-31","notional":10000.0}
+{"seq":2,"ts":"2026-09-01T09:34:15.082359","kind":"warmup","symbol":"QQQ","sessions_used":25,"has_stretch":true}
+{"seq":3,"ts":"2026-09-01T09:35:00.383652","kind":"warmup","symbol":"SPY","sessions_used":25,"has_stretch":true}
+{"seq":1563,"ts":"2026-09-02T09:33:11.500810","kind":"start","config_hash":"53229d6f1f24df10","symbols":["QQQ","SPY"],"spec":"shares_lab_preregistration.md @ 2026-08-31","notional":10000.0}
+{"seq":1564,"ts":"2026-09-02T09:34:19.000077","kind":"warmup","symbol":"QQQ","sessions_used":25,"has_stretch":true}
+{"seq":1565,"ts":"2026-09-02T09:34:53.733563","kind":"warmup","symbol":"SPY","sessions_used":25,"has_stretch":true}
+{"seq":2504,"ts":"2026-09-02T15:00:16.775419","kind":"start","config_hash":"53229d6f1f24df10","symbols":["QQQ","SPY"],"spec":"shares_lab_preregistration.md @ 2026-08-31","notional":10000.0}
+{"seq":2505,"ts":"2026-09-02T15:01:01.436634","kind":"warmup","symbol":"QQQ","sessions_used":25,"has_stretch":true}
+{"seq":2506,"ts":"2026-09-02T15:01:26.898068","kind":"warmup","symbol":"SPY","sessions_used":25,"has_stretch":true}
+{"seq":2507,"ts":"2026-09-02T15:01:26.937530","kind":"recovered","n_positions":4}
+{"seq":3477,"ts":"2026-09-03T09:33:11.805781","kind":"start","config_hash":"53229d6f1f24df10","symbols":["QQQ","SPY"],"spec":"shares_lab_preregistration.md @ 2026-08-31","notional":10000.0}
+{"seq":3478,"ts":"2026-09-03T09:34:03.126777","kind":"warmup","symbol":"QQQ","sessions_used":25,"has_stretch":true}
+{"seq":3479,"ts":"2026-09-03T09:34:48.374146","kind":"warmup","symbol":"SPY","sessions_used":25,"has_stretch":true}
+{"seq":3480,"ts":"2026-09-03T09:34:48.406549","kind":"recovery_rejected","reason":"recovery file is for session 2026-09-02, today is 2026-09-03","n_positions":5,"archived_to":"positions_open_2026-09-02_20260903093448.json"}

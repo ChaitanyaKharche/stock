@@ -160,6 +160,16 @@ class SharesLab:
         return True
 
     def recover(self, day) -> None:
+        # Per-day caps come from the DECISION record, not from recovered positions, and are
+        # restored BEFORE the early return. Counting only what is still OPEN forgets every
+        # signal that already closed, so a restart resets max_per_day to zero and the setup
+        # fires again -- exactly what happened on 2026-09-02: a 15:00 restart re-entered
+        # ORB_5min and ORB_15min (both cap 1) that had already traded that morning.
+        if day is not None:
+            self.counts, self.dircnt = self.store.decision_counts(day)
+            if self.counts:
+                print(f"[shares] restored per-day caps: "
+                      f"{sum(self.counts.values())} signals already taken today", flush=True)
         raw, note = self.store.load_open_positions(expect_date=day)
         if note:
             print(f"[shares] recovery REJECTED: {note}", flush=True)
@@ -168,9 +178,8 @@ class SharesLab:
         fields = set(SharePos.__dataclass_fields__)
         self.open_pos = [SharePos(**{k: v for k, v in r.items() if k in fields})
                          for r in raw]
-        for p in self.open_pos:
-            self.counts[(p.setup_id, p.symbol)] = self.counts.get((p.setup_id, p.symbol), 0) + 1
-        self.store.event("recovered", n_positions=len(self.open_pos))
+        self.store.event("recovered", n_positions=len(self.open_pos),
+                         restored_counts=sum(self.counts.values()))
         print(f"[shares] recovered {len(self.open_pos)} open positions", flush=True)
 
     # ----------------------------------------------------------------- main loop

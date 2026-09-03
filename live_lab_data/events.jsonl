@@ -10,3 +10,13 @@
 {"seq":323,"ts":"2026-08-31T09:33:10.937153","kind":"start","config_hash":"1f7247d7839d9950","symbols":["QQQ","SPY"],"spec":"live_lab_specification.md @ 2026-08-27"}
 {"seq":324,"ts":"2026-08-31T09:34:02.927433","kind":"warmup","symbol":"QQQ","sessions_used":25,"has_stretch":true,"prior_day":{"date":"2026-08-28","open":719.74,"high":724.125,"low":715.085,"close":716.44}}
 {"seq":325,"ts":"2026-08-31T09:34:43.205241","kind":"warmup","symbol":"SPY","sessions_used":25,"has_stretch":true,"prior_day":{"date":"2026-08-28","open":771.76,"high":775.3,"low":768.3076,"close":769.34}}
+{"seq":638,"ts":"2026-09-01T09:33:14.794497","kind":"start","config_hash":"1f7247d7839d9950","symbols":["QQQ","SPY"],"spec":"live_lab_specification.md @ 2026-08-27"}
+{"seq":639,"ts":"2026-09-01T09:34:23.898819","kind":"warmup","symbol":"QQQ","sessions_used":25,"has_stretch":true,"prior_day":{"date":"2026-08-31","open":715.17,"high":717.58,"low":713.16,"close":716.82}}
+{"seq":640,"ts":"2026-09-01T09:35:22.288812","kind":"warmup","symbol":"SPY","sessions_used":25,"has_stretch":true,"prior_day":{"date":"2026-08-31","open":767.33,"high":767.995,"low":764.715,"close":766.95}}
+{"seq":1392,"ts":"2026-09-02T09:33:11.574351","kind":"start","config_hash":"1f7247d7839d9950","symbols":["QQQ","SPY"],"spec":"live_lab_specification.md @ 2026-08-27"}
+{"seq":1393,"ts":"2026-09-02T09:34:08.174039","kind":"warmup","symbol":"QQQ","sessions_used":25,"has_stretch":true,"prior_day":{"date":"2026-09-01","open":707.39,"high":712.3,"low":704.66,"close":707.67}}
+{"seq":1394,"ts":"2026-09-02T09:34:40.499330","kind":"warmup","symbol":"SPY","sessions_used":25,"has_stretch":true,"prior_day":{"date":"2026-09-01","open":762.01,"high":764.67,"low":759.48,"close":761.66}}
+{"seq":1633,"ts":"2026-09-03T09:33:11.826874","kind":"start","config_hash":"1f7247d7839d9950","symbols":["QQQ","SPY"],"spec":"live_lab_specification.md @ 2026-08-27"}
+{"seq":1634,"ts":"2026-09-03T09:33:55.702784","kind":"warmup","symbol":"QQQ","sessions_used":25,"has_stretch":true,"prior_day":{"date":"2026-09-02","open":707.1,"high":709.7988,"low":705.1,"close":709.25}}
+{"seq":1635,"ts":"2026-09-03T09:34:33.292153","kind":"warmup","symbol":"SPY","sessions_used":25,"has_stretch":true,"prior_day":{"date":"2026-09-02","open":762.45,"high":766.43,"low":761.73,"close":765.14}}
+{"seq":1636,"ts":"2026-09-03T09:34:33.318138","kind":"recovery_rejected","reason":"recovery file is for session 2026-09-02, today is 2026-09-03","n_positions":12,"archived_to":"positions_open_2026-09-02_20260903093433.json"}

@@ -147,16 +147,26 @@ class LiveLab:
         return sorted(out)
 
     def recover(self, day: dt.date | None = None) -> None:
+        # Per-day caps are rebuilt from the DECISION record, NOT from recovered positions,
+        # and BEFORE the early return. Two bugs lived in the old version:
+        #   * counting one per recovered position triples the count in this arm, which
+        #     opens three (ATM, ATM+-1) per signal;
+        #   * restarting with nothing open returned early, so every cap reset to zero and
+        #     setups that had already hit max_per_day could fire again.
+        if day is not None:
+            self.trade_counts, self.dir_counts = self.store.decision_counts(day)
+            if self.trade_counts:
+                print(f"[lab] restored per-day caps: "
+                      f"{sum(self.trade_counts.values())} signals already taken today",
+                      flush=True)
         raw, note = self.store.load_open_positions(expect_date=day)
         if note:
             print(f"[lab] recovery REJECTED: {note}", flush=True)
         if not raw:
             return
         self.open_pos = [position_from_dict(p) for p in raw]
-        for p in self.open_pos:
-            self.trade_counts[(p.setup_id, p.symbol)] = \
-                self.trade_counts.get((p.setup_id, p.symbol), 0) + 1
-        self.store.event("recovered", n_positions=len(self.open_pos))
+        self.store.event("recovered", n_positions=len(self.open_pos),
+                         restored_counts=sum(self.trade_counts.values()))
         print(f"[lab] recovered {len(self.open_pos)} open positions", flush=True)
 
     # ------------------------------------------------------------------ main loop

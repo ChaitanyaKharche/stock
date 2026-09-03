@@ -57,8 +57,14 @@ FRESHNESS_AT = dt.time(9, 33)      # RTH freshness re-check -- MUST be after the
                                    # because the 09:30-09:35 opening range is not formed.
 GIVE_UP_AFTER = dt.time(15, 30)    # too late in the session to bother starting
 HOLIDAY_CHECK_AT = dt.time(9, 45)
-RUNNER_DONE_AFTER = dt.time(15, 55)  # runner flattens at 15:55; an exit at/after this is
-                                     # a normal end of session, not a crash to restart
+RUNNER_DONE_AFTER = dt.time(15, 55)  # an exit at/after this is a normal end of session,
+                                     # not a crash to restart. NOT a kill time -- the
+                                     # runners flatten at 15:55 and exit on their own at
+                                     # 16:00, and terminating them at 15:55 destroyed the
+                                     # EOD flatten and the daily summary for three straight
+                                     # sessions (2026-09-01..03).
+HARD_STOP = dt.time(16, 10)          # backstop only: by now a healthy runner has long since
+                                     # exited, so anything still alive is wedged
 MAX_RESTARTS = 20
 RESTART_BACKOFF = [5, 15, 30, 60, 120]   # seconds; holds at the last value
 TERMINAL_DIR = Path(r"C:\Users\chaitanyakharche\Documents\research_data\thetaterminal")
@@ -245,14 +251,24 @@ def supervise(args, day: dt.date, specs=None, child_cls=None) -> int:
     pending = {}                    # name -> monotonic time at which to restart
     while True:
         now = now_et()
-        if now.date() != day or now.time() >= RUNNER_DONE_AFTER:
-            if any(not ch.done for ch in children):
-                log(f"{now:%H:%M:%S} ET -- session over; stopping any arm still running")
+        alive = [ch for ch in children if not ch.done and ch.poll() is None]
+        if all(ch.done for ch in children):
+            log("every arm has finished; nothing left to supervise")
+            break
+        # Past RUNNER_DONE_AFTER we stop RESTARTING, but we do NOT kill: each runner still
+        # has to flatten at 15:55, write its daily summary and exit at 16:00. Killing it
+        # here loses every position that was open at the close, and the summary with it.
+        if now.date() != day or now.time() >= HARD_STOP:
+            if alive:
+                log(f"{now:%H:%M:%S} ET -- past the {HARD_STOP:%H:%M} backstop and "
+                    f"{len(alive)} arm(s) are still alive; terminating")
             for ch in children:
                 ch.terminate()
             break
-        if all(ch.done for ch in children):
-            log("every arm has finished; nothing left to supervise")
+        if now.time() >= RUNNER_DONE_AFTER:
+            if alive:
+                time.sleep(5)          # let them flatten and write their summary
+                continue
             break
 
         for ch in children:

@@ -27,6 +27,7 @@ from .setups import ALL_SETUPS, DEAD_SETUPS, SLOW_SETUPS
 from .store import DEFAULT_LAB_DIR, LabStore
 
 MIN_N_FOR_VERDICT = 200
+STALE_FILL_MIN = 3.0   # a fill later than this missed its bar; see fill_latency()
 POWERED_N = 377                 # +10% mean return, Holm m=13, 80% power
 FAMILY_SIZE = len(ALL_SETUPS)
 
@@ -101,6 +102,105 @@ def session_coverage(store) -> list[str]:
             out.append(f"    ... and {len(gaps) - 10} more")
     else:
         out.append("  no unexplained gaps -- every weekday is accounted for")
+    return out
+
+
+def fill_latency(store, arm=None) -> list[str]:
+    """How stale was the signal when each fill happened?
+
+    Both arms fill at the live NBBO on the tick that admits a closed bar, which is
+    normally ~1 minute after the bar stamp -- the same convention the backtests use. But
+    when the vendor feed goes down, bars cannot be admitted at all; they queue, and when
+    the feed returns the whole backlog is evaluated and filled at the THEN-current price.
+
+    That is honest -- nothing is fabricated, and the outage is logged -- but a signal
+    filled 40 minutes late is not the trade the backtest priced. entry_bar_ts and entry_ts
+    are both recorded, so those fills stay identifiable forever. This surfaces them
+    instead of leaving them to be noticed by accident.
+    """
+    import datetime as _dt
+    rows = [t for t in store.read("trades.jsonl")
+            if t.get("entry_bar_ts") and t.get("entry_ts")
+            and (arm is None or t.get("arm") == arm)]
+    if not rows:
+        return ["  (no trades with a recorded signal bar)"]
+    # EXPECTED lag depends on how the setup's bars are stamped, and pooling the two makes
+    # the median meaningless. A 1-minute bar is OPEN-stamped, so its close is only knowable
+    # a minute later and an honest fill lands at bar_ts + ~60s. A 5-minute bucket is
+    # CLOSE-stamped, so an honest fill lands at bar_ts + a few seconds. Reporting raw lag
+    # made a normal session look like it had 0.1-minute fills, i.e. lookahead. It did not.
+    tf = {s.id: s.timeframe for s in ALL_SETUPS}
+    lags = []
+    for t in rows:
+        try:
+            raw = (_dt.datetime.fromisoformat(t["entry_ts"])
+                   - _dt.datetime.fromisoformat(t["entry_bar_ts"])).total_seconds() / 60.0
+        except (ValueError, TypeError):
+            continue
+        expected = 1.0 if tf.get(t.get("setup_id")) == "1m" else 0.0
+        lags.append((raw - expected, t))
+    if not lags:
+        return ["  (no parsable timestamps)"]
+    v = sorted(x for x, _ in lags)
+    stale = [(x, t) for x, t in lags if x > STALE_FILL_MIN]
+    out = [f"  EXCESS lag over each setup's own convention (1m bars open-stamped,"
+           f" 5m close-stamped)",
+           f"  n={len(v)}  median {v[len(v)//2]:+.1f} min  p90 "
+           f"{v[int(0.9*(len(v)-1))]:+.1f}  max {max(v):+.1f}",
+           f"  fills more than {STALE_FILL_MIN:.0f} min after their signal bar: "
+           f"{len(stale)} ({100*len(stale)/len(lags):.1f}%)"]
+    if stale:
+        net_all = sum(t.get("pnl_net", 0.0) or 0.0 for _, t in lags)
+        net_ok = sum(t.get("pnl_net", 0.0) or 0.0 for x, t in lags
+                     if x <= STALE_FILL_MIN)
+        out.append(f"  net including them ${net_all:+,.2f}   excluding them "
+                   f"${net_ok:+,.2f}")
+        out.append("  a stale fill is a FEED OUTAGE artefact, not a strategy result --")
+        out.append("  the backtest fills one minute after the bar, so these are not the")
+        out.append("  same trade and should be reported separately, never silently kept")
+        by = {}
+        for x, t in stale:
+            by.setdefault(t.get("entry_ts", "")[:10], []).append(x)
+        for d in sorted(by)[-5:]:
+            out.append(f"    {d}: {len(by[d])} stale, worst {max(by[d]):.0f} min")
+    return out
+
+
+def signal_reconciliation(store, arms_per_signal=3) -> list[str]:
+    """Every DECISION must end as a recorded trade. This is the general leak detector.
+
+    It does not care WHY a position vanished -- supervisor kill, crash, sleep, power loss.
+    It just checks the invariant: decisions x arms == trades, per session. On 2026-09-01/02/03
+    the supervisor terminated both arms at 15:55, the exact minute they were due to flatten,
+    and every position still open at the close was silently dropped. The trade counts still
+    looked healthy, so nothing surfaced it for three sessions.
+
+    The loss was not random: it removed exactly one exit type (`eod`), i.e. the trades that
+    had NOT yet stopped out. On a trend day those are the winners.
+    """
+    sig = [x for x in store.read("signals.jsonl") if x.get("phase") == "DECISION"]
+    tr = store.read("trades.jsonl")
+    if not sig:
+        return ["  (no decisions recorded)"]
+    by_sig, by_tr = defaultdict(int), defaultdict(int)
+    for x in sig:
+        by_sig[str(x.get("bar_ts") or x.get("ts"))[:10]] += 1
+    for t in tr:
+        by_tr[str(t.get("entry_ts"))[:10]] += 1
+    out = [f"  {'session':<13}{'decided':>9}{'expected':>10}{'recorded':>10}{'lost':>7}"]
+    total_lost = 0
+    for d in sorted(by_sig):
+        exp = by_sig[d] * arms_per_signal
+        got = by_tr.get(d, 0)
+        lost = exp - got
+        total_lost += max(lost, 0)
+        flag = "  <-- POSITIONS LOST" if lost > 0 else ("  <-- DUPLICATES" if lost < 0 else "")
+        out.append(f"  {d:<13}{by_sig[d]:>9}{exp:>10}{got:>10}{lost:>7}{flag}")
+    out.append(f"  total unrecorded positions: {total_lost}")
+    if total_lost:
+        out.append("  a session that ends with positions unrecorded is a DATA LOSS, not a")
+        out.append("  result. Check live_lab_data/recovery_archive before the next session")
+        out.append("  overwrites the snapshot -- see live_lab/reconstruct_eod.py")
     return out
 
 
@@ -232,7 +332,13 @@ def build(store: LabStore, arm="ATM"):
             "max_dd": _max_dd(nets),
             "mean_hold": sum(t["hold_minutes"] for t in mine
                              if t.get("hold_minutes")) / max(n, 1),
-            "mean_entry_spread": sum(t["entry_spread_pct"] for t in mine) / n,
+            # .get, not [] -- trades.jsonl is append-only and accumulates rows written by
+            # different code paths (live fills, reconstructed EOD exits, future arms). A
+            # missing OPTIONAL field must degrade one statistic, never crash the whole
+            # report: a dashboard that dies on an unexpected key is how a data problem
+            # becomes invisible.
+            "mean_entry_spread": (sum(t.get("entry_spread_pct") or 0.0 for t in mine)
+                                  / max(n, 1)),
             "skips": dict(skipped.get(setup.id, {})),
         }
         if p is not None:
@@ -294,6 +400,14 @@ def main(argv=None) -> int:
     print("FORWARD TEST CHECKPOINTS")
     print("=" * 112)
     for line in checkpoint_status(store, rows):
+        print(line)
+    print("  " + "-" * 96)
+    print("  SIGNAL RECONCILIATION (decisions -> recorded trades)")
+    for line in signal_reconciliation(store, 3 if args.arm != "SHARES" else 1):
+        print(line)
+    print("  " + "-" * 96)
+    print("  FILL LATENCY (signal bar -> actual fill)")
+    for line in fill_latency(store, arm=args.arm):
         print(line)
     print("  " + "-" * 96)
     print("  SESSION COVERAGE")
