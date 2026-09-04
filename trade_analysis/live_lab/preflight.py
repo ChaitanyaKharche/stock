@@ -16,6 +16,8 @@ Quote freshness can only be judged with the market OPEN. Run during RTH.
 """
 from __future__ import annotations
 
+import os
+
 import argparse
 import datetime as dt
 import socket
@@ -43,26 +45,81 @@ def _lan_ip() -> str | None:
         return None
 
 
-def check_exposure() -> list[str]:
-    """The terminal has been observed to ignore host=127.0.0.1 and bind 0.0.0.0."""
-    out = []
-    ip = _lan_ip()
-    if not ip:
-        return [f"{WARN} could not determine LAN IP; skipping exposure check"]
+def _firewall_exposure() -> list[str]:
+    """Ask WINDOWS whether the terminal is actually reachable, not the socket.
+
+    The old check did httpx.get("http://<own-LAN-IP>:25503") from this machine. That
+    never traverses the inbound firewall -- Windows treats a connection to your own LAN
+    address as local -- so it proved the socket was bound to 0.0.0.0 and nothing about
+    whether anyone else can reach it. It would have printed FAIL on a correctly
+    firewalled box, which is the worst kind of check: one that is always red and
+    therefore always ignored.
+
+    What actually determines exposure is three facts, all of which Windows will tell us:
+      1. is the firewall on for the ACTIVE profile,
+      2. is there an inbound ALLOW rule matching the terminal binary on that profile,
+      3. is the active network Public (untrusted) or Private.
+    """
+    import json as _json
+    import subprocess as _sp
+    ps = r"""
+$prof = (Get-NetConnectionProfile | Select-Object -First 1)
+$cat  = if ($prof) { $prof.NetworkCategory.ToString() } else { 'Unknown' }
+$name = if ($prof) { $prof.Name } else { 'unknown' }
+$fw   = Get-NetFirewallProfile | Where-Object { $_.Name -eq $cat }
+$on   = if ($fw) { [bool]$fw.Enabled } else { $true }
+$allow = @(Get-NetFirewallRule -Direction Inbound -Action Allow -Enabled True |
+  Where-Object { $_.Profile -match $cat -or $_.Profile -match 'Any' } |
+  Where-Object { ($_ | Get-NetFirewallApplicationFilter).Program -like '*thetaterminal*' })
+[PSCustomObject]@{ net=$name; cat=$cat; fwOn=$on; nAllow=$allow.Count } | ConvertTo-Json -Compress
+"""
+    # -EncodedCommand, not -Command: a multi-line script passed as a single -Command
+    # argument gets mangled by the Windows command-line parser and silently returns
+    # nothing, which this check then reported as "exposure unknown".
+    import base64 as _b64
     try:
-        import httpx
-        r = httpx.get(f"http://{ip}:25503/v3/stock/snapshot/quote",
-                      params={"symbol": "QQQ"}, timeout=5.0)
-        if r.status_code == 200:
-            out.append(f"{FAIL} paid feed is REACHABLE from {ip}:25503 -- the terminal is")
-            out.append("         binding 0.0.0.0 regardless of host= in config.toml.")
-            out.append("         Fix with an inbound firewall block on TCP 25503")
-            out.append("         (loopback bypasses Windows Firewall, so the lab keeps working).")
-        else:
-            out.append(f"{OK} not reachable from {ip} (HTTP {r.status_code})")
-    except Exception:                                        # noqa: BLE001
-        out.append(f"{OK} not reachable from {ip} (connection refused)")
+        enc = _b64.b64encode(ps.encode("utf-16-le")).decode()
+        r = _sp.run(["powershell", "-NoProfile", "-NonInteractive",
+                     "-EncodedCommand", enc],
+                    capture_output=True, text=True, timeout=60)
+        line = next((x for x in reversed((r.stdout or "").splitlines())
+                     if x.strip().startswith("{")), None)
+        if not line:
+            return [f"{WARN} firewall query returned nothing; exposure unknown"]
+        d = _json.loads(line.strip())
+    except Exception as exc:                                 # noqa: BLE001
+        return [f"{WARN} could not query Windows Firewall ({type(exc).__name__}); "
+                f"exposure unknown"]
+
+    net, cat, on, n = d.get("net"), d.get("cat"), d.get("fwOn"), int(d.get("nAllow", 0))
+    out = [f"  network '{net}' is {cat}; firewall {'ON' if on else 'OFF'} for that profile"]
+    if not on:
+        out.append(f"{FAIL} firewall is OFF on the active profile -- the feed is exposed")
+    elif n > 0:
+        sev = FAIL if cat.lower() == "public" else WARN
+        out.append(f"{sev} {n} inbound ALLOW rule(s) match the Theta Terminal binary on "
+                   f"the {cat} profile,")
+        out.append(f"         so 25503 IS reachable from this network. On a PUBLIC or "
+                   f"guest network that")
+        out.append(f"         exposes a paid market-data feed to every other host on it.")
+        out.append(f"         Remove with (run as Administrator):")
+        out.append(f"           Get-NetFirewallRule -Direction Inbound -Action Allow | "
+                   f"Where-Object {{")
+        out.append(f"             ($_ | Get-NetFirewallApplicationFilter).Program -like "
+                   f"'*thetaterminal*' }} |")
+        out.append(f"             Disable-NetFirewallRule")
+    else:
+        out.append(f"{OK} no inbound allow rule for the terminal on the {cat} profile; "
+                   f"default-deny holds")
     return out
+
+
+def check_exposure() -> list[str]:
+    """The terminal ignores host=127.0.0.1 and binds 0.0.0.0. Whether that MATTERS is a
+    firewall question, not a socket question -- see _firewall_exposure."""
+    if os.name != "nt":
+        return [f"{WARN} exposure check is Windows-only; skipped"]
+    return _firewall_exposure()
 
 
 def check_freshness(feed, symbol, now) -> list[str]:
