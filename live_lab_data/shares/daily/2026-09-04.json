@@ -1,0 +1,18 @@
+{
+  "date": "2026-09-04",
+  "arm": "SHARES",
+  "config_hash": "53229d6f1f24df10",
+  "symbols": [
+    "QQQ",
+    "SPY"
+  ],
+  "notional_per_trade": 10000.0,
+  "trades_closed": 17,
+  "net": -92.82,
+  "still_open": 3,
+  "degraded_bars": {},
+  "feed": {
+    "calls": 8680,
+    "retries": 240
+  }
+}

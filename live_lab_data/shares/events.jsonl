@@ -12,3 +12,8 @@
 {"seq":3478,"ts":"2026-09-03T09:34:03.126777","kind":"warmup","symbol":"QQQ","sessions_used":25,"has_stretch":true}
 {"seq":3479,"ts":"2026-09-03T09:34:48.374146","kind":"warmup","symbol":"SPY","sessions_used":25,"has_stretch":true}
 {"seq":3480,"ts":"2026-09-03T09:34:48.406549","kind":"recovery_rejected","reason":"recovery file is for session 2026-09-02, today is 2026-09-03","n_positions":5,"archived_to":"positions_open_2026-09-02_20260903093448.json"}
+{"seq":4989,"ts":"2026-09-04T09:33:14.638002","kind":"start","config_hash":"53229d6f1f24df10","symbols":["QQQ","SPY"],"spec":"shares_lab_preregistration.md @ 2026-08-31","notional":10000.0}
+{"seq":4990,"ts":"2026-09-04T09:34:16.908969","kind":"warmup","symbol":"QQQ","sessions_used":25,"has_stretch":true}
+{"seq":4991,"ts":"2026-09-04T09:35:00.491058","kind":"warmup","symbol":"SPY","sessions_used":25,"has_stretch":true}
+{"seq":4992,"ts":"2026-09-04T09:35:00.544783","kind":"recovery_rejected","reason":"recovery file is for session 2026-09-03, today is 2026-09-04","n_positions":6,"archived_to":"positions_open_2026-09-03_20260904093500.json"}
+{"seq":6499,"ts":"2026-09-04T15:58:15.064598","kind":"early_close","at":"2026-09-04T15:58:08.026348"}

@@ -55,6 +55,12 @@ SOURCES = [
      / "positions_open_2026-09-02_20260903093448.json", 10_000.0),
     ("options 2026-09-03", DEFAULT_LAB_DIR, DEFAULT_LAB_DIR / "positions_open.json", None),
     ("shares  2026-09-03", DEFAULT_LAB_DIR / "shares",
+     DEFAULT_LAB_DIR / "shares" / "recovery_archive"
+     / "positions_open_2026-09-03_20260904093500.json", 10_000.0),
+    # 2026-09-04: the feed was down at the close (60 outages, 57 failed ticks) and the
+    # shares flatten had no fallback mark, so three positions were abandoned. The runner
+    # now falls back to its last known NBBO; these three predate that fix.
+    ("shares  2026-09-04", DEFAULT_LAB_DIR / "shares",
      DEFAULT_LAB_DIR / "shares" / "positions_open.json", 10_000.0),
 ]
 

@@ -20,3 +20,7 @@
 {"seq":1634,"ts":"2026-09-03T09:33:55.702784","kind":"warmup","symbol":"QQQ","sessions_used":25,"has_stretch":true,"prior_day":{"date":"2026-09-02","open":707.1,"high":709.7988,"low":705.1,"close":709.25}}
 {"seq":1635,"ts":"2026-09-03T09:34:33.292153","kind":"warmup","symbol":"SPY","sessions_used":25,"has_stretch":true,"prior_day":{"date":"2026-09-02","open":762.45,"high":766.43,"low":761.73,"close":765.14}}
 {"seq":1636,"ts":"2026-09-03T09:34:33.318138","kind":"recovery_rejected","reason":"recovery file is for session 2026-09-02, today is 2026-09-03","n_positions":12,"archived_to":"positions_open_2026-09-02_20260903093433.json"}
+{"seq":1913,"ts":"2026-09-04T09:33:14.727687","kind":"start","config_hash":"1f7247d7839d9950","symbols":["QQQ","SPY"],"spec":"live_lab_specification.md @ 2026-08-27"}
+{"seq":1914,"ts":"2026-09-04T09:34:17.831061","kind":"warmup","symbol":"QQQ","sessions_used":25,"has_stretch":true,"prior_day":{"date":"2026-09-03","open":710.85,"high":718.915,"low":709.69,"close":717.61}}
+{"seq":1915,"ts":"2026-09-04T09:35:07.229799","kind":"warmup","symbol":"SPY","sessions_used":25,"has_stretch":true,"prior_day":{"date":"2026-09-03","open":767.9,"high":774.03,"low":767.45,"close":773.16}}
+{"seq":1916,"ts":"2026-09-04T09:35:07.271912","kind":"recovery_rejected","reason":"recovery file is for session 2026-09-03, today is 2026-09-04","n_positions":18,"archived_to":"positions_open_2026-09-03_20260904093507.json"}

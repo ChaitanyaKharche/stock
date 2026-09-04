@@ -126,6 +126,7 @@ class SharesLab:
         self._seen5: dict[str, set] = {}
         self._degraded_seen: dict[str, int] = {}
         self._last_bar_at: dict[str, dt.datetime] = {}
+        self._last_quote: dict[str, dict] = {}   # last GOOD NBBO per symbol
         self._stop = False
         self._setups = {s.id: s for s in ALL_SETUPS}
         os_signal.signal(os_signal.SIGINT, self._sigint)
@@ -254,6 +255,7 @@ class SharesLab:
                 quote = None
             if quote is None:
                 continue          # never fill against a stale or missing NBBO
+            self._last_quote[sym] = quote
 
             seen5 = self._seen5.setdefault(sym, set())
             for bar in admitted:
@@ -389,17 +391,36 @@ class SharesLab:
                       f"{'' if sid is None else ''}", flush=True)
 
     def _flatten_all(self, now, reason="eod") -> None:
+        """Close everything. A position must NEVER be left unrecorded.
+
+        The options arm already falls back to its last known mark here. This one did not,
+        and on 2026-09-04 the feed was down at the close (60 outages, 57 failed ticks), so
+        three positions were abandoned and silently vanished from the record -- the exact
+        systematic hole the EOD reconstruction had just repaired.
+
+        A stale mark is a compromise; an unrecorded position is a hole. Take the compromise
+        and flag it, so the row is identifiable rather than absent.
+        """
         for p in list(self.open_pos):
             quote = None
             try:
                 quote = self.feed.stock_quote(p.symbol)
             except FeedOutage:
                 quote = None
+            r = reason
+            if quote is None:
+                quote = self._last_quote.get(p.symbol)
+                if quote is not None:
+                    r = reason + "_stale_mark"
+                    self.store.outage("flatten_stale_mark",
+                                      f"{p.symbol} {p.setup_id} closed on the last known "
+                                      f"NBBO from {quote.get('ts')}")
             if quote is None:
                 self.store.outage("flatten_no_quote",
-                                  f"{p.symbol} {p.setup_id} left open, no NBBO")
+                                  f"{p.symbol} {p.setup_id} LEFT OPEN -- no NBBO and no "
+                                  f"prior mark this session")
                 continue
-            self._close(p, quote, now, reason)
+            self._close(p, quote, now, r)
 
     def write_daily(self, day) -> None:
         trades = [t for t in self.store.read("trades.jsonl")

@@ -1,0 +1,146 @@
+{
+ "saved_at": "2026-09-03T15:55:01.654612",
+ "session_date": "2026-09-03",
+ "positions": [
+  {
+   "setup_id": "Crabel_Stretch",
+   "symbol": "SPY",
+   "direction": "long",
+   "entry_ts": "2026-09-03T09:39:04.908619",
+   "entry_bar_ts": "2026-09-03T09:38:00",
+   "entry_px": 769.54,
+   "shares": 12.994776100007797,
+   "spread_bp": 0.25989552199991955,
+   "stop": 766.44426,
+   "target": null,
+   "time_exit_min": null,
+   "bar_exit": null,
+   "trailing": null,
+   "state": {
+    "buy": 769.35574,
+    "sell": 766.44426,
+    "stretch": 1.4557400000000142
+   },
+   "timeframe": "1m",
+   "entry_quote_ts": "2026-09-03T09:39:05.439000",
+   "signal_id": "8133fd965a4a4c6faa85ed83d6b5dbc1"
+  },
+  {
+   "setup_id": "PDH_PDL_Breakout",
+   "symbol": "QQQ",
+   "direction": "long",
+   "entry_ts": "2026-09-03T09:40:03.366194",
+   "entry_bar_ts": "2026-09-03T09:39:00",
+   "entry_px": 712.78,
+   "shares": 14.029574342714442,
+   "spread_bp": 0.7014787171350841,
+   "stop": 709.6938,
+   "target": 718.9223999999999,
+   "time_exit_min": null,
+   "bar_exit": null,
+   "trailing": null,
+   "state": {
+    "pdh": 709.7988,
+    "pdl": 705.1,
+    "atr14": 0.7941897750455527
+   },
+   "timeframe": "5m",
+   "entry_quote_ts": "2026-09-03T09:40:03.741000",
+   "signal_id": "49f9dedd66a14cb2914654e733383e29"
+  },
+  {
+   "setup_id": "Crabel_Stretch",
+   "symbol": "QQQ",
+   "direction": "long",
+   "entry_ts": "2026-09-03T09:42:05.407601",
+   "entry_bar_ts": "2026-09-03T09:41:00",
+   "entry_px": 713.33,
+   "shares": 14.01875709699578,
+   "spread_bp": 0.28037514194125435,
+   "stop": 708.82862,
+   "target": null,
+   "time_exit_min": null,
+   "bar_exit": null,
+   "trailing": null,
+   "state": {
+    "buy": 712.87138,
+    "sell": 708.82862,
+    "stretch": 2.0213799999999877
+   },
+   "timeframe": "1m",
+   "entry_quote_ts": "2026-09-03T09:42:05.755000",
+   "signal_id": "028be7842b4248b4ac5b344c7782ff47"
+  },
+  {
+   "setup_id": "ORB_5min",
+   "symbol": "QQQ",
+   "direction": "long",
+   "entry_ts": "2026-09-03T09:52:02.539239",
+   "entry_bar_ts": "2026-09-03T09:51:00",
+   "entry_px": 713.8,
+   "shares": 14.009526478005045,
+   "spread_bp": 0.4202857943397691,
+   "stop": 710.2,
+   "target": 719.1509999999998,
+   "time_exit_min": null,
+   "bar_exit": null,
+   "trailing": null,
+   "state": {
+    "or_high": 711.66,
+    "or_low": 710.2,
+    "rvol": 1.7349713467293568
+   },
+   "timeframe": "1m",
+   "entry_quote_ts": "2026-09-03T09:52:02.982000",
+   "signal_id": "6003d5acad65429181310f41417ee208"
+  },
+  {
+   "setup_id": "IntradayMomentumBoundary",
+   "symbol": "QQQ",
+   "direction": "long",
+   "entry_ts": "2026-09-03T11:01:01.779453",
+   "entry_bar_ts": "2026-09-03T11:00:00",
+   "entry_px": 714.03,
+   "shares": 14.005013794938588,
+   "spread_bp": 0.14005013794925852,
+   "stop": null,
+   "target": null,
+   "time_exit_min": null,
+   "bar_exit": null,
+   "trailing": "imb",
+   "state": {
+    "ub": 712.9831837737568,
+    "lb": 707.121617652758,
+    "sigma": 0.0030008915717194867,
+    "vwap": 712.1454903466416
+   },
+   "timeframe": "1m",
+   "entry_quote_ts": "2026-09-03T11:01:02.461000",
+   "signal_id": "822802b643c54fab981605bf6bce114d"
+  },
+  {
+   "setup_id": "IntradayMomentumBoundary",
+   "symbol": "SPY",
+   "direction": "long",
+   "entry_ts": "2026-09-03T11:01:01.779453",
+   "entry_bar_ts": "2026-09-03T11:00:00",
+   "entry_px": 769.49,
+   "shares": 12.995620475899623,
+   "spread_bp": 0.38986861427663405,
+   "stop": null,
+   "target": null,
+   "time_exit_min": null,
+   "bar_exit": null,
+   "trailing": "imb",
+   "state": {
+    "ub": 769.4391751482409,
+    "lb": 763.6063569827776,
+    "sigma": 0.002004395296576295,
+    "vwap": 768.7165053659579
+   },
+   "timeframe": "1m",
+   "entry_quote_ts": "2026-09-03T11:01:02.635000",
+   "signal_id": "5dd4cfd204a840daad699e3ba2aab013"
+  }
+ ]
+}
