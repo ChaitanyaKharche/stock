@@ -67,6 +67,9 @@ EXIT_ALREADY_RUNNING = 4
 # EARLY_CLOSE_AFTER, the session has ended and we flatten against the last real quote.
 NO_BAR_MINUTES = 12
 EARLY_CLOSE_AFTER = dt.time(12, 30)
+FEED_HEALTHY_SEC = 120   # the feed must have answered this recently for a
+                         # bar drought to mean 'market closed' rather than
+                         # 'this machine cannot reach the data'
 
 
 @dc.dataclass
@@ -127,6 +130,7 @@ class SharesLab:
         self._degraded_seen: dict[str, int] = {}
         self._last_bar_at: dict[str, dt.datetime] = {}
         self._last_quote: dict[str, dict] = {}   # last GOOD NBBO per symbol
+        self._last_feed_ok: dt.datetime | None = None  # last successful fetch
         self._stop = False
         self._setups = {s.id: s for s in ALL_SETUPS}
         os_signal.signal(os_signal.SIGINT, self._sigint)
@@ -228,16 +232,33 @@ class SharesLab:
         print("[shares] stopped", flush=True)
 
     def _early_close(self, now) -> bool:
-        """True when the tape has clearly stopped for the day before EOD_FLAT."""
+        """True when the TAPE has stopped -- not when the NETWORK has.
+
+        The first version only asked "have bars stopped arriving?", which cannot tell a
+        half-day close from a dead wifi link or a dead Theta Terminal. On 2026-09-04 the
+        machine lost connectivity near the close and this fired at 15:58; the damage was
+        small only because the session was ending anyway. Had the link dropped at 13:00 it
+        would have flattened every position and abandoned three hours of the session.
+
+        The discriminator is whether the FEED is answering. A closed market means healthy
+        requests that return no NEW bars. A dead link means the requests themselves fail,
+        and the correct response to that is to wait, not to liquidate.
+        """
         if now.time() < EARLY_CLOSE_AFTER or not self._last_bar_at:
             return False
-        newest = max(self._last_bar_at.values())
-        return (now - newest).total_seconds() > NO_BAR_MINUTES * 60
+        if (now - max(self._last_bar_at.values())).total_seconds() <= NO_BAR_MINUTES * 60:
+            return False        # bars are still arriving; the session is running
+        if self._last_feed_ok is None:
+            return False
+        # the feed must have answered RECENTLY; otherwise this is connectivity, not a close
+        return (now - self._last_feed_ok).total_seconds() <= FEED_HEALTHY_SEC
 
     def _tick(self, now, day) -> None:
         for sym in self.symbols:
             sess = self.sessions[sym]
-            admitted = sess.accept_bars(self.feed.minute_bars(sym, day), now)
+            bars = self.feed.minute_bars(sym, day)   # raises FeedOutage if unreachable
+            self._last_feed_ok = now                 # the feed ANSWERED, whatever it said
+            admitted = sess.accept_bars(bars, now)
             n_deg = len(sess.degraded_bars)
             if n_deg > self._degraded_seen.get(sym, 0):
                 for ts in sess.degraded_bars[self._degraded_seen.get(sym, 0):]:
