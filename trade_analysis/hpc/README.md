@@ -51,30 +51,41 @@ annualisation is right.
 
 ## Order of operations
 
-**1. Build the frame** (CPU, ~1–2 h for all 769 sessions)
+Layout on Discovery, matching the actual clone:
+
+```
+~/vrp/rep/      the git clone -- disposable, re-clonable, never holds a result
+~/vrp/data/vrp/ the parquet frame -- rsynced up, NOT in git
+~/vrp/results/  outputs -- pull these down the day they appear
+```
+
+**0. Build the frame on the laptop, then push it up.** The parquet is deliberately not in
+git (derived, 37 MB, and git keeps blobs forever), so the clone arrives without it.
 
 ```bash
 python -m trade_analysis.hpc.build_vrp_dataset --symbol SPY --out data/vrp
 ```
-
-**2. Establish the bar — before requesting a single GPU hour** (CPU, minutes)
-
 ```bash
-python -m trade_analysis.hpc.har_baseline --data data/vrp
+rsync -avP data/vrp/ kharche.c@login.explorer.northeastern.edu:~/vrp/data/vrp/
 ```
 
-HAR-RV and HAR-RV-J are the benchmarks. Also reported: naive persistence, and the option
-market's own implied variance. A model that cannot beat HAR has produced nothing, and
-learning that after a cluster allocation is the expensive way to find out.
-
-**3. Run the lookahead audit. Not optional.**
+**1. Build the environment once, on a compute node** (torch is ~2.5 GB; login nodes are
+shared):
 
 ```bash
-python -m trade_analysis.hpc.har_baseline --data data/vrp --audit
+srun --partition=short --time=00:40:00 --mem=16G --pty bash
+cd ~/vrp/rep && bash trade_analysis/hpc/setup_env.sh
 ```
 
-Shifts every feature one minute into the future and re-scores. **Read it the opposite way
-to the obvious guess:** the audit deliberately *injects* a lookahead, so
+**2. Establish the bar and audit it. CPU only, no GPU requested.**
+
+```bash
+sbatch trade_analysis/hpc/submit_baseline.sbatch
+```
+
+Runs HAR-RV and HAR-RV-J against naive persistence and the option market's own implied
+variance, then re-runs with a deliberately injected one-minute lookahead. **Read the audit
+the opposite way to the obvious guess:**
 
 | result | meaning |
 |---|---|
@@ -87,7 +98,7 @@ lookahead is worth ~1.4% QLIKE here, so a model claiming a much larger margin ov
 claiming more than cheating with a minute of the future would buy.
 
 This project lost an entire result set to a 1-minute lookahead that produced 95.7% of a
-measured edge. One extra CPU run.
+measured edge. One extra CPU job.
 
 **4. Sweep on the cluster** (GPU, ~30 min per cell)
 

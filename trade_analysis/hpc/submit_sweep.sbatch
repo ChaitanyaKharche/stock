@@ -31,9 +31,18 @@ set -euo pipefail
 #
 # So: code from git, data rsynced up, results written to $HOME. Scratch is scratch --
 # fine as fast working space DURING a job, never the place a result waits for you.
+# Two separate roots, because they have different lifetimes:
+#   REPO      the git clone -- disposable, re-clonable, never holds a result
+#   VRP_ROOT  data and results -- the things you would be sad to lose
+# Both under $HOME. /scratch purges after 45 days and has already destroyed this
+# project once (the original TFT source went with it).
+REPO="${REPO:-$HOME/vrp/rep}"
 VRP_ROOT="${VRP_ROOT:-$HOME/vrp}"
-cd "$VRP_ROOT"
-mkdir -p "$VRP_ROOT/logs" "$VRP_ROOT/results"
+
+# cd into the REPO so `python -m trade_analysis.hpc...` resolves. Running from
+# $VRP_ROOT would not: the package lives in the clone, not beside it.
+cd "$REPO"
+mkdir -p "$VRP_ROOT/results"
 
 module purge
 module load cuda/12.4 || true
