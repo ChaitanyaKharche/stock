@@ -496,6 +496,10 @@ def main(argv=None) -> int:
 
     day = now_et().date()
     sys.stdout = Tee(Path(args.lab_dir) / "logs" / f"{day.isoformat()}.log")
+    # stderr too. A traceback on stderr under Task Scheduler goes nowhere, which is
+    # how a NameError that killed a whole session left no trace but a log that simply
+    # stopped mid-sentence.
+    sys.stderr = sys.stdout
 
     log("=" * 66)
     log(f"autostart invoked | local {dt.datetime.now():%H:%M:%S} | symbols {args.symbols}")
@@ -588,11 +592,28 @@ def main(argv=None) -> int:
 
     # ---- run, supervised --------------------------------------------------
     log("preflight clean; starting runner")
-    # The ledger is what makes a gap in the record readable. Written locally, needing
-    # no feed and no entitlement, so it survives exactly the failures it documents.
-    ledger.note_opened(day, args.lab_dir, arms=[n for n, _ in _arm_specs(args)])
+    # The ledger makes a gap in the record readable. Written locally, needing no feed
+    # and no entitlement, so it survives exactly the failures it documents.
+    #
+    # ledger.record() never raises -- but on 2026-09-09 this line still killed the
+    # session, because the ARGUMENT EXPRESSION was evaluated first and called a function
+    # that does not exist (_arm_specs; the real name is build_specs). A NameError in an
+    # argument list is outside the callee's protection, so 'never raises' bought nothing.
+    # Anything computed for the ledger is therefore computed defensively, here, first.
+    try:
+        arm_names = [n for n, _ in build_specs(args)]
+    except Exception as exc:                                 # noqa: BLE001
+        log(f"could not list arms for the ledger: {exc!r}")
+        arm_names = None
+    try:
+        ledger.note_opened(day, args.lab_dir, arms=arm_names)
+    except Exception as exc:                                 # noqa: BLE001
+        log(f"ledger note_opened failed, continuing anyway: {exc!r}")
     rc = supervise(args, day)
-    ledger.note_finished(day, args.lab_dir, supervisor_rc=rc)
+    try:
+        ledger.note_finished(day, args.lab_dir, supervisor_rc=rc)
+    except Exception as exc:                                 # noqa: BLE001
+        log(f"ledger note_finished failed: {exc!r}")
     return rc
 
 
