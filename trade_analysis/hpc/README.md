@@ -49,6 +49,30 @@ annualisation is right.
 
 ---
 
+## Outcome — answered 2026-09-09
+
+**The premium is real and 1.84x too small to trade.** Full write-up in
+[`research/vrp_cost_model_results.md`](../../research/vrp_cost_model_results.md).
+
+| | mean/trade | win rate | session-clustered t |
+|---|---|---|---|
+| GROSS (mid to mid) | **+$0.0205** | 68.6% | **+7.52** |
+| NET (bid to ask) | **-$0.0171** | 61.0% | **-5.38** |
+
+Spread cost $0.0376 against a $0.0205 edge. **The mid-fill assumption is the difference
+between t=+7.52 and t=-5.38** -- between a strategy and its opposite.
+
+And the trap: 61% of trades win NET, median +$0.04, mean still negative, because **the
+worst 1% of trades carry 94% of the loss.** Short gamma would look like it was working for
+months.
+
+**The GPU sweep was deliberately not run.** A model would have to beat the premium by
+nearly 2x purely to break even, and implied variance already beats HAR at forecasting
+realised variance (p=0.0222). The steps below remain reproducible; step 4 is the one that
+was judged not worth the compute.
+
+---
+
 ## Order of operations
 
 Layout on Discovery, matching the actual clone:
