@@ -71,7 +71,21 @@ def make_optimizer(params, name: str, lr: float):
             from muon import Muon                             # standalone package
             return Muon(params, lr=lr), "muon(pkg)"
         except ImportError:
-            print("  Muon unavailable in this torch; falling back to AdamW")
+            pass
+        # REFUSE, do not silently substitute.
+        #
+        # Native torch.optim.Muon landed in 2.9; the cluster env resolved to 2.6.0+cu124,
+        # where it is absent. A quiet fallback would run 12 of the sweep's 24 cells as
+        # AdamW while labelling them "muon" -- twelve duplicate GPU jobs and a results
+        # file that reads as an optimiser comparison when no comparison happened.
+        #
+        # This is the same defect the rest of this project keeps producing: a thing that
+        # looks like an input and is actually a constant. Fail with the fix instead.
+        raise SystemExit(
+            "--optimizer muon requested but unavailable "
+            f"(torch {torch.__version__}).\n"
+            "  native torch.optim.Muon needs torch >= 2.9, or: pip install muon\n"
+            "  otherwise sweep adamw only -- submit_sweep.sbatch probes and does this for you")
     return torch.optim.AdamW(params, lr=lr, weight_decay=1e-4), "adamw"
 
 
