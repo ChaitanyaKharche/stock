@@ -46,7 +46,23 @@ mkdir -p "$VRP_ROOT/results"
 
 module purge
 module load cuda/12.4 || true
-source "$HOME/venvs/vrp/bin/activate"
+# Resolve the interpreter DIRECTLY rather than activating.
+#
+# `conda activate` inside a batch job is unreliable: it is a shell function defined by
+# conda.sh, and the usual way that gets loaded is ~/.bashrc -- which on most systems
+# early-returns for NON-INTERACTIVE shells, so in an sbatch `conda` is simply not a
+# command. Calling the env's python by absolute path has no such dependency and fails
+# loudly with a path instead of silently using the wrong interpreter.
+ENV_NAME="${ENV_NAME:-vrp}"
+PY="$HOME/.conda/envs/$ENV_NAME/bin/python"
+if [ ! -x "$PY" ]; then
+  echo "no interpreter at $PY"
+  echo "build it first, on a compute node:"
+  echo "  srun --partition=short --time=00:40:00 --mem=16G --pty bash"
+  echo "  cd ~/vrp/rep && bash trade_analysis/hpc/setup_env.sh"
+  exit 1
+fi
+echo "interpreter: $PY"
 
 # 24 cells: 2 optimisers x 3 widths x 4 seeds.
 OPTS=(adamw muon)
@@ -61,7 +77,7 @@ opt=${OPTS[$(( (i / 12) % 2 ))]}
 echo "cell $i: optimizer=$opt width=$width seed=$seed"
 nvidia-smi --query-gpu=name,memory.total --format=csv,noheader || true
 
-python -m trade_analysis.hpc.train_vrp \
+"$PY" -m trade_analysis.hpc.train_vrp \
   --data "$VRP_ROOT/data/vrp" \
   --optimizer "$opt" \
   --width "$width" \

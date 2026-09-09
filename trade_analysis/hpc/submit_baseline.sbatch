@@ -28,8 +28,23 @@ VRP_ROOT="${VRP_ROOT:-$HOME/vrp}"
 cd "$REPO"
 mkdir -p "$VRP_ROOT/results"
 
-source "$HOME/.bashrc" 2>/dev/null || true
-conda activate vrp
+# Resolve the interpreter DIRECTLY rather than activating.
+#
+# `conda activate` inside a batch job is unreliable: it is a shell function defined by
+# conda.sh, and the usual way that gets loaded is ~/.bashrc -- which on most systems
+# early-returns for NON-INTERACTIVE shells, so in an sbatch `conda` is simply not a
+# command. Calling the env's python by absolute path has no such dependency and fails
+# loudly with a path instead of silently using the wrong interpreter.
+ENV_NAME="${ENV_NAME:-vrp}"
+PY="$HOME/.conda/envs/$ENV_NAME/bin/python"
+if [ ! -x "$PY" ]; then
+  echo "no interpreter at $PY"
+  echo "build it first, on a compute node:"
+  echo "  srun --partition=short --time=00:40:00 --mem=16G --pty bash"
+  echo "  cd ~/vrp/rep && bash trade_analysis/hpc/setup_env.sh"
+  exit 1
+fi
+echo "interpreter: $PY"
 
 if [ ! -d "$VRP_ROOT/data/vrp" ] || [ -z "$(ls -A "$VRP_ROOT/data/vrp" 2>/dev/null)" ]; then
   echo "NO DATA at $VRP_ROOT/data/vrp"
@@ -42,12 +57,12 @@ echo "sessions available: $(ls "$VRP_ROOT/data/vrp"/*.parquet 2>/dev/null | wc -
 
 echo
 echo "================ HONEST ================"
-python -m trade_analysis.hpc.har_baseline --data "$VRP_ROOT/data/vrp" \
+"$PY" -m trade_analysis.hpc.har_baseline --data "$VRP_ROOT/data/vrp" \
   | tee "$VRP_ROOT/results/baseline_honest.txt"
 
 echo
 echo "================ AUDIT (lookahead deliberately injected) ================"
-python -m trade_analysis.hpc.har_baseline --data "$VRP_ROOT/data/vrp" --audit \
+"$PY" -m trade_analysis.hpc.har_baseline --data "$VRP_ROOT/data/vrp" --audit \
   | tee "$VRP_ROOT/results/baseline_audit.txt"
 
 echo
