@@ -28,10 +28,28 @@ from . import options as opt
 from .clock import is_rth, now_et, offset_hours
 from .feed import FeedOutage, ThetaLiveFeed
 
+# The exchange calendar, for the warmup lookback. A weekday test is not a session test.
+try:
+    from ..bulk_download.trading_days import is_trading_day as _is_session
+except Exception:                                        # pragma: no cover
+    def _is_session(d):                                  # noqa: D103
+        return d.weekday() < 5
+
 RTH_OPEN, RTH_CLOSE = dt.time(9, 30), dt.time(16, 0)
 DELAYED_THRESHOLD_SEC = 120.0     # anything staler than this during RTH is not real-time
 
 OK, WARN, FAIL = "  [OK]  ", "  [WARN]", "  [FAIL]"
+# Stable token for callers to key on. autostart used to grep the PROSE
+# ("REACHABLE from"), which silently stopped matching the moment the
+# exposure check was rewritten to ask Windows instead of the socket --
+# turning a non-blocking warning into an abort that would have killed
+# every future session.
+EXPOSURE_TAG = "EXPOSURE:"
+# Stable token marking a failure that belongs to the OPTIONS arm ALONE. The shares arm
+# never touches an option endpoint, so an options entitlement lapse must not abort it.
+# Keyed on a token rather than the prose for the same reason EXPOSURE_TAG is -- the last
+# time a caller grepped wording, a rewrite silently turned a warning into an abort.
+OPTIONS_TAG = "OPTIONS:"
 
 
 def _lan_ip() -> str | None:
@@ -94,10 +112,11 @@ $allow = @(Get-NetFirewallRule -Direction Inbound -Action Allow -Enabled True |
     net, cat, on, n = d.get("net"), d.get("cat"), d.get("fwOn"), int(d.get("nAllow", 0))
     out = [f"  network '{net}' is {cat}; firewall {'ON' if on else 'OFF'} for that profile"]
     if not on:
-        out.append(f"{FAIL} firewall is OFF on the active profile -- the feed is exposed")
+        out.append(f"{FAIL} {EXPOSURE_TAG} firewall is OFF on the active "
+                   f"profile -- the feed is exposed")
     elif n > 0:
         sev = FAIL if cat.lower() == "public" else WARN
-        out.append(f"{sev} {n} inbound ALLOW rule(s) match the Theta Terminal binary on "
+        out.append(f"{sev} {EXPOSURE_TAG} {n} inbound ALLOW rule(s) match the Theta Terminal binary on "
                    f"the {cat} profile,")
         out.append(f"         so 25503 IS reachable from this network. On a PUBLIC or "
                    f"guest network that")
@@ -147,16 +166,16 @@ def check_options(feed, symbol, day, now) -> list[str]:
     try:
         exp = feed.zero_dte(symbol, day)
     except FeedOutage as exc:
-        return [f"{FAIL} {symbol}: expirations unavailable ({exc})"]
+        return [f"{FAIL} {OPTIONS_TAG} {symbol}: expirations unavailable ({exc})"]
     if exp is None:
         return [f"{WARN} {symbol}: no 0DTE listed for {day} "
                 "(expected on non-expiry weekdays for some symbols)"]
     try:
         chain = feed.chain_quotes(symbol, exp)
     except FeedOutage as exc:
-        return [f"{FAIL} {symbol}: chain snapshot failed -- options entitlement? ({exc})"]
+        return [f"{FAIL} {OPTIONS_TAG} {symbol}: chain snapshot failed -- entitlement? ({exc})"]
     if not chain:
-        return [f"{FAIL} {symbol}: chain returned 0 usable rows"]
+        return [f"{FAIL} {OPTIONS_TAG} {symbol}: chain returned 0 usable rows"]
     out.append(f"{OK} {symbol} 0DTE {exp}: {len(chain)} usable contracts")
 
     in_rth = is_rth(now)
@@ -166,7 +185,7 @@ def check_options(feed, symbol, day, now) -> list[str]:
         if med_age <= DELAYED_THRESHOLD_SEC:
             out.append(f"{OK} {symbol} options REAL-TIME (median quote age {med_age:.1f}s)")
         else:
-            out.append(f"{FAIL} {symbol} options DELAYED by ~{med_age/60:.1f} min.")
+            out.append(f"{FAIL} {OPTIONS_TAG} {symbol} options DELAYED by ~{med_age/60:.1f} min.")
             out.append("         The options half of the lab cannot be trusted on this tier.")
     else:
         out.append(f"{WARN} {symbol} options: median quote age {med_age/60:.1f} min "
@@ -207,6 +226,10 @@ def main(argv=None) -> int:
 
     print("\n-- exposure --")
     for line in check_exposure():
+        # --ignore-exposure was declared from the start and then never read, so
+        # the flag did nothing and exposure always counted as a hard failure.
+        if args.ignore_exposure and line.startswith(FAIL):
+            line = WARN + line[len(FAIL):]
         print(line)
         fails += line.startswith(FAIL)
 
@@ -223,11 +246,24 @@ def main(argv=None) -> int:
             fails += line.startswith(FAIL)
 
     print("\n-- warmup bars --")
+    # The three prior SESSIONS, not the three prior weekdays.
+    #
+    # This was `if d.weekday() < 5`, which silently includes market holidays. On
+    # 2026-09-08 -- the first session after Labor Day -- it picked 09-07 (a Monday, and
+    # a full closure), read 0 bars for it, and failed EVERY symbol with 'thin prior
+    # sessions [0, 390, 390]'. Preflight then aborted the entire session. That is not a
+    # once-off: it would take out the first trading day after every holiday, roughly ten
+    # sessions a year, in a forward test whose whole value is an unbroken record.
+    #
+    # trading_days.py already knows the calendar and every downloader uses it. There was
+    # never a reason for this loop to guess.
     prior, d = [], day - dt.timedelta(days=1)
-    while len(prior) < 3:
-        if d.weekday() < 5:
+    guard = 0
+    while len(prior) < 3 and guard < 40:
+        if _is_session(d):
             prior.append(d)
         d -= dt.timedelta(days=1)
+        guard += 1
     for sym in args.symbols:
         try:
             counts = [len(feed.minute_bars(sym, p)) for p in prior]

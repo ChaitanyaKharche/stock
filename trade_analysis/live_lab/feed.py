@@ -15,6 +15,7 @@ computed in options.py and always labelled *_derived.
 """
 from __future__ import annotations
 
+import concurrent.futures as cf
 import csv
 import datetime as dt
 import io
@@ -26,6 +27,7 @@ import httpx
 BASE_URL = "http://127.0.0.1:25503/v3"
 SESSION_OPEN = dt.time(9, 30)
 SESSION_LAST_BAR = dt.time(15, 59)
+BAR_SECONDS = 60          # must match session.BAR_SECONDS; see _serve_from_cache
 
 
 class FeedOutage(Exception):
@@ -43,6 +45,9 @@ class ThetaLiveFeed:
         self._on_outage = on_outage
         self.calls = 0
         self.retries = 0
+        self._bar_cache: dict[tuple[str, dt.date], list[dict]] = {}
+        self.cache_hits = 0
+        self.cache_misses = 0
 
     # ------------------------------------------------------------------ transport
 
@@ -98,12 +103,70 @@ class ThetaLiveFeed:
             "ask_size": _f(r.get("ask_size")),
         }
 
-    def minute_bars(self, symbol: str, day: dt.date) -> list[dict]:
+    def minute_bars(self, symbol: str, day: dt.date,
+                    now: dt.datetime | None = None) -> list[dict]:
         """RTH 1-minute bars for `day`, 09:30..15:59.
 
         Drops the 16:00 settlement stub (all-zero OHLCV) and any zero-volume null row.
         Bars are returned in ascending time order with naive-ET timestamps.
+
+        `now` is OPT-IN caching. Omit it and every call goes to the wire, which is what
+        replay, walkforward and preflight want. Pass the live loop's clock and the result
+        is served from memory whenever the cache provably already holds every bar the
+        session could admit -- see `_serve_from_cache`. A live loop polls every 5s but a
+        1-minute bar changes once a minute, so this removes ~12x of pure waste and is the
+        prerequisite for running more than a couple of symbols inside one poll interval.
         """
+        if now is not None:
+            hit = self._serve_from_cache(symbol, day, now)
+            if hit is not None:
+                self.cache_hits += 1
+                return hit
+            self.cache_misses += 1
+        out = self._fetch_minute_bars(symbol, day)
+        if now is not None:
+            self._bar_cache[(symbol, day)] = out
+        return out
+
+    def _serve_from_cache(self, symbol: str, day: dt.date,
+                          now: dt.datetime) -> list[dict] | None:
+        """The cached bars, but ONLY when serving them is exactly equivalent to refetching.
+
+        A bar stamped T covers [T, T+60s) and `SessionState.bar_is_complete` refuses to
+        admit it before T + 60s + settle. So at wall clock `now` the newest bar any session
+        could possibly admit is stamped `floor_minute(now - 60s)`. If the cache already
+        reaches that stamp then it contains every admissible bar -- bars are contiguous and
+        ascending -- and `accept_bars` sees an identical set. That is an equality, not an
+        approximation, and it is why this cache cannot change a single fill.
+
+        Deliberately ignoring `settle` (rather than adding it) keeps the guarantee one-sided:
+        the cache demands the bar up to 1.5s EARLIER than the session needs it, so any error
+        is in the direction of refetching too often. It also means the guarantee holds for
+        any settle_ms >= 0, so tuning settle can never silently break this.
+
+        Two behaviours fall out for free and are the reason it is written as an invariant
+        rather than a timer:
+          * a bar the vendor publishes LATE is polled for every tick until it arrives,
+            instead of being missed until the next minute;
+          * during a network outage the cache stops answering within 60s, so it can never
+            hide a dead link from the caller for longer than one bar.
+        """
+        bars = self._bar_cache.get((symbol, day))
+        if bars is None:
+            return None                      # never fetched -- must go to the wire
+        if day < now.date():
+            return bars                      # a closed session cannot gain bars
+        newest = (now - dt.timedelta(seconds=BAR_SECONDS)).replace(second=0, microsecond=0)
+        last_rth = dt.datetime.combine(day, SESSION_LAST_BAR)
+        if newest > last_rth:
+            newest = last_rth                # nothing is published after 15:59
+        if newest < dt.datetime.combine(day, SESSION_OPEN):
+            return bars                      # pre-open: no bar is admissible yet
+        if bars and bars[-1]["ts"] >= newest:
+            return bars
+        return None                          # a newer admissible bar may exist
+
+    def _fetch_minute_bars(self, symbol: str, day: dt.date) -> list[dict]:
         iso = day.isoformat()
         rows = self._get_csv("/stock/history/ohlc", symbol=symbol,
                              start_date=iso, end_date=iso, interval="1m")
@@ -124,6 +187,65 @@ class ThetaLiveFeed:
                         "close": c, "volume": v})
         out.sort(key=lambda b: b["ts"])
         return out
+
+    # ------------------------------------- concurrent fan-out (many symbols, one tick)
+
+    def _fan_out(self, symbols, fn, workers: int = 8):
+        """Run `fn(symbol)` across symbols concurrently, isolating per-symbol failures.
+
+        Returns (results, errors). A symbol that raises lands in `errors` and is simply
+        absent from `results` -- one unreachable symbol must not blank out the other
+        fourteen, which is what a bare loop would do by propagating the first exception.
+
+        Why this exists: the bar cache fixes SUSTAINED feed load but not the PEAK. Every
+        symbol waits on the same minute boundary, so on the one tick per minute where the
+        new bar lands, all of them refetch at once. Sequentially that tick costs
+        N x 477 ms -- at 15 symbols the last name in the list fills ~14 s after its bar
+        closed. These are momentum entries, so that delay is systematically adverse rather
+        than zero-mean, and 14 s of QQQ drift is a meaningful slice of a 3.34 bp edge.
+        Fanning out collapses the boundary tick to roughly one call's latency.
+
+        httpx.Client is thread-safe for concurrent requests; the counters are plain ints
+        and may under-count under contention, which is acceptable for a statistic and is
+        never used for control flow beyond "did anything reach the wire".
+
+        workers=8 is MEASURED, not guessed. Against the local gateway, 15 symbols
+        (bars + quotes, best of 3, warm):
+
+            workers   1      2      4      6      8      12     15
+            seconds   6.76   3.38   2.40   2.09   1.59   1.93   2.55
+
+        It gets WORSE past 8 -- the Theta Terminal is one local process and starts
+        contending with itself, so raising this to match the universe size would slow
+        the tick down rather than speed it up.
+        """
+        symbols = list(symbols)
+        results: dict[str, Any] = {}
+        errors: dict[str, Exception] = {}
+        if not symbols:
+            return results, errors
+        if len(symbols) == 1:
+            try:
+                results[symbols[0]] = fn(symbols[0])
+            except Exception as exc:              # noqa: BLE001
+                errors[symbols[0]] = exc
+            return results, errors
+        with cf.ThreadPoolExecutor(max_workers=min(workers, len(symbols))) as pool:
+            futs = {pool.submit(fn, s): s for s in symbols}
+            for fut in cf.as_completed(futs):
+                s = futs[fut]
+                try:
+                    results[s] = fut.result()
+                except Exception as exc:          # noqa: BLE001
+                    errors[s] = exc
+        return results, errors
+
+    def minute_bars_many(self, symbols, day: dt.date, now: dt.datetime | None = None,
+                         workers: int = 8):
+        return self._fan_out(symbols, lambda s: self.minute_bars(s, day, now=now), workers)
+
+    def stock_quote_many(self, symbols, workers: int = 8):
+        return self._fan_out(symbols, self.stock_quote, workers)
 
     # ------------------------------------------------------------------ options
 
@@ -185,7 +307,9 @@ class ThetaLiveFeed:
         return out
 
     def stats(self) -> dict:
-        return {"calls": self.calls, "retries": self.retries}
+        return {"calls": self.calls, "retries": self.retries,
+                "bar_cache_hits": self.cache_hits,
+                "bar_cache_misses": self.cache_misses}
 
 
 # --------------------------------------------------------------------------- helpers

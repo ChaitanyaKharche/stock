@@ -1,0 +1,73 @@
+{
+  "frozen_at": "2026-09-05T02:45:00-04:00",
+  "frozen_by": "shares_lab_preregistration.md",
+  "start_date": "2026-09-01",
+  "arm": "SHARES",
+  "note": "The shares arm ran from 2026-09-01 with NO freeze manifest, which meant the dashboard applied no config filter at all and the clock rule was unenforced on this arm. Writing it now, at the moment the universe widens, rather than later when the choice could be influenced by results.",
+
+  "accepted_config_hashes": {
+    "53229d6f1f24df10": "2026-09-01 .. 2026-09-04, universe QQQ+SPY, 80 trades.",
+    "b53ca8a58aa11718": "from 2026-09-05, universe widened to the 15 names cleared by spread_survey_results.md. Setups, fill rule, notional, caps and EOD flatten are BYTE-IDENTICAL to the previous hash; `symbols` is the only field that differs."
+  },
+
+  "why_both_hashes_pool": [
+    "Widening the universe forks the hash, and the default assumption -- stated in spread_survey_results.md section 6 -- was that this 'restarts the shares count at zero'. Checking the code rather than assuming, it does not, because the shares arm has NO cross-symbol coupling:",
+    "  * max_per_day is counted against (setup_id, symbol)   -- shares_runner.py, self.counts",
+    "  * max_per_direction against (setup_id, symbol, direction) -- self.dircnt",
+    "  * the one-open-position-per-setup rule filters `p.symbol == sym` before taking setup ids",
+    "  * there is no global position cap and no shared capital constraint; every trade is an independent $10,000 clip",
+    "Therefore a QQQ signal is evaluated, capped and filled identically whether the universe holds 2 names or 15. A QQQ trade under either hash is a draw from the same distribution, and pooling them is valid rather than merely convenient. The 80 trades already collected are NOT discarded.",
+    "The one residual coupling is operational, not definitional: symbols share one feed connection, so gateway saturation could drop a symbol for a tick. Measured sustained load at 15 symbols is 51% of the poll budget and per-symbol failures are isolated by feed._fan_out, but a sustained rise in `bars_failed` outages would break this justification and must be treated as such."
+  ],
+
+  "composition_rule": "Symbol is a CLUSTERING variable, never a hypothesis. The family stays at 13 setups; results pool across symbols and are never reported per (setup x symbol), which would be 195 cells. Every interval must resample DATES and account for same-day cross-symbol correlation -- with 15 correlated names the design effect is far larger than it was with 2, so trade count overstates information by more than it used to. n is not evidence; effective n is.",
+
+  "universe_changes": [
+    {"date": "2026-09-01", "symbols": ["QQQ", "SPY"], "reason": "arm opened"},
+    {"date": "2026-09-05", "symbols": ["SPY", "QQQ", "IWM", "DIA", "XLK", "XLY", "XLI", "XLV", "XLP", "XLE", "XLF", "NVDA", "AAPL", "GOOGL", "WMT"], "reason": "spread survey: 15 of 51 candidates carry a 3.34 bp edge after round-trip spread. Enabled by the per-minute bar cache and concurrent fan-out, which took sustained feed capacity from ~5 to ~29 symbols."}
+  ],
+
+  "checkpoints": {
+    "200_per_setup": "first serious evaluation; promotion bar becomes live",
+    "377_per_setup": "raw-count checkpoint, inherited from the 2-symbol design",
+    "60_sessions": "the checkpoint that actually governs; see min_sessions"
+  },
+
+  "promotion_bar": {
+    "min_n": 200,
+    "min_sessions": 60,
+    "holm_alpha": 0.05,
+    "family_size": 13,
+    "must_cluster_on": ["date", "symbol"],
+    "split_half_must_agree": true
+  },
+
+  "why_min_sessions_was_added": [
+    "Added 2026-09-05, BEFORE any broadened data existed and therefore before it could be influenced by a result. It makes the bar STRICTER, never looser, which is the only direction a pre-registered bar may move.",
+    "n=377 was computed for a 2-symbol arm where trades were close to independent. Broadening to 15 names multiplies raw trades by ~7.5 without multiplying information by anything like that: SPY, QQQ, DIA, IWM and XLK are largely the same bet on the same day, and every interval here resamples DATES, so correlated same-day trades collapse into one cluster.",
+    "Measured signal frequency (trade_analysis/live_lab/replay.py, 75 symbol-days) puts IMB at 2.03 signals per symbol-day, and IMB's max_per_day=4 never binds -- 0 cap skips in the live record -- so 15 symbols yield roughly 22-32 IMB trades per session. Raw n=377 therefore arrives in 12-17 sessions.",
+    "Hitting 377 in three weeks would NOT mean the result is powered. It would mean the counter moved. Confidence-interval width here is driven by the number of SESSIONS, not the number of trades, because that is the level resampling happens at. min_sessions makes the governing quantity explicit so the raw counter cannot be mistaken for evidence.",
+    "60 sessions is roughly 3 months. The honest expectation for a powered IMB verdict is 3-4 months, not the 5-7 estimated in spread_survey_results.md and not the 3 weeks the raw count will suggest."
+  ],
+
+  "primary_question": "IntradayMomentumBoundary is the only setup of the 13 that survived the historical audit (+$3.34/trade over 2,905 QQQ trades, Holm 0.0043; persistent across all five time-series tests). The live arm exists to test that number forward. At 12 trades it reads +$3.55 with a CI of [-7.27, +29.37] -- consistent with the backtest, with zero, and with -$5. Broadening is a way to reach n faster, NOT a new hypothesis.",
+
+  "clock_rule": "The trade counter NEVER resets. It is cumulative from start_date across the accepted hashes. A setup performing badly is a RESULT, not a reason to restart its clock. Widening the universe is the only reason a hash may be added, it must be recorded in universe_changes on the day it happens, and it may never be done in response to results.",
+
+  "family_size": 13,
+  "setups": [
+    "ORB_5min",
+    "ORB_15min",
+    "VWAP_Reclaim",
+    "MOMO_CHASE",
+    "IntradayMomentumBoundary",
+    "TTM_Squeeze",
+    "PDH_PDL_Breakout",
+    "PDH_PDL_FailedBreak",
+    "VWAP_2sigma_Fade",
+    "EMA_9_20_Pullback",
+    "ThreeBarPlay",
+    "Crabel_Stretch",
+    "Gap_Fade"
+  ]
+}

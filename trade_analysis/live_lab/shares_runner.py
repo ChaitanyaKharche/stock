@@ -59,6 +59,14 @@ SPEC_VERSION = "shares_lab_preregistration.md @ 2026-08-31"
 RTH_OPEN, RTH_CLOSE = dt.time(9, 30), dt.time(16, 0)
 EOD_FLAT = dt.time(15, 55)
 NOTIONAL = 10_000.0
+# A quote may be neither too OLD nor dated in the FUTURE. The staleness test used to be
+# one-sided (`age > STALE_QUOTE_SEC`), so a quote stamped ahead of the local clock had a
+# NEGATIVE age and sailed straight through. Live that can only mean clock skew, and this
+# lab is unusually exposed to it: the machine runs MST with no DST and every reading is
+# converted to ET through a fixed offset in clock.py, so a wrong offset presents exactly
+# as future-dated quotes. The failure mode is silent and total -- every fill priced off a
+# quote from another time. Cheap to detect, so detect it.
+FUTURE_QUOTE_SEC = 5.0
 STALE_QUOTE_SEC = 5.0
 EXIT_ALREADY_RUNNING = 4
 # Early-close detection. On a half day the tape stops at 13:00 but EOD_FLAT is 15:55, so a
@@ -94,6 +102,31 @@ class SharePos:
 
     def to_row(self) -> dict:
         return dc.asdict(self)
+
+
+# The broadened universe, selected on measured round-trip spread ALONE
+# (research/spread_survey_results.md, 51 candidates over 5 sessions, 09:45-15:45 ET).
+#
+# The selection rule is the whole point: the shares edge is +3.34 bp per trade GROSS, and
+# round-trip spread comes straight off that. 16 of the 51 candidates -- including AMD, JPM,
+# COST, CRM and COIN, exactly the household names "top 10 by option volume" would have
+# picked -- have a MEDIAN spread wider than the entire edge. Option volume is irrelevant
+# here; only spread is.
+#
+# 11 of 15 are ETFs on purpose. ETFs have no earnings, and four of the frozen setups
+# (PDH_PDL_Breakout, PDH_PDL_FailedBreak, Gap_Fade, Crabel_Stretch) behave pathologically
+# on the session after an earnings gap. The shares arm has no earnings filter, so single
+# names are held to four -- enough to test whether the family generalises beyond ETFs
+# at all, few enough that it cannot dominate the pooled estimate.
+#
+# Symbol is a CLUSTERING variable, not a hypothesis. The family stays at 13 setups and
+# results pool across symbols; testing 13 x 15 = 195 cells would spend the entire
+# multiplicity budget on noise.
+BROAD_UNIVERSE = [
+    "SPY", "QQQ", "IWM", "DIA",                       # broad index   0.26-0.56 bp
+    "XLK", "XLY", "XLI", "XLV", "XLP", "XLE", "XLF",  # sector        0.86-1.73 bp
+    "NVDA", "AAPL", "GOOGL", "WMT",                   # single name   0.89-1.18 bp
+]
 
 
 def build_config(symbols):
@@ -254,11 +287,37 @@ class SharesLab:
         return (now - self._last_feed_ok).total_seconds() <= FEED_HEALTHY_SEC
 
     def _tick(self, now, day) -> None:
+        """Three phases: fetch bars for every symbol, then quotes for the symbols that
+        actually admitted one, then the per-symbol decision logic.
+
+        Split this way because both I/O phases fan out concurrently while the decision
+        phase must stay strictly sequential and ordered -- it mutates shared state
+        (open_pos, the per-day caps) and its ordering has to be reproducible. Iterating
+        symbols one at a time and doing bars/quote/decide inside the loop, as this used
+        to, made the tick cost N x 2 x 477 ms and put the last symbol in the list ~14 s
+        behind its own bar at a 15-symbol universe.
+        """
+        before = self.feed.calls
+        bars_by, errs = self.feed.minute_bars_many(self.symbols, day, now=now)
+        if errs and not bars_by:
+            raise next(iter(errs.values()))       # total failure: the link, not a symbol
+        for sym, exc in errs.items():
+            self.store.outage("bars_failed", repr(exc), symbol=sym)
+        if not errs and self.feed.calls > before:
+            # Only a clean call that actually reached the wire is evidence the link is up.
+            # Advancing this on a cache hit would let _early_close() mistake a dead network
+            # for a closed tape -- the exact confusion this field exists to prevent -- so
+            # the bar cache must stay invisible to it. A tick with ANY failed symbol does
+            # not advance it either: that errs on the side of not flattening, and
+            # flattening a live position against a stale mark is the worse mistake.
+            self._last_feed_ok = now
+
+        admitted_by: dict[str, list] = {}
         for sym in self.symbols:
+            if sym not in bars_by:
+                continue
             sess = self.sessions[sym]
-            bars = self.feed.minute_bars(sym, day)   # raises FeedOutage if unreachable
-            self._last_feed_ok = now                 # the feed ANSWERED, whatever it said
-            admitted = sess.accept_bars(bars, now)
+            admitted = sess.accept_bars(bars_by[sym], now)
             n_deg = len(sess.degraded_bars)
             if n_deg > self._degraded_seen.get(sym, 0):
                 for ts in sess.degraded_bars[self._degraded_seen.get(sym, 0):]:
@@ -268,12 +327,30 @@ class SharesLab:
             if not admitted:
                 continue
             self._last_bar_at[sym] = now
+            admitted_by[sym] = admitted
 
-            quote = self.feed.stock_quote(sym)
-            if quote and (now - quote["ts"]).total_seconds() > STALE_QUOTE_SEC:
-                self.store.outage("stale_quote", f"{sym} age="
-                                  f"{(now - quote['ts']).total_seconds():.1f}s")
-                quote = None
+        if not admitted_by:
+            return
+        quotes, qerrs = self.feed.stock_quote_many(list(admitted_by))
+        for sym, exc in qerrs.items():
+            self.store.outage("quote_failed", repr(exc), symbol=sym)
+
+        for sym in self.symbols:                  # sequential and ordered, by design
+            admitted = admitted_by.get(sym)
+            if not admitted:
+                continue
+            sess = self.sessions[sym]
+            quote = quotes.get(sym)
+            if quote is not None:
+                age = (now - quote["ts"]).total_seconds()
+                if age > STALE_QUOTE_SEC:
+                    self.store.outage("stale_quote", f"{sym} age={age:.1f}s")
+                    quote = None
+                elif age < -FUTURE_QUOTE_SEC:
+                    self.store.outage("future_quote", f"{sym} quote is {-age:.1f}s AHEAD "
+                                      f"of the local clock -- suspect timezone/clock skew",
+                                      symbol=sym)
+                    quote = None
             if quote is None:
                 continue          # never fill against a stale or missing NBBO
             self._last_quote[sym] = quote
@@ -463,7 +540,7 @@ class SharesLab:
 
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description="Live SHARES paper lab (no orders).")
-    ap.add_argument("--symbols", nargs="+", default=["QQQ", "SPY"])
+    ap.add_argument("--symbols", nargs="+", default=list(BROAD_UNIVERSE))
     ap.add_argument("--lab-dir", default=str(Path(DEFAULT_LAB_DIR) / "shares"))
     ap.add_argument("--print-config", action="store_true")
     args = ap.parse_args(argv)

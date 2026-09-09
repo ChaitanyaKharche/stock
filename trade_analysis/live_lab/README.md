@@ -135,3 +135,44 @@ confirmation and are not.
 non-functional (`alpaca` is not installed, and its credentials are absent), contains real
 `submit_order` calls, and evaluates signals on the **currently-forming bar** — the specific
 failure this lab is built to avoid. It is left in place as a record, not reused.
+
+## The session ledger
+
+`live_lab_data/session_ledger.jsonl` — one durable line per state change, per day.
+
+A missing `daily/<date>.json` used to be ambiguous five ways: market shut, ran but no
+trades, aborted, machine off, or crashed mid-session. Those mean completely different
+things when reading a forward test, and the filesystem cannot tell them apart. 2026-09-08
+made the cost concrete: the options arm was blocked by a lapsed subscription and the
+shares arm started two hours late, and the only trace of either was prose in a log.
+
+    python -m trade_analysis.live_lab.ledger              # coverage table
+    python -m trade_analysis.live_lab.ledger --reconcile  # backfill what can be inferred
+
+States: `COLLECTED` `PARTIAL` `ABORTED` `MISSED` `INTERRUPTED` `NOT_A_SESSION` `OPENED`.
+
+It is written **locally**, needing no feed, no network and no entitlement, so it survives
+exactly the failures it documents. `autostart` records at every exit path, and calls
+`reconcile()` on the way in to supply the one record the lab can never write for itself:
+the day it never ran.
+
+Contingencies, all covered and tested:
+
+| failure | handling |
+|---|---|
+| feed / API down | local file; nothing here touches a network |
+| machine off, task never fired | `reconcile()` walks the exchange calendar, emits `MISSED` |
+| crashed mid-session | a day left `OPENED` becomes `INTERRUPTED` |
+| task retries all day | every attempt appends, so `attempts` is real |
+| repeated backfill | `dedupe=True` on reconcile paths only, so it stays idempotent |
+| disk full / read-only | every write best-effort; a ledger failure never stops a session |
+| corrupt line | skipped on read; one bad append cannot destroy the history |
+| clock / DST | timestamps are exchange time and carry their offset |
+
+**`reconcile()` consults the daily files before calling a day missed.** The first version
+did not, and on a lab collecting since 2026-08-28 it confidently rewrote six good sessions
+as "the lab did not run". A record that contradicts the data on disk is worse than none.
+
+It records coverage only — no P&L, no trades, no judgement about whether a session was
+*good*. Mixing those in would make the denominator depend on the results it exists to
+contextualise.

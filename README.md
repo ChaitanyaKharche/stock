@@ -113,7 +113,11 @@ python -m trade_analysis.live_trading.retest_breakout_websocket
 
 `trained_models/*.pth` / `*.joblib` are checkpoints from an earlier HPC training
 run (`srun --gres=gpu:h100:1`) whose original model-definition source file was
-lost. `trade_analysis/models/tft_model.py` is a **reverse-engineered
+lost. **Confirmed permanently unrecoverable on 2026-09-09:** it lived under
+`/scratch/kharche.c/` on Discovery, which purges after 45 days of no access, and
+that tree no longer exists. The checkpoints survive only because they were copied
+into this repo. It costs little -- the model was measured and found degenerate --
+but it is the reason nothing that matters is left on scratch again. `trade_analysis/models/tft_model.py` is a **reverse-engineered
 reconstruction** of that architecture from the checkpoints' tensor shapes and
 embedded config — the weights load correctly, but:
 

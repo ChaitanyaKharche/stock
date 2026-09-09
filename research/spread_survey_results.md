@@ -112,8 +112,20 @@ correlated names are not independent (`DEFF = 1 + (m−1)ρ`). Time-to-verdict o
 ~14 months to roughly **5–7**.
 
 **Costs:**
-- `symbols` is inside the shares config hash, so this **forks it and restarts the shares
-  count at zero**. Currently 31 trades — cheap now, expensive in three months.
+- ~~`symbols` is inside the shares config hash, so this **forks it and restarts the shares
+  count at zero**. Currently 31 trades — cheap now, expensive in three months.~~
+
+  **CORRECTED 2026-09-05 — this was wrong, and I asserted it without checking.** The hash
+  does fork (`53229d6f1f24df10` → `b53ca8a58aa11718`), but the count does **not** restart,
+  because the shares arm has no cross-symbol coupling anywhere:
+  `max_per_day` is counted against `(setup_id, symbol)`, `max_per_direction` against
+  `(setup_id, symbol, direction)`, the one-open-per-setup rule filters `p.symbol == sym`
+  first, and there is no global position or capital cap. A QQQ signal is therefore
+  evaluated, capped and filled identically whether the universe holds 2 names or 15, so
+  QQQ trades under the two hashes are draws from the same distribution and pool validly.
+  **The 80 trades collected under the narrow universe are kept.** Recorded in
+  `live_lab_data/shares/FREEZE.json` under `why_both_hashes_pool`, with the residual
+  operational coupling (shared feed connection) named as the condition that would void it.
 - 1,040 (setup × symbol) cells if analysed per name. The design must keep the family at
   **13 setups**, pool across symbols, and treat symbol as a clustering variable rather than
   a hypothesis.
@@ -129,3 +141,11 @@ on single names, and adding symbols would fork the frozen hash and discard 73 tr
 3. If median lag stays ≈1 min, expand to the full 15 and fork the hash once, not twice.
 
 Doing step 3 before step 1 would reproduce the stale-fill failure on 15 symbols instead of 2.
+
+**DONE 2026-09-05, and the staging in step 2 turned out to be unnecessary** — see
+`runner_capacity_results.md`. The cache alone did not clear 15 symbols: it fixes
+*sustained* load (~5 → ~29 symbols) but not the *peak*, because every symbol waits on the
+same minute boundary and their refetches collide on one tick. Concurrent fan-out was
+needed as well, and with both, the measured boundary tick at 15 symbols is **1.59 s**
+against a 5 s poll. The week-long 6-symbol stage was there to watch for lag that the
+measurement shows cannot occur, so it would have cost a week and learned nothing.

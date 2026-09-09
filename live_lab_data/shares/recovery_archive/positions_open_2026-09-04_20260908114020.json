@@ -1,0 +1,75 @@
+{
+ "saved_at": "2026-09-04T15:58:36.150539",
+ "session_date": "2026-09-04",
+ "positions": [
+  {
+   "setup_id": "PDH_PDL_FailedBreak",
+   "symbol": "QQQ",
+   "direction": "short",
+   "entry_ts": "2026-09-04T10:35:03.737274",
+   "entry_bar_ts": "2026-09-04T10:34:00",
+   "entry_px": 718.78,
+   "shares": 13.912462784162052,
+   "spread_bp": 0.278249255682988,
+   "stop": 721.86,
+   "target": 712.44,
+   "time_exit_min": null,
+   "bar_exit": null,
+   "trailing": null,
+   "state": {
+    "pdh": 718.915,
+    "atr14": 0.8615048544521251
+   },
+   "timeframe": "5m",
+   "entry_quote_ts": "2026-09-04T10:35:05.174000",
+   "signal_id": "6f5cc9217e2e4692919ccb152e63a4ca"
+  },
+  {
+   "setup_id": "Crabel_Stretch",
+   "symbol": "SPY",
+   "direction": "short",
+   "entry_ts": "2026-09-04T10:43:06.252367",
+   "entry_bar_ts": "2026-09-04T10:42:00",
+   "entry_px": 770.48,
+   "shares": 12.978922230297997,
+   "spread_bp": 0.38936766690858576,
+   "stop": 773.29174,
+   "target": null,
+   "time_exit_min": null,
+   "bar_exit": null,
+   "trailing": null,
+   "state": {
+    "buy": 773.29174,
+    "sell": 770.72826,
+    "stretch": 1.2817400000000134
+   },
+   "timeframe": "1m",
+   "entry_quote_ts": "2026-09-04T10:43:07.979000",
+   "signal_id": "62d08ec4d2714041a699c447b8e4f515"
+  },
+  {
+   "setup_id": "IntradayMomentumBoundary",
+   "symbol": "SPY",
+   "direction": "short",
+   "entry_ts": "2026-09-04T15:31:06.328110",
+   "entry_bar_ts": "2026-09-04T15:30:00",
+   "entry_px": 769.92,
+   "shares": 12.988362427265171,
+   "spread_bp": 0.12988362427253358,
+   "stop": null,
+   "target": null,
+   "time_exit_min": null,
+   "bar_exit": null,
+   "trailing": "imb",
+   "state": {
+    "ub": 774.9483096119383,
+    "lb": 770.2243503239789,
+    "sigma": 0.002312987754071968,
+    "vwap": 770.4170381414468
+   },
+   "timeframe": "1m",
+   "entry_quote_ts": "2026-09-04T15:31:08.897000",
+   "signal_id": "33b6a5bf69b34bf796c73a4bfa18653b"
+  }
+ ]
+}

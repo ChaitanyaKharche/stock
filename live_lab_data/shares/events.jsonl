@@ -17,3 +17,22 @@
 {"seq":4991,"ts":"2026-09-04T09:35:00.491058","kind":"warmup","symbol":"SPY","sessions_used":25,"has_stretch":true}
 {"seq":4992,"ts":"2026-09-04T09:35:00.544783","kind":"recovery_rejected","reason":"recovery file is for session 2026-09-03, today is 2026-09-04","n_positions":6,"archived_to":"positions_open_2026-09-03_20260904093500.json"}
 {"seq":6499,"ts":"2026-09-04T15:58:15.064598","kind":"early_close","at":"2026-09-04T15:58:08.026348"}
+{"seq":6503,"ts":"2026-09-08T09:56:40.581496","kind":"start","config_hash":"b53ca8a58aa11718","symbols":["SPY","QQQ","IWM","DIA","XLK","XLY","XLI","XLV","XLP","XLE","XLF","NVDA","AAPL","GOOGL","WMT"],"spec":"shares_lab_preregistration.md @ 2026-08-31","notional":10000.0}
+{"seq":6506,"ts":"2026-09-08T09:57:47.697161","kind":"aborted","reason":"warmup_feed_unreachable"}
+{"seq":6507,"ts":"2026-09-08T11:34:28.935055","kind":"start","config_hash":"b53ca8a58aa11718","symbols":["SPY","QQQ","IWM","DIA","XLK","XLY","XLI","XLV","XLP","XLE","XLF","NVDA","AAPL","GOOGL","WMT"],"spec":"shares_lab_preregistration.md @ 2026-08-31","notional":10000.0}
+{"seq":6508,"ts":"2026-09-08T11:34:59.299498","kind":"warmup","symbol":"SPY","sessions_used":24,"has_stretch":true}
+{"seq":6509,"ts":"2026-09-08T11:35:25.248752","kind":"warmup","symbol":"QQQ","sessions_used":24,"has_stretch":true}
+{"seq":6510,"ts":"2026-09-08T11:35:37.949642","kind":"warmup","symbol":"IWM","sessions_used":24,"has_stretch":true}
+{"seq":6511,"ts":"2026-09-08T11:35:46.359610","kind":"warmup","symbol":"DIA","sessions_used":24,"has_stretch":true}
+{"seq":6512,"ts":"2026-09-08T11:35:57.992337","kind":"warmup","symbol":"XLK","sessions_used":24,"has_stretch":true}
+{"seq":6513,"ts":"2026-09-08T11:36:07.547193","kind":"warmup","symbol":"XLY","sessions_used":24,"has_stretch":true}
+{"seq":6514,"ts":"2026-09-08T11:36:17.092902","kind":"warmup","symbol":"XLI","sessions_used":24,"has_stretch":true}
+{"seq":6515,"ts":"2026-09-08T11:36:27.015509","kind":"warmup","symbol":"XLV","sessions_used":24,"has_stretch":true}
+{"seq":6516,"ts":"2026-09-08T11:36:35.657692","kind":"warmup","symbol":"XLP","sessions_used":24,"has_stretch":true}
+{"seq":6517,"ts":"2026-09-08T11:36:51.473177","kind":"warmup","symbol":"XLE","sessions_used":24,"has_stretch":true}
+{"seq":6518,"ts":"2026-09-08T11:37:01.642678","kind":"warmup","symbol":"XLF","sessions_used":24,"has_stretch":true}
+{"seq":6519,"ts":"2026-09-08T11:38:47.144990","kind":"warmup","symbol":"NVDA","sessions_used":24,"has_stretch":true}
+{"seq":6520,"ts":"2026-09-08T11:39:24.920556","kind":"warmup","symbol":"AAPL","sessions_used":24,"has_stretch":true}
+{"seq":6521,"ts":"2026-09-08T11:40:01.520497","kind":"warmup","symbol":"GOOGL","sessions_used":24,"has_stretch":true}
+{"seq":6522,"ts":"2026-09-08T11:40:20.513000","kind":"warmup","symbol":"WMT","sessions_used":24,"has_stretch":true}
+{"seq":6523,"ts":"2026-09-08T11:40:20.531632","kind":"recovery_rejected","reason":"recovery file is for session 2026-09-04, today is 2026-09-08","n_positions":3,"archived_to":"positions_open_2026-09-04_20260908114020.json"}

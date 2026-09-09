@@ -70,7 +70,15 @@ def session_coverage(store) -> list[str]:
         return ["  (no FREEZE.json -- cannot determine coverage)"]
     start = _dt.date.fromisoformat(fz["start_date"])
     today = _dt.date.today()
-    daily_dir, log_dir = store.root / "daily", store.root / "logs"
+    daily_dir = store.root / "daily"
+    # autostart tees ONE log per day for both arms at the lab ROOT, so a sub-arm store
+    # (live_lab_data/shares) has no logs/ of its own. Looking only in store.root made
+    # every shares session without a summary read as "never ran" -- the most alarming
+    # classification -- when the log sitting one level up proves it ran all day and only
+    # the summary was lost. Search both, nearest first.
+    log_dirs = [store.root / "logs", store.root.parent / "logs"]
+    # A session that left trades behind demonstrably ran, whatever else is missing.
+    traded = {str(t.get("entry_ts", ""))[:10] for t in store.read("trades.jsonl")}
     recorded, holidays, gaps = [], [], []
     d = start
     while d <= today:
@@ -78,15 +86,19 @@ def session_coverage(store) -> list[str]:
             if (daily_dir / f"{d.isoformat()}.json").exists():
                 recorded.append(d)
             else:
-                lg = log_dir / f"{d.isoformat()}.log"
                 txt = ""
-                if lg.exists():
-                    try:
-                        txt = lg.read_text(encoding="utf-8", errors="replace")
-                    except OSError:
-                        pass
+                for ld in log_dirs:
+                    lg = ld / f"{d.isoformat()}.log"
+                    if lg.exists():
+                        try:
+                            txt = lg.read_text(encoding="utf-8", errors="replace")
+                        except OSError:
+                            pass
+                        break
                 if "market holiday" in txt or "looks like a market holiday" in txt:
                     holidays.append(d)
+                elif d.isoformat() in traded:
+                    gaps.append((d, "RAN and traded, but no daily summary was written"))
                 else:
                     gaps.append((d, "started, no summary written" if txt else "never ran"))
         d += _dt.timedelta(days=1)
@@ -204,12 +216,12 @@ def signal_reconciliation(store, arms_per_signal=3) -> list[str]:
     return out
 
 
-def checkpoint_status(store, rows) -> list[str]:
+def checkpoint_status(store, rows, arm="ATM", sessions=0) -> list[str]:
     fz = load_freeze(store)
     out = []
     total = sum(r.get("n", 0) for r in rows.values())
     out.append(f"  frozen {fz['start_date'] if fz else '(no FREEZE.json)'}"
-               f"   total ATM trades since freeze: {total}")
+               f"   total {arm} trades since freeze: {total}")
     for n, scope, label in CHECKPOINTS:
         if scope == "total":
             hit = total >= n
@@ -220,6 +232,22 @@ def checkpoint_status(store, rows) -> list[str]:
             best = max((r.get("n", 0) for r in rows.values()), default=0)
             out.append(f"    [{'x' if ready else ' '}] {n:>4} per setup  {label}"
                        f"   ({len(ready)}/{FAMILY_SIZE} there; best setup has {best})")
+    # min_sessions, when the freeze declares one, is the checkpoint that actually
+    # governs. Confidence-interval width here is driven by the number of SESSIONS, not
+    # the number of trades, because every bootstrap in this project resamples DATES --
+    # so 15 correlated names collapse into one cluster per day. After broadening, raw n
+    # arrives ~7.5x faster while information does not, and n=377 would otherwise be hit
+    # in about three weeks by a counter that no longer means what it meant when the
+    # number was chosen. Reported alongside the raw counts so the two cannot be confused.
+    need = ((fz or {}).get("promotion_bar") or {}).get("min_sessions")
+    if need:
+        hit = sessions >= need
+        out.append(f"    [{'x' if hit else ' '}] {need:>4} SESSIONS   the checkpoint that "
+                   f"governs   ({sessions} so far"
+                   f"{'' if hit else f'; {need - sessions} to go'})")
+        out.append(f"         raw trade count is NOT the gate: with {len(fz.get('universe_changes', [{}])[-1].get('symbols', [])) or '?'} "
+                   f"correlated symbols sampled on the same days, trades grow far")
+        out.append(f"         faster than information. n is not evidence; effective n is.")
     if fz:
         out.append("  " + "-" * 96)
         out.append("  CLOCK RULE: the counter never resets. No session, setup or date can be")
@@ -375,7 +403,11 @@ def verdict(r: dict) -> str:
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description="Live lab dashboard (read-only).")
     ap.add_argument("--lab-dir", default=str(DEFAULT_LAB_DIR))
-    ap.add_argument("--arm", default="ATM", choices=["ATM", "ATM-1", "ATM+1"])
+    # SHARES belongs here: line ~406 already special-cases it (1 fill per signal, against
+    # 3 for the options arm's ATM/ATM+-1 triple), but it was missing from the choices, so
+    # the only arm with a live positive setup could not be reported by its own dashboard.
+    ap.add_argument("--arm", default="ATM",
+                    choices=["ATM", "ATM-1", "ATM+1", "SHARES"])
     ap.add_argument("--today", action="store_true")
     args = ap.parse_args(argv)
 
@@ -399,7 +431,9 @@ def main(argv=None) -> int:
     print("\n" + "=" * 112)
     print("FORWARD TEST CHECKPOINTS")
     print("=" * 112)
-    for line in checkpoint_status(store, rows):
+    n_sessions = len({str(t.get('entry_ts', ''))[:10] for t in trades
+                      if t.get('entry_ts')})
+    for line in checkpoint_status(store, rows, args.arm, n_sessions):
         print(line)
     print("  " + "-" * 96)
     print("  SIGNAL RECONCILIATION (decisions -> recorded trades)")

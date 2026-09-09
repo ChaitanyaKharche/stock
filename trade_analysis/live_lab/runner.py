@@ -38,6 +38,14 @@ from .store import DEFAULT_LAB_DIR, LabStore
 SPEC_VERSION = "live_lab_specification.md @ 2026-08-27"
 RTH_OPEN, RTH_CLOSE = dt.time(9, 30), dt.time(16, 0)
 EOD_FLAT = dt.time(15, 55)
+# A quote may be neither too OLD nor dated in the FUTURE. The staleness test used to be
+# one-sided (`age > STALE_QUOTE_SEC`), so a quote stamped ahead of the local clock had a
+# NEGATIVE age and sailed straight through. Live that can only mean clock skew, and this
+# lab is unusually exposed to it: the machine runs MST with no DST and every reading is
+# converted to ET through a fixed offset in clock.py, so a wrong offset presents exactly
+# as future-dated quotes. The failure mode is silent and total -- every fill priced off a
+# quote from another time. Cheap to detect, so detect it.
+FUTURE_QUOTE_SEC = 5.0
 STALE_QUOTE_SEC = 5.0
 EXIT_ALREADY_RUNNING = 4    # distinct from a crash: the supervisor must NOT retry this
 
@@ -213,7 +221,7 @@ class LiveLab:
     def _tick(self, now: dt.datetime, day: dt.date) -> None:
         for sym in self.symbols:
             sess = self.sessions[sym]
-            admitted = sess.accept_bars(self.feed.minute_bars(sym, day), now)
+            admitted = sess.accept_bars(self.feed.minute_bars(sym, day, now=now), now)
             # SessionState records a discontinuity in the admitted 1m sequence, but
             # nothing used to read it -- a permanently missing bar would sit in memory
             # and be discarded at shutdown, invisible to any later audit even though
@@ -227,10 +235,16 @@ class LiveLab:
                     print(f"[lab] DEGRADED {sym}: 1m gap before {ts:%H:%M}", flush=True)
                 self._degraded_seen[sym] = n_deg
             quote = self.feed.stock_quote(sym)
-            if quote and (now - quote["ts"]).total_seconds() > STALE_QUOTE_SEC:
-                self.store.outage("stale_quote", f"{sym} age="
-                                  f"{(now - quote['ts']).total_seconds():.1f}s")
-                quote = None
+            if quote is not None:
+                age = (now - quote["ts"]).total_seconds()
+                if age > STALE_QUOTE_SEC:
+                    self.store.outage("stale_quote", f"{sym} age={age:.1f}s")
+                    quote = None
+                elif age < -FUTURE_QUOTE_SEC:
+                    self.store.outage("future_quote", f"{sym} quote is {-age:.1f}s AHEAD "
+                                      f"of the local clock -- suspect timezone/clock skew",
+                                      symbol=sym)
+                    quote = None
 
             self._manage_open(sym, sess, quote, now)
             if not admitted:

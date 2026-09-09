@@ -1,0 +1,17 @@
+{
+  "date": "2026-09-03",
+  "arm": "SHARES",
+  "config_hash": "53229d6f1f24df10",
+  "symbols": [
+    "QQQ",
+    "SPY"
+  ],
+  "trades_closed": 22,
+  "net": 214.65,
+  "still_open": null,
+  "degraded_bars": {},
+  "feed": null,
+  "backfilled": true,
+  "backfill_reason": "supervisor terminated the arm at 15:55, before write_daily; rebuilt from trades.jsonl (reconciliation: 0 lost)",
+  "backfilled_at": "2026-09-04T23:39:57"
+}

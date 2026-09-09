@@ -1,0 +1,259 @@
+{
+  "arm": "SHARES",
+  "symbols": [
+    "AAPL",
+    "DIA",
+    "GOOGL",
+    "IWM",
+    "NVDA",
+    "QQQ",
+    "SPY",
+    "WMT",
+    "XLE",
+    "XLF",
+    "XLI",
+    "XLK",
+    "XLP",
+    "XLV",
+    "XLY"
+  ],
+  "notional_per_trade": 10000.0,
+  "fill_rule": "signal from closed bar -> fill at live NBBO; long buys ask/sells bid",
+  "family_size": 13,
+  "slow_setups": [
+    "EMA_9_20_Pullback",
+    "Gap_Fade"
+  ],
+  "dead_setups": [
+    "ThreeBarPlay",
+    "VWAP_2sigma_Fade"
+  ],
+  "setups": [
+    {
+      "id": "ORB_5min",
+      "version": "1",
+      "timeframe": "1m",
+      "max_per_day": 1,
+      "max_per_direction": null,
+      "params": {
+        "range_min": 5,
+        "min_width_pct": 0.15,
+        "vol_mult": 1.5,
+        "vol_lookback": 10,
+        "target_R": 1.5,
+        "cutoff": "11:00",
+        "source": "edgeful (user-supplied, verbatim)"
+      }
+    },
+    {
+      "id": "ORB_15min",
+      "version": "1",
+      "timeframe": "1m",
+      "max_per_day": 1,
+      "max_per_direction": null,
+      "params": {
+        "range_min": 15,
+        "target_R": 2.0,
+        "cutoff": "10:30",
+        "stop": "mid-range",
+        "vwap_filter": true,
+        "source": "journalplus (user-supplied, verbatim)"
+      }
+    },
+    {
+      "id": "VWAP_Reclaim",
+      "version": "1",
+      "timeframe": "1m",
+      "max_per_day": 2,
+      "max_per_direction": null,
+      "params": {
+        "buffer_pct": 0.05,
+        "ema_slope_len": 20,
+        "swing_lookback": 5,
+        "target_R": 1.5,
+        "source": "user-supplied, verbatim"
+      }
+    },
+    {
+      "id": "MOMO_CHASE",
+      "version": "1",
+      "timeframe": "5m",
+      "max_per_day": 3,
+      "max_per_direction": null,
+      "params": {
+        "window": "10:30-14:30",
+        "trail_min": 15,
+        "sigma_mult": 0.6,
+        "macd": [
+          9,
+          17,
+          9
+        ],
+        "adx_min": 20,
+        "dmi_len": 14,
+        "volume_condition": null,
+        "time_exit_min": 25,
+        "provenance": {
+          "sigma_mult": "0.60 = where his density ratio vs a same-session placebo crosses 1.0x (0.4-0.6 bucket 0.71x -> 0.6-0.8 bucket 1.14x). Captures 75.9% of his trades, fires on 38.6% of random midday minutes, lift 1.96x, ~1.97 trades/session vs his observed ~2.6. NOTE: the earlier +0.2029 figure was in DAILY-sigma units; this setup normalises by 15-min sigma, which is ~5.1x smaller. Fit to his BEHAVIOUR, never to his outcomes -- no P&L entered this calibration.",
+          "window": "his median entry 11:39 ET",
+          "macd_align": "69.4% of his entries",
+          "dmi_align": "78.5%",
+          "adx_gt_20": "69.6%",
+          "no_volume": "his median entry is 0.986x vol-EMA20; only 48.3% clear it",
+          "time_exit_min": "his stated typical hold"
+        }
+      }
+    },
+    {
+      "id": "IntradayMomentumBoundary",
+      "version": "1",
+      "timeframe": "1m",
+      "max_per_day": 4,
+      "max_per_direction": null,
+      "params": {
+        "lookback_days": 14,
+        "band_mult": 1.0,
+        "checkpoints": "HH:00 and HH:30",
+        "window": "10:00-15:30",
+        "exit": "trailing vs max(VWAP, boundary)",
+        "source": "SSRN 4824172 / Concretum"
+      }
+    },
+    {
+      "id": "TTM_Squeeze",
+      "version": "1",
+      "timeframe": "5m",
+      "max_per_day": 2,
+      "max_per_direction": null,
+      "params": {
+        "bb_len": 20,
+        "bb_mult": 2.0,
+        "kc_len": 20,
+        "kc_mult": 1.5,
+        "mom_len": 20,
+        "stop_atr_mult[R]": 1.5,
+        "target_R[R]": 2.0,
+        "bar_exit[R]": 9,
+        "cutoff[R]": "15:00",
+        "source": "StockCharts"
+      }
+    },
+    {
+      "id": "PDH_PDL_Breakout",
+      "version": "1",
+      "timeframe": "5m",
+      "max_per_day": 2,
+      "max_per_direction": 1,
+      "params": {
+        "atr_len": 14,
+        "buffer_atr": 0.2,
+        "body_ratio[R]": 0.5,
+        "target_R": 2.0,
+        "cutoff[R]": "15:00",
+        "source": "NetPicks; buffer = midpoint of stated 0.1-0.3 range"
+      }
+    },
+    {
+      "id": "PDH_PDL_FailedBreak",
+      "version": "1",
+      "timeframe": "5m",
+      "max_per_day": 2,
+      "max_per_direction": 1,
+      "params": {
+        "penetration_atr[R]": 0.1,
+        "timeliness_bars[R]": 12,
+        "target_R": 2.0,
+        "window[R]": "09:45-15:00",
+        "source": "TradeMomentum (mostly researcher-converted)"
+      }
+    },
+    {
+      "id": "VWAP_2sigma_Fade",
+      "version": "1",
+      "timeframe": "5m",
+      "max_per_day": 3,
+      "max_per_direction": null,
+      "params": {
+        "band_mult": 2.0,
+        "atr_len": 14,
+        "wick_ratio[R]": 0.5,
+        "vol_mult[R]": 1.5,
+        "adx_skip_above": 25,
+        "or60_skip_mult": 2.0,
+        "windows": "10:00-11:30, 13:30-14:30",
+        "target": "session VWAP",
+        "source": "CrossTrade",
+        "note": "source's Wednesday/Thursday-only rule deliberately NOT applied; day-of-week recorded as a covariate instead"
+      }
+    },
+    {
+      "id": "EMA_9_20_Pullback",
+      "version": "1",
+      "timeframe": "5m",
+      "max_per_day": 2,
+      "max_per_direction": 1,
+      "params": {
+        "ema_fast": 9,
+        "ema_slow": 20,
+        "slope_bars[R]": 3,
+        "vol_decline[R]": 5,
+        "target_R": 3.0,
+        "window": "09:45-11:00",
+        "stop": "wider of pullback low / EMA20",
+        "source": "Bulls on Wall Street"
+      }
+    },
+    {
+      "id": "ThreeBarPlay",
+      "version": "1",
+      "timeframe": "5m",
+      "max_per_day": 3,
+      "max_per_direction": null,
+      "params": {
+        "ignite_close_pct": 0.8,
+        "ignite_vol_mult": 1.5,
+        "ignite_range_atr[R]": 1.5,
+        "retrace_cap": 0.5,
+        "max_pullback_bars": 2,
+        "target_R": 2.0,
+        "window[R]": "09:35-15:00",
+        "source": "TradingSim / HowToTrade",
+        "deviation": "source triggers intrabar on a stop order; converted to bar CLOSE"
+      }
+    },
+    {
+      "id": "Crabel_Stretch",
+      "version": "1",
+      "timeframe": "1m",
+      "max_per_day": 1,
+      "max_per_direction": null,
+      "params": {
+        "lookback_days": 10,
+        "stretch_mult": 1.0,
+        "window[R]": "09:31-11:00",
+        "exit": "opposite level or 15:55",
+        "source": "Crabel TASC V.6:9",
+        "deviation": "resting stop order converted to bar CLOSE",
+        "overlap_warning": "strongly correlated with ORB_5min"
+      }
+    },
+    {
+      "id": "Gap_Fade",
+      "version": "1",
+      "timeframe": "5m",
+      "max_per_day": 1,
+      "max_per_direction": null,
+      "params": {
+        "min_gap_pct": 0.5,
+        "buffer_pct[R]": 0.05,
+        "window[R]": "09:45-12:00",
+        "target": "prior RTH close",
+        "source": "SharePlanner / QuantifiedStrategies",
+        "evidence": "6005 QQQ sessions: 0.5-0.99% gaps fill 77% (down) / 72% (up); avg open-to-close after >=1% gap up = -0.5%"
+      }
+    }
+  ],
+  "eod_flat": "15:55:00",
+  "config_hash": "b53ca8a58aa11718",
+  "spec_version": "shares_lab_preregistration.md @ 2026-08-31"
+}
