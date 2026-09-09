@@ -1,4 +1,5 @@
 import asyncio
+import datetime as dt
 import pandas as pd
 import numpy as np
 import httpx
@@ -343,9 +344,57 @@ class UnifiedDataProvider:
                                  puts["impliedVolatility"]]).dropna()
                 ivs = ivs[(ivs > 0) & (ivs < 5)]
                 if len(ivs):
-                    # Median implied vol across the nearest expiration's chain, as a
-                    # percentage. Named for what it is, so no caveat is needed downstream.
-                    out["implied_vol_pct"] = round(float(ivs.median()) * 100, 2)
+                    # Kept as a diagnostic only. The MEDIAN ACROSS THE WHOLE CHAIN is not
+                    # a usable volatility: it averages deep out-of-the-money strikes whose
+                    # yfinance implied vols are stale, zero-bid or simply wrong, so it
+                    # swings wildly with whatever strikes the provider happens to return.
+                    # Observed on NVDA within one session: 90.63 and then 12.5.
+                    out["implied_vol_chain_median_pct"] = round(
+                        float(ivs.median()) * 100, 2)
+
+                # ATM implied vol, BACKED OUT OF THE TRADED STRADDLE PRICE.
+                #
+                # yfinance's own `impliedVolatility` field is unusable here: at the ATM
+                # strike it returns the placeholder 0.00001, with bid and ask both 0.0 and
+                # openInterest 0, on a strike that traded 38,104 contracts. Only lastPrice
+                # and volume are real. Taking a chain median of that field produced
+                # "implied vol" of 90.63 and then 12.5 for NVDA inside one session, and an
+                # ATM read of 0.78% -- numbers that are not volatilities.
+                #
+                # So the call and put nearest spot are combined into a straddle and
+                # inverted with Brenner-Subrahmanyam: straddle ~= 0.7979 * S * sigma *
+                # sqrt(T). Exact at the money and closed-form, so it cannot fail to
+                # converge on a thin quote.
+                #
+                # CAVEAT, carried into the response: lastPrice is a TRADE price and may be
+                # stale, and the free chain exposes no bid/ask, so nothing here can measure
+                # the spread. The 0DTE cost-model study needed real bid/ask and used the
+                # ThetaData archive for exactly that reason.
+                spot = None
+                _h = tk.history(period="2d", interval="1d")
+                if _h is not None and not _h.empty:
+                    spot = float(_h["Close"].iloc[-1])
+                if spot and spot > 0:
+                    exp_date = dt.date.fromisoformat(expirations[0])
+                    dte = (exp_date - dt.date.today()).days
+                    # Trading time, floored at half a session so a 0DTE cannot divide by
+                    # zero. Matches the 252-day annualisation used by the HAR forecast.
+                    T = max(dte * (252.0 / 365.0), 0.5) / 252.0
+                    legs = []
+                    for side in (calls, puts):
+                        sub = side.dropna(subset=["strike", "lastPrice"])
+                        sub = sub[sub["lastPrice"] > 0]
+                        if sub.empty:
+                            continue
+                        k = (sub["strike"] - spot).abs().idxmin()
+                        legs.append(float(sub.loc[k, "lastPrice"]))
+                    if len(legs) == 2:
+                        iv = sum(legs) / (0.7978845608 * spot * np.sqrt(T))
+                        if 0.01 < iv < 5.0:
+                            out["implied_vol_pct"] = round(iv * 100, 2)
+                            out["data_quality"]["iv_source"] = (
+                                f"ATM straddle lastPrice, {dte}DTE, "
+                                "Brenner-Subrahmanyam; no bid/ask on the free chain")
                 out["data_quality"]["options_expiration_used"] = expirations[0]
         except Exception as e:                                    # noqa: BLE001
             out["data_quality"]["options"] = f"unavailable: {e}"

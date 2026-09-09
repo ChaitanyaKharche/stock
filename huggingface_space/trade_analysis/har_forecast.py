@@ -119,12 +119,22 @@ def forecast(daily_bars: pd.DataFrame, implied_vol_pct: float | None = None) -> 
             out["reason"] = f"only {len(y)} fittable rows after lags"
             return out
         beta, *_ = np.linalg.lstsq(X, y, rcond=None)
-        var_hat = float(np.exp(x_next @ beta))
+
+        # LOGNORMAL BIAS CORRECTION. exp(x @ beta) is the conditional MEDIAN of a
+        # log-space fit, not the mean: E[exp(Z)] = exp(E[Z] + s2/2). Without the exp(s2/2)
+        # factor the forecast comes out systematically LOW -- here about 40% below an
+        # independent close-to-close estimate, which is how the omission was noticed.
+        #
+        # The same bug shipped in trade_analysis/hpc/har_baseline.py and was enough to
+        # turn "implied variance beats HAR, p=0.023" into a result that vanishes once
+        # corrected (p=0.583). It is not a rounding detail.
+        resid_var = float(np.var(y - X @ beta, ddof=X.shape[1]))
+        var_hat = float(np.exp(x_next @ beta) * np.exp(resid_var / 2.0))
 
         # In-sample fit quality, reported so the number can be discounted. Compared
         # against the naive "tomorrow looks like today" forecast, which is the thing a
         # model has to beat before it is worth any attention at all.
-        fitted = np.exp(X @ beta)
+        fitted = np.exp(X @ beta) * np.exp(resid_var / 2.0)
         actual = np.exp(y)
         naive = np.exp(X[:, 1])
         ql = lambda a, f: float(np.mean(a / np.maximum(f, EPS)
@@ -133,6 +143,7 @@ def forecast(daily_bars: pd.DataFrame, implied_vol_pct: float | None = None) -> 
             "available": True,
             "forecast_vol_pct": round(np.sqrt(max(var_hat, 0.0)) * 100, 2),
             "n_days_fitted": int(len(y)),
+            "lognormal_correction": round(float(np.exp(resid_var / 2.0)), 4),
             "qlike_har": round(ql(actual, fitted), 4),
             "qlike_naive": round(ql(actual, naive), 4),
             "beats_naive": bool(ql(actual, fitted) < ql(actual, naive)),

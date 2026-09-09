@@ -336,6 +336,43 @@ if submitted:
     m4.metric("Sentiment", f"{sent.get('composite_score', 0):+.2f}",
               delta=f"{sent.get('confidence', '—')} confidence", delta_color="off")
 
+    # HAR volatility forecast vs what the option market charges. This is the one model
+    # in the app that is both small and measurably working, so it gets a row of its own
+    # rather than an expander -- and the honest caveat travels with it.
+    vol = data.get("volatility") or {}
+    if vol.get("available"):
+        st.markdown("**Volatility: forecast vs the option market**")
+        v1, v2, v3 = st.columns(3)
+        v1.metric("HAR forecast (next session)", f"{vol['forecast_vol_pct']:.1f}%",
+                  delta=f"last realised {vol['last_realised_vol_pct']:.1f}%",
+                  delta_color="off")
+        if vol.get("implied_vol_pct"):
+            v2.metric("Implied (option chain)", f"{vol['implied_vol_pct']:.1f}%")
+            v3.metric("Variance risk premium", f"{vol['premium_vol_pts']:+.1f} pts",
+                      delta="options dearer" if vol['premium_vol_pts'] > 0
+                            else "options cheaper", delta_color="off")
+        else:
+            v2.metric("Implied (option chain)", "—")
+            v3.metric("Variance risk premium", "—")
+        # Where the implied vol came from. It matters: the free chain has no bid/ask, so
+        # this IV is inverted from a TRADE price and nothing here can see the spread --
+        # which is the quantity that killed the premium in the 0DTE study.
+        _alt = (data.get('details', {}) or {}).get('alternative_data', {}) or {}
+        _src = (_alt.get('data_quality', {}) or {}).get('iv_source')
+        if _src:
+            st.caption(f'Implied vol: {_src}.')
+        st.caption(
+            f"HAR-RV fitted on {vol['n_days_fitted']} of this symbol's own daily bars "
+            f"(Garman-Klass variance incl. the overnight gap, lognormal-corrected "
+            f"x{vol.get('lognormal_correction', 1):.2f}). In-sample QLIKE "
+            f"{vol['qlike_har']:.3f} vs {vol['qlike_naive']:.3f} for naive persistence "
+            f"-- {'beats' if vol['beats_naive'] else 'does NOT beat'} it.  "
+            "**A positive premium is not a trade:** measured over 618 sessions of SPY "
+            "0DTE data it is real (t=+7.5 gross) and 1.84x too small to survive the "
+            "straddle spread, losing at t=-5.4 net.")
+    elif vol.get("reason"):
+        st.caption(f"Volatility forecast unavailable: {vol['reason']}")
+
     with st.expander("Headlines the sentiment model read"):
         themes = sent.get("key_themes") or []
         if themes:

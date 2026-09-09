@@ -13,6 +13,7 @@ from pathlib import Path
 # Import only modules that still exist
 from .data import UnifiedDataProvider
 from .market_session import market_status, banner as session_banner
+from .har_forecast import forecast as har_volatility_forecast
 from .momentum_trading_engine import DIRECTION_AGREEMENT, DIRECTION_DEADBAND
 from .indicators import enrich_with_indicators, identify_current_setup
 from .enhanced_sentiment import EnhancedFinancialSentimentAnalyzer, analyze_momentum_sentiment
@@ -63,6 +64,8 @@ class EnhancedSignalResponse(BaseModel):
     verdict: Dict[str, Any] = {}
     # Last price, previous close and the day's range, so the signal is grounded.
     quote: Dict[str, Any] = {}
+    # HAR next-session volatility forecast and the implied-vol comparison.
+    volatility: Dict[str, Any] = {}
     # Which SESSION these bars are from, and whether the market was open when asked.
     # Without this the app served Friday's tape on Labor Day with nothing saying so.
     market: Dict[str, Any] = {}
@@ -317,6 +320,17 @@ async def predict_enhanced_signal(
             quote["day_high"] = round(float(_daily["High"].iloc[-1]), 2)
             quote["day_low"] = round(float(_daily["Low"].iloc[-1]), 2)
 
+        # HAR volatility forecast. Six parameters, fitted on THIS symbol's own daily
+        # bars, forecasting next session's variance -- directly comparable to the implied
+        # vol already pulled from the option chain, and their difference is the variance
+        # risk premium.
+        #
+        # It replaces nothing and votes on nothing. It is here because the app used to
+        # show a 398,854-parameter TFT that had collapsed to its prior and returned the
+        # same answer for every symbol; a small model that demonstrably responds to its
+        # input is a better thing to display than a large one that does not.
+        har = har_volatility_forecast(_daily, alt_data.get("implied_vol_pct"))
+
         # Calculate processing time
         processing_time = (datetime.now() - start_time).total_seconds()
         
@@ -352,7 +366,8 @@ async def predict_enhanced_signal(
                 "direction", "direction_agreement", "overnight_gap_pct",
                 "momentum_strategy", "strategy_mode")},
             market=market,
-            quote=quote
+            quote=quote,
+            volatility=har
         )
         
     except Exception as e:
