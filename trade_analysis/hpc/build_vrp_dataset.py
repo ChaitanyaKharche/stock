@@ -26,9 +26,46 @@ import numpy as np
 import pandas as pd
 
 RAW = Path(r"C:\Users\chaitanyakharche\Desktop\data\raw")
-MINUTES_PER_YEAR = 252 * 390
+# Forecast origins are restricted to the middle of the session: before 10:00 the
+# morning realised-variance feature barely exists, and after 15:00 the 0DTE gamma
+# profile makes the return distribution a different object.
 ORIGIN_START, ORIGIN_END = dt.time(10, 0), dt.time(15, 0)
-HORIZONS = (30, 60)
+
+# Horizons and feature windows are stated in MINUTES and converted to bars, so the same
+# numbers mean the same thing at any sampling interval.
+HORIZON_MINUTES = (30, 60)
+
+# BAR INTERVAL. 5m is the default, and that is a correction rather than a compromise.
+#
+# The 1-minute archive is missing 2024-01..2024-07 for SPY and the entitlement to refetch
+# it is gone (NOT ENTITLED as of 2026-09-09), which alone would cap the held-out block at
+# 5 sessions instead of 151. The 5-minute archive is complete 2016-2026.
+#
+# It is also the better measurement. 1-minute equity returns are contaminated by
+# microstructure noise -- bid-ask bounce inflates realised variance -- and 5-minute
+# sampling is the long-standing standard in the realised-volatility literature
+# (Andersen-Bollerslev) for exactly that reason. Using it uniformly across train,
+# validation and held out keeps ONE measurement definition for the whole sample; mixing
+# 1m for train with something else for held out would be a silent inconsistency of
+# precisely the kind this project keeps getting burned by.
+INTERVALS = {
+    "1m": {"dir": "stock_ohlc_1m", "minutes": 1, "bars_per_day": 390},
+    "5m": {"dir": "stock_ohlc_5m", "minutes": 5, "bars_per_day": 78},
+}
+INTERVAL = "5m"                      # set by --interval; module-level so helpers see it
+
+
+def _spec() -> dict:
+    return INTERVALS[INTERVAL]
+
+
+def bars_per_year() -> int:
+    return 252 * _spec()["bars_per_day"]
+
+
+def n_bars(minutes: int) -> int:
+    """Minutes -> bars at the active interval, at least 1."""
+    return max(1, minutes // _spec()["minutes"])
 
 
 # --------------------------------------------------------------------------- loading
@@ -45,7 +82,8 @@ def load_month(symbol: str, year: int, month: int) -> pd.DataFrame | None:
     key = (symbol, f"{year:04d}-{month:02d}")
     if key in _MONTH_CACHE:
         return _MONTH_CACHE[key]
-    p = RAW / "stock_ohlc_1m" / symbol / str(year) / f"{symbol}_{year:04d}-{month:02d}.csv.gz"
+    p = (RAW / _spec()["dir"] / symbol / str(year)
+         / f"{symbol}_{year:04d}-{month:02d}.csv.gz")
     df = None
     if p.exists():
         df = pd.read_csv(p)
@@ -100,10 +138,15 @@ def load_option_quotes(symbol: str, day: dt.date) -> pd.DataFrame | None:
 
 # ------------------------------------------------------------------- variance pieces
 def _rv(logret: np.ndarray) -> float:
-    """Annualised realised variance from 1-minute log returns."""
-    if logret.size == 0:
+    """Annualised realised variance from log returns at the active interval.
+
+    Requires >= 2 returns: a single squared return is not a variance estimate, it
+    is one draw, and letting it through would put a wildly noisy column into the
+    feature frame under a name that implies otherwise.
+    """
+    if logret.size < 2:
         return np.nan
-    return float(np.sum(logret ** 2) * (MINUTES_PER_YEAR / logret.size))
+    return float(np.sum(logret ** 2) * (bars_per_year() / logret.size))
 
 
 def _bipower(logret: np.ndarray) -> float:
@@ -112,14 +155,14 @@ def _bipower(logret: np.ndarray) -> float:
         return np.nan
     mu = np.sqrt(2.0 / np.pi)
     bv = np.sum(np.abs(logret[1:]) * np.abs(logret[:-1])) / (mu ** 2)
-    return float(bv * (MINUTES_PER_YEAR / max(logret.size - 1, 1)))
+    return float(bv * (bars_per_year() / max(logret.size - 1, 1)))
 
 
 def _quarticity(logret: np.ndarray) -> float:
     if logret.size == 0:
         return np.nan
     n = logret.size
-    return float(n / 3.0 * np.sum(logret ** 4) * (MINUTES_PER_YEAR / n) ** 2)
+    return float(n / 3.0 * np.sum(logret ** 4) * (bars_per_year() / n) ** 2)
 
 
 def _bs_iv_straddle(straddle_mid: float, spot: float, minutes_left: float) -> float:
@@ -132,7 +175,7 @@ def _bs_iv_straddle(straddle_mid: float, spot: float, minutes_left: float) -> fl
     """
     if not (straddle_mid > 0 and spot > 0 and minutes_left > 0):
         return np.nan
-    T = minutes_left / MINUTES_PER_YEAR
+    T = minutes_left / (252 * 390)   # calendar time, interval-independent
     return float(straddle_mid / (0.7978845608 * spot * np.sqrt(T)))
 
 
@@ -185,10 +228,10 @@ def _features_at(hist: pd.DataFrame, t: pd.Timestamp, prior: dict) -> dict:
     open_t = t.normalize() + pd.Timedelta(hours=9, minutes=30)
     return {
         "rv_from_open": _rv(r),
-        "rv_30m": _rv(r[-30:]),
-        "rv_5m": _rv(r[-5:]),
-        "bipower_30m": _bipower(r[-30:]),
-        "quarticity_30m": _quarticity(r[-30:]),
+        "rv_30m": _rv(r[-n_bars(30):]),
+        "rv_5m": _rv(r[-n_bars(5):]),
+        "bipower_30m": _bipower(r[-n_bars(30):]),
+        "quarticity_30m": _quarticity(r[-n_bars(30):]),
         "rv_prev_day": prior.get("rv_prev_day", np.nan),
         "rv_prev_5": prior.get("rv_prev_5", np.nan),
         "rv_prev_22": prior.get("rv_prev_22", np.nan),
@@ -202,7 +245,9 @@ def _features_at(hist: pd.DataFrame, t: pd.Timestamp, prior: dict) -> dict:
 
 def build_session(symbol: str, day: dt.date, prior: dict) -> pd.DataFrame | None:
     bars = load_bars(symbol, day)
-    if bars is None or len(bars) < 120:
+    # A session must be substantially complete. 120 was "most of a day" at 1m; at
+    # any interval that is 40% of the day's bars.
+    if bars is None or len(bars) < int(0.4 * _spec()["bars_per_day"]):
         return None
     quotes = load_option_quotes(symbol, day)
     logret_all = np.log(bars["close"]).diff().dropna()
@@ -214,7 +259,8 @@ def build_session(symbol: str, day: dt.date, prior: dict) -> pd.DataFrame | None
         # THE no-lookahead line. `< t` excludes the bar stamped t, which on this archive
         # covers [t, t+60s) and therefore contains information from after the origin.
         hist = bars.loc[bars.index < t]
-        if len(hist) < 31:
+        # Enough history for the 30-minute window plus one.
+        if len(hist) < n_bars(30) + 1:
             continue
 
         row = {"date": day.isoformat(), "t": t}
@@ -229,17 +275,21 @@ def build_session(symbol: str, day: dt.date, prior: dict) -> pd.DataFrame | None
         # Targets. Forward returns start at the bar AFTER t, so a forecast made at t is
         # never scored against a bar it could have seen.
         fwd = logret_all[logret_all.index > t]
-        for h in HORIZONS:
-            seg = fwd.iloc[:h].to_numpy()
-            row[f"rv_fwd_{h}"] = _rv(seg) if seg.size == h else np.nan
-            if row.get("iv_var_atm") and np.isfinite(row[f"rv_fwd_{h}"]):
-                row[f"vrp_{h}"] = row["iv_var_atm"] - row[f"rv_fwd_{h}"]
+        for hm in HORIZON_MINUTES:
+            k = n_bars(hm)
+            seg = fwd.iloc[:k].to_numpy()
+            # Require the FULL window. A short tail at the end of the session would
+            # otherwise become a low-variance observation for a reason that has
+            # nothing to do with volatility.
+            row[f"rv_fwd_{hm}"] = _rv(seg) if seg.size == k else np.nan
+            if row.get("iv_var_atm") and np.isfinite(row[f"rv_fwd_{hm}"]):
+                row[f"vrp_{hm}"] = row["iv_var_atm"] - row[f"rv_fwd_{hm}"]
         rows.append(row)
 
     if not rows:
         return None
     out = pd.DataFrame(rows)
-    return out.dropna(subset=[f"rv_fwd_{HORIZONS[0]}"])
+    return out.dropna(subset=[f"rv_fwd_{HORIZON_MINUTES[0]}"])
 
 
 def sessions_for(symbol: str) -> list[dt.date]:
@@ -258,8 +308,15 @@ def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--symbol", default="SPY")
     ap.add_argument("--out", default="data/vrp")
+    ap.add_argument("--interval", default="5m", choices=sorted(INTERVALS),
+                    help="underlying bar interval; 5m is complete and is the "
+                         "literature standard, 1m is missing 2024-01..07")
     ap.add_argument("--limit", type=int, default=0, help="first N sessions (smoke test)")
     args = ap.parse_args(argv)
+
+    global INTERVAL
+    INTERVAL = args.interval
+    print(f"interval {INTERVAL} ({_spec()['dir']}), {_spec()['bars_per_day']} bars/session")
 
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
@@ -295,7 +352,14 @@ def main(argv=None) -> int:
             print(f"  {i}/{len(days)}  kept {kept}")
 
     (out / "manifest.json").write_text(
-        json.dumps({"symbol": args.symbol, "sessions": manifest}, indent=1),
+        json.dumps({"symbol": args.symbol,
+                    # Provenance. Two intervals produce differently-scaled variances, so a
+                    # frame that silently mixed them would be unusable and undetectable.
+                    "interval": INTERVAL,
+                    "bars_per_day": _spec()["bars_per_day"],
+                    "bars_per_year": bars_per_year(),
+                    "horizon_minutes": list(HORIZON_MINUTES),
+                    "sessions": manifest}, indent=1),
         encoding="utf-8")
     with_iv = sum(1 for m in manifest if m.get("has_iv"))
     print(f"\nwrote {kept} session files to {out}")

@@ -93,6 +93,48 @@ archive, **the stock archive can still be extended** — the ThetaData subscript
 
 Then rebuild; `build_vrp_dataset` skips nothing and overwrites cleanly.
 
+## 4b. Resolution — rebuild on 5-minute bars
+
+The 1-minute gap is **not fixable**. Attempting to refetch returned:
+
+    NOT ENTITLED - aborting layer
+
+So `stock.ohlc.1m` is no longer available at any date, not merely for options. The terminal
+banner reading `Stock: STANDARD` evidently does not cover the historical 1-minute OHLC
+layer.
+
+**But `stock_ohlc_5m` is complete: every month, 2016–2026.** The experiment moves to
+5-minute sampling, and this is a correction rather than a workaround:
+
+- 1-minute equity returns are contaminated by **microstructure noise** — bid-ask bounce
+  inflates realised variance — and **5-minute sampling is the long-standing standard** in
+  the realised-volatility literature (Andersen–Bollerslev) for exactly that reason.
+- It restores the held-out block from **5 sessions to the full 151**.
+- Applied **uniformly** across train, validation and held out, so one measurement
+  definition covers the whole sample. Using 1m for train and something else for held out
+  would be a silent inconsistency of precisely the kind this project keeps getting burned
+  by — which is also why the frame directory was cleared rather than mixed, and why the
+  manifest now records `interval`, `bars_per_day` and `bars_per_year`.
+
+Horizons and feature windows are now expressed in **minutes** and converted to bars, so
+`h=30` means thirty minutes at either interval (6 bars at 5m, 30 at 1m).
+
+Verified on sessions that previously produced nothing:
+
+| session | origins | RV(30m) as vol | ATM IV |
+|---|---|---|---|
+| 2024-01-02 | 60 | 5.7% | 7.2% |
+| 2024-03-15 | 60 | 7.9% | 11.5% |
+| 2023-06-15 | 60 | 7.7% | 9.2% |
+
+IV exceeds RV in all three, consistent with the premium.
+
+**Every number in §1 and §2 above was computed on 1-minute bars and is therefore
+superseded.** They are kept because the audit result — that the pipeline contains no
+lookahead — is a property of the code, not the sampling interval, and because a
+pre-registered record that quietly deletes its own superseded numbers is not a record.
+The benchmark must be re-run on the 5m frame before the sweep.
+
 ## 5. What is NOT concluded here
 
 - Nothing about whether a neural model beats HAR. That is the sweep, still unrun.
