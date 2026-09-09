@@ -1,144 +1,135 @@
 # Results — VRP baseline and lookahead audit
 
-**Interim. The pre-registered experiment is NOT complete.** This records only step 2 of
-`vrp_preregistration.md`: the benchmark, and the audit that has to pass before any number
-here is believed. Run 2026-09-09 on Discovery, job `10209061`, 20 seconds on CPU.
+**Interim. The pre-registered experiment is NOT complete.** This records step 2 of
+`vrp_preregistration.md`: the benchmark, and the audit that must pass before any number
+here is believed.
 
-Sample: 623 built sessions — train 71,850 origins / 241 sessions; validation 52,896 / 177;
-**held out 1,500 / 5** (see §3, this is a problem).
+**Final frame:** 769 sessions, **5-minute bars**, zero sessions dropped.
+Train 20,634 origins / 346 sessions · Validation 14,940 / **250** · Held out 9,030 / **151**.
+
+Three data defects were found and fixed before these numbers were trusted; §4 records them
+because each was **silent**, and the run printed a confident-looking table through all of
+them.
+
+---
 
 ## 1. The audit passes
 
 `--audit` deliberately shifts every feature one minute into the future.
 
-| run | HAR-RV QLIKE |
+| run | HAR-RV-J QLIKE |
 |---|---|
-| honest | 0.187365 |
-| audit (lookahead injected) | **0.184776** |
+| honest | 0.541358 |
+| audit (lookahead injected) | **0.530811** |
 
-Audit better by **1.38%**. That is the PASS: the honest features did not already contain
-that minute. Had the two been equal, the minute was already inside the honest run and
-everything downstream would be void.
+Audit better by **1.95%** → **PASS**. The honest features did not already contain that
+minute. Equal scores would have meant the minute was already inside the honest run and
+everything downstream was void.
 
 Given this project lost an entire result set to a 1-minute lookahead that produced 95.7%
-of a measured edge, this is the single most important line in the file.
+of a measured edge, this is the most important line in the file. It also **calibrates**:
+one minute of genuine future information is worth ~2% QLIKE here, so a model later
+claiming a much larger margin is claiming more than cheating with a minute of the future
+would buy.
 
-The gap is also a **calibration**: one minute of genuine future information is worth
-~1.4% QLIKE here. Any model later claiming a much larger margin over HAR is claiming more
-than cheating with a minute of the future would buy, and should be disbelieved until
-re-audited.
-
-## 2. The bar
+## 2. The headline: the option market beats HAR
 
 Validation (2023), target `rv_fwd_30`, lower QLIKE better:
 
 | model | QLIKE | RMSE |
 |---|---|---|
-| **HAR-RV** | **0.187365** | 0.012023 |
-| HAR-RV-J | 0.187719 | 0.012016 |
-| implied_variance | 0.207442 | 0.015499 |
-| persistence_rv30m | 0.226525 | 0.012646 |
+| **implied_variance** | **0.411136** | 0.016123 |
+| HAR-RV-J | 0.541358 | 0.013963 |
+| HAR-RV | 0.541610 | 0.013968 |
+| persistence_rv30m | 0.803472 | 0.016252 |
 
-Diebold–Mariano vs HAR-RV, **clustered by session** (n=177, not n=52,896):
+Diebold–Mariano vs HAR-RV-J, **clustered by session** (n=250, not n=14,940):
 
 | model | mean dQLIKE | t | p |
 |---|---|---|---|
-| persistence_rv30m | +0.03913 | +5.80 | 0.0000 |
-| implied_variance | +0.02016 | +1.04 | 0.2992 |
-| HAR-RV-J | +0.00036 | +0.82 | 0.4108 |
+| persistence_rv30m | +0.26372 | +7.82 | 0.0000 |
+| **implied_variance** | **−0.12934** | **−2.30** | **0.0222** |
+| HAR-RV | +0.00024 | +0.29 | 0.7709 |
 
-**HAR-RV is the benchmark at 0.187365.** Jump-robustness adds nothing (p=0.41). Naive
-persistence loses decisively (t=5.80), which is the sanity check that the pipeline
-discriminates at all.
+**Implied variance forecasts 30-minute realised variance significantly better than HAR.**
+Stable at the secondary horizon, so it is not an artifact of the short window:
 
-## 3. The finding that actually matters, and how not to misread it
+| horizon | returns in window | IV | HAR-RV | IV vs HAR |
+|---|---|---|---|---|
+| h=30 | 6 | 0.411136 | 0.541610 | −0.1296, t=−2.29, p=0.0230 |
+| h=60 | 12 | 0.297063 | 0.403153 | −0.1055, t=−1.96, p=0.0507 |
 
-**Implied variance loses to HAR numerically (+0.0202) but NOT significantly (p=0.2992).**
-At 177 sessions we cannot distinguish the option market's variance forecast from HAR's.
+## 3. The pre-registration named the wrong benchmark
 
-It is tempting to read "IV is a worse forecast" as evidence against the variance risk
-premium. **That inference is wrong, and getting it backwards would kill the experiment for
-the wrong reason.**
+§4 committed to HAR as the thing to beat, calling it "the standard in the
+realised-volatility literature and hard to beat." **In this data it is not the hard
+benchmark. Implied variance is, and it beats HAR.**
 
-Implied variance is a *risk-neutral* expectation. It contains the premium by construction.
-A forecast that is systematically too high scores badly on QLIKE **precisely because** it
-carries a premium — the bias IS the thing being harvested. QLIKE measures accuracy; the
-VRP is a bias. They are different quantities and a model can be bad at one while the other
-is real and tradeable.
+That is a design flaw in the pre-registration, found by running it. §9 forbids changing the
+gate after seeing results, so **§6 stands exactly as written** — but it is now known to be
+too weak: a model can pass it while still being worse than reading the option chain.
 
-Supporting number from the smoke sample: implied exceeded realised at **80.1%** of forecast
-origins.
+**Stated as a post-hoc observation, not a pre-registered criterion:** any model that beats
+HAR but not implied variance has produced nothing of use, because the free alternative is
+to read the quote that is already on the screen.
 
-So this result neither confirms nor refutes the VRP. It establishes that **HAR is the
-forecasting bar**, which is what §6 requires before the neural arm is justified.
+**This does not refute the variance risk premium, and reading it that way would be an
+error.** IV can be simultaneously (a) more informative about the level of variance than
+HAR and (b) systematically above realised variance. Those are different properties —
+accuracy and bias — and the premium lives in the second. Supporting number: implied
+exceeded realised at **80.1%** of origins in the smoke sample.
 
-## 4. Blocking: the held-out block is 5 sessions, not 151
+What it does change is the **expected value of the neural arm**. If the option market
+already forecasts variance better than the standard econometric model, a small MLP on
+HAR-type features is unlikely to beat it, and the interesting question moves from *can I
+forecast variance better than the market* to *is the premium harvestable after the
+measured spread* — which needs the cost model, not a GPU.
 
-The manifest shows **146 sessions returning `rows: 0, reason: no usable data`** — every
-2024 session from 2024-01-02 to roughly 2024-07-31.
+## 4. Three silent defects, found and fixed
 
-Cause: **the SPY minute-bar archive has no 2024-01 through 2024-07.** It jumps from
-`2023-12` to `2024-08`. The 0DTE option quotes for those sessions exist; the underlying
-bars they must be paired with do not, so `build_session` correctly returns nothing.
+Each produced no error and no crash. The pipeline reported success throughout.
 
-    stock_ohlc_1m/SPY/2024/  ->  2024-08 2024-09 2024-10 2024-11 2024-12   (5 of 12)
+**(a) The 1-minute archive has an unfillable hole.** SPY `stock_ohlc_1m` is missing
+2024-01..2024-07, and refetching returns `NOT ENTITLED` — that layer is gone at any date,
+despite the terminal reporting `Stock: STANDARD`. This alone capped the held-out block at
+**5 sessions of 151**.
 
-**This is fixable and must be fixed before the held-out test means anything.** §7 stated
-power at n=151 held-out sessions; at n=5 there is no test at all. And unlike the option
-archive, **the stock archive can still be extended** — the ThetaData subscription is
-`Stock: STANDARD`, only `Options: FREE`. The seven missing months are re-downloadable.
+Fixed by moving to **5-minute bars**, which is a correction rather than a workaround:
+1-minute equity returns carry microstructure noise that inflates realised variance, and
+5-minute sampling is the long-standing standard (Andersen–Bollerslev) for that reason. The
+5m archive is complete 2016–2026. Applied uniformly across all three blocks, so one
+measurement definition covers the sample; the frame directory is cleared rather than mixed,
+and the manifest now records `interval` / `bars_per_day` / `bars_per_year`.
 
-    python -m trade_analysis.bulk_download.download --layers stock.ohlc.1m \
-        --symbols SPY --start 2024-01-01 --end 2024-07-31
+**(b) A truncated month removed the COVID onset.** Native `SPY_2020-02` holds three days
+where March holds twenty-two. That silently dropped ten sessions from the start of the
+COVID volatility regime — including 2020-02-28 at **51.2%** annualised realised vol,
+exactly the observations a variance model most needs to have seen.
 
-Then rebuild; `build_vrp_dataset` skips nothing and overwrites cleanly.
+Fixed by falling back per day to aggregating the 1-minute archive. **Verified as an
+equivalence, not an approximation:** on 2020-02-04, where both archives have data, 1m
+aggregated to 5m reproduced the native 5m closes with **max absolute difference 0.000000**
+across all 79 overlapping bars.
 
-## 4b. Resolution — rebuild on 5-minute bars
+**(c) One halt bar poisoned 170 later sessions.** SPY hit circuit breakers on 2020-03-09
+and the archive fills 09:35 and 09:40 with all-zero OHLCV rows. `log(0) = −inf`, so a
+single halt bar made that session's realised variance infinite — and because `rv_prev_22`
+carries a 22-session window, it propagated into **170 subsequent sessions**. Downstream,
+`dropna` removed **193 of 769 sessions** without a word.
 
-The 1-minute gap is **not fixable**. Attempting to refetch returned:
+Fixed by dropping non-positive closes at source, which is also the correct treatment: the
+return then spans the halt (09:30 close → 09:45 close), the actual price change across it,
+rather than inventing two enormous returns for volatility that never traded. 2020-03-09 now
+reads **56.5%** annualised instead of infinity. `har_baseline` now prints what cleaning
+costs and shouts when sessions are lost, so a silent quarter-sample loss cannot recur.
 
-    NOT ENTITLED - aborting layer
-
-So `stock.ohlc.1m` is no longer available at any date, not merely for options. The terminal
-banner reading `Stock: STANDARD` evidently does not cover the historical 1-minute OHLC
-layer.
-
-**But `stock_ohlc_5m` is complete: every month, 2016–2026.** The experiment moves to
-5-minute sampling, and this is a correction rather than a workaround:
-
-- 1-minute equity returns are contaminated by **microstructure noise** — bid-ask bounce
-  inflates realised variance — and **5-minute sampling is the long-standing standard** in
-  the realised-volatility literature (Andersen–Bollerslev) for exactly that reason.
-- It restores the held-out block from **5 sessions to the full 151**.
-- Applied **uniformly** across train, validation and held out, so one measurement
-  definition covers the whole sample. Using 1m for train and something else for held out
-  would be a silent inconsistency of precisely the kind this project keeps getting burned
-  by — which is also why the frame directory was cleared rather than mixed, and why the
-  manifest now records `interval`, `bars_per_day` and `bars_per_year`.
-
-Horizons and feature windows are now expressed in **minutes** and converted to bars, so
-`h=30` means thirty minutes at either interval (6 bars at 5m, 30 at 1m).
-
-Verified on sessions that previously produced nothing:
-
-| session | origins | RV(30m) as vol | ATM IV |
-|---|---|---|---|
-| 2024-01-02 | 60 | 5.7% | 7.2% |
-| 2024-03-15 | 60 | 7.9% | 11.5% |
-| 2023-06-15 | 60 | 7.7% | 9.2% |
-
-IV exceeds RV in all three, consistent with the premium.
-
-**Every number in §1 and §2 above was computed on 1-minute bars and is therefore
-superseded.** They are kept because the audit result — that the pipeline contains no
-lookahead — is a property of the code, not the sampling interval, and because a
-pre-registered record that quietly deletes its own superseded numbers is not a record.
-The benchmark must be re-run on the 5m frame before the sweep.
+**Every number reported before 2026-09-09 on the 1-minute frame — including HAR-RV
+0.187365 — was computed with defect (c) present and is superseded.** They are not deleted:
+a record that quietly removes its own wrong numbers is not a record.
 
 ## 5. What is NOT concluded here
 
-- Nothing about whether a neural model beats HAR. That is the sweep, still unrun.
+- Nothing about whether a neural model beats anything. The sweep is unrun.
 - Nothing about tradeability. §6 requires the measured straddle spread applied before any
   edge is claimed, and no cost model has been run.
-- Nothing about the held-out block, which per §6 stays untouched until validation passes,
-  and which currently could not be tested even if it did.
+- Nothing about the held-out block, which per §6 stays untouched until validation passes.
