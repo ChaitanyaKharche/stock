@@ -32,58 +32,56 @@ one minute of genuine future information is worth ~2% QLIKE here, so a model lat
 claiming a much larger margin is claiming more than cheating with a minute of the future
 would buy.
 
-## 2. The headline: the option market beats HAR
+## 2. CORRECTION — the first version of this file overstated its own headline
+
+**Reported first, then corrected on the same day.** The original §2 said *"the option
+market beats HAR significantly (p=0.0222)."* **That was substantially an artifact of a
+missing bias correction in my own code**, found while porting the model into the app.
+
+`predict_har` computed `exp(X @ beta)`. For a log-space fit that is the conditional
+**median**, not the mean: for a right-skewed variable, `E[exp(Z)] = exp(E[Z] + s²/2)`. The
+`exp(s²/2)` factor was absent, so HAR forecast systematically **low** — and QLIKE penalises
+under-forecasting asymmetrically, so the omission did not merely add noise, it made the
+model look worse than it is.
+
+Measured: `s² = 0.7056`, correction factor **1.423** — a 42% upward adjustment, large
+because a 6-return realised-variance target is very noisy.
+
+| | uncorrected | corrected |
+|---|---|---|
+| HAR-RV QLIKE | 0.541610 | **0.430642** |
+| IV vs HAR-RV | −0.12958, t=−2.29, **p=0.0230** | −0.01957, t=−0.55, **p=0.5832** |
+
+**The corrected conclusion:** implied variance and a properly specified HAR are
+**statistically indistinguishable** at forecasting 30-minute realised variance. IV is still
+marginally ahead in level (0.4111 vs 0.4306) but nothing in this sample separates them.
+
+## 3. The bar, corrected
 
 Validation (2023), target `rv_fwd_30`, lower QLIKE better:
 
 | model | QLIKE | RMSE |
 |---|---|---|
-| **implied_variance** | **0.411136** | 0.016123 |
-| HAR-RV-J | 0.541358 | 0.013963 |
-| HAR-RV | 0.541610 | 0.013968 |
+| implied_variance | 0.411136 | 0.016123 |
+| **HAR-RV** | **0.430642** | 0.013771 |
+| HAR-RV-J | 0.430788 | 0.013765 |
 | persistence_rv30m | 0.803472 | 0.016252 |
 
-Diebold–Mariano vs HAR-RV-J, **clustered by session** (n=250, not n=14,940):
+Diebold–Mariano vs HAR-RV, clustered by session (n=250):
 
 | model | mean dQLIKE | t | p |
 |---|---|---|---|
-| persistence_rv30m | +0.26372 | +7.82 | 0.0000 |
-| **implied_variance** | **−0.12934** | **−2.30** | **0.0222** |
-| HAR-RV | +0.00024 | +0.29 | 0.7709 |
+| persistence_rv30m | +0.37350 | +8.27 | 0.0000 |
+| implied_variance | −0.01957 | −0.55 | 0.5832 |
+| HAR-RV-J | +0.00015 | +0.26 | 0.7956 |
 
-**Implied variance forecasts 30-minute realised variance significantly better than HAR.**
-Stable at the secondary horizon, so it is not an artifact of the short window:
+HAR beats naive persistence decisively (t=+8.27). Nothing separates it from the option
+market. Jump-robustness still adds nothing.
 
-| horizon | returns in window | IV | HAR-RV | IV vs HAR |
-|---|---|---|---|---|
-| h=30 | 6 | 0.411136 | 0.541610 | −0.1296, t=−2.29, p=0.0230 |
-| h=60 | 12 | 0.297063 | 0.403153 | −0.1055, t=−1.96, p=0.0507 |
-
-## 3. The pre-registration named the wrong benchmark
-
-§4 committed to HAR as the thing to beat, calling it "the standard in the
-realised-volatility literature and hard to beat." **In this data it is not the hard
-benchmark. Implied variance is, and it beats HAR.**
-
-That is a design flaw in the pre-registration, found by running it. §9 forbids changing the
-gate after seeing results, so **§6 stands exactly as written** — but it is now known to be
-too weak: a model can pass it while still being worse than reading the option chain.
-
-**Stated as a post-hoc observation, not a pre-registered criterion:** any model that beats
-HAR but not implied variance has produced nothing of use, because the free alternative is
-to read the quote that is already on the screen.
-
-**This does not refute the variance risk premium, and reading it that way would be an
-error.** IV can be simultaneously (a) more informative about the level of variance than
-HAR and (b) systematically above realised variance. Those are different properties —
-accuracy and bias — and the premium lives in the second. Supporting number: implied
-exceeded realised at **80.1%** of origins in the smoke sample.
-
-What it does change is the **expected value of the neural arm**. If the option market
-already forecasts variance better than the standard econometric model, a small MLP on
-HAR-type features is unlikely to beat it, and the interesting question moves from *can I
-forecast variance better than the market* to *is the premium harvestable after the
-measured spread* — which needs the cost model, not a GPU.
+**§4's observation about the pre-registration naming the wrong benchmark is weakened but
+not void:** IV is no longer *significantly* better than HAR, so §6's gate is defensible as
+written. It remains true that a model beating HAR by a hair while sitting behind IV has
+produced nothing useful, and that is still worth stating.
 
 ## 4. Three silent defects, found and fixed
 

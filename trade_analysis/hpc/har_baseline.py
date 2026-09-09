@@ -82,25 +82,45 @@ def qlike(y: np.ndarray, yhat: np.ndarray) -> np.ndarray:
     return y / yhat - np.log(y / yhat) - 1.0
 
 
-def fit_har(train: pd.DataFrame, feats: list[str]) -> np.ndarray:
-    """OLS in log space.
+def fit_har(train: pd.DataFrame, feats: list[str]) -> tuple[np.ndarray, float]:
+    """OLS in log space. Returns (coefficients, residual variance).
 
     Variance is right-skewed and strictly positive; fitting levels lets a handful of
     high-vol sessions dominate the normal equations, and lets the model predict a negative
     variance, which QLIKE cannot even score.
+
+    The residual variance comes back because `predict_har` needs it for the lognormal
+    correction -- see the note there. Returning it rather than recomputing keeps the
+    correction tied to the fit that produced it.
     """
     sub = train[feats + [TARGET]].replace([np.inf, -np.inf], np.nan).dropna()
     X = np.log(np.maximum(sub[feats].to_numpy(float), EPS))
     X = np.column_stack([np.ones(len(X)), X])
     y = np.log(np.maximum(sub[TARGET].to_numpy(float), EPS))
     beta, *_ = np.linalg.lstsq(X, y, rcond=None)
-    return beta
+    resid_var = float(np.var(y - X @ beta, ddof=X.shape[1]))
+    return beta, resid_var
 
 
-def predict_har(df: pd.DataFrame, feats: list[str], beta: np.ndarray) -> np.ndarray:
+def predict_har(df: pd.DataFrame, feats: list[str], beta: np.ndarray,
+                resid_var: float = 0.0) -> np.ndarray:
+    """Forecast in levels, with the LOGNORMAL BIAS CORRECTION applied.
+
+    exp(X @ beta) is the conditional MEDIAN, not the mean. For a right-skewed variable
+    E[exp(Z)] = exp(E[Z] + s2/2), so exponentiating a log-space fit without the exp(s2/2)
+    factor forecasts systematically LOW -- and QLIKE penalises under-forecasting
+    asymmetrically, so the omission does not merely add noise, it makes the model look
+    worse than it is.
+
+    Measured here: s2 = 0.7056, so the correction is a factor of 1.423 -- a 42% upward
+    adjustment. Omitting it cost HAR 20% of its QLIKE (0.5416 vs 0.4306) and was enough to
+    turn "implied variance beats HAR, p=0.0230" into a result that does not survive the
+    fix (p=0.5832). The first version of this file shipped without it and the conclusion in
+    research/vrp_baseline_results.md had to be corrected.
+    """
     X = np.log(np.maximum(df[feats].to_numpy(float), EPS))
     X = np.column_stack([np.ones(len(X)), X])
-    return np.exp(X @ beta)
+    return np.exp(X @ beta) * np.exp(resid_var / 2.0)
 
 
 def dm_test(loss_a: np.ndarray, loss_b: np.ndarray, dates: np.ndarray) -> dict:
@@ -150,8 +170,8 @@ def build_predictions(train: pd.DataFrame, test: pd.DataFrame) -> dict[str, np.n
         usable = [f for f in feats if f in train.columns]
         if len(usable) < 2:
             continue
-        beta = fit_har(train, usable)
-        preds[name] = predict_har(test, usable, beta)
+        beta, resid_var = fit_har(train, usable)
+        preds[name] = predict_har(test, usable, beta, resid_var)
     return preds
 
 
