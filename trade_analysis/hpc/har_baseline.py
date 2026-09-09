@@ -158,7 +158,15 @@ def build_predictions(train: pd.DataFrame, test: pd.DataFrame) -> dict[str, np.n
 def run(data_dir: str, audit: bool = False) -> int:
     df = load(data_dir)
     needed = [TARGET] + [f for f in HAR_FEATURES if f in df.columns]
+    # REPORT what the cleaning costs. A silent dropna is how a sample loses a quarter of
+    # itself without anyone noticing: zero-price halt bars once made 193 of 769 sessions
+    # vanish here, and the run still printed a confident-looking table.
+    before_rows, before_sessions = len(df), df["date"].nunique()
     df = df.replace([np.inf, -np.inf], np.nan).dropna(subset=needed)
+    lost = before_sessions - df["date"].nunique()
+    print(f"  cleaning: {before_rows} -> {len(df)} rows, "
+          f"{before_sessions} -> {df['date'].nunique()} sessions"
+          + (f"   *** {lost} SESSIONS LOST ***" if lost else "   (no sessions lost)"))
 
     if audit:
         # Shift features one minute INTO THE FUTURE, within each session. See the module

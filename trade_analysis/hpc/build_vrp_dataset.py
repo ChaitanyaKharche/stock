@@ -149,7 +149,19 @@ def load_bars(symbol: str, day: dt.date) -> pd.DataFrame | None:
         df = finer[finer.index.date == day]
         if df.empty:
             return None
-    return df.between_time("09:30", "15:59")
+    df = df.between_time("09:30", "15:59")
+
+    # DROP NON-POSITIVE PRICES. A trading halt leaves all-zero OHLCV rows in this
+    # archive -- SPY 2020-03-09 has them at 09:35 and 09:40, the circuit-breaker.
+    # log(0) is -inf, so one halt bar makes the whole session's realised variance inf,
+    # and because rv_prev_22 carries a 22-session window that single day poisoned 170
+    # LATER sessions. 193 of 769 sessions were being silently dropped downstream.
+    #
+    # Dropping the row is also the RIGHT treatment, not just a convenient one: the
+    # return then spans the halt (09:30 close to 09:45 close), which is the actual price
+    # change across it. Treating a halt as two enormous returns would invent volatility
+    # that never traded.
+    return df[df["close"] > 0]
 
 def load_option_quotes(symbol: str, day: dt.date) -> pd.DataFrame | None:
     """0DTE quotes for one session.
