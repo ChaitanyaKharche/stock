@@ -89,7 +89,14 @@ import pandas as pd
 from .har_baseline import (TARGET, EPS, load, clean, split, qlike, dm_test, evaluate,
                            build_predictions)
 
-CONTEXT = 512          # origins of history; ~8.5 sessions at 60 origins/session
+# Origins of history handed to the model. THIS IS A FAIRNESS PARAMETER, not a tuning
+# knob. HAR is given rv_prev_day, rv_prev_5 and rv_prev_22 -- explicit daily, weekly and
+# MONTHLY aggregates. At 60 origins per session, 512 covers only ~8.5 sessions, so the
+# first run handed chronos nothing resembling the 22-session lag HAR gets for free and
+# then reported that chronos lost. Beating a model you under-informed is not a result.
+# 1320 = 22 sessions exactly; chronos-bolt was trained at context 2048, so that is the
+# ceiling worth asking for.
+CONTEXT = 512
 HORIZON = 7            # NOT 6 -- see the module docstring. The extra step is the
                        # one-bar no-lookahead hole, and it is verified exact.
 SERIES = "rv_30m"
@@ -98,7 +105,8 @@ SERIES = "rv_30m"
 QUANTILES = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
 
 
-def build_contexts(df: pd.DataFrame, idx: np.ndarray, audit: bool = False):
+def build_contexts(df: pd.DataFrame, idx: np.ndarray, audit: bool = False,
+                   context: int = CONTEXT):
     """One context window per evaluation origin, ordered by (date, t).
 
     `df` must be the FULL frame, not the validation slice: an origin early in 2023 needs
@@ -109,7 +117,7 @@ def build_contexts(df: pd.DataFrame, idx: np.ndarray, audit: bool = False):
     out = []
     for i in idx:
         end = i + 1 + (1 if audit else 0)   # audit: one origin of genuine future
-        lo = max(0, end - CONTEXT)
+        lo = max(0, end - context)
         w = s[lo:end]
         w = w[np.isfinite(w)]
         if len(w) < 32:
@@ -316,7 +324,7 @@ def _predict(pipe, contexts, batch: int, log_space: bool):
 
 
 def run(data_dir: str, model_id: str, batch: int, log_space: bool,
-        audit: bool, block: str) -> int:
+        audit: bool, block: str, context: int = CONTEXT) -> int:
     import torch
     from chronos import BaseChronosPipeline
 
@@ -332,7 +340,8 @@ def run(data_dir: str, model_id: str, batch: int, log_space: bool,
 
     print(f"frame: {len(df):,} origins over {df['date'].nunique()} sessions")
     print(f"scoring on '{block}': {len(test):,} origins / {test['date'].nunique()} sessions")
-    print(f"model: {model_id}   context={CONTEXT}  horizon={HORIZON}  input="
+    print(f"model: {model_id}   context={context} ({context/60:.1f} sessions)"
+          f"  horizon={HORIZON}  input="
           f"{'LOG variance (mean tail-truncated)' if log_space else 'variance levels'}")
     if audit:
         print("AUDIT: context shifted one origin into the future ON PURPOSE")
@@ -343,7 +352,7 @@ def run(data_dir: str, model_id: str, batch: int, log_space: bool,
         model_id, device_map=dev,
         torch_dtype=torch.bfloat16 if dev == "cuda" else torch.float32)
 
-    contexts = build_contexts(df, test.index.to_numpy(), audit=audit)
+    contexts = build_contexts(df, test.index.to_numpy(), audit=audit, context=context)
     fc = _predict(pipe, contexts, batch, log_space)
 
     preds = build_predictions(train, test)
@@ -411,9 +420,12 @@ def main(argv=None) -> int:
                     help="feed log variance. OFF by default: recovering E[v] from a "
                          "log-space predictive distribution needs tails the quantile "
                          "grid does not have. See the module docstring.")
+    ap.add_argument("--context", type=int, default=CONTEXT,
+                    help="origins of history. 60 per session; 1320 = the 22 sessions "
+                         "HAR gets via rv_prev_22. Fairness, not tuning.")
     ap.add_argument("--audit", action="store_true")
     a = ap.parse_args(argv)
-    return run(a.data, a.model, a.batch, a.log, a.audit, a.block)
+    return run(a.data, a.model, a.batch, a.log, a.audit, a.block, a.context)
 
 
 if __name__ == "__main__":
