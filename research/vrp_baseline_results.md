@@ -4,8 +4,28 @@
 `vrp_preregistration.md`: the benchmark, and the audit that must pass before any number
 here is believed.
 
-**Final frame:** 769 sessions, **5-minute bars**, zero sessions dropped.
+**Final frame:** 769 sessions built, **5-minute bars**. **747 reach the models**, and
+346 + 250 + 151 = 747 — so the earlier wording here, *"zero sessions dropped"*, was
+wrong on its own arithmetic and is corrected rather than quietly deleted.
+
 Train 20,634 origins / 346 sessions · Validation 14,940 / **250** · Held out 9,030 / **151**.
+
+The 22 that do not arrive are a **warmup burn-in, not a loss**, and that was checked
+rather than assumed (2026-09-09):
+
+- They are the first 22 sessions in the archive, 2020-01-03 … 2020-02-21, consecutively.
+- `rv_prev_22` needs 22 prior sessions that do not exist yet. The nesting is exactly what
+  a lookback warmup produces: `rv_prev_day` kills 1, `rv_prev_5` kills 5, `rv_prev_22`
+  kills 22.
+- All 1,320 dropped rows are 22 × 60 whole sessions. **Zero rows are dropped inside a
+  surviving session.**
+- Every one falls in the train block, so validation and held out are untouched and the
+  bar in §3 is unaffected.
+
+They are *less* volatile than the sample (median 7.44% vs 11.00% annualised), which is a
+calendar fact about January 2020 being calm, not selection on volatility — the drop rule
+never reads the target. Had the direction been the other way it would have mattered a
+great deal, which is why it was measured.
 
 Three data defects were found and fixed before these numbers were trusted; §4 records them
 because each was **silent**, and the run printed a confident-looking table through all of
@@ -120,6 +140,18 @@ return then spans the halt (09:30 close → 09:45 close), the actual price chang
 rather than inventing two enormous returns for volatility that never traded. 2020-03-09 now
 reads **56.5%** annualised instead of infinity. `har_baseline` now prints what cleaning
 costs and shouts when sessions are lost, so a silent quarter-sample loss cannot recur.
+
+That counter now reads **22, all warmup** (see the note under the header). The shouting
+is deliberately kept even though the remaining loss is benign: a line that only appears
+when something is wrong is a line nobody recognises when it appears.
+
+**(d) A safety net with a hole, found 2026-09-09.** `dm_test` falls back to a normal
+approximation when scipy is missing — the case it exists for, since some compute nodes
+lack it. The fallback called `np.math.erf`, and **`np.math` was removed in numpy 2.0**, so
+it raised `AttributeError` and took the whole run down instead of degrading. It never
+fired on the cluster only because scipy happens to be installed there. Fixed to stdlib
+`math.erf`; the approximation costs about 0.0005 on a p-value at n=250 (0.5827 vs
+scipy's 0.5832), which is the difference between a normal and a t with 249 df.
 
 **Every number reported before 2026-09-09 on the 1-minute frame — including HAR-RV
 0.187365 — was computed with defect (c) present and is superseded.** They are not deleted:

@@ -63,7 +63,7 @@ import time
 import numpy as np
 import pandas as pd
 
-from .har_baseline import (TARGET, EPS, load, split, qlike, dm_test, evaluate,
+from .har_baseline import (TARGET, EPS, load, clean, split, qlike, dm_test, evaluate,
                            build_predictions)
 
 CONTEXT = 512          # origins of history; ~8.5 sessions at 60 origins/session
@@ -142,7 +142,10 @@ def run(data_dir: str, model_id: str, batch: int, log_space: bool,
     import torch
     from chronos import BaseChronosPipeline
 
-    df = load(data_dir)
+    # SAME cleaning as the baseline, from the baseline's own function. Without it this
+    # arm would score on rows HAR never saw, and the two QLIKE numbers would not be
+    # comparable -- which is the sort of difference that gets read as a model result.
+    df = clean(load(data_dir))
     blocks = split(df)
     test = blocks[block]
     train = blocks["train"]

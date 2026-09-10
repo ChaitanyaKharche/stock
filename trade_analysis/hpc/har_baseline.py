@@ -43,6 +43,7 @@ measured edge. The audit costs one extra CPU run.
 from __future__ import annotations
 
 import argparse
+import math
 import glob
 import json
 from pathlib import Path
@@ -140,7 +141,10 @@ def dm_test(loss_a: np.ndarray, loss_b: np.ndarray, dates: np.ndarray) -> dict:
         from scipy import stats
         p = float(2 * (1 - stats.t.cdf(abs(t), df=n - 1)))
     except ImportError:                                      # scipy absent on some nodes
-        p = float(2 * (1 - 0.5 * (1 + np.math.erf(abs(t) / np.sqrt(2)))))
+        # `np.math` was REMOVED in numpy 2.0, so the fallback that exists for nodes
+        # without scipy used to raise AttributeError and take the whole run down with it
+        # -- a safety net with a hole exactly where it was needed. math.erf is stdlib.
+        p = float(2 * (1 - 0.5 * (1 + math.erf(abs(t) / math.sqrt(2)))))
     return {"n_sessions": int(n), "mean_diff": float(d.mean()), "t": t, "p": p}
 
 
@@ -175,18 +179,39 @@ def build_predictions(train: pd.DataFrame, test: pd.DataFrame) -> dict[str, np.n
     return preds
 
 
+def clean(df: pd.DataFrame, verbose: bool = True) -> pd.DataFrame:
+    """Drop rows the HAR features cannot be computed on, and SAY what that cost.
+
+    A silent dropna is how a sample loses a quarter of itself without anyone noticing:
+    zero-price halt bars once made 193 of 769 sessions vanish here and the run still
+    printed a confident-looking table.
+
+    What it removes now is a warmup burn-in, not a defect. Measured 2026-09-09: the only
+    sessions lost are the FIRST 22 in the archive, 2020-01-03 .. 2020-02-21, and they go
+    because `rv_prev_22` needs 22 prior sessions that do not exist yet. The nesting is
+    exactly what a lookback warmup produces -- rv_prev_day kills 1, rv_prev_5 kills 5,
+    rv_prev_22 kills 22 -- every one is a full 60-origin session, and ZERO rows are
+    dropped inside a surviving session. All 22 fall in the train block, so validation
+    (250 sessions) and heldout (151) are untouched.
+
+    Shared with the zero-shot arm on purpose. Two copies of a cleaning rule is two
+    chances to define it differently and score two models on different rows.
+    """
+    needed = [TARGET] + [f for f in HAR_FEATURES if f in df.columns]
+    before_rows, before_sessions = len(df), df["date"].nunique()
+    out = df.replace([np.inf, -np.inf], np.nan).dropna(subset=needed)
+    lost = before_sessions - out["date"].nunique()
+    if verbose:
+        print(f"  cleaning: {before_rows} -> {len(out)} rows, "
+              f"{before_sessions} -> {out['date'].nunique()} sessions"
+              + (f"   *** {lost} SESSIONS LOST ***" if lost else "   (no sessions lost)"))
+    return out
+
+
 def run(data_dir: str, audit: bool = False) -> int:
     df = load(data_dir)
     needed = [TARGET] + [f for f in HAR_FEATURES if f in df.columns]
-    # REPORT what the cleaning costs. A silent dropna is how a sample loses a quarter of
-    # itself without anyone noticing: zero-price halt bars once made 193 of 769 sessions
-    # vanish here, and the run still printed a confident-looking table.
-    before_rows, before_sessions = len(df), df["date"].nunique()
-    df = df.replace([np.inf, -np.inf], np.nan).dropna(subset=needed)
-    lost = before_sessions - df["date"].nunique()
-    print(f"  cleaning: {before_rows} -> {len(df)} rows, "
-          f"{before_sessions} -> {df['date'].nunique()} sessions"
-          + (f"   *** {lost} SESSIONS LOST ***" if lost else "   (no sessions lost)"))
+    df = clean(df)
 
     if audit:
         # Shift features one minute INTO THE FUTURE, within each session. See the module
