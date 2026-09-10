@@ -31,28 +31,44 @@ Verified rather than assumed: exact on 40,541 of 40,541 in-session pairs, relati
 obvious guess would have scored the model on a window offset one bar from the one it was
 given -- and the null that produced would have read as the model's failure.
 
-NO LOOKAHEAD, AND WHY THE AUDIT MUST ALSO SHORTEN THE HORIZON
---------------------------------------------------------------
+NO LOOKAHEAD, AND AN AUDIT THAT TOOK THREE TRIES
+-------------------------------------------------
 Context for origin i is `rv_30m[0 .. i]` INCLUSIVE. That is not a leak: `rv_30m[i]` is
-backward-looking over the thirty minutes already elapsed at time i, so every value in the
-context is realised and observable at the moment the forecast is made. The target is the
-seventh step ahead, which never enters the context.
+backward-looking over the thirty minutes already elapsed at i, so every value in the
+context is realised and observable when the forecast is made. The target is the seventh
+step ahead and never enters the context.
 
-`--audit` hands the model one origin of GENUINE future and must therefore score BETTER.
-The first version did not, and that was a defect in the audit, not a leak in the pipeline.
+The audit must inject known future information and score BETTER. Two designs failed
+before this one, both for the same underlying reason: a zero-shot fixed-horizon model
+gives you no refit to absorb a change, so anything you perturb has to be the ONLY thing
+that changes.
 
-Shifting the context to `rv_30m[0 .. i+1]` does not simply add information -- it moves
-the forecast ORIGIN forward a step. Reading step 7 from origin i+1 lands on i+8, while
-the target is still the window at i+7. So the audit was simultaneously handed a free
-origin of the future (helps) and asked to forecast one step further out than the thing it
-was scored against (hurts). The two roughly cancelled and the audit came out 0.67% WORSE,
-which is uninterpretable in either direction.
+  ATTEMPT 1 -- shift the context one origin forward, keep horizon 7.
+  Moving the context also moves the forecast ORIGIN, so step 7 landed on i+8 while the
+  target stayed at i+7. Free future (helps) plus forecasting further out (hurts). They
+  cancelled: 0.793359 honest, 0.798662 audit. Uninterpretable.
 
-Measured 2026-09-09: honest ctx1320 0.793359, audit ctx1320 0.798662.
+  ATTEMPT 2 -- shift the context AND drop the horizon to 6, so it lands on i+7 again.
+  Now the target is right, but prediction_length is itself a treatment: the model is
+  genuinely less uncertain six steps out than seven. Measured, sigma fell 0.758 -> 0.719,
+  the mean/median ratio with it, 1.333x -> 1.295x. A lower mean under QLIKE, which
+  punishes under-forecasting asymmetrically, scores WORSE: 0.825780. Also uninterpretable.
 
-The audit therefore uses HORIZON - 1 steps, so context end plus steps still lands exactly
-on the target window. Then the ONLY difference between the two runs is the one origin of
-real future, and "audit better" recovers its meaning.
+  Both attempts also injected the wrong thing. rv_30m[i+1] covers the six returns ending
+  at bar i, and the target covers returns i+1..i+6 -- ZERO overlap. The "future" being
+  injected was one bar that says almost nothing about the window being predicted, and it
+  arrived as one element out of 1320.
+
+  ATTEMPT 3, HERE -- replace the LAST context value with the target itself.
+  Same context length, same origin, same horizon, same everything: only the value in the
+  final observed slot changes, from rv_30m[i] to rv_fwd_30[i]. The answer is now sitting
+  in the model's input.
+
+This is a positive control rather than a subtle probe, and that is the point. If handing
+the model the answer as its most recent observation does not improve QLIKE substantially,
+then either the model is ignoring its context or the scoring is not connected to the
+forecast, and every honest number here is meaningless. A test that cannot fail loudly is
+not a test.
 
 THE BIAS TRAP -- AND WHY THIS FILE FEEDS VARIANCE, NOT LOG VARIANCE
 --------------------------------------------------------------------
@@ -126,17 +142,27 @@ def build_contexts(df: pd.DataFrame, idx: np.ndarray, audit: bool = False,
 
     `df` must be the FULL frame, not the validation slice: an origin early in 2023 needs
     its history from 2022, and that history is legitimately available at the time.
+
+    `audit` overwrites the final observed value with the TARGET -- see the module
+    docstring for why the two subtler designs before it were uninterpretable. Length,
+    origin and horizon are all untouched, so the injected answer is the only difference.
     """
     s = df[SERIES].to_numpy(float)
     s = np.where(np.isfinite(s) & (s > 0), s, np.nan)
+    tgt = df[TARGET].to_numpy(float)
     out = []
     for i in idx:
-        end = i + 1 + (1 if audit else 0)   # audit: one origin of genuine future
+        end = i + 1
         lo = max(0, end - context)
         w = s[lo:end]
         w = w[np.isfinite(w)]
         if len(w) < 32:
             w = np.array([np.nanmedian(s[:end]) if end else 1e-4])
+        if audit:
+            y = tgt[i]
+            if np.isfinite(y) and y > 0:
+                w = w.copy()
+                w[-1] = y
         out.append(w)
     return out
 
@@ -356,16 +382,18 @@ def run(data_dir: str, model_id: str, batch: int, log_space: bool,
     print(f"frame: {len(df):,} origins over {df['date'].nunique()} sessions")
     print(f"scoring on '{block}': {len(test):,} origins / {test['date'].nunique()} sessions")
     print(f"model: {model_id}   context={context} ({context/60:.1f} sessions)"
-          f"  horizon={HORIZON - (1 if audit else 0)}  input="
+          f"  horizon={HORIZON}  input="
           f"{'LOG variance (mean tail-truncated)' if log_space else 'variance levels'}")
-    # The audit moves the forecast origin forward one step, so the horizon must come
-    # DOWN one step to keep landing on the same target window. Without this the audit is
-    # both handed a free origin of the future and asked to forecast further out than the
-    # thing it is scored on; the effects cancel and the result means nothing.
-    horizon = HORIZON - (1 if audit else 0)
+    # The horizon is NOT changed by the audit. prediction_length is itself a treatment
+    # -- the model is less uncertain six steps out than seven, sigma falls, the mean with
+    # it, and QLIKE punishes the lower forecast. Attempt 2 lost 0.03 of QLIKE to exactly
+    # that. The audit changes one value and nothing else.
+    horizon = HORIZON
     if audit:
-        print(f"AUDIT: context shifted one origin into the future ON PURPOSE, "
-              f"horizon {HORIZON} -> {horizon} so it still targets the same window")
+        print("AUDIT: the TARGET is written into the last context slot ON PURPOSE. "
+              "Same length, same origin, same horizon.\n"
+              "       This is a positive control: if handing the model the answer does "
+              "not improve QLIKE\n       substantially, the honest numbers mean nothing.")
 
     dev = "cuda" if torch.cuda.is_available() else "cpu"
     print(f"device: {dev}")
