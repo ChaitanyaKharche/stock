@@ -36,10 +36,40 @@ if [ ! -x "$PY" ]; then
 fi
 echo "interpreter: $PY"
 
-# No network on this node. Weights must already be cached by fetch_zeroshot.sh; this makes
-# a missing one an instant error rather than a wall-clock-eating connect timeout.
-export HF_HUB_OFFLINE=1
-export TRANSFORMERS_OFFLINE=1
+MODEL="${MODEL:-amazon/chronos-bolt-base}"
+
+# FAIL NOW, LEGIBLY, rather than after the GPU is allocated and the data is loaded.
+# On 2026-09-09 the fetch step was OOM-killed on the login node and the job was submitted
+# anyway; without this check that surfaces as an ImportError forty seconds in, buried
+# under a stack trace, having spent a GPU allocation to discover a missing package.
+if ! "$PY" -c "import chronos" 2>/dev/null; then
+  echo "chronos is not installed in env '$ENV_NAME'."
+  echo "Install it ON A COMPUTE NODE -- the login node will OOM-kill pip:"
+  echo "  srun --partition=short --time=00:30:00 --mem=16G --pty bash"
+  echo "  cd ~/vrp/rep && bash trade_analysis/hpc/fetch_zeroshot.sh"
+  exit 1
+fi
+
+# Prefer the cache, but do not FORCE offline. Discovery's compute nodes do have outbound
+# network -- setup_env.sh pip-installs torch on one -- so pinning HF_HUB_OFFLINE=1 with an
+# empty cache would turn a slow download into a hard failure for no reason. Offline is set
+# only when the weights are already present, where it is a genuine safety net: it makes a
+# cache miss an instant error instead of a silent re-download mid-job.
+if "$PY" - "$MODEL" <<'PY'
+import sys
+from huggingface_hub import snapshot_download
+try:
+    snapshot_download(sys.argv[1], local_files_only=True)
+except Exception:
+    sys.exit(1)
+PY
+then
+  echo "weights cached; running offline"
+  export HF_HUB_OFFLINE=1
+  export TRANSFORMERS_OFFLINE=1
+else
+  echo "weights NOT cached; allowing the job to download them"
+fi
 
 if [ ! -d "$VRP_ROOT/data/vrp" ] || [ -z "$(ls -A "$VRP_ROOT/data/vrp" 2>/dev/null)" ]; then
   echo "NO DATA at $VRP_ROOT/data/vrp -- push the frame up from the laptop first"
@@ -49,7 +79,6 @@ echo "sessions available: $(ls "$VRP_ROOT/data/vrp"/*.parquet 2>/dev/null | wc -
 "$PY" -c "import torch; print('cuda:', torch.cuda.is_available(), '|',
       torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'CPU only')"
 
-MODEL="${MODEL:-amazon/chronos-bolt-base}"
 SAFE=$(echo "$MODEL" | tr '/' '_')
 
 echo
