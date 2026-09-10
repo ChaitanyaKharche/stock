@@ -201,37 +201,74 @@ def _norm_ppf(p: np.ndarray) -> np.ndarray:
 _Z = _norm_ppf(np.array(QUANTILES))
 
 
-def _lognormal_mean(q: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
-    """E[v] and sigma, from a lognormal fitted to the model's OWN returned quantiles.
+MAX_SIGMA = 2.0        # see _lognormal_mean; beyond this the mean is pure extrapolation
+MIN_VALID_Q = 3        # a two-parameter line needs more than two points to mean anything
+
+
+def _lognormal_mean(q: np.ndarray) -> dict:
+    """E[v] from a lognormal fitted to the model's OWN returned quantiles.
 
     WHY THIS EXISTS. chronos-bolt's `predict_quantiles` returns (quantiles, mean) and
     that second value is its 0.5 quantile -- measured 2026-09-09, the "mean" and the
     median scored identically to six decimal places on 14,940 origins, RMSE and DM
-    t-statistic included. The library calls a median a mean.
+    t-statistic included. The library calls a median a mean, and QLIKE scores a mean.
 
-    QLIKE scores a forecast of the MEAN, and for a right-skewed variable the median sits
-    well below it. Scoring the median against QLIKE is the same defect that has now bitten
-    this project three times: once in har_baseline (my exp(X@beta) with no exp(s2/2)),
-    once in the first draft of this file (exp of a mean of logs), and now arriving from
-    a dependency.
+    THE FIT. If v is lognormal then log(q_p) = mu + sigma*z_p. Regressing the log of the
+    returned quantiles on z recovers mu and sigma, and E[v] = exp(mu + sigma^2/2) -- the
+    same correction har_forecast.py and har_baseline.py apply to a regression residual,
+    applied here to the model's own predictive distribution. Lognormal is what both HAR
+    variants already assume, so the neural arm is not handed a different error model
+    than the benchmark it has to beat.
 
-    THE FIT. If v is lognormal then log(q_p) = mu + sigma*z_p, with z_p the standard
-    normal quantile. So regressing the log of the returned quantiles on z recovers mu
-    and sigma, and E[v] = exp(mu + sigma^2/2) -- the same correction har_forecast.py and
-    har_baseline.py already apply to a regression residual, applied instead to the
-    model's own predictive distribution.
+    THREE GUARDS, EACH FOR A FAILURE THAT ACTUALLY HAPPENED
+    -------------------------------------------------------
+    (a) CHRONOS IS NOT CONSTRAINED POSITIVE. The first version clamped with
+        `log(max(q, EPS))`, EPS = 1e-12. A single non-positive low quantile then entered
+        the fit as log = -27.6 and dragged sigma to 6.2, producing a mean of 3.7e+05;
+        two of them gave 9.9e+16. That is where RMSE = 6.7e+11 came from on an 0.01-
+        scale target. Non-positive quantiles are now DROPPED from the fit, not clamped,
+        and the regression is the full two-parameter masked form because dropping the
+        low levels stops z being centred.
 
-    Lognormal is not an arbitrary choice here: it is the distribution both HAR models in
-    this project already assume, so using it keeps the comparison on one footing rather
-    than handing the neural arm a different error model.
+    (b) QUANTILE CROSSING. Nothing makes the returned levels monotone. They are sorted
+        first, which is the standard repair and costs nothing when they already are.
 
-    z is symmetric about zero for a symmetric level grid, so mean(z) = 0 and the
-    intercept is simply the mean of the logs.
+    (c) SIGMA IS CAPPED AT MAX_SIGMA. The grid stops at the 90th percentile, so any mean
+        driven by a large sigma is extrapolation past everything the model was asked
+        about. For scale: HAR's own residual sigma is 0.84 and the observed median
+        predictive sigma here is 0.785, so 2.0 is already well outside the data. The
+        count of capped rows is reported rather than hidden -- if it is not small, the
+        estimator is doing the forecasting and should not be trusted.
+
+    QLIKE hides all of this, which is exactly why it is the training and scoring loss:
+    over-forecasting costs only log(f), so an exploded row adds ~30 to one observation
+    and moves a 14,940-row mean by 0.002. RMSE screams. Both are reported.
     """
-    y = np.log(np.maximum(q, EPS))
-    mu = y.mean(axis=1)
-    sigma = np.maximum((y * _Z).sum(axis=1) / (_Z ** 2).sum(), 0.0)
-    return np.exp(mu + sigma ** 2 / 2.0), sigma
+    q = np.sort(np.asarray(q, dtype=float), axis=1)          # (b)
+    valid = q > 0                                            # (a)
+    y = np.where(valid, np.log(np.where(valid, q, 1.0)), 0.0)
+    w = valid.astype(float)
+    n = w.sum(axis=1)
+    Sz = (w * _Z).sum(axis=1)
+    Sy = (w * y).sum(axis=1)
+    Szz = (w * _Z * _Z).sum(axis=1)
+    Szy = (w * _Z * y).sum(axis=1)
+    den = n * Szz - Sz ** 2
+    ok = (n >= MIN_VALID_Q) & (den > 1e-12)
+    sigma = np.where(ok, (n * Szy - Sz * Sy) / np.where(ok, den, 1.0), 0.0)
+    sigma = np.clip(sigma, 0.0, None)
+    capped = sigma > MAX_SIGMA                               # (c)
+    sigma_used = np.minimum(sigma, MAX_SIGMA)
+    mu = np.where(ok, (Sy - sigma_used * Sz) / np.maximum(n, 1.0), 0.0)
+    mean = np.exp(mu + sigma_used ** 2 / 2.0)
+    # Rows too degenerate to fit fall back to the median, which is at least a number the
+    # model actually produced.
+    imed = QUANTILES.index(0.5)
+    fallback = np.maximum(q[:, imed], EPS)
+    mean = np.where(ok, mean, fallback)
+    return {"mean": np.maximum(mean, EPS), "sigma": sigma,
+            "n_nonpositive": (~valid).any(axis=1), "capped": capped & ok,
+            "unfittable": ~ok}
 
 
 def _predict(pipe, contexts, batch: int, log_space: bool):
@@ -244,7 +281,7 @@ def _predict(pipe, contexts, batch: int, log_space: bool):
     """
     import torch
     call, _, has_mean = resolve_predictor(pipe)
-    lib, med, lnm, sig = [], [], [], []
+    lib, med, lnm, sig, bad, cap, unf = [], [], [], [], [], [], []
     imed = QUANTILES.index(0.5)
     t0 = time.time()
     for b0 in range(0, len(contexts), batch):
@@ -258,10 +295,13 @@ def _predict(pipe, contexts, batch: int, log_space: bool):
         q = (out[0] if has_mean else out)[:, HORIZON - 1, :].float().cpu().numpy()
         if log_space:
             q = np.exp(q)                    # exact: quantiles survive a monotone map
-        m_ln, s = _lognormal_mean(q)
-        lnm.append(m_ln)
-        sig.append(s)
-        med.append(q[:, imed])
+        fit = _lognormal_mean(q)
+        lnm.append(fit["mean"])
+        sig.append(fit["sigma"])
+        bad.append(fit["n_nonpositive"])
+        cap.append(fit["capped"])
+        unf.append(fit["unfittable"])
+        med.append(np.sort(q, axis=1)[:, imed])
         if has_mean:
             v = out[1][:, HORIZON - 1].float().cpu().numpy()
             lib.append(np.exp(v) if log_space else v)
@@ -271,7 +311,8 @@ def _predict(pipe, contexts, batch: int, log_space: bool):
     cat = lambda xs: np.maximum(np.concatenate(xs), EPS)
     return {"median": cat(med), "mean_lognormal": cat(lnm),
             "library_mean": cat(lib) if lib else None,
-            "sigma": np.concatenate(sig)}
+            "sigma": np.concatenate(sig), "n_nonpositive": np.concatenate(bad),
+            "capped": np.concatenate(cap), "unfittable": np.concatenate(unf)}
 
 
 def run(data_dir: str, model_id: str, batch: int, log_space: bool,
@@ -321,9 +362,15 @@ def run(data_dir: str, model_id: str, batch: int, log_space: bool,
         if same <= 0.99:
             preds[f"zeroshot::{tag}::mean_library"] = lib
     s = fc["sigma"]
-    corr = np.exp(s ** 2 / 2.0)
-    print(f"  predictive sigma: median {np.median(s):.3f}  -> lognormal mean/median "
-          f"ratio {np.median(corr):.3f}x  (HAR's own factor is 1.423)")
+    print(f"  predictive sigma: median {np.median(s):.3f}  max {s.max():.3f}"
+          f"  -> mean/median ratio {np.median(np.exp(s ** 2 / 2.0)):.3f}x"
+          f"  (HAR's own factor is 1.423)")
+    print(f"  quantile health: {fc['n_nonpositive'].mean():.2%} of origins returned a "
+          f"NON-POSITIVE quantile, {fc['capped'].mean():.2%} hit the sigma cap "
+          f"({MAX_SIGMA}), {fc['unfittable'].mean():.2%} were unfittable")
+    if fc["capped"].mean() > 0.02:
+        print("  *** more than 2% capped -- the estimator, not the model, is doing the "
+              "forecasting. Treat the mean row as unreliable. ***")
 
     table = evaluate(test, preds)
     print(f"\n=== QLIKE on {block} (lower is better) ===")
