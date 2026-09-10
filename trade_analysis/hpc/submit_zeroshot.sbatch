@@ -81,16 +81,25 @@ echo "sessions available: $(ls "$VRP_ROOT/data/vrp"/*.parquet 2>/dev/null | wc -
 
 SAFE=$(echo "$MODEL" | tr '/' '_')
 
+# Two context lengths, because context is a FAIRNESS parameter here, not a tuning knob.
+# HAR is handed rv_prev_day / rv_prev_5 / rv_prev_22 -- explicit daily, weekly and MONTHLY
+# aggregates of past variance. At 60 origins per session, 512 origins is about 8.5
+# sessions and contains nothing like a 22-session lag. Reporting that chronos lost at 512
+# alone would be beating a model we under-informed. 1320 origins = 22 sessions exactly,
+# and chronos-bolt was trained at context 2048, so it is well inside range.
+for CTX in ${CONTEXTS:-512 1320}; do
+  echo
+  echo "================ HONEST : $MODEL  context=$CTX ================"
+  "$PY" -m trade_analysis.hpc.zeroshot_baseline \
+    --data "$VRP_ROOT/data/vrp" --model "$MODEL" --context "$CTX" \
+    | tee "$VRP_ROOT/results/zeroshot_${SAFE}_ctx${CTX}_honest.txt"
+done
 echo
-echo "================ HONEST : $MODEL ================"
+echo "================ AUDIT (one origin of future injected), context=1320 ============"
+# One lookahead check, on the configuration that matters. The audit tests the pipeline,
+# not the context length.
 "$PY" -m trade_analysis.hpc.zeroshot_baseline \
-  --data "$VRP_ROOT/data/vrp" --model "$MODEL" \
-  | tee "$VRP_ROOT/results/zeroshot_${SAFE}_honest.txt"
-
-echo
-echo "================ AUDIT (one origin of future injected) ================"
-"$PY" -m trade_analysis.hpc.zeroshot_baseline \
-  --data "$VRP_ROOT/data/vrp" --model "$MODEL" --audit \
+  --data "$VRP_ROOT/data/vrp" --model "$MODEL" --context 1320 --audit \
   | tee "$VRP_ROOT/results/zeroshot_${SAFE}_audit.txt"
 
 echo
