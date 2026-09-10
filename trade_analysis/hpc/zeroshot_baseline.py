@@ -31,13 +31,28 @@ Verified rather than assumed: exact on 40,541 of 40,541 in-session pairs, relati
 obvious guess would have scored the model on a window offset one bar from the one it was
 given -- and the null that produced would have read as the model's failure.
 
-NO LOOKAHEAD
-------------
+NO LOOKAHEAD, AND WHY THE AUDIT MUST ALSO SHORTEN THE HORIZON
+--------------------------------------------------------------
 Context for origin i is `rv_30m[0 .. i]` INCLUSIVE. That is not a leak: `rv_30m[i]` is
 backward-looking over the thirty minutes already elapsed at time i, so every value in the
 context is realised and observable at the moment the forecast is made. The target is the
-next seven steps, which never enters the context. `--audit` shifts the context one origin
-into the future to prove the honest path did not already contain it.
+seventh step ahead, which never enters the context.
+
+`--audit` hands the model one origin of GENUINE future and must therefore score BETTER.
+The first version did not, and that was a defect in the audit, not a leak in the pipeline.
+
+Shifting the context to `rv_30m[0 .. i+1]` does not simply add information -- it moves
+the forecast ORIGIN forward a step. Reading step 7 from origin i+1 lands on i+8, while
+the target is still the window at i+7. So the audit was simultaneously handed a free
+origin of the future (helps) and asked to forecast one step further out than the thing it
+was scored against (hurts). The two roughly cancelled and the audit came out 0.67% WORSE,
+which is uninterpretable in either direction.
+
+Measured 2026-09-09: honest ctx1320 0.793359, audit ctx1320 0.798662.
+
+The audit therefore uses HORIZON - 1 steps, so context end plus steps still lands exactly
+on the target window. Then the ONLY difference between the two runs is the one origin of
+real future, and "audit better" recovers its meaning.
 
 THE BIAS TRAP -- AND WHY THIS FILE FEEDS VARIANCE, NOT LOG VARIANCE
 --------------------------------------------------------------------
@@ -126,7 +141,7 @@ def build_contexts(df: pd.DataFrame, idx: np.ndarray, audit: bool = False,
     return out
 
 
-def resolve_predictor(pipe):
+def resolve_predictor(pipe, horizon: int):
     """Probe the pipeline's real signature on two toy series before spending the job.
 
     chronos-forecasting renamed `context` to `inputs` between its 1.x and 2.x lines. That
@@ -141,13 +156,13 @@ def resolve_predictor(pipe):
     tried = []
     candidates = [
         ("predict_quantiles(inputs=...)",
-         lambda c: pipe.predict_quantiles(inputs=c, prediction_length=HORIZON,
+         lambda c: pipe.predict_quantiles(inputs=c, prediction_length=horizon,
                                           quantile_levels=QUANTILES)),
         ("predict_quantiles(positional)",
-         lambda c: pipe.predict_quantiles(c, prediction_length=HORIZON,
+         lambda c: pipe.predict_quantiles(c, prediction_length=horizon,
                                           quantile_levels=QUANTILES)),
         ("predict_quantiles(context=...)",
-         lambda c: pipe.predict_quantiles(context=c, prediction_length=HORIZON,
+         lambda c: pipe.predict_quantiles(context=c, prediction_length=horizon,
                                           quantile_levels=QUANTILES)),
     ]
     for name, fn in candidates:
@@ -279,7 +294,7 @@ def _lognormal_mean(q: np.ndarray) -> dict:
             "unfittable": ~ok}
 
 
-def _predict(pipe, contexts, batch: int, log_space: bool):
+def _predict(pipe, contexts, batch: int, log_space: bool, horizon: int = HORIZON):
     """Returns (mean, median) forecasts of the target, in VARIANCE levels.
 
     In levels mode the pipeline's own mean is already E[v], which is what QLIKE scores.
@@ -288,7 +303,7 @@ def _predict(pipe, contexts, batch: int, log_space: bool):
     reported as biased low, rather than faked with exp(mean of logs).
     """
     import torch
-    call, _, has_mean = resolve_predictor(pipe)
+    call, _, has_mean = resolve_predictor(pipe, horizon)
     lib, med, lnm, sig, bad, cap, unf = [], [], [], [], [], [], []
     imed = QUANTILES.index(0.5)
     t0 = time.time()
@@ -300,7 +315,7 @@ def _predict(pipe, contexts, batch: int, log_space: bool):
         # (batch, horizon, n_quantiles). The final step is the window the target is
         # measured over; the six before it are the no-lookahead hole plus the window's
         # own interior, and are not scored.
-        q = (out[0] if has_mean else out)[:, HORIZON - 1, :].float().cpu().numpy()
+        q = (out[0] if has_mean else out)[:, horizon - 1, :].float().cpu().numpy()
         if log_space:
             q = np.exp(q)                    # exact: quantiles survive a monotone map
         fit = _lognormal_mean(q)
@@ -311,7 +326,7 @@ def _predict(pipe, contexts, batch: int, log_space: bool):
         unf.append(fit["unfittable"])
         med.append(np.sort(q, axis=1)[:, imed])
         if has_mean:
-            v = out[1][:, HORIZON - 1].float().cpu().numpy()
+            v = out[1][:, horizon - 1].float().cpu().numpy()
             lib.append(np.exp(v) if log_space else v)
         done = min(b0 + batch, len(contexts))
         if b0 % (batch * 10) == 0 or done == len(contexts):
@@ -341,10 +356,16 @@ def run(data_dir: str, model_id: str, batch: int, log_space: bool,
     print(f"frame: {len(df):,} origins over {df['date'].nunique()} sessions")
     print(f"scoring on '{block}': {len(test):,} origins / {test['date'].nunique()} sessions")
     print(f"model: {model_id}   context={context} ({context/60:.1f} sessions)"
-          f"  horizon={HORIZON}  input="
+          f"  horizon={HORIZON - (1 if audit else 0)}  input="
           f"{'LOG variance (mean tail-truncated)' if log_space else 'variance levels'}")
+    # The audit moves the forecast origin forward one step, so the horizon must come
+    # DOWN one step to keep landing on the same target window. Without this the audit is
+    # both handed a free origin of the future and asked to forecast further out than the
+    # thing it is scored on; the effects cancel and the result means nothing.
+    horizon = HORIZON - (1 if audit else 0)
     if audit:
-        print("AUDIT: context shifted one origin into the future ON PURPOSE")
+        print(f"AUDIT: context shifted one origin into the future ON PURPOSE, "
+              f"horizon {HORIZON} -> {horizon} so it still targets the same window")
 
     dev = "cuda" if torch.cuda.is_available() else "cpu"
     print(f"device: {dev}")
@@ -353,7 +374,7 @@ def run(data_dir: str, model_id: str, batch: int, log_space: bool,
         torch_dtype=torch.bfloat16 if dev == "cuda" else torch.float32)
 
     contexts = build_contexts(df, test.index.to_numpy(), audit=audit, context=context)
-    fc = _predict(pipe, contexts, batch, log_space)
+    fc = _predict(pipe, contexts, batch, log_space, horizon)
 
     preds = build_predictions(train, test)
     tag = model_id.split("/")[-1]
