@@ -37,6 +37,7 @@ except Exception:                                        # pragma: no cover
 
 RTH_OPEN, RTH_CLOSE = dt.time(9, 30), dt.time(16, 0)
 DELAYED_THRESHOLD_SEC = 120.0     # anything staler than this during RTH is not real-time
+FUTURE_QUOTE_SEC = 5.0            # and anything this far AHEAD of us is clock skew
 
 OK, WARN, FAIL = "  [OK]  ", "  [WARN]", "  [FAIL]"
 # Stable token for callers to key on. autostart used to grep the PROSE
@@ -148,12 +149,24 @@ def check_freshness(feed, symbol, now) -> list[str]:
     q = feed.stock_quote(symbol)
     if not q:
         return [f"{FAIL} {symbol}: no underlying quote at all"]
-    age = (now - q["ts"]).total_seconds()
+    # Against RECEIPT, not against the `now` handed in at the top of the run. This
+    # check sits ~50s into a 145s preflight, so the old reference made every quote
+    # look 50s future-dated -- and the test below is one-sided, so all 15 symbols
+    # printed "REAL-TIME" on the strength of a negative number being <= 120.
+    age = (q.get("recv_ts", now) - q["ts"]).total_seconds()
     if not in_rth:
         out.append(f"{WARN} {symbol} underlying: last quote {q['ts']:%Y-%m-%d %H:%M:%S} "
                    f"(market closed -- freshness UNVERIFIABLE, rerun during RTH)")
         return out
-    if age <= DELAYED_THRESHOLD_SEC:
+    if age < -FUTURE_QUOTE_SEC:
+        # Now that age is measured against receipt this can only mean the feed's
+        # clock genuinely leads ours -- i.e. real skew, which shares_runner rejects
+        # quote-by-quote. WARN and not FAIL on purpose: a gate that refuses to open
+        # the session over a clock reading would cost more sessions than skew has.
+        out.append(f"{WARN} {symbol} underlying quote is {-age:.1f}s AHEAD of this\n"
+                   f"         machine's clock -- suspect clock skew. The runner will\n"
+                   f"         refuse individual quotes past {FUTURE_QUOTE_SEC:.0f}s.")
+    elif age <= DELAYED_THRESHOLD_SEC:
         out.append(f"{OK} {symbol} underlying REAL-TIME (age {age:.1f}s)")
     else:
         out.append(f"{FAIL} {symbol} underlying is DELAYED by ~{age/60:.1f} min. Every entry")

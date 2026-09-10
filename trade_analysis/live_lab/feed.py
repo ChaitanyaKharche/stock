@@ -24,6 +24,8 @@ from typing import Any
 
 import httpx
 
+from .clock import now_et
+
 BASE_URL = "http://127.0.0.1:25503/v3"
 SESSION_OPEN = dt.time(9, 30)
 SESSION_LAST_BAR = dt.time(15, 59)
@@ -96,6 +98,14 @@ class ThetaLiveFeed:
             return None
         return {
             "ts": _parse_ts(r["timestamp"]),
+            # WHEN THIS ROW ARRIVED, not when the caller started its poll. Quote age must
+            # be measured against receipt, and both callers used to measure it against a
+            # `now` sampled before a batch of network calls -- so a slow batch made every
+            # quote look FUTURE-dated. Measured 2026-09-09: preflight took 145s per run
+            # with `now` fixed at the start, and printed 15 x "[OK] REAL-TIME (age -50s)"
+            # while the runner, minutes later, threw 30 `future_quote` outages on the same
+            # feed. Neither the clock nor the feed was wrong; the reference point was.
+            "recv_ts": now_et(),
             "bid": bid,
             "ask": ask,
             "mid": (bid + ask) / 2.0,

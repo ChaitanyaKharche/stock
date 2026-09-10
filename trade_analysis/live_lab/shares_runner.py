@@ -68,6 +68,25 @@ NOTIONAL = 10_000.0
 # quote from another time. Cheap to detect, so detect it.
 FUTURE_QUOTE_SEC = 5.0
 STALE_QUOTE_SEC = 5.0
+# A BAR may also be too old. The guard above stops the runner filling against a stale
+# PRICE; it says nothing about filling on a stale DECISION. On a late start the feed
+# admits every missed bar in one batch -- 28 of them on 2026-09-09, 130 on 2026-09-08 --
+# and the loop below evaluates each in turn against the CURRENT NBBO. The fill price is
+# therefore honest; the signal is not. A breakout detected on the 09:31 bar and filled at
+# 09:58 is not the setup under test, it is a chase of a move that already finished.
+# Measured on 2026-09-09: 11 such entries, -$352.22, ten of eleven stopping out at once.
+#
+# This is NOT lookahead -- bars are still processed in order and no future information
+# reaches any decision -- which is exactly why it went unnoticed. It is contamination of a
+# different kind: trades the frozen rule would never have taken, pooled with ones it would.
+# So they are skipped and the skip is RECORDED. Positions already open are still managed
+# through every admitted bar, because they genuinely lived through them; only new entries
+# are blocked.
+#
+# Deliberately OUTSIDE the config hash, by the precedent of STALE_QUOTE_SEC above:
+# build_config hashes definitions -- setups, fill rule, notional, caps, EOD flatten -- and
+# not the operational guards that decide whether the feed is fit to be acted on at all.
+STALE_BAR_SEC = 180.0
 EXIT_ALREADY_RUNNING = 4
 # Early-close detection. On a half day the tape stops at 13:00 but EOD_FLAT is 15:55, so a
 # hardcoded flatten would hold positions through three hours of dead air and then stamp the
@@ -342,7 +361,10 @@ class SharesLab:
             sess = self.sessions[sym]
             quote = quotes.get(sym)
             if quote is not None:
-                age = (now - quote["ts"]).total_seconds()
+                # Receipt, not the `now` from the top of the tick -- two 15-symbol
+                # network calls run in between, and a stall in either used to
+                # future-date the whole batch and suppress every fill in it.
+                age = (quote.get("recv_ts", now) - quote["ts"]).total_seconds()
                 if age > STALE_QUOTE_SEC:
                     self.store.outage("stale_quote", f"{sym} age={age:.1f}s")
                     quote = None
@@ -421,6 +443,12 @@ class SharesLab:
             "entry_spread_bp": p.spread_bp, "signal_id": p.signal_id,
             "hold_minutes": round((now - dt.datetime.fromisoformat(p.entry_ts))
                                   .total_seconds() / 60.0, 2),
+            # Minutes between the bar that produced the signal and the fill.
+            # ~1.1 on a healthy session; anything larger means the runner was
+            # catching up and this trade is not one the rule would have taken.
+            "decision_lag_min": round(
+                (dt.datetime.fromisoformat(p.entry_ts)
+                 - dt.datetime.fromisoformat(p.entry_bar_ts)).total_seconds() / 60.0, 2),
         })
         self.open_pos.remove(p)
         print(f"[shares] {now:%H:%M} CLOSE {p.setup_id:<26}{p.symbol} {p.direction:<5}"
@@ -429,6 +457,12 @@ class SharesLab:
     # ------------------------------------------------------------------ entering
 
     def _enter(self, sym, sess, bar, ctx1, ctx5, quote, now) -> None:
+        bar_age = (now - bar["ts"]).total_seconds()
+        if bar_age > STALE_BAR_SEC:
+            self.store.outage("stale_bar", f"{sym} bar {bar['ts']:%H:%M} is "
+                              f"{bar_age / 60.0:.1f}m old -- entries suppressed, "
+                              f"open positions still managed", symbol=sym)
+            return
         openids = {p.setup_id for p in self.open_pos if p.symbol == sym}
         for tf, ctx in (("1m", ctx1), ("5m", ctx5)):
             if ctx is None:
