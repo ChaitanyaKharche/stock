@@ -64,11 +64,28 @@ that changes.
   final observed slot changes, from rv_30m[i] to rv_fwd_30[i]. The answer is now sitting
   in the model's input.
 
-This is a positive control rather than a subtle probe, and that is the point. If handing
-the model the answer as its most recent observation does not improve QLIKE substantially,
-then either the model is ignoring its context or the scoring is not connected to the
-forecast, and every honest number here is meaningless. A test that cannot fail loudly is
-not a test.
+Result: audit 0.781812 against honest 0.793359, better by 1.46%. PASS on sign, and the
+same order as HAR's own audit gap of 1.91%.
+
+BUT IT IS A WEAK CONTROL, AND THE PREDICTION MADE FOR IT WAS WRONG. I expected QLIKE well
+below 0.4 from handing the model the answer. One value out of 1320 cannot dominate a
+context that Chronos instance-normalises over its whole length, and the model still
+applies seven steps of its own dynamics on top of whatever it reads. A 1.5% move is what
+that mechanism can produce; it is not evidence of a strong control.
+
+So there are two audit modes, and `--audit` runs the strict one by default:
+
+    recency   replace the last context value with the target. Subtle, weak, and the
+              closest analogue to the HAR audit.
+    saturate  set the ENTIRE context to the target value. Any forecaster that reads its
+              input at all must return approximately that value, so QLIKE must collapse
+              toward zero. If it does not, the context is not reaching the forecast or
+              the scoring is not connected to it, and every honest number in this file is
+              meaningless.
+
+`saturate` is deliberately blunt. It cannot detect a subtle leak and is not meant to -- it
+is the smoke alarm, not the diagnosis. After three audit designs that each failed for a
+different reason, the arm needed one test whose failure mode is unmistakable.
 
 THE BIAS TRAP -- AND WHY THIS FILE FEEDS VARIANCE, NOT LOG VARIANCE
 --------------------------------------------------------------------
@@ -136,7 +153,7 @@ SERIES = "rv_30m"
 QUANTILES = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
 
 
-def build_contexts(df: pd.DataFrame, idx: np.ndarray, audit: bool = False,
+def build_contexts(df: pd.DataFrame, idx: np.ndarray, audit: str = "",
                    context: int = CONTEXT):
     """One context window per evaluation origin, ordered by (date, t).
 
@@ -161,8 +178,11 @@ def build_contexts(df: pd.DataFrame, idx: np.ndarray, audit: bool = False,
         if audit:
             y = tgt[i]
             if np.isfinite(y) and y > 0:
-                w = w.copy()
-                w[-1] = y
+                if audit == "saturate":
+                    w = np.full(len(w), y)
+                else:
+                    w = w.copy()
+                    w[-1] = y
         out.append(w)
     return out
 
@@ -365,7 +385,7 @@ def _predict(pipe, contexts, batch: int, log_space: bool, horizon: int = HORIZON
 
 
 def run(data_dir: str, model_id: str, batch: int, log_space: bool,
-        audit: bool, block: str, context: int = CONTEXT) -> int:
+        audit: str, block: str, context: int = CONTEXT) -> int:
     import torch
     from chronos import BaseChronosPipeline
 
@@ -389,11 +409,15 @@ def run(data_dir: str, model_id: str, batch: int, log_space: bool,
     # it, and QLIKE punishes the lower forecast. Attempt 2 lost 0.03 of QLIKE to exactly
     # that. The audit changes one value and nothing else.
     horizon = HORIZON
-    if audit:
-        print("AUDIT: the TARGET is written into the last context slot ON PURPOSE. "
-              "Same length, same origin, same horizon.\n"
-              "       This is a positive control: if handing the model the answer does "
-              "not improve QLIKE\n       substantially, the honest numbers mean nothing.")
+    if audit == "saturate":
+        print("AUDIT [saturate]: the ENTIRE context is set to the target ON PURPOSE.\n"
+              "       Any forecaster that reads its input must return roughly that value,\n"
+              "       so QLIKE MUST collapse toward zero. If it does not, the context is\n"
+              "       not reaching the forecast and every honest number here is void.")
+    elif audit:
+        print("AUDIT [recency]: the target is written into the LAST context slot.\n"
+              "       Same length, same origin, same horizon. Weak by construction --\n"
+              "       one value in 1320, against a model that normalises over all of it.")
 
     dev = "cuda" if torch.cuda.is_available() else "cpu"
     print(f"device: {dev}")
@@ -454,6 +478,14 @@ def run(data_dir: str, model_id: str, batch: int, log_space: bool,
           f"{'zero-shot ahead' if zs < har else ref + ' ahead'} in level")
     print("Level is not the finding. The DM p-value above is; at ~250 sessions a gap of a"
           "\nfew thousandths of QLIKE is well inside session-to-session noise.")
+    if audit == "saturate":
+        ok = zs < 0.10
+        print(f"\nSATURATE CONTROL: {zs:.6f} -- "
+              + ("PASS, the context reaches the forecast." if ok else
+                 "*** FAIL. The whole context IS the answer and the model still cannot "
+                 "return it.\n    Either the context is not being used or the scoring is "
+                 "wired to the wrong rows.\n    Every honest number in this arm is void "
+                 "until this is explained. ***"))
     return 0
 
 
@@ -472,7 +504,12 @@ def main(argv=None) -> int:
     ap.add_argument("--context", type=int, default=CONTEXT,
                     help="origins of history. 60 per session; 1320 = the 22 sessions "
                          "HAR gets via rv_prev_22. Fairness, not tuning.")
-    ap.add_argument("--audit", action="store_true")
+    ap.add_argument("--audit", nargs="?", const="saturate", default="",
+                    choices=["", "recency", "saturate"],
+                    help="positive control. 'saturate' (default when the flag is bare) "
+                         "sets the whole context to the target and QLIKE must collapse; "
+                         "'recency' only replaces the last value and is weak by "
+                         "construction. See the module docstring.")
     a = ap.parse_args(argv)
     return run(a.data, a.model, a.batch, a.log, a.audit, a.block, a.context)
 

@@ -94,13 +94,19 @@ for CTX in ${CONTEXTS:-512 1320}; do
     --data "$VRP_ROOT/data/vrp" --model "$MODEL" --context "$CTX" \
     | tee "$VRP_ROOT/results/zeroshot_${SAFE}_ctx${CTX}_honest.txt"
 done
-echo
-echo "================ AUDIT (one origin of future injected), context=1320 ============"
-# One lookahead check, on the configuration that matters. The audit tests the pipeline,
-# not the context length.
-"$PY" -m trade_analysis.hpc.zeroshot_baseline \
-  --data "$VRP_ROOT/data/vrp" --model "$MODEL" --context 1320 --audit \
-  | tee "$VRP_ROOT/results/zeroshot_${SAFE}_audit.txt"
+# Both controls. `saturate` is the one that decides whether this arm is believable:
+# the whole context becomes the target, so any model that reads its input must return
+# roughly that value and QLIKE must collapse toward zero. `recency` replaces only the
+# last value and is weak by construction -- one point in 1320, against a model that
+# instance-normalises over all of it -- but it is the closest analogue to the HAR audit,
+# so it is kept for comparability.
+for MODE in saturate recency; do
+  echo
+  echo "================ AUDIT [$MODE], context=1320 ================"
+  "$PY" -m trade_analysis.hpc.zeroshot_baseline \
+    --data "$VRP_ROOT/data/vrp" --model "$MODEL" --context 1320 --audit "$MODE" \
+    | tee "$VRP_ROOT/results/zeroshot_${SAFE}_audit_${MODE}.txt"
+done
 
 echo
 echo "Compare the two QLIKE tables. Audit must be BETTER."
