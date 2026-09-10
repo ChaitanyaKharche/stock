@@ -55,11 +55,27 @@ distribution needs the whole distribution, and the quantile grid spans only 0.1 
 Integrating that misses the entire right tail, which for variance is where the mean lives.
 
 So the default is to feed **variance in levels**. Chronos instance-normalises its input,
-so scale is not a problem, and the pipeline's own returned mean is then already E[v] --
-exactly what QLIKE scores, with no transform and no correction. `--log` is kept for
-comparison and reports its mean estimate as what it is: tail-truncated and biased low.
-Both the mean and the median forecast are always scored, so the gap between them is a
-number in the output rather than an assumption in the code.
+so scale is not a problem.
+
+And then the pipeline's returned "mean" cannot be trusted either. Measured 2026-09-09 on
+14,940 origins: chronos-bolt's `mean` and its own 0.5 quantile scored IDENTICALLY to six
+decimal places -- same QLIKE, same RMSE, same Diebold-Mariano t. The library returns a
+MEDIAN under the name mean. That is the same defect a third time, now arriving from a
+dependency rather than from this repository.
+
+What is scored instead is a lognormal fitted to the model's OWN returned quantiles:
+log(q_p) = mu + sigma * z_p, hence E[v] = exp(mu + sigma^2 / 2). Lognormal is not an
+arbitrary pick -- it is exactly what both HAR variants here already assume, so the neural
+arm is not quietly handed a different error model than the benchmark it must beat.
+
+The median is always scored alongside, and the run prints how often the library's "mean"
+coincides with its median, so this particular artifact cannot hide a second time.
+
+CALIBRATION, STATED BEFORE THE RERUN. A forecast uniformly k times too low scores
+QLIKE = k - ln(k) - 1. The uncorrected run read 1.046465, which is k ~ 3.2. HAR's own
+lognormal factor is 1.423, worth about 0.07 of QLIKE. So this correction is expected to
+improve the number and NOT to close a gap of 0.62 -- which would make the loss a real
+result rather than an artifact. Writing that down first is the point.
 """
 from __future__ import annotations
 
@@ -144,16 +160,78 @@ def resolve_predictor(pipe):
 
 
 def _quantile_mean(q: np.ndarray) -> np.ndarray:
-    """Mean of the predictive distribution, integrated over the quantile function.
-
-    Only spans 0.1..0.9, so the tails are missing and this is BIASED LOW for a
-    right-skewed variable. Used only where the pipeline hands back no mean of its own;
-    the alternative -- exponentiating a mean of logs -- is biased low too and is not
-    even an estimator of the right quantity.
-    """
+    """Mean integrated over the quantile function. BIASED LOW -- only spans 0.1..0.9."""
     lvl = np.array([QUANTILES[0]] + QUANTILES + [QUANTILES[-1]])
     padded = np.pad(q, ((0, 0), (1, 1)), mode="edge")
     return np.trapezoid(padded, lvl, axis=1) / (lvl[-1] - lvl[0])
+
+
+def _norm_ppf(p: np.ndarray) -> np.ndarray:
+    """Inverse standard normal CDF. Acklam's rational approximation, |err| < 1.15e-9.
+
+    Written out rather than imported so this file does not acquire a scipy dependency
+    for one call -- and because dm_test already had a scipy-absent path that turned out
+    to be broken, which is a poor advertisement for assuming the import.
+    """
+    a = [-3.969683028665376e+01, 2.209460984245205e+02, -2.759285104469687e+02,
+         1.383577518672690e+02, -3.066479806614716e+01, 2.506628277459239e+00]
+    b = [-5.447609879822406e+01, 1.615858368580409e+02, -1.556989798598866e+02,
+         6.680131188771972e+01, -1.328068155288572e+01]
+    c = [-7.784894002430293e-03, -3.223964580411365e-01, -2.400758277161838e+00,
+         -2.549732539343734e+00, 4.374664141464968e+00, 2.938163982698783e+00]
+    d = [7.784695709041462e-03, 3.224671290700398e-01, 2.445134137142996e+00,
+         3.754408661907416e+00]
+    p = np.asarray(p, dtype=float)
+    out = np.empty_like(p)
+    lo, hi = p < 0.02425, p > 1 - 0.02425
+    mid = ~(lo | hi)
+    q = np.sqrt(-2 * np.log(np.where(lo, p, 0.5)))
+    out = np.where(lo, (((((c[0]*q+c[1])*q+c[2])*q+c[3])*q+c[4])*q+c[5])
+                   / ((((d[0]*q+d[1])*q+d[2])*q+d[3])*q+1), out)
+    q = np.sqrt(-2 * np.log(np.where(hi, 1 - p, 0.5)))
+    out = np.where(hi, -(((((c[0]*q+c[1])*q+c[2])*q+c[3])*q+c[4])*q+c[5])
+                   / ((((d[0]*q+d[1])*q+d[2])*q+d[3])*q+1), out)
+    q = np.where(mid, p, 0.5) - 0.5
+    r = q * q
+    out = np.where(mid, (((((a[0]*r+a[1])*r+a[2])*r+a[3])*r+a[4])*r+a[5])*q
+                   / (((((b[0]*r+b[1])*r+b[2])*r+b[3])*r+b[4])*r+1), out)
+    return out
+
+
+_Z = _norm_ppf(np.array(QUANTILES))
+
+
+def _lognormal_mean(q: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
+    """E[v] and sigma, from a lognormal fitted to the model's OWN returned quantiles.
+
+    WHY THIS EXISTS. chronos-bolt's `predict_quantiles` returns (quantiles, mean) and
+    that second value is its 0.5 quantile -- measured 2026-09-09, the "mean" and the
+    median scored identically to six decimal places on 14,940 origins, RMSE and DM
+    t-statistic included. The library calls a median a mean.
+
+    QLIKE scores a forecast of the MEAN, and for a right-skewed variable the median sits
+    well below it. Scoring the median against QLIKE is the same defect that has now bitten
+    this project three times: once in har_baseline (my exp(X@beta) with no exp(s2/2)),
+    once in the first draft of this file (exp of a mean of logs), and now arriving from
+    a dependency.
+
+    THE FIT. If v is lognormal then log(q_p) = mu + sigma*z_p, with z_p the standard
+    normal quantile. So regressing the log of the returned quantiles on z recovers mu
+    and sigma, and E[v] = exp(mu + sigma^2/2) -- the same correction har_forecast.py and
+    har_baseline.py already apply to a regression residual, applied instead to the
+    model's own predictive distribution.
+
+    Lognormal is not an arbitrary choice here: it is the distribution both HAR models in
+    this project already assume, so using it keeps the comparison on one footing rather
+    than handing the neural arm a different error model.
+
+    z is symmetric about zero for a symmetric level grid, so mean(z) = 0 and the
+    intercept is simply the mean of the logs.
+    """
+    y = np.log(np.maximum(q, EPS))
+    mu = y.mean(axis=1)
+    sigma = np.maximum((y * _Z).sum(axis=1) / (_Z ** 2).sum(), 0.0)
+    return np.exp(mu + sigma ** 2 / 2.0), sigma
 
 
 def _predict(pipe, contexts, batch: int, log_space: bool):
@@ -166,7 +244,7 @@ def _predict(pipe, contexts, batch: int, log_space: bool):
     """
     import torch
     call, _, has_mean = resolve_predictor(pipe)
-    means, medians = [], []
+    lib, med, lnm, sig = [], [], [], []
     imed = QUANTILES.index(0.5)
     t0 = time.time()
     for b0 in range(0, len(contexts), batch):
@@ -180,18 +258,20 @@ def _predict(pipe, contexts, batch: int, log_space: bool):
         q = (out[0] if has_mean else out)[:, HORIZON - 1, :].float().cpu().numpy()
         if log_space:
             q = np.exp(q)                    # exact: quantiles survive a monotone map
-            m = _quantile_mean(q)
-        elif has_mean:
-            m = out[1][:, HORIZON - 1].float().cpu().numpy()
-        else:
-            m = _quantile_mean(q)
-        means.append(m)
-        medians.append(q[:, imed])
+        m_ln, s = _lognormal_mean(q)
+        lnm.append(m_ln)
+        sig.append(s)
+        med.append(q[:, imed])
+        if has_mean:
+            v = out[1][:, HORIZON - 1].float().cpu().numpy()
+            lib.append(np.exp(v) if log_space else v)
         done = min(b0 + batch, len(contexts))
         if b0 % (batch * 10) == 0 or done == len(contexts):
             print(f"  {done}/{len(contexts)} origins  ({time.time()-t0:.0f}s)", flush=True)
-    return (np.maximum(np.concatenate(means), EPS),
-            np.maximum(np.concatenate(medians), EPS))
+    cat = lambda xs: np.maximum(np.concatenate(xs), EPS)
+    return {"median": cat(med), "mean_lognormal": cat(lnm),
+            "library_mean": cat(lib) if lib else None,
+            "sigma": np.concatenate(sig)}
 
 
 def run(data_dir: str, model_id: str, batch: int, log_space: bool,
@@ -223,12 +303,27 @@ def run(data_dir: str, model_id: str, batch: int, log_space: bool,
         torch_dtype=torch.bfloat16 if dev == "cuda" else torch.float32)
 
     contexts = build_contexts(df, test.index.to_numpy(), audit=audit)
-    mean_hat, med_hat = _predict(pipe, contexts, batch, log_space)
+    fc = _predict(pipe, contexts, batch, log_space)
 
     preds = build_predictions(train, test)
     tag = model_id.split("/")[-1]
-    preds[f"zeroshot::{tag}::mean"] = mean_hat
-    preds[f"zeroshot::{tag}::median"] = med_hat
+    preds[f"zeroshot::{tag}::median"] = fc["median"]
+    preds[f"zeroshot::{tag}::mean_lognormal"] = fc["mean_lognormal"]
+
+    # SAY IT OUT LOUD when the library's "mean" is really its median. On 2026-09-09 the
+    # two scored identically to six decimals on 14,940 origins and the run reported a
+    # confident-looking loss to HAR that was substantially this artifact.
+    lib = fc["library_mean"]
+    if lib is not None:
+        same = float(np.mean(np.isclose(lib, fc["median"], rtol=1e-6)))
+        print(f"\n  library 'mean' equals its own 0.5 quantile on {same:.1%} of origins"
+              + ("  <-- it is a MEDIAN. Not scored as a mean." if same > 0.99 else ""))
+        if same <= 0.99:
+            preds[f"zeroshot::{tag}::mean_library"] = lib
+    s = fc["sigma"]
+    corr = np.exp(s ** 2 / 2.0)
+    print(f"  predictive sigma: median {np.median(s):.3f}  -> lognormal mean/median "
+          f"ratio {np.median(corr):.3f}x  (HAR's own factor is 1.423)")
 
     table = evaluate(test, preds)
     print(f"\n=== QLIKE on {block} (lower is better) ===")
@@ -247,7 +342,8 @@ def run(data_dir: str, model_id: str, batch: int, log_space: bool,
             for n, p in preds.items() if n != ref]
     print(pd.DataFrame(rows).to_string(index=False))
 
-    zs = float(table.loc[table["model"] == f"zeroshot::{tag}::mean", "QLIKE"].iloc[0])
+    zs = float(table.loc[table["model"] == f"zeroshot::{tag}::mean_lognormal",
+                         "QLIKE"].iloc[0])
     har = float(table.loc[table["model"] == ref, "QLIKE"].iloc[0])
     print(f"\nzero-shot mean {zs:.6f}  vs  {ref} {har:.6f}  -> "
           f"{'zero-shot ahead' if zs < har else ref + ' ahead'} in level")
