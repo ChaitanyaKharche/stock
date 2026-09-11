@@ -524,3 +524,617 @@
 {"seq":6505,"ts":"2026-09-08T09:57:47.694124","kind":"warmup","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: ReadTimeout('timed out')\")","symbol":"SPY"}
 {"seq":7541,"ts":"2026-09-08T11:58:07.487025","kind":"degraded_bar","detail":"1m gap before 11:57","symbol":"DIA"}
 {"seq":7836,"ts":"2026-09-08T12:29:05.370332","kind":"degraded_bar","detail":"1m gap before 12:28","symbol":"DIA"}
+{"seq":9861,"ts":"2026-09-09T10:00:24.296986","kind":"future_quote","detail":"SPY quote is 20.0s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"SPY"}
+{"seq":9862,"ts":"2026-09-09T10:00:24.322988","kind":"future_quote","detail":"QQQ quote is 20.1s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"QQQ"}
+{"seq":9863,"ts":"2026-09-09T10:00:24.327990","kind":"future_quote","detail":"IWM quote is 20.1s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"IWM"}
+{"seq":9864,"ts":"2026-09-09T10:00:24.329989","kind":"future_quote","detail":"DIA quote is 20.0s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"DIA"}
+{"seq":9865,"ts":"2026-09-09T10:00:24.331996","kind":"future_quote","detail":"XLK quote is 20.2s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"XLK"}
+{"seq":9866,"ts":"2026-09-09T10:00:24.333997","kind":"future_quote","detail":"XLY quote is 20.2s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"XLY"}
+{"seq":9867,"ts":"2026-09-09T10:00:24.336129","kind":"future_quote","detail":"XLI quote is 20.2s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"XLI"}
+{"seq":9868,"ts":"2026-09-09T10:00:24.339014","kind":"future_quote","detail":"XLV quote is 20.0s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"XLV"}
+{"seq":9869,"ts":"2026-09-09T10:00:24.340999","kind":"future_quote","detail":"XLP quote is 20.2s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"XLP"}
+{"seq":9870,"ts":"2026-09-09T10:00:24.342996","kind":"future_quote","detail":"XLE quote is 20.4s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"XLE"}
+{"seq":9871,"ts":"2026-09-09T10:00:24.345505","kind":"future_quote","detail":"XLF quote is 20.0s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"XLF"}
+{"seq":9872,"ts":"2026-09-09T10:00:24.348080","kind":"future_quote","detail":"NVDA quote is 20.4s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"NVDA"}
+{"seq":9873,"ts":"2026-09-09T10:00:24.351587","kind":"future_quote","detail":"AAPL quote is 20.4s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"AAPL"}
+{"seq":9874,"ts":"2026-09-09T10:00:24.353594","kind":"future_quote","detail":"GOOGL quote is 20.8s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"GOOGL"}
+{"seq":9875,"ts":"2026-09-09T10:00:24.356608","kind":"future_quote","detail":"WMT quote is 20.5s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"WMT"}
+{"seq":10259,"ts":"2026-09-09T10:37:26.405015","kind":"future_quote","detail":"SPY quote is 14.5s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"SPY"}
+{"seq":10260,"ts":"2026-09-09T10:37:26.417185","kind":"future_quote","detail":"QQQ quote is 14.8s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"QQQ"}
+{"seq":10261,"ts":"2026-09-09T10:37:26.420193","kind":"future_quote","detail":"IWM quote is 20.3s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"IWM"}
+{"seq":10262,"ts":"2026-09-09T10:37:26.422204","kind":"future_quote","detail":"DIA quote is 20.3s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"DIA"}
+{"seq":10263,"ts":"2026-09-09T10:37:26.425200","kind":"future_quote","detail":"XLK quote is 23.5s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"XLK"}
+{"seq":10264,"ts":"2026-09-09T10:37:26.427134","kind":"future_quote","detail":"XLY quote is 23.6s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"XLY"}
+{"seq":10265,"ts":"2026-09-09T10:37:26.430194","kind":"future_quote","detail":"XLI quote is 23.5s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"XLI"}
+{"seq":10266,"ts":"2026-09-09T10:37:26.433136","kind":"future_quote","detail":"XLV quote is 23.6s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"XLV"}
+{"seq":10267,"ts":"2026-09-09T10:37:26.435180","kind":"future_quote","detail":"XLP quote is 23.8s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"XLP"}
+{"seq":10268,"ts":"2026-09-09T10:37:26.438201","kind":"future_quote","detail":"XLE quote is 23.9s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"XLE"}
+{"seq":10269,"ts":"2026-09-09T10:37:26.440207","kind":"future_quote","detail":"XLF quote is 24.0s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"XLF"}
+{"seq":10270,"ts":"2026-09-09T10:37:26.443185","kind":"future_quote","detail":"NVDA quote is 24.1s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"NVDA"}
+{"seq":10271,"ts":"2026-09-09T10:37:26.446191","kind":"future_quote","detail":"AAPL quote is 24.1s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"AAPL"}
+{"seq":10272,"ts":"2026-09-09T10:37:26.448196","kind":"future_quote","detail":"GOOGL quote is 23.9s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"GOOGL"}
+{"seq":10273,"ts":"2026-09-09T10:37:26.450120","kind":"future_quote","detail":"WMT quote is 23.8s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"WMT"}
+{"seq":11384,"ts":"2026-09-09T11:43:05.650747","kind":"stale_quote","detail":"SPY age=7.1s"}
+{"seq":11385,"ts":"2026-09-09T11:43:05.662257","kind":"stale_quote","detail":"QQQ age=7.1s"}
+{"seq":11386,"ts":"2026-09-09T11:43:05.663158","kind":"stale_quote","detail":"IWM age=7.1s"}
+{"seq":11387,"ts":"2026-09-09T11:43:05.665157","kind":"stale_quote","detail":"DIA age=7.1s"}
+{"seq":11388,"ts":"2026-09-09T11:43:05.667156","kind":"stale_quote","detail":"XLK age=7.1s"}
+{"seq":11389,"ts":"2026-09-09T11:43:05.674041","kind":"stale_quote","detail":"XLY age=7.1s"}
+{"seq":11390,"ts":"2026-09-09T11:43:05.678234","kind":"stale_quote","detail":"XLI age=7.1s"}
+{"seq":11391,"ts":"2026-09-09T11:43:05.681622","kind":"stale_quote","detail":"XLV age=7.3s"}
+{"seq":11392,"ts":"2026-09-09T11:43:05.684808","kind":"stale_quote","detail":"XLP age=7.2s"}
+{"seq":11393,"ts":"2026-09-09T11:43:05.686812","kind":"stale_quote","detail":"XLE age=8.1s"}
+{"seq":11394,"ts":"2026-09-09T11:43:05.689498","kind":"stale_quote","detail":"XLF age=7.1s"}
+{"seq":11395,"ts":"2026-09-09T11:43:05.692430","kind":"stale_quote","detail":"NVDA age=7.1s"}
+{"seq":11396,"ts":"2026-09-09T11:43:05.696513","kind":"stale_quote","detail":"AAPL age=7.1s"}
+{"seq":11397,"ts":"2026-09-09T11:43:05.700392","kind":"stale_quote","detail":"GOOGL age=7.1s"}
+{"seq":11398,"ts":"2026-09-09T11:43:05.704106","kind":"stale_quote","detail":"WMT age=7.2s"}
+{"seq":11904,"ts":"2026-09-09T12:09:04.241498","kind":"degraded_bar","detail":"1m gap before 12:08","symbol":"DIA"}
+{"seq":15782,"ts":"2026-09-09T14:58:19.835225","kind":"future_quote","detail":"SPY quote is 15.2s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"SPY"}
+{"seq":15783,"ts":"2026-09-09T14:58:19.838643","kind":"future_quote","detail":"QQQ quote is 15.1s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"QQQ"}
+{"seq":15784,"ts":"2026-09-09T14:58:19.839834","kind":"future_quote","detail":"IWM quote is 15.3s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"IWM"}
+{"seq":15785,"ts":"2026-09-09T14:58:19.840831","kind":"future_quote","detail":"DIA quote is 15.3s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"DIA"}
+{"seq":15786,"ts":"2026-09-09T14:58:19.842902","kind":"future_quote","detail":"XLK quote is 15.3s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"XLK"}
+{"seq":15787,"ts":"2026-09-09T14:58:19.843830","kind":"future_quote","detail":"XLY quote is 15.2s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"XLY"}
+{"seq":15788,"ts":"2026-09-09T14:58:19.844839","kind":"future_quote","detail":"XLI quote is 13.6s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"XLI"}
+{"seq":15789,"ts":"2026-09-09T14:58:19.845829","kind":"future_quote","detail":"XLV quote is 15.0s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"XLV"}
+{"seq":15790,"ts":"2026-09-09T14:58:19.846834","kind":"future_quote","detail":"XLP quote is 15.1s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"XLP"}
+{"seq":15791,"ts":"2026-09-09T14:58:19.847829","kind":"future_quote","detail":"XLE quote is 15.3s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"XLE"}
+{"seq":15792,"ts":"2026-09-09T14:58:19.849835","kind":"future_quote","detail":"XLF quote is 14.4s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"XLF"}
+{"seq":15793,"ts":"2026-09-09T14:58:19.851857","kind":"future_quote","detail":"NVDA quote is 15.6s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"NVDA"}
+{"seq":15794,"ts":"2026-09-09T14:58:19.852847","kind":"future_quote","detail":"AAPL quote is 15.5s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"AAPL"}
+{"seq":15795,"ts":"2026-09-09T14:58:19.853848","kind":"future_quote","detail":"GOOGL quote is 13.8s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"GOOGL"}
+{"seq":15796,"ts":"2026-09-09T14:58:19.854848","kind":"future_quote","detail":"WMT quote is 15.5s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"WMT"}
+{"seq":16250,"ts":"2026-09-09T15:19:07.439518","kind":"degraded_bar","detail":"1m gap before 15:18","symbol":"DIA"}
+{"seq":17304,"ts":"2026-09-10T09:40:28.711136","kind":"stale_bar","detail":"SPY bar 09:30 is 10.5m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":17305,"ts":"2026-09-10T09:40:28.724799","kind":"stale_bar","detail":"SPY bar 09:31 is 9.5m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":17306,"ts":"2026-09-10T09:40:28.726798","kind":"stale_bar","detail":"SPY bar 09:32 is 8.5m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":17307,"ts":"2026-09-10T09:40:28.728796","kind":"stale_bar","detail":"SPY bar 09:33 is 7.5m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":17308,"ts":"2026-09-10T09:40:28.730799","kind":"stale_bar","detail":"SPY bar 09:34 is 6.5m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":17309,"ts":"2026-09-10T09:40:28.732812","kind":"stale_bar","detail":"SPY bar 09:35 is 5.5m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":17310,"ts":"2026-09-10T09:40:28.734798","kind":"stale_bar","detail":"SPY bar 09:36 is 4.5m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":17311,"ts":"2026-09-10T09:40:28.735796","kind":"stale_bar","detail":"SPY bar 09:37 is 3.5m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":17312,"ts":"2026-09-10T09:40:28.738306","kind":"stale_bar","detail":"QQQ bar 09:30 is 10.5m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":17313,"ts":"2026-09-10T09:40:28.739348","kind":"stale_bar","detail":"QQQ bar 09:31 is 9.5m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":17314,"ts":"2026-09-10T09:40:28.740314","kind":"stale_bar","detail":"QQQ bar 09:32 is 8.5m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":17315,"ts":"2026-09-10T09:40:28.741313","kind":"stale_bar","detail":"QQQ bar 09:33 is 7.5m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":17316,"ts":"2026-09-10T09:40:28.742719","kind":"stale_bar","detail":"QQQ bar 09:34 is 6.5m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":17317,"ts":"2026-09-10T09:40:28.743519","kind":"stale_bar","detail":"QQQ bar 09:35 is 5.5m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":17318,"ts":"2026-09-10T09:40:28.744524","kind":"stale_bar","detail":"QQQ bar 09:36 is 4.5m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":17319,"ts":"2026-09-10T09:40:28.745532","kind":"stale_bar","detail":"QQQ bar 09:37 is 3.5m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":17322,"ts":"2026-09-10T09:40:28.748007","kind":"stale_bar","detail":"IWM bar 09:30 is 10.5m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":17323,"ts":"2026-09-10T09:40:28.749004","kind":"stale_bar","detail":"IWM bar 09:31 is 9.5m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":17324,"ts":"2026-09-10T09:40:28.749997","kind":"stale_bar","detail":"IWM bar 09:32 is 8.5m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":17325,"ts":"2026-09-10T09:40:28.750998","kind":"stale_bar","detail":"IWM bar 09:33 is 7.5m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":17326,"ts":"2026-09-10T09:40:28.750998","kind":"stale_bar","detail":"IWM bar 09:34 is 6.5m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":17327,"ts":"2026-09-10T09:40:28.752014","kind":"stale_bar","detail":"IWM bar 09:35 is 5.5m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":17328,"ts":"2026-09-10T09:40:28.752996","kind":"stale_bar","detail":"IWM bar 09:36 is 4.5m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":17329,"ts":"2026-09-10T09:40:28.752996","kind":"stale_bar","detail":"IWM bar 09:37 is 3.5m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":17330,"ts":"2026-09-10T09:40:28.753998","kind":"stale_bar","detail":"DIA bar 09:30 is 10.5m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":17331,"ts":"2026-09-10T09:40:28.754997","kind":"stale_bar","detail":"DIA bar 09:31 is 9.5m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":17332,"ts":"2026-09-10T09:40:28.755998","kind":"stale_bar","detail":"DIA bar 09:32 is 8.5m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":17333,"ts":"2026-09-10T09:40:28.755998","kind":"stale_bar","detail":"DIA bar 09:33 is 7.5m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":17334,"ts":"2026-09-10T09:40:28.756997","kind":"stale_bar","detail":"DIA bar 09:34 is 6.5m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":17335,"ts":"2026-09-10T09:40:28.756997","kind":"stale_bar","detail":"DIA bar 09:35 is 5.5m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":17336,"ts":"2026-09-10T09:40:28.757996","kind":"stale_bar","detail":"DIA bar 09:36 is 4.5m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":17337,"ts":"2026-09-10T09:40:28.758996","kind":"stale_bar","detail":"DIA bar 09:37 is 3.5m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":17338,"ts":"2026-09-10T09:40:28.758996","kind":"stale_bar","detail":"XLK bar 09:30 is 10.5m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":17339,"ts":"2026-09-10T09:40:28.760004","kind":"stale_bar","detail":"XLK bar 09:31 is 9.5m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":17340,"ts":"2026-09-10T09:40:28.760996","kind":"stale_bar","detail":"XLK bar 09:32 is 8.5m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":17341,"ts":"2026-09-10T09:40:28.760996","kind":"stale_bar","detail":"XLK bar 09:33 is 7.5m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":17342,"ts":"2026-09-10T09:40:28.762004","kind":"stale_bar","detail":"XLK bar 09:34 is 6.5m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":17343,"ts":"2026-09-10T09:40:28.762996","kind":"stale_bar","detail":"XLK bar 09:35 is 5.5m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":17344,"ts":"2026-09-10T09:40:28.763996","kind":"stale_bar","detail":"XLK bar 09:36 is 4.5m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":17345,"ts":"2026-09-10T09:40:28.763996","kind":"stale_bar","detail":"XLK bar 09:37 is 3.5m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":17346,"ts":"2026-09-10T09:40:28.764996","kind":"stale_bar","detail":"XLY bar 09:30 is 10.5m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":17347,"ts":"2026-09-10T09:40:28.765996","kind":"stale_bar","detail":"XLY bar 09:31 is 9.5m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":17348,"ts":"2026-09-10T09:40:28.765996","kind":"stale_bar","detail":"XLY bar 09:32 is 8.5m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":17349,"ts":"2026-09-10T09:40:28.766996","kind":"stale_bar","detail":"XLY bar 09:33 is 7.5m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":17350,"ts":"2026-09-10T09:40:28.767996","kind":"stale_bar","detail":"XLY bar 09:34 is 6.5m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":17351,"ts":"2026-09-10T09:40:28.767996","kind":"stale_bar","detail":"XLY bar 09:35 is 5.5m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":17352,"ts":"2026-09-10T09:40:28.768996","kind":"stale_bar","detail":"XLY bar 09:36 is 4.5m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":17353,"ts":"2026-09-10T09:40:28.768996","kind":"stale_bar","detail":"XLY bar 09:37 is 3.5m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":17356,"ts":"2026-09-10T09:40:28.771997","kind":"stale_bar","detail":"XLI bar 09:30 is 10.5m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":17357,"ts":"2026-09-10T09:40:28.772997","kind":"stale_bar","detail":"XLI bar 09:31 is 9.5m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":17358,"ts":"2026-09-10T09:40:28.773998","kind":"stale_bar","detail":"XLI bar 09:32 is 8.5m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":17359,"ts":"2026-09-10T09:40:28.773998","kind":"stale_bar","detail":"XLI bar 09:33 is 7.5m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":17360,"ts":"2026-09-10T09:40:28.774997","kind":"stale_bar","detail":"XLI bar 09:34 is 6.5m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":17361,"ts":"2026-09-10T09:40:28.774997","kind":"stale_bar","detail":"XLI bar 09:35 is 5.5m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":17362,"ts":"2026-09-10T09:40:28.775996","kind":"stale_bar","detail":"XLI bar 09:36 is 4.5m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":17363,"ts":"2026-09-10T09:40:28.776996","kind":"stale_bar","detail":"XLI bar 09:37 is 3.5m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":17364,"ts":"2026-09-10T09:40:28.776996","kind":"stale_bar","detail":"XLV bar 09:30 is 10.5m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":17365,"ts":"2026-09-10T09:40:28.777996","kind":"stale_bar","detail":"XLV bar 09:31 is 9.5m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":17366,"ts":"2026-09-10T09:40:28.778996","kind":"stale_bar","detail":"XLV bar 09:32 is 8.5m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":17367,"ts":"2026-09-10T09:40:28.778996","kind":"stale_bar","detail":"XLV bar 09:33 is 7.5m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":17368,"ts":"2026-09-10T09:40:28.779996","kind":"stale_bar","detail":"XLV bar 09:34 is 6.5m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":17369,"ts":"2026-09-10T09:40:28.780996","kind":"stale_bar","detail":"XLV bar 09:35 is 5.5m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":17370,"ts":"2026-09-10T09:40:28.780996","kind":"stale_bar","detail":"XLV bar 09:36 is 4.5m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":17371,"ts":"2026-09-10T09:40:28.781997","kind":"stale_bar","detail":"XLV bar 09:37 is 3.5m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":17372,"ts":"2026-09-10T09:40:28.782996","kind":"stale_bar","detail":"XLP bar 09:30 is 10.5m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":17373,"ts":"2026-09-10T09:40:28.782996","kind":"stale_bar","detail":"XLP bar 09:31 is 9.5m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":17374,"ts":"2026-09-10T09:40:28.783996","kind":"stale_bar","detail":"XLP bar 09:32 is 8.5m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":17375,"ts":"2026-09-10T09:40:28.784996","kind":"stale_bar","detail":"XLP bar 09:33 is 7.5m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":17376,"ts":"2026-09-10T09:40:28.784996","kind":"stale_bar","detail":"XLP bar 09:34 is 6.5m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":17377,"ts":"2026-09-10T09:40:28.785996","kind":"stale_bar","detail":"XLP bar 09:35 is 5.5m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":17378,"ts":"2026-09-10T09:40:28.786996","kind":"stale_bar","detail":"XLP bar 09:36 is 4.5m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":17379,"ts":"2026-09-10T09:40:28.787876","kind":"stale_bar","detail":"XLP bar 09:37 is 3.5m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":17380,"ts":"2026-09-10T09:40:28.788967","kind":"stale_bar","detail":"XLE bar 09:30 is 10.5m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":17381,"ts":"2026-09-10T09:40:28.788967","kind":"stale_bar","detail":"XLE bar 09:31 is 9.5m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":17382,"ts":"2026-09-10T09:40:28.789971","kind":"stale_bar","detail":"XLE bar 09:32 is 8.5m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":17383,"ts":"2026-09-10T09:40:28.790967","kind":"stale_bar","detail":"XLE bar 09:33 is 7.5m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":17384,"ts":"2026-09-10T09:40:28.790967","kind":"stale_bar","detail":"XLE bar 09:34 is 6.5m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":17385,"ts":"2026-09-10T09:40:28.791969","kind":"stale_bar","detail":"XLE bar 09:35 is 5.5m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":17386,"ts":"2026-09-10T09:40:28.791969","kind":"stale_bar","detail":"XLE bar 09:36 is 4.5m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":17387,"ts":"2026-09-10T09:40:28.792970","kind":"stale_bar","detail":"XLE bar 09:37 is 3.5m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":17390,"ts":"2026-09-10T09:40:28.795096","kind":"stale_bar","detail":"XLF bar 09:30 is 10.5m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":17391,"ts":"2026-09-10T09:40:28.796102","kind":"stale_bar","detail":"XLF bar 09:31 is 9.5m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":17392,"ts":"2026-09-10T09:40:28.797101","kind":"stale_bar","detail":"XLF bar 09:32 is 8.5m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":17393,"ts":"2026-09-10T09:40:28.797101","kind":"stale_bar","detail":"XLF bar 09:33 is 7.5m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":17394,"ts":"2026-09-10T09:40:28.798102","kind":"stale_bar","detail":"XLF bar 09:34 is 6.5m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":17395,"ts":"2026-09-10T09:40:28.799101","kind":"stale_bar","detail":"XLF bar 09:35 is 5.5m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":17396,"ts":"2026-09-10T09:40:28.800114","kind":"stale_bar","detail":"XLF bar 09:36 is 4.5m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":17397,"ts":"2026-09-10T09:40:28.800114","kind":"stale_bar","detail":"XLF bar 09:37 is 3.5m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":17398,"ts":"2026-09-10T09:40:28.801101","kind":"stale_bar","detail":"NVDA bar 09:30 is 10.5m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":17399,"ts":"2026-09-10T09:40:28.802101","kind":"stale_bar","detail":"NVDA bar 09:31 is 9.5m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":17400,"ts":"2026-09-10T09:40:28.802101","kind":"stale_bar","detail":"NVDA bar 09:32 is 8.5m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":17401,"ts":"2026-09-10T09:40:28.803107","kind":"stale_bar","detail":"NVDA bar 09:33 is 7.5m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":17402,"ts":"2026-09-10T09:40:28.804101","kind":"stale_bar","detail":"NVDA bar 09:34 is 6.5m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":17403,"ts":"2026-09-10T09:40:28.804101","kind":"stale_bar","detail":"NVDA bar 09:35 is 5.5m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":17404,"ts":"2026-09-10T09:40:28.805101","kind":"stale_bar","detail":"NVDA bar 09:36 is 4.5m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":17405,"ts":"2026-09-10T09:40:28.806101","kind":"stale_bar","detail":"NVDA bar 09:37 is 3.5m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":17408,"ts":"2026-09-10T09:40:28.808538","kind":"stale_bar","detail":"AAPL bar 09:30 is 10.5m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":17409,"ts":"2026-09-10T09:40:28.808538","kind":"stale_bar","detail":"AAPL bar 09:31 is 9.5m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":17410,"ts":"2026-09-10T09:40:28.809537","kind":"stale_bar","detail":"AAPL bar 09:32 is 8.5m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":17411,"ts":"2026-09-10T09:40:28.809537","kind":"stale_bar","detail":"AAPL bar 09:33 is 7.5m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":17412,"ts":"2026-09-10T09:40:28.810538","kind":"stale_bar","detail":"AAPL bar 09:34 is 6.5m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":17413,"ts":"2026-09-10T09:40:28.811716","kind":"stale_bar","detail":"AAPL bar 09:35 is 5.5m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":17414,"ts":"2026-09-10T09:40:28.811716","kind":"stale_bar","detail":"AAPL bar 09:36 is 4.5m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":17415,"ts":"2026-09-10T09:40:28.812891","kind":"stale_bar","detail":"AAPL bar 09:37 is 3.5m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":17418,"ts":"2026-09-10T09:40:28.814896","kind":"stale_bar","detail":"GOOGL bar 09:30 is 10.5m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":17419,"ts":"2026-09-10T09:40:28.815892","kind":"stale_bar","detail":"GOOGL bar 09:31 is 9.5m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":17420,"ts":"2026-09-10T09:40:28.816861","kind":"stale_bar","detail":"GOOGL bar 09:32 is 8.5m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":17421,"ts":"2026-09-10T09:40:28.816861","kind":"stale_bar","detail":"GOOGL bar 09:33 is 7.5m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":17422,"ts":"2026-09-10T09:40:28.817897","kind":"stale_bar","detail":"GOOGL bar 09:34 is 6.5m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":17423,"ts":"2026-09-10T09:40:28.818839","kind":"stale_bar","detail":"GOOGL bar 09:35 is 5.5m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":17424,"ts":"2026-09-10T09:40:28.819819","kind":"stale_bar","detail":"GOOGL bar 09:36 is 4.5m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":17425,"ts":"2026-09-10T09:40:28.819819","kind":"stale_bar","detail":"GOOGL bar 09:37 is 3.5m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":17428,"ts":"2026-09-10T09:40:28.823291","kind":"stale_bar","detail":"WMT bar 09:30 is 10.5m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":17429,"ts":"2026-09-10T09:40:28.824303","kind":"stale_bar","detail":"WMT bar 09:31 is 9.5m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":17430,"ts":"2026-09-10T09:40:28.824303","kind":"stale_bar","detail":"WMT bar 09:32 is 8.5m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":17431,"ts":"2026-09-10T09:40:28.825302","kind":"stale_bar","detail":"WMT bar 09:33 is 7.5m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":17432,"ts":"2026-09-10T09:40:28.825302","kind":"stale_bar","detail":"WMT bar 09:34 is 6.5m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":17433,"ts":"2026-09-10T09:40:28.826787","kind":"stale_bar","detail":"WMT bar 09:35 is 5.5m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":17434,"ts":"2026-09-10T09:40:28.826787","kind":"stale_bar","detail":"WMT bar 09:36 is 4.5m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":17435,"ts":"2026-09-10T09:40:28.827796","kind":"stale_bar","detail":"WMT bar 09:37 is 3.5m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":19702,"ts":"2026-09-10T12:09:06.961688","kind":"degraded_bar","detail":"1m gap before 12:08","symbol":"XLV"}
+{"seq":20984,"ts":"2026-09-10T13:09:06.264253","kind":"degraded_bar","detail":"1m gap before 13:08","symbol":"XLV"}
+{"seq":21649,"ts":"2026-09-10T13:37:30.226203","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21650,"ts":"2026-09-10T13:37:30.230210","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21651,"ts":"2026-09-10T13:37:30.254302","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21652,"ts":"2026-09-10T13:37:30.263297","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21653,"ts":"2026-09-10T13:37:30.267218","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21654,"ts":"2026-09-10T13:37:30.275307","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21655,"ts":"2026-09-10T13:37:30.278337","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21656,"ts":"2026-09-10T13:37:30.282268","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21657,"ts":"2026-09-10T13:37:30.284376","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLI"}
+{"seq":21658,"ts":"2026-09-10T13:37:30.287189","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"IWM"}
+{"seq":21659,"ts":"2026-09-10T13:37:30.289376","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLV"}
+{"seq":21660,"ts":"2026-09-10T13:37:30.291444","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"NVDA"}
+{"seq":21661,"ts":"2026-09-10T13:37:30.293306","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"SPY"}
+{"seq":21662,"ts":"2026-09-10T13:37:30.295305","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLE"}
+{"seq":21663,"ts":"2026-09-10T13:37:30.298417","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"GOOGL"}
+{"seq":21664,"ts":"2026-09-10T13:37:30.300330","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"DIA"}
+{"seq":21665,"ts":"2026-09-10T13:37:42.348498","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21666,"ts":"2026-09-10T13:37:42.358420","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21667,"ts":"2026-09-10T13:37:42.392292","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21670,"ts":"2026-09-10T13:37:42.434778","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21668,"ts":"2026-09-10T13:37:42.428782","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21669,"ts":"2026-09-10T13:37:42.434778","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21671,"ts":"2026-09-10T13:37:42.456216","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21672,"ts":"2026-09-10T13:37:42.573619","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21673,"ts":"2026-09-10T13:37:42.644318","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"DIA"}
+{"seq":21674,"ts":"2026-09-10T13:37:42.650679","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"IWM"}
+{"seq":21675,"ts":"2026-09-10T13:37:42.659263","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLV"}
+{"seq":21676,"ts":"2026-09-10T13:37:42.669707","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"NVDA"}
+{"seq":21677,"ts":"2026-09-10T13:37:42.705827","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLI"}
+{"seq":21678,"ts":"2026-09-10T13:37:42.713835","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLE"}
+{"seq":21679,"ts":"2026-09-10T13:37:42.719825","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"SPY"}
+{"seq":21680,"ts":"2026-09-10T13:37:42.824690","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"GOOGL"}
+{"seq":21681,"ts":"2026-09-10T13:37:42.833782","kind":"degraded_bar","detail":"1m gap before 13:36","symbol":"XLY"}
+{"seq":21682,"ts":"2026-09-10T13:37:49.911857","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/snapshot/quote"}
+{"seq":21684,"ts":"2026-09-10T13:37:49.920779","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/snapshot/quote"}
+{"seq":21683,"ts":"2026-09-10T13:37:49.920779","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/snapshot/quote"}
+{"seq":21685,"ts":"2026-09-10T13:37:49.924851","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/snapshot/quote"}
+{"seq":21686,"ts":"2026-09-10T13:37:49.924851","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/snapshot/quote"}
+{"seq":21687,"ts":"2026-09-10T13:37:49.924851","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/snapshot/quote"}
+{"seq":21688,"ts":"2026-09-10T13:37:49.926869","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/snapshot/quote"}
+{"seq":21689,"ts":"2026-09-10T13:37:49.935507","kind":"quote_failed","detail":"FeedOutage(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"QQQ"}
+{"seq":21690,"ts":"2026-09-10T13:37:49.937508","kind":"quote_failed","detail":"FeedOutage(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLF"}
+{"seq":21691,"ts":"2026-09-10T13:37:49.939823","kind":"quote_failed","detail":"FeedOutage(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"AAPL"}
+{"seq":21692,"ts":"2026-09-10T13:37:49.941942","kind":"quote_failed","detail":"FeedOutage(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLK"}
+{"seq":21693,"ts":"2026-09-10T13:37:49.944036","kind":"quote_failed","detail":"FeedOutage(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLP"}
+{"seq":21694,"ts":"2026-09-10T13:37:49.946120","kind":"quote_failed","detail":"FeedOutage(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"WMT"}
+{"seq":21695,"ts":"2026-09-10T13:37:49.949130","kind":"quote_failed","detail":"FeedOutage(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLY"}
+{"seq":21696,"ts":"2026-09-10T13:38:02.018364","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21698,"ts":"2026-09-10T13:38:02.046213","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21699,"ts":"2026-09-10T13:38:02.053208","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21697,"ts":"2026-09-10T13:38:02.046213","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21703,"ts":"2026-09-10T13:38:02.082139","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21701,"ts":"2026-09-10T13:38:02.081138","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21702,"ts":"2026-09-10T13:38:02.081138","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21700,"ts":"2026-09-10T13:38:02.059138","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21704,"ts":"2026-09-10T13:38:02.091159","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"DIA"}
+{"seq":21705,"ts":"2026-09-10T13:38:02.093155","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"NVDA"}
+{"seq":21706,"ts":"2026-09-10T13:38:02.095180","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"GOOGL"}
+{"seq":21707,"ts":"2026-09-10T13:38:02.097157","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLV"}
+{"seq":21708,"ts":"2026-09-10T13:38:02.099730","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLE"}
+{"seq":21709,"ts":"2026-09-10T13:38:02.101715","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"IWM"}
+{"seq":21710,"ts":"2026-09-10T13:38:02.103701","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"SPY"}
+{"seq":21711,"ts":"2026-09-10T13:38:02.105637","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLI"}
+{"seq":21712,"ts":"2026-09-10T13:38:14.150886","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21713,"ts":"2026-09-10T13:38:14.176547","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21714,"ts":"2026-09-10T13:38:14.189544","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21717,"ts":"2026-09-10T13:38:14.197537","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21718,"ts":"2026-09-10T13:38:14.202540","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21716,"ts":"2026-09-10T13:38:14.197537","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21719,"ts":"2026-09-10T13:38:14.213534","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21715,"ts":"2026-09-10T13:38:14.196473","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21720,"ts":"2026-09-10T13:38:21.202174","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21721,"ts":"2026-09-10T13:38:21.215854","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21722,"ts":"2026-09-10T13:38:21.222110","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21723,"ts":"2026-09-10T13:38:21.226197","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21724,"ts":"2026-09-10T13:38:21.237919","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21725,"ts":"2026-09-10T13:38:21.243992","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21726,"ts":"2026-09-10T13:38:21.254920","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21727,"ts":"2026-09-10T13:38:21.261926","kind":"tick","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":21728,"ts":"2026-09-10T13:38:33.316815","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21729,"ts":"2026-09-10T13:38:33.386480","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21730,"ts":"2026-09-10T13:38:33.389481","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21733,"ts":"2026-09-10T13:38:33.399479","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21731,"ts":"2026-09-10T13:38:33.398483","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21732,"ts":"2026-09-10T13:38:33.399479","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21735,"ts":"2026-09-10T13:38:33.412670","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21734,"ts":"2026-09-10T13:38:33.403478","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21736,"ts":"2026-09-10T13:38:40.418488","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21737,"ts":"2026-09-10T13:38:40.480349","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21739,"ts":"2026-09-10T13:38:40.486621","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21740,"ts":"2026-09-10T13:38:40.500695","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21738,"ts":"2026-09-10T13:38:40.483627","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21741,"ts":"2026-09-10T13:38:40.514685","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21742,"ts":"2026-09-10T13:38:40.517621","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21743,"ts":"2026-09-10T13:38:40.522625","kind":"tick","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":21744,"ts":"2026-09-10T13:38:52.563340","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21745,"ts":"2026-09-10T13:38:52.568732","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21746,"ts":"2026-09-10T13:38:52.569845","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21747,"ts":"2026-09-10T13:38:52.574267","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21748,"ts":"2026-09-10T13:38:52.644825","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21749,"ts":"2026-09-10T13:38:52.654836","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21750,"ts":"2026-09-10T13:38:52.658818","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21751,"ts":"2026-09-10T13:38:52.663811","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21752,"ts":"2026-09-10T13:38:59.598225","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21753,"ts":"2026-09-10T13:38:59.611224","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21754,"ts":"2026-09-10T13:38:59.635032","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21755,"ts":"2026-09-10T13:38:59.665268","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21757,"ts":"2026-09-10T13:38:59.673480","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21756,"ts":"2026-09-10T13:38:59.673480","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21758,"ts":"2026-09-10T13:38:59.683481","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21759,"ts":"2026-09-10T13:38:59.688483","kind":"tick","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":21760,"ts":"2026-09-10T13:39:11.743847","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21761,"ts":"2026-09-10T13:39:11.772888","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21762,"ts":"2026-09-10T13:39:11.781902","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21763,"ts":"2026-09-10T13:39:11.805573","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21764,"ts":"2026-09-10T13:39:11.809578","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21765,"ts":"2026-09-10T13:39:11.813575","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21766,"ts":"2026-09-10T13:39:11.817575","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21767,"ts":"2026-09-10T13:39:11.821579","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21768,"ts":"2026-09-10T13:39:18.805312","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21769,"ts":"2026-09-10T13:39:18.812398","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21770,"ts":"2026-09-10T13:39:18.823201","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21771,"ts":"2026-09-10T13:39:18.828035","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21772,"ts":"2026-09-10T13:39:18.833089","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21773,"ts":"2026-09-10T13:39:18.834112","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21774,"ts":"2026-09-10T13:39:18.844766","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21775,"ts":"2026-09-10T13:39:18.849769","kind":"tick","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":21776,"ts":"2026-09-10T13:39:30.887125","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21777,"ts":"2026-09-10T13:39:30.955798","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21779,"ts":"2026-09-10T13:39:30.960646","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21782,"ts":"2026-09-10T13:39:30.963579","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21780,"ts":"2026-09-10T13:39:30.962604","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21781,"ts":"2026-09-10T13:39:30.963579","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21778,"ts":"2026-09-10T13:39:30.960646","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21783,"ts":"2026-09-10T13:39:30.966576","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21784,"ts":"2026-09-10T13:39:37.973779","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21785,"ts":"2026-09-10T13:39:37.985495","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21786,"ts":"2026-09-10T13:39:37.995178","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21788,"ts":"2026-09-10T13:39:38.000202","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21787,"ts":"2026-09-10T13:39:38.000202","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21790,"ts":"2026-09-10T13:39:38.018841","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21789,"ts":"2026-09-10T13:39:38.018841","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21791,"ts":"2026-09-10T13:39:38.053447","kind":"tick","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":21792,"ts":"2026-09-10T13:39:50.091830","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21793,"ts":"2026-09-10T13:39:50.110649","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21795,"ts":"2026-09-10T13:39:50.123572","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21794,"ts":"2026-09-10T13:39:50.123572","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21796,"ts":"2026-09-10T13:39:50.127959","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21797,"ts":"2026-09-10T13:39:50.127959","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21798,"ts":"2026-09-10T13:39:50.131386","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21799,"ts":"2026-09-10T13:39:50.170829","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21800,"ts":"2026-09-10T13:39:57.192800","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21803,"ts":"2026-09-10T13:39:57.219060","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21805,"ts":"2026-09-10T13:39:57.221128","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21802,"ts":"2026-09-10T13:39:57.219060","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21804,"ts":"2026-09-10T13:39:57.221128","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21801,"ts":"2026-09-10T13:39:57.219060","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21806,"ts":"2026-09-10T13:39:57.225821","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21807,"ts":"2026-09-10T13:39:57.233831","kind":"tick","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":21808,"ts":"2026-09-10T13:40:09.318058","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21809,"ts":"2026-09-10T13:40:09.334024","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21810,"ts":"2026-09-10T13:40:09.343360","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21811,"ts":"2026-09-10T13:40:09.347356","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21812,"ts":"2026-09-10T13:40:09.352357","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21813,"ts":"2026-09-10T13:40:09.356995","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21814,"ts":"2026-09-10T13:40:09.361995","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21815,"ts":"2026-09-10T13:40:09.370058","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21816,"ts":"2026-09-10T13:40:16.369174","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21817,"ts":"2026-09-10T13:40:16.380121","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21818,"ts":"2026-09-10T13:40:16.388130","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21820,"ts":"2026-09-10T13:40:16.391134","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21819,"ts":"2026-09-10T13:40:16.391134","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21822,"ts":"2026-09-10T13:40:16.395896","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21821,"ts":"2026-09-10T13:40:16.395896","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21823,"ts":"2026-09-10T13:40:16.401737","kind":"tick","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":21824,"ts":"2026-09-10T13:40:28.444096","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21825,"ts":"2026-09-10T13:40:28.457277","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21826,"ts":"2026-09-10T13:40:28.458271","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21827,"ts":"2026-09-10T13:40:28.467789","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21828,"ts":"2026-09-10T13:40:28.473302","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21830,"ts":"2026-09-10T13:40:28.477800","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21829,"ts":"2026-09-10T13:40:28.477800","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21831,"ts":"2026-09-10T13:40:28.485007","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21832,"ts":"2026-09-10T13:40:35.481121","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21833,"ts":"2026-09-10T13:40:35.497162","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21834,"ts":"2026-09-10T13:40:35.501167","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21837,"ts":"2026-09-10T13:40:35.505504","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21835,"ts":"2026-09-10T13:40:35.505504","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21836,"ts":"2026-09-10T13:40:35.505504","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21838,"ts":"2026-09-10T13:40:35.512519","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21839,"ts":"2026-09-10T13:40:35.515655","kind":"tick","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":21840,"ts":"2026-09-10T13:40:47.864720","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21841,"ts":"2026-09-10T13:40:47.872728","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21842,"ts":"2026-09-10T13:40:47.874721","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21843,"ts":"2026-09-10T13:40:47.876727","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21844,"ts":"2026-09-10T13:40:47.899722","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21845,"ts":"2026-09-10T13:40:47.899722","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21846,"ts":"2026-09-10T13:40:47.899722","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21847,"ts":"2026-09-10T13:40:47.900714","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21848,"ts":"2026-09-10T13:40:54.979882","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21850,"ts":"2026-09-10T13:40:54.988525","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21852,"ts":"2026-09-10T13:40:54.991016","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21849,"ts":"2026-09-10T13:40:54.988525","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21851,"ts":"2026-09-10T13:40:54.991016","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21853,"ts":"2026-09-10T13:40:55.011313","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21854,"ts":"2026-09-10T13:40:55.013318","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21855,"ts":"2026-09-10T13:40:55.019309","kind":"tick","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":21856,"ts":"2026-09-10T13:41:07.179410","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21857,"ts":"2026-09-10T13:41:07.223326","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21858,"ts":"2026-09-10T13:41:07.231910","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21859,"ts":"2026-09-10T13:41:07.246001","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21860,"ts":"2026-09-10T13:41:07.251999","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21861,"ts":"2026-09-10T13:41:07.255622","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21862,"ts":"2026-09-10T13:41:07.256817","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21863,"ts":"2026-09-10T13:41:07.256817","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21864,"ts":"2026-09-10T13:41:14.251321","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21865,"ts":"2026-09-10T13:41:14.264381","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21866,"ts":"2026-09-10T13:41:14.264381","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21867,"ts":"2026-09-10T13:41:14.273623","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21868,"ts":"2026-09-10T13:41:14.276147","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21869,"ts":"2026-09-10T13:41:14.292608","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21870,"ts":"2026-09-10T13:41:14.310232","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21871,"ts":"2026-09-10T13:41:14.314212","kind":"tick","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":21872,"ts":"2026-09-10T13:41:26.353070","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21873,"ts":"2026-09-10T13:41:26.357779","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21874,"ts":"2026-09-10T13:41:26.371076","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21875,"ts":"2026-09-10T13:41:26.379062","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21876,"ts":"2026-09-10T13:41:26.393071","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21879,"ts":"2026-09-10T13:41:26.398990","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21878,"ts":"2026-09-10T13:41:26.398990","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21877,"ts":"2026-09-10T13:41:26.398990","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21880,"ts":"2026-09-10T13:41:33.402121","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21882,"ts":"2026-09-10T13:41:33.413736","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21881,"ts":"2026-09-10T13:41:33.413736","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21883,"ts":"2026-09-10T13:41:33.422014","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21884,"ts":"2026-09-10T13:41:33.423088","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21885,"ts":"2026-09-10T13:41:33.423088","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21886,"ts":"2026-09-10T13:41:33.436058","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21887,"ts":"2026-09-10T13:41:33.439568","kind":"tick","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":21888,"ts":"2026-09-10T13:41:45.475933","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21889,"ts":"2026-09-10T13:41:45.482807","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21890,"ts":"2026-09-10T13:41:45.498463","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21891,"ts":"2026-09-10T13:41:45.506543","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21892,"ts":"2026-09-10T13:41:45.512544","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21893,"ts":"2026-09-10T13:41:45.534233","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21894,"ts":"2026-09-10T13:41:45.572697","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21895,"ts":"2026-09-10T13:41:45.572697","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21896,"ts":"2026-09-10T13:41:52.504122","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21897,"ts":"2026-09-10T13:41:52.536954","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21898,"ts":"2026-09-10T13:41:52.541799","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21899,"ts":"2026-09-10T13:41:52.541799","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21900,"ts":"2026-09-10T13:41:52.552659","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21901,"ts":"2026-09-10T13:41:52.596653","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21902,"ts":"2026-09-10T13:41:52.612328","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21903,"ts":"2026-09-10T13:41:52.616611","kind":"tick","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":21904,"ts":"2026-09-10T13:42:04.686136","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21905,"ts":"2026-09-10T13:42:04.708358","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21907,"ts":"2026-09-10T13:42:04.736352","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21908,"ts":"2026-09-10T13:42:04.748347","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21909,"ts":"2026-09-10T13:42:04.760286","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21906,"ts":"2026-09-10T13:42:04.733351","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21910,"ts":"2026-09-10T13:42:04.769354","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21911,"ts":"2026-09-10T13:42:04.769354","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21912,"ts":"2026-09-10T13:42:11.728062","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21913,"ts":"2026-09-10T13:42:11.753530","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21914,"ts":"2026-09-10T13:42:11.767475","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21915,"ts":"2026-09-10T13:42:11.776774","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21916,"ts":"2026-09-10T13:42:11.791125","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21917,"ts":"2026-09-10T13:42:11.796073","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21918,"ts":"2026-09-10T13:42:11.843253","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21919,"ts":"2026-09-10T13:42:11.849168","kind":"tick","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":21920,"ts":"2026-09-10T13:42:23.887243","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21921,"ts":"2026-09-10T13:42:23.903702","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21923,"ts":"2026-09-10T13:42:23.917706","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21924,"ts":"2026-09-10T13:42:23.924703","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21925,"ts":"2026-09-10T13:42:23.936700","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21926,"ts":"2026-09-10T13:42:23.942705","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21927,"ts":"2026-09-10T13:42:23.949701","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21922,"ts":"2026-09-10T13:42:23.914705","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21928,"ts":"2026-09-10T13:42:30.948923","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21929,"ts":"2026-09-10T13:42:30.966820","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21930,"ts":"2026-09-10T13:42:30.972350","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21932,"ts":"2026-09-10T13:42:30.977349","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21933,"ts":"2026-09-10T13:42:30.984352","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21934,"ts":"2026-09-10T13:42:30.988425","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21931,"ts":"2026-09-10T13:42:30.977349","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21935,"ts":"2026-09-10T13:42:31.002973","kind":"tick","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":21936,"ts":"2026-09-10T13:42:43.040040","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21939,"ts":"2026-09-10T13:42:43.062109","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21937,"ts":"2026-09-10T13:42:43.060030","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21938,"ts":"2026-09-10T13:42:43.061104","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21942,"ts":"2026-09-10T13:42:43.074549","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21940,"ts":"2026-09-10T13:42:43.067045","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21941,"ts":"2026-09-10T13:42:43.067559","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21943,"ts":"2026-09-10T13:42:43.088693","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":21944,"ts":"2026-09-10T13:42:46.710497","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"SPY"}
+{"seq":21945,"ts":"2026-09-10T13:42:46.727522","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"IWM"}
+{"seq":21946,"ts":"2026-09-10T13:42:46.732475","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"QQQ"}
+{"seq":21947,"ts":"2026-09-10T13:42:46.735485","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"DIA"}
+{"seq":21948,"ts":"2026-09-10T13:42:46.738473","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLK"}
+{"seq":21949,"ts":"2026-09-10T13:42:46.741530","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLI"}
+{"seq":21950,"ts":"2026-09-10T13:42:46.744530","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLY"}
+{"seq":21951,"ts":"2026-09-10T13:42:46.747490","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLV"}
+{"seq":21952,"ts":"2026-09-10T13:42:47.037624","kind":"stale_bar","detail":"XLP bar 13:37 is 5.6m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":21953,"ts":"2026-09-10T13:42:47.052204","kind":"stale_bar","detail":"XLP bar 13:38 is 4.6m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":21954,"ts":"2026-09-10T13:42:47.056373","kind":"stale_bar","detail":"XLP bar 13:39 is 3.6m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":21957,"ts":"2026-09-10T13:42:47.065362","kind":"stale_bar","detail":"XLE bar 13:36 is 6.6m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":21958,"ts":"2026-09-10T13:42:47.082443","kind":"stale_bar","detail":"XLE bar 13:37 is 5.6m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":21959,"ts":"2026-09-10T13:42:47.096369","kind":"stale_bar","detail":"XLE bar 13:38 is 4.6m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":21960,"ts":"2026-09-10T13:42:47.099440","kind":"stale_bar","detail":"XLE bar 13:39 is 3.6m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":21962,"ts":"2026-09-10T13:42:47.144010","kind":"stale_bar","detail":"XLF bar 13:37 is 5.6m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":21963,"ts":"2026-09-10T13:42:47.147010","kind":"stale_bar","detail":"XLF bar 13:38 is 4.6m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":21964,"ts":"2026-09-10T13:42:47.150016","kind":"stale_bar","detail":"XLF bar 13:39 is 3.6m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":21969,"ts":"2026-09-10T13:42:47.165236","kind":"stale_bar","detail":"NVDA bar 13:36 is 6.6m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":21970,"ts":"2026-09-10T13:42:47.167171","kind":"stale_bar","detail":"NVDA bar 13:37 is 5.6m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":21971,"ts":"2026-09-10T13:42:47.171169","kind":"stale_bar","detail":"NVDA bar 13:38 is 4.6m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":21972,"ts":"2026-09-10T13:42:47.174386","kind":"stale_bar","detail":"NVDA bar 13:39 is 3.6m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":21975,"ts":"2026-09-10T13:42:47.185214","kind":"stale_bar","detail":"AAPL bar 13:37 is 5.6m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":21976,"ts":"2026-09-10T13:42:47.188204","kind":"stale_bar","detail":"AAPL bar 13:38 is 4.6m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":21977,"ts":"2026-09-10T13:42:47.192137","kind":"stale_bar","detail":"AAPL bar 13:39 is 3.6m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":21978,"ts":"2026-09-10T13:42:47.198134","kind":"stale_bar","detail":"GOOGL bar 13:36 is 6.6m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":21979,"ts":"2026-09-10T13:42:47.201257","kind":"stale_bar","detail":"GOOGL bar 13:37 is 5.6m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":21980,"ts":"2026-09-10T13:42:47.204599","kind":"stale_bar","detail":"GOOGL bar 13:38 is 4.6m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":21981,"ts":"2026-09-10T13:42:47.207737","kind":"stale_bar","detail":"GOOGL bar 13:39 is 3.6m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":21984,"ts":"2026-09-10T13:42:47.216331","kind":"stale_bar","detail":"WMT bar 13:37 is 5.6m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":21985,"ts":"2026-09-10T13:42:47.219801","kind":"stale_bar","detail":"WMT bar 13:38 is 4.6m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":21986,"ts":"2026-09-10T13:42:47.222318","kind":"stale_bar","detail":"WMT bar 13:39 is 3.6m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":21987,"ts":"2026-09-10T13:42:53.663410","kind":"stale_bar","detail":"SPY bar 13:36 is 6.9m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":21988,"ts":"2026-09-10T13:42:53.668969","kind":"stale_bar","detail":"SPY bar 13:37 is 5.9m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":21989,"ts":"2026-09-10T13:42:53.671904","kind":"stale_bar","detail":"SPY bar 13:38 is 4.9m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":21990,"ts":"2026-09-10T13:42:53.674967","kind":"stale_bar","detail":"SPY bar 13:39 is 3.9m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":21995,"ts":"2026-09-10T13:42:53.691182","kind":"stale_bar","detail":"QQQ bar 13:37 is 5.9m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":21996,"ts":"2026-09-10T13:42:53.695178","kind":"stale_bar","detail":"QQQ bar 13:38 is 4.9m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":21997,"ts":"2026-09-10T13:42:53.697221","kind":"stale_bar","detail":"QQQ bar 13:39 is 3.9m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":22000,"ts":"2026-09-10T13:42:53.705286","kind":"stale_bar","detail":"IWM bar 13:36 is 6.9m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":22001,"ts":"2026-09-10T13:42:53.708284","kind":"stale_bar","detail":"IWM bar 13:37 is 5.9m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":22002,"ts":"2026-09-10T13:42:53.710296","kind":"stale_bar","detail":"IWM bar 13:38 is 4.9m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":22003,"ts":"2026-09-10T13:42:53.713281","kind":"stale_bar","detail":"IWM bar 13:39 is 3.9m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":22008,"ts":"2026-09-10T13:42:53.731046","kind":"stale_bar","detail":"DIA bar 13:36 is 6.9m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":22009,"ts":"2026-09-10T13:42:53.733979","kind":"stale_bar","detail":"DIA bar 13:37 is 5.9m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":22010,"ts":"2026-09-10T13:42:53.736444","kind":"stale_bar","detail":"DIA bar 13:38 is 4.9m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":22011,"ts":"2026-09-10T13:42:53.739085","kind":"stale_bar","detail":"DIA bar 13:39 is 3.9m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":22020,"ts":"2026-09-10T13:42:53.769388","kind":"stale_bar","detail":"XLK bar 13:37 is 5.9m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":22021,"ts":"2026-09-10T13:42:53.772380","kind":"stale_bar","detail":"XLK bar 13:38 is 4.9m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":22022,"ts":"2026-09-10T13:42:53.777394","kind":"stale_bar","detail":"XLK bar 13:39 is 3.9m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":22025,"ts":"2026-09-10T13:42:53.786857","kind":"stale_bar","detail":"XLY bar 13:37 is 5.9m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":22026,"ts":"2026-09-10T13:42:53.790856","kind":"stale_bar","detail":"XLY bar 13:38 is 4.9m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":22027,"ts":"2026-09-10T13:42:53.796928","kind":"stale_bar","detail":"XLY bar 13:39 is 3.9m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":22028,"ts":"2026-09-10T13:42:53.801928","kind":"stale_bar","detail":"XLI bar 13:36 is 6.9m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":22029,"ts":"2026-09-10T13:42:53.805869","kind":"stale_bar","detail":"XLI bar 13:37 is 5.9m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":22030,"ts":"2026-09-10T13:42:53.818514","kind":"stale_bar","detail":"XLI bar 13:38 is 4.9m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":22031,"ts":"2026-09-10T13:42:53.822228","kind":"stale_bar","detail":"XLI bar 13:39 is 3.9m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":22040,"ts":"2026-09-10T13:42:53.846702","kind":"stale_bar","detail":"XLV bar 13:36 is 6.9m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":22041,"ts":"2026-09-10T13:42:53.849715","kind":"stale_bar","detail":"XLV bar 13:37 is 5.9m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":22042,"ts":"2026-09-10T13:42:53.852629","kind":"stale_bar","detail":"XLV bar 13:38 is 4.9m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":22043,"ts":"2026-09-10T13:42:53.854630","kind":"stale_bar","detail":"XLV bar 13:39 is 3.9m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":23073,"ts":"2026-09-10T14:25:31.229398","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":23076,"ts":"2026-09-10T14:25:31.246854","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":23074,"ts":"2026-09-10T14:25:31.245857","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":23075,"ts":"2026-09-10T14:25:31.245857","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":23077,"ts":"2026-09-10T14:25:31.248855","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":23078,"ts":"2026-09-10T14:25:31.248855","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":23079,"ts":"2026-09-10T14:25:31.248855","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":23080,"ts":"2026-09-10T14:25:31.254083","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":23081,"ts":"2026-09-10T14:25:38.260064","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":23082,"ts":"2026-09-10T14:25:38.262974","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLI"}
+{"seq":23083,"ts":"2026-09-10T14:25:38.264052","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLE"}
+{"seq":23084,"ts":"2026-09-10T14:25:38.265023","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLV"}
+{"seq":23085,"ts":"2026-09-10T14:25:38.265976","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLP"}
+{"seq":23086,"ts":"2026-09-10T14:25:38.266999","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLY"}
+{"seq":23087,"ts":"2026-09-10T14:25:38.269421","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"DIA"}
+{"seq":23088,"ts":"2026-09-10T14:25:38.270577","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLF"}
+{"seq":23089,"ts":"2026-09-10T14:25:38.272585","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLK"}
+{"seq":23090,"ts":"2026-09-10T14:25:38.274586","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"NVDA"}
+{"seq":23091,"ts":"2026-09-10T14:25:45.306435","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/snapshot/quote"}
+{"seq":23093,"ts":"2026-09-10T14:25:45.338794","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/snapshot/quote"}
+{"seq":23092,"ts":"2026-09-10T14:25:45.338794","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/snapshot/quote"}
+{"seq":23094,"ts":"2026-09-10T14:25:45.340867","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/snapshot/quote"}
+{"seq":23095,"ts":"2026-09-10T14:25:45.340867","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/snapshot/quote"}
+{"seq":23096,"ts":"2026-09-10T14:25:45.342920","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/snapshot/quote"}
+{"seq":23097,"ts":"2026-09-10T14:25:45.350034","kind":"quote_failed","detail":"FeedOutage(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"IWM"}
+{"seq":23098,"ts":"2026-09-10T14:25:45.352033","kind":"quote_failed","detail":"FeedOutage(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"SPY"}
+{"seq":23099,"ts":"2026-09-10T14:25:45.354032","kind":"quote_failed","detail":"FeedOutage(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"QQQ"}
+{"seq":23100,"ts":"2026-09-10T14:25:45.355031","kind":"quote_failed","detail":"FeedOutage(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"GOOGL"}
+{"seq":23101,"ts":"2026-09-10T14:25:45.356393","kind":"quote_failed","detail":"FeedOutage(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"WMT"}
+{"seq":23102,"ts":"2026-09-10T14:25:45.358868","kind":"quote_failed","detail":"FeedOutage(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"AAPL"}
+{"seq":23103,"ts":"2026-09-10T14:25:57.474155","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":23104,"ts":"2026-09-10T14:25:57.496225","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":23105,"ts":"2026-09-10T14:25:57.497159","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":23106,"ts":"2026-09-10T14:25:57.498228","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":23107,"ts":"2026-09-10T14:25:57.498228","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":23108,"ts":"2026-09-10T14:25:57.498228","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":23109,"ts":"2026-09-10T14:25:57.498228","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":23110,"ts":"2026-09-10T14:25:57.498228","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":23111,"ts":"2026-09-10T14:26:04.515668","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":23112,"ts":"2026-09-10T14:26:04.530611","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLV"}
+{"seq":23113,"ts":"2026-09-10T14:26:04.533966","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"DIA"}
+{"seq":23114,"ts":"2026-09-10T14:26:04.537326","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLP"}
+{"seq":23115,"ts":"2026-09-10T14:26:04.541217","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLF"}
+{"seq":23116,"ts":"2026-09-10T14:26:04.546214","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLE"}
+{"seq":23117,"ts":"2026-09-10T14:26:04.549213","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLI"}
+{"seq":23118,"ts":"2026-09-10T14:26:04.552218","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLY"}
+{"seq":23119,"ts":"2026-09-10T14:26:04.555215","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLK"}
+{"seq":23120,"ts":"2026-09-10T14:26:04.557215","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"NVDA"}
+{"seq":24573,"ts":"2026-09-10T15:41:58.069955","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":24574,"ts":"2026-09-10T15:41:58.077057","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":24576,"ts":"2026-09-10T15:41:58.083953","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":24578,"ts":"2026-09-10T15:41:58.088017","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":24575,"ts":"2026-09-10T15:41:58.083953","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":24579,"ts":"2026-09-10T15:41:58.214108","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":24580,"ts":"2026-09-10T15:41:58.232622","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":24577,"ts":"2026-09-10T15:41:58.088017","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":24581,"ts":"2026-09-10T15:42:05.419610","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":24582,"ts":"2026-09-10T15:42:05.422452","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":24585,"ts":"2026-09-10T15:42:05.443354","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":24584,"ts":"2026-09-10T15:42:05.443354","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":24583,"ts":"2026-09-10T15:42:05.443354","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":24586,"ts":"2026-09-10T15:42:05.450358","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"SPY"}
+{"seq":24587,"ts":"2026-09-10T15:42:05.452359","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLP"}
+{"seq":24588,"ts":"2026-09-10T15:42:05.454372","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLY"}
+{"seq":24589,"ts":"2026-09-10T15:42:05.456360","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"DIA"}
+{"seq":24590,"ts":"2026-09-10T15:42:05.459879","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLK"}
+{"seq":24591,"ts":"2026-09-10T15:42:05.461878","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLV"}
+{"seq":24592,"ts":"2026-09-10T15:42:05.462879","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"QQQ"}
+{"seq":24593,"ts":"2026-09-10T15:42:05.465877","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"IWM"}
+{"seq":24594,"ts":"2026-09-10T15:42:05.467883","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLE"}
+{"seq":24595,"ts":"2026-09-10T15:42:05.468878","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"AAPL"}
+{"seq":24596,"ts":"2026-09-10T15:42:05.470879","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"NVDA"}
+{"seq":24597,"ts":"2026-09-10T15:42:05.472878","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLF"}
+{"seq":24598,"ts":"2026-09-10T15:42:05.509523","kind":"bars_failed","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"WMT"}

@@ -117,3 +117,10 @@ huggingface_space/trained_models/
 # Git keeps blobs forever, so 37 MB of regenerable parquet would sit in every clone
 # permanently -- the same reason trained_models/ is ignored on the Space side.
 data/vrp/
+
+# Browser-automation scratch from an MCP session. Page snapshots, not source.
+.playwright-mcp/
+
+# Upload tarball of the derived VRP frame -- same bytes as data/vrp/, which is already
+# ignored above for the same reason. Rebuild and re-tar; never commit it.
+vrp_frame.tar.gz

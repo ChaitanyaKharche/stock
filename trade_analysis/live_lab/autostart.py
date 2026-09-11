@@ -76,12 +76,94 @@ RUNNER_DONE_AFTER = dt.time(15, 55)  # an exit at/after this is a normal end of 
                                      # sessions (2026-09-01..03).
 HARD_STOP = dt.time(16, 10)          # backstop only: by now a healthy runner has long since
                                      # exited, so anything still alive is wedged
+# --- host suspend guard --------------------------------------------------------------
+# 2026-09-10: the host idle-slept at 15:41:57 ET and woke at 17:35:47. The session lost
+# its last 18 minutes, EOD_FLAT never ran, 32 positions were abandoned open and no daily
+# summary was written -- while the log said rc=0 and the ledger said PARTIAL. Nothing in
+# the lab could see it; the only evidence was a Windows Kernel-Power event id 42. Three
+# guards follow: refuse to let the host idle-sleep, make any suspend that happens anyway
+# LOUD in the durable record, and stop the backstop from killing a runner that is in the
+# middle of recovering from one.
+ES_CONTINUOUS        = 0x80000000
+ES_SYSTEM_REQUIRED   = 0x00000001
+ES_AWAYMODE_REQUIRED = 0x00000040
+SUSPEND_JUMP_SEC    = 90     # unaccounted wall-clock gap that means "we were suspended"
+HARD_STOP_GRACE_SEC = 240    # let a waking runner flatten and write before killing it
+
 MAX_RESTARTS = 20
 RESTART_BACKOFF = [5, 15, 30, 60, 120]   # seconds; holds at the last value
 TERMINAL_PORT = 25503
 TERMINAL_DIR = Path(r"C:\Users\chaitanyakharche\Documents\research_data\thetaterminal")
 TERMINAL_CMD = [str(TERMINAL_DIR / "jdk21" / "jdk-21.0.12+8" / "bin" / "java.exe"),
                 "-jar", str(TERMINAL_DIR / "ThetaTerminalv3.jar")]
+
+
+def hold_system_awake() -> str:
+    """Ask Windows not to idle-sleep while the lab is running; return a state for the log.
+
+    This covers the IDLE timeout, which is what fired on 2026-09-10. It does NOT override
+    closing the lid or an explicit sleep -- no user-space process can. `_sleep_watched`
+    below is the backstop for those. The assertion is per-thread and is dropped when this
+    process exits, so a crash cannot leave the machine pinned awake.
+    """
+    if sys.platform != "win32":
+        return "not Windows; no suspend guard installed"
+    try:
+        import ctypes
+        k32 = ctypes.windll.kernel32
+        if k32.SetThreadExecutionState(ES_CONTINUOUS | ES_SYSTEM_REQUIRED
+                                       | ES_AWAYMODE_REQUIRED):
+            return "HELD (system-required + away-mode)"
+        if k32.SetThreadExecutionState(ES_CONTINUOUS | ES_SYSTEM_REQUIRED):
+            return "HELD (system-required; away-mode refused)"
+        return "REFUSED BY THE OS -- the host may still idle-sleep"
+    except Exception as exc:                                          # noqa: BLE001
+        return f"UNAVAILABLE ({exc!r})"
+
+
+def release_system_awake() -> None:
+    if sys.platform != "win32":
+        return
+    try:
+        import ctypes
+        ctypes.windll.kernel32.SetThreadExecutionState(ES_CONTINUOUS)
+    except Exception:                                                 # noqa: BLE001
+        pass
+
+
+def _record_suspend(lab_dir, gap: float, before, after) -> None:
+    """Put a suspend in the DURABLE record, not only in the log.
+
+    A gap that exists solely in a Windows event log is not evidence this project can use
+    six months from now. Written to every arm's store so neither arm's outage series
+    silently omits a window in which it was not running.
+    """
+    from .store import LabStore
+    detail = (f"host suspended or clock stepped: {gap:.0f}s unaccounted between "
+              f"{before:%H:%M:%S} and {after:%H:%M:%S} ET -- the lab was NOT running")
+    for root in (Path(lab_dir), Path(lab_dir) / "shares"):
+        if not root.exists():
+            continue
+        try:
+            LabStore(str(root)).outage("host_suspend", detail,
+                                       gap_sec=round(gap, 1),
+                                       from_et=before.isoformat(),
+                                       to_et=after.isoformat())
+        except Exception:                                             # noqa: BLE001
+            pass
+
+
+def _sleep_watched(lab_dir, secs: float) -> None:
+    """time.sleep, but shout if the wall clock jumped while we were not looking."""
+    before = now_et()
+    time.sleep(secs)
+    after = now_et()
+    gap = (after - before).total_seconds() - secs
+    if gap >= SUSPEND_JUMP_SEC:
+        log(f"!! HOST SUSPEND DETECTED: {gap:.0f}s of wall clock vanished during a "
+            f"{secs:.0f}s sleep ({before:%H:%M:%S} -> {after:%H:%M:%S} ET). "
+            f"The lab was NOT running during that window.")
+        _record_suspend(lab_dir, gap, before, after)
 
 
 class Tee:
@@ -429,14 +511,30 @@ def supervise(args, day: dt.date, specs=None, child_cls=None) -> int:
         # here loses every position that was open at the close, and the summary with it.
         if now.date() != day or now.time() >= HARD_STOP:
             if alive:
+                # A runner that has just woken from a host suspend breaks its own loop
+                # (now >= RTH_CLOSE), then flattens and writes its summary in seconds.
+                # On 2026-09-10 this backstop fired ONE SECOND after the wake and killed
+                # it mid-recovery -- costing the EOD flatten, 32 positions and the daily
+                # summary. Killing a healthy shutdown is the more expensive mistake, so
+                # wait for it before reaching for terminate().
                 log(f"{now:%H:%M:%S} ET -- past the {HARD_STOP:%H:%M} backstop and "
-                    f"{len(alive)} arm(s) are still alive; terminating")
+                    f"{len(alive)} arm(s) are still alive; giving them "
+                    f"{HARD_STOP_GRACE_SEC}s to flatten and write before terminating")
+                deadline = time.monotonic() + HARD_STOP_GRACE_SEC
+                while time.monotonic() < deadline:
+                    if all(ch.poll() is not None for ch in alive):
+                        log("all arms exited on their own inside the grace window")
+                        break
+                    time.sleep(2)
+                still = [ch.name for ch in alive if ch.poll() is None]
+                if still:
+                    log(f"grace window expired; terminating: {', '.join(still)}")
             for ch in children:
                 ch.terminate()
             break
         if now.time() >= RUNNER_DONE_AFTER:
             if alive:
-                time.sleep(5)          # let them flatten and write their summary
+                _sleep_watched(args.lab_dir, 5)   # let them flatten and write the summary
                 continue
             break
 
@@ -469,7 +567,7 @@ def supervise(args, day: dt.date, specs=None, child_cls=None) -> int:
                     if args.start_terminal:
                         start_terminal()
                 ch.start()
-        time.sleep(5)
+        _sleep_watched(args.lab_dir, 5)
 
     for ch in children:
         log(f"{ch.name} arm finished rc={ch.rc} after {ch.restarts} restart(s)")
@@ -521,6 +619,10 @@ def main(argv=None) -> int:
     if not guard.acquire():
         log(f"another autostart is already supervising ({guard.holder()}); exiting")
         return 0
+
+    # Installed AFTER the lock so a duplicate invocation that exits immediately does not
+    # leave a stray assertion behind.
+    log(f"host suspend guard: {hold_system_awake()}")
 
     if not args.now and not wait_for_open(START_AT):
         return 0
