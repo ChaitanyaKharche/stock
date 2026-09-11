@@ -38,6 +38,24 @@ import pandas as pd
 from .har_baseline import TARGET, clean, load, split
 from .harp_baseline import HAR_FEATURES, IV_COL, design, fit, predict
 
+# --- the iv_var_atm-alone diagnostic -------------------------------------------------
+# The pre-registration fixes m = 1 and authorises no variants, and this does not breach
+# that, because it is a DECOMPOSITION of the reported result rather than a second
+# hypothesis. Arm B selects origins where implied variance is 3.35x the rejected median,
+# so the obvious question is whether the HAR-IV forecast contributes anything at all or
+# whether `iv_var_atm` alone picks the same origins.
+#
+# The asymmetry is what makes it safe to run: this check CANNOT improve the claim. If
+# iv_only does as well, the forecast is redundant and the finding must be restated more
+# simply -- "sell when IV is high" rather than "sell when IV exceeds our forecast". If
+# iv_only does WORSE, the forecast is load-bearing. Either way the reported effect gets
+# smaller or better explained, never larger. A test that can only cost you is not a
+# multiplicity problem.
+SIGNALS = {
+    "expected_vrp": "iv_var_atm - HAR_IV_forecast(rv_fwd_30)   [pre-registered]",
+    "iv_only": "iv_var_atm alone                          [diagnostic, not a variant]",
+}
+
 TERCILE = 2.0 / 3.0            # pre-registered: top tercile only
 MIN_SESSIONS = 50              # pre-registered floor
 MIN_TRADES = 1000              # pre-registered floor
@@ -122,7 +140,8 @@ def sign_test_sessions(sel: pd.DataFrame) -> dict:
     return {"wins": wins, "n": n, "rate": wins / n if n else float("nan"), "p": pv}
 
 
-def run(data_dir: str, trades_path: str) -> int:
+def run(data_dir: str, trades_path: str,
+        signal: str = "expected_vrp") -> int:
     # ---- the forecast, fitted on TRAIN only -----------------------------------------
     df = clean(load(data_dir))
     parts = split(df)
@@ -134,12 +153,17 @@ def run(data_dir: str, trades_path: str) -> int:
     for name, part in (("train", train), ("validation", val)):
         part = part.copy()
         part["fc"] = predict(part, build, beta, rv)
-        part["expected_vrp"] = part[IV_COL].to_numpy(float) - part["fc"].to_numpy(float)
+        if signal == "iv_only":
+            part["expected_vrp"] = part[IV_COL].to_numpy(float)
+        else:
+            part["expected_vrp"] = (part[IV_COL].to_numpy(float)
+                                    - part["fc"].to_numpy(float))
         if name == "train":
             cut = float(np.nanquantile(part["expected_vrp"], TERCILE))
             train_ev = part
         else:
             val_ev = part
+    print(f"  SIGNAL: {signal} = {SIGNALS[signal]}")
     print(f"  HAR-IV fitted on {len(train)} train origins over "
           f"{train['date'].nunique()} sessions")
     print(f"  expected_VRP top-tercile cut from TRAIN ONLY: {cut:+.8f}")
@@ -310,8 +334,11 @@ def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--data", default="data/vrp")
     ap.add_argument("--trades", default="data/cost_model_trades.parquet")
+    ap.add_argument("--signal", default="expected_vrp", choices=sorted(SIGNALS),
+                    help="iv_only is a DECOMPOSITION diagnostic, not a pre-registered "
+                         "variant -- see the note at the top of this file")
     args = ap.parse_args(argv)
-    return run(args.data, args.trades)
+    return run(args.data, args.trades, args.signal)
 
 
 if __name__ == "__main__":
