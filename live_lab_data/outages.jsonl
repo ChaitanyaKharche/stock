@@ -558,3 +558,4 @@
 {"seq":2289,"ts":"2026-09-04T16:00:55.244888","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/snapshot/quote"}
 {"seq":2291,"ts":"2026-09-04T16:01:02.292354","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/snapshot/quote"}
 {"seq":2293,"ts":"2026-09-04T16:01:09.332164","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/snapshot/quote"}
+{"seq":2295,"ts":"2026-09-11T16:23:50.102931","kind":"host_suspend","detail":"host suspended or clock stepped: 1806s unaccounted between 15:53:38 and 16:23:49 ET -- the lab was NOT running","gap_sec":1806.4,"from_et":"2026-09-11T15:53:38.358091","to_et":"2026-09-11T16:23:49.709637"}
