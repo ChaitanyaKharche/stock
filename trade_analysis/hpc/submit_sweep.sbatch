@@ -28,7 +28,9 @@ set -euo pipefail
 # Two separate roots, because they have different lifetimes:
 #   REPO      the git clone -- disposable, re-clonable, never holds a result
 #   VRP_ROOT  data and results -- the things you would be sad to lose
-# Both under $HOME. /scratch purges after 45 days and has already destroyed this project
+# Both under $HOME. /scratch is WIPED IN FULL on the first Tuesday of every month --
+# there is no access-time condition, so a file written and read yesterday still dies
+# (https://rc.northeastern.edu/scratch-space-policy/ , verified 2026-09-11). It has already destroyed this project
 # once: the whole tree under /scratch/kharche.c/ went, taking the ORIGINAL TFT
 # model-definition source with it. The checkpoints survived only because they had been
 # copied into the git repo. Scratch is fine as fast working space DURING a job; it is
