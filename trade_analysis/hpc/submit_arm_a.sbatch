@@ -23,16 +23,18 @@
 # "academic replication only; redistribution of raw exchange data is not permitted", so it
 # lives outside the repo and is rsynced by hand:
 #
-# Run this ON THE LAPTOP, in Git Bash. Not on the cluster, and not in PowerShell.
+# Run this ON THE LAPTOP (PowerShell), not on the cluster:
 #
-#   scp /c/Users/chaitanyakharche/Documents/research_data/0dte-strategies/data/data_opt.parquet \
-#       kharche.c@login.explorer.northeastern.edu:/home/kharche.c/vrp/data/
+#   cd C:\Users\chaitanyakharche\Documents\research_data\0dte-strategies\data
+#   scp data_opt.parquet kharche.c@login.explorer.northeastern.edu:/home/kharche.c/vrp/data/
 #
-# The first version of this comment said `rsync -av ~/Documents/...` and was wrong twice
-# over: Git for Windows ships no rsync, and that source path exists only on the laptop, so
-# pasted into a cluster shell it gives
-#   change_dir "/home/kharche.c/Documents/..." failed: No such file or directory
-# which is exactly what happened the first time someone followed it.
+# `cd` first and pass a BARE FILENAME. It is not cosmetic: `scp C:\path\file host:dest`
+# makes scp parse `C:` as a hostname, and a Git-Bash-style `/c/Users/...` is not a path
+# PowerShell's scp.exe can stat. This comment got it wrong twice before landing here --
+# first `rsync -av ~/Documents/...` (Git for Windows ships no rsync, and that path exists
+# only on the laptop, so on the cluster it gives `change_dir ... No such file or
+# directory`), then the /c/ form in PowerShell (`stat local ... No such file or
+# directory`). The form above has no shell-specific syntax in the argument at all.
 #
 # 252 MB, one file. NOT to /scratch -- that is wiped in full on the first Tuesday of every
 # month with no access-time condition.
