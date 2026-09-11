@@ -124,3 +124,11 @@ data/vrp/
 # Upload tarball of the derived VRP frame -- same bytes as data/vrp/, which is already
 # ignored above for the same reason. Rebuild and re-tar; never commit it.
 vrp_frame.tar.gz
+
+# Slurm logs. Every sbatch here now writes to an absolute path under ~/vrp/logs, but a
+# relative --output silently resolves against the submission directory -- i.e. this repo --
+# and that is exactly how 24 stray vrp-*.out/.err files ended up in the cluster clone and
+# tripped a provenance gate. Root-anchored so a deliberately-committed log elsewhere in the
+# tree still works.
+/*.out
+/*.err

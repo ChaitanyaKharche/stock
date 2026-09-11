@@ -20,8 +20,16 @@
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=16G
 #SBATCH --time=00:30:00
-#SBATCH --output=%x_%A_%a.out    # relative to sbatch's cwd; keep it off scratch
-#SBATCH --error=%x_%A_%a.err
+# ABSOLUTE log path. A relative --output resolves against the SUBMISSION directory,
+# which is the git clone, so Slurm wrote its .out/.err straight into the working tree.
+# That is where the 24 stray vrp-*.out/.err files in ~/vrp/rep came from, and it is
+# what tripped submit_arm_a's own provenance gate on its first cluster run. %u is the
+# username. The directory must exist BEFORE sbatch -- Slurm opens the file before the
+# script body runs, so an in-script mkdir is too late:   mkdir -p ~/vrp/logs
+# (the old comment here said "relative to sbatch's cwd; keep it off scratch" --
+#  correct about scratch, but it treated writing into the repo as acceptable.)
+#SBATCH --output=/home/%u/vrp/logs/%x_%A_%a.out
+#SBATCH --error=/home/%u/vrp/logs/%x_%A_%a.err
 
 set -euo pipefail
 
