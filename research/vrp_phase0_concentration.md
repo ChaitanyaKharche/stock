@@ -32,9 +32,13 @@ agent memory file and was used to brief a literature review, which spent its eff
 explaining a 24.1% anomaly that does not exist. At 4.5% the result is unremarkable — it
 sits inside the published single-digit range for IV augmentation and needs no explaining.
 
-Frame note, also corrected: **769 sessions on disk, 747 after cleaning — 22 are dropped.**
-`clean()` prints `*** 22 SESSIONS LOST ***` on every run. The split (346 / 250 / 151) sums
-to 747, so "0 dropped" was contradicted by its own numbers.
+Frame note, also corrected: **769 sessions on disk, 747 usable.** The split
+(346 / 250 / 151) sums to 747, not 769, so the "0 dropped" I had recorded was contradicted
+by its own numbers. **The 22 are benign and `clean()` says so:** they are the first 22
+sessions in the archive, lost because `rv_prev_22` needs 22 prior sessions that do not yet
+exist. No rows are dropped inside a surviving session and all 22 sit in TRAIN, so
+validation and heldout are untouched. A lookback warmup, not a defect -- my first framing
+of this omitted that and read as more alarming than the facts warrant.
 
 ## 2. What the differential actually contains
 

@@ -184,21 +184,35 @@ def concentration(d: pd.Series) -> dict:
     return out
 
 
-def run(data_dir: str, challenger: str = "implied_variance") -> dict:
+def run(data_dir: str, challenger: str = "implied_variance",
+        models: str = "baseline", benchmark: str | None = None) -> dict:
     df = clean(load(data_dir))
     parts = split(df)
     for k, v in parts.items():
         print(f"  {k:<11} {len(v):>7} origins over {v['date'].nunique():>4} sessions")
 
-    preds = build_predictions(parts["train"], parts["validation"])
+    # `--models harp` widens the set to the HAR-IV and diurnal specifications so any pair
+    # among them can be audited. Imported lazily so the baseline path still works if
+    # harp_baseline is absent.
+    if models == "harp":
+        from .harp_baseline import build_models
+        preds = build_models(parts["train"], parts["validation"])
+    else:
+        preds = build_predictions(parts["train"], parts["validation"])
     table = evaluate(parts["validation"], preds)
     print(f"\n  VALIDATION (2023) -- target {TARGET}\n{table.to_string(index=False)}")
 
     if challenger not in preds:
         raise SystemExit(f"{challenger} not in predictions: {sorted(preds)}")
-    bench = min((m for m in preds if m.startswith("HAR")),
-                key=lambda m: table.set_index("model").loc[m, "QLIKE"])
-    print(f"\n  challenger={challenger}   benchmark={bench} (best HAR by QLIKE)")
+    if benchmark:
+        if benchmark not in preds:
+            raise SystemExit(f"{benchmark} not in predictions: {sorted(preds)}")
+        bench = benchmark
+    else:
+        bench = min((m for m in preds if m.startswith("HAR")),
+                    key=lambda m: table.set_index("model").loc[m, "QLIKE"])
+    print(f"\n  challenger={challenger}   benchmark={bench}"
+          + ("" if benchmark else " (best HAR by QLIKE)"))
 
     val = parts["validation"]
     d = session_diffs(val, preds[challenger], preds[bench])
@@ -324,9 +338,13 @@ def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--data", default="data/vrp", help="directory of session parquets")
     ap.add_argument("--challenger", default="implied_variance")
+    ap.add_argument("--models", default="baseline", choices=("baseline", "harp"),
+                    help="'harp' adds the HAR-IV and diurnal specifications")
+    ap.add_argument("--benchmark", default=None,
+                    help="pin the benchmark instead of taking the best HAR by QLIKE")
     ap.add_argument("--json", default=None, help="also write the full result here")
     args = ap.parse_args(argv)
-    res = run(args.data, args.challenger)
+    res = run(args.data, args.challenger, args.models, args.benchmark)
     if args.json:
         with open(args.json, "w", encoding="utf-8") as fh:
             json.dump(res, fh, indent=2, default=str)
