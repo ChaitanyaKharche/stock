@@ -91,9 +91,23 @@ def provenance() -> dict:
                 if d.metadata.get("Name")}
     except Exception:                                            # noqa: BLE001
         pkgs = {}
+    # A bare `git status --porcelain` is useless as a gate IN THIS REPO: the live lab
+    # writes its durable record into live_lab_data/ continuously, so the tree is dirty
+    # during and after every trading session and the flag fires on all 12 tasks forever.
+    # The question a provenance check actually needs to answer is "was the CODE I ran
+    # different from the code that is committed", so the dirt that matters is dirt outside
+    # the data paths. Both are recorded; only the code one is gated.
+    porcelain = _git("status", "--porcelain") or ""
+    DATA_PREFIXES = ("live_lab_data/", "data/", "results/", ".playwright-mcp/")
+    dirty_code = []
+    for line in porcelain.splitlines():
+        path = line[3:].strip().strip('"')
+        if path and not path.startswith(DATA_PREFIXES):
+            dirty_code.append(path)
     return {
         "git_sha": _git("rev-parse", "HEAD"),
-        "git_dirty": bool(_git("status", "--porcelain")),
+        "git_dirty": bool(porcelain),
+        "git_dirty_code": sorted(dirty_code),
         "python": sys.version.split()[0],
         "platform": platform.platform(),
         "hostname": platform.node(),

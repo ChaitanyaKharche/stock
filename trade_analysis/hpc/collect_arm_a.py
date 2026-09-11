@@ -44,9 +44,19 @@ def check_provenance(recs: dict) -> list[str]:
     shas = {s: r["provenance"].get("git_sha") for s, r in recs.items()}
     if len(set(shas.values())) > 1:
         problems.append(f"tasks ran DIFFERENT git SHAs: {shas}")
-    dirty = [s for s, r in recs.items() if r["provenance"].get("git_dirty")]
+    # Gate on CODE dirt only. live_lab_data/ churns under a running session, so a bare
+    # dirty flag would fire on every task of every run and train the reader to ignore it --
+    # a gate that always fires is as useless as one that never does.
+    dirty = {s: r["provenance"].get("git_dirty_code")
+             for s, r in recs.items() if r["provenance"].get("git_dirty_code")}
     if dirty:
-        problems.append(f"tasks ran a DIRTY tree: {dirty}")
+        problems.append(f"tasks ran UNCOMMITTED CODE: {dirty}")
+    data_dirty = [s for s, r in recs.items()
+                  if r["provenance"].get("git_dirty")
+                  and not r["provenance"].get("git_dirty_code")]
+    if data_dirty:
+        print(f"  note: {len(data_dirty)} task(s) ran with a dirty tree, but only in data "
+              f"paths (the live lab writes there continuously) -- not gated")
     for key in ("theta", "min_history", "atm_band"):
         vals = {s: r["provenance"].get(key) for s, r in recs.items()}
         if len(set(map(str, vals.values()))) > 1:
