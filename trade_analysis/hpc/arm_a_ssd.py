@@ -91,23 +91,47 @@ def provenance() -> dict:
                 if d.metadata.get("Name")}
     except Exception:                                            # noqa: BLE001
         pkgs = {}
-    # A bare `git status --porcelain` is useless as a gate IN THIS REPO: the live lab
-    # writes its durable record into live_lab_data/ continuously, so the tree is dirty
-    # during and after every trading session and the flag fires on all 12 tasks forever.
-    # The question a provenance check actually needs to answer is "was the CODE I ran
-    # different from the code that is committed", so the dirt that matters is dirt outside
-    # the data paths. Both are recorded; only the code one is gated.
+    # Three iterations to get this right, and the failures are instructive.
+    #
+    # v1 gated on bare `git status --porcelain`. Useless: the live lab writes
+    #    live_lab_data/ continuously, so the tree is dirty during and after every session
+    #    and the gate fired on all 12 tasks forever.
+    # v2 gated on any dirt outside the data paths. Also wrong, and it fired on the cluster
+    #    for things that are not code at all: Slurm's own `arm_a_10280002_*.out` files
+    #    (which land in the submission directory, i.e. the repo), plus stray files named
+    #    `44604`, `747` and `HAR-RV` -- almost certainly created by an unquoted `>` in an
+    #    earlier script, since those are strings har_baseline PRINTS.
+    # v3 (this) asks the question precisely. "Did the code I ran differ from the code that
+    #    is committed" is answered by TRACKED MODIFICATIONS, not by untracked clutter. An
+    #    untracked file cannot change what Python imported -- with one exception, an
+    #    untracked .py inside the package, which can shadow a module. So that one case is
+    #    gated too and everything else is merely counted.
     porcelain = _git("status", "--porcelain") or ""
     DATA_PREFIXES = ("live_lab_data/", "data/", "results/", ".playwright-mcp/")
-    dirty_code = []
+    modified_code, shadowing, untracked_other = [], [], []
     for line in porcelain.splitlines():
-        path = line[3:].strip().strip('"')
-        if path and not path.startswith(DATA_PREFIXES):
-            dirty_code.append(path)
+        if len(line) < 4:
+            continue
+        # porcelain v1 is `XY<space>PATH`, but X or Y may itself be a space (" M path",
+        # "M  path", "?? path"), so a fixed line[3:] slice silently eats the first
+        # character of the path for some states -- it produced "rade_analysis/..." here.
+        # Take the status as the first two columns and lstrip whatever separator follows.
+        status, path = line[:2], line[2:].lstrip().strip('"')
+        if not path or path.startswith(DATA_PREFIXES):
+            continue
+        if status == "??":
+            if path.endswith(".py") and path.startswith("trade_analysis/"):
+                shadowing.append(path)      # could shadow an imported module
+            else:
+                untracked_other.append(path)
+        else:
+            modified_code.append(f"{status.strip()} {path}")
     return {
         "git_sha": _git("rev-parse", "HEAD"),
         "git_dirty": bool(porcelain),
-        "git_dirty_code": sorted(dirty_code),
+        "git_modified_code": sorted(modified_code),
+        "git_untracked_shadowing": sorted(shadowing),
+        "git_untracked_other_n": len(untracked_other),
         "python": sys.version.split()[0],
         "platform": platform.platform(),
         "hostname": platform.node(),

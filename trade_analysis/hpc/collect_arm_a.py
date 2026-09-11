@@ -44,19 +44,22 @@ def check_provenance(recs: dict) -> list[str]:
     shas = {s: r["provenance"].get("git_sha") for s, r in recs.items()}
     if len(set(shas.values())) > 1:
         problems.append(f"tasks ran DIFFERENT git SHAs: {shas}")
-    # Gate on CODE dirt only. live_lab_data/ churns under a running session, so a bare
-    # dirty flag would fire on every task of every run and train the reader to ignore it --
-    # a gate that always fires is as useless as one that never does.
-    dirty = {s: r["provenance"].get("git_dirty_code")
-             for s, r in recs.items() if r["provenance"].get("git_dirty_code")}
-    if dirty:
-        problems.append(f"tasks ran UNCOMMITTED CODE: {dirty}")
-    data_dirty = [s for s, r in recs.items()
-                  if r["provenance"].get("git_dirty")
-                  and not r["provenance"].get("git_dirty_code")]
-    if data_dirty:
-        print(f"  note: {len(data_dirty)} task(s) ran with a dirty tree, but only in data "
-              f"paths (the live lab writes there continuously) -- not gated")
+    # Gate on TRACKED code edits, and on untracked .py files that could shadow an
+    # imported module. Nothing else about a dirty tree bears on what code ran, and gating
+    # on it fired on Slurm's own .out files and on stray redirect artifacts.
+    mod = {s: r["provenance"].get("git_modified_code")
+           for s, r in recs.items() if r["provenance"].get("git_modified_code")}
+    if mod:
+        problems.append(f"tasks ran MODIFIED TRACKED CODE: {mod}")
+    shadow = {s: r["provenance"].get("git_untracked_shadowing")
+              for s, r in recs.items() if r["provenance"].get("git_untracked_shadowing")}
+    if shadow:
+        problems.append(f"untracked .py inside the package could shadow a module: {shadow}")
+    clutter = max((r["provenance"].get("git_untracked_other_n") or 0)
+                  for r in recs.values()) if recs else 0
+    if clutter:
+        print(f"  note: {clutter} untracked non-code file(s) in the tree -- not gated, but "
+              f"worth a look; Slurm writes its .out files into the submission directory")
     for key in ("theta", "min_history", "atm_band"):
         vals = {s: r["provenance"].get(key) for s, r in recs.items()}
         if len(set(map(str, vals.values()))) > 1:

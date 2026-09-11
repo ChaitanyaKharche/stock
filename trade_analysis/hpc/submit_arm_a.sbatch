@@ -7,7 +7,13 @@
 #SBATCH --cpus-per-task=2
 #SBATCH --mem=24G
 #SBATCH --array=0-11
-#SBATCH --output=arm_a_%A_%a.out
+# ABSOLUTE path, and that is the whole point. A relative --output resolves against the
+# SUBMISSION directory -- the repo -- so Slurm wrote arm_a_<job>_<task>.out straight into
+# the working tree, which is what made the tree look dirty and tripped this job's own
+# provenance gate on run 1. %u is the username, so it is not pinned to one account.
+# The directory must exist BEFORE sbatch: Slurm opens the file before the script runs, so
+# the mkdir further down is too late. Once, by hand:   mkdir -p ~/vrp/logs
+#SBATCH --output=/home/%u/vrp/logs/arm_a_%A_%a.out
 #
 # Arm A of research/conditional_0dte_preregistration.md: one task per entry time.
 #
@@ -21,7 +27,7 @@
 #
 # THE DATA IS NOT IN GIT AND MUST NOT BE. The Vilkov panel is licensed
 # "academic replication only; redistribution of raw exchange data is not permitted", so it
-# lives outside the repo and is rsynced by hand:
+# lives outside the repo and is copied up by hand.
 #
 # Run this ON THE LAPTOP (PowerShell), not on the cluster:
 #
@@ -47,7 +53,7 @@ PANEL="${PANEL:-$VRP_ROOT/data/data_opt.parquet}"
 OUT="${OUT:-$VRP_ROOT/results/arm_a}"
 
 cd "$REPO"
-mkdir -p "$OUT"
+mkdir -p "$OUT" "$VRP_ROOT/logs"
 
 # ---- fail loudly on a missing input, before Slurm records COMPLETED --------------------
 if [[ ! -f "$PANEL" ]]; then
