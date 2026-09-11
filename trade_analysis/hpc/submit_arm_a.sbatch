@@ -23,11 +23,18 @@
 # "academic replication only; redistribution of raw exchange data is not permitted", so it
 # lives outside the repo and is rsynced by hand:
 #
-#   rsync -av --progress \
-#     ~/Documents/research_data/0dte-strategies/data/data_opt.parquet \
-#     kharche.c@login.explorer.northeastern.edu:/home/kharche.c/vrp/data/
+# Run this ON THE LAPTOP, in Git Bash. Not on the cluster, and not in PowerShell.
 #
-# 263 MB, one file. NOT to /scratch -- that is wiped in full on the first Tuesday of every
+#   scp /c/Users/chaitanyakharche/Documents/research_data/0dte-strategies/data/data_opt.parquet \
+#       kharche.c@login.explorer.northeastern.edu:/home/kharche.c/vrp/data/
+#
+# The first version of this comment said `rsync -av ~/Documents/...` and was wrong twice
+# over: Git for Windows ships no rsync, and that source path exists only on the laptop, so
+# pasted into a cluster shell it gives
+#   change_dir "/home/kharche.c/Documents/..." failed: No such file or directory
+# which is exactly what happened the first time someone followed it.
+#
+# 252 MB, one file. NOT to /scratch -- that is wiped in full on the first Tuesday of every
 # month with no access-time condition.
 
 set -euo pipefail
