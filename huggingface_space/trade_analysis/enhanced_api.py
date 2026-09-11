@@ -406,6 +406,44 @@ async def analyze_agent():
     except Exception as e:
         return {"error": str(e)}
 
+# THE single source of truth for the per-timeframe gates. It used to be a literal
+# INSIDE _generate_master_signal, and tools/calibrate_confidence_gate.py kept its own
+# copy annotated "what enhanced_api uses now". By 2026-09-11 that copy said
+# 36/34/33/32 while this said 36/36/37/38 -- so the instrument certifying the gate was
+# calibrated was measuring a gate that did not exist. The calibrator now imports this,
+# which makes that drift impossible rather than merely noticed.
+#
+# Callers MUST take a copy: strategy modes mutate min_confidence (gap -10, confirmed
+# reversal -8) and hold_time. That was safe only because the literal was rebuilt on
+# every call; against a module-level dict it would ratchet the gate down request after
+# request. _generate_master_signal copies below, and this comment is why.
+TIMEFRAME_CONFIGS = {
+    "15m": {
+        "threshold": 0.30,
+        "min_confidence": 36,
+        "hold_time": "10-30 minutes",
+        "position_multiplier": 1.0
+    },
+    "1h": {
+        "threshold": 0.35,
+        "min_confidence": 36,
+        "hold_time": "30-90 minutes",
+        "position_multiplier": 1.2
+    },
+    "4h": {
+        "threshold": 0.38,
+        "min_confidence": 37,
+        "hold_time": "half a session to a day",
+        "position_multiplier": 1.3
+    },
+    "1d": {
+        "threshold": 0.42,
+        "min_confidence": 38,
+        "hold_time": "1-5 days",
+        "position_multiplier": 1.5
+    }
+}
+
 def _generate_master_signal(momentum_analysis: Dict, llm_analysis: Dict, 
                           sentiment_analysis: Dict, tft_prediction: Dict,
                           timeframe: str = "15m", strategy_mode: str = "momentum",
@@ -435,41 +473,33 @@ def _generate_master_signal(momentum_analysis: Dict, llm_analysis: Dict,
     # Re-measured 2026-09-07 for the 15m/1h/4h/1d option set (20 symbols x 4 timeframes):
     # min 17 / p50 32 / p75 34 / p90 40 / max 52. The slower horizons carry HIGHER
     # confidence -- daily momentum is steadier than 15-minute momentum -- so a flat gate
-    # concentrates every firing in 1d. These are graded to match: 36/36/37/38 fires on
-    # 8.8% of the sample, spread 2/1/2/2 across the four timeframes instead of 2/2/3/6.
+    # concentrates every firing in 1d. These are graded to match.
     #
-    # CALIBRATION, NOT INFLATION: score thresholds and component weights are untouched, and
-    # a gate firing under 10% of the time is still demanding. Re-run
-    # tools/calibrate_confidence_gate.py when the volatility regime shifts -- this sample
-    # is one quiet-tape snapshot (VIX ~14.5).
-    timeframe_configs = {
-        "15m": {
-            "threshold": 0.30,
-            "min_confidence": 36,
-            "hold_time": "10-30 minutes",
-            "position_multiplier": 1.0
-        },
-        "1h": {
-            "threshold": 0.35,
-            "min_confidence": 36,
-            "hold_time": "30-90 minutes",
-            "position_multiplier": 1.2
-        },
-        "4h": {
-            "threshold": 0.38,
-            "min_confidence": 37,
-            "hold_time": "half a session to a day",
-            "position_multiplier": 1.3
-        },
-        "1d": {
-            "threshold": 0.42,
-            "min_confidence": 38,
-            "hold_time": "1-5 days",
-            "position_multiplier": 1.5
-        }
-    }
+    # CORRECTED 2026-09-11, and the correction is the interesting part. This comment used
+    # to claim 36/36/37/38 "fires on 8.8% of the sample". That number was never measured
+    # against 36/36/37/38. tools/calibrate_confidence_gate.py carried its own hardcoded
+    # copy of the gate, annotated "what enhanced_api uses now", and it had drifted to
+    # 36/34/33/32 -- so the instrument certifying this gate was calibrated was scoring a
+    # gate that was never shipped. Same bug class as everything else here, this time
+    # inside the measuring device.
+    #
+    # Re-measured on the same 20x4 basket with the REAL gates: fires 2/80 = 2.5%. The
+    # drifted gate reproduces 7/80 = 8.8% on those same bars, so the entire gap is the
+    # mismatch and not a regime shift -- today's distribution (min 17 / p50 31 / p75 34 /
+    # p90 37 / max 47) is close to the 09-07 one.
+    #
+    # 2.5% is low but NON-ZERO, and 36-38 sits well under the observed max of 47, so this
+    # is strict rather than broken by the rule this project keeps rediscovering. Whether
+    # 2.5% is the rate we WANT is a product decision and has deliberately not been taken
+    # here; retuning a gate is not a bug fix.
+    #
+    # CALIBRATION, NOT INFLATION: score thresholds and component weights are untouched.
+    # Re-run tools/calibrate_confidence_gate.py when the volatility regime shifts -- it
+    # now imports these values rather than transcribing them, so it cannot drift again.
+    # (moved to module scope as TIMEFRAME_CONFIGS -- see the note above)
 
-    config = timeframe_configs.get(timeframe, timeframe_configs["15m"])
+    # dict() is load-bearing: the strategy-mode branches below mutate `config`.
+    config = dict(TIMEFRAME_CONFIGS.get(timeframe, TIMEFRAME_CONFIGS["15m"]))
     
     # STRATEGY MODE ADJUSTMENTS
     # "scalp" was REMOVED as an option on 2026-09-07. Its entire effect was

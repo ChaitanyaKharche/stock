@@ -109,7 +109,7 @@ live_lab_data/shares/positions_open.json
 # time would double them in every clone FOREVER -- git keeps blobs even after a later
 # delete, so this is only free to decide before the first commit.
 # Regenerate with:  python huggingface_space/sync_shared.py --push
-# sync_shared.py --check refuses to call the folder upload-ready without them.
+# sync_shared.py (no flag) refuses to call the folder upload-ready without them.
 huggingface_space/trained_models/
 
 # Derived VRP frame. Rebuildable in ~1-2h with:
