@@ -132,7 +132,33 @@ def fit_gbdt(train: pd.DataFrame, log: list[str], lin: list[str]):
     return m, resid_var
 
 
+def require_sklearn() -> None:
+    """Fail at the top, not two models in -- and NEVER just skip the GBDT.
+
+    scikit-learn is declared in requirements.txt (1.7.1) and is installed in NEITHER local
+    interpreter, so this script has only ever run on the cluster. The import used to sit
+    inside fit_gbdt, which meant an hour of loading, cleaning and fitting two linear models
+    before dying on the third.
+
+    Skipping GBDT and printing the verdict anyway would be WORSE than crashing. The whole
+    claim this file exists to support is "a gradient-boosted tree free to find interactions
+    also loses to the bar, therefore the frame is exhausted". Without the tree that sentence
+    is unsupported, so a partial run must not be allowed to print it.
+    """
+    try:
+        import sklearn  # noqa: F401
+    except ImportError:
+        raise SystemExit(
+            "ceiling.py needs scikit-learn and this interpreter does not have it.\n"
+            f"  interpreter: {sys.prefix}\n"
+            "  install    : python -m pip install scikit-learn\n"
+            "REFUSING to run: without the GBDT arm the 'frame is exhausted' verdict at the\n"
+            "bottom of this script would be unsupported, so a partial run is not offered."
+        ) from None
+
+
 def run(data_dir: str, audit: bool = False) -> int:
+    require_sklearn()
     df = clean(load(data_dir))
     needed = [TARGET] + [f for f in HAR_FEATURES if f in df.columns]
     if audit:
