@@ -51,9 +51,9 @@ NAN = float("nan")
 # --- continuous axes: dense, because density is cheap under a bootstrap correction --------
 TRAIL_MIN = [5, 10, 15, 20, 30, 45, 60]
 SIGMA_MULT = [0.2, 0.4, 0.6, 0.8, 1.0, 1.25, 1.5, 2.0]
-TIME_EXIT = [5, 10, 15, 25, 40, 60, 90]
-ADX_MIN = [0.0, 15.0, 20.0, 25.0, 30.0]                # 0.0 = gate off
-EMA9_MIN = [NAN, 0.3, 0.71]                            # NAN = gate off
+TIME_EXIT = [5, 15, 25, 40, 60, 90]
+ADX_MIN = [0.0, 20.0, 25.0, 30.0]                      # 0.0 = gate off
+EMA9_MIN = [NAN, 0.71]                                 # NAN = gate off
 
 # --- structural axes: sparse, because each one genuinely doubles the hypothesis space -----
 DMI_TF = ["off", "1m", "5m"]
@@ -61,6 +61,19 @@ MACD_GATE = [False, True]
 DIRECTION = ["chase", "fade"]
 GATE_REF = ["trade", "momentum"]
 MAX_PER_DAY = [0, 3]                                   # 0 = cooldown only, as momo_v2 runs
+
+# --- the two axes the literature actually supports, added on the strength of it -----------
+# SIG_NORM: intraday volatility is strongly U-shaped, so a threshold in SESSION-to-date
+# sigma is much easier to clear near the open than at midday -- the threshold quietly acts
+# as a time-of-day filter. "tod" measures the move against the same minute on the previous
+# 14 sessions instead, which is Zarattini's boundary construction. The literature's entry
+# rules are time-of-day conditional and this family's was not.
+SIG_NORM = ["session", "tod"]
+# VOL_REGIME: the published intraday-momentum coefficient is insignificant in the
+# low-volatility tercile (R^2 0.6% vs 3.3% in the high tercile), so "does this only work in
+# high-vol regimes" is a first-class question rather than a filter to bolt on afterwards.
+# Ranked on the PRIOR session only -- see the lookahead note in sweep.iter_prepared.
+VOL_REGIME = ["off", "high", "low"]
 
 # Minutes from midnight, exchange-local. 570 = 09:30, 955 = 15:55.
 # NOTE the interaction, stated so it is not discovered later as a surprise: `run_cell` scans
@@ -84,6 +97,7 @@ def _axes() -> dict[str, Iterable]:
         "adx_min": ADX_MIN, "dmi_tf": DMI_TF, "macd_gate": MACD_GATE,
         "window": WINDOWS, "direction": DIRECTION, "ema9_min": EMA9_MIN,
         "max_per_day": MAX_PER_DAY, "gate_ref": GATE_REF,
+        "sig_norm": SIG_NORM, "vol_regime": VOL_REGIME,
     }
 
 
@@ -98,15 +112,15 @@ def build_grid() -> list[Cell]:
     make the reported "N models tested" a lie, and that number is quoted in the write-up.
     """
     seen, out = set(), []
-    for tr, sg, te, ax, dt_, mg, (ws, we), di, e9, mx, gr in itertools.product(
+    for tr, sg, te, ax, dt_, mg, (ws, we), di, e9, mx, gr, sn, vr in itertools.product(
             TRAIL_MIN, SIGMA_MULT, TIME_EXIT, ADX_MIN, DMI_TF, MACD_GATE,
-            WINDOWS, DIRECTION, EMA9_MIN, MAX_PER_DAY, GATE_REF):
+            WINDOWS, DIRECTION, EMA9_MIN, MAX_PER_DAY, GATE_REF, SIG_NORM, VOL_REGIME):
         gates_on = mg or dt_ != "off" or e9 == e9
         if gr == "momentum" and (di == "chase" or not gates_on):
             continue                       # bit-identical to the gate_ref="trade" cell
         c = Cell(trail_min=tr, sigma_mult=sg, time_exit=te, adx_min=ax, dmi_tf=dt_,
                  macd_gate=mg, win_start=ws, win_end=we, direction=di, ema9_min=e9,
-                 max_per_day=mx, gate_ref=gr)
+                 max_per_day=mx, gate_ref=gr, sig_norm=sn, vol_regime=vr)
         # NaN != NaN, so Cell is not hashable-by-value for the ema9 axis; key on the repr.
         k = repr(c)
         if k in seen:

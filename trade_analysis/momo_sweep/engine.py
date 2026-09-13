@@ -77,6 +77,8 @@ class Cell(NamedTuple):
     ema9_min: float             # NaN disables; else required px-vs-EMA9 distance in ATRs
     max_per_day: int            # 0 = unlimited (cooldown still applies)
     gate_ref: str               # "trade" | "momentum" -- which sign the gates confirm
+    sig_norm: str               # "session" | "tod" -- what the threshold is measured in
+    vol_regime: str             # "off" | "high" | "low" -- prior-day volatility tercile
 
 
 class Prep(NamedTuple):
@@ -90,9 +92,12 @@ class Prep(NamedTuple):
     p5: Panel
     n1: int                     # offset of this session inside the prefixed 1-min panel
     n5: int
+    tod_sig: dict               # {trail_min: array} 14-session mean |L-min return| per bar
+    vol_rank: float             # prior-day volatility's rank in the trailing window, [0,1]
 
 
-def prepare(sess: list, prior: list) -> Prep:
+def prepare(sess: list, prior: list, tod_sig: dict | None = None,
+            vol_rank: float = float("nan")) -> Prep:
     """Build both panels and the parameter-free running sigma, once.
 
     `sigma1[k]` is the standard deviation of every 1-minute return from the session open
@@ -120,20 +125,43 @@ def prepare(sess: list, prior: list) -> Prep:
         rets = np.diff(close) / close[:-1]
         for k in range(3, n):
             sigma1[k] = np.std(rets[:k], ddof=1)
-    return Prep(n, tod, open_, close, sigma1, p1, p5, len(pre1), len(pre5))
+    return Prep(n, tod, open_, close, sigma1, p1, p5, len(pre1), len(pre5),
+                tod_sig or {}, vol_rank)
 
 
-def run_cell(pp: Prep, c: Cell) -> tuple[float, int]:
-    """Gross P&L and trade count for one cell on one session.
+def run_cell(pp: Prep, c: Cell) -> tuple[float, int, float]:
+    """Gross P&L, trade count, and TOTAL SHARES TRADED for one cell on one session.
 
     Mirrors `momo_v2.scan` exactly for the V0 parameters; every difference is a swept axis.
+
+    Shares are accumulated because the cost charge is per SHARE, not per dollar of notional.
+    QQQ and SPY are penny-wide, so a round trip costs about $0.01 x shares regardless of
+    price -- which means the same $10,000 position costs $1.00 to turn over when QQQ is $100
+    and $0.14 when it is $700. Over 2016-2026 QQQ spans roughly that whole range, so
+    charging a flat basis-point rate would understate cost in the early sample and overstate
+    it in the late one, in a way that correlates with time and therefore with regime.
+    Returning the exact share count lets the cost be applied afterwards without re-running
+    the grid, and lets a BREAKEVEN spread be solved for per cell.
     """
     hi = pp.n_bars - c.time_exit - 2
     if hi <= 30:
-        return 0.0, 0
+        return 0.0, 0, 0.0
+    # WHOLE-SESSION GATE, evaluated once. `vol_rank` is where the PRIOR session's range sits
+    # in the trailing window -- prior only, never including today, because a regime gate
+    # computed from today's range would be the exact lookahead that voided this project's
+    # first decade test. A session with no history yet is skipped rather than admitted.
+    if c.vol_regime != "off":
+        r = pp.vol_rank
+        if r != r:                                       # NaN: not enough prior sessions
+            return 0.0, 0, 0.0
+        if c.vol_regime == "high" and r < 2.0 / 3.0:
+            return 0.0, 0, 0.0
+        if c.vol_regime == "low" and r >= 1.0 / 3.0:
+            return 0.0, 0, 0.0
+
     sq = math.sqrt(c.trail_min)
     lag = c.trail_min + 1                 # momo_v2's `c1[-16]` for a 15-minute lookback
-    pnl, n, last, today = 0.0, 0, -10 ** 9, 0
+    pnl, n, last, today, sh_tot = 0.0, 0, -10 ** 9, 0, 0.0
 
     for k in range(30, hi):
         if c.max_per_day and today >= c.max_per_day:
@@ -155,11 +183,25 @@ def run_cell(pp: Prep, c: Cell) -> tuple[float, int]:
         if pp.p5.dip[J5] is None or pp.p1.dip[K] is None:
             continue
 
-        s1 = pp.sigma1[k]
-        if s1 <= 0:
-            continue
         px = pp.close[k]
-        z = (px / pp.close[k - c.trail_min] - 1.0) / (s1 * sq)
+        raw = px / pp.close[k - c.trail_min] - 1.0
+        if c.sig_norm == "tod":
+            # TIME-OF-DAY CONDITIONAL. The 14-session trailing mean of |L-minute return
+            # ending at THIS minute|, so 10:35 is judged against past 10:35s rather than
+            # against the whole session. Intraday volatility has a pronounced U-shape, so a
+            # session-wide sigma makes a fixed threshold far easier to clear near the open
+            # than at midday -- the threshold silently becomes a time-of-day filter. This is
+            # Zarattini's boundary construction generalised from the from-open move to the
+            # trailing L-minute move the momo family actually uses.
+            ts = pp.tod_sig.get(c.trail_min)
+            if ts is None or ts[k] <= 0:
+                continue
+            z = raw / ts[k]
+        else:
+            s1 = pp.sigma1[k]
+            if s1 <= 0:
+                continue
+            z = raw / (s1 * sq)
         if abs(z) < c.sigma_mult:
             continue
 
@@ -199,10 +241,12 @@ def run_cell(pp: Prep, c: Cell) -> tuple[float, int]:
         if entry <= 0:
             continue
         ex = pp.open_[min(k + 1 + c.time_exit, pp.n_bars - 1)]
-        pnl += (NOTIONAL / entry) * (ex - entry) * d
+        sh = NOTIONAL / entry
+        pnl += sh * (ex - entry) * d
+        sh_tot += sh
         n += 1
         today += 1
-    return pnl, n
+    return pnl, n, sh_tot
 
 
 def v0_cell() -> Cell:
@@ -218,7 +262,7 @@ def v0_cell() -> Cell:
                 dmi_tf="5m", macd_gate=True,
                 win_start=10 * 60 + 30, win_end=14 * 60 + 30,
                 direction="chase", ema9_min=float("nan"), max_per_day=0,
-                gate_ref="trade")
+                gate_ref="trade", sig_norm="session", vol_regime="off")
 
 
 def _ts_ok(sess) -> bool:

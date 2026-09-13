@@ -117,10 +117,41 @@ def t_effective_trials() -> bool:
     return ok
 
 
+def t_statistic_scale() -> bool:
+    """t_obs must BE a t-statistic, not merely be monotone in one.
+
+    This check exists because every other test here is scale-invariant and all of them
+    passed while `t_obs` was inflated by sqrt(n) -- a factor of 39 on this sample. The
+    p-value is unaffected (observed and null scale together), so nothing that compares
+    p-values can see it. What IS affected is Hansen's recentring threshold, which is a fixed
+    -sqrt(2 log log n) ~ -1.9: against an inflated t every cell clears it, `consistent`
+    degenerates into `upper`, and the protection against a grid full of poor models
+    quietly stops existing.
+
+    On i.i.d. data with a known mean and SD, `mean / (sd/sqrt(n))` is the answer, and
+    `t_obs` must match it to within bootstrap noise.
+    """
+    rng = np.random.default_rng(77)
+    n = 1500
+    x = rng.standard_normal((n, 1)) * 2.0 + 0.15
+    idx = boot_indices(n, 800, 1.0)              # block 1 == i.i.d. resampling
+    r = spa_shard_max(x, idx, [f"d{i}" for i in range(n)])
+    analytic = float(x.mean() / (x.std(ddof=1) / np.sqrt(n)))
+    got = r["t_obs_max"]
+    ok = abs(got - analytic) / abs(analytic) < 0.10
+    print(f"  5. t_obs is on the t scale ...................... "
+          f"{'PASS' if ok else 'FAIL'}  got {got:.2f}, analytic {analytic:.2f}")
+    if not ok:
+        r_ = got / analytic
+        print(f"     ratio {r_:.1f}; sqrt(n) is {np.sqrt(n):.1f} -- if those match, the")
+        print("     statistic has an extra sqrt(n) in it.")
+    return ok
+
+
 def main() -> int:
     print("\n  stats.py checks\n")
     res = [t_shard_reduction(), t_studentization_power(),
-           t_block_structure(), t_effective_trials()]
+           t_block_structure(), t_effective_trials(), t_statistic_scale()]
     print()
     if all(res):
         print("  ALL PASS\n")

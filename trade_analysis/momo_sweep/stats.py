@@ -100,19 +100,32 @@ def boot_indices(n: int, reps: int, block: float, seed: int = 20260913) -> np.nd
 
 def studentize(D: np.ndarray, idx: np.ndarray
                ) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
-    """Per-cell mean and bootstrap standard error of the mean.
+    """Per-cell mean and the bootstrap STANDARD ERROR OF THE MEAN.
 
-    `omega_k` is the standard deviation of the BOOTSTRAPPED means, which is the quantity
-    Hansen studentizes by. Estimating it from the same resamples used for the null keeps the
-    block-dependence structure consistent between the two.
+    Note what `se` is and is not. Hansen writes the statistic as `sqrt(n) * d_bar / omega`
+    where `omega` is the standard deviation at the OBSERVATION level. What is returned here
+    is the standard deviation of the bootstrapped MEANS, which is `omega / sqrt(n)` -- an
+    SE, not an omega. So the statistic is `d_bar / se`, with no further `sqrt(n)`.
+
+    Writing `sqrt(n) * mean / se` instead inflates every t by `sqrt(n)` -- a factor of ~39
+    on 1,499 sessions. It leaves the p-value untouched, because the observed statistic and
+    the bootstrap null are scaled identically, which is exactly why the error survives a
+    p-value-based test. It does NOT leave Hansen's recentring threshold untouched:
+    `-sqrt(2 log log n)` is about -1.9, so an inflated t clears it for essentially every
+    cell, `consistent` silently becomes `upper`, and the one recentring that is supposed to
+    protect against a grid full of poor models stops doing anything. Found by noticing a
+    reported t of 96.
+
+    Estimating `se` from the same resamples used to build the null keeps the block
+    dependence consistent between the two.
     """
     mean = D.mean(axis=0)
     bm = np.empty((idx.shape[0], D.shape[1]), dtype=np.float64)
     for b in range(idx.shape[0]):
         bm[b] = D[idx[b]].mean(axis=0)
-    omega = bm.std(axis=0, ddof=1)
-    omega[omega <= 0] = np.inf          # a cell that never trades cannot be the max
-    return mean, omega, bm
+    se = bm.std(axis=0, ddof=1)
+    se[se <= 0] = np.inf                # a cell that never trades cannot be the max
+    return mean, se, bm
 
 
 def spa_shard_max(D: np.ndarray, idx: np.ndarray, sessions: list[str]) -> dict:
@@ -123,9 +136,8 @@ def spa_shard_max(D: np.ndarray, idx: np.ndarray, sessions: list[str]) -> dict:
     is sensitive to how borderline cells are treated.
     """
     n, k = D.shape
-    mean, omega, bm = studentize(D, idx)
-    sq = np.sqrt(n)
-    t_obs = sq * mean / omega
+    mean, se, bm = studentize(D, idx)
+    t_obs = mean / se                    # `se` is already omega/sqrt(n) -- see studentize()
 
     # Hansen's threshold for which cells are "poor enough" to be recentred to zero:
     #     keep mu_k = mean_k   iff   mean_k >= -sqrt(omega_k^2 * 2 log log n / n)
@@ -147,7 +159,7 @@ def spa_shard_max(D: np.ndarray, idx: np.ndarray, sessions: list[str]) -> dict:
         "session_hash": hashlib.sha256("|".join(sessions).encode()).hexdigest()[:16],
     }
     for name, m in mu.items():
-        stat = sq * (bm - m[None, :]) / omega[None, :]
+        stat = (bm - m[None, :]) / se[None, :]
         out[f"boot_max_{name}"] = np.max(stat, axis=1).astype(np.float64)
     return out
 
