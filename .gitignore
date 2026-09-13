@@ -132,3 +132,12 @@ vrp_frame.tar.gz
 # tree still works.
 /*.out
 /*.err
+
+# Derived frames. Built by build_vrp_dataset / the cost model; never committed (git log on
+# data/ is empty) and already a DENY root in scripts/tidy.py because they are expensive to
+# rebuild. Ignored so they stop showing as ?? in every status.
+/data/
+
+# Unrelated project that happens to live in this tree (218 MB, its own README/src/
+# requirements.txt). Not part of trade_analysis and must never enter this history.
+/pokemon/
