@@ -212,8 +212,17 @@ def check_options(feed, symbol, day, now) -> list[str]:
             out.append(f"{OK} {symbol} ATM K={atm['strike']} bid={atm['bid']:.2f} "
                        f"ask={atm['ask']:.2f} spread={100*(atm['ask']-atm['bid'])/atm['mid']:.1f}% "
                        f"of mid | dist {arms['strike_distance_pct']:.3f}% from spot")
-            wings = [k for k in ("ATM-1", "ATM+1") if arms.get(k)]
-            out.append(f"{OK} {symbol} wings available: {wings or 'NONE'}")
+            # "wings" was the wrong word and it actively misled a reader of this log into
+            # thinking the lab trades multi-leg structures. In options usage wings are the
+            # outer legs of a butterfly or condor. These are not legs at all: every signal
+            # buys exactly ONE naked contract (call if long, put if short -- runner.py
+            # passes a single `right` into select_arms), and ATM-1 / ATM+1 are the adjacent
+            # STRIKES of that same contract, run as separate parallel positions so the
+            # strike choice can be measured. The dict keys stay "ATM-1"/"ATM+1" because
+            # they are written into every trade record; only the wording changes.
+            adj = [k for k in ("ATM-1", "ATM+1") if arms.get(k)]
+            out.append(f"{OK} {symbol} adjacent strikes available: {adj or 'NONE'} "
+                       f"(same single leg -- extra strikes, NOT extra legs)")
         except opt.UnusableQuote as exc:
             out.append(f"{WARN} {symbol}: ATM not tradeable right now ({exc})")
     return out
