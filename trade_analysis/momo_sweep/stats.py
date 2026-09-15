@@ -46,6 +46,8 @@ to check.
 from __future__ import annotations
 
 import hashlib
+import math
+from statistics import NormalDist
 
 import numpy as np
 
@@ -167,6 +169,61 @@ def spa_shard_max(D: np.ndarray, idx: np.ndarray, sessions: list[str]) -> dict:
 def spa_pvalue(t_obs_max: float, boot_max: np.ndarray) -> float:
     """P(max under the null > observed). Reduced across shards before being called."""
     return float(np.mean(boot_max > t_obs_max))
+
+
+def minbtl_sharpe_floor(n_eff: float, years: float) -> float:
+    """The in-sample Sharpe a winner must clear GIVEN how large the search was.
+
+    Bailey, Borwein, Lopez de Prado & Zhu (Notices of the AMS 61(5), 2014), Theorem 2:
+
+        MinBTL  <  2 * ln(N) / E[max_N]^2      years
+
+    Their worked case: five years of data supports no more than ~45 independent
+    configurations before an in-sample Sharpe of 1.0 is EXPECTED from noise alone with zero
+    true edge. Inverted, it gives the number this sweep actually needs --
+
+        SR_min(N) = sqrt( 2 * ln(N) / years )
+
+    -- because the pre-registration fixes the search size in advance, so the floor is
+    known before any result is seen and cannot be tuned to admit a favourite cell.
+
+    WHY THIS IS A SECOND GATE AND NOT A REPLACEMENT FOR SPA. MinBTL assumes INDEPENDENT
+    trials. This grid is nothing like independent -- `trail_min=15` and `trail_min=20` trade
+    almost the same minutes -- and the SPA bootstrap prices that dependence exactly, which
+    MinBTL cannot. So MinBTL must be fed the MEASURED effective count from
+    `effective_trials()`, never the nominal cell count.
+
+    But it catches something SPA does not. SPA answers "could the best cell's t-statistic
+    have arisen under the null". It does not ask whether the winner's Sharpe is large enough
+    to be worth having after a search that size -- so a cell could clear SPA at p<0.05 while
+    posting a Sharpe its own search size renders meaningless. Both gates, or neither.
+
+    THE ASYMPTOTIC FORM IS WRONG AT THESE SAMPLE SIZES. `sqrt(2*ln(N)/years)` is the
+    large-N limit and it overstates the expected maximum badly when N is small. Checked
+    against Bailey et al.'s own worked example -- 45 configurations, 5 years, which they
+    state yields an in-sample Sharpe of 1.0 -- the asymptotic gives **1.234**, a 23% error
+    in the conservative direction. Their actual expression is the Gumbel approximation to
+    the expected maximum of N standard normals:
+
+        E[max_N] ~ (1 - g) * Phi^-1(1 - 1/N)  +  g * Phi^-1(1 - 1/(N*e)),   g = Euler-Mascheroni
+
+    and SR_min = E[max_N] / sqrt(years). That reproduces 1.000 for their example exactly.
+    Using the asymptotic would have demanded a Sharpe ~20% higher than the literature does,
+    which is the kind of self-inflicted conservatism that reads as rigour and is just an
+    error with a flattering sign.
+
+    `statistics.NormalDist` is stdlib, so this needs no scipy -- which matters because
+    scipy is absent from at least one interpreter this repo runs on.
+    """
+    if n_eff < 1.0 or years <= 0:
+        return float("nan")
+    if n_eff < 1.0 + 1e-12:
+        return 0.0
+    nd = NormalDist()
+    g = 0.5772156649015329                       # Euler-Mascheroni
+    e_max = ((1.0 - g) * nd.inv_cdf(1.0 - 1.0 / n_eff)
+             + g * nd.inv_cdf(1.0 - 1.0 / (n_eff * math.e)))
+    return float(e_max / math.sqrt(years))
 
 
 def effective_trials(D: np.ndarray) -> float:

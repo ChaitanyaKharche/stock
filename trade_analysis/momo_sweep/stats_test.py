@@ -148,10 +148,37 @@ def t_statistic_scale() -> bool:
     return ok
 
 
+def t_minbtl_calibration() -> bool:
+    """The Sharpe floor must reproduce Bailey et al.'s own published worked example.
+
+    They state that five years of data supports no more than forty-five independent
+    configurations before an in-sample Sharpe of 1.0 arises from noise alone. That is a
+    published number this function must hit, and it is the only external check available
+    on it. The `sqrt(2*ln(N)/years)` asymptotic returns 1.234 here -- a 23% overstatement
+    -- which is why the Gumbel form is used instead.
+    """
+    from .stats import minbtl_sharpe_floor
+    got = minbtl_sharpe_floor(45, 5.0)
+    ok = abs(got - 1.0) < 0.01
+    print(f"  6. MinBTL floor calibration ..................... "
+          f"{'PASS' if ok else 'FAIL'}  got {got:.4f}, Bailey et al. state 1.00")
+    if not ok:
+        asym = float(np.sqrt(2.0 * np.log(45) / 5.0))
+        print(f"     asymptotic sqrt(2 ln N / y) would give {asym:.3f} -- if that is what")
+        print("     came back, the Gumbel expression has been reverted.")
+    # monotone in N and decreasing in sample length, both required for it to be a floor
+    mono = (minbtl_sharpe_floor(1000, 6) > minbtl_sharpe_floor(50, 6)
+            and minbtl_sharpe_floor(1000, 12) < minbtl_sharpe_floor(1000, 6))
+    if not mono:
+        print("     FAIL: floor is not increasing in N and decreasing in sample years")
+    return ok and mono
+
+
 def main() -> int:
     print("\n  stats.py checks\n")
     res = [t_shard_reduction(), t_studentization_power(),
-           t_block_structure(), t_effective_trials(), t_statistic_scale()]
+           t_block_structure(), t_effective_trials(), t_statistic_scale(),
+           t_minbtl_calibration()]
     print()
     if all(res):
         print("  ALL PASS\n")

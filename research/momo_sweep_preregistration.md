@@ -154,6 +154,49 @@ Loss differentials are the per-session net P&L series; the benchmark is **not tr
   strategies"), and DSR is a sensitivity surface in the variance of trial Sharpes rather
   than a number.
 
+## 4b. The SECOND gate: a MinBTL-derived Sharpe floor
+
+**Added 2026-09-14, before the sweep has been run.** SPA asks whether the best cell's
+statistic could have arisen under the null. It does **not** ask whether the winner's Sharpe
+is large enough to be worth having *after a search that size*. Those are different
+questions and a cell can pass the first while failing the second.
+
+Bailey/Borwein/López de Prado/Zhu, Theorem 2: `MinBTL < 2·ln(N) / E[max_N]²` years.
+Inverted for the quantity actually needed, `SR_min(N) = E[max_N] / sqrt(years)`, using the
+**Gumbel** expression for the expected maximum of N standard normals — *not* the
+`sqrt(2·ln N)` asymptotic, which overstates the floor by 23% at these sample sizes.
+Calibration: the corrected form reproduces Bailey et al.'s own worked example (45
+configurations, 5 years → Sharpe 1.0) at **0.9998**; the asymptotic gives 1.234. Asserted
+by `stats_test.py`.
+
+On this discovery window (1,499 sessions = **5.95 years**):
+
+| effective trials | minimum in-sample Sharpe |
+|---|---|
+| 10 | 0.65 |
+| 50 | 0.93 |
+| 200 | 1.13 |
+| 1,000 | 1.33 |
+| 10,000 | 1.58 |
+| 2,822,400 (nominal) | 2.08 |
+
+**The floor is computed from `effective_trials()`, never from the nominal cell count.**
+MinBTL assumes independent trials; this grid is ~0.99 correlated between neighbours, and the
+SPA bootstrap prices that dependence exactly while MinBTL cannot. Feeding it 2.8M would be
+absurdly conservative; feeding it the measured participation ratio is the honest reading.
+
+**Committed rule: the winning cell must clear BOTH the SPA p-value AND
+`minbtl_sharpe_floor(n_eff, 5.95)`. Either alone is insufficient.** Both are fixed in
+advance — the floor depends only on the search size and the sample length, neither of which
+is a function of which cell wins.
+
+For calibration: this window supports only **~20 independent configurations** at a target
+in-sample Sharpe of 1.0. Harvey/Liu/Zhu's corresponding t-ratio hurdles for this literature
+are **3.39–3.78** (BHY 1%, Bonferroni), rising to **3.68** under their correlation
+adjustment — not 1.96. The live lab's separate Holm-over-13 bar implies roughly t ≈ 2.7–3.0,
+which is in the right region; the sweep is not governed by a fixed t at all, which is
+precisely why SPA replaced Holm there.
+
 ## 5. Power and feasibility, stated before running
 
 The minimum-backtest-length literature implies ~6 years supports roughly **45–50
