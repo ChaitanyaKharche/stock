@@ -89,9 +89,18 @@ def load_shards(results: Path, expect: int | None) -> tuple[list[dict], dict]:
 
     # ---- completeness ------------------------------------------------------------------
     # "Ran 500 of 800 shards and reported a p-value over the part that ran" is the specific
-    # accident the sbatch header calls out. Missing shards drop CELLS, and a maximum over a
-    # subset of cells is biased DOWN -- so an incomplete reduction understates the best
-    # cell and makes a null look better-supported than it is.
+    # accident the sbatch header calls out.
+    #
+    # BE PRECISE ABOUT WHY, because an earlier version of this comment said the p-value is
+    # "biased DOWN, making a null look better supported", and that is not right. Hansen's
+    # statistic and its bootstrap null are BOTH maxima over the same set of cells, so
+    # dropping cells shrinks both and the result stays a VALID SPA test -- of a SMALLER
+    # FAMILY. The defect is scope, not bias: a p-value over 300 of 500 shards supports
+    # "no cell among the 1.7M we ran beats not trading", never the sec.8 sentence about all
+    # 2,822,400. Worse, the direction is not even fixed -- if the best cell survives the
+    # truncation, its observed max is unchanged while the bootstrap max falls, so the test
+    # OVER-rejects relative to the full grid; if the best cell was in a dropped shard, the
+    # test loses power instead. Neither is a conclusion about the grid.
     ids = sorted(int(p.name[6:11]) for p in paths)
     if expect is None:
         expect = ids[-1] + 1
@@ -186,12 +195,13 @@ def main(argv=None) -> int:
         print(f"\n    *** {len(m)} SHARDS MISSING: "
               f"{m[:10]}{' ...' if len(m) > 10 else ''}")
         if not a.allow_missing:
-            print("    Refusing to reduce. Missing shards drop CELLS, and a maximum over")
-            print("    a subset is biased DOWN -- an incomplete reduction makes a null look")
-            print("    better supported than it is. Re-run them, or pass --allow-missing")
-            print("    and read the verdict as provisional.")
+            print("    Refusing to reduce. This would be a valid SPA test of a SMALLER")
+            print("    FAMILY, not a weaker test of the whole grid -- so its p-value cannot")
+            print("    support the sec.8 sentence about all 2,822,400 cells. Re-run the")
+            print("    missing shards, or pass --allow-missing for a provisional read.")
             return 2
-        print("    --allow-missing given: verdict below is over a SUBSET and biased DOWN.")
+        print("    --allow-missing given: the verdict below covers ONLY the cells in the")
+        print("    shards present. Quote it as such; it is not a statement about the grid.")
 
     cell_idx = np.concatenate([s["cell_index"] for s in shards])
     net_mean = np.concatenate([s["net_mean"] for s in shards])
