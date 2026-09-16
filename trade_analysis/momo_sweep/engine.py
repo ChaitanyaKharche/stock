@@ -129,7 +129,8 @@ def prepare(sess: list, prior: list, tod_sig: dict | None = None,
                 tod_sig or {}, vol_rank)
 
 
-def run_cell(pp: Prep, c: Cell) -> tuple[float, int, float]:
+def run_cell(pp: Prep, c: Cell, flip: np.ndarray | None = None,
+             force_dir: np.ndarray | None = None) -> tuple[float, int, float]:
     """Gross P&L, trade count, and TOTAL SHARES TRADED for one cell on one session.
 
     Mirrors `momo_v2.scan` exactly for the V0 parameters; every difference is a swept axis.
@@ -242,7 +243,23 @@ def run_cell(pp: Prep, c: Cell) -> tuple[float, int, float]:
             continue
         ex = pp.open_[min(k + 1 + c.time_exit, pp.n_bars - 1)]
         sh = NOTIONAL / entry
-        pnl += sh * (ex - entry) * d
+        # `flip` is the DIRECTION PLACEBO (pre-condition 4) and is None for every real run.
+        # It is applied HERE, after every gate, so the placebo takes exactly the same trades
+        # at exactly the same times and only the sign traded is randomised. Flipping `d`
+        # earlier would change which bars pass `gate_ref`, making it a different strategy
+        # rather than a placebo -- and a placebo that trades different bars cannot isolate
+        # whether the entry/exit mechanics manufacture P&L on their own.
+        dd = d if flip is None else d * float(flip[k])
+        # `force_dir` OVERRIDES the direction outright and exists only for the audit's
+        # power check: fed the sign of this trade's own outcome it makes the cell a perfect
+        # oracle, which is the only construction that gives an UNAMBIGUOUS reading of
+        # whether the lookahead audit can see a lookahead at all.
+        # It has to override rather than multiply (which is what `flip` does) because a
+        # multiplier cannot express "trade the winning side" without already knowing `d`,
+        # and `d` is not visible outside this loop. Both hooks are None on every real run.
+        if force_dir is not None:
+            dd = float(force_dir[k])
+        pnl += sh * (ex - entry) * dd
         sh_tot += sh
         n += 1
         today += 1

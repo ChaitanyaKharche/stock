@@ -16,10 +16,18 @@
 #
 # research/momo_sweep_preregistration.md -- exhaustive standalone backtest of MOMO_CHASE.
 #
+# ALL FOUR §6 PRE-CONDITIONS MUST PASS BEFORE THIS IS SUBMITTED. In order:
 #   python -m trade_analysis.momo_sweep.pack --out $HOME/momo/data     # once
-#   python -m trade_analysis.momo_sweep.sweep --validate               # MUST PASS FIRST
+#   python -m trade_analysis.momo_sweep.sweep --validate               # cond. 1: V0 n=8,598
+#   python -m trade_analysis.momo_sweep.stats_test                     # cond. 2: statistics
+#   python -m trade_analysis.momo_sweep.audit                          # cond. 3 + 4
 #   sbatch trade_analysis/momo_sweep/submit_sweep.sbatch
-#   python -m trade_analysis.momo_sweep.collect --results $HOME/momo/results
+#   python -m trade_analysis.momo_sweep.collect --results $HOME/momo/results --expect 500
+#
+# `audit` is the lookahead test (peeking must help MATERIALLY, or the honest path is already
+# peeking) and the direction placebo (a coin flip must make nothing, or the fill/exit
+# convention is manufacturing P&L). Both had no implementation until 2026-09-15, which is
+# the real reason this job sat built-but-unsubmitted rather than any cluster problem.
 #
 # PARTITION: `short` is CPU and allows 50 concurrent jobs at up to 48h; `gpu` caps a user at
 # 4 running jobs and 8h. There is no GPU work here at all -- it is a Python loop over bars.
@@ -79,15 +87,43 @@ if [[ "$N_CELLS" -lt "$N_TASKS" ]]; then
 fi
 
 # ---- environment ------------------------------------------------------------------------
-if [[ -f "$REPO/uv.lock" ]] && command -v uv >/dev/null 2>&1; then
-  export UV_PROJECT_ENVIRONMENT="$ROOT/.venv"
-  uv sync --locked --offline
-  PY_BIN="$ROOT/.venv/bin/python"
+# THIS BLOCK USED TO ACTIVATE A CONDA ENV NAMED `vrp` THAT DOES NOT EXIST ON DISCOVERY.
+# There is no uv.lock or pyproject.toml in this repo, so the uv branch was never taken and
+# every one of the 500 tasks would have reached `conda activate vrp` and died. Recorded
+# rather than quietly fixed because "the fallback path was never exercised" is the general
+# shape of the bug, not a typo in an env name.
+#
+# The requirement is genuinely tiny and that is what makes this robust: the sweep imports
+# NUMPY and nothing else. `trade_analysis/__init__.py` declares `__all__` and a version with
+# no imports, so the `config.py`-raises-on-import chain is never touched, and Hansen's SPA
+# is implemented in `stats.py` rather than taken from `arch`. Any Python 3.10+ with numpy
+# runs this. So: take an explicit override, else try the envs that ACTUALLY exist on the
+# box, else whatever python is on PATH -- then PROVE it by importing.
+set +u
+if [[ -n "${MOMO_PY:-}" ]]; then
+  PY_BIN="$MOMO_PY"
 else
-  echo "NOTE: no uv.lock -- falling back to conda, which is NOT a pinned environment."
-  module load anaconda3/2024.06 2>/dev/null || true
-  source activate vrp 2>/dev/null || conda activate vrp
-  PY_BIN="$(command -v python)"
+  module load anaconda3/2024.06 2>/dev/null || module load miniconda3 2>/dev/null || true
+  for env in trade-venv trade-env; do
+    if conda activate "$env" 2>/dev/null || source activate "$env" 2>/dev/null; then
+      echo "conda env  $env"
+      break
+    fi
+  done
+  PY_BIN="$(command -v python3 || command -v python)"
+fi
+set -u
+
+# Prove the interpreter can actually run the payload, BEFORE srun. A task that fails inside
+# srun on an ImportError is indistinguishable in `sacct` from one that failed on the data,
+# and at 500 tasks that ambiguity costs a whole debugging cycle.
+if ! "$PY_BIN" -c "import numpy, trade_analysis.momo_sweep.engine" 2>/dev/null; then
+  echo "FATAL: $PY_BIN cannot import numpy + trade_analysis.momo_sweep.engine" >&2
+  echo "  The sweep needs ONLY numpy. Fix with either:" >&2
+  echo "    MOMO_PY=/path/to/python sbatch ... (an interpreter that already has numpy)" >&2
+  echo "    conda create -n momo python=3.11 numpy   # then MOMO_PY=\$(conda run -n momo which python)" >&2
+  echo "  and confirm \$REPO ($REPO) is the repo root, since the import is package-relative." >&2
+  exit 4
 fi
 
 # This job is a Python bar loop, not BLAS. Extra threads buy nothing and oversubscribe the

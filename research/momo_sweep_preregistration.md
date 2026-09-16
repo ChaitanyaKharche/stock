@@ -223,6 +223,14 @@ finding anything, and that is stated here so a null cannot later be framed as a 
    **materially BETTER**. If peeking does not help, the honest path already contains future
    information and every number is void. This project's worst bug was a five-minute
    lookahead that produced an entire measured edge.
+   **STATUS 2026-09-15: implemented in `trade_analysis/momo_sweep/audit.py` and this
+   condition DOES NOT PASS AS WRITTEN.** The anchor cell improves by +2.91 under a one-bar
+   peek (a sign flip) and a perfect oracle is detected on 100% of trading cells, so the
+   engine is not peeking -- but only 48% of sampled cells improve, because most cells in an
+   exhaustive grid are too thin to measure a one-bar effect. The evidence, the two errors
+   made while establishing it, and the three options are in
+   `research/momo_sweep_precondition3.md`. **No amendment has been made and the sweep has
+   not been submitted.**
 4. **Direction placebo.** Randomising trade direction must produce ≈0 net edge across the
    grid, confirming the machinery is not manufacturing P&L from the entry/exit mechanics.
 
