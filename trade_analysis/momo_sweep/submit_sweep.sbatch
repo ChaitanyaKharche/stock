@@ -144,6 +144,10 @@ if [[ "$N_CELLS" -lt "$N_TASKS" ]]; then
   exit 3
 fi
 
+# Belt and braces against submission from inside another job: even with `srun` gone, a
+# leaked CPU-bind request should not be able to reach anything that launches a process.
+unset SLURM_CPU_BIND SLURM_CPU_BIND_LIST SLURM_CPU_BIND_TYPE SLURM_CPU_BIND_VERBOSE 2>/dev/null || true
+
 # This job is a Python bar loop, not BLAS. Extra threads buy nothing and oversubscribe the
 # 2 allocated CPUs when 50 tasks share a node.
 export OMP_NUM_THREADS=1
@@ -157,14 +161,31 @@ echo "numpy       $("$PY_BIN" -c 'import numpy;print(numpy.__version__)')"
 echo "git         $(git rev-parse --short HEAD)$(git diff --quiet || echo ' (DIRTY)')"
 echo "task        ${SLURM_ARRAY_TASK_ID:-0} of $N_TASKS"
 
-# ---- srun the payload, with NOTHING after it --------------------------------------------
-# Slurm records the exit status of the BATCH SCRIPT. A trailing `echo` turns a Python
-# traceback into COMPLETED, which is the single most common way a failed sweep cell reads as
-# a finished one.
+# ---- exec the payload, with NOTHING after it --------------------------------------------
+# NO `srun`, AND THAT IS A FIX, NOT A SIMPLIFICATION. Array job 10373735 failed 15 tasks in
+# a row on:
+#     srun: error: CPU binding outside of job step allocation,
+#           allocated CPUs are: 0x2000400
+#     srun: error: Unable to satisfy cpu bind request
+# The job had been submitted from inside an `srun --pty bash` session, and that session's
+# SLURM_CPU_BIND / SLURM_CPU_BIND_LIST / SLURM_CPU_BIND_TYPE were inherited by the batch
+# script. `srun` read them and tried to bind each task to a CPU mask belonging to the PARENT
+# job on a DIFFERENT node. Resubmitting from a login node avoids it, but relying on that is
+# relying on nobody ever submitting from a compute node again.
+#
+# `srun` buys nothing here. This is `--ntasks=1`: one Python process, no MPI, no multi-node
+# step. Dropping it removes the entire step-launch failure class, and `sacct` still records
+# the batch step's State, Elapsed, MaxRSS and ExitCode.
+#
+# `exec` replaces the shell, so the interpreter's exit status IS the batch script's and
+# nothing can run after it by construction. Slurm records the script's status, and a
+# trailing command is the single most common way a Python traceback reads as COMPLETED --
+# with `exec` that is not a discipline to remember, it is impossible.
+#
 # --start/--end are the pre-registration's DISCOVERY window and are passed EXPLICITLY rather
 # than left to the defaults, so that reading this file tells you what the run covered.
 # QQQ only: SPY's history begins 2022-01-03 and is entirely inside the held-out set.
-srun "$PY_BIN" -m trade_analysis.momo_sweep.sweep \
+exec "$PY_BIN" -m trade_analysis.momo_sweep.sweep \
   --data "$DATA" \
   --symbols QQQ \
   --start 2016-01-01 \
