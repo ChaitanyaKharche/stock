@@ -57,6 +57,43 @@ Lost or degraded, and this is what the record needs:
   target or time exit that should have fired in that window did not.
 - The 15-minute bar gap, visible as the 11:06 `stale_bar` burst.
 
+## Measured contamination of the 2026-09-15 shares result
+
+The session closed at **139 trades, net +$395.71**. Ten of those trades have their exit
+stamped at the 11:06:43 recovery instant -- they came due during the gap and fired on
+resume, at the recovery mark rather than at the price when the rule was actually met:
+
+| setup | symbol | exit | net |
+|---|---|---|---|
+| ORB_15min | XLY | **target** | +54.54 |
+| TTM_Squeeze | XLF | **bars** | +33.45 |
+| ORB_5min | SPY | **target** | +19.38 |
+| MOMO_CHASE | XLY | time | +14.36 |
+| MOMO_CHASE | XLF | time | +8.82 |
+| MOMO_CHASE | QQQ | time | +8.64 |
+| PDH_PDL_Breakout | SPY | **target** | +5.68 |
+| MOMO_CHASE | XLK | time | +2.71 |
+| MOMO_CHASE | SPY | time | +1.85 |
+| MOMO_CHASE | DIA | time | −0.96 |
+
+**+$148.47 across 10 trades = 37.5% of the day's net. Excluding them: +$247.24.**
+
+Two things make this worse than the headline number suggests, not better:
+
+1. **Nine of the ten are positive.** A data defect that happens to flatter the result is the
+   direction that should attract the most suspicion, not the least.
+2. **Three `target` exits and one `bars` exit are the serious ones.** Those conditions were
+   met *during* the gap and could not fire, so the fill is at a price up to fifteen minutes
+   stale. The six `time` exits are milder -- their trigger is a clock and the delay is
+   bounded by the gap -- but the MARK is still late.
+
+**So 2026-09-15 shares should be quoted as 129 clean trades at +$247.24, plus 10 degraded
+at +$148.47** -- the same split discipline applied to the 2026-09-11 host-suspend session
+(106 clean / 29 degraded). It should not be quoted as a clean +$395.71.
+
+The **options arm is unaffected and its +$553.38 over 60 trades is clean**: 0 restarts,
+`fills_skipped: 0`, `degraded_bars: {}`.
+
 ## A second error in the diagnosis, recorded so the method is not reused
 
 While diagnosing, a probe of `https://http.thetadata.us/...` returned
