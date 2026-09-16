@@ -33,13 +33,16 @@
 # 4 running jobs and 8h. There is no GPU work here at all -- it is a Python loop over bars.
 # 500 tasks therefore run in 10 waves of 50.
 #
-# SIZING, from a measured benchmark rather than a guess. 0.253 ms per cell per session.
-# DISCOVERY is 1,499 QQQ sessions, not the full 3,815 -- so a cell costs 0.38 s, not 0.96 s,
-# and 2,822,400 cells is ~300 CPU-hours rather than the ~756 the full sample would imply.
-# At 500 shards that is ~5,645 cells and ~36 min of compute per task, plus ~45 s for the
-# one-time prepare() pass that every task pays in full.
-# --time is 6h -- a 10x margin -- because a task killed at the wall clock leaves a TRUNCATED
-# shard that still looks like a perfectly good file to the collector.
+# SIZING, re-measured 2026-09-15 on the real packed data: 0.151 ms per cell per session,
+# not the 0.253 ms first assumed. The traded window is 1,497 QQQ sessions -- the loader
+# reports 1,499 in-window and iter_prepared consumes the first two as indicator seed
+# (range(PREFIX, ...) with PREFIX=2), which audit.py and run_shard agree on exactly.
+# So 2,822,400 cells is ~177 CPU-hours, not ~300. At 500 shards that is ~5,645 cells and
+# ~21 min of compute per task.
+# --time is 6h -- roughly a 17x margin -- because a task killed at the wall clock leaves a
+# TRUNCATED shard that still looks like a perfectly good file to the collector.
+# Peak RSS is ~1.2 GB against the 8G request, dominated by the (reps x cells) bootstrap
+# array in studentize(): 10,000 x 5,645 x 8 B = 451 MB, plus a transient of the same size.
 #
 # GETTING THE DATA UP. The bar cache is ~18 MB packed, so unlike the VRP panel it is small.
 # Run this ON THE LAPTOP (PowerShell), cd first and pass BARE FILENAMES -- `scp C:\path\f`
@@ -69,22 +72,6 @@ for f in QQQ.npz SPY.npz; do
     exit 2
   fi
 done
-
-# ---- the grid must verify its own size --------------------------------------------------
-# --array is hand-written above, which is exactly how a sweep silently runs 500 of 800
-# shards and reports a p-value over the part that ran. Ask the code, and refuse on a
-# disagreement rather than trusting the header.
-N_CELLS=$(python - <<'PY'
-from trade_analysis.momo_sweep.grid import build_grid
-print(len(build_grid()))
-PY
-)
-N_TASKS="${SLURM_ARRAY_TASK_COUNT:-500}"
-echo "grid        $N_CELLS cells over $N_TASKS shards"
-if [[ "$N_CELLS" -lt "$N_TASKS" ]]; then
-  echo "FATAL: more shards ($N_TASKS) than cells ($N_CELLS)." >&2
-  exit 3
-fi
 
 # ---- environment ------------------------------------------------------------------------
 # THIS BLOCK USED TO ACTIVATE A CONDA ENV NAMED `vrp` THAT DOES NOT EXIST ON DISCOVERY.
@@ -119,11 +106,34 @@ set -u
 # and at 500 tasks that ambiguity costs a whole debugging cycle.
 if ! "$PY_BIN" -c "import numpy, trade_analysis.momo_sweep.engine" 2>/dev/null; then
   echo "FATAL: $PY_BIN cannot import numpy + trade_analysis.momo_sweep.engine" >&2
-  echo "  The sweep needs ONLY numpy. Fix with either:" >&2
-  echo "    MOMO_PY=/path/to/python sbatch ... (an interpreter that already has numpy)" >&2
-  echo "    conda create -n momo python=3.11 numpy   # then MOMO_PY=\$(conda run -n momo which python)" >&2
-  echo "  and confirm \$REPO ($REPO) is the repo root, since the import is package-relative." >&2
+  echo "  The sweep needs ONLY numpy -- so try the cheapest option FIRST:" >&2
+  echo "    module load anaconda3/2024.06   # its base env already ships numpy" >&2
+  echo "    MOMO_PY=\$(command -v python) sbatch ..." >&2
+  echo "  If base numpy is somehow missing, a venv is far lighter than a conda env:" >&2
+  echo "    python -m venv ~/momo/.venv && ~/momo/.venv/bin/pip install numpy" >&2
+  echo "  DO NOT \`conda create ... numpy\` ON A LOGIN NODE. The defaults channel pulls the" >&2
+  echo "  whole MKL stack (intel-openmp, mkl, mkl_fft, mkl_random, tbb, tbb-devel) and the" >&2
+  echo "  login node SIGKILLs it during \"Verifying transaction\" -- observed 2026-09-15." >&2
+  echo "  MKL is useless here anyway: this is a Python bar loop and the job pins" >&2
+  echo "  OMP_NUM_THREADS=1. If you must use conda, add \`nomkl\` and run it under srun." >&2
+  echo "  Also confirm \$REPO ($REPO) is the repo root -- the import is package-relative." >&2
   exit 4
+fi
+
+# ---- the grid must verify its own size --------------------------------------------------
+# --array is hand-written above, which is exactly how a sweep silently runs 500 of 800
+# shards and reports a p-value over the part that ran. Ask the code, and refuse on a
+# disagreement rather than trusting the header.
+N_CELLS=$("$PY_BIN" - <<'PY'
+from trade_analysis.momo_sweep.grid import build_grid
+print(len(build_grid()))
+PY
+)
+N_TASKS="${SLURM_ARRAY_TASK_COUNT:-500}"
+echo "grid        $N_CELLS cells over $N_TASKS shards"
+if [[ "$N_CELLS" -lt "$N_TASKS" ]]; then
+  echo "FATAL: more shards ($N_TASKS) than cells ($N_CELLS)." >&2
+  exit 3
 fi
 
 # This job is a Python bar loop, not BLAS. Extra threads buy nothing and oversubscribe the
