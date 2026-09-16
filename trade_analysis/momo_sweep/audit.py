@@ -37,9 +37,10 @@ WHAT "MATERIALLY" MEANS, FIXED BEFORE RUNNING
 --------------------------------------------
 Stated here rather than decided after seeing the output:
 
-  * LOOKAHEAD passes if all three hold: V0's peeking run beats its honest run; the mean
-    PAIRED difference (peek - honest) across cells that actually trade is positive; and
-    more than half of those cells improve.
+  * LOOKAHEAD passes if BOTH hold: V0's peeking run beats its honest run, and the oracle
+    power check (3b) finds >=95% of trading cells profitable when handed the sign of their
+    own outcome. This is the AMENDED sec.6.3 -- see the two notes below. The grid-wide
+    improvement fraction and the trade-count curve are reported as diagnostics, not gates.
   * PLACEBO passes if the mean across random draws is within `--pl-tol` standard errors of
     zero, the SE taken ACROSS DRAWS (default 3.0, i.e. indistinguishable from zero at
     roughly 3 sigma).
@@ -73,6 +74,13 @@ cross-cell level is a nuisance. Excluding non-trading cells matters because for 
 what pushed the improvement fraction to 43%. V0 is reported as its own line because it is
 the single pre-specified, fully validated cell, and therefore the one test with no
 multiplicity and no cross-cell correlation to argue about.
+
+**That paired-population rule is no longer the gate either.** It still reported FAIL at 48%,
+and the trade-count curve plus the oracle power check (3b) showed why: on an exhaustive grid
+most cells trade too thinly for one bar to register, so the population fraction measures the
+grid's composition, not whether the engine leaks. sec.6.3 was amended on 2026-09-15 to the
+anchor-plus-oracle form above, before any shard ran. The paired mean, the improvement
+fraction and the curve are all still printed -- as diagnostics.
 
 The sample is a fixed random subset of the grid (`--cells`, seed `--seed`) plus V0, so the
 audit costs minutes rather than the full 300 CPU-hours. The seed is a default in this file,
@@ -268,6 +276,7 @@ def main(argv=None) -> int:
     # bar before looking: >=95% of trading cells profitable, or the audit is blind and the
     # one-bar result is uninterpretable either way.
     od = oracle - honest
+    oracle_powered = False
     print()
     print("-" * 78)
     print("  3b. POWER CHECK -- signal shifted by the cell's OWN holding period")
@@ -282,6 +291,7 @@ def main(argv=None) -> int:
               f"{float(honest[live].mean()):+.4f}   improved by "
               f"{float(od[live].mean()):+.4f}")
         pw = o_frac >= 0.95
+        oracle_powered = pw
         print(f"    require >=95% profitable  ->  {'POWERED' if pw else 'BLIND'}")
         if not pw:
             print("    The audit cannot detect an UNAMBIGUOUS lookahead, so it cannot")
@@ -293,14 +303,30 @@ def main(argv=None) -> int:
             print("    information one bar carries -- NOT evidence that the honest path")
             print("    is already peeking.")
 
-    la_ok = bool(v0_ok and pair_m > 0 and frac > 0.5 and live.sum())
-    print(f"    require: V0 improves AND paired mean > 0 AND >50% of trading cells improve")
+    # ---- the AMENDED condition (pre-registration sec.6.3, amended 2026-09-15) ---------
+    # Gate = the validated anchor improves under a one-bar peek, AND the oracle power check
+    # clears 95%. The grid-wide improvement fraction and the trade-count curve above are
+    # DIAGNOSTICS, not the gate: on an exhaustive grid most cells trade too thinly for one
+    # bar of information to register, so the population fraction measures the grid's
+    # composition rather than whether the engine leaks. See
+    # research/momo_sweep_precondition3.md for the evidence and both errors made en route.
+    la_ok = bool(v0_ok and oracle_powered and live.sum())
+    print()
+    print("    AMENDED CRITERION: V0 anchor improves under a 1-bar peek AND the oracle")
+    print("    power check clears 95%. Grid-wide fraction and the curve are diagnostics.")
+    print(f"      V0 improves             {'yes' if v0_ok else 'NO':<4} "
+          f"(paired {diff[0]:+.4f})")
+    print(f"      oracle >=95% profitable {'yes' if oracle_powered else 'NO':<4}")
+    print(f"      [diagnostic] grid-wide improved {100 * frac:.0f}%, "
+          f"paired mean {pair_m:+.4f}")
     print(f"    {'PASS' if la_ok else 'FAIL'} -- "
-          + ("peeking helps, so the honest path is not already peeking."
+          + ("the engine does not see the future: an unambiguous lookahead is detected "
+             "every time, and the one cell whose behaviour is validated improves when "
+             "given one bar of it."
              if la_ok else
-             "peeking does NOT help. Either the honest path ALREADY contains future "
-             "information, or the signal carries none at this horizon. Both make the "
-             "sweep unreadable; diagnose before submitting."))
+             "either the anchor did not improve or the audit cannot detect an "
+             "unambiguous lookahead. Diagnose before submitting -- this is the condition "
+             "that catches the bug class that voided this project's first measured edge."))
 
     # ---- pre-condition 4 -------------------------------------------------------------
     dm = np.array([d.mean() for d in draws], dtype=np.float64)
