@@ -33,14 +33,22 @@
 # 4 running jobs and 8h. There is no GPU work here at all -- it is a Python loop over bars.
 # 500 tasks therefore run in 10 waves of 50.
 #
-# SIZING, re-measured 2026-09-15 on the real packed data: 0.151 ms per cell per session,
-# not the 0.253 ms first assumed. The traded window is 1,497 QQQ sessions -- the loader
-# reports 1,499 in-window and iter_prepared consumes the first two as indicator seed
-# (range(PREFIX, ...) with PREFIX=2), which audit.py and run_shard agree on exactly.
-# So 2,822,400 cells is ~177 CPU-hours, not ~300. At 500 shards that is ~5,645 cells and
-# ~21 min of compute per task.
-# --time is 6h -- roughly a 17x margin -- because a task killed at the wall clock leaves a
-# TRUNCATED shard that still looks like a perfectly good file to the collector.
+# SIZING, and the first two numbers here were both measured on the WRONG MACHINE.
+# The traded window is 1,497 QQQ sessions -- the loader reports 1,499 in-window and
+# iter_prepared consumes the first two as indicator seed (range(PREFIX, ...) with PREFIX=2),
+# which audit.py and run_shard agree on exactly.
+# A laptop benchmark gave 0.151 ms per cell-run (revising an earlier 0.253 ms guess) and an
+# implied ~177 CPU-hours. Measured ON A COMPUTE NODE 2026-09-15, the same audit workload
+# took 808 s where the laptop took 205 s -- explorer cores are ~3.5x slower than a modern
+# laptop's boost clock, which is the normal direction for cluster hardware and is exactly
+# why a sizing benchmark has to be run where the job runs.
+# Cluster-measured: ~0.51 ms per cell-run, so 2,822,400 cells x 1,497 sessions is
+# ~700 CPU-hours. At 500 shards that is ~5,645 cells and ~80 min per task, plus a few
+# minutes for the bootstrap. 10 waves of 50 on `short` is ~13 h of wall clock.
+# --time is 6h -- a 4.5x margin over the cluster-measured 80 min, which is the number that
+# matters -- because a task killed at the wall clock leaves a TRUNCATED shard that still
+# looks like a perfectly good file to the collector. Had --time been set from the laptop
+# benchmark with a tight margin, this is where that error would have cost the whole run.
 # Peak RSS is ~1.2 GB against the 8G request, dominated by the (reps x cells) bootstrap
 # array in studentize(): 10,000 x 5,645 x 8 B = 451 MB, plus a transient of the same size.
 #
