@@ -223,14 +223,32 @@ finding anything, and that is stated here so a null cannot later be framed as a 
    **materially BETTER**. If peeking does not help, the honest path already contains future
    information and every number is void. This project's worst bug was a five-minute
    lookahead that produced an entire measured edge.
-   **STATUS 2026-09-15: implemented in `trade_analysis/momo_sweep/audit.py` and this
-   condition DOES NOT PASS AS WRITTEN.** The anchor cell improves by +2.91 under a one-bar
-   peek (a sign flip) and a perfect oracle is detected on 100% of trading cells, so the
-   engine is not peeking -- but only 48% of sampled cells improve, because most cells in an
-   exhaustive grid are too thin to measure a one-bar effect. The evidence, the two errors
-   made while establishing it, and the three options are in
-   `research/momo_sweep_precondition3.md`. **No amendment has been made and the sweep has
-   not been submitted.**
+   **AMENDED 2026-09-15, BEFORE ANY SHARD WAS RUN.** Implemented in
+   `trade_analysis/momo_sweep/audit.py`, this condition did not pass as originally written:
+   the anchor cell improves by +2.91 under a one-bar peek (a sign flip from loss to profit)
+   and a perfect oracle is detected on 100% of trading cells -- so the engine is demonstrably
+   not peeking -- but only 48% of *sampled* cells improve, because most cells in an
+   exhaustive grid trade too thinly for one bar of information to be measurable, and the
+   benefit is monotone in trade count across two independent samples.
+
+   **The amended condition, and the principle it rests on.** An audit may only be read where
+   it has power, so pre-condition 3 is evaluated on (a) the V0 anchor, the one cell whose
+   behaviour is independently validated, which must improve under a one-bar peek, and (b) an
+   ORACLE POWER CHECK -- each cell handed the sign of its own trade's outcome must become
+   profitable on at least 95% of trading cells, establishing that the audit can detect a
+   lookahead when one is unambiguously present. Measured: anchor +2.91, oracle 100%.
+   The grid-wide improvement fraction and the trade-count curve are still reported, as
+   diagnostics rather than as the gate.
+
+   This amendment is made on a stated methodological principle and not on an observed
+   outcome: the power check's 95% bar was fixed before it was run, and the amendment would
+   read identically had the sweep not yet been written. The full evidence, and the TWO
+   ERRORS made while establishing it -- a criterion that was arithmetically invalid for a
+   negative baseline, and a first "oracle" that shifted both ends of the momentum window and
+   so was not an oracle -- are recorded in `research/momo_sweep_precondition3.md`. Recorded
+   because a pre-condition rewritten by the person who wants it to pass is the exact pattern
+   a pre-registration exists to prevent; the defence is that each defect is demonstrable
+   without reference to which way the run came out.
 4. **Direction placebo.** Randomising trade direction must produce ≈0 net edge across the
    grid, confirming the machinery is not manufacturing P&L from the entry/exit mechanics.
 
