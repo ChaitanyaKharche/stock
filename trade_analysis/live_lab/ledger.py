@@ -69,7 +69,12 @@ PARTIAL_AFTER = dt.time(9, 35)
 
 # Terminal states, worst to best. `reconcile` and `summary` rank with this, so a day that
 # aborted at 09:20 and collected at 11:34 reads as its best achieved state.
-RANK = {"MISSED": 0, "INTERRUPTED": 1, "ABORTED": 2, "OPENED": 3,
+#
+# UNRECORDED is not a state the lab ever writes. `coverage` synthesises it in memory for a
+# trading day the ledger never mentions at all, so such a day lands in the denominator
+# instead of vanishing from it. It ranks below MISSED because MISSED is a decision and
+# UNRECORDED is the absence of one.
+RANK = {"UNRECORDED": -1, "MISSED": 0, "INTERRUPTED": 1, "ABORTED": 2, "OPENED": 3,
         "PARTIAL": 4, "COLLECTED": 5, "NOT_A_SESSION": 6}
 
 
@@ -276,14 +281,62 @@ def reconcile(lab_dir=None, today=None) -> list[dict]:
     return written
 
 
-def coverage(lab_dir=None) -> dict:
-    """Best achieved state per day, plus the counts that make a denominator."""
+def _last_closed_session(today=None) -> dt.date | None:
+    """The most recent trading day that has actually finished, in exchange time.
+
+    `coverage` counts up to this and no further. Today is excluded until the 16:00 close
+    for the same reason `reconcile` excludes it: a session in progress has legitimately
+    not been recorded yet, and counting it would report a hole that does not exist.
+    """
+    now = now_et()
+    day = today or now.date()
+    if today is None and now.time() < dt.time(16, 0):
+        day -= dt.timedelta(days=1)
+    for _ in range(14):                      # longest plausible exchange shutdown
+        if _is_session(day):
+            return day
+        day -= dt.timedelta(days=1)
+    return None
+
+
+def coverage(lab_dir=None, today=None) -> dict:
+    """Best achieved state per day, plus the counts that make a denominator.
+
+    The denominator walks the EXCHANGE CALENDAR from the lab's first evidence to the last
+    closed session -- it is not the set of days the ledger happens to mention.
+
+    That distinction is the whole point, and the first version got it wrong: it built
+    `best` from ledger records alone, so a trading day with no record was missing from the
+    numerator AND the denominator, and the function reported 100% coverage no matter how
+    many recent sessions had gone unrecorded. On 2026-09-16 it printed `usable 7/7 =
+    100.0%` with six consecutive sessions absent. The docstring at the top of this module
+    says a denominator you cannot reconstruct is not a denominator; this now reconstructs
+    it rather than asserting it.
+
+    Days the calendar expects and the ledger never mentions are reported UNRECORDED.
+    Nothing is written to disk here -- `reconcile` is the only thing that appends, and it
+    needs the local daily files to tell MISSED from a session it simply cannot see.
+    """
     best = {}
     for rec in _read(lab_dir):
         d = rec["date"]
-        if d not in best or RANK.get(rec.get("outcome"), 0) >= RANK.get(
-                best[d].get("outcome"), 0):
+        if d not in best or RANK.get(rec.get("outcome"), -1) >= RANK.get(
+                best[d].get("outcome"), -1):
             best[d] = rec
+
+    # Extend the day set over the calendar, so absence is counted rather than skipped.
+    start, end = _start_date(lab_dir), _last_closed_session(today)
+    if start and end:
+        day = start
+        while day <= end:
+            key = day.isoformat()
+            if key not in best and _is_session(day):
+                best[key] = {"date": key, "outcome": "UNRECORDED", "is_session": True,
+                             "attempts": 0,
+                             "reason": "expected by the exchange calendar; the ledger "
+                                       "has no record either way"}
+            day += dt.timedelta(days=1)
+
     sessions = {d: r for d, r in best.items() if r.get("is_session")}
     counts = {}
     for r in sessions.values():
@@ -328,6 +381,18 @@ def main(argv=None) -> int:
     print(f"  {cov['trading_days']} trading days | " +
           " ".join(f"{k} {v}" for k, v in sorted(cov["counts"].items())))
     print(f"  usable {cov['usable']}/{cov['trading_days']} = {cov['coverage_pct']}%")
+
+    # A line that only appears when something is wrong is a line nobody recognises when
+    # it appears -- but silence here was how six missing sessions read as 100%.
+    unrecorded = cov["counts"].get("UNRECORDED", 0)
+    if unrecorded:
+        days = [d for d, r in cov["days"].items() if r.get("outcome") == "UNRECORDED"]
+        print(f"\n  !! {unrecorded} expected session(s) have NO ledger record: "
+              f"{', '.join(days)}")
+        print("     Run this ON THE LAB MACHINE with --reconcile. Only that host can see "
+              "the\n     daily files, and only they separate 'ran but uncommitted' from "
+              "MISSED.")
+
     print("\n  A gap you can explain is data. A gap you cannot is a hole in the "
           "denominator.")
     return 0
