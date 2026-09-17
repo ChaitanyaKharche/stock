@@ -4,7 +4,7 @@ import numpy as np
 import yfinance as yf
 import finnhub
 import praw
-import pandas_ta as ta
+from trade_analysis import indicators_pandas as ta   # was: import pandas_ta as ta
 from transformers import pipeline
 from openai import OpenAI
 from fastapi import FastAPI, HTTPException, Query
@@ -149,10 +149,14 @@ def calculate_technical_indicators(df: pd.DataFrame) -> pd.DataFrame:
     print("Calculating technical indicators...")
     df_ta = df.copy() # Work on a copy
     try:
-        # Use pandas_ta to calculate indicators
-        df_ta.ta.adx(append=True) # Calculates ADX_14, DMP_14, DMN_14
-        df_ta.ta.ema(close='Close', length=9, append=True, col_names=('EMA_9_Close',))
-        df_ta.ta.ema(close='Volume', length=9, append=True, col_names=('EMA_9_Volume',))
+        # Was `df_ta.ta.adx(append=True)` etc. pandas_ta was dropped -- it was deleted
+        # from PyPI, so `pip install -r requirements.txt` could not succeed. Same math,
+        # from trade_analysis/indicators_pandas.py, checked against the live lab's own
+        # indicators by indicators_pandas_test.py. Column names are unchanged, so the
+        # rename_map below still applies.
+        df_ta = df_ta.join(ta.adx(df_ta['High'], df_ta['Low'], df_ta['Close'], length=14))
+        df_ta['EMA_9_Close'] = ta.ema(df_ta['Close'], length=9)
+        df_ta['EMA_9_Volume'] = ta.ema(df_ta['Volume'], length=9)
 
         # Rename columns for consistency
         rename_map = {'ADX_14': 'ADX', 'DMP_14': 'DMI_Plus', 'DMN_14': 'DMI_Minus'}

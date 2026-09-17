@@ -57,12 +57,11 @@ nvidia-nvjitlink-cu12==12.8.93
 nvidia-nvtx-cu12==12.8.90
 packaging==25.0
 pandas==2.3.2
-# BROKEN PIN: deleted from PyPI (whole release history wiped, maintainer changed).
-# `pip install` of this line fails with "from versions: none". Only 0.4.67b0/
-# 0.4.71b0 remain and both need Python>=3.12 + numpy>=2.2.6, conflicting with the
-# numpy pin in this same file. See the Setup section of README.md for the three
-# verified options. Nothing under trade_analysis/live_lab/ needs this.
-pandas_ta==0.3.14b0
+# pandas_ta REMOVED 2026-09-17. It was deleted from PyPI -- the entire 0.3.x release
+# history was withdrawn and the package changed maintainer -- so this file could not
+# be installed at all. Replaced by trade_analysis/indicators_pandas.py, whose numbers
+# are pinned against the live lab's own indicators by indicators_pandas_test.py.
+# Do not add it back: no available version works on numpy<2 OR Python 3.11.
 patsy==1.0.1
 peewee==3.18.2
 peft==0.17.1

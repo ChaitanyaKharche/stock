@@ -50,6 +50,9 @@ jobs:
       - name: session ledger coverage
         run: python -m trade_analysis.live_lab.ledger_test
 
+      - name: pandas_ta replacement vs the live lab's own indicators
+        run: python -m trade_analysis.indicators_pandas_test
+
       - name: preflight <-> autostart gate contract
         run: python -m trade_analysis.live_lab.preflight_gate_test
 

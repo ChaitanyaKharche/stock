@@ -72,7 +72,7 @@ actually means nothing is installed.
 
 ```
 pip install -r requirements-dev.txt     # ~150 MB, no CUDA, any OS
-pytest                                  # trade_analysis/live_lab/, offline
+pytest                                  # trade_analysis/, offline, 20 checks
 ```
 
 `pytest.ini` teaches discovery this repo's `<thing>_test.py` naming — without it, bare
@@ -85,6 +85,7 @@ The house-style tests also run standalone and print their own PASS/FAIL report:
 python -m trade_analysis.live_lab.ledger_test           # coverage denominator
 python -m trade_analysis.live_lab.preflight_gate_test   # preflight <-> autostart contract
 python -m trade_analysis.live_lab.bar_cache_test        # cache cannot change a fill
+python -m trade_analysis.indicators_pandas_test         # indicators match the live lab
 ```
 
 **Two exclusions, both deliberate.** `huggingface_space/*_test.py` fetch live quotes
@@ -100,44 +101,34 @@ stops meaning anything.
 
 ## Setup
 
-> **`pip install -r requirements.txt` cannot succeed on a fresh machine as of
-> 2026-09-16.** `pandas_ta==0.3.14b0` has been **deleted from PyPI** — the whole release
-> history was wiped and the package changed maintainer. Verified:
+> **`pandas_ta` has been dropped** (2026-09-17), because it was **deleted from PyPI** —
+> the entire 0.3.x release history was withdrawn and the package changed maintainer, so
+> `pip install -r requirements.txt` failed outright:
 >
 > ```
 > $ pip download --no-deps 'pandas_ta==0.3.14b0'
-> ERROR: Ignored the following versions that require a different python version:
->        0.4.67b0 Requires-Python >=3.12; 0.4.71b0 Requires-Python >=3.12
 > ERROR: Could not find a version that satisfies the requirement pandas_ta==0.3.14b0
 >        (from versions: none)
 > ```
 >
-> Only 0.4.67b0 / 0.4.71b0 remain, and both need **Python >= 3.12 and numpy >= 2.2.6** —
-> which conflicts with this file's own `numpy==1.26.4`. Even given the old wheel, 20
-> modules of 0.3.14b0 do `from numpy import NaN`, an alias numpy 2.0 expired, so it fails
-> at import on any numpy 2.x.
+> The only remaining releases need Python >= 3.12 and numpy >= 2.2.6, conflicting with
+> this repo's `numpy==1.26.4`; and 20 modules of the old version do `from numpy import
+> NaN`, an alias numpy 2.0 expired. No available version worked. **This is a large part
+> of why a working checkout could not be reproduced anywhere** but the one machine whose
+> venv predated the deletion.
 >
-> **This is why a working checkout could not be reproduced anywhere.** The install
-> instruction below is the documented path and it has been broken by an upstream deletion
-> nobody was notified about. It is pinned in three files: `requirements.txt:60`,
-> `trade_analysis/requirements.txt:127`, `conda_requirements.txt:78`.
+> Replaced by **`trade_analysis/indicators_pandas.py`** — ema, rsi, atr, adx, macd,
+> bbands, vwap, ported from the Wilder implementations already in
+> `huggingface_space/trade_analysis/indicators.py`. Its numbers are pinned against
+> `trade_analysis/live_lab/indicators.py` (the dependency-free code the live lab actually
+> trades on) by `indicators_pandas_test.py`, at 1e-12 relative.
 >
-> **To run the tests, none of this matters — use `requirements-dev.txt` (above).**
->
-> Three options for the trading stack, all verified working:
-> 1. **Drop it.** Only `app1.py`, `trade_analysis/backtesting/multi_strategy_backtest.py`
->    and `huggingface_space/trade_analysis/train_tft.py` import it, and all three are
->    legacy. `huggingface_space/trade_analysis/indicators.py` already ships its own Wilder
->    implementations precisely because of this, and
->    `huggingface_space/requirements.txt:20` already excludes it deliberately — so the
->    Space is unaffected. This is the recommended path.
-> 2. **`pandas-ta-classic==0.8.32`** — maintained fork, numpy 2.x native, works on
->    pandas 2.3.2. Import name is `pandas_ta_classic`, so three import lines change.
-> 3. **Vendor 0.3.14b0 and stay on numpy<2.** Preserves current behaviour exactly; 18/18
->    indicators verified on numpy 1.26.4 + pandas 2.3.2. No upstream to update from.
->
-> Do NOT use `pandas-ta-openbb` — 0.4.24 raises `AttributeError: module 'importlib' has
-> no attribute 'metadata'` on a clean import.
+> **One deliberate deviation from pandas_ta:** `ema` is seeded with an SMA of the first
+> `length` values, matching the live lab, not from the first value as
+> `ewm(adjust=False)` does. The live lab's definition wins because `replay.py` proves
+> live and batch agree on it and every trade in `live_lab_data/` was taken under it.
+> Keeping two EMAs in one repo to match a library that no longer exists is the worse
+> trade.
 
 > The root **`Dockerfile` is dead** and separate from the above: it does `COPY app app`
 > and runs `uvicorn app.api:app`, but there is no `app/` directory in this repo. The

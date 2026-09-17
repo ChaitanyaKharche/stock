@@ -2,7 +2,7 @@ import os
 import sys
 import pandas as pd
 import numpy as np
-import pandas_ta as ta
+from trade_analysis import indicators_pandas as ta   # was: import pandas_ta as ta
 from datetime import datetime, time as dt_time, timedelta
 from zoneinfo import ZoneInfo
 from backtesting import Backtest, Strategy
