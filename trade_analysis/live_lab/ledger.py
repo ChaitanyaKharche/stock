@@ -240,7 +240,12 @@ def reconcile(lab_dir=None, today=None) -> list[dict]:
         start = _start_date(lab_dir)
         if start is None:
             return []
+        # An INJECTED `today` is authoritative and is treated as in progress: the caller
+        # has said where "now" is, so the wall clock must not override it. With
+        # `today=None` -- the production path from autostart -- the real clock decides,
+        # which is what makes a 16:05 run able to mark the day MISSED.
         end = today or now_et().date()
+        end_is_closed = today is None and now_et().time() >= dt.time(16, 0)
         seen = {}
         for rec in _read(lab_dir):
             seen[rec["date"]] = rec
@@ -261,7 +266,16 @@ def reconcile(lab_dir=None, today=None) -> list[dict]:
                     written.append({"date": key, "outcome": "COLLECTED"})
             elif rec is None:
                 # Today is still in progress until the close; do not call it missed yet.
-                if day < end or now_et().time() >= dt.time(16, 0):
+                #
+                # `end_is_closed` is decided ONCE, above, and not re-read per day. This
+                # line used to be `day < end or now_et().time() >= dt.time(16, 0)`,
+                # which consulted the real wall clock even when the caller had passed
+                # `today` explicitly. So a backfill of the same date range produced a
+                # DIFFERENT ledger depending on the hour it was run: before 16:00 the
+                # last day was in progress, after 16:00 it was MISSED. Two runs, same
+                # arguments, different durable record -- in the one file whose whole
+                # purpose is being the record.
+                if day < end or end_is_closed:
                     if record(day, "MISSED",
                               "no record written and no daily file; the lab did not run",
                               lab_dir, dedupe=True):

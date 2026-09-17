@@ -200,6 +200,65 @@ def test_reconcile_is_idempotent_and_records_a_genuine_miss():
     assert len(missed) == 1, missed
 
 
+def test_reconcile_with_an_injected_today_ignores_the_wall_clock():
+    """Two runs, same arguments, different hour -> the SAME ledger.
+
+    This caught a real bug. `reconcile` decided whether its last day was finished with
+    `now_et().time() >= 16:00`, even when the caller had passed `today` explicitly. So a
+    backfill of one date range produced a different durable record depending on when it
+    ran: before 16:00 the last day was in progress, after 16:00 it was MISSED. The test
+    above passed at 22:33 ET and failed at 19:27 the next day, which is how it surfaced.
+
+    Determinism is not a nicety here. The ledger's whole job is being the record, and a
+    record that depends on the hour you asked is not one.
+    """
+    real = ledger.now_et
+
+    def at(h, m):
+        return lambda: dt.datetime(2026, 9, 10, h, m)
+
+    outcomes = []
+    try:
+        for h, m in ((9, 31), (15, 59), (16, 0), (23, 59)):
+            lab = _lab(records=[_day("2026-09-08")], share_dailies=["2026-09-08"])
+            ledger.now_et = at(h, m)
+            ledger.reconcile(lab, today=dt.date(2026, 9, 10))
+            outcomes.append({r["date"]: r["outcome"] for r in ledger._read(lab)
+                             if r["outcome"] == "MISSED"})
+    finally:
+        ledger.now_et = real
+    assert all(o == outcomes[0] for o in outcomes), outcomes
+    assert outcomes[0] == {"2026-09-09": "MISSED"}, outcomes[0]
+
+
+def test_reconcile_without_a_today_still_uses_the_close_to_decide():
+    """The production path must keep its wall-clock behaviour.
+
+    autostart calls `reconcile()` with no `today`. Before the close the current day is in
+    progress and must not be MISSED; after it, an unrecorded day must be. Fixing the
+    injected case above must not have flattened this one.
+    """
+    real = ledger.now_et
+
+    def at(h, m):
+        return lambda: dt.datetime(2026, 9, 10, h, m)
+
+    try:
+        lab = _lab(records=[_day("2026-09-08")], share_dailies=["2026-09-08"])
+        ledger.now_et = at(9, 31)                   # market open, 09-10 in progress
+        ledger.reconcile(lab)
+        missed = {r["date"] for r in ledger._read(lab) if r["outcome"] == "MISSED"}
+        assert missed == {"2026-09-09"}, missed
+
+        lab2 = _lab(records=[_day("2026-09-08")], share_dailies=["2026-09-08"])
+        ledger.now_et = at(16, 5)                   # after the close
+        ledger.reconcile(lab2)
+        missed2 = {r["date"] for r in ledger._read(lab2) if r["outcome"] == "MISSED"}
+        assert missed2 == {"2026-09-09", "2026-09-10"}, missed2
+    finally:
+        ledger.now_et = real
+
+
 def test_repeated_failures_still_increment_attempts():
     """`record(dedupe=False)` must append every call.
 

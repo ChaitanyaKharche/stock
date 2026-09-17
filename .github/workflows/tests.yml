@@ -61,6 +61,14 @@ jobs:
       - name: end-of-session archive
         run: python -m trade_analysis.live_lab.archive_test
 
+      # Both run on hand-written bars / synthetic trades. The backtest
+      # itself needs the ThetaData archive and runs on the lab machine.
+      - name: ORB veto classifier
+        run: python -m trade_analysis.live_lab.orb_veto_test
+
+      - name: ORB veto analysis arithmetic
+        run: python -m trade_analysis.live_lab.orb_veto_backtest_test
+
       - name: preflight <-> autostart gate contract
         run: python -m trade_analysis.live_lab.preflight_gate_test
 
