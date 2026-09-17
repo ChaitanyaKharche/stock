@@ -1,6 +1,8 @@
 # Pre-registration — Do his entries coincide with any standard intraday setup?
 
-**Status: PRE-REGISTERED, NOT YET RUN.** Written 2026-08-20. The setup list below was fixed
+**Status: PRE-REGISTERED, AND RUN. Results: [`setup_crosscheck_results.md`](setup_crosscheck_results.md).**
+The design below is unchanged from when it was frozen; it is kept verbatim so
+the results can be checked against what was actually promised. Written 2026-08-20. The setup list below was fixed
 from external sources *before* any coverage or outcome number was computed.
 
 ## 0. The flaw being corrected

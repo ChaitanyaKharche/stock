@@ -1,6 +1,8 @@
 # Pre-registration — The package: his entries + his exits + strict ATM + a free public setup filter
 
-**Status: PRE-REGISTERED, NOT YET RUN.** Written 2026-08-26, before any number computed.
+**Status: PRE-REGISTERED, AND RUN. Results: [`package_results.md`](package_results.md).**
+The design below is unchanged from when it was frozen; it is kept verbatim so
+the results can be checked against what was actually promised. Written 2026-08-26, before any number computed.
 
 ## 0. What is new here, stated precisely
 

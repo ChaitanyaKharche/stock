@@ -87,12 +87,29 @@ rather than re-argued.
 **§6 is answered, and it is a null of the strongest kind.** Not "nothing was found" but
 "the thing was found, measured, and is 1.84× too small to harvest."
 
-**It also disposes of the neural arm.** A forecasting model would have to beat the premium
-itself by a factor approaching two, purely to reach breakeven — while
-[`vrp_baseline_results.md`](vrp_baseline_results.md) shows implied variance already beating
-HAR at forecasting realised variance (p=0.0222). There is no plausible route by which a
-20k-parameter MLP on HAR-type features closes an 84% cost gap. **The GPU sweep was not
-run, and that is the correct decision rather than an abandoned one.**
+**It also sets the bar for the neural arm.** A forecasting model would have to beat the
+premium itself by a factor approaching two, purely to reach breakeven. There is no
+plausible route by which a 20k-parameter MLP on HAR-type features closes an 84% cost gap.
+
+**CORRECTION, two of them, both in the paragraph above as first written.**
+
+**(i) The supporting citation was already retracted when this was written.** The original
+read *"while `vrp_baseline_results.md` shows implied variance already beating HAR at
+forecasting realised variance (p=0.0222)"*. That p-value was corrected the same day, in
+§2 of that very file, to **p=0.5832** — implied variance and a properly specified HAR are
+statistically indistinguishable. The missing `exp(s²/2)` bias correction was the whole
+effect. The cost-gap argument above stands on the $0.0376 spread against the $0.0205 edge
+and never needed the citation; the citation was simply void, and citing a number this file
+already knew to be wrong is the defect this project is least entitled to commit.
+
+**(ii) "The GPU sweep was not run, and that is the correct decision rather than an
+abandoned one" was overtaken by events.** The zero-shot arm *was* run on the cluster on
+2026-09-09/10, before any GPU sweep: Chronos-Bolt-base scored **QLIKE 0.792** against
+HAR's 0.431, losing by **t=+5.25, p=3.2e-07** session-clustered, and unchanged when given
+22 sessions of history to match HAR's `rv_prev_22` reach. So the claim's conclusion
+survives — a pretrained 205M-parameter forecaster loses to six OLS coefficients, which is
+a stronger statement than declining to look — but it was reached by measuring, not by
+deciding not to. The GPU sweep proper remains unrun, gated on that result.
 
 ## 5. Limitations, stated plainly
 
