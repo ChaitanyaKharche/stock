@@ -133,10 +133,52 @@ live bid is a *stale* observation from before the loop stopped, and both affecte
 rallied into the close, so a later mark is legitimately higher. And the 10 trades span only
 two sessions, so 9-of-10 is roughly n≈2, not n=10 — the apparent significance is illusory.
 
-**The real question it raises is operational: why did six positions on 09-03 need
-reconstructing at all?** A completed live EOD flatten leaves nothing to reconstruct. That is
-the thread to pull, and it is a pipeline question, which is why it belongs in this
-checkpoint and not in a later evaluation.
+### Why they needed reconstructing — answered, and already fixed
+
+This checkpoint originally left "why did six positions need reconstructing at all?" as an
+open thread. **It was not open.** `reconstruct_eod.py` documents the cause in its own
+header:
+
+> `autostart.supervise()` terminated both arms at 15:55:02 ET -- the exact minute they were
+> due to flatten.
+
+A supervisor race killed the arms at precisely the minute `_flatten_all` was due to run, so
+every position still alive at the close was never written. The event log confirms the chain
+exactly: **09-04 09:35:07 `recovery_rejected`, 18 orphaned positions from 09-03** — and
+18 ÷ 3 strike arms = the 6 ATM trades.
+
+**Fixed.** `autostart.py:71` now sets `RUNNER_DONE_AFTER = 15:55` with a comment recording
+that terminating at 15:55 "destroyed the EOD flatten and the daily summary for three
+straight" sessions, plus `HARD_STOP_GRACE_SEC = 240` so a waking runner flattens before it
+can be killed. Sessions 09-14/15/16 show live `eod` exits (3, 7, 1) and zero reconstructions.
+
+**The reconstruction is the remedy, not the defect** — and the header names the reason it
+mattered so much:
+
+> The loss is NOT random. It removes exactly one exit type: `eod` ... A hole that deletes
+> one exit category biases the sample far more than a larger random one would.
+
+That is the correct framing and it is stronger than the one this document reached for.
+
+### The residue: 2026-09-01 has a permanent hole
+
+`reconstruct_eod.py` states that 09-01's snapshot "was overwritten by the following session
+before the archive existed. Those positions are gone permanently and that session keeps its
+hole." The exit table confirms it: **09-01 has zero `eod` AND zero `eod_reconstructed`.**
+
+So one session in the frozen record is missing an entire exit category with no way to
+recover it. Per the tool's own argument that is worse than a random hole of the same size.
+It cannot be excluded — the clock rule forbids dropping a session — so it must simply be
+**carried as a known defect and stated whenever 09-01 is included**.
+
+| session | `eod` | reconstructed | status |
+|---|---|---|---|
+| 2026-08-28 | 0 | 0 | 2 `shutdown` (day 1) |
+| 2026-09-01 | 0 | 0 | **permanent hole, unrecoverable** |
+| 2026-09-02 | 0 | 4 | supervisor race, reconstructed |
+| 2026-09-03 | 0 | 6 | supervisor race, reconstructed |
+| 2026-09-04 | 0 | 0 | 3 `shutdown`, feed down at close |
+| 2026-09-14/15/16 | 3 / 7 / 1 | 0 | live flatten working |
 
 ## 6. Funnel and outages
 
@@ -161,7 +203,10 @@ sign agreement — not a P&L reading.
 ## 8. Actions
 
 1. **Never sum `daily/*.json` nets.** Sum `trades.jsonl` filtered by `arm`. §4a.
-2. **Investigate why 09-03 left six positions unflattened.** §5.
+2. ~~Investigate why 09-03 left six positions unflattened.~~ **Answered and already
+   fixed** — a supervisor race terminated the arms at the 15:55 flatten minute; see §5.
+   The live successor: **2026-09-01 carries a permanent, unrecoverable hole in the `eod`
+   exit category** and must be flagged wherever it is included.
 3. **Quote the options arm as 9 sessions with a 4-session hole**, never as 08-28 → 09-16
    continuous. §3.
 4. Watch `bars_failed` against shares session quality if 09-10's pairing recurs. §2.
