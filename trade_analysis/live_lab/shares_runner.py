@@ -48,7 +48,8 @@ import time
 from pathlib import Path
 
 from .clock import now_et, today_et
-from .feed import FeedOutage, ThetaLiveFeed
+from .feed import (UPSTREAM_WAIT_SEC, FeedOutage, ThetaLiveFeed,
+                   UpstreamUnreachable)
 from .lock import SingleInstance
 from .session import SessionState, build_warmup
 from .setups import ALL_SETUPS, DEAD_SETUPS, SLOW_SETUPS
@@ -205,6 +206,36 @@ class SharesLab:
                 d -= dt.timedelta(days=1)
             try:
                 w = build_warmup(self.feed, sym, day, sorted(prior))
+            except UpstreamUnreachable as exc:
+                # The terminal is answering and its upstream is not -- the signature of
+                # this machine changing networks (WiFi <-> phone hotspot in a car). It
+                # clears itself in tens of seconds.
+                #
+                # This used to abort the session outright, and warmup is the worst place
+                # for that: it runs at startup, pulling 25 prior sessions per symbol,
+                # which is exactly when a just-reconnected machine is least ready. One
+                # 503 on the first symbol threw away the whole day --
+                # `events.jsonl` seq 319, 2026-08-28, `warmup_feed_unreachable`.
+                #
+                # Warmup is pre-open work with minutes to spare, so wait and retry once.
+                # A genuinely dead upstream still aborts, with the wait on the record.
+                self.store.outage("warmup_wait", repr(exc), symbol=sym)
+                print(f"[shares] upstream down warming up {sym}; waiting "
+                      f"{UPSTREAM_WAIT_SEC}s", flush=True)
+                if not self.feed.wait_for_upstream(
+                        budget_s=UPSTREAM_WAIT_SEC,
+                        on_wait=lambda m: print(f"[shares] {m}", flush=True)):
+                    self.store.outage("warmup", repr(exc), symbol=sym)
+                    print(f"[shares] ABORT: upstream unreachable warming up {sym}",
+                          flush=True)
+                    return False
+                try:
+                    w = build_warmup(self.feed, sym, day, sorted(prior))
+                except FeedOutage as exc2:
+                    self.store.outage("warmup", repr(exc2), symbol=sym)
+                    print(f"[shares] ABORT: warmup {sym} failed after the upstream "
+                          f"recovered", flush=True)
+                    return False
             except FeedOutage as exc:
                 self.store.outage("warmup", repr(exc), symbol=sym)
                 print(f"[shares] ABORT: feed unreachable warming up {sym}", flush=True)

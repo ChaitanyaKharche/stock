@@ -45,7 +45,7 @@ import time
 from pathlib import Path
 
 from .clock import now_et
-from .feed import FeedOutage, ThetaLiveFeed
+from .feed import UPSTREAM_WAIT_SEC, FeedOutage, ThetaLiveFeed
 from . import ledger
 from .lock import SingleInstance
 
@@ -78,6 +78,7 @@ HARD_STOP = dt.time(16, 10)          # backstop only: by now a healthy runner ha
                                      # exited, so anything still alive is wedged
 MAX_RESTARTS = 20
 RESTART_BACKOFF = [5, 15, 30, 60, 120]   # seconds; holds at the last value
+
 TERMINAL_PORT = 25503
 TERMINAL_DIR = Path(r"C:\Users\chaitanyakharche\Documents\research_data\thetaterminal")
 TERMINAL_CMD = [str(TERMINAL_DIR / "jdk21" / "jdk-21.0.12+8" / "bin" / "java.exe"),
@@ -531,6 +532,28 @@ def main(argv=None) -> int:
             log("ABORT: no feed")
             ledger.record(day, "ABORTED", "no feed: Theta Terminal would not start", args.lab_dir)
             return 2
+    elif not _wait_for_history(wait_sec=UPSTREAM_WAIT_SEC):
+        # The terminal was ALREADY up, and until now that meant the historical upstream
+        # was never checked -- `_wait_for_history` only ran off the back of
+        # `start_terminal()`. But the common failure on this lab is not a dead terminal,
+        # it is a live terminal whose MDDS link died when the machine moved between WiFi
+        # and a phone hotspot. `terminal_up()` keeps returning 200 throughout, because it
+        # asks `/stock/snapshot/quote`, which the terminal serves from its own process.
+        #
+        # So preflight went straight on to request history bars, collected
+        # `HTTP 503: Unable to resolve host mdds-01.thetadata.us`, and aborted the
+        # session on a condition that fixes itself in under a minute. 2026-08-28 lost a
+        # session to exactly this, and 2026-09-01 logged 202 of those 503s.
+        #
+        # Waiting here costs minutes of a pre-open window that is otherwise idle, and
+        # the ledger records the wait either way, so a genuinely dead upstream is still
+        # an ABORT with its reason -- just not a premature one.
+        log("ABORT: terminal is up but its historical upstream is not serving")
+        ledger.record(day, "ABORTED",
+                      f"upstream unreachable for {UPSTREAM_WAIT_SEC}s "
+                      f"(terminal answering, MDDS not); network transition?",
+                      args.lab_dir)
+        return 2
 
     feed = ThetaLiveFeed()
     if is_holiday(feed, args.symbols, day):

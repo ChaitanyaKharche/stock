@@ -53,6 +53,9 @@ jobs:
       - name: pandas_ta replacement vs the live lab's own indicators
         run: python -m trade_analysis.indicators_pandas_test
 
+      - name: feed resilience across a network switch
+        run: python -m trade_analysis.live_lab.feed_resilience_test
+
       - name: preflight <-> autostart gate contract
         run: python -m trade_analysis.live_lab.preflight_gate_test
 
