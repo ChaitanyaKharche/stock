@@ -19,6 +19,7 @@ be checked by something. These tests are that something.
 """
 from __future__ import annotations
 
+import os
 import sys
 
 from .autostart import _all_symbols, _fatal_lines
@@ -37,11 +38,24 @@ class _Args:
 
 def main() -> int:
     ok = True
+    skipped = 0
 
     def check(name, cond, detail=""):
         nonlocal ok
         ok = ok and cond
         print(f"  [{'PASS' if cond else 'FAIL'}] {name}" + (f"  {detail}" if detail else ""))
+
+    def skip(name, why):
+        """A check the host cannot run is SKIP, never FAIL.
+
+        Scoring it as a failure made this whole file exit 1 on every non-Windows host,
+        which is how "all the tests fail" became the normal state and stopped meaning
+        anything. This project's own lesson, from PROJECT_REPORT.md: a gate above the
+        attainable range is BROKEN, not strict.
+        """
+        nonlocal skipped
+        skipped += 1
+        print(f"  [SKIP] {name}  {why}")
 
     print("=" * 78)
     print("PREFLIGHT <-> AUTOSTART GATE CONTRACT")
@@ -49,12 +63,21 @@ def main() -> int:
 
     # 1. the live exposure check must actually carry the token autostart looks for.
     #    This is the assertion that would have caught the 2026-09-04 regression.
+    #
+    #    It queries Windows Firewall, so off Windows `check_exposure` returns its own
+    #    "Windows-only; skipped" WARN. That line is a verdict carrying no EXPOSURE_TAG,
+    #    so the untagged-verdict assertion below would fire on an absence of evidence
+    #    rather than on evidence of the regression. Distinguish the two.
     lines = check_exposure()
     verdicts = [l for l in lines if l.startswith(FAIL) or l.startswith(WARN)]
-    tagged = [l for l in verdicts if EXPOSURE_TAG in l]
-    check("live exposure verdicts carry EXPOSURE_TAG",
-          bool(verdicts) and len(tagged) == len(verdicts),
-          f"{len(tagged)}/{len(verdicts)} tagged")
+    if os.name != "nt":
+        skip("live exposure verdicts carry EXPOSURE_TAG",
+             "Windows-only; run on the lab machine to check this contract")
+    else:
+        tagged = [l for l in verdicts if EXPOSURE_TAG in l]
+        check("live exposure verdicts carry EXPOSURE_TAG",
+              bool(verdicts) and len(tagged) == len(verdicts),
+              f"{len(tagged)}/{len(verdicts)} tagged")
     for l in verdicts:
         print(f"         {l.strip()[:88]}")
 
@@ -86,7 +109,8 @@ def main() -> int:
     check("missing share_symbols degrades to the options universe",
           _all_symbols(_Args(["QQQ"], None)) == ["QQQ"])
 
-    print(f"\n  RESULT: {'PASS' if ok else 'FAIL'}")
+    tail = f"  ({skipped} skipped: not this platform)" if skipped else ""
+    print(f"\n  RESULT: {'PASS' if ok else 'FAIL'}{tail}")
     return 0 if ok else 1
 
 

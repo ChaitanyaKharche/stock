@@ -1,0 +1,43 @@
+# What you need to RUN THE TESTS. Not what you need to trade.
+#
+# WHY THIS FILE EXISTS
+# --------------------
+# `requirements.txt` is a full `pip freeze` of the trading machine: ~100 pinned packages
+# including torch 2.8.0, triton, and the entire nvidia-cu12 CUDA stack -- several GB of
+# wheels. Installing it is the only documented way to get a working checkout, so the cost
+# of running a test that compares two lists of strings was a multi-gigabyte download and
+# a CUDA-capable host.
+#
+# The practical effect was that nothing ran anywhere except the one Windows box with the
+# real venv and Theta Terminal -- which is also the machine that must collect a live
+# session every weekday. Research and data collection were competing for one host, and
+# on a fresh clone every test failed identically with `ModuleNotFoundError: No module
+# named 'httpx'`, which reads like catastrophe and means "nothing is installed".
+#
+# This is the offline set: numpy, pandas, scipy, httpx, pytz, pytest. ~150 MB, no CUDA,
+# no network at runtime. It is enough for every test under trade_analysis/live_lab/.
+#
+#   pip install -r requirements-dev.txt
+#   pytest
+#
+# DELIBERATELY ABSENT
+# -------------------
+#   torch / transformers / accelerate   only the HPC zero-shot arm needs these, and that
+#                                       runs on Discovery with its own conda env.
+#   yfinance / streamlit / fastapi      only huggingface_space/ needs these, and its
+#                                       tests hit the network, so they cannot be CI.
+#   pandas_ta                           pins `from numpy import NaN`, which numpy 2.0
+#                                       removed. huggingface_space/trade_analysis/
+#                                       indicators.py already documents this and ships
+#                                       its own Wilder implementations because of it.
+#                                       Do not add it back to make a test pass.
+#
+# Versions match requirements.txt exactly where they overlap, so a test passing here
+# means the same code passed on the trading machine's numpy and pandas.
+
+numpy==1.26.4
+pandas==2.3.2
+scipy==1.16.1
+httpx==0.28.1
+pytz==2025.2
+pytest==9.1.1

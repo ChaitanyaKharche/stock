@@ -60,6 +60,44 @@ stock/
 
 ---
 
+## Running the tests
+
+You do not need the trading stack to run the tests, and you should not install it just to
+run them. `requirements.txt` is a full `pip freeze` of the trading machine — torch,
+triton, the entire nvidia-cu12 CUDA stack, several GB of wheels — so it used to be that
+the only host where any test could run was the same Windows box that has to collect a
+live session every weekday. On a fresh clone every test failed identically with
+`ModuleNotFoundError: No module named 'httpx'`, which looks like the suite is broken and
+actually means nothing is installed.
+
+```
+pip install -r requirements-dev.txt     # ~150 MB, no CUDA, any OS
+pytest                                  # trade_analysis/live_lab/, offline
+```
+
+`pytest.ini` teaches discovery this repo's `<thing>_test.py` naming — without it, bare
+`pytest` collected zero tests and exited 5, which at a glance is indistinguishable from a
+suite that ran clean. The same set runs on every push via `.github/workflows/tests.yml`.
+
+The house-style tests also run standalone and print their own PASS/FAIL report:
+
+```
+python -m trade_analysis.live_lab.ledger_test           # coverage denominator
+python -m trade_analysis.live_lab.preflight_gate_test   # preflight <-> autostart contract
+python -m trade_analysis.live_lab.bar_cache_test        # cache cannot change a fill
+```
+
+**Two exclusions, both deliberate.** `huggingface_space/*_test.py` fetch live quotes
+through yfinance, so they are integration checks against a third party — run them by
+hand, because a network flake must never read as a code failure.
+`trade_analysis/backtesting/*_backtest.py` are research scripts needing the local
+ThetaData archive; they are not tests despite the filenames.
+
+**A platform-gated check is SKIP, never FAIL.** `preflight_gate_test` verifies a Windows
+Firewall contract; off Windows it skips that one assertion and still exits 0. Scoring an
+unrunnable check as a failure is how "all the tests fail" becomes the normal state and
+stops meaning anything.
+
 ## Setup
 
 ### Windows (Local Development)
