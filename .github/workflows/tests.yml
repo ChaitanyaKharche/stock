@@ -56,6 +56,11 @@ jobs:
       - name: feed resilience across a network switch
         run: python -m trade_analysis.live_lab.feed_resilience_test
 
+      # Uses throwaway `git init` repos in a temp dir; never touches this
+      # checkout's remote.
+      - name: end-of-session archive
+        run: python -m trade_analysis.live_lab.archive_test
+
       - name: preflight <-> autostart gate contract
         run: python -m trade_analysis.live_lab.preflight_gate_test
 

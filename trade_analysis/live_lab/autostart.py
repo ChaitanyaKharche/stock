@@ -493,6 +493,14 @@ def main(argv=None) -> int:
                     help="run only the shares arm (options entitlement lapsed, etc.)")
     ap.add_argument("--no-shares", action="store_true",
                     help="run only the frozen options arm")
+    # Archiving is ON by default, and that is the point: the six-session hole on
+    # 2026-09-09..16 happened because committing the record was a manual step that
+    # someone had to remember. An opt-in safeguard is the safeguard that was already
+    # failing.
+    ap.add_argument("--no-archive", action="store_true",
+                    help="do not commit live_lab_data at the end of the session")
+    ap.add_argument("--no-push", action="store_true",
+                    help="commit the session record but do not push it")
     args = ap.parse_args(argv)
 
     day = now_et().date()
@@ -637,6 +645,24 @@ def main(argv=None) -> int:
         ledger.note_finished(day, args.lab_dir, supervisor_rc=rc)
     except Exception as exc:                                 # noqa: BLE001
         log(f"ledger note_finished failed: {exc!r}")
+
+    # Make the day durable off this disk. Runs AFTER note_finished so the ledger line it
+    # commits is the terminal one, and after the runners have written their daily files.
+    #
+    # This is here because committing by hand was the plan and the plan produced a
+    # six-session hole: on 2026-09-16 the repository stopped at 09-08 while six later
+    # sessions existed only on this machine. See research/live_lab_coverage_audit.md.
+    #
+    # archive_session never raises and never returns non-zero into `rc` -- the session's
+    # exit code reports the session, not the bookkeeping. A failed push is expected on a
+    # bad network and is not a failure: the commit is already local and the next
+    # successful push carries it.
+    if not args.no_archive:
+        try:
+            from .archive import archive_session
+            archive_session(day, args.lab_dir, push=not args.no_push, log=log)
+        except Exception as exc:                             # noqa: BLE001
+            log(f"archive failed and was ignored: {exc!r}")
     return rc
 
 

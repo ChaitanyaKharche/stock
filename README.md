@@ -72,7 +72,7 @@ actually means nothing is installed.
 
 ```
 pip install -r requirements-dev.txt     # ~150 MB, no CUDA, any OS
-pytest                                  # trade_analysis/, offline, 37 checks
+pytest                                  # trade_analysis/, offline, 48 checks
 ```
 
 `pytest.ini` teaches discovery this repo's `<thing>_test.py` naming — without it, bare
@@ -87,6 +87,7 @@ python -m trade_analysis.live_lab.preflight_gate_test   # preflight <-> autostar
 python -m trade_analysis.live_lab.bar_cache_test        # cache cannot change a fill
 python -m trade_analysis.indicators_pandas_test         # indicators match the live lab
 python -m trade_analysis.live_lab.feed_resilience_test  # WiFi <-> hotspot transitions
+python -m trade_analysis.live_lab.archive_test          # end-of-session commit
 ```
 
 **Two exclusions, both deliberate.** `huggingface_space/*_test.py` fetch live quotes
@@ -94,6 +95,15 @@ through yfinance, so they are integration checks against a third party — run t
 hand, because a network flake must never read as a code failure.
 `trade_analysis/backtesting/*_backtest.py` are research scripts needing the local
 ThetaData archive; they are not tests despite the filenames.
+
+**The live lab archives itself.** `autostart` commits `live_lab_data/` at the end of
+every session and pushes it, on by default (`--no-archive` / `--no-push` to opt out). It
+stages an explicit pathspec, never `git add -A`, so it cannot commit code or `.env`; it
+makes no commit when there is nothing to say; and a rejected push is left rejected rather
+than rebased — the commit is local and the next successful push carries it. This exists
+because committing by hand was the plan and the plan produced a six-session hole
+(`research/live_lab_coverage_audit.md`). To backfill one by hand:
+`python -m trade_analysis.live_lab.archive --day 2026-09-17`.
 
 **A platform-gated check is SKIP, never FAIL.** `preflight_gate_test` verifies a Windows
 Firewall contract; off Windows it skips that one assertion and still exits 0. Scoring an
