@@ -297,9 +297,18 @@ def main(argv=None) -> int:
     if v0i is not None and (np.where(cell_idx == v0i)[0]).size:
         j = int(np.where(cell_idx == v0i)[0][0])
         rank = int((net_mean > net_mean[j]).sum()) + 1
+        # Report the percentile V0 SITS AT, not the percentile of its rank. The first
+        # version printed `100 * rank / n` and labelled it "th pct", so a cell beaten by
+        # 94% of the grid printed as "94.1th pct" -- which reads as excellent and means the
+        # opposite. Caught on the real run, where V0 came back at rank 2,656,847.
+        pctile = 100.0 * (cell_idx.size - rank) / cell_idx.size
         print(f"    FROZEN V0 (cell #{v0i:,}): net ${float(net_mean[j]):+.4f}/session, "
-              f"breakeven ${float(brk[j]):.4f}, rank {rank:,}/{cell_idx.size:,} "
-              f"({100 * rank / cell_idx.size:.1f}th pct)")
+              f"breakeven ${float(brk[j]):.4f}/share")
+        print(f"      rank {rank:,} of {cell_idx.size:,} by net mean -- it beats only "
+              f"{pctile:.1f}% of the grid ({100 - pctile:.1f}% of cells are better)")
+        if float(brk[j]) < 0:
+            print("      NOTE: a NEGATIVE breakeven means this cell loses money GROSS, "
+                  "before any cost is charged.")
 
     # ---- StepM, only if SPA rejected ---------------------------------------------------
     print()
