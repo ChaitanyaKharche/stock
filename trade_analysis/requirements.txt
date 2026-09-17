@@ -124,6 +124,11 @@ osqp==1.0.4
 overrides==7.7.0
 packaging==25.0
 pandas==2.1.4
+# BROKEN PIN: deleted from PyPI (whole release history wiped, maintainer changed).
+# `pip install` of this line fails with "from versions: none". Only 0.4.67b0/
+# 0.4.71b0 remain and both need Python>=3.12 + numpy>=2.2.6, conflicting with the
+# numpy pin in this same file. See the Setup section of README.md for the three
+# verified options. Nothing under trade_analysis/live_lab/ needs this.
 pandas_ta==0.3.14b0
 pandocfilters==1.5.1
 parso==0.8.4

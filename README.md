@@ -100,6 +100,50 @@ stops meaning anything.
 
 ## Setup
 
+> **`pip install -r requirements.txt` cannot succeed on a fresh machine as of
+> 2026-09-16.** `pandas_ta==0.3.14b0` has been **deleted from PyPI** — the whole release
+> history was wiped and the package changed maintainer. Verified:
+>
+> ```
+> $ pip download --no-deps 'pandas_ta==0.3.14b0'
+> ERROR: Ignored the following versions that require a different python version:
+>        0.4.67b0 Requires-Python >=3.12; 0.4.71b0 Requires-Python >=3.12
+> ERROR: Could not find a version that satisfies the requirement pandas_ta==0.3.14b0
+>        (from versions: none)
+> ```
+>
+> Only 0.4.67b0 / 0.4.71b0 remain, and both need **Python >= 3.12 and numpy >= 2.2.6** —
+> which conflicts with this file's own `numpy==1.26.4`. Even given the old wheel, 20
+> modules of 0.3.14b0 do `from numpy import NaN`, an alias numpy 2.0 expired, so it fails
+> at import on any numpy 2.x.
+>
+> **This is why a working checkout could not be reproduced anywhere.** The install
+> instruction below is the documented path and it has been broken by an upstream deletion
+> nobody was notified about. It is pinned in three files: `requirements.txt:60`,
+> `trade_analysis/requirements.txt:127`, `conda_requirements.txt:78`.
+>
+> **To run the tests, none of this matters — use `requirements-dev.txt` (above).**
+>
+> Three options for the trading stack, all verified working:
+> 1. **Drop it.** Only `app1.py`, `trade_analysis/backtesting/multi_strategy_backtest.py`
+>    and `huggingface_space/trade_analysis/train_tft.py` import it, and all three are
+>    legacy. `huggingface_space/trade_analysis/indicators.py` already ships its own Wilder
+>    implementations precisely because of this, and
+>    `huggingface_space/requirements.txt:20` already excludes it deliberately — so the
+>    Space is unaffected. This is the recommended path.
+> 2. **`pandas-ta-classic==0.8.32`** — maintained fork, numpy 2.x native, works on
+>    pandas 2.3.2. Import name is `pandas_ta_classic`, so three import lines change.
+> 3. **Vendor 0.3.14b0 and stay on numpy<2.** Preserves current behaviour exactly; 18/18
+>    indicators verified on numpy 1.26.4 + pandas 2.3.2. No upstream to update from.
+>
+> Do NOT use `pandas-ta-openbb` — 0.4.24 raises `AttributeError: module 'importlib' has
+> no attribute 'metadata'` on a clean import.
+
+> The root **`Dockerfile` is dead** and separate from the above: it does `COPY app app`
+> and runs `uvicorn app.api:app`, but there is no `app/` directory in this repo. The
+> deployed Space builds from `huggingface_space/`, which has its own Dockerfile and
+> requirements. Delete it or point it somewhere real.
+
 ### Windows (Local Development)
 
 1. **Prerequisites**
