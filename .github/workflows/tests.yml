@@ -69,6 +69,9 @@ jobs:
       - name: ORB veto analysis arithmetic
         run: python -m trade_analysis.live_lab.orb_veto_backtest_test
 
+      - name: 8-line breakout signal
+        run: python -m trade_analysis.live_lab.breakout_levels_test
+
       - name: preflight <-> autostart gate contract
         run: python -m trade_analysis.live_lab.preflight_gate_test
 
