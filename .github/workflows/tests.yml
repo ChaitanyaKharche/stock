@@ -75,6 +75,14 @@ jobs:
       - name: bar cache cannot change a fill
         run: python -m trade_analysis.live_lab.bar_cache_test
 
+      # From fix/live-lab-host-suspend. Both offline; the wake-lock check
+      # inside the guard test SKIPs off Windows rather than failing.
+      - name: host suspend guards
+        run: python -m trade_analysis.live_lab.autostart_guard_test
+
+      - name: momo sweep statistics
+        run: python -m trade_analysis.momo_sweep.stats_test
+
       # Read-only. Prints UNRECORDED sessions and exits 0 either way -- this reports
       # coverage, it does not gate the build on the lab having collected.
       # --reconcile is NEVER passed here: it globs daily/ on the host it runs on, and a

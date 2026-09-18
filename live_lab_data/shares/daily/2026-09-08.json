@@ -1,0 +1,40 @@
+{
+  "date": "2026-09-08",
+  "arm": "SHARES",
+  "config_hash": "b53ca8a58aa11718",
+  "symbols": [
+    "AAPL",
+    "DIA",
+    "GOOGL",
+    "IWM",
+    "NVDA",
+    "QQQ",
+    "SPY",
+    "WMT",
+    "XLE",
+    "XLF",
+    "XLK",
+    "XLP",
+    "XLV",
+    "XLY"
+  ],
+  "trades_closed": 65,
+  "net": -373.14,
+  "still_open": null,
+  "degraded_bars": {
+    "DIA": 2
+  },
+  "feed": null,
+  "backfilled": true,
+  "backfill_reason": "the arm stopped producing records at 15:34:08 ET, before the 15:55 flatten; cause not in the record",
+  "backfill_reason_source": "derived",
+  "backfill_derived_reason": "the arm stopped producing records at 15:34:08 ET, before the 15:55 flatten; cause not in the record",
+  "backfill_evidence": {
+    "last_trade_exit_et": "2026-09-08T15:34:08.283338",
+    "last_outage_et": "2026-09-08T12:29:05.370332",
+    "session_end_event": null,
+    "host_suspend_outages": 0,
+    "n_outages": 4
+  },
+  "backfilled_at": "2026-09-11T00:29:31"
+}

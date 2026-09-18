@@ -1,0 +1,15 @@
+# This repo is edited on Windows with core.autocrlf=true and RUN on Linux (Discovery).
+# Without this file, git rewrites shell scripts to CRLF in the working tree, and a CRLF
+# shell script on Linux fails with `$'\r': command not found` -- or worse, mangles the
+# `#!` line and the `#SBATCH` directives, which Slurm reads as comments and would silently
+# ignore, so a job could run with the WRONG partition, wall clock or array size.
+# `trade_analysis/scripts/clean_trade_venv.sh` is already CRLF in the working tree, which
+# is what prompted adding this.
+*.sh      text eol=lf
+*.sbatch  text eol=lf
+*.bash    text eol=lf
+
+# Binary caches: never touched, never diffed, never line-ending-converted.
+*.npz     binary
+*.pkl     binary
+*.parquet binary

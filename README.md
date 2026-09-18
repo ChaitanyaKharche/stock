@@ -72,7 +72,7 @@ actually means nothing is installed.
 
 ```
 pip install -r requirements-dev.txt     # ~150 MB, no CUDA, any OS
-pytest                                  # trade_analysis/, offline, 76 checks
+pytest                                  # trade_analysis/, offline, 78 checks
 ```
 
 `pytest.ini` teaches discovery this repo's `<thing>_test.py` naming — without it, bare
@@ -90,6 +90,8 @@ python -m trade_analysis.live_lab.feed_resilience_test  # WiFi <-> hotspot trans
 python -m trade_analysis.live_lab.archive_test          # end-of-session commit
 python -m trade_analysis.live_lab.orb_veto_test         # range-expansion veto
 python -m trade_analysis.live_lab.orb_veto_backtest_test
+python -m trade_analysis.live_lab.autostart_guard_test   # host suspend guards
+python -m trade_analysis.momo_sweep.stats_test           # sweep statistics
 ```
 
 **Two exclusions, both deliberate.** `huggingface_space/*_test.py` fetch live quotes

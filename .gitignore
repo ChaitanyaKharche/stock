@@ -109,7 +109,7 @@ live_lab_data/shares/positions_open.json
 # time would double them in every clone FOREVER -- git keeps blobs even after a later
 # delete, so this is only free to decide before the first commit.
 # Regenerate with:  python huggingface_space/sync_shared.py --push
-# sync_shared.py --check refuses to call the folder upload-ready without them.
+# sync_shared.py (no flag) refuses to call the folder upload-ready without them.
 huggingface_space/trained_models/
 
 # Derived VRP frame. Rebuildable in ~1-2h with:
@@ -117,3 +117,27 @@ huggingface_space/trained_models/
 # Git keeps blobs forever, so 37 MB of regenerable parquet would sit in every clone
 # permanently -- the same reason trained_models/ is ignored on the Space side.
 data/vrp/
+
+# Browser-automation scratch from an MCP session. Page snapshots, not source.
+.playwright-mcp/
+
+# Upload tarball of the derived VRP frame -- same bytes as data/vrp/, which is already
+# ignored above for the same reason. Rebuild and re-tar; never commit it.
+vrp_frame.tar.gz
+
+# Slurm logs. Every sbatch here now writes to an absolute path under ~/vrp/logs, but a
+# relative --output silently resolves against the submission directory -- i.e. this repo --
+# and that is exactly how 24 stray vrp-*.out/.err files ended up in the cluster clone and
+# tripped a provenance gate. Root-anchored so a deliberately-committed log elsewhere in the
+# tree still works.
+/*.out
+/*.err
+
+# Derived frames. Built by build_vrp_dataset / the cost model; never committed (git log on
+# data/ is empty) and already a DENY root in scripts/tidy.py because they are expensive to
+# rebuild. Ignored so they stop showing as ?? in every status.
+/data/
+
+# Unrelated project that happens to live in this tree (218 MB, its own README/src/
+# requirements.txt). Not part of trade_analysis and must never enter this history.
+/pokemon/

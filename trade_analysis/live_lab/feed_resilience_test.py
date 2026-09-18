@@ -304,6 +304,48 @@ def test_both_arms_wait_on_the_same_budget():
     assert runner.UPSTREAM_WAIT_SEC == shares_runner.UPSTREAM_WAIT_SEC == F.UPSTREAM_WAIT_SEC
 
 
+# ------------------------------------------- the two guards have to compose, not just coexist
+
+def test_the_upstream_wait_is_suspend_aware():
+    """The hole that only exists once BOTH branches land.
+
+    `_wait_for_history` used bare `time.sleep(3)`. That was fine at 45s reachable only
+    from `start_terminal()`. It is not fine at UPSTREAM_WAIT_SEC on every already-up
+    path: the host can suspend inside that window, and the suspend guard would never
+    see it -- so the record would show a clean wait where the machine was asleep.
+
+    Neither branch was wrong alone. Merging them created the gap, which is exactly the
+    kind of thing a clean textual auto-merge will not tell you about.
+    """
+    import inspect
+
+    from . import autostart as A
+    src = inspect.getsource(A._wait_for_history)
+    assert "_sleep_watched" in src, \
+        "_wait_for_history sleeps without the suspend guard"
+    assert "lab_dir" in inspect.signature(A._wait_for_history).parameters, \
+        "_wait_for_history cannot reach a store to record a suspend"
+    # And main must actually pass one, or the parameter is decoration.
+    main_src = inspect.getsource(A.main)
+    assert "lab_dir=args.lab_dir" in main_src, \
+        "main calls _wait_for_history without a lab_dir"
+
+
+def test_the_wake_lock_is_released_after_the_archive_not_before():
+    """Order matters: the push can take tens of seconds.
+
+    Releasing the lock earlier would let the host sleep mid-push, leaving the day's
+    record on one disk -- the precise failure the archive exists to prevent.
+    """
+    import inspect
+
+    from . import autostart as A
+    src = inspect.getsource(A.main)
+    assert "release_system_awake()" in src, "the wake lock is never released"
+    assert src.index("archive_session") < src.index("release_system_awake()"), \
+        "the wake lock is released before the archive push"
+
+
 CHECKS = [(n, f) for n, f in sorted(globals().items())
           if n.startswith("test_") and callable(f)]
 

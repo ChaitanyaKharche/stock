@@ -179,8 +179,19 @@ clock is irrelevant. It is in the sweep so the optimiser cannot be the excuse fo
 
 ## Cluster layout — and the purge that already ate this project once
 
-`/scratch` on Discovery is **purged after 45 days of no access.** It has already destroyed
-work here: the entire `/scratch/kharche.c/kharche.c/` tree is gone, taking the **original
+`/scratch` on Discovery is **wiped in full during the monthly maintenance window, on the
+first Tuesday of every month.** There is NO access-time condition: a file you created and
+read yesterday is deleted on the first Tuesday regardless. The published policy is blunt
+about it -- *"All files on /scratch will be purged during the monthly maintenance window
+(the first Tuesday of the month)"*, 20 TB / 20 M inodes, not backed up, and the docs add
+**"Do not store files on /scratch."**
+(https://rc.northeastern.edu/scratch-space-policy/ , verified 2026-09-11)
+
+> This paragraph used to say "purged after 45 days of no access". That was wrong, and
+> wrong in the direction that loses work -- it implies touching a file protects it. It
+> does not. Corrected after re-reading the policy page.
+
+It has already destroyed work here: the entire `/scratch/kharche.c/kharche.c/` tree is gone, taking the **original
 TFT model-definition source** with it. The checkpoints survived only because they had been
 copied into the git repo, which is why `models/tft_model.py` is a reverse-engineered
 reconstruction rather than the real thing.
@@ -240,3 +251,94 @@ Transfer only `data/vrp/` — parquet, a few hundred MB — not the 3.5 GB raw a
 | `har_baseline.py` | HAR benchmarks, QLIKE, clustered Diebold–Mariano, `--audit` |
 | `train_vrp.py` | the neural candidate; QLIKE loss, AdamW or Muon |
 | `submit_sweep.sbatch` | 24-cell array job |
+
+---
+
+## 2026-09-11: what the literature and the cluster docs change about this plan
+
+Three web research passes, run overnight. Findings that bear on this package, with the
+decisions NOT taken because they are the user's to take.
+
+### The sweep should not run yet — and the reason is cheap to test
+
+The headline result (`implied_variance` 0.411136 beats `HAR-RV-J` 0.541358, DM t=-2.30,
+p=0.0222) is a **24.1% QLIKE reduction from one regressor**. Published IV-augmentation
+gains at daily horizons are single-digit percent; the best zero-shot foundation model in
+the field manages 1.3-1.8%. 24.1% on one asset sits at the very top of the published range.
+
+The mechanism that would explain it without the market being clever: **IV mechanically
+encodes time-to-close and the diurnal U-shape, and a HAR on day/week/month lags does not.**
+
+Dumitru, Hizmeri & Izzeldin, *J. Banking and Finance* 170:107342 (2025) build HAR
+predictors from periodicity-filtered returns and report **"for SPY, we observe improvements
+of up to 7% in the forecast losses using HARP models"** -- at DAILY horizons, where the
+diurnal effect is smallest. They also indict the J term directly: SPY jump days fall
+324 -> 271 once periodicity is filtered, and the 30-stock average collapses 504 -> 183.
+
+So the next experiment is not a GPU sweep. It is: periodicity-adjust the baseline, re-run
+the DM, and look at the sign of the change.
+
+- if |t| collapses below ~1.5, the headline was a specification artifact, the market is
+  NOT beating us, and the neural arm's expected value is restored
+- if the gap survives, it is a much stronger negative and the neural arm should stop
+
+Either outcome is worth more than the sweep, and both are CPU-hours.
+
+Also worth doing first, and nearly free: **count how many sessions carry the t = -2.30.**
+A 24% loss reduction at t = -2.30 over ~250 clustered sessions means a very heavy-tailed
+differential. If a handful of sessions carry it, no SPA or MCS will keep it.
+
+### Muon: the diagnosis was right, and the axis should still go
+
+`torch.optim.Muon` is real and public since torch 2.9.0. The env resolving to 2.6.0+cu124
+genuinely had no native Muon, so `train_vrp`'s refusal was correct.
+
+But the axis is not worth its cost. The best available evidence for exactly this setting
+(15 optimizers x 17 tabular datasets, MLPs, regression) puts Muon at **+0.32% mean score
+for 3.03x tuning time**. The 2x claims come from 1.5B-param LLMs. Dropping the axis halves
+the grid AND removes the torch-version hazard that motivated all the plumbing -- the
+problem dissolves rather than gets solved.
+
+One correction worth recording: Muon raises `ValueError` on any non-2D parameter, so it
+cannot silently no-op. **The silent AdamW substitution risk came from our own fallback, not
+from torch.** The general rule is to delete fallbacks, not to fix them.
+
+### CPU on `short`, not GPU — decided by queue policy, not FLOPs
+
+Published per-user caps (rc.northeastern.edu/partitions, checked 2026-09-11):
+
+| partition | time (def/max) | running jobs/user | note |
+|---|---|---|---|
+| `short` | 4 h / **48 h** | **50** | 1024 cores |
+| `gpu` | 4 h / 8 h | **4** | GPU limit 1 |
+| `sharing` | 30 m / 60 m | 2 | unusable here |
+
+A 24-cell array is **six sequential waves on `gpu` and one wave on `short`.** The FLOP
+argument agrees independently -- documented CPU/GPU crossover is ~500K params with
+kernel-launch overhead dominating, and this model is well under that -- but it does not
+need to be made. Skip `torch.compile` too: per-cell compile cost exceeds per-cell training
+time at this scale.
+
+### Controls the grid is missing
+
+The RV literature's consistent finding is that a properly fitted HAR OLS is not beaten by
+ML. Put **HAR OLS and a GBDT cell in the grid** -- GBDT cells cost about a second each --
+and spend the freed optimizer budget on **>= 5 seeds per config** instead of more
+hyperparameters. With an expected null, seed variance is precisely what would otherwise get
+written up as an effect.
+
+### Contamination: one model is disqualifying
+
+**Do not use Kronos.** It is the one foundation model actually pretrained on 1-minute
+equity bars, and its training data runs **through June 2024**. The held-out year is 2024;
+overlap with 2020-2023 train/validation is total. Moirai-2.0 and TimesFM-2.5 also carry
+*measured* leakage on fev-bench (28% and 10%). Chronos-2 (Apache-2.0, covariate-native, no
+financial pretraining domain) and TTM (<1M params) are the two clean ones worth a few
+CPU-hours -- and TTM is the only TSFM in the published comparison that beats Log-HAR at
+every horizon, by 1.3-1.8%.
+
+### Not done here, deliberately
+
+Dropping the Muon axis, moving the partition, and adding control cells all change what the
+experiment IS. They are well-supported but they are the user's calls, so this section
+records them rather than applying them.
