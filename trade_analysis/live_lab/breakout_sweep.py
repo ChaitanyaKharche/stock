@@ -305,12 +305,27 @@ def report(symbol: str, rows: list[dict]) -> dict:
         verdict.append("  A: too few sessions for a clustered bootstrap -- INCONCLUSIVE")
     else:
         verdict.append("  A: CI includes zero -- NULL on this symbol")
-    if mv and st.median(mv) <= COST_FLOOR_BP:
-        verdict.append(f"  B: median move {st.median(mv):.1f}bp does NOT clear the "
-                       f"{COST_FLOOR_BP:.0f}bp floor -- claim B is dead on the "
-                       f"underlying alone;\n     no option backtest is needed.")
+    # Claim B is about the series actually traded, so it reads the CAPPED mean. The
+    # first version read the uncapped median and so announced "claim B is dead" no
+    # matter what the cap did -- a verdict computed on the control rather than the
+    # treatment.
+    #
+    # It also said "no option backtest is needed", which overstates the logic and is
+    # corrected in breakout_options_results.md §3: a long option cannot lose more than
+    # its premium, so the underlying series overstates a long-premium expression's
+    # losses and a null here does not logically kill the option arm. What it removes is
+    # the REASON to expect one to work -- buying convexity against a zero-drift signal
+    # means paying the variance risk premium this project already measured.
+    ref = cobs if cobs is not None else obs
+    if ref is not None and ref <= COST_FLOOR_BP:
+        verdict.append(f"  B: capped mean {ref:.2f}bp does not clear the "
+                       f"{COST_FLOOR_BP:.0f}bp ATM 0DTE floor.\n"
+                       f"     Not a proof of death -- a long option floors its loss at "
+                       f"the premium -- but it\n     removes the reason to expect one to "
+                       f"pay. See results §3.")
     else:
-        verdict.append("  B: median clears the floor; the SPY 0DTE arm is worth running.")
+        verdict.append("  B: capped mean clears the floor; the SPY 0DTE arm is worth "
+                       "running.")
     if clo is not None and clo > 0:
         verdict.append("  C: CAPPED mean is positive with CI excluding zero -- the cap is "
                        "doing the work.\n     That is a statement about PATH, not drift, "
