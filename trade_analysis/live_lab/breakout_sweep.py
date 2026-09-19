@@ -118,8 +118,16 @@ def evaluate_signal(sig, ten, take_profit_bp: float = CAP50_BP) -> dict | None:
         back_inside = (b["close"] < lv.price if long else b["close"] > lv.price)
         if exit_px is None and b["ts"] > sig.fill_ts and back_inside:
             exit_px, exit_reason, exit_ts = b["close"], "failed", b["ts"]
-            if cap_px is not None:
-                break
+            # BREAK UNCONDITIONALLY. The position is closed; there is nothing left for a
+            # limit order to fill against and nothing left to excurse.
+            #
+            # This read `if cap_px is not None: break`, so when the breakout failed
+            # BEFORE the cap was touched the loop carried on and could register a cap
+            # fill on a later bar -- after the position had already been exited. Pure
+            # lookahead, and it was not subtle in its effect: on identical QQQ data it
+            # moved median MFE 34.26 -> 40.70 bp and the cap-hit rate 64.8% -> 74.5%,
+            # which is where the capped mean of +4.98 bp came from.
+            break
     if exit_px is None:
         exit_px, exit_reason, exit_ts = ten[-1]["close"], "eod", ten[-1]["ts"]
 

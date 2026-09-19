@@ -395,6 +395,34 @@ def test_a_trade_that_never_reaches_the_cap_reports_the_uncapped_exit():
     assert r["move_bp"] < 0
 
 
+def test_the_cap_cannot_fill_after_the_position_has_already_exited():
+    """The lookahead that inflated the first capped result.
+
+    Breakout fails at 10:00; price then runs well past the cap at 10:30. The position
+    was closed at 10:00, so there is nothing for the limit to fill against and nothing
+    left to excurse.
+
+    The bug was `if cap_px is not None: break` on the failed-breakout branch -- so when
+    the cap had NOT yet filled, the loop carried on and could register a fill on a later
+    bar. On QQQ it moved median MFE 34.26 -> 40.70 bp and cap-hit 64.8% -> 74.5%, which
+    is where a +4.98 bp capped mean came from. Not subtle, and invisible without this
+    check, because every individual number still looked plausible.
+    """
+    from .breakout_sweep import evaluate_signal
+    lv = [Level("D-1 high", 700.0, "up")]
+    rth = _mins(DAY, (9, 30), (9, 40), 699.0, 699.5, 698.5, 699.0)
+    rth += _mins(DAY, (9, 40), (9, 50), 700.0, 700.8, 699.9, 700.6)    # break
+    rth += _mins(DAY, (9, 50), (10, 0), 700.6, 700.8, 700.4, 700.7)    # fill bar
+    rth += _mins(DAY, (10, 0), (10, 10), 700.0, 700.2, 698.0, 698.5)   # FAILS, exit here
+    rth += _mins(DAY, (10, 10), (16, 0), 699.0, 760.0, 698.0, 758.0)   # huge run AFTER
+    r = evaluate_signal(_one_signal(rth, lv), _ten(rth))
+    assert r["exit_reason"] == "failed", r
+    assert r["exit_ts"][11:16] == "10:00", r["exit_ts"]
+    assert r["cap_hit"] is False, "the cap filled after the position was closed"
+    assert r["move_capped_bp"] == r["move_bp"], r
+    assert r["mfe_bp"] < 50.0, f"MFE ran past the exit: {r['mfe_bp']}"
+
+
 def test_a_short_signals_cap_is_below_the_entry():
     """A sign error here would make every down-break's cap unreachable and silently
     halve the sample the cap applies to."""
