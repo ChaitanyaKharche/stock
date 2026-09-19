@@ -339,6 +339,79 @@ def test_the_bootstrap_refuses_too_few_days():
     assert boot_mean({f"d{i}": [1.0] for i in range(5)}) == (None, None, None, None)
 
 
+def test_the_profit_cap_exits_on_an_intrabar_touch():
+    """The exit the whole strategy is built around, and the one the first version of
+    `evaluate_signal` OMITTED -- it measured 'hold until the breakout fails', which is
+    close to the opposite, and reported a -13.79bp median on QQQ as if that were his
+    strategy.
+
+    A bar that spikes to +40bp and closes back at breakeven must still fill a +20bp
+    limit. Uncapped sees ~0; capped sees +20.
+    """
+    from .breakout_sweep import CAP50_BP, evaluate_signal
+    lv = [Level("D-1 high", 700.0, "up")]
+    rth = _mins(DAY, (9, 30), (9, 40), 699.0, 699.5, 698.5, 699.0)
+    rth += _mins(DAY, (9, 40), (9, 50), 700.0, 701.0, 699.9, 700.9)      # break
+    entry = 700.9
+    tp = entry * (1 + CAP50_BP / 10_000.0)
+    rth += _mins(DAY, (9, 50), (10, 0), entry, tp * 1.002, entry, entry)  # spike, close flat
+    rth += _mins(DAY, (10, 0), (16, 0), entry, entry, entry, entry)
+    r = evaluate_signal(_one_signal(rth, lv), _ten(rth))
+    assert r["cap_hit"] is True, r
+    assert abs(r["move_capped_bp"] - CAP50_BP) < 0.5, r["move_capped_bp"]
+    assert abs(r["move_bp"]) < 1.0, f"uncapped should be ~flat, got {r['move_bp']}"
+
+
+def test_the_cap_beats_the_uncapped_exit_when_price_reverses():
+    """The QQQ shape: goes +34bp in your favour, then gives it all back and more.
+
+    This is the case that makes claim A and claim C compatible -- no terminal drift, and
+    a reachable favourable excursion. If this test ever fails, the two series have been
+    collapsed into one and the contrast is gone.
+    """
+    from .breakout_sweep import evaluate_signal
+    lv = [Level("D-1 high", 700.0, "up")]
+    rth = _mins(DAY, (9, 30), (9, 40), 699.0, 699.5, 698.5, 699.0)
+    rth += _mins(DAY, (9, 40), (9, 50), 700.0, 701.0, 699.9, 700.9)
+    rth += _mins(DAY, (9, 50), (10, 0), 700.9, 703.5, 700.8, 703.0)   # runs +30bp
+    rth += _mins(DAY, (10, 0), (16, 0), 703.0, 703.0, 695.0, 696.0)   # gives it all back
+    r = evaluate_signal(_one_signal(rth, lv), _ten(rth))
+    assert r["cap_hit"] is True
+    assert r["move_capped_bp"] > 0, r["move_capped_bp"]
+    assert r["move_bp"] < 0, r["move_bp"]
+    assert r["move_capped_bp"] > r["move_bp"], r
+
+
+def test_a_trade_that_never_reaches_the_cap_reports_the_uncapped_exit():
+    """No cap fill means the capped series must equal the control, not a better number."""
+    from .breakout_sweep import evaluate_signal
+    lv = [Level("D-1 high", 700.0, "up")]
+    rth = _mins(DAY, (9, 30), (9, 40), 699.0, 699.5, 698.5, 699.0)
+    rth += _mins(DAY, (9, 40), (9, 50), 700.0, 700.6, 699.9, 700.5)
+    rth += _mins(DAY, (9, 50), (16, 0), 700.5, 700.6, 695.0, 696.0)   # straight down
+    r = evaluate_signal(_one_signal(rth, lv), _ten(rth))
+    assert r["cap_hit"] is False, r
+    assert r["move_capped_bp"] == r["move_bp"], r
+    assert r["move_bp"] < 0
+
+
+def test_a_short_signals_cap_is_below_the_entry():
+    """A sign error here would make every down-break's cap unreachable and silently
+    halve the sample the cap applies to."""
+    from .breakout_sweep import CAP50_BP, evaluate_signal
+    lv = [Level("D-1 low", 700.0, "down")]
+    rth = _mins(DAY, (9, 30), (9, 40), 701.0, 701.5, 700.5, 701.0)
+    rth += _mins(DAY, (9, 40), (9, 50), 700.0, 700.1, 699.0, 699.3)   # break down
+    entry = 699.3
+    tp = entry * (1 - CAP50_BP / 10_000.0)
+    rth += _mins(DAY, (9, 50), (10, 0), entry, entry, tp * 0.998, entry)
+    rth += _mins(DAY, (10, 0), (16, 0), entry, entry, entry, entry)
+    r = evaluate_signal(_one_signal(rth, lv), _ten(rth))
+    assert r["direction"] == "short"
+    assert r["cap_hit"] is True, r
+    assert abs(r["move_capped_bp"] - CAP50_BP) < 0.5, r["move_capped_bp"]
+
+
 def test_the_cap50_threshold_is_stated_not_folklore():
     """+50% on an ATM option needs ~20bp of underlying at delta 0.5. The constant is
     auditable so the reported fraction can be checked rather than believed."""

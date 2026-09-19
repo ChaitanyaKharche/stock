@@ -55,13 +55,35 @@ SWITCH_AT = dt.time(13, 0)      # primary; after this the strategy wants 1DTE (u
 EOD = dt.time(15, 55)
 
 
-def evaluate_signal(sig, ten) -> dict | None:
-    """Underlying outcome for one signal. No option, no P&L -- move only.
+def evaluate_signal(sig, ten, take_profit_bp: float = CAP50_BP) -> dict | None:
+    """Underlying outcome for one signal, BOTH capped and uncapped. No option price.
 
-    Exits, per §5 of the pre-registration:
-      * failed breakout -- a 10-min CLOSE back inside the level
-      * 15:55 flatten
-    Whichever comes first. MFE is measured over the same window.
+    Exits, per §5 of the pre-registration, in this precedence:
+      1. **profit cap** -- an intrabar touch of `take_profit_bp` in the trade's favour
+      2. failed breakout -- a 10-min CLOSE back inside the level
+      3. 15:55 flatten
+
+    THE FIRST VERSION OF THIS FUNCTION OMITTED EXIT 1 ENTIRELY, and that was not a
+    detail -- it is the exit the strategy is built around. It measured "hold the breakout
+    until it fails", which is close to the opposite of "cap profit at 25-50% of premium",
+    and it reported a median of -13.79 bp on QQQ as though that were his strategy. It was
+    a strategy nobody trades.
+
+    The two numbers are compatible and they answer different questions:
+
+      `move_bp`        terminal drift with no cap -- does the breakout CONTINUE?
+      `move_capped_bp` path-dependent with the cap -- is the favourable excursion
+                       REACHABLE before the adverse one?
+
+    A capped trade does not need positive drift. It needs the target to be touched
+    first, which is a statement about PATH, not about where price ends up. On QQQ the
+    median MFE was +34.26 bp against a +20 bp target, so this distinction decides the
+    result rather than refining it.
+
+    Precedence note: the cap fires before the same-bar close-stop because a limit order
+    fills intrabar and a close is only known at the bar's end. That ordering is
+    favourable, so it is stated rather than buried -- if the bar touched the target at
+    all, the limit filled.
     """
     fill_i = next((i for i, b in enumerate(ten) if b["ts"] == sig.fill_ts), None)
     if fill_i is None:
@@ -70,26 +92,39 @@ def evaluate_signal(sig, ten) -> dict | None:
     if entry <= 0:
         return None
     lv = sig.level
+    long = sig.direction == "long"
+    tp_px = entry * (1.0 + take_profit_bp / 10_000.0) if long \
+        else entry * (1.0 - take_profit_bp / 10_000.0)
 
-    exit_px, exit_reason, exit_ts = None, None, None
+    exit_px = exit_reason = exit_ts = None
+    cap_px = cap_ts = None
     mfe = 0.0
     for b in ten[fill_i:]:
         if b["ts"].time() >= EOD:
-            exit_px, exit_reason, exit_ts = b["open"], "eod", b["ts"]
+            if exit_px is None:
+                exit_px, exit_reason, exit_ts = b["open"], "eod", b["ts"]
             break
-        # MFE on the bar EXTREME in the trade's favour -- an option would have been
-        # worth most there, and the cap is a limit order, so it fills on the extreme.
-        fav = b["high"] if sig.direction == "long" else b["low"]
+        # MFE on the bar EXTREME in the trade's favour -- an option is worth most there,
+        # and the cap is a limit order, so it fills on the extreme.
+        fav = b["high"] if long else b["low"]
         mfe = max(mfe, move_bp(entry, fav, sig.direction))
-        # Failed breakout: closed back through the level that triggered the entry.
-        back_inside = (b["close"] < lv.price if sig.direction == "long"
-                       else b["close"] > lv.price)
-        if b["ts"] > sig.fill_ts and back_inside:
+
+        # 1. the cap. Recorded separately so the uncapped control survives.
+        if cap_px is None and ((long and b["high"] >= tp_px)
+                               or (not long and b["low"] <= tp_px)):
+            cap_px, cap_ts = tp_px, b["ts"]
+
+        # 2. failed breakout: closed back through the level that triggered the entry.
+        back_inside = (b["close"] < lv.price if long else b["close"] > lv.price)
+        if exit_px is None and b["ts"] > sig.fill_ts and back_inside:
             exit_px, exit_reason, exit_ts = b["close"], "failed", b["ts"]
-            break
+            if cap_px is not None:
+                break
     if exit_px is None:
         exit_px, exit_reason, exit_ts = ten[-1]["close"], "eod", ten[-1]["ts"]
 
+    capped_px = cap_px if cap_px is not None else exit_px
+    capped_ts = cap_ts if cap_ts is not None else exit_ts
     return {
         "day": sig.ts.date().isoformat(),
         "signal_ts": sig.ts.isoformat(),
@@ -101,9 +136,13 @@ def evaluate_signal(sig, ten) -> dict | None:
         "exit_reason": exit_reason,
         "exit_ts": exit_ts.isoformat(),
         "move_bp": round(move_bp(entry, exit_px, sig.direction), 2),
+        "move_capped_bp": round(move_bp(entry, capped_px, sig.direction), 2),
+        "cap_hit": cap_px is not None,
+        "capped_exit_ts": capped_ts.isoformat(),
         "mfe_bp": round(mfe, 2),
         "post_switch": sig.fill_ts.time() >= SWITCH_AT,
         "hold_min": int((exit_ts - sig.fill_ts).total_seconds() // 60),
+        "hold_capped_min": int((capped_ts - sig.fill_ts).total_seconds() // 60),
     }
 
 
@@ -113,15 +152,30 @@ def run(symbol: str, start: dt.date, end: dt.date, six_line: bool = False) -> li
     from .walkforward import sessions_between
 
     feed = ThetaLiveFeed()
-    rows, history, n = [], [], 0
+    rows, history, n, tried, thin = [], [], 0, 0, 0
     try:
         for day in sessions_between(start, end):
+            # Progress on ATTEMPTS, not successes. The first version incremented only
+            # after a usable session, and `len(rth) < 300` skipped silently -- so a
+            # symbol whose every fetch came back thin printed NOTHING, for hours, with
+            # no way to tell a slow run from a broken one. SPY did exactly that.
+            # A counter that only counts successes cannot report failure; the ledger's
+            # coverage denominator had the identical defect.
+            tried += 1
+            if tried % 100 == 0:
+                print(f"  {tried} days tried, {n} usable, {thin} thin, "
+                      f"{len(rows)} signals ...", flush=True)
             try:
                 pre, rth = get_ext(feed, symbol, day)
             except Exception as exc:                          # noqa: BLE001
                 print(f"  {day}: skipped ({exc!r})", flush=True)
                 continue
             if len(rth) < 300:
+                thin += 1
+                if thin <= 3 or thin % 250 == 0:
+                    print(f"  {day}: only {len(rth)} RTH bars "
+                          f"({len(pre)} premarket) -- skipped as thin [{thin} so far]",
+                          flush=True)
                 continue                                      # holiday or half day
             if len(history) >= 3:
                 levels = build_levels(history[-3:], pre,
@@ -135,11 +189,13 @@ def run(symbol: str, start: dt.date, end: dt.date, six_line: bool = False) -> li
             history.append(pre + rth)
             history = history[-4:]          # only the lookback is ever needed
             n += 1
-            if n % 100 == 0:
-                print(f"  {n} sessions, {len(rows)} signals ...", flush=True)
     finally:
         feed.close()
-    print(f"\n  {n} sessions, {len(rows)} signals")
+    print(f"\n  {tried} days tried, {n} usable, {thin} thin, {len(rows)} signals")
+    if n == 0:
+        print("  NOTHING USABLE. Every day came back with <300 RTH bars, which is an\n"
+              "  entitlement or endpoint problem, not a slow run. Check that\n"
+              "  /stock/history/ohlc serves this symbol with start_time=04:00:00.")
     return rows
 
 
@@ -200,6 +256,31 @@ def report(symbol: str, rows: list[dict]) -> dict:
     print(f"  clears the {COST_FLOOR_BP:.0f}bp cost floor (move to exit): {clears5:.1%}")
     print(f"  MFE clears {CAP50_BP:.0f}bp (~ +50% on an ATM option):      {mfe20:.1%}")
 
+    # CLAIM C. The capped series is the strategy he actually trades; the uncapped one
+    # above is the control. Reporting only the control is what the first version did,
+    # and it announced a null on a strategy nobody trades.
+    cap = [r["move_capped_bp"] for r in pre]
+    by_day_cap = defaultdict(list)
+    for r in pre:
+        by_day_cap[r["day"]].append(r["move_capped_bp"])
+    cobs, clo, chi, cp = boot_mean(by_day_cap)
+    hit = sum(1 for r in pre if r["cap_hit"]) / len(pre) if pre else 0.0
+    cwin = sum(1 for x in cap if x > 0) / len(cap) if cap else 0.0
+    print("\n  " + "-" * 74)
+    print(f"  CAPPED at +{CAP50_BP:.0f}bp -- the exit the strategy is built around")
+    print(f"  cap touched first: {hit:.1%} of signals   win rate {cwin:.1%}   "
+          f"median hold "
+          f"{st.median([r['hold_capped_min'] for r in pre]) if pre else '-'} min")
+    print(f"  move, bp             mean {cobs if cobs is None else round(cobs, 2)}   "
+          f"median {round(st.median(cap), 2) if cap else '-'}   "
+          f"95% CI [{None if clo is None else round(clo, 2)}, "
+          f"{None if chi is None else round(chi, 2)}]   p={cp}")
+    print(f"  uncapped control     mean {obs if obs is None else round(obs, 2)}   "
+          f"median {round(st.median(mv), 2) if mv else '-'}")
+    if cobs is not None and obs is not None:
+        print(f"  the cap is worth     {cobs - obs:+.2f} bp per signal on the mean")
+    print("  " + "-" * 74)
+
     # The tail, always, before any verdict. Every edge in this project has lived in it.
     s = sorted(mv)
     k = max(1, len(s) // 100)
@@ -222,6 +303,12 @@ def report(symbol: str, rows: list[dict]) -> dict:
                        f"underlying alone;\n     no option backtest is needed.")
     else:
         verdict.append("  B: median clears the floor; the SPY 0DTE arm is worth running.")
+    if clo is not None and clo > 0:
+        verdict.append("  C: CAPPED mean is positive with CI excluding zero -- the cap is "
+                       "doing the work.\n     That is a statement about PATH, not drift, "
+                       "so A can be null and C still survive.")
+    elif clo is not None:
+        verdict.append("  C: capped CI includes zero -- the cap does not rescue it either.")
     print("\n" + "\n".join(verdict))
     print("\n  Both symbols must survive A (prereg §8). One symbol is not two observations.")
 
@@ -231,7 +318,13 @@ def report(symbol: str, rows: list[dict]) -> dict:
             "median_move_bp": st.median(mv) if mv else None,
             "median_mfe_bp": st.median(mfe) if mfe else None,
             "frac_clearing_cost_floor": round(clears5, 4),
-            "frac_mfe_clearing_cap50": round(mfe20, 4)}
+            "frac_mfe_clearing_cap50": round(mfe20, 4),
+            "cap_bp": CAP50_BP,
+            "frac_cap_hit_first": round(hit, 4),
+            "capped_win_rate": round(cwin, 4),
+            "capped_mean_bp": cobs, "capped_ci95": [clo, chi], "capped_p": cp,
+            "capped_median_bp": st.median(cap) if cap else None,
+            "cap_value_bp": None if (cobs is None or obs is None) else round(cobs - obs, 3)}
 
 
 def main(argv=None) -> int:
