@@ -8,6 +8,22 @@ This answers **claim A** (does the breakout predict continuation?) and **claim C
 the profit cap add anything?) on the underlying. Claim D (1DTE) is permanently
 unmeasurable and stays that way; §1 of the pre-registration records why.
 
+## 0. CORRECTION — this tested the wrong level set
+
+**Added 2026-09-20, after the trader specified the levels precisely.** His set is:
+
+    yesterday's PREMARKET high/low  +  yesterday's MARKET-HOURS high/low
+                                    +  today's PREMARKET high/low          = 6
+
+**One** prior day, with premarket and market hours kept as SEPARATE levels. What was
+tested below is three prior sessions, each reduced to a single high/low over the whole
+04:00-20:00 span. That merge deletes yesterday's premarket lines whenever they sit inside
+yesterday's RTH range, which is most days.
+
+So this null is a null about levels he does not draw. Everything below stands as a
+measurement of the 8-line set and of nothing else. `six_lines.py` implements the correct
+set; `six_lines_test.py` pins it, including the case that caused the error.
+
 ## 1. The verdict
 
 Pre-switch signals only (7,938 of 8,843; the 905 post-13:00 signals would need 1DTE and

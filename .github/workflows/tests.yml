@@ -72,6 +72,9 @@ jobs:
       - name: 8-line breakout signal
         run: python -m trade_analysis.live_lab.breakout_levels_test
 
+      - name: six lines (the trader's actual level set)
+        run: python -m trade_analysis.live_lab.six_lines_test
+
       - name: preflight <-> autostart gate contract
         run: python -m trade_analysis.live_lab.preflight_gate_test
 
