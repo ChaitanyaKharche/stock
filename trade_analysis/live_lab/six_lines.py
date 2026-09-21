@@ -155,6 +155,68 @@ def breaks_today(rth_1m: Sequence[dict], lines: Sequence[Line]) -> dict:
     return rec
 
 
+CAP_BP = 20.0        # ~ +50% on an ATM option at delta 0.5
+COST_FLOOR_BP = 5.0  # what an ATM 0DTE needs for spread and theta (shares_runner.py)
+
+
+def first_break_trade(rth_1m: Sequence[dict], lines: Sequence[Line],
+                      rec: dict, cap_bp: float = CAP_BP) -> dict | None:
+    """ONE trade per session: take the FIRST line to close-break, and hold it.
+
+    One per day, not one per line. The 6-line tally shows 92% of sessions break
+    something and the median first break is 09:40, so "take every break" is 2-3 trades a
+    day against a journal median of 1-2. First-break-only is the version that matches
+    what he actually does, and it is the only one of the two that is a strategy rather
+    than a description of the weather.
+
+    Entry on the NEXT bar's open -- a close is not knowable until the bar ends.
+    Exits: +cap_bp (intrabar limit) | close back inside the broken line | 15:55.
+    Precedence is cap-before-close-stop within a bar, because a limit fills intrabar.
+
+    Returns None when nothing broke. Those sessions are the no-trade days and are
+    counted separately; they are not zeros in the P&L series.
+    """
+    broken = [(v["close_break"], name) for name, v in rec.items() if v["close_break"]]
+    if not broken:
+        return None
+    when, name = min(broken)
+    line = next(l for l in lines if l.name == name)
+    long = line.side == "R"
+
+    ten = [b for b in resample_10m(rth_1m) if RTH_FROM <= b["ts"].time() < RTH_TO]
+    sig_i = next((i for i, b in enumerate(ten)
+                  if b["ts"].strftime("%H:%M") == when), None)
+    if sig_i is None or sig_i + 1 >= len(ten):
+        return None                       # no next bar to fill on
+    entry = ten[sig_i + 1]["open"]
+    if entry <= 0:
+        return None
+    tp = entry * (1 + cap_bp / 10_000.0) if long else entry * (1 - cap_bp / 10_000.0)
+
+    mfe, cap_px, exit_px, why = 0.0, None, None, None
+    for b in ten[sig_i + 1:]:
+        fav = b["high"] if long else b["low"]
+        mfe = max(mfe, (fav / entry - 1) * 10_000 * (1 if long else -1))
+        if cap_px is None and ((long and b["high"] >= tp) or
+                               (not long and b["low"] <= tp)):
+            cap_px = tp
+        back = b["close"] < line.price if long else b["close"] > line.price
+        if b["ts"] > ten[sig_i + 1]["ts"] and back:
+            exit_px, why = b["close"], "failed"
+            break
+    if exit_px is None:
+        exit_px, why = ten[-1]["close"], "eod"
+
+    def bp(px):
+        return round((px / entry - 1) * 10_000 * (1 if long else -1), 2)
+
+    return {"line": name, "source": line.source, "signal_at": when,
+            "direction": "long" if long else "short", "entry": round(entry, 4),
+            "exit_reason": why, "move_bp": bp(exit_px),
+            "move_capped_bp": bp(cap_px) if cap_px is not None else bp(exit_px),
+            "cap_hit": cap_px is not None, "mfe_bp": round(mfe, 2)}
+
+
 def run(symbol: str, start: dt.date, end: dt.date) -> list[dict]:
     from .feed import ThetaLiveFeed
     from .levels_test import get_ext
@@ -192,6 +254,7 @@ def run(symbol: str, start: dt.date, end: dt.date) -> list[dict]:
                                               if v["touch_break"]),
                         "n_pre_broken": sum(1 for v in rec.values()
                                             if v["pre_broken"]),
+                        "trade": first_break_trade(rth, lines, rec),
                     })
             prev = pre + rth
     finally:
@@ -255,6 +318,52 @@ def report(symbol: str, rows: list[dict]) -> dict:
     rng = sorted(r["rth_range_bp"] for r in rows)
     print(f"  RTH range bp: median {rng[len(rng) // 2]:.0f}   "
           f"p10 {rng[len(rng) // 10]:.0f}   p90 {rng[len(rng) * 9 // 10]:.0f}")
+
+    # ---- one trade per session, on the first close break -------------------------
+    tr = [r["trade"] for r in rows if r.get("trade")]
+    if tr:
+        import random
+        by_day = {r["day"]: [r["trade"]["move_bp"]] for r in rows if r.get("trade")}
+        by_cap = {r["day"]: [r["trade"]["move_capped_bp"]] for r in rows if r.get("trade")}
+
+        def boot(d, reps=3000, seed=20260828):
+            ks = list(d)
+            if len(ks) < 8:
+                return (None, None, None, None)
+            rng = random.Random(seed)
+            flat = [v for k in ks for v in d[k]]
+            obs = sum(flat) / len(flat)
+            ms = []
+            for _ in range(reps):
+                pool = []
+                for _ in range(len(ks)):
+                    pool.extend(d[ks[rng.randrange(len(ks))]])
+                ms.append(sum(pool) / len(pool))
+            ms.sort()
+            neg = sum(1 for x in ms if x <= 0) / len(ms)
+            pos = sum(1 for x in ms if x >= 0) / len(ms)
+            return (obs, ms[int(.025 * len(ms))], ms[int(.975 * len(ms))],
+                    max(2 * min(neg, pos), 1 / reps))
+
+        uo, ul, uh, up = boot(by_day)
+        co, cl, ch, cp = boot(by_cap)
+        mv = sorted(x["move_bp"] for x in tr)
+        print("\n  " + "-" * 74)
+        print(f"  ONE TRADE PER SESSION, on the first close break -- {len(tr)} trades")
+        print(f"  no-trade sessions: {n - len(tr)} ({(n - len(tr)) / n:.1%})")
+        print(f"  uncapped   mean {uo:+.2f} bp   median {mv[len(mv) // 2]:+.2f}   "
+              f"95% CI [{ul:+.2f}, {uh:+.2f}]   p={up:.4f}")
+        print(f"  capped@{CAP_BP:.0f}  mean {co:+.2f} bp   "
+              f"cap hit {sum(1 for x in tr if x['cap_hit']) / len(tr):.1%}   "
+              f"95% CI [{cl:+.2f}, {ch:+.2f}]   p={cp:.4f}")
+        print(f"  the {COST_FLOOR_BP:.0f}bp ATM 0DTE cost floor sits "
+              f"{'BELOW' if max(uo, co) > COST_FLOOR_BP else 'ABOVE'} both means")
+        longs = [x for x in tr if x["direction"] == "long"]
+        print(f"  direction split: {len(longs) / len(tr):.0%} long   "
+              f"long mean {sum(x['move_bp'] for x in longs) / max(len(longs), 1):+.2f} bp"
+              f"   short mean "
+              f"{sum(x['move_bp'] for x in tr if x['direction'] == 'short') / max(len(tr) - len(longs), 1):+.2f} bp")
+        print("  " + "-" * 74)
 
     return {"symbol": symbol, "sessions": n,
             "dist_close": {str(k): v for k, v in sorted(dist_c.items())},

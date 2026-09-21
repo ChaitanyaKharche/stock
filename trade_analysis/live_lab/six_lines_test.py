@@ -193,6 +193,69 @@ def test_downside_breaks_are_recorded_on_the_S_lines():
                if k.startswith("R")), {k: v for k, v in rec.items() if k[0] == "R"}
 
 
+# ------------------------------------------------- one trade per session, first break
+
+def test_the_first_break_is_the_one_taken_and_only_one_per_session():
+    """92% of sessions break something, so taking every break is the weather, not a
+    strategy. One per day matches the journal's 1-2."""
+    from .six_lines import first_break_trade
+    lines = build_six(_yday(712.0, 708.0, 718.0, 710.0), _today_pre(716.0, 714.0))
+    rth = _mins(D1, (9, 30), (9, 40), 715.0, 715.5, 714.5, 715.0)
+    rth += _mins(D1, (9, 40), (9, 50), 716.5, 717.0, 716.2, 716.9)    # R2=716 first
+    rth += _mins(D1, (9, 50), (16, 0), 719.0, 725.0, 718.9, 724.0)    # R3 later
+    rec = breaks_today(rth, lines)
+    tr = first_break_trade(rth, lines, rec)
+    assert tr is not None
+    assert tr["line"] == "R2", tr            # the FIRST, not the biggest
+    assert tr["signal_at"] == "09:40", tr
+    assert tr["direction"] == "long"
+
+
+def test_the_entry_is_the_bar_after_the_break():
+    from .six_lines import first_break_trade
+    lines = build_six(_yday(712.0, 708.0, 718.0, 710.0), _today_pre(716.0, 714.0))
+    rth = _mins(D1, (9, 30), (9, 40), 715.0, 715.5, 714.5, 715.0)
+    rth += _mins(D1, (9, 40), (9, 50), 716.5, 717.0, 716.2, 716.9)    # break bar
+    rth += _mins(D1, (9, 50), (16, 0), 718.0, 718.5, 717.5, 718.0)    # fill bar opens 718
+    tr = first_break_trade(rth, lines, breaks_today(rth, lines))
+    assert tr["entry"] == 718.0, tr          # next bar's OPEN, not the break close
+
+
+def test_a_session_with_no_break_produces_no_trade():
+    """Not a zero. A no-trade day is absent from the P&L series, counted separately."""
+    from .six_lines import first_break_trade
+    lines = build_six(_yday(712.0, 708.0, 718.0, 710.0), _today_pre(716.0, 714.0))
+    rth = _mins(D1, (9, 30), (16, 0), 715.0, 715.9, 714.1, 715.0)
+    assert first_break_trade(rth, lines, breaks_today(rth, lines)) is None
+
+
+def test_a_short_trade_reports_a_favourable_move_as_positive():
+    from .six_lines import first_break_trade
+    lines = build_six(_yday(712.0, 708.0, 718.0, 710.0), _today_pre(716.0, 714.0))
+    rth = _mins(D1, (9, 30), (9, 40), 715.0, 715.5, 714.5, 715.0)
+    rth += _mins(D1, (9, 40), (9, 50), 713.5, 713.8, 713.0, 713.2)    # under S1=714
+    rth += _mins(D1, (9, 50), (16, 0), 713.0, 713.1, 705.0, 705.5)    # keeps falling
+    tr = first_break_trade(rth, lines, breaks_today(rth, lines))
+    assert tr["direction"] == "short", tr
+    assert tr["move_bp"] > 0, tr
+    assert tr["cap_hit"] is True, tr
+
+
+def test_the_cap_cannot_fill_after_the_trade_exited():
+    """Same lookahead that voided a published number on 2026-09-19. Pinned here too."""
+    from .six_lines import first_break_trade
+    lines = build_six(_yday(712.0, 708.0, 718.0, 710.0), _today_pre(716.0, 714.0))
+    rth = _mins(D1, (9, 30), (9, 40), 715.0, 715.5, 714.5, 715.0)
+    rth += _mins(D1, (9, 40), (9, 50), 716.2, 716.4, 716.1, 716.3)    # breaks R2=716
+    rth += _mins(D1, (9, 50), (10, 0), 716.3, 716.4, 716.2, 716.3)    # fill bar
+    rth += _mins(D1, (10, 0), (10, 10), 715.0, 715.2, 714.0, 714.5)   # back under: exit
+    rth += _mins(D1, (10, 10), (16, 0), 715.0, 780.0, 714.0, 778.0)   # huge run AFTER
+    tr = first_break_trade(rth, lines, breaks_today(rth, lines))
+    assert tr["exit_reason"] == "failed", tr
+    assert tr["cap_hit"] is False, "the cap filled after the trade was closed"
+    assert tr["move_capped_bp"] == tr["move_bp"], tr
+
+
 CHECKS = [(n, f) for n, f in sorted(globals().items())
           if n.startswith("test_") and callable(f)]
 
