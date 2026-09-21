@@ -1,0 +1,38 @@
+{
+  "date": "2026-09-16",
+  "arm": "SHARES",
+  "config_hash": "b53ca8a58aa11718",
+  "symbols": [
+    "SPY",
+    "QQQ",
+    "IWM",
+    "DIA",
+    "XLK",
+    "XLY",
+    "XLI",
+    "XLV",
+    "XLP",
+    "XLE",
+    "XLF",
+    "NVDA",
+    "AAPL",
+    "GOOGL",
+    "WMT"
+  ],
+  "notional_per_trade": 10000.0,
+  "trades_closed": 155,
+  "net": -1316.51,
+  "still_open": 0,
+  "degraded_bars": {
+    "DIA": 2,
+    "XLK": 1,
+    "XLY": 3,
+    "XLV": 1
+  },
+  "feed": {
+    "calls": 9552,
+    "retries": 102,
+    "bar_cache_hits": 61607,
+    "bar_cache_misses": 3418
+  }
+}
