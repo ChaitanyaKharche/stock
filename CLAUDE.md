@@ -105,6 +105,31 @@ So:
   This is the project's standard bug class wearing a new hat — a confident number that
   measured nothing.
 
-- **The journal entry-time histogram has never been looked at.** `research/round_trips.csv`
-  is gitignored (`.gitignore:66  *.csv`), so it exists only on the lab machine and no
-  session has ever seen it. Script: `trade_analysis/backtesting/entry_histogram.py`.
+- **The journal entry-time histogram HAS now been run** — 2026-09-22, on the lab machine,
+  443 round trips over 158 days = **2.80 trades/day**. (The 2.90 figure above came from
+  `entry_timing_results.md`, 357/123; both are right for their snapshot, the CSV has grown.)
+
+  **Measured shape: busiest bucket 09:45 (41 trades). Median 11:44, roughly two hours
+  later.** Right-skewed — a long thin afternoon tail drags the median well past the
+  quarter-hour he actually trades in. `peaks()` returns two modes (09:45, 11:00) but the
+  split clears by only **2.04 sigma** of counting noise, so **describe it as one peak plus
+  a noisy declining plateau, not as two humps.**
+
+- **OPEN and exploratory: his P&L alternates sign by time of day.** From the same run,
+  whole book **+$1,502 over 442 trades = +$3.40/trade**:
+
+  | window | n | total | per trade |
+  |---|---|---|---|
+  | 09:30–09:45 | 66 | **+$2,806** | +$42.52 |
+  | 10:00–11:30 | 157 | **−$3,183** | −$20.28 |
+  | 11:45–13:30 | 130 | **+$3,514** | +$27.03 |
+  | 13:45–15:45 | 89 | **−$1,635** | −$18.37 |
+
+  **Do NOT treat this as a finding yet, and do not let him trade it yet.** Three reasons,
+  all of them this project's own settled lessons: (a) the window boundaries were chosen
+  *after* seeing the histogram — 26 buckets with free choice of contiguous groupings is
+  the garden of forking paths that `setup_sweep_results.md` spent 2,822,400 cells
+  demonstrating; (b) no day-clustering, and 442 trades over 158 days are not independent;
+  (c) P&L here is tail-dominated (73.9% in the top 1% of trades), so a bucket mean can be
+  one fill. The `med $` and `top1 %` columns were added to the histogram for exactly (c) —
+  a bucket whose mean and median disagree in sign is one trade, not an hour.

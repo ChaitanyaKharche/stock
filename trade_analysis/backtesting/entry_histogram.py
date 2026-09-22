@@ -90,16 +90,26 @@ def bucket_label(idx, width_min):
     return "%02d:%02d" % (a // 60, a % 60)
 
 
-def peaks(counts, min_share=0.40, valley_share=0.70):
-    """Local maxima with a prominence rule.
+def peaks(counts, min_share=0.40, sigmas=2.0):
+    """Local maxima whose separating valley is deeper than counting noise.
 
-    A bucket is a peak if it is >= both neighbours, holds at least `min_share` of the
-    biggest bucket, and is separated from the previous peak by a valley dropping below
-    `valley_share` of the smaller of the two. Without the valley rule every jagged pair
-    of adjacent buckets reads as two modes.
+    Returns (indices, margins) where margins[k] is how many standard deviations of
+    Poisson counting noise separate peak k from the previous one. margins[0] is None.
+
+    CORRECTED 2026-09-22. The first version required the valley to fall below a fixed
+    `valley_share=0.70` of the smaller peak. That ignores the fact that bucket counts are
+    themselves noisy: a bucket holding n trades varies by about sqrt(n) run to run, so at
+    n=25 a dip to 19 is one standard deviation and means nothing. On the real journal that
+    loose rule reported "2 modes" for what is actually one peak at 09:45 followed by a
+    bumpy declining plateau -- a confident output that measured less than it claimed,
+    which is this project's standard bug class.
+
+    The rule now is: the valley must sit at least `sigmas` * sqrt(smaller peak) BELOW the
+    smaller of the two peaks. Reporting the margin matters as much as the verdict; a split
+    that clears by 0.1 sigma is not a finding.
     """
     if not any(counts):
-        return []
+        return [], []
     top = max(counts)
     cand = []
     for i, c in enumerate(counts):
@@ -107,18 +117,23 @@ def peaks(counts, min_share=0.40, valley_share=0.70):
         hi = counts[i + 1] if i + 1 < len(counts) else -1
         if c >= lo and c >= hi and c >= min_share * top:
             cand.append(i)
-    kept = []
+    kept, margins = [], []
     for i in cand:
         if not kept:
             kept.append(i)
+            margins.append(None)
             continue
         j = kept[-1]
         valley = min(counts[j : i + 1]) if i > j else counts[i]
-        if valley < valley_share * min(counts[i], counts[j]):
+        lo_peak = min(counts[i], counts[j])
+        noise = lo_peak ** 0.5 or 1.0
+        margin = (lo_peak - valley) / noise
+        if margin >= sigmas:
             kept.append(i)
+            margins.append(margin)
         elif counts[i] > counts[j]:
             kept[-1] = i
-    return kept
+    return kept, margins
 
 
 def main(argv=None):
@@ -153,34 +168,66 @@ def main(argv=None):
         print("after 16:00       %6d" % len(post))
     print()
 
+    open_min0 = RTH_OPEN.hour * 60 + RTH_OPEN.minute
+    med_bucket = (int(med) - open_min0) // a.bucket
+
     top = max(counts)
-    scale = 44.0 / top if top else 0.0
-    print("%-7s %5s  %-44s %s" % ("bucket", "n", "", "mean net $"))
+    scale = 26.0 / top if top else 0.0
+    # `top1 $` is the single biggest trade in the bucket and `top1 %` its share of the
+    # bucket's total. A bucket whose mean is positive only because of one fill is not a
+    # time-of-day effect, it is one trade. Median net is shown for the same reason: mean
+    # and median disagreeing in sign is the signature of a tail-driven bucket.
+    print("%-7s %4s  %-26s %9s %9s %9s %6s"
+          % ("bucket", "n", "", "mean $", "med $", "top1 $", "top1%"))
     for i, c in enumerate(counts):
+        vals = [p for p in pnls[i] if p == p]
         lab = bucket_label(i, a.bucket)
-        m = statistics.fmean([p for p in pnls[i] if p == p]) if pnls[i] else float("nan")
-        mark = " <-- median" if int(med) // a.bucket == (
-            (RTH_OPEN.hour * 60 + RTH_OPEN.minute) // a.bucket + i
-        ) else ""
         bar = "#" * int(round(c * scale))
-        print("%-7s %5d  %-44s %9.2f%s" % (lab, c, bar, m, mark))
+        if not vals:
+            print("%-7s %4d  %-26s %9s %9s %9s %6s"
+                  % (lab, c, bar, "-", "-", "-", "-"))
+            continue
+        m = statistics.fmean(vals)
+        md = statistics.median(vals)
+        big = max(vals, key=abs)
+        tot_abs = sum(vals)
+        share = (100.0 * big / tot_abs) if tot_abs else float("nan")
+        mark = " <-- median" if i == med_bucket else ""
+        print("%-7s %4d  %-26s %+9.2f %+9.2f %+9.2f %5.0f%%%s"
+              % (lab, c, bar, m, md, big, share, mark))
     print()
 
-    pk = peaks(counts)
-    print("modes detected    %6d   at %s" % (
-        len(pk), ", ".join(bucket_label(i, a.bucket) for i in pk) or "-"))
+    pk, margins = peaks(counts)
+    bits = []
+    for k, i in enumerate(pk):
+        s = bucket_label(i, a.bucket)
+        if margins[k] is not None:
+            s += " (+%.1f sigma)" % margins[k]
+        bits.append(s)
+    print("modes detected    %6d   at %s" % (len(pk), ", ".join(bits) or "-"))
+    if len(pk) > 1 and min(m for m in margins if m is not None) < 3.0:
+        print("  NOTE: the weakest split clears by only %.1f sigma of counting noise."
+              % min(m for m in margins if m is not None))
+        print("        Treat the shape as one peak plus a noisy tail, not clean humps.")
 
     # The headline question: does he actually trade at the median?
-    open_min = RTH_OPEN.hour * 60 + RTH_OPEN.minute
-    med_idx = (int(med) - open_min) // a.bucket
-    if 0 <= med_idx < len(counts):
-        share = 100.0 * counts[med_idx] / len(rows)
+    if 0 <= med_bucket < len(counts):
+        share = 100.0 * counts[med_bucket] / len(rows)
         print("median bucket     %6d trades (%.1f%% of all), vs %.1f%% if uniform"
-              % (counts[med_idx], share, 100.0 / len(counts)))
-        if len(pk) > 1 and med_idx not in pk:
+              % (counts[med_bucket], share, 100.0 / len(counts)))
+    if pk:
+        mode_i = max(pk, key=lambda i: counts[i])
+        mode_lab = bucket_label(mode_i, a.bucket)
+        gap = (int(med) - (open_min0 + mode_i * a.bucket))
+        print("busiest bucket    %6s (%d trades)" % (mode_lab, counts[mode_i]))
+        if abs(gap) >= a.bucket:
             print()
-            print("  >> The distribution is multi-modal and the median is NOT at a mode.")
-            print("  >> Quoting '%s' as the hour he trades is therefore wrong." % med_t)
+            print("  >> He trades MOST at %s. The median is %s, %d min later."
+                  % (mode_lab, med_t, gap))
+            print("  >> The distribution is right-skewed: a long afternoon tail drags the")
+            print("     median hours past the bucket he actually trades in. Quoting '%s'"
+                  % med_t)
+            print("     as 'the hour he trades' is therefore wrong.")
     return 0
 
 
