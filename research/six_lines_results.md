@@ -95,12 +95,25 @@ at his frequency, and it does not predict direction.
   not, but suggestion is not measurement. One run would settle whether the whole family
   is distance-to-a-line rather than which-line, and a null there closes every variant at
   once instead of one at a time.
-- **Whatever selects which break he takes.** 92% of sessions break something at 09:40;
-  his journal median is 1–2 trades entering at 11:39. The mechanical rule and the trader
-  are not doing the same thing, and the difference between them has never been written
-  down. Every measurement so far says the entry is null and the exits are where his
-  record comes from, so that unwritten selection is the last unexamined part of his
-  process.
+- **Whatever selects which break he takes.** 92% of sessions break something by 09:40,
+  and this rule takes one trade per session against his **2.90 per day**
+  (`entry_timing_results.md:17-21`, 357 round trips / 123 days). So this rule trades
+  *less* than he does, not more.
+
+  **CORRECTED 2026-09-22.** This bullet originally read "his journal median is 1–2 trades
+  entering at 11:39. The mechanical rule and the trader are not doing the same thing."
+  Both halves were wrong. The count is 2.90/day, not 1–2. And 11:39 is a *median*, which
+  was written up as though it were a cluster — for a two-humped distribution the median
+  lands in the gap between the humps, at an hour that may hold almost no trades. The 17
+  `entry_too_late` exclusions in the same funnel show entries running late into the
+  afternoon. See `breakout_options_results.md` §5 for the full correction.
+
+  What remains true is only that the selection rule has never been written down. The claim
+  that the rule and the trader "are not doing the same thing" was inferred from a frequency
+  gap that does not exist, and is withdrawn. Every measurement so far still says the entry
+  is null and the exits carry his record, so that unwritten selection is the last
+  unexamined part of his process — but this document has produced no evidence about its
+  shape.
 
 ## 7. What is NOT concluded
 

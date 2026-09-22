@@ -111,16 +111,42 @@ is precisely the garden of forking paths the MOMO_CHASE sweep spent 2,822,400 ce
 demonstrating. It is also measurable: SPY 0DTE, 769 sessions, is the one option archive
 that exists.
 
-## 5. A discrepancy between the spec and the trader's behaviour
+## 5. A discrepancy between the spec and the trader's behaviour — WITHDRAWN, the numbers were wrong
 
-**8,843 signals over 2,600 sessions is 3.4 per day.** His journal shows a median of
-roughly 1–2 trades, entering around 11:39.
+**CORRECTED 2026-09-22, after the trader pushed back on "around 11:39".** The original text
+of this section read:
 
-So the mechanical rule fires about three times more often than he does, and whatever
-selects *which* breakout he takes is not written down anywhere. Given that the entry
-signal is null and the exits are where the journal says his edge lives, that unwritten
-selection is the remaining unexplained part of his process — and it is not in this
-experiment.
+> **8,843 signals over 2,600 sessions is 3.4 per day.** His journal shows a median of
+> roughly 1–2 trades, entering around 11:39. So the mechanical rule fires about three times
+> more often than he does, and whatever selects *which* breakout he takes is not written
+> down anywhere.
+
+**Both numbers in that passage are wrong, and they were the entire basis of the conclusion.**
+
+**Error 1 — the trade count.** `entry_timing_results.md:17-21` records **357 QQQ/SPY round
+trips over 123 distinct days = 2.90 trades per day.** Not "1–2". The mechanical rule's 3.4
+per day is therefore **1.17× his rate, not 3×.** The frequency discrepancy this section was
+named after does not exist.
+
+**Error 2 — treating a median as a cluster.** 11:39 is the *median* entry time. It was
+written up as though he trades *around* 11:39, which is a statement about where his entries
+concentrate. A median says nothing about concentration: for any two-humped distribution — a
+morning-break cluster and an afternoon cluster — the median falls in the gap between them,
+at an hour holding few or no trades. The same file's funnel shows **17 round trips excluded
+as `entry_too_late`** (under 25 minutes of path left before 15:45), which is direct evidence
+of entries well into the afternoon. So the distribution is at minimum wide, and possibly
+bimodal, and 11:39 may be an hour he rarely trades at all.
+
+**What survives.** Nothing here. Equal frequency is not the same trades — 2.90/day and
+3.4/day could still be disjoint sets — so this section can no longer be cited as evidence
+that the trader *is* following the mechanical rule either. The selection question is
+untouched and unmeasured; what is gone is this document's claim to have found evidence
+about it. §4's magnitude-not-sign finding and §1's null are unaffected: neither depends on
+any journal number.
+
+**What would settle it:** the entry-time histogram, in 15-minute buckets, off
+`research/round_trips.csv`. That file is gitignored and exists only on the lab machine, so
+it has never been looked at. It is one command and it has never been run.
 
 ## 6. Two defects found and fixed during the run, both recorded
 

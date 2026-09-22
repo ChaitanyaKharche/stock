@@ -89,6 +89,22 @@ So:
 
 - **HF token exposed in `~/.bash_history` on the shared Discovery filesystem —
   revocation unconfirmed.** Highest-priority item in the project. Not code.
-- The unwritten selection rule: 92% of sessions break a line by 09:40, but he takes 1–2
-  trades a day around 11:39. Whatever picks *which* break he takes has never been written
-  down, and every measurement says the entry is null while the exits carry his record.
+- The unwritten selection rule: 92% of sessions break a line by 09:40. Whatever picks
+  *which* break he takes has never been written down, and every measurement says the entry
+  is null while the exits carry his record.
+
+  **Do NOT say "he takes 1–2 trades around 11:39." Both numbers were wrong and he caught
+  it.** The journal is **2.90 trades/day** (357 round trips / 123 days,
+  `entry_timing_results.md:17-21`). And **11:39 is a median, not a cluster** — quoting it
+  as the hour he trades assumes a single-peaked distribution that has never been checked.
+  If his entries are bimodal, the median sits in the gap where he trades *least*. Corrected
+  in `breakout_options_results.md` §5 and `six_lines_results.md` §6.
+
+  **General rule this exposed: never quote a median as a location without the histogram.**
+  A median of a two-humped distribution describes an hour that may hold no trades at all.
+  This is the project's standard bug class wearing a new hat — a confident number that
+  measured nothing.
+
+- **The journal entry-time histogram has never been looked at.** `research/round_trips.csv`
+  is gitignored (`.gitignore:66  *.csv`), so it exists only on the lab machine and no
+  session has ever seen it. Script: `trade_analysis/backtesting/entry_histogram.py`.
