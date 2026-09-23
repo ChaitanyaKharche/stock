@@ -901,3 +901,4 @@
 {"seq":4605,"ts":"2026-09-21T15:49:54.603319","kind":"tick","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
 {"seq":4606,"ts":"2026-09-21T15:50:06.648758","kind":"tick","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
 {"seq":4607,"ts":"2026-09-21T15:50:12.128192","kind":"feed","detail":"upstream recovered after 102s and 9 failed call(s)","path":"__recovered__"}
+{"seq":4873,"ts":"2026-09-22T12:58:24.270200","kind":"future_quote","detail":"SPY quote is 9.1s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"SPY"}
