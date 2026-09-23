@@ -230,3 +230,19 @@
 {"seq":73084,"ts":"2026-09-22T09:40:31.646418","kind":"warmup","symbol":"AAPL","sessions_used":24,"has_stretch":true}
 {"seq":73085,"ts":"2026-09-22T09:40:56.614088","kind":"warmup","symbol":"GOOGL","sessions_used":24,"has_stretch":true}
 {"seq":73086,"ts":"2026-09-22T09:41:11.896225","kind":"warmup","symbol":"WMT","sessions_used":24,"has_stretch":true}
+{"seq":82581,"ts":"2026-09-23T09:35:18.232298","kind":"start","config_hash":"b53ca8a58aa11718","symbols":["SPY","QQQ","IWM","DIA","XLK","XLY","XLI","XLV","XLP","XLE","XLF","NVDA","AAPL","GOOGL","WMT"],"spec":"shares_lab_preregistration.md @ 2026-08-31","notional":10000.0}
+{"seq":82582,"ts":"2026-09-23T09:36:07.345619","kind":"warmup","symbol":"SPY","sessions_used":24,"has_stretch":true}
+{"seq":82583,"ts":"2026-09-23T09:36:47.685220","kind":"warmup","symbol":"QQQ","sessions_used":24,"has_stretch":true}
+{"seq":82584,"ts":"2026-09-23T09:37:03.647743","kind":"warmup","symbol":"IWM","sessions_used":24,"has_stretch":true}
+{"seq":82585,"ts":"2026-09-23T09:37:10.566891","kind":"warmup","symbol":"DIA","sessions_used":24,"has_stretch":true}
+{"seq":82586,"ts":"2026-09-23T09:37:18.704094","kind":"warmup","symbol":"XLK","sessions_used":24,"has_stretch":true}
+{"seq":82587,"ts":"2026-09-23T09:37:25.925971","kind":"warmup","symbol":"XLY","sessions_used":24,"has_stretch":true}
+{"seq":82588,"ts":"2026-09-23T09:37:34.056599","kind":"warmup","symbol":"XLI","sessions_used":24,"has_stretch":true}
+{"seq":82589,"ts":"2026-09-23T09:37:42.620409","kind":"warmup","symbol":"XLV","sessions_used":24,"has_stretch":true}
+{"seq":82590,"ts":"2026-09-23T09:37:50.873917","kind":"warmup","symbol":"XLP","sessions_used":24,"has_stretch":true}
+{"seq":82591,"ts":"2026-09-23T09:38:03.458339","kind":"warmup","symbol":"XLE","sessions_used":24,"has_stretch":true}
+{"seq":82592,"ts":"2026-09-23T09:38:10.657415","kind":"warmup","symbol":"XLF","sessions_used":24,"has_stretch":true}
+{"seq":82593,"ts":"2026-09-23T09:39:50.732828","kind":"warmup","symbol":"NVDA","sessions_used":24,"has_stretch":true}
+{"seq":82594,"ts":"2026-09-23T09:40:29.433370","kind":"warmup","symbol":"AAPL","sessions_used":24,"has_stretch":true}
+{"seq":82595,"ts":"2026-09-23T09:40:57.162753","kind":"warmup","symbol":"GOOGL","sessions_used":24,"has_stretch":true}
+{"seq":82596,"ts":"2026-09-23T09:41:11.649634","kind":"warmup","symbol":"WMT","sessions_used":24,"has_stretch":true}
