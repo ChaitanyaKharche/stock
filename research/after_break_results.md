@@ -39,7 +39,23 @@ the **same 60-minute window**, restricted to breaks by 14:50:
 
 **Identical gap to the raw comparison.** The effect is not time exposure.
 
-## 2. The exit is throwing away more than half of its winners
+## 2. The exit looked like it was throwing away winners — IT IS NOT. Tested and falsified.
+
+> **CORRECTION, 2026-09-23.** The measured figures in this section are right. **The
+> conclusion drawn from them is wrong and was falsified by the experiment it motivated.**
+>
+> This section claimed the close-back-inside stop "is throwing away more than half of its
+> winners" and called removing it the highest-value thing left to measure.
+> [`early_r1_hold_results.md`](early_r1_hold_results.md) removed it on these same 317
+> sessions: **worth +1.84 bp, CI [−13.02, +16.81], p=0.829.** Nothing. Two-thirds of a
+> cent on a $740 stock.
+>
+> **Why the inference failed:** "R2 close-broke later that day" and "the trade would have
+> been profitable at 16:00" are different statements. R2 can break at 11:20 and price can
+> be back under R1 by the close. A held trade exits at the **session close**, not when R2
+> breaks. I read a fact about the *path* as a fact about the *endpoint*.
+>
+> Everything below stands as measured. Do not read it as a case for changing the exit.
 
 The same 314 early R1 breaks, traded by the six-line rule (enter next bar, exit on a close
 back inside R1):
@@ -120,13 +136,24 @@ sweep has no post-break extreme, so it cannot be repaired here. The row is print
 - §2's overlap figure (54.3%) is **exploratory** — it was computed after seeing §1, and it
   was not in the pre-registration.
 
-## 7. The one experiment this points at
+## 7. The experiment this pointed at — RUN, AND IT FAILED
 
-Re-run the six-line trade on early R1 breaks only, with the close-back-inside exit
-**removed** — hold to 15:55, stop on nothing. That is a one-line change to
-`first_break_trade`, and §2 says it is the single highest-value thing left to measure. It
-needs a fresh sweep because the stored JSON has no session close price, so it must run on
-the lab machine with the feed up.
+This section originally proposed re-running the six-line trade on early R1 breaks with
+the close-back-inside exit removed, and called it the highest-value thing left to
+measure.
 
-It must be pre-registered before it runs, with the 5 bp cost floor written into the
-decision rule in advance.
+**It was pre-registered, run the same day, and falsified on all three of its own
+criteria.** See [`early_r1_hold_results.md`](early_r1_hold_results.md):
+
+| gate | result |
+|---|---|
+| removing the stop is worth > 5 bp | **FAIL** — +1.84 bp, CI [−13.02, +16.81] |
+| the setup beats the drift benchmark | **FAIL** — −2.56 bp, wrong sign |
+| the sign holds in both halves | **FAIL** — +4.87 then −9.97 |
+
+The benchmark arm — buying at 09:50 on days the signal did **not** fire — returned
++4.25 bp, more than either treatment arm. §1 of this document still stands: early breaks
+genuinely reach R2 more often. It simply does not reach the closing price.
+
+**The six-line family is now closed on all four of its parts: entry timing, level set,
+profit cap, and stop.**

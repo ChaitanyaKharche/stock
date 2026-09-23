@@ -33,6 +33,26 @@ Cite these and move on. Every one is written up in `research/` with the numbers.
 | Unconditional short 0DTE straddle: real premium, 1.84× too small to trade | `vrp_cost_model_results.md` | closed |
 | 8-line breakout on QQQ | `breakout_options_results.md` | null (wrong level set — superseded) |
 | **His actual 6-line breakout on QQQ, 2,438 trades** | `six_lines_results.md` | **null** |
+| Early R1 break → reaches R2 more often (+11.3 pp, p=0.002, time-matched) | `after_break_results.md` §1 | **real, and the only conditional signal found** |
+| R1/S1 near round numbers (1, 5, 10, 25) | `after_break_results.md` §3 | null, ratio ≈1.00 |
+| S1 (downside) early break | `after_break_results.md` §4 | null, p=0.242 |
+| Removing the close-back-inside stop | `early_r1_hold_results.md` | **null, failed all 3 gates** |
+
+**THE SIX-LINE FAMILY IS CLOSED** — entry timing, level set, profit cap, and stop all
+measured, all null. Do not re-open without a genuinely new hypothesis and fresh data.
+
+**MAGNITUDE, NOT SIGN — measured four independent ways.** These levels predict how far
+price travels, never which way it ends up:
+
+| arm | where |
+|---|---|
+| momentum score was a magnitude forced to emit a direction | `vrp_preregistration.md` §0 |
+| MFE +34.26 bp, terminal drift indistinguishable from zero | `breakout_options_results.md` §4 |
+| 6-line, median MFE far above median terminal move | `six_lines_results.md` |
+| early R1 reaches R2 more often, terminal return unchanged | `early_r1_hold_results.md` §3 |
+
+This is why a directional long call/put keeps failing: you can be right about the travel,
+pay the variance risk premium for the convexity, and collect nothing for the direction.
 
 **THE PROFIT CAP SUBTRACTS VALUE. Measured three separate times:**
 
@@ -65,6 +85,12 @@ the position had already exited.
 So:
 
 - Before believing a number, ask what would make it wrong, and test that.
+- **A true number can support a false conclusion.** 2026-09-23: "54.3% of stopped-out
+  sessions later closed beyond R2" was correct, and the inference "so the stop is
+  throwing away winners" was wrong — a trade held to 16:00 does not exit when R2 breaks
+  at 11:20. **Never read a statement about the PATH as a statement about the ENDPOINT.**
+  Caught only because the claim was turned into a pre-registered experiment with the
+  decision rule fixed in advance. That is what pre-registration is for.
 - **A number that changes when nothing changed is the cheapest bug detector there is.**
   Two runs disagreeing on identical data has caught two separate defects here.
 - Every test must be verified to FAIL against the broken version. A test that passes on
