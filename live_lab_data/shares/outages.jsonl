@@ -6318,3 +6318,715 @@
 {"seq":82753,"ts":"2026-09-23T09:41:14.430850","kind":"stale_bar","detail":"WMT bar 09:38 is 3.2m old -- entries suppressed, open positions still managed","symbol":"WMT"}
 {"seq":86574,"ts":"2026-09-23T13:23:07.082110","kind":"degraded_bar","detail":"1m gap before 13:22","symbol":"XLV"}
 {"seq":87336,"ts":"2026-09-23T13:52:05.845838","kind":"stale_quote","detail":"XLF age=5.7s"}
+{"seq":91023,"ts":"2026-09-24T09:40:45.608018","kind":"stale_bar","detail":"SPY bar 09:30 is 10.7m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":91024,"ts":"2026-09-24T09:40:45.618561","kind":"stale_bar","detail":"SPY bar 09:31 is 9.7m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":91025,"ts":"2026-09-24T09:40:45.619559","kind":"stale_bar","detail":"SPY bar 09:32 is 8.7m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":91026,"ts":"2026-09-24T09:40:45.620562","kind":"stale_bar","detail":"SPY bar 09:33 is 7.7m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":91027,"ts":"2026-09-24T09:40:45.621566","kind":"stale_bar","detail":"SPY bar 09:34 is 6.7m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":91028,"ts":"2026-09-24T09:40:45.623062","kind":"stale_bar","detail":"SPY bar 09:35 is 5.7m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":91029,"ts":"2026-09-24T09:40:45.623062","kind":"stale_bar","detail":"SPY bar 09:36 is 4.7m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":91030,"ts":"2026-09-24T09:40:45.624075","kind":"stale_bar","detail":"SPY bar 09:37 is 3.7m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":91033,"ts":"2026-09-24T09:40:45.627068","kind":"stale_bar","detail":"QQQ bar 09:30 is 10.7m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":91034,"ts":"2026-09-24T09:40:45.628567","kind":"stale_bar","detail":"QQQ bar 09:31 is 9.7m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":91035,"ts":"2026-09-24T09:40:45.628567","kind":"stale_bar","detail":"QQQ bar 09:32 is 8.7m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":91036,"ts":"2026-09-24T09:40:45.629777","kind":"stale_bar","detail":"QQQ bar 09:33 is 7.7m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":91037,"ts":"2026-09-24T09:40:45.629777","kind":"stale_bar","detail":"QQQ bar 09:34 is 6.7m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":91038,"ts":"2026-09-24T09:40:45.631282","kind":"stale_bar","detail":"QQQ bar 09:35 is 5.7m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":91039,"ts":"2026-09-24T09:40:45.631282","kind":"stale_bar","detail":"QQQ bar 09:36 is 4.7m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":91040,"ts":"2026-09-24T09:40:45.632293","kind":"stale_bar","detail":"QQQ bar 09:37 is 3.7m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":91043,"ts":"2026-09-24T09:40:45.634801","kind":"stale_bar","detail":"IWM bar 09:30 is 10.7m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":91044,"ts":"2026-09-24T09:40:45.635805","kind":"stale_bar","detail":"IWM bar 09:31 is 9.7m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":91045,"ts":"2026-09-24T09:40:45.636817","kind":"stale_bar","detail":"IWM bar 09:32 is 8.7m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":91046,"ts":"2026-09-24T09:40:45.636817","kind":"stale_bar","detail":"IWM bar 09:33 is 7.7m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":91047,"ts":"2026-09-24T09:40:45.637812","kind":"stale_bar","detail":"IWM bar 09:34 is 6.7m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":91048,"ts":"2026-09-24T09:40:45.638813","kind":"stale_bar","detail":"IWM bar 09:35 is 5.7m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":91049,"ts":"2026-09-24T09:40:45.638813","kind":"stale_bar","detail":"IWM bar 09:36 is 4.7m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":91050,"ts":"2026-09-24T09:40:45.639815","kind":"stale_bar","detail":"IWM bar 09:37 is 3.7m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":91051,"ts":"2026-09-24T09:40:45.639815","kind":"stale_bar","detail":"DIA bar 09:30 is 10.7m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":91052,"ts":"2026-09-24T09:40:45.641201","kind":"stale_bar","detail":"DIA bar 09:31 is 9.7m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":91053,"ts":"2026-09-24T09:40:45.642209","kind":"stale_bar","detail":"DIA bar 09:32 is 8.7m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":91054,"ts":"2026-09-24T09:40:45.642209","kind":"stale_bar","detail":"DIA bar 09:33 is 7.7m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":91055,"ts":"2026-09-24T09:40:45.643208","kind":"stale_bar","detail":"DIA bar 09:34 is 6.7m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":91056,"ts":"2026-09-24T09:40:45.644209","kind":"stale_bar","detail":"DIA bar 09:35 is 5.7m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":91057,"ts":"2026-09-24T09:40:45.644209","kind":"stale_bar","detail":"DIA bar 09:36 is 4.7m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":91058,"ts":"2026-09-24T09:40:45.645208","kind":"stale_bar","detail":"DIA bar 09:37 is 3.7m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":91059,"ts":"2026-09-24T09:40:45.646210","kind":"stale_bar","detail":"XLK bar 09:30 is 10.7m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":91060,"ts":"2026-09-24T09:40:45.647207","kind":"stale_bar","detail":"XLK bar 09:31 is 9.7m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":91061,"ts":"2026-09-24T09:40:45.647207","kind":"stale_bar","detail":"XLK bar 09:32 is 8.7m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":91062,"ts":"2026-09-24T09:40:45.648205","kind":"stale_bar","detail":"XLK bar 09:33 is 7.7m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":91063,"ts":"2026-09-24T09:40:45.648205","kind":"stale_bar","detail":"XLK bar 09:34 is 6.7m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":91064,"ts":"2026-09-24T09:40:45.649708","kind":"stale_bar","detail":"XLK bar 09:35 is 5.7m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":91065,"ts":"2026-09-24T09:40:45.650212","kind":"stale_bar","detail":"XLK bar 09:36 is 4.7m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":91066,"ts":"2026-09-24T09:40:45.651218","kind":"stale_bar","detail":"XLK bar 09:37 is 3.7m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":91067,"ts":"2026-09-24T09:40:45.651725","kind":"stale_bar","detail":"XLY bar 09:30 is 10.7m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":91068,"ts":"2026-09-24T09:40:45.652732","kind":"stale_bar","detail":"XLY bar 09:31 is 9.7m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":91069,"ts":"2026-09-24T09:40:45.652732","kind":"stale_bar","detail":"XLY bar 09:32 is 8.7m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":91070,"ts":"2026-09-24T09:40:45.653793","kind":"stale_bar","detail":"XLY bar 09:33 is 7.7m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":91071,"ts":"2026-09-24T09:40:45.654802","kind":"stale_bar","detail":"XLY bar 09:34 is 6.7m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":91072,"ts":"2026-09-24T09:40:45.654802","kind":"stale_bar","detail":"XLY bar 09:35 is 5.7m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":91073,"ts":"2026-09-24T09:40:45.655801","kind":"stale_bar","detail":"XLY bar 09:36 is 4.7m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":91074,"ts":"2026-09-24T09:40:45.655801","kind":"stale_bar","detail":"XLY bar 09:37 is 3.7m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":91075,"ts":"2026-09-24T09:40:45.657633","kind":"stale_bar","detail":"XLI bar 09:30 is 10.7m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":91076,"ts":"2026-09-24T09:40:45.658906","kind":"stale_bar","detail":"XLI bar 09:31 is 9.7m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":91077,"ts":"2026-09-24T09:40:45.658906","kind":"stale_bar","detail":"XLI bar 09:32 is 8.7m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":91078,"ts":"2026-09-24T09:40:45.659910","kind":"stale_bar","detail":"XLI bar 09:33 is 7.7m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":91079,"ts":"2026-09-24T09:40:45.659910","kind":"stale_bar","detail":"XLI bar 09:34 is 6.7m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":91080,"ts":"2026-09-24T09:40:45.661414","kind":"stale_bar","detail":"XLI bar 09:35 is 5.7m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":91081,"ts":"2026-09-24T09:40:45.661414","kind":"stale_bar","detail":"XLI bar 09:36 is 4.7m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":91082,"ts":"2026-09-24T09:40:45.662419","kind":"stale_bar","detail":"XLI bar 09:37 is 3.7m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":91083,"ts":"2026-09-24T09:40:45.663423","kind":"stale_bar","detail":"XLV bar 09:30 is 10.7m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":91084,"ts":"2026-09-24T09:40:45.664431","kind":"stale_bar","detail":"XLV bar 09:31 is 9.7m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":91085,"ts":"2026-09-24T09:40:45.664431","kind":"stale_bar","detail":"XLV bar 09:32 is 8.7m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":91086,"ts":"2026-09-24T09:40:45.665425","kind":"stale_bar","detail":"XLV bar 09:33 is 7.7m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":91087,"ts":"2026-09-24T09:40:45.666425","kind":"stale_bar","detail":"XLV bar 09:34 is 6.7m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":91088,"ts":"2026-09-24T09:40:45.666425","kind":"stale_bar","detail":"XLV bar 09:35 is 5.7m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":91089,"ts":"2026-09-24T09:40:45.667423","kind":"stale_bar","detail":"XLV bar 09:36 is 4.7m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":91090,"ts":"2026-09-24T09:40:45.668423","kind":"stale_bar","detail":"XLV bar 09:37 is 3.7m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":91093,"ts":"2026-09-24T09:40:45.671423","kind":"stale_bar","detail":"XLP bar 09:30 is 10.7m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":91094,"ts":"2026-09-24T09:40:45.671423","kind":"stale_bar","detail":"XLP bar 09:31 is 9.7m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":91095,"ts":"2026-09-24T09:40:45.672465","kind":"stale_bar","detail":"XLP bar 09:32 is 8.7m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":91096,"ts":"2026-09-24T09:40:45.673469","kind":"stale_bar","detail":"XLP bar 09:33 is 7.7m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":91097,"ts":"2026-09-24T09:40:45.673469","kind":"stale_bar","detail":"XLP bar 09:34 is 6.7m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":91098,"ts":"2026-09-24T09:40:45.674973","kind":"stale_bar","detail":"XLP bar 09:35 is 5.7m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":91099,"ts":"2026-09-24T09:40:45.674973","kind":"stale_bar","detail":"XLP bar 09:36 is 4.7m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":91100,"ts":"2026-09-24T09:40:45.676544","kind":"stale_bar","detail":"XLP bar 09:37 is 3.7m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":91101,"ts":"2026-09-24T09:40:45.677564","kind":"stale_bar","detail":"XLE bar 09:30 is 10.7m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":91102,"ts":"2026-09-24T09:40:45.678550","kind":"stale_bar","detail":"XLE bar 09:31 is 9.7m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":91103,"ts":"2026-09-24T09:40:45.678550","kind":"stale_bar","detail":"XLE bar 09:32 is 8.7m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":91104,"ts":"2026-09-24T09:40:45.679550","kind":"stale_bar","detail":"XLE bar 09:33 is 7.7m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":91105,"ts":"2026-09-24T09:40:45.680549","kind":"stale_bar","detail":"XLE bar 09:34 is 6.7m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":91106,"ts":"2026-09-24T09:40:45.680549","kind":"stale_bar","detail":"XLE bar 09:35 is 5.7m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":91107,"ts":"2026-09-24T09:40:45.681926","kind":"stale_bar","detail":"XLE bar 09:36 is 4.7m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":91108,"ts":"2026-09-24T09:40:45.681926","kind":"stale_bar","detail":"XLE bar 09:37 is 3.7m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":91111,"ts":"2026-09-24T09:40:45.685193","kind":"stale_bar","detail":"XLF bar 09:30 is 10.7m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":91112,"ts":"2026-09-24T09:40:45.685193","kind":"stale_bar","detail":"XLF bar 09:31 is 9.7m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":91113,"ts":"2026-09-24T09:40:45.686648","kind":"stale_bar","detail":"XLF bar 09:32 is 8.7m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":91114,"ts":"2026-09-24T09:40:45.687653","kind":"stale_bar","detail":"XLF bar 09:33 is 7.7m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":91115,"ts":"2026-09-24T09:40:45.687653","kind":"stale_bar","detail":"XLF bar 09:34 is 6.7m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":91116,"ts":"2026-09-24T09:40:45.688654","kind":"stale_bar","detail":"XLF bar 09:35 is 5.7m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":91117,"ts":"2026-09-24T09:40:45.689653","kind":"stale_bar","detail":"XLF bar 09:36 is 4.7m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":91118,"ts":"2026-09-24T09:40:45.689653","kind":"stale_bar","detail":"XLF bar 09:37 is 3.7m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":91121,"ts":"2026-09-24T09:40:45.693164","kind":"stale_bar","detail":"NVDA bar 09:30 is 10.7m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":91122,"ts":"2026-09-24T09:40:45.693164","kind":"stale_bar","detail":"NVDA bar 09:31 is 9.7m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":91123,"ts":"2026-09-24T09:40:45.694164","kind":"stale_bar","detail":"NVDA bar 09:32 is 8.7m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":91124,"ts":"2026-09-24T09:40:45.695164","kind":"stale_bar","detail":"NVDA bar 09:33 is 7.7m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":91125,"ts":"2026-09-24T09:40:45.695164","kind":"stale_bar","detail":"NVDA bar 09:34 is 6.7m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":91126,"ts":"2026-09-24T09:40:45.696165","kind":"stale_bar","detail":"NVDA bar 09:35 is 5.7m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":91127,"ts":"2026-09-24T09:40:45.697164","kind":"stale_bar","detail":"NVDA bar 09:36 is 4.7m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":91128,"ts":"2026-09-24T09:40:45.697164","kind":"stale_bar","detail":"NVDA bar 09:37 is 3.7m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":91129,"ts":"2026-09-24T09:40:45.698164","kind":"stale_bar","detail":"AAPL bar 09:30 is 10.7m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":91130,"ts":"2026-09-24T09:40:45.699165","kind":"stale_bar","detail":"AAPL bar 09:31 is 9.7m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":91131,"ts":"2026-09-24T09:40:45.700164","kind":"stale_bar","detail":"AAPL bar 09:32 is 8.7m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":91132,"ts":"2026-09-24T09:40:45.701124","kind":"stale_bar","detail":"AAPL bar 09:33 is 7.7m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":91133,"ts":"2026-09-24T09:40:45.701648","kind":"stale_bar","detail":"AAPL bar 09:34 is 6.7m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":91134,"ts":"2026-09-24T09:40:45.701648","kind":"stale_bar","detail":"AAPL bar 09:35 is 5.7m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":91135,"ts":"2026-09-24T09:40:45.702657","kind":"stale_bar","detail":"AAPL bar 09:36 is 4.7m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":91136,"ts":"2026-09-24T09:40:45.703657","kind":"stale_bar","detail":"AAPL bar 09:37 is 3.7m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":91137,"ts":"2026-09-24T09:40:45.704659","kind":"stale_bar","detail":"GOOGL bar 09:30 is 10.7m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":91138,"ts":"2026-09-24T09:40:45.705660","kind":"stale_bar","detail":"GOOGL bar 09:31 is 9.7m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":91139,"ts":"2026-09-24T09:40:45.706533","kind":"stale_bar","detail":"GOOGL bar 09:32 is 8.7m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":91140,"ts":"2026-09-24T09:40:45.706533","kind":"stale_bar","detail":"GOOGL bar 09:33 is 7.7m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":91141,"ts":"2026-09-24T09:40:45.706533","kind":"stale_bar","detail":"GOOGL bar 09:34 is 6.7m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":91142,"ts":"2026-09-24T09:40:45.708037","kind":"stale_bar","detail":"GOOGL bar 09:35 is 5.7m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":91143,"ts":"2026-09-24T09:40:45.709040","kind":"stale_bar","detail":"GOOGL bar 09:36 is 4.7m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":91144,"ts":"2026-09-24T09:40:45.709040","kind":"stale_bar","detail":"GOOGL bar 09:37 is 3.7m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":91147,"ts":"2026-09-24T09:40:45.711545","kind":"stale_bar","detail":"WMT bar 09:30 is 10.7m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":91148,"ts":"2026-09-24T09:40:45.712550","kind":"stale_bar","detail":"WMT bar 09:31 is 9.7m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":91149,"ts":"2026-09-24T09:40:45.713550","kind":"stale_bar","detail":"WMT bar 09:32 is 8.7m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":91150,"ts":"2026-09-24T09:40:45.713550","kind":"stale_bar","detail":"WMT bar 09:33 is 7.7m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":91151,"ts":"2026-09-24T09:40:45.714549","kind":"stale_bar","detail":"WMT bar 09:34 is 6.7m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":91152,"ts":"2026-09-24T09:40:45.715548","kind":"stale_bar","detail":"WMT bar 09:35 is 5.7m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":91153,"ts":"2026-09-24T09:40:45.715548","kind":"stale_bar","detail":"WMT bar 09:36 is 4.7m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":91154,"ts":"2026-09-24T09:40:45.716550","kind":"stale_bar","detail":"WMT bar 09:37 is 3.7m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":97471,"ts":"2026-09-24T14:24:06.546449","kind":"degraded_bar","detail":"1m gap before 14:23","symbol":"DIA"}
+{"seq":97941,"ts":"2026-09-24T14:38:04.318086","kind":"degraded_bar","detail":"1m gap before 14:37","symbol":"DIA"}
+{"seq":97970,"ts":"2026-09-24T14:39:07.796424","kind":"stale_quote","detail":"SPY age=20.8s"}
+{"seq":97971,"ts":"2026-09-24T14:39:07.800445","kind":"stale_quote","detail":"QQQ age=20.9s"}
+{"seq":97972,"ts":"2026-09-24T14:39:07.803023","kind":"stale_quote","detail":"IWM age=20.9s"}
+{"seq":97973,"ts":"2026-09-24T14:39:07.805085","kind":"stale_quote","detail":"DIA age=20.9s"}
+{"seq":97974,"ts":"2026-09-24T14:39:07.807026","kind":"stale_quote","detail":"XLK age=20.9s"}
+{"seq":97975,"ts":"2026-09-24T14:39:07.808342","kind":"stale_quote","detail":"XLY age=20.9s"}
+{"seq":97976,"ts":"2026-09-24T14:39:07.816221","kind":"stale_quote","detail":"XLI age=20.9s"}
+{"seq":97977,"ts":"2026-09-24T14:39:07.818146","kind":"stale_quote","detail":"XLV age=21.1s"}
+{"seq":97978,"ts":"2026-09-24T14:39:07.819636","kind":"stale_quote","detail":"XLP age=21.1s"}
+{"seq":97979,"ts":"2026-09-24T14:39:07.821660","kind":"stale_quote","detail":"XLE age=20.9s"}
+{"seq":97980,"ts":"2026-09-24T14:39:07.822661","kind":"stale_quote","detail":"XLF age=21.0s"}
+{"seq":97981,"ts":"2026-09-24T14:39:07.825712","kind":"stale_quote","detail":"NVDA age=20.9s"}
+{"seq":97982,"ts":"2026-09-24T14:39:07.827729","kind":"stale_quote","detail":"AAPL age=21.0s"}
+{"seq":97983,"ts":"2026-09-24T14:39:07.829730","kind":"stale_quote","detail":"GOOGL age=21.0s"}
+{"seq":97984,"ts":"2026-09-24T14:39:07.830728","kind":"stale_quote","detail":"WMT age=21.6s"}
+{"seq":97985,"ts":"2026-09-24T14:40:07.849645","kind":"stale_quote","detail":"SPY age=43.0s"}
+{"seq":97986,"ts":"2026-09-24T14:40:07.862004","kind":"stale_quote","detail":"QQQ age=43.0s"}
+{"seq":97987,"ts":"2026-09-24T14:40:07.865016","kind":"stale_quote","detail":"IWM age=43.0s"}
+{"seq":97988,"ts":"2026-09-24T14:40:07.866022","kind":"stale_quote","detail":"DIA age=43.0s"}
+{"seq":97989,"ts":"2026-09-24T14:40:07.869433","kind":"stale_quote","detail":"XLK age=43.0s"}
+{"seq":97990,"ts":"2026-09-24T14:40:07.870430","kind":"stale_quote","detail":"XLY age=43.0s"}
+{"seq":97991,"ts":"2026-09-24T14:40:07.872759","kind":"stale_quote","detail":"XLI age=43.2s"}
+{"seq":97992,"ts":"2026-09-24T14:40:07.874757","kind":"stale_quote","detail":"XLV age=43.2s"}
+{"seq":97993,"ts":"2026-09-24T14:40:07.877757","kind":"stale_quote","detail":"XLP age=43.4s"}
+{"seq":97994,"ts":"2026-09-24T14:40:07.879757","kind":"stale_quote","detail":"XLE age=42.9s"}
+{"seq":97995,"ts":"2026-09-24T14:40:07.881751","kind":"stale_quote","detail":"XLF age=43.6s"}
+{"seq":97996,"ts":"2026-09-24T14:40:07.882753","kind":"stale_quote","detail":"NVDA age=42.9s"}
+{"seq":97997,"ts":"2026-09-24T14:40:07.884905","kind":"stale_quote","detail":"AAPL age=42.9s"}
+{"seq":97998,"ts":"2026-09-24T14:40:07.886132","kind":"stale_quote","detail":"GOOGL age=42.8s"}
+{"seq":97999,"ts":"2026-09-24T14:40:07.886132","kind":"stale_quote","detail":"WMT age=43.0s"}
+{"seq":98354,"ts":"2026-09-24T14:51:07.262357","kind":"stale_quote","detail":"SPY age=11.8s"}
+{"seq":98355,"ts":"2026-09-24T14:51:07.273748","kind":"stale_quote","detail":"QQQ age=11.8s"}
+{"seq":98356,"ts":"2026-09-24T14:51:07.275743","kind":"stale_quote","detail":"IWM age=11.8s"}
+{"seq":98357,"ts":"2026-09-24T14:51:07.283536","kind":"stale_quote","detail":"DIA age=11.9s"}
+{"seq":98358,"ts":"2026-09-24T14:51:07.286283","kind":"stale_quote","detail":"XLK age=12.1s"}
+{"seq":98359,"ts":"2026-09-24T14:51:07.293472","kind":"stale_quote","detail":"XLY age=11.8s"}
+{"seq":98360,"ts":"2026-09-24T14:51:07.295396","kind":"stale_quote","detail":"XLI age=11.9s"}
+{"seq":98361,"ts":"2026-09-24T14:51:07.298480","kind":"stale_quote","detail":"XLV age=12.0s"}
+{"seq":98362,"ts":"2026-09-24T14:51:07.301536","kind":"stale_quote","detail":"XLP age=11.9s"}
+{"seq":98363,"ts":"2026-09-24T14:51:07.304521","kind":"stale_quote","detail":"XLE age=11.9s"}
+{"seq":98364,"ts":"2026-09-24T14:51:07.307531","kind":"stale_quote","detail":"XLF age=12.0s"}
+{"seq":98365,"ts":"2026-09-24T14:51:07.309395","kind":"stale_quote","detail":"NVDA age=11.9s"}
+{"seq":98366,"ts":"2026-09-24T14:51:07.314037","kind":"stale_quote","detail":"AAPL age=11.9s"}
+{"seq":98367,"ts":"2026-09-24T14:51:07.318375","kind":"stale_quote","detail":"GOOGL age=11.9s"}
+{"seq":98368,"ts":"2026-09-24T14:51:07.323558","kind":"stale_quote","detail":"WMT age=12.9s"}
+{"seq":98505,"ts":"2026-09-24T15:14:10.894683","kind":"host_suspend","detail":"host suspended or clock stepped: 1100s unaccounted between 14:55:45 and 15:14:09 ET -- the lab was NOT running","gap_sec":1099.6,"from_et":"2026-09-24T14:55:45.187065","to_et":"2026-09-24T15:14:09.787762"}
+{"seq":98505,"ts":"2026-09-24T15:14:17.265925","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":98506,"ts":"2026-09-24T15:26:59.287494","kind":"tick","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":98507,"ts":"2026-09-24T15:27:13.427868","kind":"feed","detail":"upstream recovered after 776s and 15 failed call(s)","path":"__recovered__"}
+{"seq":98505,"ts":"2026-09-24T15:27:15.363596","kind":"host_suspend","detail":"host suspended or clock stepped: 758s unaccounted between 15:14:22 and 15:27:05 ET -- the lab was NOT running","gap_sec":757.8,"from_et":"2026-09-24T15:14:22.655400","to_et":"2026-09-24T15:27:05.409042"}
+{"seq":98508,"ts":"2026-09-24T15:27:17.966850","kind":"degraded_bar","detail":"1m gap before 15:16","symbol":"DIA"}
+{"seq":98509,"ts":"2026-09-24T15:27:18.656969","kind":"stale_bar","detail":"SPY bar 14:55 is 32.2m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":98510,"ts":"2026-09-24T15:27:18.659824","kind":"stale_bar","detail":"SPY bar 14:56 is 31.2m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":98511,"ts":"2026-09-24T15:27:18.661929","kind":"stale_bar","detail":"SPY bar 14:57 is 30.2m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":98512,"ts":"2026-09-24T15:27:18.663987","kind":"stale_bar","detail":"SPY bar 14:58 is 29.2m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":98513,"ts":"2026-09-24T15:27:18.665952","kind":"stale_bar","detail":"SPY bar 14:59 is 28.2m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":98514,"ts":"2026-09-24T15:27:18.674020","kind":"stale_bar","detail":"SPY bar 15:00 is 27.2m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":98515,"ts":"2026-09-24T15:27:18.676044","kind":"stale_bar","detail":"SPY bar 15:01 is 26.2m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":98516,"ts":"2026-09-24T15:27:18.677942","kind":"stale_bar","detail":"SPY bar 15:02 is 25.2m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":98517,"ts":"2026-09-24T15:27:18.680055","kind":"stale_bar","detail":"SPY bar 15:03 is 24.2m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":98518,"ts":"2026-09-24T15:27:18.682048","kind":"stale_bar","detail":"SPY bar 15:04 is 23.2m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":98519,"ts":"2026-09-24T15:27:18.685683","kind":"stale_bar","detail":"SPY bar 15:05 is 22.2m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":98520,"ts":"2026-09-24T15:27:18.687225","kind":"stale_bar","detail":"SPY bar 15:06 is 21.2m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":98521,"ts":"2026-09-24T15:27:18.689048","kind":"stale_bar","detail":"SPY bar 15:07 is 20.2m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":98522,"ts":"2026-09-24T15:27:18.691160","kind":"stale_bar","detail":"SPY bar 15:08 is 19.2m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":98523,"ts":"2026-09-24T15:27:18.693239","kind":"stale_bar","detail":"SPY bar 15:09 is 18.2m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":98524,"ts":"2026-09-24T15:27:18.693239","kind":"stale_bar","detail":"SPY bar 15:10 is 17.2m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":98525,"ts":"2026-09-24T15:27:18.696436","kind":"stale_bar","detail":"SPY bar 15:11 is 16.2m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":98526,"ts":"2026-09-24T15:27:18.699821","kind":"stale_bar","detail":"SPY bar 15:12 is 15.2m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":98527,"ts":"2026-09-24T15:27:18.700754","kind":"stale_bar","detail":"SPY bar 15:13 is 14.2m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":98528,"ts":"2026-09-24T15:27:18.730556","kind":"stale_bar","detail":"SPY bar 15:14 is 13.2m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":98529,"ts":"2026-09-24T15:27:18.732503","kind":"stale_bar","detail":"SPY bar 15:15 is 12.2m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":98530,"ts":"2026-09-24T15:27:18.746621","kind":"stale_bar","detail":"SPY bar 15:16 is 11.2m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":98531,"ts":"2026-09-24T15:27:18.748658","kind":"stale_bar","detail":"SPY bar 15:17 is 10.2m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":98532,"ts":"2026-09-24T15:27:18.750618","kind":"stale_bar","detail":"SPY bar 15:18 is 9.2m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":98533,"ts":"2026-09-24T15:27:18.752624","kind":"stale_bar","detail":"SPY bar 15:19 is 8.2m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":98534,"ts":"2026-09-24T15:27:18.754674","kind":"stale_bar","detail":"SPY bar 15:20 is 7.2m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":98535,"ts":"2026-09-24T15:27:18.756636","kind":"stale_bar","detail":"SPY bar 15:21 is 6.2m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":98536,"ts":"2026-09-24T15:27:18.758631","kind":"stale_bar","detail":"SPY bar 15:22 is 5.2m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":98537,"ts":"2026-09-24T15:27:18.759620","kind":"stale_bar","detail":"SPY bar 15:23 is 4.2m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":98538,"ts":"2026-09-24T15:27:18.763031","kind":"stale_bar","detail":"SPY bar 15:24 is 3.2m old -- entries suppressed, open positions still managed","symbol":"SPY"}
+{"seq":98543,"ts":"2026-09-24T15:27:18.774161","kind":"stale_bar","detail":"QQQ bar 14:55 is 32.2m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":98544,"ts":"2026-09-24T15:27:18.776039","kind":"stale_bar","detail":"QQQ bar 14:56 is 31.2m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":98545,"ts":"2026-09-24T15:27:18.784037","kind":"stale_bar","detail":"QQQ bar 14:57 is 30.2m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":98546,"ts":"2026-09-24T15:27:18.786159","kind":"stale_bar","detail":"QQQ bar 14:58 is 29.2m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":98547,"ts":"2026-09-24T15:27:18.788228","kind":"stale_bar","detail":"QQQ bar 14:59 is 28.2m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":98548,"ts":"2026-09-24T15:27:18.790131","kind":"stale_bar","detail":"QQQ bar 15:00 is 27.2m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":98549,"ts":"2026-09-24T15:27:18.792278","kind":"stale_bar","detail":"QQQ bar 15:01 is 26.2m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":98550,"ts":"2026-09-24T15:27:18.794228","kind":"stale_bar","detail":"QQQ bar 15:02 is 25.2m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":98551,"ts":"2026-09-24T15:27:18.796264","kind":"stale_bar","detail":"QQQ bar 15:03 is 24.2m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":98552,"ts":"2026-09-24T15:27:18.798310","kind":"stale_bar","detail":"QQQ bar 15:04 is 23.2m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":98553,"ts":"2026-09-24T15:27:18.800188","kind":"stale_bar","detail":"QQQ bar 15:05 is 22.2m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":98554,"ts":"2026-09-24T15:27:18.801207","kind":"stale_bar","detail":"QQQ bar 15:06 is 21.2m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":98555,"ts":"2026-09-24T15:27:18.803984","kind":"stale_bar","detail":"QQQ bar 15:07 is 20.2m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":98556,"ts":"2026-09-24T15:27:18.805978","kind":"stale_bar","detail":"QQQ bar 15:08 is 19.2m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":98557,"ts":"2026-09-24T15:27:18.808463","kind":"stale_bar","detail":"QQQ bar 15:09 is 18.2m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":98558,"ts":"2026-09-24T15:27:18.811653","kind":"stale_bar","detail":"QQQ bar 15:10 is 17.2m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":98559,"ts":"2026-09-24T15:27:18.813593","kind":"stale_bar","detail":"QQQ bar 15:11 is 16.2m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":98560,"ts":"2026-09-24T15:27:18.815584","kind":"stale_bar","detail":"QQQ bar 15:12 is 15.2m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":98561,"ts":"2026-09-24T15:27:18.817599","kind":"stale_bar","detail":"QQQ bar 15:13 is 14.2m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":98562,"ts":"2026-09-24T15:27:18.820609","kind":"stale_bar","detail":"QQQ bar 15:14 is 13.2m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":98563,"ts":"2026-09-24T15:27:18.822591","kind":"stale_bar","detail":"QQQ bar 15:15 is 12.2m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":98564,"ts":"2026-09-24T15:27:18.855583","kind":"stale_bar","detail":"QQQ bar 15:16 is 11.2m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":98565,"ts":"2026-09-24T15:27:18.857595","kind":"stale_bar","detail":"QQQ bar 15:17 is 10.2m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":98566,"ts":"2026-09-24T15:27:18.859479","kind":"stale_bar","detail":"QQQ bar 15:18 is 9.2m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":98567,"ts":"2026-09-24T15:27:18.861637","kind":"stale_bar","detail":"QQQ bar 15:19 is 8.2m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":98568,"ts":"2026-09-24T15:27:18.890497","kind":"stale_bar","detail":"QQQ bar 15:20 is 7.2m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":98569,"ts":"2026-09-24T15:27:18.893485","kind":"stale_bar","detail":"QQQ bar 15:21 is 6.2m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":98570,"ts":"2026-09-24T15:27:18.895484","kind":"stale_bar","detail":"QQQ bar 15:22 is 5.2m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":98571,"ts":"2026-09-24T15:27:18.919471","kind":"stale_bar","detail":"QQQ bar 15:23 is 4.2m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":98572,"ts":"2026-09-24T15:27:18.921474","kind":"stale_bar","detail":"QQQ bar 15:24 is 3.2m old -- entries suppressed, open positions still managed","symbol":"QQQ"}
+{"seq":98577,"ts":"2026-09-24T15:27:18.935476","kind":"stale_bar","detail":"IWM bar 14:55 is 32.2m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":98578,"ts":"2026-09-24T15:27:18.937478","kind":"stale_bar","detail":"IWM bar 14:56 is 31.2m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":98579,"ts":"2026-09-24T15:27:18.939471","kind":"stale_bar","detail":"IWM bar 14:57 is 30.2m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":98580,"ts":"2026-09-24T15:27:18.942474","kind":"stale_bar","detail":"IWM bar 14:58 is 29.2m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":98581,"ts":"2026-09-24T15:27:18.944474","kind":"stale_bar","detail":"IWM bar 14:59 is 28.2m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":98582,"ts":"2026-09-24T15:27:18.947473","kind":"stale_bar","detail":"IWM bar 15:00 is 27.2m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":98583,"ts":"2026-09-24T15:27:18.949478","kind":"stale_bar","detail":"IWM bar 15:01 is 26.2m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":98584,"ts":"2026-09-24T15:27:18.952331","kind":"stale_bar","detail":"IWM bar 15:02 is 25.2m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":98585,"ts":"2026-09-24T15:27:18.954230","kind":"stale_bar","detail":"IWM bar 15:03 is 24.2m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":98586,"ts":"2026-09-24T15:27:18.957238","kind":"stale_bar","detail":"IWM bar 15:04 is 23.2m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":98587,"ts":"2026-09-24T15:27:18.959325","kind":"stale_bar","detail":"IWM bar 15:05 is 22.2m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":98588,"ts":"2026-09-24T15:27:18.962380","kind":"stale_bar","detail":"IWM bar 15:06 is 21.2m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":98589,"ts":"2026-09-24T15:27:18.964936","kind":"stale_bar","detail":"IWM bar 15:07 is 20.2m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":98590,"ts":"2026-09-24T15:27:18.966973","kind":"stale_bar","detail":"IWM bar 15:08 is 19.2m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":98591,"ts":"2026-09-24T15:27:18.969797","kind":"stale_bar","detail":"IWM bar 15:09 is 18.2m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":98592,"ts":"2026-09-24T15:27:18.972802","kind":"stale_bar","detail":"IWM bar 15:10 is 17.2m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":98593,"ts":"2026-09-24T15:27:18.974801","kind":"stale_bar","detail":"IWM bar 15:11 is 16.2m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":98594,"ts":"2026-09-24T15:27:18.978804","kind":"stale_bar","detail":"IWM bar 15:12 is 15.2m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":98595,"ts":"2026-09-24T15:27:18.980806","kind":"stale_bar","detail":"IWM bar 15:13 is 14.2m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":98596,"ts":"2026-09-24T15:27:18.983795","kind":"stale_bar","detail":"IWM bar 15:14 is 13.2m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":98597,"ts":"2026-09-24T15:27:18.985801","kind":"stale_bar","detail":"IWM bar 15:15 is 12.2m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":98598,"ts":"2026-09-24T15:27:18.988807","kind":"stale_bar","detail":"IWM bar 15:16 is 11.2m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":98599,"ts":"2026-09-24T15:27:18.990803","kind":"stale_bar","detail":"IWM bar 15:17 is 10.2m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":98600,"ts":"2026-09-24T15:27:18.993802","kind":"stale_bar","detail":"IWM bar 15:18 is 9.2m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":98601,"ts":"2026-09-24T15:27:19.000809","kind":"stale_bar","detail":"IWM bar 15:19 is 8.2m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":98602,"ts":"2026-09-24T15:27:19.003306","kind":"stale_bar","detail":"IWM bar 15:20 is 7.2m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":98603,"ts":"2026-09-24T15:27:19.006319","kind":"stale_bar","detail":"IWM bar 15:21 is 6.2m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":98604,"ts":"2026-09-24T15:27:19.010325","kind":"stale_bar","detail":"IWM bar 15:22 is 5.2m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":98605,"ts":"2026-09-24T15:27:19.014314","kind":"stale_bar","detail":"IWM bar 15:23 is 4.2m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":98606,"ts":"2026-09-24T15:27:19.017313","kind":"stale_bar","detail":"IWM bar 15:24 is 3.2m old -- entries suppressed, open positions still managed","symbol":"IWM"}
+{"seq":98613,"ts":"2026-09-24T15:27:19.035315","kind":"stale_bar","detail":"DIA bar 14:55 is 32.2m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":98614,"ts":"2026-09-24T15:27:19.037414","kind":"stale_bar","detail":"DIA bar 14:56 is 31.2m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":98615,"ts":"2026-09-24T15:27:19.040314","kind":"stale_bar","detail":"DIA bar 14:57 is 30.2m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":98616,"ts":"2026-09-24T15:27:19.042395","kind":"stale_bar","detail":"DIA bar 14:58 is 29.2m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":98617,"ts":"2026-09-24T15:27:19.044438","kind":"stale_bar","detail":"DIA bar 14:59 is 28.2m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":98618,"ts":"2026-09-24T15:27:19.046445","kind":"stale_bar","detail":"DIA bar 15:00 is 27.2m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":98619,"ts":"2026-09-24T15:27:19.048460","kind":"stale_bar","detail":"DIA bar 15:01 is 26.2m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":98620,"ts":"2026-09-24T15:27:19.050414","kind":"stale_bar","detail":"DIA bar 15:02 is 25.2m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":98621,"ts":"2026-09-24T15:27:19.052389","kind":"stale_bar","detail":"DIA bar 15:03 is 24.2m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":98622,"ts":"2026-09-24T15:27:19.055330","kind":"stale_bar","detail":"DIA bar 15:04 is 23.2m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":98623,"ts":"2026-09-24T15:27:19.056412","kind":"stale_bar","detail":"DIA bar 15:05 is 22.2m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":98624,"ts":"2026-09-24T15:27:19.058408","kind":"stale_bar","detail":"DIA bar 15:06 is 21.2m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":98625,"ts":"2026-09-24T15:27:19.060325","kind":"stale_bar","detail":"DIA bar 15:07 is 20.2m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":98626,"ts":"2026-09-24T15:27:19.062464","kind":"stale_bar","detail":"DIA bar 15:08 is 19.2m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":98627,"ts":"2026-09-24T15:27:19.063451","kind":"stale_bar","detail":"DIA bar 15:09 is 18.2m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":98628,"ts":"2026-09-24T15:27:19.064428","kind":"stale_bar","detail":"DIA bar 15:10 is 17.2m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":98629,"ts":"2026-09-24T15:27:19.066451","kind":"stale_bar","detail":"DIA bar 15:11 is 16.2m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":98630,"ts":"2026-09-24T15:27:19.068460","kind":"stale_bar","detail":"DIA bar 15:12 is 15.2m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":98631,"ts":"2026-09-24T15:27:19.069458","kind":"stale_bar","detail":"DIA bar 15:13 is 14.2m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":98632,"ts":"2026-09-24T15:27:19.071413","kind":"stale_bar","detail":"DIA bar 15:14 is 13.2m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":98633,"ts":"2026-09-24T15:27:19.074454","kind":"stale_bar","detail":"DIA bar 15:16 is 11.2m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":98634,"ts":"2026-09-24T15:27:19.076434","kind":"stale_bar","detail":"DIA bar 15:17 is 10.2m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":98635,"ts":"2026-09-24T15:27:19.079448","kind":"stale_bar","detail":"DIA bar 15:18 is 9.2m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":98636,"ts":"2026-09-24T15:27:19.080446","kind":"stale_bar","detail":"DIA bar 15:19 is 8.2m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":98637,"ts":"2026-09-24T15:27:19.082419","kind":"stale_bar","detail":"DIA bar 15:20 is 7.2m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":98638,"ts":"2026-09-24T15:27:19.084435","kind":"stale_bar","detail":"DIA bar 15:21 is 6.2m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":98639,"ts":"2026-09-24T15:27:19.086419","kind":"stale_bar","detail":"DIA bar 15:22 is 5.2m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":98640,"ts":"2026-09-24T15:27:19.089440","kind":"stale_bar","detail":"DIA bar 15:23 is 4.2m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":98641,"ts":"2026-09-24T15:27:19.091341","kind":"stale_bar","detail":"DIA bar 15:24 is 3.2m old -- entries suppressed, open positions still managed","symbol":"DIA"}
+{"seq":98644,"ts":"2026-09-24T15:27:19.097390","kind":"stale_bar","detail":"XLK bar 14:55 is 32.2m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":98645,"ts":"2026-09-24T15:27:19.099419","kind":"stale_bar","detail":"XLK bar 14:56 is 31.2m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":98646,"ts":"2026-09-24T15:27:19.101443","kind":"stale_bar","detail":"XLK bar 14:57 is 30.2m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":98647,"ts":"2026-09-24T15:27:19.107644","kind":"stale_bar","detail":"XLK bar 14:58 is 29.2m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":98648,"ts":"2026-09-24T15:27:19.110279","kind":"stale_bar","detail":"XLK bar 14:59 is 28.2m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":98649,"ts":"2026-09-24T15:27:19.111389","kind":"stale_bar","detail":"XLK bar 15:00 is 27.2m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":98650,"ts":"2026-09-24T15:27:19.113396","kind":"stale_bar","detail":"XLK bar 15:01 is 26.2m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":98651,"ts":"2026-09-24T15:27:19.116293","kind":"stale_bar","detail":"XLK bar 15:02 is 25.2m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":98652,"ts":"2026-09-24T15:27:19.119387","kind":"stale_bar","detail":"XLK bar 15:03 is 24.2m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":98653,"ts":"2026-09-24T15:27:19.120384","kind":"stale_bar","detail":"XLK bar 15:04 is 23.2m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":98654,"ts":"2026-09-24T15:27:19.123293","kind":"stale_bar","detail":"XLK bar 15:05 is 22.2m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":98655,"ts":"2026-09-24T15:27:19.125467","kind":"stale_bar","detail":"XLK bar 15:06 is 21.2m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":98656,"ts":"2026-09-24T15:27:19.127396","kind":"stale_bar","detail":"XLK bar 15:07 is 20.2m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":98657,"ts":"2026-09-24T15:27:19.128384","kind":"stale_bar","detail":"XLK bar 15:08 is 19.2m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":98658,"ts":"2026-09-24T15:27:19.130361","kind":"stale_bar","detail":"XLK bar 15:09 is 18.2m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":98659,"ts":"2026-09-24T15:27:19.132291","kind":"stale_bar","detail":"XLK bar 15:10 is 17.2m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":98660,"ts":"2026-09-24T15:27:19.134368","kind":"stale_bar","detail":"XLK bar 15:11 is 16.2m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":98661,"ts":"2026-09-24T15:27:19.135384","kind":"stale_bar","detail":"XLK bar 15:12 is 15.2m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":98662,"ts":"2026-09-24T15:27:19.137427","kind":"stale_bar","detail":"XLK bar 15:13 is 14.2m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":98663,"ts":"2026-09-24T15:27:19.139384","kind":"stale_bar","detail":"XLK bar 15:14 is 13.2m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":98664,"ts":"2026-09-24T15:27:19.140392","kind":"stale_bar","detail":"XLK bar 15:15 is 12.2m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":98665,"ts":"2026-09-24T15:27:19.142363","kind":"stale_bar","detail":"XLK bar 15:16 is 11.2m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":98666,"ts":"2026-09-24T15:27:19.143290","kind":"stale_bar","detail":"XLK bar 15:17 is 10.2m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":98667,"ts":"2026-09-24T15:27:19.145426","kind":"stale_bar","detail":"XLK bar 15:18 is 9.2m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":98668,"ts":"2026-09-24T15:27:19.147441","kind":"stale_bar","detail":"XLK bar 15:19 is 8.2m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":98669,"ts":"2026-09-24T15:27:19.149533","kind":"stale_bar","detail":"XLK bar 15:20 is 7.2m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":98670,"ts":"2026-09-24T15:27:19.151453","kind":"stale_bar","detail":"XLK bar 15:21 is 6.2m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":98671,"ts":"2026-09-24T15:27:19.153550","kind":"stale_bar","detail":"XLK bar 15:22 is 5.2m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":98672,"ts":"2026-09-24T15:27:19.155561","kind":"stale_bar","detail":"XLK bar 15:23 is 4.2m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":98673,"ts":"2026-09-24T15:27:19.157478","kind":"stale_bar","detail":"XLK bar 15:24 is 3.2m old -- entries suppressed, open positions still managed","symbol":"XLK"}
+{"seq":98678,"ts":"2026-09-24T15:27:19.205144","kind":"stale_bar","detail":"XLY bar 14:55 is 32.2m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":98679,"ts":"2026-09-24T15:27:19.207150","kind":"stale_bar","detail":"XLY bar 14:56 is 31.2m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":98680,"ts":"2026-09-24T15:27:19.209160","kind":"stale_bar","detail":"XLY bar 14:57 is 30.2m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":98681,"ts":"2026-09-24T15:27:19.210145","kind":"stale_bar","detail":"XLY bar 14:58 is 29.2m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":98682,"ts":"2026-09-24T15:27:19.216152","kind":"stale_bar","detail":"XLY bar 14:59 is 28.2m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":98683,"ts":"2026-09-24T15:27:19.218212","kind":"stale_bar","detail":"XLY bar 15:00 is 27.2m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":98684,"ts":"2026-09-24T15:27:19.220060","kind":"stale_bar","detail":"XLY bar 15:01 is 26.2m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":98685,"ts":"2026-09-24T15:27:19.222047","kind":"stale_bar","detail":"XLY bar 15:02 is 25.2m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":98686,"ts":"2026-09-24T15:27:19.223047","kind":"stale_bar","detail":"XLY bar 15:03 is 24.2m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":98687,"ts":"2026-09-24T15:27:19.225240","kind":"stale_bar","detail":"XLY bar 15:04 is 23.2m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":98688,"ts":"2026-09-24T15:27:19.229126","kind":"stale_bar","detail":"XLY bar 15:05 is 22.2m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":98689,"ts":"2026-09-24T15:27:19.231154","kind":"stale_bar","detail":"XLY bar 15:06 is 21.2m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":98690,"ts":"2026-09-24T15:27:19.234051","kind":"stale_bar","detail":"XLY bar 15:07 is 20.2m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":98691,"ts":"2026-09-24T15:27:19.236205","kind":"stale_bar","detail":"XLY bar 15:08 is 19.2m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":98692,"ts":"2026-09-24T15:27:19.238106","kind":"stale_bar","detail":"XLY bar 15:09 is 18.2m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":98693,"ts":"2026-09-24T15:27:19.240180","kind":"stale_bar","detail":"XLY bar 15:10 is 17.2m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":98694,"ts":"2026-09-24T15:27:19.243090","kind":"stale_bar","detail":"XLY bar 15:11 is 16.2m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":98695,"ts":"2026-09-24T15:27:19.245153","kind":"stale_bar","detail":"XLY bar 15:12 is 15.2m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":98696,"ts":"2026-09-24T15:27:19.246182","kind":"stale_bar","detail":"XLY bar 15:13 is 14.2m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":98697,"ts":"2026-09-24T15:27:19.249051","kind":"stale_bar","detail":"XLY bar 15:14 is 13.2m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":98698,"ts":"2026-09-24T15:27:19.251166","kind":"stale_bar","detail":"XLY bar 15:15 is 12.2m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":98699,"ts":"2026-09-24T15:27:19.253145","kind":"stale_bar","detail":"XLY bar 15:16 is 11.2m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":98700,"ts":"2026-09-24T15:27:19.255050","kind":"stale_bar","detail":"XLY bar 15:17 is 10.2m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":98701,"ts":"2026-09-24T15:27:19.258054","kind":"stale_bar","detail":"XLY bar 15:18 is 9.2m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":98702,"ts":"2026-09-24T15:27:19.261049","kind":"stale_bar","detail":"XLY bar 15:19 is 8.2m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":98703,"ts":"2026-09-24T15:27:19.263060","kind":"stale_bar","detail":"XLY bar 15:20 is 7.2m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":98704,"ts":"2026-09-24T15:27:19.266131","kind":"stale_bar","detail":"XLY bar 15:21 is 6.2m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":98705,"ts":"2026-09-24T15:27:19.269096","kind":"stale_bar","detail":"XLY bar 15:22 is 5.2m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":98706,"ts":"2026-09-24T15:27:19.272050","kind":"stale_bar","detail":"XLY bar 15:23 is 4.2m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":98707,"ts":"2026-09-24T15:27:19.275051","kind":"stale_bar","detail":"XLY bar 15:24 is 3.2m old -- entries suppressed, open positions still managed","symbol":"XLY"}
+{"seq":98714,"ts":"2026-09-24T15:27:19.290074","kind":"stale_bar","detail":"XLI bar 14:55 is 32.2m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":98715,"ts":"2026-09-24T15:27:19.292225","kind":"stale_bar","detail":"XLI bar 14:56 is 31.2m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":98716,"ts":"2026-09-24T15:27:19.294219","kind":"stale_bar","detail":"XLI bar 14:57 is 30.2m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":98717,"ts":"2026-09-24T15:27:19.296074","kind":"stale_bar","detail":"XLI bar 14:58 is 29.2m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":98718,"ts":"2026-09-24T15:27:19.298798","kind":"stale_bar","detail":"XLI bar 14:59 is 28.2m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":98719,"ts":"2026-09-24T15:27:19.299876","kind":"stale_bar","detail":"XLI bar 15:00 is 27.2m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":98720,"ts":"2026-09-24T15:27:19.301930","kind":"stale_bar","detail":"XLI bar 15:01 is 26.2m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":98721,"ts":"2026-09-24T15:27:19.305470","kind":"stale_bar","detail":"XLI bar 15:02 is 25.2m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":98722,"ts":"2026-09-24T15:27:19.306590","kind":"stale_bar","detail":"XLI bar 15:03 is 24.2m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":98723,"ts":"2026-09-24T15:27:19.309313","kind":"stale_bar","detail":"XLI bar 15:04 is 23.2m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":98724,"ts":"2026-09-24T15:27:19.312033","kind":"stale_bar","detail":"XLI bar 15:05 is 22.2m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":98725,"ts":"2026-09-24T15:27:19.313144","kind":"stale_bar","detail":"XLI bar 15:06 is 21.2m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":98726,"ts":"2026-09-24T15:27:19.315133","kind":"stale_bar","detail":"XLI bar 15:07 is 20.2m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":98727,"ts":"2026-09-24T15:27:19.317049","kind":"stale_bar","detail":"XLI bar 15:08 is 19.2m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":98728,"ts":"2026-09-24T15:27:19.319119","kind":"stale_bar","detail":"XLI bar 15:09 is 18.2m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":98729,"ts":"2026-09-24T15:27:19.341152","kind":"stale_bar","detail":"XLI bar 15:10 is 17.2m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":98730,"ts":"2026-09-24T15:27:19.344034","kind":"stale_bar","detail":"XLI bar 15:11 is 16.2m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":98731,"ts":"2026-09-24T15:27:19.346080","kind":"stale_bar","detail":"XLI bar 15:12 is 15.2m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":98732,"ts":"2026-09-24T15:27:19.348042","kind":"stale_bar","detail":"XLI bar 15:13 is 14.2m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":98733,"ts":"2026-09-24T15:27:19.354041","kind":"stale_bar","detail":"XLI bar 15:14 is 13.2m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":98734,"ts":"2026-09-24T15:27:19.357184","kind":"stale_bar","detail":"XLI bar 15:15 is 12.2m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":98735,"ts":"2026-09-24T15:27:19.358208","kind":"stale_bar","detail":"XLI bar 15:16 is 11.2m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":98736,"ts":"2026-09-24T15:27:19.360666","kind":"stale_bar","detail":"XLI bar 15:17 is 10.2m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":98737,"ts":"2026-09-24T15:27:19.362699","kind":"stale_bar","detail":"XLI bar 15:18 is 9.2m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":98738,"ts":"2026-09-24T15:27:19.365460","kind":"stale_bar","detail":"XLI bar 15:19 is 8.2m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":98739,"ts":"2026-09-24T15:27:19.367466","kind":"stale_bar","detail":"XLI bar 15:20 is 7.2m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":98740,"ts":"2026-09-24T15:27:19.370465","kind":"stale_bar","detail":"XLI bar 15:21 is 6.2m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":98741,"ts":"2026-09-24T15:27:19.372460","kind":"stale_bar","detail":"XLI bar 15:22 is 5.2m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":98742,"ts":"2026-09-24T15:27:19.374461","kind":"stale_bar","detail":"XLI bar 15:23 is 4.2m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":98743,"ts":"2026-09-24T15:27:19.376533","kind":"stale_bar","detail":"XLI bar 15:24 is 3.2m old -- entries suppressed, open positions still managed","symbol":"XLI"}
+{"seq":98750,"ts":"2026-09-24T15:27:19.424359","kind":"stale_bar","detail":"XLV bar 14:55 is 32.2m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":98751,"ts":"2026-09-24T15:27:19.428356","kind":"stale_bar","detail":"XLV bar 14:56 is 31.2m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":98752,"ts":"2026-09-24T15:27:19.434484","kind":"stale_bar","detail":"XLV bar 14:57 is 30.2m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":98753,"ts":"2026-09-24T15:27:19.436532","kind":"stale_bar","detail":"XLV bar 14:58 is 29.2m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":98754,"ts":"2026-09-24T15:27:19.438462","kind":"stale_bar","detail":"XLV bar 14:59 is 28.2m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":98755,"ts":"2026-09-24T15:27:19.440478","kind":"stale_bar","detail":"XLV bar 15:00 is 27.2m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":98756,"ts":"2026-09-24T15:27:19.443363","kind":"stale_bar","detail":"XLV bar 15:01 is 26.2m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":98757,"ts":"2026-09-24T15:27:19.446365","kind":"stale_bar","detail":"XLV bar 15:02 is 25.2m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":98758,"ts":"2026-09-24T15:27:19.449357","kind":"stale_bar","detail":"XLV bar 15:03 is 24.2m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":98759,"ts":"2026-09-24T15:27:19.451507","kind":"stale_bar","detail":"XLV bar 15:04 is 23.2m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":98760,"ts":"2026-09-24T15:27:19.453459","kind":"stale_bar","detail":"XLV bar 15:05 is 22.2m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":98761,"ts":"2026-09-24T15:27:19.455488","kind":"stale_bar","detail":"XLV bar 15:06 is 21.2m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":98762,"ts":"2026-09-24T15:27:19.458402","kind":"stale_bar","detail":"XLV bar 15:07 is 20.2m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":98763,"ts":"2026-09-24T15:27:19.461458","kind":"stale_bar","detail":"XLV bar 15:08 is 19.2m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":98764,"ts":"2026-09-24T15:27:19.463357","kind":"stale_bar","detail":"XLV bar 15:09 is 18.2m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":98765,"ts":"2026-09-24T15:27:19.465459","kind":"stale_bar","detail":"XLV bar 15:10 is 17.2m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":98766,"ts":"2026-09-24T15:27:19.467468","kind":"stale_bar","detail":"XLV bar 15:11 is 16.2m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":98767,"ts":"2026-09-24T15:27:19.469482","kind":"stale_bar","detail":"XLV bar 15:12 is 15.2m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":98768,"ts":"2026-09-24T15:27:19.472268","kind":"stale_bar","detail":"XLV bar 15:13 is 14.2m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":98769,"ts":"2026-09-24T15:27:19.474213","kind":"stale_bar","detail":"XLV bar 15:14 is 13.2m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":98770,"ts":"2026-09-24T15:27:19.477257","kind":"stale_bar","detail":"XLV bar 15:15 is 12.2m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":98771,"ts":"2026-09-24T15:27:19.479292","kind":"stale_bar","detail":"XLV bar 15:16 is 11.2m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":98772,"ts":"2026-09-24T15:27:19.481925","kind":"stale_bar","detail":"XLV bar 15:17 is 10.2m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":98773,"ts":"2026-09-24T15:27:19.484228","kind":"stale_bar","detail":"XLV bar 15:18 is 9.2m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":98774,"ts":"2026-09-24T15:27:19.486204","kind":"stale_bar","detail":"XLV bar 15:19 is 8.2m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":98775,"ts":"2026-09-24T15:27:19.488182","kind":"stale_bar","detail":"XLV bar 15:20 is 7.2m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":98776,"ts":"2026-09-24T15:27:19.491082","kind":"stale_bar","detail":"XLV bar 15:21 is 6.2m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":98777,"ts":"2026-09-24T15:27:19.493186","kind":"stale_bar","detail":"XLV bar 15:22 is 5.2m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":98778,"ts":"2026-09-24T15:27:19.495189","kind":"stale_bar","detail":"XLV bar 15:23 is 4.2m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":98779,"ts":"2026-09-24T15:27:19.497192","kind":"stale_bar","detail":"XLV bar 15:24 is 3.2m old -- entries suppressed, open positions still managed","symbol":"XLV"}
+{"seq":98782,"ts":"2026-09-24T15:27:19.504973","kind":"stale_bar","detail":"XLP bar 14:55 is 32.2m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":98783,"ts":"2026-09-24T15:27:19.507788","kind":"stale_bar","detail":"XLP bar 14:56 is 31.2m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":98784,"ts":"2026-09-24T15:27:19.508735","kind":"stale_bar","detail":"XLP bar 14:57 is 30.2m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":98785,"ts":"2026-09-24T15:27:19.510709","kind":"stale_bar","detail":"XLP bar 14:58 is 29.2m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":98786,"ts":"2026-09-24T15:27:19.512970","kind":"stale_bar","detail":"XLP bar 14:59 is 28.2m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":98787,"ts":"2026-09-24T15:27:19.514966","kind":"stale_bar","detail":"XLP bar 15:00 is 27.2m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":98788,"ts":"2026-09-24T15:27:19.515955","kind":"stale_bar","detail":"XLP bar 15:01 is 26.2m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":98789,"ts":"2026-09-24T15:27:19.517988","kind":"stale_bar","detail":"XLP bar 15:02 is 25.2m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":98790,"ts":"2026-09-24T15:27:19.520013","kind":"stale_bar","detail":"XLP bar 15:03 is 24.2m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":98791,"ts":"2026-09-24T15:27:19.521983","kind":"stale_bar","detail":"XLP bar 15:04 is 23.2m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":98792,"ts":"2026-09-24T15:27:19.523960","kind":"stale_bar","detail":"XLP bar 15:05 is 22.2m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":98793,"ts":"2026-09-24T15:27:19.525603","kind":"stale_bar","detail":"XLP bar 15:06 is 21.2m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":98794,"ts":"2026-09-24T15:27:19.528633","kind":"stale_bar","detail":"XLP bar 15:07 is 20.2m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":98795,"ts":"2026-09-24T15:27:19.529674","kind":"stale_bar","detail":"XLP bar 15:08 is 19.2m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":98796,"ts":"2026-09-24T15:27:19.532533","kind":"stale_bar","detail":"XLP bar 15:09 is 18.2m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":98797,"ts":"2026-09-24T15:27:19.533656","kind":"stale_bar","detail":"XLP bar 15:10 is 17.2m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":98798,"ts":"2026-09-24T15:27:19.544737","kind":"stale_bar","detail":"XLP bar 15:11 is 16.2m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":98799,"ts":"2026-09-24T15:27:19.547644","kind":"stale_bar","detail":"XLP bar 15:12 is 15.2m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":98800,"ts":"2026-09-24T15:27:19.548777","kind":"stale_bar","detail":"XLP bar 15:13 is 14.2m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":98801,"ts":"2026-09-24T15:27:19.550747","kind":"stale_bar","detail":"XLP bar 15:14 is 13.2m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":98802,"ts":"2026-09-24T15:27:19.552786","kind":"stale_bar","detail":"XLP bar 15:15 is 12.2m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":98803,"ts":"2026-09-24T15:27:19.555649","kind":"stale_bar","detail":"XLP bar 15:16 is 11.2m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":98804,"ts":"2026-09-24T15:27:19.556749","kind":"stale_bar","detail":"XLP bar 15:17 is 10.2m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":98805,"ts":"2026-09-24T15:27:19.558796","kind":"stale_bar","detail":"XLP bar 15:18 is 9.2m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":98806,"ts":"2026-09-24T15:27:19.559537","kind":"stale_bar","detail":"XLP bar 15:19 is 8.2m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":98807,"ts":"2026-09-24T15:27:19.561383","kind":"stale_bar","detail":"XLP bar 15:20 is 7.2m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":98808,"ts":"2026-09-24T15:27:19.563492","kind":"stale_bar","detail":"XLP bar 15:21 is 6.2m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":98809,"ts":"2026-09-24T15:27:19.565122","kind":"stale_bar","detail":"XLP bar 15:22 is 5.2m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":98810,"ts":"2026-09-24T15:27:19.568188","kind":"stale_bar","detail":"XLP bar 15:23 is 4.2m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":98811,"ts":"2026-09-24T15:27:19.569251","kind":"stale_bar","detail":"XLP bar 15:24 is 3.2m old -- entries suppressed, open positions still managed","symbol":"XLP"}
+{"seq":98816,"ts":"2026-09-24T15:27:19.579250","kind":"stale_bar","detail":"XLE bar 14:55 is 32.2m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":98817,"ts":"2026-09-24T15:27:19.580248","kind":"stale_bar","detail":"XLE bar 14:56 is 31.2m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":98818,"ts":"2026-09-24T15:27:19.583158","kind":"stale_bar","detail":"XLE bar 14:57 is 30.2m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":98819,"ts":"2026-09-24T15:27:19.584265","kind":"stale_bar","detail":"XLE bar 14:58 is 29.2m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":98820,"ts":"2026-09-24T15:27:19.586388","kind":"stale_bar","detail":"XLE bar 14:59 is 28.2m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":98821,"ts":"2026-09-24T15:27:19.588280","kind":"stale_bar","detail":"XLE bar 15:00 is 27.2m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":98822,"ts":"2026-09-24T15:27:19.590420","kind":"stale_bar","detail":"XLE bar 15:01 is 26.2m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":98823,"ts":"2026-09-24T15:27:19.591429","kind":"stale_bar","detail":"XLE bar 15:02 is 25.2m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":98824,"ts":"2026-09-24T15:27:19.593025","kind":"stale_bar","detail":"XLE bar 15:03 is 24.2m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":98825,"ts":"2026-09-24T15:27:19.597018","kind":"stale_bar","detail":"XLE bar 15:04 is 23.2m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":98826,"ts":"2026-09-24T15:27:19.599010","kind":"stale_bar","detail":"XLE bar 15:05 is 22.2m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":98827,"ts":"2026-09-24T15:27:19.601013","kind":"stale_bar","detail":"XLE bar 15:06 is 21.2m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":98828,"ts":"2026-09-24T15:27:19.603057","kind":"stale_bar","detail":"XLE bar 15:07 is 20.2m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":98829,"ts":"2026-09-24T15:27:19.604076","kind":"stale_bar","detail":"XLE bar 15:08 is 19.2m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":98830,"ts":"2026-09-24T15:27:19.605632","kind":"stale_bar","detail":"XLE bar 15:09 is 18.2m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":98831,"ts":"2026-09-24T15:27:19.606830","kind":"stale_bar","detail":"XLE bar 15:10 is 17.2m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":98832,"ts":"2026-09-24T15:27:19.608831","kind":"stale_bar","detail":"XLE bar 15:11 is 16.2m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":98833,"ts":"2026-09-24T15:27:19.610754","kind":"stale_bar","detail":"XLE bar 15:12 is 15.2m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":98834,"ts":"2026-09-24T15:27:19.611742","kind":"stale_bar","detail":"XLE bar 15:13 is 14.2m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":98835,"ts":"2026-09-24T15:27:19.613764","kind":"stale_bar","detail":"XLE bar 15:14 is 13.2m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":98836,"ts":"2026-09-24T15:27:19.629646","kind":"stale_bar","detail":"XLE bar 15:15 is 12.2m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":98837,"ts":"2026-09-24T15:27:19.631775","kind":"stale_bar","detail":"XLE bar 15:16 is 11.2m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":98838,"ts":"2026-09-24T15:27:19.661724","kind":"stale_bar","detail":"XLE bar 15:17 is 10.2m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":98839,"ts":"2026-09-24T15:27:19.664658","kind":"stale_bar","detail":"XLE bar 15:18 is 9.2m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":98840,"ts":"2026-09-24T15:27:19.666645","kind":"stale_bar","detail":"XLE bar 15:19 is 8.2m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":98841,"ts":"2026-09-24T15:27:19.691959","kind":"stale_bar","detail":"XLE bar 15:20 is 7.2m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":98842,"ts":"2026-09-24T15:27:19.694268","kind":"stale_bar","detail":"XLE bar 15:21 is 6.2m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":98843,"ts":"2026-09-24T15:27:19.695930","kind":"stale_bar","detail":"XLE bar 15:22 is 5.2m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":98844,"ts":"2026-09-24T15:27:19.697992","kind":"stale_bar","detail":"XLE bar 15:23 is 4.2m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":98845,"ts":"2026-09-24T15:27:19.701171","kind":"stale_bar","detail":"XLE bar 15:24 is 3.2m old -- entries suppressed, open positions still managed","symbol":"XLE"}
+{"seq":98850,"ts":"2026-09-24T15:27:19.740706","kind":"stale_bar","detail":"XLF bar 14:55 is 32.2m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":98851,"ts":"2026-09-24T15:27:19.770072","kind":"stale_bar","detail":"XLF bar 14:56 is 31.2m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":98852,"ts":"2026-09-24T15:27:19.773060","kind":"stale_bar","detail":"XLF bar 14:57 is 30.2m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":98853,"ts":"2026-09-24T15:27:19.774060","kind":"stale_bar","detail":"XLF bar 14:58 is 29.2m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":98854,"ts":"2026-09-24T15:27:19.776063","kind":"stale_bar","detail":"XLF bar 14:59 is 28.2m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":98855,"ts":"2026-09-24T15:27:19.778060","kind":"stale_bar","detail":"XLF bar 15:00 is 27.2m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":98856,"ts":"2026-09-24T15:27:19.779800","kind":"stale_bar","detail":"XLF bar 15:01 is 26.2m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":98857,"ts":"2026-09-24T15:27:19.781749","kind":"stale_bar","detail":"XLF bar 15:02 is 25.2m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":98858,"ts":"2026-09-24T15:27:19.785679","kind":"stale_bar","detail":"XLF bar 15:03 is 24.2m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":98859,"ts":"2026-09-24T15:27:19.787795","kind":"stale_bar","detail":"XLF bar 15:04 is 23.2m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":98860,"ts":"2026-09-24T15:27:19.790684","kind":"stale_bar","detail":"XLF bar 15:05 is 22.2m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":98861,"ts":"2026-09-24T15:27:19.792689","kind":"stale_bar","detail":"XLF bar 15:06 is 21.2m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":98862,"ts":"2026-09-24T15:27:19.794689","kind":"stale_bar","detail":"XLF bar 15:07 is 20.2m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":98863,"ts":"2026-09-24T15:27:19.796725","kind":"stale_bar","detail":"XLF bar 15:08 is 19.2m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":98864,"ts":"2026-09-24T15:27:19.800748","kind":"stale_bar","detail":"XLF bar 15:09 is 18.2m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":98865,"ts":"2026-09-24T15:27:19.802808","kind":"stale_bar","detail":"XLF bar 15:10 is 17.2m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":98866,"ts":"2026-09-24T15:27:19.805191","kind":"stale_bar","detail":"XLF bar 15:11 is 16.2m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":98867,"ts":"2026-09-24T15:27:19.807202","kind":"stale_bar","detail":"XLF bar 15:12 is 15.2m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":98868,"ts":"2026-09-24T15:27:19.809713","kind":"stale_bar","detail":"XLF bar 15:13 is 14.2m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":98869,"ts":"2026-09-24T15:27:19.812727","kind":"stale_bar","detail":"XLF bar 15:14 is 13.2m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":98870,"ts":"2026-09-24T15:27:19.814722","kind":"stale_bar","detail":"XLF bar 15:15 is 12.2m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":98871,"ts":"2026-09-24T15:27:19.817723","kind":"stale_bar","detail":"XLF bar 15:16 is 11.2m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":98872,"ts":"2026-09-24T15:27:19.819721","kind":"stale_bar","detail":"XLF bar 15:17 is 10.2m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":98873,"ts":"2026-09-24T15:27:19.821732","kind":"stale_bar","detail":"XLF bar 15:18 is 9.2m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":98874,"ts":"2026-09-24T15:27:19.824726","kind":"stale_bar","detail":"XLF bar 15:19 is 8.2m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":98875,"ts":"2026-09-24T15:27:19.826796","kind":"stale_bar","detail":"XLF bar 15:20 is 7.2m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":98876,"ts":"2026-09-24T15:27:19.846807","kind":"stale_bar","detail":"XLF bar 15:21 is 6.2m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":98877,"ts":"2026-09-24T15:27:19.849813","kind":"stale_bar","detail":"XLF bar 15:22 is 5.2m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":98878,"ts":"2026-09-24T15:27:19.851808","kind":"stale_bar","detail":"XLF bar 15:23 is 4.2m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":98879,"ts":"2026-09-24T15:27:19.854813","kind":"stale_bar","detail":"XLF bar 15:24 is 3.2m old -- entries suppressed, open positions still managed","symbol":"XLF"}
+{"seq":98882,"ts":"2026-09-24T15:27:19.867808","kind":"stale_bar","detail":"NVDA bar 14:55 is 32.2m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":98883,"ts":"2026-09-24T15:27:19.869815","kind":"stale_bar","detail":"NVDA bar 14:56 is 31.2m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":98884,"ts":"2026-09-24T15:27:19.894811","kind":"stale_bar","detail":"NVDA bar 14:57 is 30.2m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":98885,"ts":"2026-09-24T15:27:19.909337","kind":"stale_bar","detail":"NVDA bar 14:58 is 29.2m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":98886,"ts":"2026-09-24T15:27:19.911325","kind":"stale_bar","detail":"NVDA bar 14:59 is 28.2m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":98887,"ts":"2026-09-24T15:27:19.940475","kind":"stale_bar","detail":"NVDA bar 15:00 is 27.2m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":98888,"ts":"2026-09-24T15:27:19.942471","kind":"stale_bar","detail":"NVDA bar 15:01 is 26.2m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":98889,"ts":"2026-09-24T15:27:19.945474","kind":"stale_bar","detail":"NVDA bar 15:02 is 25.2m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":98890,"ts":"2026-09-24T15:27:19.974789","kind":"stale_bar","detail":"NVDA bar 15:03 is 24.2m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":98891,"ts":"2026-09-24T15:27:19.976783","kind":"stale_bar","detail":"NVDA bar 15:04 is 23.2m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":98892,"ts":"2026-09-24T15:27:19.977782","kind":"stale_bar","detail":"NVDA bar 15:05 is 22.2m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":98893,"ts":"2026-09-24T15:27:19.978785","kind":"stale_bar","detail":"NVDA bar 15:06 is 21.2m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":98894,"ts":"2026-09-24T15:27:20.019986","kind":"stale_bar","detail":"NVDA bar 15:07 is 20.2m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":98895,"ts":"2026-09-24T15:27:20.033953","kind":"stale_bar","detail":"NVDA bar 15:08 is 19.2m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":98896,"ts":"2026-09-24T15:27:20.051028","kind":"stale_bar","detail":"NVDA bar 15:09 is 18.2m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":98897,"ts":"2026-09-24T15:27:20.065952","kind":"stale_bar","detail":"NVDA bar 15:10 is 17.2m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":98898,"ts":"2026-09-24T15:27:20.082952","kind":"stale_bar","detail":"NVDA bar 15:11 is 16.2m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":98899,"ts":"2026-09-24T15:27:20.088956","kind":"stale_bar","detail":"NVDA bar 15:12 is 15.2m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":98900,"ts":"2026-09-24T15:27:20.091052","kind":"stale_bar","detail":"NVDA bar 15:13 is 14.2m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":98901,"ts":"2026-09-24T15:27:20.093976","kind":"stale_bar","detail":"NVDA bar 15:14 is 13.2m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":98902,"ts":"2026-09-24T15:27:20.097963","kind":"stale_bar","detail":"NVDA bar 15:15 is 12.2m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":98903,"ts":"2026-09-24T15:27:20.099969","kind":"stale_bar","detail":"NVDA bar 15:16 is 11.2m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":98904,"ts":"2026-09-24T15:27:20.108247","kind":"stale_bar","detail":"NVDA bar 15:17 is 10.2m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":98905,"ts":"2026-09-24T15:27:20.113398","kind":"stale_bar","detail":"NVDA bar 15:18 is 9.2m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":98906,"ts":"2026-09-24T15:27:20.115737","kind":"stale_bar","detail":"NVDA bar 15:19 is 8.2m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":98907,"ts":"2026-09-24T15:27:20.119729","kind":"stale_bar","detail":"NVDA bar 15:20 is 7.2m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":98908,"ts":"2026-09-24T15:27:20.127729","kind":"stale_bar","detail":"NVDA bar 15:21 is 6.2m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":98909,"ts":"2026-09-24T15:27:20.130736","kind":"stale_bar","detail":"NVDA bar 15:22 is 5.2m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":98910,"ts":"2026-09-24T15:27:20.132847","kind":"stale_bar","detail":"NVDA bar 15:23 is 4.2m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":98911,"ts":"2026-09-24T15:27:20.135729","kind":"stale_bar","detail":"NVDA bar 15:24 is 3.2m old -- entries suppressed, open positions still managed","symbol":"NVDA"}
+{"seq":98912,"ts":"2026-09-24T15:27:20.143731","kind":"stale_bar","detail":"AAPL bar 14:55 is 32.2m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":98913,"ts":"2026-09-24T15:27:20.146730","kind":"stale_bar","detail":"AAPL bar 14:56 is 31.2m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":98914,"ts":"2026-09-24T15:27:20.148745","kind":"stale_bar","detail":"AAPL bar 14:57 is 30.2m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":98915,"ts":"2026-09-24T15:27:20.150731","kind":"stale_bar","detail":"AAPL bar 14:58 is 29.2m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":98916,"ts":"2026-09-24T15:27:20.153788","kind":"stale_bar","detail":"AAPL bar 14:59 is 28.2m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":98917,"ts":"2026-09-24T15:27:20.155901","kind":"stale_bar","detail":"AAPL bar 15:00 is 27.2m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":98918,"ts":"2026-09-24T15:27:20.158789","kind":"stale_bar","detail":"AAPL bar 15:01 is 26.2m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":98919,"ts":"2026-09-24T15:27:20.160925","kind":"stale_bar","detail":"AAPL bar 15:02 is 25.2m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":98920,"ts":"2026-09-24T15:27:20.163795","kind":"stale_bar","detail":"AAPL bar 15:03 is 24.2m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":98921,"ts":"2026-09-24T15:27:20.165788","kind":"stale_bar","detail":"AAPL bar 15:04 is 23.2m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":98922,"ts":"2026-09-24T15:27:20.168671","kind":"stale_bar","detail":"AAPL bar 15:05 is 22.2m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":98923,"ts":"2026-09-24T15:27:20.171676","kind":"stale_bar","detail":"AAPL bar 15:06 is 21.2m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":98924,"ts":"2026-09-24T15:27:20.173676","kind":"stale_bar","detail":"AAPL bar 15:07 is 20.2m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":98925,"ts":"2026-09-24T15:27:20.175675","kind":"stale_bar","detail":"AAPL bar 15:08 is 19.2m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":98926,"ts":"2026-09-24T15:27:20.178679","kind":"stale_bar","detail":"AAPL bar 15:09 is 18.2m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":98927,"ts":"2026-09-24T15:27:20.180751","kind":"stale_bar","detail":"AAPL bar 15:10 is 17.2m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":98928,"ts":"2026-09-24T15:27:20.182678","kind":"stale_bar","detail":"AAPL bar 15:11 is 16.2m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":98929,"ts":"2026-09-24T15:27:20.184677","kind":"stale_bar","detail":"AAPL bar 15:12 is 15.2m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":98930,"ts":"2026-09-24T15:27:20.187678","kind":"stale_bar","detail":"AAPL bar 15:13 is 14.2m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":98931,"ts":"2026-09-24T15:27:20.192779","kind":"stale_bar","detail":"AAPL bar 15:14 is 13.2m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":98932,"ts":"2026-09-24T15:27:20.194881","kind":"stale_bar","detail":"AAPL bar 15:15 is 12.2m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":98933,"ts":"2026-09-24T15:27:20.196778","kind":"stale_bar","detail":"AAPL bar 15:16 is 11.2m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":98934,"ts":"2026-09-24T15:27:20.202781","kind":"stale_bar","detail":"AAPL bar 15:17 is 10.2m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":98935,"ts":"2026-09-24T15:27:20.204777","kind":"stale_bar","detail":"AAPL bar 15:18 is 9.2m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":98936,"ts":"2026-09-24T15:27:20.208329","kind":"stale_bar","detail":"AAPL bar 15:19 is 8.2m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":98937,"ts":"2026-09-24T15:27:20.210297","kind":"stale_bar","detail":"AAPL bar 15:20 is 7.2m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":98938,"ts":"2026-09-24T15:27:20.212299","kind":"stale_bar","detail":"AAPL bar 15:21 is 6.2m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":98939,"ts":"2026-09-24T15:27:20.219300","kind":"stale_bar","detail":"AAPL bar 15:22 is 5.2m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":98940,"ts":"2026-09-24T15:27:20.222297","kind":"stale_bar","detail":"AAPL bar 15:23 is 4.2m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":98941,"ts":"2026-09-24T15:27:20.252413","kind":"stale_bar","detail":"AAPL bar 15:24 is 3.2m old -- entries suppressed, open positions still managed","symbol":"AAPL"}
+{"seq":98948,"ts":"2026-09-24T15:27:20.276298","kind":"stale_bar","detail":"GOOGL bar 14:55 is 32.2m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":98949,"ts":"2026-09-24T15:27:20.277313","kind":"stale_bar","detail":"GOOGL bar 14:56 is 31.2m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":98950,"ts":"2026-09-24T15:27:20.279377","kind":"stale_bar","detail":"GOOGL bar 14:57 is 30.2m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":98951,"ts":"2026-09-24T15:27:20.301291","kind":"stale_bar","detail":"GOOGL bar 14:58 is 29.2m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":98952,"ts":"2026-09-24T15:27:20.303293","kind":"stale_bar","detail":"GOOGL bar 14:59 is 28.2m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":98953,"ts":"2026-09-24T15:27:20.305801","kind":"stale_bar","detail":"GOOGL bar 15:00 is 27.2m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":98954,"ts":"2026-09-24T15:27:20.306689","kind":"stale_bar","detail":"GOOGL bar 15:01 is 26.2m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":98955,"ts":"2026-09-24T15:27:20.308834","kind":"stale_bar","detail":"GOOGL bar 15:02 is 25.2m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":98956,"ts":"2026-09-24T15:27:20.310344","kind":"stale_bar","detail":"GOOGL bar 15:03 is 24.2m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":98957,"ts":"2026-09-24T15:27:20.312479","kind":"stale_bar","detail":"GOOGL bar 15:04 is 23.2m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":98958,"ts":"2026-09-24T15:27:20.314406","kind":"stale_bar","detail":"GOOGL bar 15:05 is 22.2m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":98959,"ts":"2026-09-24T15:27:20.316532","kind":"stale_bar","detail":"GOOGL bar 15:06 is 21.2m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":98960,"ts":"2026-09-24T15:27:20.318664","kind":"stale_bar","detail":"GOOGL bar 15:07 is 20.2m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":98961,"ts":"2026-09-24T15:27:20.319608","kind":"stale_bar","detail":"GOOGL bar 15:08 is 19.2m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":98962,"ts":"2026-09-24T15:27:20.321605","kind":"stale_bar","detail":"GOOGL bar 15:09 is 18.2m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":98963,"ts":"2026-09-24T15:27:20.323539","kind":"stale_bar","detail":"GOOGL bar 15:10 is 17.2m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":98964,"ts":"2026-09-24T15:27:20.326610","kind":"stale_bar","detail":"GOOGL bar 15:11 is 16.2m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":98965,"ts":"2026-09-24T15:27:20.328612","kind":"stale_bar","detail":"GOOGL bar 15:12 is 15.2m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":98966,"ts":"2026-09-24T15:27:20.329605","kind":"stale_bar","detail":"GOOGL bar 15:13 is 14.2m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":98967,"ts":"2026-09-24T15:27:20.332652","kind":"stale_bar","detail":"GOOGL bar 15:14 is 13.2m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":98968,"ts":"2026-09-24T15:27:20.334663","kind":"stale_bar","detail":"GOOGL bar 15:15 is 12.2m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":98969,"ts":"2026-09-24T15:27:20.335614","kind":"stale_bar","detail":"GOOGL bar 15:16 is 11.2m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":98970,"ts":"2026-09-24T15:27:20.337668","kind":"stale_bar","detail":"GOOGL bar 15:17 is 10.2m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":98971,"ts":"2026-09-24T15:27:20.339678","kind":"stale_bar","detail":"GOOGL bar 15:18 is 9.2m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":98972,"ts":"2026-09-24T15:27:20.342685","kind":"stale_bar","detail":"GOOGL bar 15:19 is 8.2m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":98973,"ts":"2026-09-24T15:27:20.344528","kind":"stale_bar","detail":"GOOGL bar 15:20 is 7.2m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":98974,"ts":"2026-09-24T15:27:20.347531","kind":"stale_bar","detail":"GOOGL bar 15:21 is 6.2m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":98975,"ts":"2026-09-24T15:27:20.349528","kind":"stale_bar","detail":"GOOGL bar 15:22 is 5.2m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":98976,"ts":"2026-09-24T15:27:20.350530","kind":"stale_bar","detail":"GOOGL bar 15:23 is 4.2m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":98977,"ts":"2026-09-24T15:27:20.353536","kind":"stale_bar","detail":"GOOGL bar 15:24 is 3.2m old -- entries suppressed, open positions still managed","symbol":"GOOGL"}
+{"seq":98984,"ts":"2026-09-24T15:27:20.367669","kind":"stale_bar","detail":"WMT bar 14:55 is 32.2m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":98985,"ts":"2026-09-24T15:27:20.371177","kind":"stale_bar","detail":"WMT bar 14:56 is 31.2m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":98986,"ts":"2026-09-24T15:27:20.375175","kind":"stale_bar","detail":"WMT bar 14:57 is 30.2m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":98987,"ts":"2026-09-24T15:27:20.377175","kind":"stale_bar","detail":"WMT bar 14:58 is 29.2m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":98988,"ts":"2026-09-24T15:27:20.379176","kind":"stale_bar","detail":"WMT bar 14:59 is 28.2m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":98989,"ts":"2026-09-24T15:27:20.385180","kind":"stale_bar","detail":"WMT bar 15:00 is 27.2m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":98990,"ts":"2026-09-24T15:27:20.390183","kind":"stale_bar","detail":"WMT bar 15:01 is 26.2m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":98991,"ts":"2026-09-24T15:27:20.393193","kind":"stale_bar","detail":"WMT bar 15:02 is 25.2m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":98992,"ts":"2026-09-24T15:27:20.396192","kind":"stale_bar","detail":"WMT bar 15:03 is 24.2m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":98993,"ts":"2026-09-24T15:27:20.399190","kind":"stale_bar","detail":"WMT bar 15:04 is 23.2m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":98994,"ts":"2026-09-24T15:27:20.401193","kind":"stale_bar","detail":"WMT bar 15:05 is 22.2m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":98995,"ts":"2026-09-24T15:27:20.409708","kind":"stale_bar","detail":"WMT bar 15:06 is 21.2m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":98996,"ts":"2026-09-24T15:27:20.412712","kind":"stale_bar","detail":"WMT bar 15:07 is 20.2m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":98997,"ts":"2026-09-24T15:27:20.415709","kind":"stale_bar","detail":"WMT bar 15:08 is 19.2m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":98998,"ts":"2026-09-24T15:27:20.419707","kind":"stale_bar","detail":"WMT bar 15:09 is 18.2m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":98999,"ts":"2026-09-24T15:27:20.423706","kind":"stale_bar","detail":"WMT bar 15:10 is 17.2m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":99000,"ts":"2026-09-24T15:27:20.426709","kind":"stale_bar","detail":"WMT bar 15:11 is 16.2m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":99001,"ts":"2026-09-24T15:27:20.429706","kind":"stale_bar","detail":"WMT bar 15:12 is 15.2m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":99002,"ts":"2026-09-24T15:27:20.432706","kind":"stale_bar","detail":"WMT bar 15:13 is 14.2m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":99003,"ts":"2026-09-24T15:27:20.436711","kind":"stale_bar","detail":"WMT bar 15:14 is 13.2m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":99004,"ts":"2026-09-24T15:27:20.439814","kind":"stale_bar","detail":"WMT bar 15:15 is 12.2m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":99005,"ts":"2026-09-24T15:27:20.442708","kind":"stale_bar","detail":"WMT bar 15:16 is 11.2m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":99006,"ts":"2026-09-24T15:27:20.444709","kind":"stale_bar","detail":"WMT bar 15:17 is 10.2m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":99007,"ts":"2026-09-24T15:27:20.447880","kind":"stale_bar","detail":"WMT bar 15:18 is 9.2m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":99008,"ts":"2026-09-24T15:27:20.451840","kind":"stale_bar","detail":"WMT bar 15:19 is 8.2m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":99009,"ts":"2026-09-24T15:27:20.454852","kind":"stale_bar","detail":"WMT bar 15:20 is 7.2m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":99010,"ts":"2026-09-24T15:27:20.457789","kind":"stale_bar","detail":"WMT bar 15:21 is 6.2m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":99011,"ts":"2026-09-24T15:27:20.460868","kind":"stale_bar","detail":"WMT bar 15:22 is 5.2m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":99012,"ts":"2026-09-24T15:27:20.463816","kind":"stale_bar","detail":"WMT bar 15:23 is 4.2m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":99013,"ts":"2026-09-24T15:27:20.484708","kind":"stale_bar","detail":"WMT bar 15:24 is 3.2m old -- entries suppressed, open positions still managed","symbol":"WMT"}
+{"seq":99721,"ts":"2026-09-24T15:50:11.328301","kind":"stale_quote","detail":"SPY age=9.9s"}
+{"seq":99722,"ts":"2026-09-24T15:50:11.342077","kind":"stale_quote","detail":"QQQ age=9.8s"}
+{"seq":99723,"ts":"2026-09-24T15:50:11.344078","kind":"stale_quote","detail":"IWM age=9.9s"}
+{"seq":99724,"ts":"2026-09-24T15:50:11.346079","kind":"stale_quote","detail":"DIA age=9.9s"}
+{"seq":99725,"ts":"2026-09-24T15:50:11.348986","kind":"stale_quote","detail":"XLK age=10.0s"}
+{"seq":99726,"ts":"2026-09-24T15:50:11.351055","kind":"stale_quote","detail":"XLY age=10.0s"}
+{"seq":99727,"ts":"2026-09-24T15:50:11.352995","kind":"stale_quote","detail":"XLI age=10.0s"}
+{"seq":99728,"ts":"2026-09-24T15:50:11.355081","kind":"stale_quote","detail":"XLV age=10.0s"}
+{"seq":99729,"ts":"2026-09-24T15:50:11.359545","kind":"stale_quote","detail":"XLP age=10.1s"}
+{"seq":99730,"ts":"2026-09-24T15:50:11.361568","kind":"stale_quote","detail":"XLE age=10.1s"}
+{"seq":99731,"ts":"2026-09-24T15:50:11.363573","kind":"stale_quote","detail":"XLF age=10.1s"}
+{"seq":99732,"ts":"2026-09-24T15:50:11.366618","kind":"stale_quote","detail":"NVDA age=10.1s"}
+{"seq":99733,"ts":"2026-09-24T15:50:11.369639","kind":"stale_quote","detail":"AAPL age=10.2s"}
+{"seq":99734,"ts":"2026-09-24T15:50:11.370637","kind":"stale_quote","detail":"GOOGL age=10.2s"}
+{"seq":99735,"ts":"2026-09-24T15:50:11.375225","kind":"stale_quote","detail":"WMT age=10.2s"}
+{"seq":99736,"ts":"2026-09-24T15:51:05.521148","kind":"stale_quote","detail":"SPY age=12.9s"}
+{"seq":99737,"ts":"2026-09-24T15:51:05.558769","kind":"stale_quote","detail":"QQQ age=12.9s"}
+{"seq":99738,"ts":"2026-09-24T15:51:05.560779","kind":"stale_quote","detail":"IWM age=12.8s"}
+{"seq":99739,"ts":"2026-09-24T15:51:05.562777","kind":"stale_quote","detail":"DIA age=12.8s"}
+{"seq":99740,"ts":"2026-09-24T15:51:05.563778","kind":"stale_quote","detail":"XLK age=12.8s"}
+{"seq":99741,"ts":"2026-09-24T15:51:05.565779","kind":"stale_quote","detail":"XLY age=12.9s"}
+{"seq":99742,"ts":"2026-09-24T15:51:05.568077","kind":"stale_quote","detail":"XLI age=13.1s"}
+{"seq":99743,"ts":"2026-09-24T15:51:05.571408","kind":"stale_quote","detail":"XLV age=12.5s"}
+{"seq":99744,"ts":"2026-09-24T15:51:05.574417","kind":"stale_quote","detail":"XLP age=12.8s"}
+{"seq":99745,"ts":"2026-09-24T15:51:05.576420","kind":"stale_quote","detail":"XLE age=12.8s"}
+{"seq":99746,"ts":"2026-09-24T15:51:05.578416","kind":"stale_quote","detail":"XLF age=13.1s"}
+{"seq":99747,"ts":"2026-09-24T15:51:05.581416","kind":"stale_quote","detail":"NVDA age=12.6s"}
+{"seq":99748,"ts":"2026-09-24T15:51:05.582422","kind":"stale_quote","detail":"AAPL age=12.5s"}
+{"seq":99749,"ts":"2026-09-24T15:51:05.585948","kind":"stale_quote","detail":"GOOGL age=12.5s"}
+{"seq":99750,"ts":"2026-09-24T15:51:05.586938","kind":"stale_quote","detail":"WMT age=12.5s"}
+{"seq":99855,"ts":"2026-09-24T15:55:05.437334","kind":"stale_quote","detail":"SPY age=5.8s"}
+{"seq":99856,"ts":"2026-09-24T15:55:05.439338","kind":"stale_quote","detail":"QQQ age=5.7s"}
+{"seq":99857,"ts":"2026-09-24T15:55:05.442413","kind":"stale_quote","detail":"IWM age=5.7s"}
+{"seq":99858,"ts":"2026-09-24T15:55:05.445336","kind":"stale_quote","detail":"DIA age=5.9s"}
+{"seq":99859,"ts":"2026-09-24T15:55:05.449390","kind":"stale_quote","detail":"XLK age=5.6s"}
+{"seq":99860,"ts":"2026-09-24T15:55:05.451459","kind":"stale_quote","detail":"XLY age=5.6s"}
+{"seq":99861,"ts":"2026-09-24T15:55:05.453401","kind":"stale_quote","detail":"XLI age=5.5s"}
+{"seq":99862,"ts":"2026-09-24T15:55:05.455405","kind":"stale_quote","detail":"XLV age=5.6s"}
+{"seq":99863,"ts":"2026-09-24T15:55:05.457477","kind":"stale_quote","detail":"XLP age=5.6s"}
+{"seq":99864,"ts":"2026-09-24T15:55:05.459474","kind":"stale_quote","detail":"XLE age=6.2s"}
+{"seq":99865,"ts":"2026-09-24T15:55:05.461497","kind":"stale_quote","detail":"XLF age=5.4s"}
+{"seq":99866,"ts":"2026-09-24T15:55:05.463413","kind":"stale_quote","detail":"NVDA age=5.5s"}
+{"seq":99867,"ts":"2026-09-24T15:55:05.465163","kind":"stale_quote","detail":"AAPL age=5.4s"}
+{"seq":99868,"ts":"2026-09-24T15:55:05.467176","kind":"stale_quote","detail":"GOOGL age=5.5s"}
+{"seq":99869,"ts":"2026-09-24T15:55:05.470179","kind":"stale_quote","detail":"WMT age=5.6s"}
+{"seq":99870,"ts":"2026-09-24T15:56:10.403949","kind":"stale_quote","detail":"SPY age=17.3s"}
+{"seq":99871,"ts":"2026-09-24T15:56:10.414022","kind":"stale_quote","detail":"QQQ age=17.4s"}
+{"seq":99872,"ts":"2026-09-24T15:56:10.418949","kind":"stale_quote","detail":"IWM age=17.3s"}
+{"seq":99873,"ts":"2026-09-24T15:56:10.425957","kind":"stale_quote","detail":"DIA age=17.4s"}
+{"seq":99874,"ts":"2026-09-24T15:56:10.429075","kind":"stale_quote","detail":"XLK age=17.4s"}
+{"seq":99875,"ts":"2026-09-24T15:56:10.431635","kind":"stale_quote","detail":"XLY age=17.2s"}
+{"seq":99876,"ts":"2026-09-24T15:56:10.434070","kind":"stale_quote","detail":"XLI age=17.3s"}
+{"seq":99877,"ts":"2026-09-24T15:56:10.436100","kind":"stale_quote","detail":"XLV age=17.4s"}
+{"seq":99878,"ts":"2026-09-24T15:56:10.438195","kind":"stale_quote","detail":"XLP age=17.2s"}
+{"seq":99879,"ts":"2026-09-24T15:56:10.440265","kind":"stale_quote","detail":"XLE age=17.8s"}
+{"seq":99880,"ts":"2026-09-24T15:56:10.442193","kind":"stale_quote","detail":"XLF age=18.3s"}
+{"seq":99881,"ts":"2026-09-24T15:56:10.447032","kind":"stale_quote","detail":"NVDA age=17.2s"}
+{"seq":99882,"ts":"2026-09-24T15:56:10.450133","kind":"stale_quote","detail":"AAPL age=17.3s"}
+{"seq":99883,"ts":"2026-09-24T15:56:10.452718","kind":"stale_quote","detail":"GOOGL age=17.4s"}
+{"seq":99884,"ts":"2026-09-24T15:56:10.455890","kind":"stale_quote","detail":"WMT age=17.3s"}
+{"seq":99885,"ts":"2026-09-24T15:57:10.874222","kind":"stale_quote","detail":"SPY age=7.9s"}
+{"seq":99886,"ts":"2026-09-24T15:57:10.876904","kind":"stale_quote","detail":"QQQ age=7.8s"}
+{"seq":99887,"ts":"2026-09-24T15:57:10.879087","kind":"stale_quote","detail":"IWM age=7.8s"}
+{"seq":99888,"ts":"2026-09-24T15:57:10.881656","kind":"stale_quote","detail":"DIA age=7.9s"}
+{"seq":99889,"ts":"2026-09-24T15:57:10.883758","kind":"stale_quote","detail":"XLK age=7.7s"}
+{"seq":99890,"ts":"2026-09-24T15:57:10.885817","kind":"stale_quote","detail":"XLY age=7.9s"}
+{"seq":99891,"ts":"2026-09-24T15:57:10.887760","kind":"stale_quote","detail":"XLI age=7.7s"}
+{"seq":99892,"ts":"2026-09-24T15:57:10.889756","kind":"stale_quote","detail":"XLV age=7.6s"}
+{"seq":99893,"ts":"2026-09-24T15:57:10.892825","kind":"stale_quote","detail":"XLP age=7.6s"}
+{"seq":99894,"ts":"2026-09-24T15:57:10.894844","kind":"stale_quote","detail":"XLE age=7.7s"}
+{"seq":99895,"ts":"2026-09-24T15:57:10.897838","kind":"stale_quote","detail":"XLF age=8.0s"}
+{"seq":99896,"ts":"2026-09-24T15:57:10.901848","kind":"stale_quote","detail":"NVDA age=7.6s"}
+{"seq":99897,"ts":"2026-09-24T15:57:10.904766","kind":"stale_quote","detail":"AAPL age=7.5s"}
+{"seq":99898,"ts":"2026-09-24T15:57:10.906791","kind":"stale_quote","detail":"GOOGL age=7.7s"}
+{"seq":99899,"ts":"2026-09-24T15:57:10.908760","kind":"stale_quote","detail":"WMT age=7.8s"}
+{"seq":99998,"ts":"2026-09-24T15:59:12.383198","kind":"stale_quote","detail":"SPY age=10.0s"}
+{"seq":99999,"ts":"2026-09-24T15:59:12.394993","kind":"stale_quote","detail":"QQQ age=10.0s"}
+{"seq":100000,"ts":"2026-09-24T15:59:12.396994","kind":"stale_quote","detail":"IWM age=10.0s"}
+{"seq":100001,"ts":"2026-09-24T15:59:12.400111","kind":"stale_quote","detail":"DIA age=10.0s"}
+{"seq":100002,"ts":"2026-09-24T15:59:12.412471","kind":"stale_quote","detail":"XLK age=10.0s"}
+{"seq":100003,"ts":"2026-09-24T15:59:12.414928","kind":"stale_quote","detail":"XLY age=10.1s"}
+{"seq":100004,"ts":"2026-09-24T15:59:12.418307","kind":"stale_quote","detail":"XLI age=10.1s"}
+{"seq":100005,"ts":"2026-09-24T15:59:12.421332","kind":"stale_quote","detail":"XLV age=10.1s"}
+{"seq":100006,"ts":"2026-09-24T15:59:12.423823","kind":"stale_quote","detail":"XLP age=10.2s"}
+{"seq":100007,"ts":"2026-09-24T15:59:12.424921","kind":"stale_quote","detail":"XLE age=10.5s"}
+{"seq":100008,"ts":"2026-09-24T15:59:12.428333","kind":"stale_quote","detail":"XLF age=10.2s"}
+{"seq":100009,"ts":"2026-09-24T15:59:12.433430","kind":"stale_quote","detail":"NVDA age=10.3s"}
+{"seq":100010,"ts":"2026-09-24T15:59:12.444421","kind":"stale_quote","detail":"AAPL age=10.3s"}
+{"seq":100011,"ts":"2026-09-24T15:59:12.454433","kind":"stale_quote","detail":"GOOGL age=10.2s"}
+{"seq":100012,"ts":"2026-09-24T15:59:12.456425","kind":"stale_quote","detail":"WMT age=10.1s"}
