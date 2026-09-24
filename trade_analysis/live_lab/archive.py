@@ -24,11 +24,31 @@ WHAT IT WILL NOT DO, AND WHY EACH MATTERS
     `git add -A`. The repo holds API keys in `.env`, a `local_data/` tree and a Theta
     Terminal path; a broad add on an unattended machine at 16:00 is how a credential
     reaches a public remote.
-  * **Never push to a branch it was not told to push to**, and never force. The default
-    is the current branch, and a rejected push is left rejected: two sessions' commits
-    are still both present locally and the next successful push carries them. Automated
-    conflict resolution on a research record is not a thing I am willing to write.
+  * **Never push to a branch it was not told to push to**, and never force.
   * **Never amend, rebase or rewrite.** The record is append-only by design.
+
+ONE RECOVERY, ADDED 2026-09-24, AND ITS LIMITS
+----------------------------------------------
+The push failed non-fast-forward on four consecutive sessions (2026-09-21 to 09-24)
+because a research session pushed to the same branch while the lab was running. Each
+time the record sat on the travelling laptop until it was pushed by hand. Depending on
+someone remembering is the failure this file exists to prevent.
+
+So after a rejected push, and **only** when git says the remote moved ahead, there is
+exactly one recovery: fetch, **merge**, push once. It is deliberately narrow:
+
+  * **Merge only.** Never rebase, never force, never amend. A merge commit leaves every
+    existing commit reachable, so the other side's work cannot be lost.
+  * **Only for a non-fast-forward rejection.** A dead network or a permissions error is
+    not fixed by merging, and this machine's network is the reason the file exists.
+  * **Refuses on a dirty tree.** If tracked files differ from HEAD, the merge is skipped
+    rather than run across someone's uncommitted edits.
+  * **Aborts on conflict**, and leaves no merge in progress. The outcome then is exactly
+    the old behaviour: commit local, remote untouched, next push carries both.
+  * **One attempt.** No loop. If the second push also loses a race, it waits for
+    tomorrow.
+
+Set `RECOVER_FROM_NON_FF = False` to get the old terminal behaviour back.
   * **Never commit an empty change.** A holiday or an aborted session leaves nothing to
     say, and a stream of empty commits would make the log useless for finding the day
     something actually happened.
@@ -53,6 +73,10 @@ REPO = Path(__file__).resolve().parents[2]
 BOT_NAME = "live-lab-archive"
 BOT_EMAIL = "live-lab-archive@localhost"
 PUSH_BACKOFF = (2, 8, 20)      # seconds; three tries, then leave it for tomorrow
+RECOVER_FROM_NON_FF = True     # set False for the pre-2026-09-24 terminal behaviour
+# What git says when the remote has moved ahead. Recovery is attempted for THIS failure
+# and nothing else -- merging does not fix a dead network or a rejected credential.
+_NON_FF = ("non-fast-forward", "fetch first", "rejected")
 
 
 def _git(*args, timeout=120) -> tuple[int, str]:
@@ -70,6 +94,57 @@ def _branch() -> str | None:
     if rc != 0 or not out or out == "HEAD":
         return None                 # detached; pushing from here is never what was meant
     return out
+
+
+def _merging() -> bool:
+    """True when a merge is in progress. Asked via git, not by looking for .git/MERGE_HEAD,
+    because .git is a file rather than a directory in a worktree."""
+    rc, _ = _git("rev-parse", "--verify", "--quiet", "MERGE_HEAD")
+    return rc == 0
+
+
+def _tracked_changes() -> bool:
+    """True when tracked files differ from HEAD, or the question could not be answered.
+
+    Conservative on purpose: an unreadable answer counts as dirty, so the merge is
+    skipped rather than run over someone's uncommitted work.
+    """
+    rc, _ = _git("diff", "--quiet", "HEAD")
+    return rc != 0
+
+
+def _merge_remote_and_retry(target: str, log) -> bool:
+    """One conservative recovery from a non-fast-forward push: fetch, merge, push once.
+
+    Returns True only if the push finally succeeded. Every early exit leaves the
+    repository exactly as it was: commit local, remote untouched, no merge in progress.
+    """
+    if _tracked_changes():
+        log("[archive] recovery skipped: tracked files are modified")
+        return False
+
+    rc, out = _git("fetch", "origin", target, timeout=180)
+    if rc != 0:
+        tail = out.splitlines()[-1][:140] if out else ""
+        log(f"[archive] recovery skipped: fetch failed: {tail}")
+        return False
+
+    rc, out = _git("-c", f"user.name={BOT_NAME}", "-c", f"user.email={BOT_EMAIL}",
+                   "merge", "--no-edit", "FETCH_HEAD")
+    if rc != 0 or _merging():
+        tail = out.splitlines()[-1][:140] if out else ""
+        log(f"[archive] recovery gave up, merge was not clean: {tail}")
+        if _merging():
+            _git("merge", "--abort")
+            log("[archive] merge aborted; commit stays local")
+        return False
+
+    rc, out = _git("push", "origin", f"HEAD:refs/heads/{target}", timeout=180)
+    if rc != 0:
+        tail = out.splitlines()[-1][:140] if out else ""
+        log(f"[archive] recovery push failed: {tail}")
+        return False
+    return True
 
 
 def archive_session(day, lab_dir="live_lab_data", push: bool = True,
@@ -139,6 +214,17 @@ def archive_session(day, lab_dir="live_lab_data", push: bool = True,
                 return result
             log(f"[archive] push attempt {i + 1} failed: {out.splitlines()[-1][:140]}"
                 if out else f"[archive] push attempt {i + 1} failed")
+
+        # The remote moving ahead is the one rejection a merge can fix, and it is the one
+        # that actually happened, four sessions running. Anything else falls straight
+        # through to the terminal message below.
+        if RECOVER_FROM_NON_FF and out and any(h in out.lower() for h in _NON_FF):
+            log("[archive] remote moved ahead; one merge-and-retry")
+            if _merge_remote_and_retry(target, log):
+                result["pushed"] = True
+                result["reason"] = "pushed after merging the remote"
+                log(f"[archive] pushed to {target} after merging remote")
+                return result
 
         # Deliberately terminal. The commit is local and safe; the next session's push
         # carries it. Rebasing a research record unattended is not worth the risk.
