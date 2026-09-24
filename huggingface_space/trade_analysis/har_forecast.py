@@ -32,9 +32,16 @@ WHY HAR
 -------
 The daily / weekly / monthly lag structure (Corsi) is the standard baseline in the
 realised-volatility literature and it is hard to beat. In this project's own measurement it
-beats naive persistence at t=+7.82 over 250 sessions -- and is itself beaten by the option
-market's implied variance at p=0.0222. Both facts are reported to the user, because a demo
-that hides the second one is selling something.
+beats naive persistence at t=+8.27 over 250 sessions -- and is statistically
+indistinguishable from the option market's implied variance (t=-0.55, p=0.5832). Both
+facts matter, because a demo that overstates either one is selling something.
+
+CORRECTED 2026-09-24. This paragraph used to say HAR "is itself beaten by the option
+market's implied variance at p=0.0222", with t=+7.82 against persistence. The p=0.0222
+came from the HAR in trade_analysis/hpc/har_baseline.py before it had the lognormal bias
+correction described in forecast() below -- the same bug, and this file's own comment
+there already gave the corrected p=0.583. The t=+7.82 does not match the recorded result.
+Corrected figures: research/vrp_baseline_results.md sections 2-3.
 """
 from __future__ import annotations
 

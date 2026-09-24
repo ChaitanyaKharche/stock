@@ -71,6 +71,11 @@ nearly 2x purely to break even, and implied variance already beats HAR at foreca
 realised variance (p=0.0222). The steps below remain reproducible; step 4 is the one that
 was judged not worth the compute.
 
+> **CORRECTED 2026-09-24:** the p=0.0222 above came from a HAR missing its lognormal bias
+> correction. Corrected, implied variance and HAR are **statistically indistinguishable**
+> (t=−0.55, p=0.5832; `research/vrp_baseline_results.md` §2). The first reason — the ~2x
+> cost gap — stands on its own and does not depend on this number.
+
 ---
 
 ## Order of operations
@@ -262,7 +267,9 @@ decisions NOT taken because they are the user's to take.
 ### The sweep should not run yet — and the reason is cheap to test
 
 The headline result (`implied_variance` 0.411136 beats `HAR-RV-J` 0.541358, DM t=-2.30,
-p=0.0222) is a **24.1% QLIKE reduction from one regressor**. Published IV-augmentation
+p=0.0222) is a **24.1% QLIKE reduction from one regressor**. *(CORRECTED 2026-09-24: the
+suspicion below was right. 0.541358 was an uncorrected HAR; corrected HAR-RV is 0.430642,
+a 4.5% gap at p=0.5832 — see `dm_concentration.py`.)* Published IV-augmentation
 gains at daily horizons are single-digit percent; the best zero-shot foundation model in
 the field manages 1.3-1.8%. 24.1% on one asset sits at the very top of the published range.
 
