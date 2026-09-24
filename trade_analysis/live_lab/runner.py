@@ -48,7 +48,43 @@ EOD_FLAT = dt.time(15, 55)
 # quote from another time. Cheap to detect, so detect it.
 FUTURE_QUOTE_SEC = 5.0
 STALE_QUOTE_SEC = 5.0
+# A BAR may also be too old -- the same guard shares_runner.py has carried since 977f4ae,
+# back-ported 2026-09-24. It was never added here because this arm was blocked by the
+# lapsed options entitlement when the shares arm got it; the entitlement came back on
+# 2026-09-14 and this arm resumed without it. Measured cost: on a 09:35 start the feed
+# admits the 09:30-09:34 bars in one batch and each is evaluated against the CURRENT
+# chain, so Crabel_Stretch took its 09:31 signal at 09:36:41-09:36:52 -- four trades on
+# three sessions (2026-09-17 SPY, 2026-09-22 SPY+QQQ, 2026-09-23 QQQ). The fill price was
+# honest; the signal was not -- it is a chase of a move five minutes old, which the frozen
+# rule never describes. Meanwhile the shares arm refused the SAME signals, so the two
+# records disagreed on identical bars.
+#
+# Measured exactly as the shares arm measures it: `now` minus the OPEN stamp of the
+# newest 1m bar that made the evaluated bar exist. For a 1m bar that is its own stamp; a
+# 5m bucket is stamped at its CLOSE, so its newest 1m bar opened one minute earlier.
+# Using the 5m close stamp directly would make this arm 60s more lenient than the other.
+#
+# Deliberately OUTSIDE the config hash, by the precedent of STALE_QUOTE_SEC above and of
+# the shares arm: build_config hashes what a trade MEANS, not whether the feed is fit to
+# be acted on. `1f7247d7839d9950` is unchanged by this. The skip is RECORDED per signal
+# (reason "stale_bar") so the denominator stays honest; open positions are still managed.
+STALE_BAR_SEC = 180.0
 EXIT_ALREADY_RUNNING = 4    # distinct from a crash: the supervisor must NOT retry this
+
+# An OPTION quote may be too old as well, and until 2026-09-24 nothing in this file looked.
+# The only protection against a delayed options feed was preflight's post-open freshness
+# gate, which is why autostart held both runners until it passed at ~09:35 -- blinding
+# them to the open (research/incident_2026-09-24_opening_window.md). Checked here, at the
+# point of use, the gate no longer has to run BEFORE the runners start. Same threshold as
+# preflight's definition of DELAYED, imported rather than copied so the two cannot drift.
+# Two-sided: a quote stamped far in the future is clock skew, not freshness.
+from .preflight import DELAYED_THRESHOLD_SEC as OPTION_QUOTE_MAX_AGE_SEC  # noqa: E402
+
+
+def bar_age_sec(bar_ts: dt.datetime, tf: str, now: dt.datetime) -> float:
+    """Seconds since the newest 1m bar behind `bar_ts` OPENED. See STALE_BAR_SEC."""
+    newest_1m_open = bar_ts if tf == "1m" else bar_ts - dt.timedelta(minutes=1)
+    return (now - newest_1m_open).total_seconds()
 
 
 # --------------------------------------------------------------------------- config
@@ -262,7 +298,10 @@ class LiveLab:
                 self._degraded_seen[sym] = n_deg
             quote = self.feed.stock_quote(sym)
             if quote is not None:
-                age = (now - quote["ts"]).total_seconds()
+                # Receipt, not the `now` from the top of the tick -- the same fix
+                # shares_runner.py got in 977f4ae. A slow bar pull for the first symbol
+                # used to future-date the second symbol's quote by the stall.
+                age = (quote.get("recv_ts", now) - quote["ts"]).total_seconds()
                 if age > STALE_QUOTE_SEC:
                     self.store.outage("stale_quote", f"{sym} age={age:.1f}s")
                     quote = None
@@ -303,6 +342,13 @@ class LiveLab:
                 self.store.outage("setup_error", f"{setup.id}: {exc!r}", symbol=sym)
                 continue
             if sig is None:
+                continue
+
+            age = bar_age_sec(bar_ts, tf, now)
+            if age > STALE_BAR_SEC:
+                self.store.write_skip(setup_id=setup.id, config_hash=self.config_hash,
+                                      symbol=sym, bar_ts=bar_ts, reason="stale_bar",
+                                      bar_age_min=round(age / 60.0, 2))
                 continue
 
             key = (setup.id, sym)
@@ -358,6 +404,19 @@ class LiveLab:
             return
         except FeedOutage as exc:
             self.store.write_fill(signal_id, status="SKIPPED", skip_reason=f"feed: {exc!r}")
+            return
+
+        # Measured against the wall clock NOW, after the chain call -- not the `now` from
+        # the top of the tick, which the bar pull and chain call have already aged.
+        atm_ts = arms["ATM"].get("ts")
+        if atm_ts is None:
+            self.store.write_fill(signal_id, status="SKIPPED",
+                                  skip_reason="option_quote_no_timestamp")
+            return
+        atm_age = (now_et() - atm_ts).total_seconds()
+        if abs(atm_age) > OPTION_QUOTE_MAX_AGE_SEC:
+            self.store.write_fill(signal_id, status="SKIPPED",
+                                  skip_reason=f"stale_option_quote: ATM age {atm_age:.0f}s")
             return
 
         for k in ("ATM", "ATM-1", "ATM+1"):

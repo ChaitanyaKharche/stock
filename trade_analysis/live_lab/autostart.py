@@ -4,7 +4,7 @@ Designed to be fired by Windows Task Scheduler well before the open and left alo
 
 What it handles that the bare runner does not:
 
-  * **Timezone drift.** It sleeps until 09:20 *exchange* time, computed live. The machine
+  * **Timezone drift.** It sleeps until START_AT (09:05) *exchange* time, computed live. The machine
     is on MST (currently -3h from ET) and Arizona does not observe DST, so the local-time
     offset changes twice a year. Scheduling a fixed local time would silently drift; this
     does not.
@@ -61,11 +61,29 @@ from .runner import EXIT_ALREADY_RUNNING
 from .shares_runner import BROAD_UNIVERSE
 from .store import DEFAULT_LAB_DIR
 
-START_AT = dt.time(9, 20)          # exchange time; structural preflight runs here
+START_AT = dt.time(9, 5)           # exchange time; structural preflight runs here.
+# Was 09:20. Moved 2026-09-24 because the runners now start straight after this preflight
+# and must finish WARMUP before 09:30: the shares arm loads 24 prior sessions for each of
+# 15 symbols, measured 09:35:18 -> ~09:41 on 2026-09-23. From 09:20 that would land at
+# ~09:28 -- a two-minute margin on the one thing this change exists to protect. Both
+# runners idle without calling the feed until RTH_OPEN, so starting earlier costs nothing.
 FRESHNESS_AT = dt.time(9, 33)      # RTH freshness re-check -- MUST be after the open,
                                    # otherwise the delayed-feed gate can never fire.
-                                   # Costs nothing: no setup can signal before 09:36
-                                   # because the 09:30-09:35 opening range is not formed.
+# CORRECTED 2026-09-24. The comment here used to say the re-check "costs nothing: no setup
+# can signal before 09:36 because the 09:30-09:35 opening range is not formed." That was
+# false -- Crabel_Stretch trades from 09:31, PDH_PDL_Breakout and TTM_Squeeze from the
+# 09:35 bucket -- and because the runners were held until the re-check PASSED (09:33-09:35),
+# both arms were blind to the open on every session from 2026-08-31. The shares arm did
+# not process a bar until ~09:41 and suppressed 09:30-09:38 as stale; Crabel_Stretch then
+# fired on the first bar it could see (11 names at 09:41 on 2026-09-23), which is not the
+# rule. See research/incident_2026-09-24_opening_window.md.
+#
+# The runners now start right after the STRUCTURAL preflight, warm up before the open and
+# see 09:31 like the replay does. The re-check still runs at this time, while they are
+# live, and can still stop them. That is safe only because both runners now refuse a stale
+# quote at the point of use -- the underlying (STALE_QUOTE_SEC, both arms) and, since this
+# change, the option chain (runner.OPTION_QUOTE_MAX_AGE_SEC) -- so a delayed feed produces
+# SKIPs, never fills, in the minutes before the verdict.
 GIVE_UP_AFTER = dt.time(15, 30)    # too late in the session to bother starting
 HOLIDAY_CHECK_AT = dt.time(9, 45)
 RUNNER_DONE_AFTER = dt.time(15, 55)  # an exit at/after this is a normal end of session,
@@ -413,6 +431,27 @@ def _options_blocked(out: str) -> list[str]:
     return [l for l in out.splitlines() if FAIL_MARK in l and OPTIONS_TAG in l]
 
 
+def _gate_verdict(out: str, options_only: bool = False) -> tuple[str, str] | None:
+    """What a preflight report means for the session, in the order autostart always
+    applied it: None = run; ("all", reason) = stop every arm; ("options", reason) = stop
+    the options arm and keep shares.
+
+    Extracted unchanged from main() so the pre-open check and the post-open re-check --
+    which now runs while the runners are live -- cannot judge the same report differently.
+    Note the precedence is inherited, not redesigned: ANY line saying DELAYED stops every
+    arm, including an options-only delay, exactly as before 2026-09-24.
+    """
+    if any("DELAYED" in l for l in out.splitlines()):
+        return ("all", "feed is DELAYED; prices would be stale")
+    if _fatal_lines(out):
+        return ("all", "preflight data failure(s)")
+    if _options_blocked(out):
+        if options_only:
+            return ("all", "options is the only requested arm and it is blocked")
+        return ("options", f"{len(_options_blocked(out))} OPTIONS-only failure(s)")
+    return None
+
+
 class _Child:
     """One supervised runner: its command, its process, its restart budget."""
 
@@ -481,7 +520,7 @@ def build_specs(args) -> list[tuple[str, list[str]]]:
     return specs
 
 
-def supervise(args, day: dt.date, specs=None, child_cls=None) -> int:
+def supervise(args, day: dt.date, specs=None, child_cls=None, post_open=None) -> int:
     """Keep every arm alive until the close, restarting any that dies early.
 
     A runner exiting is NOT the same as the session being over. It can die on an unhandled
@@ -498,6 +537,11 @@ def supervise(args, day: dt.date, specs=None, child_cls=None) -> int:
       options  the frozen 0DTE test          -> live_lab_data/
       shares   IntradayMomentumBoundary etc. -> live_lab_data/shares/
     They share nothing but the feed; neither can affect the other's counts.
+
+    `post_open`, if given, is `(at: dt.time, check)`: once the clock passes `at`, `check()`
+    runs ONCE and returns None, ("all", reason) or ("options", reason). The named arms are
+    stopped and marked done so they are not restarted. This is how the freshness gate runs
+    now that the runners start before the open instead of after it.
     """
     root = str(Path(__file__).resolve().parents[2])
     specs = build_specs(args) if specs is None else specs
@@ -508,8 +552,20 @@ def supervise(args, day: dt.date, specs=None, child_cls=None) -> int:
         ch.start()
 
     pending = {}                    # name -> monotonic time at which to restart
+    gate_pending = post_open is not None
     while True:
         now = now_et()
+        if gate_pending and now.date() == day and now.time() >= post_open[0]:
+            gate_pending = False
+            verdict = post_open[1]()
+            if verdict:
+                scope, reason = verdict
+                for ch in children:
+                    if not ch.done and (scope == "all" or ch.name == scope):
+                        log(f"stopping {ch.name} arm: {reason}")
+                        ch.terminate()
+                        ch.done = True
+                        pending.pop(ch.name, None)
         alive = [ch for ch in children if not ch.done and ch.poll() is None]
         if all(ch.done for ch in children):
             log("every arm has finished; nothing left to supervise")
@@ -682,6 +738,11 @@ def main(argv=None) -> int:
     feed.close()
 
     # ---- structural preflight, pre-open ------------------------------------
+    # Whether this run can judge freshness at all: before the open every quote is
+    # "UNVERIFIABLE", so a delayed feed would sail through and the re-check below must run
+    # once the market opens. A late boot that starts after the open gets a real verdict
+    # from this one run and needs no re-check.
+    pre_open = now_et().time() < FRESHNESS_AT
     log("running preflight (structural, pre-open) ...")
     out = _preflight(_all_symbols(args))
     for line in out.splitlines():
@@ -691,19 +752,6 @@ def main(argv=None) -> int:
         ledger.record(day, "ABORTED", "structural preflight failed", args.lab_dir)
         return 3
 
-    # ---- freshness re-check, AFTER the open --------------------------------
-    # This is the gate that matters. At 09:20 the market is shut, so freshness is
-    # always "UNVERIFIABLE" and a delayed feed would sail straight through. Day one
-    # ran with the check effectively disabled; this is the fix.
-    if not args.now:
-        if not wait_for_open(FRESHNESS_AT):
-            return 0
-        log("re-running preflight for FEED FRESHNESS (market now open) ...")
-        out = _preflight(_all_symbols(args))
-    for line in out.splitlines():
-        log("  " + line)
-
-    fatal = _fatal_lines(out)
     blocked = _options_blocked(out)
     if blocked and not getattr(args, "no_options", False):
         log(f"{len(blocked)} OPTIONS-only failure(s); the options arm cannot run:")
@@ -722,13 +770,40 @@ def main(argv=None) -> int:
         ledger.record(day, "ABORTED", "feed is DELAYED; prices would be stale", args.lab_dir)
         log("       quotes, which corrupts the record rather than merely degrading it.")
         return 3
-    if fatal:
-        log(f"ABORT: {len(fatal)} preflight data failure(s)")
-        ledger.record(day, "ABORTED", "preflight data failure(s)", args.lab_dir)
-        return 3
     if EXPOSURE_TAG in out:
         log("WARNING: the paid feed is exposed to the LAN. Not blocking the session --")
         log("         it is a security issue, not a data-integrity one -- but fix it.")
+
+    # ---- freshness re-check, AFTER the open, WHILE the runners are live ------
+    # Until 2026-09-24 the runners were held until this passed, at 09:33-09:35, which
+    # blinded both arms to the open (see FRESHNESS_AT). It is still the gate that turns a
+    # delayed feed into an ABORTED day; it just no longer delays the start. Run on the
+    # OPTIONS symbols only: whether the feed is delayed is a property of the feed, not of
+    # a symbol, and a two-symbol preflight keeps its load off the terminal during the very
+    # minutes the runners need it. Per-symbol staleness on the shares universe is refused
+    # at the point of use by shares_runner's own STALE_QUOTE_SEC.
+    gate_state: dict = {}
+
+    def _post_open_gate():
+        log(f"re-running preflight for FEED FRESHNESS on {args.symbols} "
+            f"(market now open, runners already live) ...")
+        out2 = _preflight(list(args.symbols))
+        for line in out2.splitlines():
+            log("  " + line)
+        verdict = _gate_verdict(out2, options_only=getattr(args, "no_shares", False))
+        if verdict is None:
+            log("freshness re-check clean")
+        elif verdict[0] == "all":
+            log(f"ABORT: {verdict[1]} -- stopping every arm")
+            ledger.record(day, "ABORTED", verdict[1], args.lab_dir)
+            gate_state["aborted"] = verdict[1]
+        elif getattr(args, "no_options", False):
+            verdict = None          # the options arm was never started
+        else:
+            log(f"{verdict[1]}; stopping the OPTIONS arm, shares continues")
+        return verdict
+
+    post_open = (FRESHNESS_AT, _post_open_gate) if pre_open and not args.now else None
 
     # ---- run, supervised --------------------------------------------------
     log("preflight clean; starting runner")
@@ -749,11 +824,16 @@ def main(argv=None) -> int:
         ledger.note_opened(day, args.lab_dir, arms=arm_names)
     except Exception as exc:                                 # noqa: BLE001
         log(f"ledger note_opened failed, continuing anyway: {exc!r}")
-    rc = supervise(args, day)
-    try:
-        ledger.note_finished(day, args.lab_dir, supervisor_rc=rc)
-    except Exception as exc:                                 # noqa: BLE001
-        log(f"ledger note_finished failed: {exc!r}")
+    rc = supervise(args, day, post_open=post_open)
+    if gate_state.get("aborted"):
+        # ABORTED is already the day's record. note_finished would append COLLECTED after
+        # it, and the ledger ranks a day by its BEST state -- the abort would vanish.
+        rc = 3
+    else:
+        try:
+            ledger.note_finished(day, args.lab_dir, supervisor_rc=rc)
+        except Exception as exc:                             # noqa: BLE001
+            log(f"ledger note_finished failed: {exc!r}")
 
     # Make the day durable off this disk. Runs AFTER note_finished so the ledger line it
     # commits is the terminal one, and after the runners have written their daily files.

@@ -63,9 +63,17 @@ except Exception:                                            # pragma: no cover
 
 LEDGER_NAME = "session_ledger.jsonl"
 RTH_OPEN = dt.time(9, 30)
-# A start later than this is a PARTIAL session rather than a clean one. Five minutes
-# absorbs a slow supervisor without excusing a two-hour late start.
-PARTIAL_AFTER = dt.time(9, 35)
+# A start later than this is a PARTIAL session rather than a clean one.
+#
+# CORRECTED 2026-09-24: this was 09:35, "five minutes to absorb a slow supervisor". But
+# autostart held the runners until a post-open preflight passed, so they started at
+# 09:35:09-09:35:43 and EVERY session from 2026-09-09 to 09-24 read PARTIAL by a few
+# seconds -- a label that is always on cannot warn about anything. The five minutes was
+# also not free: Crabel_Stretch trades from 09:31, so a 09:34 start loses real signals
+# and used to be called clean. The runners now start pre-open (~09:07), so the honest bar
+# is the open itself. Not captured here: warmup time after start (see
+# research/incident_2026-09-24_opening_window.md).
+PARTIAL_AFTER = dt.time(9, 30)
 
 # Terminal states, worst to best. `reconcile` and `summary` rank with this, so a day that
 # aborted at 09:20 and collected at 11:34 reads as its best achieved state.
