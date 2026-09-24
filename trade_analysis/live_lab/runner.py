@@ -28,7 +28,8 @@ from pathlib import Path
 
 from . import options as opt
 from .clock import now_et, today_et
-from .feed import FeedOutage, ThetaLiveFeed
+from .feed import (UPSTREAM_WAIT_SEC, FeedOutage, ThetaLiveFeed,
+                   UpstreamUnreachable)
 from .lock import SingleInstance
 from .positions import Position, open_positions_from_signal, position_from_dict
 from .session import SessionState, build_warmup
@@ -129,6 +130,31 @@ class LiveLab:
             prior = self._prior_sessions(sym, day, 25)
             try:
                 w = build_warmup(self.feed, sym, day, prior)
+            except UpstreamUnreachable as exc:
+                # Same fix as shares_runner.warmup: the terminal is answering and its
+                # upstream is not, which on this machine means a network change (WiFi
+                # <-> phone hotspot) and clears itself. Warmup is pre-open work, so wait
+                # rather than throwing the session away. Kept in step with the shares arm
+                # deliberately -- a resilience rule that holds on one arm and not the
+                # other makes the two records incomparable for reasons unrelated to the
+                # strategies.
+                self.store.outage("warmup_wait", repr(exc), symbol=sym)
+                print(f"[lab] upstream down warming up {sym}; waiting "
+                      f"{UPSTREAM_WAIT_SEC:.0f}s", flush=True)
+                if not self.feed.wait_for_upstream(
+                        budget_s=UPSTREAM_WAIT_SEC,
+                        on_wait=lambda m: print(f"[lab] {m}", flush=True)):
+                    self.store.outage("warmup", repr(exc), symbol=sym)
+                    print(f"[lab] ABORT: the terminal is answering but its historical "
+                          f"upstream is not, warming up {sym}.", flush=True)
+                    return False
+                try:
+                    w = build_warmup(self.feed, sym, day, prior)
+                except FeedOutage as exc2:
+                    self.store.outage("warmup", repr(exc2), symbol=sym)
+                    print(f"[lab] ABORT: warmup {sym} failed after the upstream "
+                          f"recovered", flush=True)
+                    return False
             except FeedOutage as exc:
                 self.store.outage("warmup", repr(exc), symbol=sym)
                 print(f"[lab] ABORT: cannot reach the Theta Terminal on 127.0.0.1:25503 "

@@ -1,6 +1,8 @@
 # Pre-registration — Three-Endpoint Pass (C1, F1, F2)
 
-**Status: PRE-REGISTERED, NOT YET RUN.** Written 2026-08-18 after feasibility probing and
+**Status: PRE-REGISTERED, AND RUN. Results: [`c1_f1_f2_results.md`](c1_f1_f2_results.md).**
+The design below is unchanged from when it was frozen; it is kept verbatim so
+the results can be checked against what was actually promised. Written 2026-08-18 after feasibility probing and
 before any endpoint was computed. Definitions here are final. Deviations must be appended as
 dated amendments, never edited in place.
 

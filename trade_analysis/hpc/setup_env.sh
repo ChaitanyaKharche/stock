@@ -13,7 +13,8 @@
 #   srun --partition=short --time=00:40:00 --mem=16G --pty bash
 #
 # The env lives in $HOME (~/.conda/envs/vrp), which persists. Nothing here touches
-# /scratch, which purges after 45 days.
+# /scratch, which is wiped IN FULL on the first Tuesday of every month -- no access-time
+# condition, so using a file does not protect it. See the header of submit_sweep.sbatch.
 set -euo pipefail
 
 ENV_NAME="${ENV_NAME:-vrp}"

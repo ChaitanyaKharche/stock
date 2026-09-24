@@ -45,7 +45,7 @@ import time
 from pathlib import Path
 
 from .clock import now_et
-from .feed import FeedOutage, ThetaLiveFeed
+from .feed import UPSTREAM_WAIT_SEC, FeedOutage, ThetaLiveFeed
 from . import ledger
 from .lock import SingleInstance
 
@@ -76,12 +76,95 @@ RUNNER_DONE_AFTER = dt.time(15, 55)  # an exit at/after this is a normal end of 
                                      # sessions (2026-09-01..03).
 HARD_STOP = dt.time(16, 10)          # backstop only: by now a healthy runner has long since
                                      # exited, so anything still alive is wedged
+# --- host suspend guard --------------------------------------------------------------
+# 2026-09-10: the host idle-slept at 15:41:57 ET and woke at 17:35:47. The session lost
+# its last 18 minutes, EOD_FLAT never ran, 32 positions were abandoned open and no daily
+# summary was written -- while the log said rc=0 and the ledger said PARTIAL. Nothing in
+# the lab could see it; the only evidence was a Windows Kernel-Power event id 42. Three
+# guards follow: refuse to let the host idle-sleep, make any suspend that happens anyway
+# LOUD in the durable record, and stop the backstop from killing a runner that is in the
+# middle of recovering from one.
+ES_CONTINUOUS        = 0x80000000
+ES_SYSTEM_REQUIRED   = 0x00000001
+ES_AWAYMODE_REQUIRED = 0x00000040
+SUSPEND_JUMP_SEC    = 90     # unaccounted wall-clock gap that means "we were suspended"
+HARD_STOP_GRACE_SEC = 240    # let a waking runner flatten and write before killing it
+
 MAX_RESTARTS = 20
 RESTART_BACKOFF = [5, 15, 30, 60, 120]   # seconds; holds at the last value
+
 TERMINAL_PORT = 25503
 TERMINAL_DIR = Path(r"C:\Users\chaitanyakharche\Documents\research_data\thetaterminal")
 TERMINAL_CMD = [str(TERMINAL_DIR / "jdk21" / "jdk-21.0.12+8" / "bin" / "java.exe"),
                 "-jar", str(TERMINAL_DIR / "ThetaTerminalv3.jar")]
+
+
+def hold_system_awake() -> str:
+    """Ask Windows not to idle-sleep while the lab is running; return a state for the log.
+
+    This covers the IDLE timeout, which is what fired on 2026-09-10. It does NOT override
+    closing the lid or an explicit sleep -- no user-space process can. `_sleep_watched`
+    below is the backstop for those. The assertion is per-thread and is dropped when this
+    process exits, so a crash cannot leave the machine pinned awake.
+    """
+    if sys.platform != "win32":
+        return "not Windows; no suspend guard installed"
+    try:
+        import ctypes
+        k32 = ctypes.windll.kernel32
+        if k32.SetThreadExecutionState(ES_CONTINUOUS | ES_SYSTEM_REQUIRED
+                                       | ES_AWAYMODE_REQUIRED):
+            return "HELD (system-required + away-mode)"
+        if k32.SetThreadExecutionState(ES_CONTINUOUS | ES_SYSTEM_REQUIRED):
+            return "HELD (system-required; away-mode refused)"
+        return "REFUSED BY THE OS -- the host may still idle-sleep"
+    except Exception as exc:                                          # noqa: BLE001
+        return f"UNAVAILABLE ({exc!r})"
+
+
+def release_system_awake() -> None:
+    if sys.platform != "win32":
+        return
+    try:
+        import ctypes
+        ctypes.windll.kernel32.SetThreadExecutionState(ES_CONTINUOUS)
+    except Exception:                                                 # noqa: BLE001
+        pass
+
+
+def _record_suspend(lab_dir, gap: float, before, after) -> None:
+    """Put a suspend in the DURABLE record, not only in the log.
+
+    A gap that exists solely in a Windows event log is not evidence this project can use
+    six months from now. Written to every arm's store so neither arm's outage series
+    silently omits a window in which it was not running.
+    """
+    from .store import LabStore
+    detail = (f"host suspended or clock stepped: {gap:.0f}s unaccounted between "
+              f"{before:%H:%M:%S} and {after:%H:%M:%S} ET -- the lab was NOT running")
+    for root in (Path(lab_dir), Path(lab_dir) / "shares"):
+        if not root.exists():
+            continue
+        try:
+            LabStore(str(root)).outage("host_suspend", detail,
+                                       gap_sec=round(gap, 1),
+                                       from_et=before.isoformat(),
+                                       to_et=after.isoformat())
+        except Exception:                                             # noqa: BLE001
+            pass
+
+
+def _sleep_watched(lab_dir, secs: float) -> None:
+    """time.sleep, but shout if the wall clock jumped while we were not looking."""
+    before = now_et()
+    time.sleep(secs)
+    after = now_et()
+    gap = (after - before).total_seconds() - secs
+    if gap >= SUSPEND_JUMP_SEC:
+        log(f"!! HOST SUSPEND DETECTED: {gap:.0f}s of wall clock vanished during a "
+            f"{secs:.0f}s sleep ({before:%H:%M:%S} -> {after:%H:%M:%S} ET). "
+            f"The lab was NOT running during that window.")
+        _record_suspend(lab_dir, gap, before, after)
 
 
 class Tee:
@@ -173,7 +256,7 @@ def _evict_stale_terminal() -> bool:
     return killed
 
 
-def _wait_for_history(wait_sec=45) -> bool:
+def _wait_for_history(wait_sec=45, lab_dir=None) -> bool:
     """The quote endpoint answers BEFORE the historical upstream is connected.
 
     Theta Terminal binds its HTTP server and serves live snapshot quotes as soon as it
@@ -209,7 +292,14 @@ def _wait_for_history(wait_sec=45) -> bool:
             except FeedOutage as exc:
                 if attempt == 1:
                     log(f'waiting for the historical upstream: {str(exc)[:90]}')
-            time.sleep(3)
+            # _sleep_watched, not time.sleep. This wait used to be 45s and reachable
+            # only from start_terminal(); it is now up to UPSTREAM_WAIT_SEC on EVERY
+            # already-up path, which is long enough for the host to suspend inside it.
+            # Neither branch was wrong alone -- the hole only exists once both land.
+            if lab_dir is not None:
+                _sleep_watched(lab_dir, 3)
+            else:
+                time.sleep(3)
     finally:
         feed.close()
     log(f'historical upstream still not serving after {wait_sec}s; preflight would fail on warmup')
@@ -429,14 +519,30 @@ def supervise(args, day: dt.date, specs=None, child_cls=None) -> int:
         # here loses every position that was open at the close, and the summary with it.
         if now.date() != day or now.time() >= HARD_STOP:
             if alive:
+                # A runner that has just woken from a host suspend breaks its own loop
+                # (now >= RTH_CLOSE), then flattens and writes its summary in seconds.
+                # On 2026-09-10 this backstop fired ONE SECOND after the wake and killed
+                # it mid-recovery -- costing the EOD flatten, 32 positions and the daily
+                # summary. Killing a healthy shutdown is the more expensive mistake, so
+                # wait for it before reaching for terminate().
                 log(f"{now:%H:%M:%S} ET -- past the {HARD_STOP:%H:%M} backstop and "
-                    f"{len(alive)} arm(s) are still alive; terminating")
+                    f"{len(alive)} arm(s) are still alive; giving them "
+                    f"{HARD_STOP_GRACE_SEC}s to flatten and write before terminating")
+                deadline = time.monotonic() + HARD_STOP_GRACE_SEC
+                while time.monotonic() < deadline:
+                    if all(ch.poll() is not None for ch in alive):
+                        log("all arms exited on their own inside the grace window")
+                        break
+                    time.sleep(2)
+                still = [ch.name for ch in alive if ch.poll() is None]
+                if still:
+                    log(f"grace window expired; terminating: {', '.join(still)}")
             for ch in children:
                 ch.terminate()
             break
         if now.time() >= RUNNER_DONE_AFTER:
             if alive:
-                time.sleep(5)          # let them flatten and write their summary
+                _sleep_watched(args.lab_dir, 5)   # let them flatten and write the summary
                 continue
             break
 
@@ -469,7 +575,7 @@ def supervise(args, day: dt.date, specs=None, child_cls=None) -> int:
                     if args.start_terminal:
                         start_terminal()
                 ch.start()
-        time.sleep(5)
+        _sleep_watched(args.lab_dir, 5)
 
     for ch in children:
         log(f"{ch.name} arm finished rc={ch.rc} after {ch.restarts} restart(s)")
@@ -492,6 +598,14 @@ def main(argv=None) -> int:
                     help="run only the shares arm (options entitlement lapsed, etc.)")
     ap.add_argument("--no-shares", action="store_true",
                     help="run only the frozen options arm")
+    # Archiving is ON by default, and that is the point: the six-session hole on
+    # 2026-09-09..16 happened because committing the record was a manual step that
+    # someone had to remember. An opt-in safeguard is the safeguard that was already
+    # failing.
+    ap.add_argument("--no-archive", action="store_true",
+                    help="do not commit live_lab_data at the end of the session")
+    ap.add_argument("--no-push", action="store_true",
+                    help="commit the session record but do not push it")
     args = ap.parse_args(argv)
 
     day = now_et().date()
@@ -522,6 +636,10 @@ def main(argv=None) -> int:
         log(f"another autostart is already supervising ({guard.holder()}); exiting")
         return 0
 
+    # Installed AFTER the lock so a duplicate invocation that exits immediately does not
+    # leave a stray assertion behind.
+    log(f"host suspend guard: {hold_system_awake()}")
+
     if not args.now and not wait_for_open(START_AT):
         return 0
 
@@ -531,6 +649,28 @@ def main(argv=None) -> int:
             log("ABORT: no feed")
             ledger.record(day, "ABORTED", "no feed: Theta Terminal would not start", args.lab_dir)
             return 2
+    elif not _wait_for_history(wait_sec=UPSTREAM_WAIT_SEC, lab_dir=args.lab_dir):
+        # The terminal was ALREADY up, and until now that meant the historical upstream
+        # was never checked -- `_wait_for_history` only ran off the back of
+        # `start_terminal()`. But the common failure on this lab is not a dead terminal,
+        # it is a live terminal whose MDDS link died when the machine moved between WiFi
+        # and a phone hotspot. `terminal_up()` keeps returning 200 throughout, because it
+        # asks `/stock/snapshot/quote`, which the terminal serves from its own process.
+        #
+        # So preflight went straight on to request history bars, collected
+        # `HTTP 503: Unable to resolve host mdds-01.thetadata.us`, and aborted the
+        # session on a condition that fixes itself in under a minute. 2026-08-28 lost a
+        # session to exactly this, and 2026-09-01 logged 202 of those 503s.
+        #
+        # Waiting here costs minutes of a pre-open window that is otherwise idle, and
+        # the ledger records the wait either way, so a genuinely dead upstream is still
+        # an ABORT with its reason -- just not a premature one.
+        log("ABORT: terminal is up but its historical upstream is not serving")
+        ledger.record(day, "ABORTED",
+                      f"upstream unreachable for {UPSTREAM_WAIT_SEC}s "
+                      f"(terminal answering, MDDS not); network transition?",
+                      args.lab_dir)
+        return 2
 
     feed = ThetaLiveFeed()
     if is_holiday(feed, args.symbols, day):
@@ -614,6 +754,31 @@ def main(argv=None) -> int:
         ledger.note_finished(day, args.lab_dir, supervisor_rc=rc)
     except Exception as exc:                                 # noqa: BLE001
         log(f"ledger note_finished failed: {exc!r}")
+
+    # Make the day durable off this disk. Runs AFTER note_finished so the ledger line it
+    # commits is the terminal one, and after the runners have written their daily files.
+    #
+    # This is here because committing by hand was the plan and the plan produced a
+    # six-session hole: on 2026-09-16 the repository stopped at 09-08 while six later
+    # sessions existed only on this machine. See research/live_lab_coverage_audit.md.
+    #
+    # archive_session never raises and never returns non-zero into `rc` -- the session's
+    # exit code reports the session, not the bookkeeping. A failed push is expected on a
+    # bad network and is not a failure: the commit is already local and the next
+    # successful push carries it.
+    if not args.no_archive:
+        try:
+            from .archive import archive_session
+            archive_session(day, args.lab_dir, push=not args.no_push, log=log)
+        except Exception as exc:                             # noqa: BLE001
+            log(f"archive failed and was ignored: {exc!r}")
+
+    # Defined on the suspend-guard branch but never called. Not a leak -- the assertion
+    # is per-thread and dies with the process, which is why nothing broke -- but the
+    # release belongs HERE, after the archive, not earlier: the push can take tens of
+    # seconds and letting the host sleep through it is how the day's record stays on one
+    # disk, which is the thing the archive exists to prevent.
+    release_system_awake()
     return rc
 
 

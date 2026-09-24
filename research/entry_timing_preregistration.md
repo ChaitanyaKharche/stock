@@ -1,6 +1,8 @@
 # Pre-registration — Does his entry timing have forward edge?
 
-**Status: PRE-REGISTERED, NOT YET RUN.** Written 2026-08-26, before any computation.
+**Status: PRE-REGISTERED, AND RUN. Results: [`entry_timing_results.md`](entry_timing_results.md).**
+The design below is unchanged from when it was frozen; it is kept verbatim so
+the results can be checked against what was actually promised. Written 2026-08-26, before any computation.
 
 ## 0. Why this is not an eighth repeat of the same null
 

@@ -25,13 +25,22 @@ import pandas as pd
 import yfinance as yf
 
 from trade_analysis.data import TIMEFRAME_SPEC
-from trade_analysis.enhanced_api import _generate_master_signal
+from trade_analysis.enhanced_api import (TIMEFRAME_CONFIGS,
+                                         _generate_master_signal)
 from trade_analysis.momentum_trading_engine import IntegratedMomentumEngine
 
 COLS = ["Open", "High", "Low", "Close", "Volume"]
 TFS = ["15m", "1h", "4h", "1d"]
-THRESH = {"15m": .30, "1h": .35, "4h": .38, "1d": .42}
-GATE = {"15m": 36, "1h": 34, "4h": 33, "1d": 32}          # what enhanced_api uses now
+# Derived from production, never copied. The previous hardcoded GATE drifted to
+# 36/34/33/32 while enhanced_api ran 36/36/37/38, so this tool reported a fire rate for a
+# gate that did not exist -- the measurement instrument itself had the bug it was built to
+# catch. Import, do not transcribe.
+THRESH = {tf: c["threshold"] for tf, c in TIMEFRAME_CONFIGS.items()}
+GATE = {tf: c["min_confidence"] for tf, c in TIMEFRAME_CONFIGS.items()}
+assert set(TFS) == set(TIMEFRAME_CONFIGS), (
+    f"timeframes drifted: tool {sorted(TFS)} vs production "
+    f"{sorted(TIMEFRAME_CONFIGS)}")
+
 BASKET = ["NVDA", "TSLA", "SPY", "QQQ", "AAPL", "MSFT", "AMD", "META", "AMZN", "GOOGL",
           "NFLX", "COIN", "XLE", "JPM", "WMT", "BA", "DIS", "UBER", "PLTR", "SMCI"]
 SENT = {"composite_score": 0.05, "confidence": "LOW"}

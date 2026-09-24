@@ -75,7 +75,11 @@ nvidia-nvtx-cu12=12.8.90=pypi_0
 openssl=3.5.2=h26f9b46_0
 packaging=25.0=pypi_0
 pandas=2.3.2=pypi_0
-pandas-ta=0.3.14b0=pypi_0
+# pandas_ta REMOVED 2026-09-17. It was deleted from PyPI -- the entire 0.3.x release
+# history was withdrawn and the package changed maintainer -- so this file could not
+# be installed at all. Replaced by trade_analysis/indicators_pandas.py, whose numbers
+# are pinned against the live lab's own indicators by indicators_pandas_test.py.
+# Do not add it back: no available version works on numpy<2 OR Python 3.11.
 patsy=1.0.1=pypi_0
 peewee=3.18.2=pypi_0
 peft=0.17.1=pypi_0

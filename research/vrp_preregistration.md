@@ -1,6 +1,8 @@
 # Pre-registration — Can intraday realised variance be forecast well enough to price the 0DTE variance risk premium?
 
-**Status: PRE-REGISTERED, NOT YET RUN.** Written 2026-09-08. Everything below is frozen
+**Status: PRE-REGISTERED, AND RUN. Results: [`vrp_baseline_results.md`](vrp_baseline_results.md), [`vrp_cost_model_results.md`](vrp_cost_model_results.md).**
+The design below is unchanged from when it was frozen; it is kept verbatim so
+the results can be checked against what was actually promised. Written 2026-09-08. Everything below is frozen
 before the held-out block is touched.
 
 ## 0. Why this is not a ninth attempt at the same thing

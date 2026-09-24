@@ -1,6 +1,8 @@
 # Pre-registration — Percentile of Achievable Return
 
-**Status: PRE-REGISTERED, NOT YET RUN.** Written 2026-08-18 after data inspection and
+**Status: PRE-REGISTERED, AND RUN. Results: [`percentile_return_results.md`](percentile_return_results.md).**
+The design below is unchanged from when it was frozen; it is kept verbatim so
+the results can be checked against what was actually promised. Written 2026-08-18 after data inspection and
 before any percentile was computed. Nothing below may be changed once the first result is
 produced. Deviations, if any become necessary, must be appended as dated amendments with
 the reason, never edited in place.

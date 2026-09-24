@@ -133,7 +133,30 @@ def main() -> int:
           f"{outs['UP']} / {outs['DOWN']} / {outs['FLAT']}")
     print(f"        {'inert, as intended' if inert else 'STILL VOTING -- it was removed'}")
 
-    ok = ok and moved and graded and inert
+    # -- the production gate must survive being read -----------------------------------
+    # TIMEFRAME_CONFIGS moved to module scope on 2026-09-11 so the calibrator could import
+    # it instead of keeping a copy that had silently drifted to 36/34/33/32. That fixed
+    # one hazard and created another: the strategy-mode branches MUTATE the config
+    # (gap -10, confirmed reversal -8), and against a shared dict that would ratchet the
+    # live gate down on every request -- a drift with no bad commit to point at. The
+    # dict() copy in _generate_master_signal is the only thing preventing it, so it gets
+    # a test rather than a comment.
+    from trade_analysis.enhanced_api import TIMEFRAME_CONFIGS
+    gate_before = {k: v["min_confidence"] for k, v in TIMEFRAME_CONFIGS.items()}
+    big_gap_mom = {"signal": "HOLD", "confidence": 30,
+                   "momentum_analysis": {"master_signal": {"strategy": "STANDARD_MOMENTUM",
+                                                           "conviction": 0.5}}}
+    for _ in range(5):
+        f(big_gap_mom, {"signal": "HOLD", "confidence": 40}, sentiment, alt,
+          "1d", "gap", gap_pct=3.0)
+    gate_after = {k: v["min_confidence"] for k, v in TIMEFRAME_CONFIGS.items()}
+    unmutated = gate_before == gate_after
+    print(f"  [{'PASS' if unmutated else 'FAIL'}] gap mode x5 leaves the live gate alone "
+          f"-> {gate_after}")
+    if not unmutated:
+        print(f"        RATCHETED from {gate_before} -- the dict() copy is gone")
+
+    ok = ok and moved and graded and inert and unmutated
     print(f"\n  RESULT: {'PASS' if ok else 'FAIL'}")
     return 0 if ok else 1
 

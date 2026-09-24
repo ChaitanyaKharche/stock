@@ -60,7 +60,97 @@ stock/
 
 ---
 
+## Running the tests
+
+You do not need the trading stack to run the tests, and you should not install it just to
+run them. `requirements.txt` is a full `pip freeze` of the trading machine — torch,
+triton, the entire nvidia-cu12 CUDA stack, several GB of wheels — so it used to be that
+the only host where any test could run was the same Windows box that has to collect a
+live session every weekday. On a fresh clone every test failed identically with
+`ModuleNotFoundError: No module named 'httpx'`, which looks like the suite is broken and
+actually means nothing is installed.
+
+```
+pip install -r requirements-dev.txt     # ~150 MB, no CUDA, any OS
+pytest                                  # trade_analysis/, offline, 123 checks
+```
+
+`pytest.ini` teaches discovery this repo's `<thing>_test.py` naming — without it, bare
+`pytest` collected zero tests and exited 5, which at a glance is indistinguishable from a
+suite that ran clean. The same set runs on every push via `.github/workflows/tests.yml`.
+
+The house-style tests also run standalone and print their own PASS/FAIL report:
+
+```
+python -m trade_analysis.live_lab.ledger_test           # coverage denominator
+python -m trade_analysis.live_lab.preflight_gate_test   # preflight <-> autostart contract
+python -m trade_analysis.live_lab.bar_cache_test        # cache cannot change a fill
+python -m trade_analysis.indicators_pandas_test         # indicators match the live lab
+python -m trade_analysis.live_lab.feed_resilience_test  # WiFi <-> hotspot transitions
+python -m trade_analysis.live_lab.archive_test          # end-of-session commit
+python -m trade_analysis.live_lab.orb_veto_test         # range-expansion veto
+python -m trade_analysis.live_lab.orb_veto_backtest_test
+python -m trade_analysis.live_lab.breakout_levels_test   # 8-line breakout
+python -m trade_analysis.live_lab.six_lines_test         # the 6-line set
+python -m trade_analysis.live_lab.autostart_guard_test   # host suspend guards
+python -m trade_analysis.momo_sweep.stats_test           # sweep statistics
+```
+
+**Two exclusions, both deliberate.** `huggingface_space/*_test.py` fetch live quotes
+through yfinance, so they are integration checks against a third party — run them by
+hand, because a network flake must never read as a code failure.
+`trade_analysis/backtesting/*_backtest.py` are research scripts needing the local
+ThetaData archive; they are not tests despite the filenames.
+
+**The live lab archives itself.** `autostart` commits `live_lab_data/` at the end of
+every session and pushes it, on by default (`--no-archive` / `--no-push` to opt out). It
+stages an explicit pathspec, never `git add -A`, so it cannot commit code or `.env`; it
+makes no commit when there is nothing to say; and a rejected push is left rejected rather
+than rebased — the commit is local and the next successful push carries it. This exists
+because committing by hand was the plan and the plan produced a six-session hole
+(`research/live_lab_coverage_audit.md`). To backfill one by hand:
+`python -m trade_analysis.live_lab.archive --day 2026-09-17`.
+
+**A platform-gated check is SKIP, never FAIL.** `preflight_gate_test` verifies a Windows
+Firewall contract; off Windows it skips that one assertion and still exits 0. Scoring an
+unrunnable check as a failure is how "all the tests fail" becomes the normal state and
+stops meaning anything.
+
 ## Setup
+
+> **`pandas_ta` has been dropped** (2026-09-17), because it was **deleted from PyPI** —
+> the entire 0.3.x release history was withdrawn and the package changed maintainer, so
+> `pip install -r requirements.txt` failed outright:
+>
+> ```
+> $ pip download --no-deps 'pandas_ta==0.3.14b0'
+> ERROR: Could not find a version that satisfies the requirement pandas_ta==0.3.14b0
+>        (from versions: none)
+> ```
+>
+> The only remaining releases need Python >= 3.12 and numpy >= 2.2.6, conflicting with
+> this repo's `numpy==1.26.4`; and 20 modules of the old version do `from numpy import
+> NaN`, an alias numpy 2.0 expired. No available version worked. **This is a large part
+> of why a working checkout could not be reproduced anywhere** but the one machine whose
+> venv predated the deletion.
+>
+> Replaced by **`trade_analysis/indicators_pandas.py`** — ema, rsi, atr, adx, macd,
+> bbands, vwap, ported from the Wilder implementations already in
+> `huggingface_space/trade_analysis/indicators.py`. Its numbers are pinned against
+> `trade_analysis/live_lab/indicators.py` (the dependency-free code the live lab actually
+> trades on) by `indicators_pandas_test.py`, at 1e-12 relative.
+>
+> **One deliberate deviation from pandas_ta:** `ema` is seeded with an SMA of the first
+> `length` values, matching the live lab, not from the first value as
+> `ewm(adjust=False)` does. The live lab's definition wins because `replay.py` proves
+> live and batch agree on it and every trade in `live_lab_data/` was taken under it.
+> Keeping two EMAs in one repo to match a library that no longer exists is the worse
+> trade.
+
+> The root **`Dockerfile` is dead** and separate from the above: it does `COPY app app`
+> and runs `uvicorn app.api:app`, but there is no `app/` directory in this repo. The
+> deployed Space builds from `huggingface_space/`, which has its own Dockerfile and
+> requirements. Delete it or point it somewhere real.
 
 ### Windows (Local Development)
 

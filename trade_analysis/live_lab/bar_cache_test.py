@@ -142,8 +142,12 @@ def run(max_delay: float):
     }
 
 
-def test_fan_out() -> bool:
-    """The concurrent fan-out must isolate failures and actually overlap the waits."""
+def check_fan_out() -> bool:
+    """The concurrent fan-out must isolate failures and actually overlap the waits.
+
+    Returns a bool because `main()` folds it into the RESULT line. See `test_fan_out`
+    below for why that return value is not enough on its own.
+    """
     import time as _t
 
     feed = ThetaLiveFeed.__new__(ThetaLiveFeed)
@@ -181,6 +185,18 @@ def test_fan_out() -> bool:
     print(f"    one unreachable symbol no longer blanks the other "
           f"{len(syms) - 1}: {'YES' if not set(errs) - {'XLE'} else 'NO'}")
     return ok
+
+
+def test_fan_out() -> None:
+    """pytest entry point, and the reason `check_fan_out` was renamed.
+
+    This function used to BE the check, returning `ok`. pytest collected it by name and
+    ignored the return value entirely, so `return False` passed -- a test that could not
+    fail, sitting in a repo whose own report says a test that cannot fail loudly is not a
+    test. pytest only flagged it as `PytestReturnNotNoneWarning`, which is easy to scroll
+    past under a green bar.
+    """
+    assert check_fan_out(), "fan-out did not isolate failures or did not overlap the waits"
 
 
 def main() -> int:
@@ -254,7 +270,7 @@ def main() -> int:
     print("               matters because a late momentum entry is adversely selected,")
     print("               not merely noisy.")
 
-    ok_all = test_fan_out() and ok_all
+    ok_all = check_fan_out() and ok_all
 
     print(f"\n  RESULT: {'PASS' if ok_all else 'FAIL'}  "
           f"(admission identical under all four lag profiles; fan-out isolates failures)")

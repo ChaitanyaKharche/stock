@@ -1,6 +1,8 @@
 # Pre-registration — Strike choice and exit policy, on his own trades
 
-**Status: PRE-REGISTERED, NOT YET RUN.** Written 2026-08-20.
+**Status: PRE-REGISTERED, AND RUN. Results: [`construction_results.md`](construction_results.md).**
+The design below is unchanged from when it was frozen; it is kept verbatim so
+the results can be checked against what was actually promised. Written 2026-08-20.
 
 ## 0. Why these two questions are different from the seven nulls
 

@@ -47,6 +47,12 @@ SHARED = [
     # parent repo. It is the file most likely to drift, because holidays get appended to
     # the root copy each year and nothing would otherwise notice the Space's copy aging.
     ("trade_analysis/bulk_download/trading_days.py", "trade_analysis/trading_days.py", True),
+    # The pandas_ta replacement. pandas_ta was deleted from PyPI, so the Space could
+    # not have installed it even if its requirements.txt had asked for it. Held as a
+    # byte-identical copy -- no provenance banner -- so it compares exactly and any
+    # divergence in an indicator definition between the Space and the root is drift,
+    # which is the one thing that must never happen quietly to an ADX.
+    ("trade_analysis/indicators_pandas.py", "trade_analysis/indicators_pandas.py", True),
 ]
 
 # Present on disk before uploading, whether or not this repo versions them.

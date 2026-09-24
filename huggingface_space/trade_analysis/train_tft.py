@@ -2,18 +2,16 @@
 import argparse
 import asyncio
 import pandas as pd
-import pandas_ta
 import torch
 import yfinance as yf
 import numpy as np
 from sklearn.preprocessing import StandardScaler
 
-# Import pandas_ta for technical indicators
-try:
-    import pandas_ta as ta
-except ImportError:
-    print("pandas_ta not installed. Install with: pip install pandas_ta")
-    exit(1)
+# Was pandas_ta. It was DELETED from PyPI -- the 0.3.x release history was removed
+# entirely -- so `pip install pandas_ta` cannot succeed and the ImportError branch below
+# used to be the only reachable path. Same math, from the byte-identical copy of
+# trade_analysis/indicators_pandas.py, checked against the live lab's own indicators.
+from . import indicators_pandas as ta
 
 from .data import UnifiedDataProvider
 from .tft_model import GapPredictionTFT
@@ -63,8 +61,14 @@ def calculate_advanced_indicators(df):
     # Bollinger Bands
     bb = ta.bbands(df['Close'], length=20)
     if bb is not None and not bb.empty:
-        df['BB_upper'] = bb.iloc[:, 0]  # First column
-        df['BB_lower'] = bb.iloc[:, 2]  # Third column  
+        # BY NAME, NOT POSITION -- and this fixes a bug rather than preserving it.
+        # pandas_ta's bbands returns (BBL, BBM, BBU, ...), so column 0 is the LOWER band
+        # and column 2 the UPPER. This read `iloc[:, 0]` as BB_upper and `iloc[:, 2]` as
+        # BB_lower, i.e. exactly backwards, which made BB_percent compute (1 - %B)
+        # instead of %B -- a number that still lives in [0, 1] and still moves with
+        # price, so nothing ever looked wrong. It fed the TFT inverted.
+        df['BB_upper'] = bb['BBU_20_2.0']
+        df['BB_lower'] = bb['BBL_20_2.0']
         df['BB_percent'] = (df['Close'] - df['BB_lower']) / (df['BB_upper'] - df['BB_lower'])
     else:
         # Fallback manual Bollinger Bands

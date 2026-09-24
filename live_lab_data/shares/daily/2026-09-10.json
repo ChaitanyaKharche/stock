@@ -1,0 +1,42 @@
+{
+  "date": "2026-09-10",
+  "arm": "SHARES",
+  "config_hash": "b53ca8a58aa11718",
+  "symbols": [
+    "AAPL",
+    "DIA",
+    "GOOGL",
+    "IWM",
+    "NVDA",
+    "QQQ",
+    "SPY",
+    "WMT",
+    "XLE",
+    "XLF",
+    "XLI",
+    "XLK",
+    "XLP",
+    "XLV",
+    "XLY"
+  ],
+  "trades_closed": 106,
+  "net": -1734.28,
+  "still_open": null,
+  "degraded_bars": {
+    "XLV": 2,
+    "XLY": 1
+  },
+  "feed": null,
+  "backfilled": true,
+  "backfill_reason": "host idle-slept 15:41:57 ET, woke 17:35:47 ET (Windows Kernel-Power id 42 at 12:42:08 local; Power-Troubleshooter SleepTime 2026-09-10T19:41:57Z / WakeTime 21:35:47Z). EOD_FLAT at 15:55 never ran. 32 positions were left open -- see shares/positions_open.json stamped session_date 2026-09-10 -- and they have NO exits, so they are absent from trades.jsonl and from the net below. The supervisor then terminated the arm 1s after wake, before it could flatten and write. Guards added 2026-09-11 in autostart.py (hold_system_awake, _sleep_watched, HARD_STOP_GRACE_SEC).",
+  "backfill_reason_source": "operator",
+  "backfill_derived_reason": "the arm stopped producing records at 15:42:05 ET, before the 15:55 flatten; cause not in the record",
+  "backfill_evidence": {
+    "last_trade_exit_et": "2026-09-10T15:10:04.451518",
+    "last_outage_et": "2026-09-10T15:42:05.509523",
+    "session_end_event": null,
+    "host_suspend_outages": 0,
+    "n_outages": 552
+  },
+  "backfilled_at": "2026-09-11T00:29:31"
+}

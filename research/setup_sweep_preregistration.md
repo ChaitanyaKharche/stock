@@ -1,6 +1,8 @@
 # Pre-registration — Frozen sweep of 24 simple setups against the trader's real entries
 
-**Status: PRE-REGISTERED, NOT YET RUN.** Written 2026-08-20. The setup list below is
+**Status: PRE-REGISTERED, AND RUN. Results: [`setup_sweep_results.md`](setup_sweep_results.md).**
+The design below is unchanged from when it was frozen; it is kept verbatim so
+the results can be checked against what was actually promised. Written 2026-08-20. The setup list below is
 **frozen**. Any setup added after results are seen forms a new family with its own
 correction and must be labelled as such.
 

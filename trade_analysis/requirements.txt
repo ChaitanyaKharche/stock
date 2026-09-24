@@ -124,7 +124,11 @@ osqp==1.0.4
 overrides==7.7.0
 packaging==25.0
 pandas==2.1.4
-pandas_ta==0.3.14b0
+# pandas_ta REMOVED 2026-09-17. It was deleted from PyPI -- the entire 0.3.x release
+# history was withdrawn and the package changed maintainer -- so this file could not
+# be installed at all. Replaced by trade_analysis/indicators_pandas.py, whose numbers
+# are pinned against the live lab's own indicators by indicators_pandas_test.py.
+# Do not add it back: no available version works on numpy<2 OR Python 3.11.
 pandocfilters==1.5.1
 parso==0.8.4
 pastel==0.2.1

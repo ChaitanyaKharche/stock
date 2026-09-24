@@ -1,6 +1,8 @@
 # Pre-registration — Do the trader's own declared indicators separate his outcomes?
 
-**Status: PRE-REGISTERED, NOT YET RUN.** Written 2026-08-20 before any endpoint was
+**Status: PRE-REGISTERED, AND RUN. Results: [`indicator_state_results.md`](indicator_state_results.md).**
+The design below is unchanged from when it was frozen; it is kept verbatim so
+the results can be checked against what was actually promised. Written 2026-08-20 before any endpoint was
 computed. Definitions final; deviations appended as dated amendments only.
 
 ## 0. The question, and the flaw it corrects

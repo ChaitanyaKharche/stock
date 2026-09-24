@@ -1,0 +1,97 @@
+# Run the offline tests on every push, so the one Windows box is not the only place
+# anything can be verified.
+#
+# WHY: before this, `requirements.txt` was the only documented install and it is a full
+# `pip freeze` of the trading machine -- torch, triton, the whole nvidia-cu12 CUDA stack.
+# So the only host where a test could run was the same host that must collect a live
+# session every weekday. Research and data collection competed for one machine, and on a
+# fresh clone every test died identically with `ModuleNotFoundError: No module named
+# 'httpx'` -- which reads as catastrophe and means "nothing is installed".
+#
+# This job installs requirements-dev.txt (~150 MB, no CUDA) and runs the live_lab set.
+# Nothing here touches the network at runtime, reads live_lab_data/, or needs Theta
+# Terminal. It cannot perturb the frozen forward test.
+name: tests
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  offline:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # .python-version pins 3.12.10; environment.yml (Discovery conda) pins 3.11.
+        # Both are in use, so both get tested rather than assumed equivalent.
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
+
+      - run: pip install -r requirements-dev.txt
+
+      # The pytest-discoverable set. pytest.ini scopes this to trade_analysis/live_lab
+      # and teaches discovery the repo's `<thing>_test.py` naming.
+      - name: pytest
+        run: pytest
+
+      # The house-style scripts, by their own documented entry points. These print a
+      # PASS/FAIL report and exit non-zero, and are run explicitly so a change to
+      # pytest.ini's testpaths cannot silently stop exercising them.
+      - name: session ledger coverage
+        run: python -m trade_analysis.live_lab.ledger_test
+
+      - name: pandas_ta replacement vs the live lab's own indicators
+        run: python -m trade_analysis.indicators_pandas_test
+
+      - name: feed resilience across a network switch
+        run: python -m trade_analysis.live_lab.feed_resilience_test
+
+      # Uses throwaway `git init` repos in a temp dir; never touches this
+      # checkout's remote.
+      - name: end-of-session archive
+        run: python -m trade_analysis.live_lab.archive_test
+
+      # Both run on hand-written bars / synthetic trades. The backtest
+      # itself needs the ThetaData archive and runs on the lab machine.
+      - name: ORB veto classifier
+        run: python -m trade_analysis.live_lab.orb_veto_test
+
+      - name: ORB veto analysis arithmetic
+        run: python -m trade_analysis.live_lab.orb_veto_backtest_test
+
+      - name: 8-line breakout signal
+        run: python -m trade_analysis.live_lab.breakout_levels_test
+
+      - name: six lines (the trader's actual level set)
+        run: python -m trade_analysis.live_lab.six_lines_test
+
+      - name: preflight <-> autostart gate contract
+        run: python -m trade_analysis.live_lab.preflight_gate_test
+
+      - name: bar cache cannot change a fill
+        run: python -m trade_analysis.live_lab.bar_cache_test
+
+      # From fix/live-lab-host-suspend. Both offline; the wake-lock check
+      # inside the guard test SKIPs off Windows rather than failing.
+      - name: host suspend guards
+        run: python -m trade_analysis.live_lab.autostart_guard_test
+
+      - name: momo sweep statistics
+        run: python -m trade_analysis.momo_sweep.stats_test
+
+      # Read-only. Prints UNRECORDED sessions and exits 0 either way -- this reports
+      # coverage, it does not gate the build on the lab having collected.
+      # --reconcile is NEVER passed here: it globs daily/ on the host it runs on, and a
+      # CI runner has no daily files, so it would backfill MISSED for sessions that ran.
+      - name: live lab coverage (report only)
+        run: python -m trade_analysis.live_lab.ledger --lab-dir live_lab_data
