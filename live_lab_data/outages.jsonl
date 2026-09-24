@@ -902,3 +902,5 @@
 {"seq":4606,"ts":"2026-09-21T15:50:06.648758","kind":"tick","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
 {"seq":4607,"ts":"2026-09-21T15:50:12.128192","kind":"feed","detail":"upstream recovered after 102s and 9 failed call(s)","path":"__recovered__"}
 {"seq":4873,"ts":"2026-09-22T12:58:24.270200","kind":"future_quote","detail":"SPY quote is 9.1s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"SPY"}
+{"seq":5161,"ts":"2026-09-23T10:29:09.309755","kind":"future_quote","detail":"QQQ quote is 30.1s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"QQQ"}
+{"seq":5162,"ts":"2026-09-23T10:29:09.399396","kind":"future_quote","detail":"SPY quote is 30.1s AHEAD of the local clock -- suspect timezone/clock skew","symbol":"SPY"}

@@ -45,3 +45,6 @@
 {"seq":4620,"ts":"2026-09-22T09:35:19.797618","kind":"start","config_hash":"1f7247d7839d9950","symbols":["QQQ","SPY"],"spec":"live_lab_specification.md @ 2026-08-27"}
 {"seq":4621,"ts":"2026-09-22T09:36:20.624255","kind":"warmup","symbol":"QQQ","sessions_used":24,"has_stretch":true,"prior_day":{"date":"2026-09-21","open":727.89,"high":743.22,"low":727.81,"close":741.39}}
 {"seq":4622,"ts":"2026-09-22T09:36:52.316734","kind":"warmup","symbol":"SPY","sessions_used":24,"has_stretch":true,"prior_day":{"date":"2026-09-21","open":766.251,"high":774.89,"low":766.03,"close":773.52}}
+{"seq":4928,"ts":"2026-09-23T09:35:18.126617","kind":"start","config_hash":"1f7247d7839d9950","symbols":["QQQ","SPY"],"spec":"live_lab_specification.md @ 2026-08-27"}
+{"seq":4929,"ts":"2026-09-23T09:36:17.864598","kind":"warmup","symbol":"QQQ","sessions_used":24,"has_stretch":true,"prior_day":{"date":"2026-09-22","open":740.98,"high":748.349,"low":740.93,"close":747.465}}
+{"seq":4930,"ts":"2026-09-23T09:36:48.929845","kind":"warmup","symbol":"SPY","sessions_used":24,"has_stretch":true,"prior_day":{"date":"2026-09-22","open":774.03,"high":775.14,"low":772.57,"close":773.36}}
