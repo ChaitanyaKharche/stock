@@ -153,3 +153,13 @@ failed to run is visible rather than invisible.
 ## 9. Amendments
 
 *(append only)*
+
+### Amendment 2026-09-25 — Six_Lines and Six_Lines_NoCap
+
+Same amendment as `forward_test_preregistration.md` (2026-09-25).
+- The two setups are appended to the shared family, and m = 13 → 15.
+- New hash `7c6414fc549315f3` is accepted in `shares/FREEZE.json` beside `b53ca8a58aa11718`.
+  The 13 originals, fill rule, notional, caps, EOD flatten and 15-name universe are
+  byte-identical to it.
+- The counters of the original setups continue across the change.
+- On shares the six lines are built per symbol from that symbol's own premarket.

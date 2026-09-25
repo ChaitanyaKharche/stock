@@ -378,6 +378,37 @@ class ThetaLiveFeed:
         out.sort(key=lambda b: b["ts"])
         return out
 
+    def extended_bars(self, symbol: str, day: dt.date,
+                      start: dt.time = dt.time(4, 0),
+                      end: dt.time = dt.time(16, 0)) -> list[dict]:
+        """1-minute bars in [start, end) on `day`, INCLUDING the premarket.
+
+        `minute_bars` is RTH-only by design; the six-line setup also needs premarket
+        extremes (yesterday's and today's). Same endpoint and parameters as
+        `levels_test.get_ext`, which produced every six-line research number, so the live
+        levels are built from the same bars the backtest used. Never cached: on the live
+        day a cached copy would be a snapshot taken mid-premarket. Raises FeedOutage.
+        """
+        iso = day.isoformat()
+        rows = self._get_csv("/stock/history/ohlc", symbol=symbol,
+                             start_date=iso, end_date=iso, interval="1m",
+                             start_time="04:00:00", end_time="20:00:00")
+        out: list[dict] = []
+        for r in rows:
+            try:
+                ts = _parse_ts(r["timestamp"])
+                o, h, l, c = (float(r["open"]), float(r["high"]),
+                              float(r["low"]), float(r["close"]))
+                v = float(r["volume"])
+            except (KeyError, ValueError):
+                continue
+            if min(o, h, l, c) <= 0 or not (start <= ts.time() < end):
+                continue
+            out.append({"ts": ts, "open": o, "high": h, "low": l,
+                        "close": c, "volume": v})
+        out.sort(key=lambda b: b["ts"])
+        return out
+
     # ------------------------------------- concurrent fan-out (many symbols, one tick)
 
     def _fan_out(self, symbols, fn, workers: int = 8):

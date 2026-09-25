@@ -77,6 +77,9 @@ class Context:
     opening_range: dict               # {"5": {...}, "15": {...}} once formed
     warmup: dict                      # per-symbol baselines (rvol, imb sigma, stretch, ...)
     quote: dict | None                # live underlying NBBO at decision time
+    # The trader's six lines for today (six_lines.build_six), as dicts. None until today's
+    # premarket is complete and fetched, shortly after 09:30; only Six_Lines* read it.
+    levels: tuple | None = None
 
     # ---- convenience accessors used by setups -------------------------------
 
@@ -168,6 +171,8 @@ class SessionState:
         # to today, which is what keeps the VWAP-anchoring guarantee intact.
         self.prefix_1m: list[dict] = list(warmup.get("prefix_1m") or [])
         self.prefix_5m: list[dict] = list(warmup.get("prefix_5m") or [])
+        # Set once by levels_live.LevelsLoader when today's premarket is complete.
+        self.levels: tuple | None = None
 
     # ------------------------------------------------------------------ admission
 
@@ -252,6 +257,7 @@ class SessionState:
             opening_range=self.opening_range(),
             warmup=self.warmup,
             quote=quote,
+            levels=self.levels,
         )
 
 

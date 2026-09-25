@@ -135,9 +135,17 @@ def test_a_quote_fetched_after_a_slow_bar_pull_is_not_called_future_dated(lab):
 
 
 def test_the_guard_is_outside_the_config_hash():
-    """Adding an operational guard must not fork the frozen options history."""
+    """An operational guard must not fork the options history.
+
+    The hash is ccd00ac71f8243e9, not 1f7247d7839d9950, only because the 2026-09-25
+    amendment APPENDED Six_Lines and Six_Lines_NoCap (six_lines_setup_test proves the 13
+    originals byte-identical). No guard constant is hashed: every hashed key is a setup
+    definition or trade-meaning field.
+    """
     cfg = runner.build_config(["QQQ", "SPY"], 1500)
-    assert cfg["config_hash"] == "1f7247d7839d9950", cfg["config_hash"]
+    assert cfg["config_hash"] == "ccd00ac71f8243e9", cfg["config_hash"]
+    hashed = set(cfg) - {"config_hash", "spec_version", "git_sha"}
+    assert not {k for k in hashed if "STALE" in k.upper() or "AGE" in k.upper()}, hashed
 
 
 # ------------------------------------------------------ 5. a delayed OPTION quote

@@ -137,3 +137,48 @@ nothing.
 
 **If everything fails, that is a result and the programme ends with an answer instead of a
 suspicion.** That is worth more than another year of ambiguity.
+
+---
+
+## Amendment 2026-09-25 — the trader's six lines enter the family
+
+Appended, never substituted. Written before either new setup has traded a live session.
+
+**What is added.** Two setups, appended to the end of `ALL_SETUPS`:
+
+| setup | rule |
+|---|---|
+| `Six_Lines` | the trader's own level set exactly as specified 2026-09-20 (`six_lines.py`): yesterday's premarket high/low, yesterday's market-hours high/low, today's premarket high/low. First 10-minute close beyond a line not already passed at the open; one trade per session; exits +20 bp \| 10m close back inside the line \| 15:55 |
+| `Six_Lines_NoCap` | the same entry with the +20 bp cap removed |
+
+**Why now.** It is the only strategy in this programme that is the trader's rather than a
+published one, and the live lab could not run it: both runners were RTH-only and never read
+a premarket bar. `levels_live.py` now fetches yesterday's extended session at warmup and
+today's premarket at 09:31, and builds the lines with `six_lines.build_six` itself.
+
+**Why the uncapped twin.** The cap has subtracted value on every dataset it was measured on,
+including −0.72 bp on this exact level set (`six_lines_results.md` §3). Running both is the
+only way to see that on live fills rather than in a backtest.
+
+**What does not change.**
+- The 13 original definitions are **byte-identical** to `1f7247d7839d9950`; this is tested
+  in `six_lines_setup_test`.
+- Their counters continue across the hash change. The new hash, `ccd00ac71f8243e9`, is added
+  to `FREEZE.json` beside the old ones, exactly as the day-1 hash was.
+- The two new setups start at zero on 2026-09-25.
+
+**Family.** m = 13 → **15**. It only grows, so the Holm bar rises slightly for every setup
+and never falls.
+
+**Stated prior, before any live trade.** The six-line entry is a documented null on QQQ
+underlying: 2,438 trades, +0.54 bp uncapped, CI [−1.70, +2.87]. An ATM 0DTE needs ~5 bp.
+The expected result is a null here too. The one outcome that would be new is the uncapped
+twin clearing the cost floor on live fills when the backtest said it cannot.
+
+**Backfill, and why it is not evidence.** The new config is also replayed over
+2026-08-28 → 2026-09-24 through the real runner code, with historical bars and quotes
+(`live_lab_data/backfill/`).
+- It is **never** counted toward any checkpoint or promotion bar.
+- It is computed after the fact, so the decision-before-price guarantee in §1 does not
+  hold for it, however faithfully the code path is reused.
+- It exists to show what the new config would have done, not to shorten the clock.

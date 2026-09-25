@@ -32,6 +32,7 @@ from .feed import (UPSTREAM_WAIT_SEC, FeedOutage, ThetaLiveFeed,
                    UpstreamUnreachable)
 from .lock import SingleInstance
 from .positions import Position, open_positions_from_signal, position_from_dict
+from .levels_live import LevelsLoader
 from .session import SessionState, build_warmup
 from .setups import ALL_SETUPS, DEAD_SETUPS, SLOW_SETUPS
 from .store import DEFAULT_LAB_DIR, LabStore
@@ -144,6 +145,7 @@ class LiveLab:
         self._chain_cache: dict[tuple[str, str], tuple[float, list]] = {}
         self._seen_5m: dict[str, set] = {}
         self._degraded_seen: dict[str, int] = {}
+        self.levels = LevelsLoader(self.store, tag="lab")
         os_signal.signal(os_signal.SIGINT, self._handle_sigint)
 
     def _handle_sigint(self, *_):
@@ -200,6 +202,12 @@ class LiveLab:
                 return False
             self.sessions[sym] = SessionState(sym, day, w, w.get("prior_day"),
                                               settle_ms=self.settle_ms)
+            # Six_Lines needs yesterday's EXTENDED session. A failure here disables only
+            # those two setups for this symbol today; it must never cost the session.
+            try:
+                self.levels.at_warmup(self.feed, sym, prior)
+            except Exception as exc:                          # noqa: BLE001
+                self.store.outage("levels_warmup", repr(exc), symbol=sym)
             self.store.event("warmup", symbol=sym, sessions_used=w["sessions_used"],
                              has_stretch=w["crabel_stretch"] is not None,
                              prior_day=w.get("prior_day"))
@@ -283,6 +291,10 @@ class LiveLab:
     def _tick(self, now: dt.datetime, day: dt.date) -> None:
         for sym in self.symbols:
             sess = self.sessions[sym]
+            try:
+                self.levels.at_tick(self.feed, sess, now)     # no-op once today's are set
+            except Exception as exc:                          # noqa: BLE001
+                self.store.outage("levels_tick", repr(exc), symbol=sym)
             admitted = sess.accept_bars(self.feed.minute_bars(sym, day, now=now), now)
             # SessionState records a discontinuity in the admitted 1m sequence, but
             # nothing used to read it -- a permanently missing bar would sit in memory

@@ -18,6 +18,7 @@ from __future__ import annotations
 import datetime as dt
 
 from . import indicators as ind
+from .orb_veto import resample_10m
 from .session import Context, Signal
 
 ET = dt.timezone.utc  # placeholder; all lab timestamps are naive ET
@@ -615,12 +616,144 @@ class GapFade(Setup):
         return None
 
 
+# ===========================================================================
+# The trader's OWN level set -- added by dated amendment, 2026-09-25
+# ===========================================================================
+#
+# The six lines exactly as he specified them on 2026-09-20 (six_lines.py): yesterday's
+# premarket high/low, yesterday's market-hours high/low, today's premarket high/low. This
+# is the one strategy in the lab that is his rather than a published one, and until this
+# amendment the live lab could not run it at all -- both runners were RTH-only.
+#
+# Every rule below is lifted from six_lines.first_break_trade, the code that produced the
+# 2,438-trade null in research/six_lines_results.md, so the forward record extends that
+# backtest rather than testing a cousin of it:
+#   * 10-minute bars anchored at 09:30 (orb_veto.resample_10m, the same function)
+#   * a line already passed at the RTH open is PRE-BROKEN and takes no part
+#   * ONE trade per session: the FIRST 10m bar that CLOSES beyond a live line. If that bar
+#     is missed (stale, no quote), there is no second chance later -- the rule is "the
+#     first break", not "a break", which is exactly the distortion that let Crabel_Stretch
+#     fire on the first bar a blind runner could see (incident_2026-09-24).
+#   * ties on one bar go to the nearest line (R1 before R2), as min() does there
+#   * exits: +20 bp intrabar | a 10m close back inside the broken line, from the bar AFTER
+#     the entry bar | 15:55
+#
+# One stated deviation: the backtest measures +20 bp from the NEXT 10m bar's open; the
+# lab must fix the target when it decides, so it uses the signal bar's close -- the same
+# instant, one tick earlier.
+#
+# Six_Lines_NoCap is the same entry with the cap removed. Not a new idea: the cap has been
+# measured to subtract value three times on three datasets (CLAUDE.md), including -0.72 bp
+# on this exact level set. Running both forward is the only way to see it on live fills.
+
+_TEN = dt.timedelta(minutes=10)
+_NINE = dt.timedelta(minutes=9)
+
+
+def _ten_minute_bars(ctx):
+    """Today's RTH 10m bars built ONLY from 1m bars at or before ctx.bar_ts.
+
+    Both runners build a Context from the whole admitted buffer, so on a batch admission
+    ctx.bars_1m can hold bars AFTER the one being evaluated. Truncating here makes the
+    setup a pure function of the past whatever the caller does.
+    """
+    upto = [b for b in ctx.bars_1m if b["ts"] <= ctx.bar_ts]
+    if not upto:
+        return [], None
+    ten = [b for b in resample_10m(upto) if _t(9, 30) <= b["ts"].time() < _t(16, 0)]
+    return ten, upto[-1]["ts"]
+
+
+def _crosses(line, close) -> bool:
+    return close > line["price"] if line["side"] == "R" else close < line["price"]
+
+
+def _first_break(ten, lines):
+    """(bucket index, line) of the session's first close-break, or (None, None)."""
+    open_px = ten[0]["open"]
+    live = [l for l in lines
+            if not ((l["side"] == "R" and open_px > l["price"]) or
+                    (l["side"] == "S" and open_px < l["price"]))]
+    for i, b in enumerate(ten):
+        hit = sorted((l for l in live if _crosses(l, b["close"])), key=lambda l: l["name"])
+        if hit:
+            return i, hit[0]
+    return None, None
+
+
+class SixLines(Setup):
+    id, version, timeframe = "Six_Lines", "1", "1m"
+    max_per_day = 1
+    cap_bp: float | None = 20.0
+    params = {"lines": "R1-R3 = yday premarket high, yday market high, today premarket "
+                       "high (R1 nearest); S1-S3 = the lows (S1 nearest)",
+              "bar": "10m, anchored 09:30", "break": "close beyond a line not passed at "
+              "the RTH open", "entry": "first break of the session only",
+              "cap_bp": 20.0, "exit": "+20 bp intrabar | 10m close back inside the "
+              "broken line (from the bar after entry) | 15:55",
+              "source": "trader, 2026-09-20 (six_lines.py)", "amendment": "2026-09-25"}
+
+    def evaluate(self, ctx):
+        if not ctx.levels or ctx.tf != "1m":
+            return None
+        ten, last_ts = _ten_minute_bars(ctx)
+        if not ten or last_ts != ten[-1]["ts"] + _NINE:
+            return None                       # this 1m bar does not close a 10m bar
+        i, line = _first_break(ten, ctx.levels)
+        if line is None or i != len(ten) - 1:
+            return None                       # no break yet, or the first one was earlier
+        long = line["side"] == "R"
+        px = ten[-1]["close"]
+        target = None
+        if self.cap_bp is not None:
+            target = px * (1 + self.cap_bp / 10_000.0) if long else \
+                px * (1 - self.cap_bp / 10_000.0)
+        return Signal(self.id, "long" if long else "short", stop=None, target=target,
+                      trailing="six_lines",
+                      state={"line": line["name"], "line_price": line["price"],
+                             "source": line["source"],
+                             "signal_bucket": ten[-1]["ts"].isoformat(),
+                             "cap_bp": self.cap_bp,
+                             "lines": {l["name"]: round(l["price"], 4) for l in ctx.levels}})
+
+    def manage(self, pos, ctx):
+        """'failed': a completed 10m bar, after the entry bar, closed back inside the line."""
+        st = pos.get("state") or {}
+        lp, sb = st.get("line_price"), st.get("signal_bucket")
+        if lp is None or sb is None:
+            return None
+        first = dt.datetime.fromisoformat(sb) + 2 * _TEN     # skip signal and entry bars
+        ten, last_ts = _ten_minute_bars(ctx)
+        long = pos.get("direction") == "long"
+        for b in ten:
+            if b["ts"] < first:
+                continue
+            if last_ts < b["ts"] + _NINE:
+                break                         # not closed yet
+            if (b["close"] < lp) if long else (b["close"] > lp):
+                return "failed"
+        return None
+
+
+class SixLinesNoCap(SixLines):
+    id = "Six_Lines_NoCap"
+    cap_bp = None
+    params = {**SixLines.params, "cap_bp": None,
+              "exit": "10m close back inside the broken line (from the bar after entry) "
+                      "| 15:55 -- no profit cap",
+              "why": "the cap measured -0.72 bp on this level set (six_lines_results.md)"}
+
+
 # --------------------------------------------------------------------------- registry
 
+# Order matters: build_config hashes this list. The 13 original entries are unchanged and
+# in their original order; the amendment APPENDS, so each original describe() is
+# byte-identical to the one frozen in 1f7247d7839d9950 (tested in six_lines_setup_test).
 ALL_SETUPS: list[Setup] = [
     ORB5min(), ORB15min(), VWAPReclaim(), MomoChase(),
     IntradayMomentumBoundary(), TTMSqueeze(), PDHPDLBreakout(), PDHPDLFailedBreak(),
     VWAP2SigmaFade(), EMA920Pullback(), ThreeBarPlay(), CrabelStretch(), GapFade(),
+    SixLines(), SixLinesNoCap(),
 ]
 
 # Setups whose MEASURED signal rate makes a verdict unreachable in a reasonable horizon.

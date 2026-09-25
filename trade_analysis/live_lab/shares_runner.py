@@ -51,6 +51,7 @@ from .clock import now_et, today_et
 from .feed import (UPSTREAM_WAIT_SEC, FeedOutage, ThetaLiveFeed,
                    UpstreamUnreachable)
 from .lock import SingleInstance
+from .levels_live import LevelsLoader
 from .session import SessionState, build_warmup
 from .setups import ALL_SETUPS, DEAD_SETUPS, SLOW_SETUPS
 from .store import DEFAULT_LAB_DIR, LabStore
@@ -186,6 +187,7 @@ class SharesLab:
         self._last_feed_ok: dt.datetime | None = None  # last successful fetch
         self._stop = False
         self._setups = {s.id: s for s in ALL_SETUPS}
+        self.levels = LevelsLoader(self.store, tag="shares")
         os_signal.signal(os_signal.SIGINT, self._sigint)
 
     def _sigint(self, *_):
@@ -241,6 +243,11 @@ class SharesLab:
                 print(f"[shares] ABORT: feed unreachable warming up {sym}", flush=True)
                 return False
             self.sessions[sym] = SessionState(sym, day, w, w.get("prior_day"))
+            # Six_Lines needs yesterday's EXTENDED session; see runner.warmup.
+            try:
+                self.levels.at_warmup(self.feed, sym, prior)
+            except Exception as exc:                          # noqa: BLE001
+                self.store.outage("levels_warmup", repr(exc), symbol=sym)
             self.store.event("warmup", symbol=sym, sessions_used=w["sessions_used"],
                              has_stretch=w["crabel_stretch"] is not None)
             print(f"[shares] warmup {sym}: {w['sessions_used']} prior sessions, "
@@ -390,6 +397,10 @@ class SharesLab:
             if not admitted:
                 continue
             sess = self.sessions[sym]
+            try:
+                self.levels.at_tick(self.feed, sess, now)     # no-op once today's are set
+            except Exception as exc:                          # noqa: BLE001
+                self.store.outage("levels_tick", repr(exc), symbol=sym)
             quote = quotes.get(sym)
             if quote is not None:
                 # Receipt, not the `now` from the top of the tick -- two 15-symbol

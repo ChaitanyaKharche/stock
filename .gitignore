@@ -111,7 +111,7 @@ live_lab_data/shares/positions_open.json
 # Regenerate with:  python huggingface_space/sync_shared.py --push
 # sync_shared.py (no flag) refuses to call the folder upload-ready without them.
 huggingface_space/trained_models/
-
+pokemon/
 # Derived VRP frame. Rebuildable in ~1-2h with:
 #   python -m trade_analysis.hpc.build_vrp_dataset --symbol SPY --out data/vrp
 # Git keeps blobs forever, so 37 MB of regenerable parquet would sit in every clone
