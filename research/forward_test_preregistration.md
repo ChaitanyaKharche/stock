@@ -177,7 +177,8 @@ twin clearing the cost floor on live fills when the backtest said it cannot.
 
 **Backfill, and why it is not evidence.** The new config is also replayed over
 2026-08-28 → 2026-09-24 through the real runner code, with historical bars and quotes
-(`live_lab_data/backfill/`).
+(`live_lab_backfill/`, deliberately outside `live_lab_data/` so the nightly archive
+never mixes it into the prospective record).
 - It is **never** counted toward any checkpoint or promotion bar.
 - It is computed after the fact, so the decision-before-price guarantee in §1 does not
   hold for it, however faithfully the code path is reused.

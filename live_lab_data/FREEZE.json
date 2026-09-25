@@ -56,7 +56,7 @@
       "why": "The trader's own six-line strategy (six_lines.py, specified 2026-09-20) needs premarket levels, which neither runner could see. Six_Lines is his exact spec (+20 bp cap); Six_Lines_NoCap is the same entry uncapped, because the cap measured -0.72 bp on this level set.",
       "what_did_not_change": "The 13 original setup definitions are BYTE-IDENTICAL (tested: six_lines_setup_test). Their trade counters do not reset -- trades under the previous hash keep counting. The two new setups start from zero on 2026-09-25.",
       "family": "m grows 13 -> 15. It only ever grows; the bar rises slightly for every setup, it never falls.",
-      "backfill": "A replay of the new config over 2026-08-28..2026-09-24 is kept SEPARATELY under live_lab_data/backfill/ and is NEVER counted here: it is computed after the fact, so the prospective guarantee does not hold for it."
+      "backfill": "A replay of the new config over 2026-08-28..2026-09-24 is kept SEPARATELY under live_lab_backfill/ (outside live_lab_data/, so the nightly archive never mixes it into the prospective record) and is NEVER counted here: it is computed after the fact, so the prospective guarantee does not hold for it."
     }
   ]
 }
