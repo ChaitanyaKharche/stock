@@ -431,6 +431,74 @@ def _options_blocked(out: str) -> list[str]:
     return [l for l in out.splitlines() if FAIL_MARK in l and OPTIONS_TAG in l]
 
 
+RECOVERY_LOOKBACK_DAYS = 7
+RECOVERY_TIMEOUT_SEC = 2400
+
+
+def _arm_dirs(lab_dir) -> dict[str, Path]:
+    return {"options": Path(lab_dir), "shares": Path(lab_dir) / "shares"}
+
+
+def _session_gaps(day: dt.date, lab_dir) -> list:
+    """Host-suspend windows during RTH on `day`, from either arm's outage log."""
+    from .gap_recovery import find_gaps
+    out = []
+    for d in _arm_dirs(lab_dir).values():
+        out += find_gaps(d, day)
+    return sorted(set(out))
+
+
+def _needs_recovery(day: dt.date, lab_dir) -> bool:
+    """A gap during RTH, or a position closed after the close / on a stale mark -- and no
+    gap_recovery correction recorded for that day yet."""
+    from .gap_recovery import _jsonl
+    dirs = _arm_dirs(lab_dir).values()
+    if any(c.get("day") == day.isoformat()
+           for d in dirs for c in _jsonl(d / "trade_corrections.jsonl")):
+        return False
+    if _session_gaps(day, lab_dir):
+        return True
+    for d in dirs:
+        for t in _jsonl(d / "trades.jsonl"):
+            if str(t.get("entry_ts", "")).startswith(day.isoformat()) and (
+                    str(t.get("exit_ts", ""))[11:16] >= "16:00"
+                    or "mark" in str(t.get("exit_reason"))):
+                return True
+    return False
+
+
+def recover_session_gaps(day: dt.date, lab_dir) -> None:
+    """Resolve exits that a host suspend or outage stole, from history. Never raises.
+
+    Runs after the session, when the terminal is up and nothing is trading. Also retries
+    the last RECOVERY_LOOKBACK_DAYS, so a day whose recovery failed (network still down at
+    16:00) is completed on the next session's evening rather than left incomplete. In a
+    SUBPROCESS: the replay patches the store's clock, which must never leak into this one.
+    """
+    root = str(Path(__file__).resolve().parents[2])
+    for back in range(RECOVERY_LOOKBACK_DAYS, -1, -1):
+        d = day - dt.timedelta(days=back)
+        try:
+            if not _needs_recovery(d, lab_dir):
+                continue
+            log(f"[recovery] {d}: positions outlived a gap -- resolving exits from history")
+            pr = subprocess.run(
+                [sys.executable, "-m", "trade_analysis.live_lab.gap_recovery",
+                 "--day", d.isoformat(), "--write", "--lab-dir", str(lab_dir)],
+                cwd=root, capture_output=True, text=True, timeout=RECOVERY_TIMEOUT_SEC)
+            keep = [l for l in (pr.stdout or "").splitlines()
+                    if any(k in l for k in ('"written"', '"refused"', '"rule_agreement"',
+                                            '"original_net"', '"recovered_net"',
+                                            '"affected"'))]
+            for l in keep:
+                log("[recovery]   " + l.strip())
+            if pr.returncode != 0:
+                tail = ((pr.stderr or "").strip().splitlines() or [""])[-1]
+                log(f"[recovery] {d}: exit {pr.returncode}; will retry next session. {tail}")
+        except Exception as exc:                             # noqa: BLE001
+            log(f"[recovery] {d}: failed and was ignored, will retry next session: {exc!r}")
+
+
 def _gate_verdict(out: str, options_only: bool = False) -> tuple[str, str] | None:
     """What a preflight report means for the session, in the order autostart always
     applied it: None = run; ("all", reason) = stop every arm; ("options", reason) = stop
@@ -830,10 +898,28 @@ def main(argv=None) -> int:
         # it, and the ledger ranks a day by its BEST state -- the abort would vanish.
         rc = 3
     else:
+        # 2026-09-25 read COLLECTED although the host slept 15:39 -> 16:19 and the 15:55
+        # flatten never ran. A session that lost minutes to a suspend is PARTIAL, whatever
+        # its start time was.
         try:
-            ledger.note_finished(day, args.lab_dir, supervisor_rc=rc)
+            gaps = _session_gaps(day, args.lab_dir)
+        except Exception as exc:                             # noqa: BLE001
+            gaps = []
+            log(f"could not read suspend gaps: {exc!r}")
+        try:
+            if gaps:
+                span = ", ".join(f"{a:%H:%M}-{b:%H:%M}" for a, b in gaps)
+                ledger.record(day, "PARTIAL", f"host suspended during RTH ({span}); exits of "
+                              f"positions open across it are recovered from history",
+                              args.lab_dir, supervisor_rc=rc)
+            else:
+                ledger.note_finished(day, args.lab_dir, supervisor_rc=rc)
         except Exception as exc:                             # noqa: BLE001
             log(f"ledger note_finished failed: {exc!r}")
+
+    # Complete the record before archiving it: any position that outlived a gap gets its
+    # real exit from history, appended as a correction (never an edit).
+    recover_session_gaps(day, args.lab_dir)
 
     # Make the day durable off this disk. Runs AFTER note_finished so the ledger line it
     # commits is the terminal one, and after the runners have written their daily files.

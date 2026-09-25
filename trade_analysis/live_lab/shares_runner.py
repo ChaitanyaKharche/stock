@@ -553,8 +553,17 @@ class SharesLab:
                     bar_exit=sig.bar_exit, trailing=sig.trailing, state=sig.state,
                     timeframe=setup.timeframe, entry_quote_ts=quote["ts"].isoformat(),
                     signal_id=sid)
+                # The exit parameters the position will be managed by, recorded at entry.
+                # Without them a position that outlives a gap cannot be rebuilt exactly:
+                # recomputing them on the vendor's revised bars reproduced only 32 of 165
+                # decisions exactly on 2026-09-25 (gap_recovery.py). The options arm has
+                # always carried these in its trade rows.
                 self.store.write_fill(sid, status="FILLED", symbol=sym, price=px,
-                                      shares=p.shares, spread_bp=p.spread_bp)
+                                      shares=p.shares, spread_bp=p.spread_bp,
+                                      stop=sig.stop, target=sig.target,
+                                      time_exit_min=sig.time_exit_min,
+                                      bar_exit=sig.bar_exit, trailing=sig.trailing,
+                                      timeframe=setup.timeframe)
                 self.open_pos.append(p)
                 openids.add(setup.id)
                 self.counts[(setup.id, sym)] = self.counts.get((setup.id, sym), 0) + 1
@@ -575,13 +584,27 @@ class SharesLab:
         A stale mark is a compromise; an unrecorded position is a hole. Take the compromise
         and flag it, so the row is identifiable rather than absent.
         """
+        # After the close a fresh quote is an AFTER-HOURS quote. 2026-09-25: the host slept
+        # 15:39 -> 16:19, and on waking this closed two XLP longs at an after-hours bid of
+        # 76.66, 6.2% below entry, on a day XLP did not fall 6% -- -$1,254 that described a
+        # laptop lid, not a rule. After RTH_CLOSE the last in-session NBBO is used and the
+        # row is flagged; gap_recovery.py then resolves the real exit from history.
+        after_close = now.time() >= RTH_CLOSE
         for p in list(self.open_pos):
             quote = None
-            try:
-                quote = self.feed.stock_quote(p.symbol)
-            except FeedOutage:
-                quote = None
             r = reason
+            if after_close:
+                quote = self._last_quote.get(p.symbol)
+                if quote is not None:
+                    r = reason + "_after_close_mark"
+                    self.store.outage("flatten_after_close",
+                                      f"{p.symbol} {p.setup_id} closed at {now:%H:%M} on "
+                                      f"the last in-session NBBO from {quote.get('ts')}")
+            else:
+                try:
+                    quote = self.feed.stock_quote(p.symbol)
+                except FeedOutage:
+                    quote = None
             if quote is None:
                 quote = self._last_quote.get(p.symbol)
                 if quote is not None:

@@ -213,6 +213,19 @@ class HistoryFeed:
     def open_interest(self, symbol, expiration):
         return {}
 
+    # ---------------------------------------------------------------- shares-arm batch API
+    def minute_bars_many(self, symbols, day, now=None):
+        self.calls += 1          # shares_runner reads `calls` to decide the link is up
+        return {s: self.minute_bars(s, day, now=now) for s in symbols}, {}
+
+    def stock_quote_many(self, symbols):
+        out = {}
+        for s in symbols:
+            q = self.stock_quote(s)
+            if q is not None:
+                out[s] = q
+        return out, {}
+
     # ---------------------------------------------------------------- plumbing
     def wait_for_upstream(self, *a, **k):
         return True

@@ -525,18 +525,32 @@ class LiveLab:
                   f"net={trade['pnl_net']:+.2f}", flush=True)
 
     def _flatten_all(self, now, reason="eod") -> None:
+        # After the close a fresh quote is not a price anyone could have traded at: a 0DTE
+        # contract has expired and the underlying's book is after-hours. On 2026-09-25 the
+        # host slept through 15:55 and the shares arm, waking at 16:19, closed two XLP longs
+        # at an after-hours bid 6.2% below entry. So after RTH_CLOSE the last in-session
+        # mark is used and the row says so; gap_recovery.py then resolves the real exit.
+        after_close = now.time() >= RTH_CLOSE
         for p in list(self.open_pos):
             quote = None
-            try:
-                quote = self.feed.stock_quote(p.symbol)
-                chain = self._chain(p.symbol, dt.date.fromisoformat(p.expiration))
-                q = next((c for c in chain if abs(c["strike"] - p.strike) < 1e-9
-                          and c["right"] == p.right), None)
-                bid = q["bid"] if q else p.last_bid
-            except FeedOutage:
+            r = reason
+            if after_close:
                 bid = p.last_bid
+                r = reason + "_after_close_mark"
+                self.store.outage("flatten_after_close",
+                                  f"{p.symbol} {p.setup_id} {p.arm} closed at {now:%H:%M} on "
+                                  f"the last in-session mark", symbol=p.symbol)
+            else:
+                try:
+                    quote = self.feed.stock_quote(p.symbol)
+                    chain = self._chain(p.symbol, dt.date.fromisoformat(p.expiration))
+                    q = next((c for c in chain if abs(c["strike"] - p.strike) < 1e-9
+                              and c["right"] == p.right), None)
+                    bid = q["bid"] if q else p.last_bid
+                except FeedOutage:
+                    bid = p.last_bid
             und = quote["mid"] if quote else (p.last_underlying or p.entry_underlying)
-            trade = p.close(bid=bid, underlying=und, ts=now, reason=reason)
+            trade = p.close(bid=bid, underlying=und, ts=now, reason=r)
             self.store.write_trade(trade)
             self.open_pos.remove(p)
 
