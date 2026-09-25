@@ -1,16 +1,30 @@
 ---
-title: Trade Analysis Agent
+title: ProfitBook
 emoji: 📈
 colorFrom: blue
 colorTo: green
 sdk: docker
 app_port: 8501
+short_description: A year of pre-registered 0DTE research, and a live paper lab
 ---
 
-# ProfitBook — Trading Analysis Engine
+# ProfitBook — 0DTE research, a live paper-trading lab, and the demo that shows them
 
-FastAPI + Streamlit service that turns multi-timeframe price history, news/social
-sentiment and an options chain into a directional signal with a position size.
+**What it is now (2026-09-25).** The Space opens on what a year of pre-registered research
+on QQQ/SPY 0DTE options found:
+- intraday direction is not predictable with these tools;
+- a straddle "edge" at mid prices loses at the bid/ask;
+- one published momentum rule survives, on shares.
+
+It then shows a frozen forward test that records every decision before it can see a
+price, and a gallery of the silent bugs found along the way. The research tabs read
+`research_snapshot.json`, built by `tools/build_research_snapshot.py` from the parent
+repo's data. They never import the live lab.
+
+**The original engine is still here, as the last tab.** It is a FastAPI + Streamlit
+service that turns multi-timeframe price history, news/social sentiment and an options
+chain into a directional verdict. It is kept as an engineering demo and labelled as one,
+because it calls direction, which is the thing the research found no edge in.
 
 **This folder is the deployable Space.** It is self-contained: `docker build` here needs
 nothing from the parent repository.
