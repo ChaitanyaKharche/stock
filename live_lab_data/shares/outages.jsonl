@@ -7030,3 +7030,72 @@
 {"seq":100010,"ts":"2026-09-24T15:59:12.444421","kind":"stale_quote","detail":"AAPL age=10.3s"}
 {"seq":100011,"ts":"2026-09-24T15:59:12.454433","kind":"stale_quote","detail":"GOOGL age=10.2s"}
 {"seq":100012,"ts":"2026-09-24T15:59:12.456425","kind":"stale_quote","detail":"WMT age=10.1s"}
+{"seq":100299,"ts":"2026-09-25T10:06:07.294802","kind":"stale_quote","detail":"QQQ age=8738.4s"}
+{"seq":100300,"ts":"2026-09-25T10:06:07.296385","kind":"stale_quote","detail":"IWM age=8729.8s"}
+{"seq":100306,"ts":"2026-09-25T10:06:07.304838","kind":"stale_quote","detail":"XLI age=8636.0s"}
+{"seq":100308,"ts":"2026-09-25T10:06:07.306426","kind":"stale_quote","detail":"XLP age=9006.2s"}
+{"seq":100311,"ts":"2026-09-25T10:06:07.309522","kind":"stale_quote","detail":"NVDA age=8553.3s"}
+{"seq":106202,"ts":"2026-09-25T12:46:13.563216","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":106203,"ts":"2026-09-25T12:46:14.571095","kind":"bars_failed","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"QQQ"}
+{"seq":106204,"ts":"2026-09-25T12:46:14.572689","kind":"bars_failed","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLI"}
+{"seq":106205,"ts":"2026-09-25T12:46:14.573685","kind":"bars_failed","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"WMT"}
+{"seq":106206,"ts":"2026-09-25T12:46:14.574735","kind":"bars_failed","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"GOOGL"}
+{"seq":106207,"ts":"2026-09-25T12:46:14.575798","kind":"bars_failed","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"NVDA"}
+{"seq":106208,"ts":"2026-09-25T12:46:26.595350","kind":"bars_failed","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"QQQ"}
+{"seq":106209,"ts":"2026-09-25T12:46:26.597348","kind":"bars_failed","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLI"}
+{"seq":106210,"ts":"2026-09-25T12:46:26.598349","kind":"bars_failed","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"WMT"}
+{"seq":106211,"ts":"2026-09-25T12:46:26.599349","kind":"bars_failed","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"NVDA"}
+{"seq":106212,"ts":"2026-09-25T12:46:26.600350","kind":"bars_failed","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"GOOGL"}
+{"seq":106213,"ts":"2026-09-25T12:46:40.627097","kind":"quote_failed","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"DIA"}
+{"seq":106214,"ts":"2026-09-25T12:46:40.650637","kind":"quote_failed","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"IWM"}
+{"seq":106215,"ts":"2026-09-25T12:46:40.651634","kind":"quote_failed","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLY"}
+{"seq":106216,"ts":"2026-09-25T12:46:40.652632","kind":"quote_failed","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLP"}
+{"seq":106217,"ts":"2026-09-25T12:46:40.653635","kind":"quote_failed","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLV"}
+{"seq":106218,"ts":"2026-09-25T12:46:40.654633","kind":"quote_failed","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLK"}
+{"seq":106219,"ts":"2026-09-25T12:46:40.655632","kind":"quote_failed","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLE"}
+{"seq":106220,"ts":"2026-09-25T12:46:40.655632","kind":"quote_failed","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"SPY"}
+{"seq":106221,"ts":"2026-09-25T12:46:40.656640","kind":"quote_failed","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"AAPL"}
+{"seq":106222,"ts":"2026-09-25T12:46:40.657639","kind":"quote_failed","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLF"}
+{"seq":106223,"ts":"2026-09-25T12:46:52.890849","kind":"feed","detail":"upstream recovered after 39s and 20 failed call(s)","path":"__recovered__"}
+{"seq":106440,"ts":"2026-09-25T12:51:06.506635","kind":"degraded_bar","detail":"1m gap before 12:50","symbol":"XLY"}
+{"seq":107600,"ts":"2026-09-25T13:13:06.671135","kind":"stale_quote","detail":"XLE age=6.0s"}
+{"seq":108379,"ts":"2026-09-25T13:29:05.475012","kind":"degraded_bar","detail":"1m gap before 13:28","symbol":"DIA"}
+{"seq":108590,"ts":"2026-09-25T13:33:06.729080","kind":"degraded_bar","detail":"1m gap before 13:32","symbol":"DIA"}
+{"seq":109167,"ts":"2026-09-25T13:44:16.026286","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":109168,"ts":"2026-09-25T13:44:28.741275","kind":"feed","detail":"HTTPError('HTTP 503: io exception')","path":"/stock/history/ohlc"}
+{"seq":109169,"ts":"2026-09-25T13:44:28.743289","kind":"bars_failed","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLF"}
+{"seq":109170,"ts":"2026-09-25T13:44:28.744502","kind":"bars_failed","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"IWM"}
+{"seq":109171,"ts":"2026-09-25T13:44:28.745499","kind":"bars_failed","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"NVDA"}
+{"seq":109172,"ts":"2026-09-25T13:44:28.746499","kind":"bars_failed","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLY"}
+{"seq":109173,"ts":"2026-09-25T13:44:28.747498","kind":"bars_failed","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLV"}
+{"seq":109174,"ts":"2026-09-25T13:44:28.748510","kind":"bars_failed","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLE"}
+{"seq":109175,"ts":"2026-09-25T13:44:28.748510","kind":"bars_failed","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLK"}
+{"seq":109176,"ts":"2026-09-25T13:44:28.749901","kind":"bars_failed","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"XLP"}
+{"seq":109177,"ts":"2026-09-25T13:44:28.750907","kind":"bars_failed","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: io exception')\")","symbol":"GOOGL"}
+{"seq":109178,"ts":"2026-09-25T13:44:35.798210","kind":"quote_failed","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: io exception')\")","symbol":"SPY"}
+{"seq":109179,"ts":"2026-09-25T13:44:35.799211","kind":"quote_failed","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: io exception')\")","symbol":"QQQ"}
+{"seq":109180,"ts":"2026-09-25T13:44:35.800624","kind":"quote_failed","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: io exception')\")","symbol":"DIA"}
+{"seq":109181,"ts":"2026-09-25T13:44:35.801649","kind":"quote_failed","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: io exception')\")","symbol":"XLI"}
+{"seq":109182,"ts":"2026-09-25T13:44:35.802638","kind":"quote_failed","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: io exception')\")","symbol":"AAPL"}
+{"seq":109183,"ts":"2026-09-25T13:44:35.804154","kind":"quote_failed","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: io exception')\")","symbol":"WMT"}
+{"seq":109184,"ts":"2026-09-25T13:44:54.837460","kind":"bars_failed","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: io exception')\")","symbol":"XLK"}
+{"seq":109185,"ts":"2026-09-25T13:44:54.839514","kind":"bars_failed","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: io exception')\")","symbol":"IWM"}
+{"seq":109186,"ts":"2026-09-25T13:44:54.841541","kind":"bars_failed","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: io exception')\")","symbol":"XLV"}
+{"seq":109187,"ts":"2026-09-25T13:44:54.842536","kind":"bars_failed","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: io exception')\")","symbol":"XLP"}
+{"seq":109188,"ts":"2026-09-25T13:44:54.843553","kind":"bars_failed","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: io exception')\")","symbol":"XLY"}
+{"seq":109189,"ts":"2026-09-25T13:44:54.845652","kind":"bars_failed","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: io exception')\")","symbol":"NVDA"}
+{"seq":109190,"ts":"2026-09-25T13:44:54.846805","kind":"bars_failed","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: io exception')\")","symbol":"XLE"}
+{"seq":109191,"ts":"2026-09-25T13:44:54.847815","kind":"bars_failed","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: io exception')\")","symbol":"XLF"}
+{"seq":109192,"ts":"2026-09-25T13:44:54.848814","kind":"bars_failed","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: io exception')\")","symbol":"GOOGL"}
+{"seq":109193,"ts":"2026-09-25T13:45:06.994917","kind":"feed","detail":"upstream recovered after 51s and 24 failed call(s)","path":"__recovered__"}
+{"seq":110297,"ts":"2026-09-25T14:05:08.541601","kind":"degraded_bar","detail":"1m gap before 14:04","symbol":"XLY"}
+{"seq":110950,"ts":"2026-09-25T14:17:02.740503","kind":"degraded_bar","detail":"1m gap before 14:16","symbol":"XLI"}
+{"seq":113259,"ts":"2026-09-25T14:59:06.798359","kind":"degraded_bar","detail":"1m gap before 14:58","symbol":"DIA"}
+{"seq":113521,"ts":"2026-09-25T15:03:05.623899","kind":"stale_quote","detail":"XLE age=5.7s"}
+{"seq":115531,"ts":"2026-09-25T15:42:57.443147","kind":"host_suspend","detail":"host suspended or clock stepped: 197s unaccounted between 15:39:33 and 15:42:56 ET -- the lab was NOT running","gap_sec":197.4,"from_et":"2026-09-25T15:39:33.773667","to_et":"2026-09-25T15:42:56.124048"}
+{"seq":115531,"ts":"2026-09-25T15:57:29.645344","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":115531,"ts":"2026-09-25T15:57:30.510165","kind":"host_suspend","detail":"host suspended or clock stepped: 867s unaccounted between 15:42:57 and 15:57:29 ET -- the lab was NOT running","gap_sec":867.3,"from_et":"2026-09-25T15:42:57.469161","to_et":"2026-09-25T15:57:29.745409"}
+{"seq":115532,"ts":"2026-09-25T15:57:36.784504","kind":"tick","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":115531,"ts":"2026-09-25T16:19:16.635077","kind":"host_suspend","detail":"host suspended or clock stepped: 1289s unaccounted between 15:57:35 and 16:19:09 ET -- the lab was NOT running","gap_sec":1289.3,"from_et":"2026-09-25T15:57:35.512551","to_et":"2026-09-25T16:19:09.798526"}
+{"seq":115533,"ts":"2026-09-25T16:19:18.112776","kind":"flatten_stale_mark","detail":"GOOGL Crabel_Stretch closed on the last known NBBO from 2026-09-25 15:39:04.661000"}
+{"seq":115535,"ts":"2026-09-25T16:19:25.203265","kind":"feed","detail":"upstream recovered after 1316s and 16 failed call(s)","path":"__recovered__"}
