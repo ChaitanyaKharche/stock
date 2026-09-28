@@ -51,6 +51,7 @@ from .clock import now_et, today_et
 from .feed import (UPSTREAM_WAIT_SEC, FeedOutage, ThetaLiveFeed,
                    UpstreamUnreachable)
 from .lock import SingleInstance
+from .catchup import CatchUp, checkpoint_time
 from .levels_live import LevelsLoader
 from .session import SessionState, build_warmup
 from .setups import ALL_SETUPS, DEAD_SETUPS, SLOW_SETUPS
@@ -182,12 +183,14 @@ class SharesLab:
         self.dircnt: dict[tuple[str, str, str], int] = {}
         self._seen5: dict[str, set] = {}
         self._degraded_seen: dict[str, int] = {}
+        self._decided: set[tuple[str, str, str]] = set()   # filled by recover()
         self._last_bar_at: dict[str, dt.datetime] = {}
         self._last_quote: dict[str, dict] = {}   # last GOOD NBBO per symbol
         self._last_feed_ok: dt.datetime | None = None  # last successful fetch
         self._stop = False
         self._setups = {s.id: s for s in ALL_SETUPS}
         self.levels = LevelsLoader(self.store, tag="shares")
+        self.catchup = CatchUp(self, tag="shares")
         os_signal.signal(os_signal.SIGINT, self._sigint)
 
     def _sigint(self, *_):
@@ -262,6 +265,7 @@ class SharesLab:
         # ORB_5min and ORB_15min (both cap 1) that had already traded that morning.
         if day is not None:
             self.counts, self.dircnt = self.store.decision_counts(day)
+            self._decided = self.store.decision_keys(day)
             if self.counts:
                 print(f"[shares] restored per-day caps: "
                       f"{sum(self.counts.values())} signals already taken today", flush=True)
@@ -290,16 +294,33 @@ class SharesLab:
             self.feed.close()
             return
         self.recover(day)
+        cp = checkpoint_time(self.store.root, day)     # see runner.run: restart catch-up
+        if cp is not None and cp < now_et():
+            self.catchup.note_good(cp)
+        started_pre_open = now_et().time() < RTH_OPEN
 
         while not self._stop:
             now = now_et()
-            if now.date() != day or now.time() >= RTH_CLOSE:
+            if now.date() != day:
                 break
             if now.time() < RTH_OPEN:
                 time.sleep(min(30, self.poll_idle))
                 continue
+            if started_pre_open and self.catchup.last_good is None:
+                self.catchup.note_good(dt.datetime.combine(day, RTH_OPEN))
+            if self.catchup.away(now):
+                # FROZEN until the missed minutes are replayed from history -- catchup.py.
+                if not self.catchup.run(now, day):
+                    self.store.save_open_positions([p.to_row() for p in self.open_pos],
+                                                   session_date=day)
+                    time.sleep(self.poll_idle)
+                    continue
+                now = now_et()
+            if now.time() >= RTH_CLOSE:
+                break
             try:
                 self._tick(now, day)
+                self.catchup.note_good(now)
             except FeedOutage as exc:
                 self.store.outage("tick", repr(exc))
             except Exception as exc:                          # noqa: BLE001
@@ -499,6 +520,10 @@ class SharesLab:
     # ------------------------------------------------------------------ entering
 
     def _enter(self, sym, sess, bar, ctx1, ctx5, quote, now) -> None:
+        if self.catchup.frozen:
+            # Catching up after a gap: exits only (catchup.py, point 3).
+            self.catchup.suppressed += 1
+            return
         bar_age = (now - bar["ts"]).total_seconds()
         if bar_age > STALE_BAR_SEC:
             self.store.outage("stale_bar", f"{sym} bar {bar['ts']:%H:%M} is "
@@ -531,6 +556,12 @@ class SharesLab:
                                           reason="max_per_direction",
                                           direction=sig.direction)
                     continue
+                key = (setup.id, sym, bar["ts"].isoformat()[:19])
+                if key in self._decided:           # decided once -- store.decision_keys
+                    self.store.write_skip(setup_id=setup.id, config_hash=self.config_hash,
+                                          symbol=sym, bar_ts=bar["ts"].isoformat(),
+                                          reason="already_decided")
+                    continue
                 # THE ORDERING GUARANTEE. The setup was handed a Context built only from
                 # closed bars -- `context(..., quote=None)` -- so no price this runner holds
                 # can have influenced the signal. The DECISION row is fsynced here anyway,
@@ -540,6 +571,7 @@ class SharesLab:
                     setup_id=setup.id, config_hash=self.config_hash, symbol=sym,
                     direction=sig.direction, bar_ts=bar["ts"].isoformat(),
                     state=sig.state)
+                self._decided.add(key)
                 px = quote["ask"] if sig.direction == "long" else quote["bid"]
                 if px <= 0:
                     self.store.write_fill(sid, status="SKIPPED", reason="bad_quote")

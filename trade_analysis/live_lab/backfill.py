@@ -90,14 +90,21 @@ def _cached(key: str, fn):
 class HistoryFeed:
     """The live feed's interface, served from history as of a simulated clock."""
 
-    def __init__(self, real, clock: SimClock, day: dt.date):
+    def __init__(self, real, clock: SimClock, day: dt.date, disk_cache: bool = True):
         self.real, self.clock, self.day = real, clock, day
+        # A live runner catching up mid-session must NOT disk-cache: today's history is
+        # still growing, and a cached partial day would later be served to the backfill
+        # and gap-recovery tools as if it were the whole session.
+        self.disk_cache = disk_cache
         self.calls = 0
         self._rth: dict = {}
         self._ext: dict = {}
         self._nbbo: dict = {}
         self._chain: dict = {}
         self._strikes: dict = {}
+
+    def _c(self, key, fn):
+        return _cached(key, fn) if self.disk_cache else fn()
 
     # ---------------------------------------------------------------- guards
     def _no_future(self, day: dt.date) -> None:
@@ -113,7 +120,7 @@ class HistoryFeed:
         self._no_future(day)
         key = (symbol, day)
         if key not in self._rth:
-            self._rth[key] = _cached(f"rth_{symbol}_{day}",
+            self._rth[key] = self._c(f"rth_{symbol}_{day}",
                                      lambda: self.real._fetch_minute_bars(symbol, day))
         bars = self._rth[key]
         # The replayed day is ALWAYS cut at the simulated clock, whatever `now` says.
@@ -123,7 +130,7 @@ class HistoryFeed:
         self._no_future(day)
         key = (symbol, day)
         if key not in self._ext:
-            self._ext[key] = _cached(
+            self._ext[key] = self._c(
                 f"ext_{symbol}_{day}",
                 lambda: self.real.extended_bars(symbol, day, dt.time(4, 0), dt.time(20, 0)))
         bars = [b for b in self._ext[key] if start <= b["ts"].time() < end]
@@ -146,7 +153,7 @@ class HistoryFeed:
                         continue
                 out.sort()
                 return out
-            self._nbbo[symbol] = _cached(f"nbbo_{symbol}_{self.day}", fetch)
+            self._nbbo[symbol] = self._c(f"nbbo_{symbol}_{self.day}", fetch)
         return self._nbbo[symbol]
 
     def stock_quote(self, symbol):
@@ -164,7 +171,7 @@ class HistoryFeed:
     def zero_dte(self, symbol, day):
         self._no_future(day)
         if symbol not in self._strikes:
-            self._strikes[symbol] = _cached(
+            self._strikes[symbol] = self._c(
                 f"strikes_{symbol}_{day}",
                 lambda: len(self.real._get_csv("/option/list/strikes", symbol=symbol,
                                                expiration=day.isoformat())))
@@ -189,7 +196,7 @@ class HistoryFeed:
                     except (KeyError, ValueError):
                         continue
                 return {k: sorted(v) for k, v in tab.items()}
-            tab = _cached(f"chain_{symbol}_{expiration}_{self.day}", fetch)
+            tab = self._c(f"chain_{symbol}_{expiration}_{self.day}", fetch)
             self._chain[key] = {k: ([x[0] for x in v], v) for k, v in tab.items()}
         return self._chain[key]
 
@@ -229,6 +236,16 @@ class HistoryFeed:
     # ---------------------------------------------------------------- plumbing
     def wait_for_upstream(self, *a, **k):
         return True
+
+    # Pass-throughs to the real feed's raw history calls, so a HistoryFeed can itself be
+    # the "live" feed that catchup.py wraps -- which is how the catch-up is tested end to
+    # end on a past session without a live market.
+    def _fetch_minute_bars(self, symbol, day):
+        self._no_future(day)
+        return self.real._fetch_minute_bars(symbol, day)
+
+    def _get_csv(self, path, **params):
+        return self.real._get_csv(path, **params)
 
     def stats(self):
         return {"source": "HISTORY_BACKFILL", "calls": self.calls, "retries": 0,

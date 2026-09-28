@@ -32,6 +32,7 @@ from .feed import (UPSTREAM_WAIT_SEC, FeedOutage, ThetaLiveFeed,
                    UpstreamUnreachable)
 from .lock import SingleInstance
 from .positions import Position, open_positions_from_signal, position_from_dict
+from .catchup import CatchUp, checkpoint_time
 from .levels_live import LevelsLoader
 from .session import SessionState, build_warmup
 from .setups import ALL_SETUPS, DEAD_SETUPS, SLOW_SETUPS
@@ -145,7 +146,9 @@ class LiveLab:
         self._chain_cache: dict[tuple[str, str], tuple[float, list]] = {}
         self._seen_5m: dict[str, set] = {}
         self._degraded_seen: dict[str, int] = {}
+        self._decided: set[tuple[str, str, str]] = set()   # filled by recover()
         self.levels = LevelsLoader(self.store, tag="lab")
+        self.catchup = CatchUp(self, tag="lab")
         os_signal.signal(os_signal.SIGINT, self._handle_sigint)
 
     def _handle_sigint(self, *_):
@@ -233,6 +236,7 @@ class LiveLab:
         #     setups that had already hit max_per_day could fire again.
         if day is not None:
             self.trade_counts, self.dir_counts = self.store.decision_counts(day)
+            self._decided = self.store.decision_keys(day)
             if self.trade_counts:
                 print(f"[lab] restored per-day caps: "
                       f"{sum(self.trade_counts.values())} signals already taken today",
@@ -260,18 +264,37 @@ class LiveLab:
             self.feed.close()
             return
         self.recover(day)
+        # A restart mid-session catches up from the previous process's last checkpoint,
+        # so the minutes the crash cost are replayed rather than batch-admitted.
+        cp = checkpoint_time(self.store.root, day)
+        if cp is not None and cp < now_et():
+            self.catchup.note_good(cp)
+        started_pre_open = now_et().time() < RTH_OPEN
 
         while not self._stop:
             now = now_et()
             if now.date() != day:
                 break
-            if now.time() >= RTH_CLOSE:
-                break
             if now.time() < RTH_OPEN:
                 time.sleep(min(30, self.poll_idle))
                 continue
+            if started_pre_open and self.catchup.last_good is None:
+                # Up before the open: if the very first tick fails (on a hotspot, in a
+                # car), the missed minutes are replayed from 09:30, never batch-admitted.
+                self.catchup.note_good(dt.datetime.combine(day, RTH_OPEN))
+            if self.catchup.away(now):
+                # FROZEN until the missed minutes are replayed from history -- see catchup.py.
+                if not self.catchup.run(now, day):
+                    self.store.save_open_positions([p.to_trade() for p in self.open_pos],
+                                                   session_date=day)
+                    time.sleep(self.poll_idle)
+                    continue
+                now = now_et()
+            if now.time() >= RTH_CLOSE:
+                break
             try:
                 self._tick(now, day)
+                self.catchup.note_good(now)
             except FeedOutage as exc:
                 self.store.outage("tick", repr(exc))
             except Exception as exc:                          # noqa: BLE001
@@ -344,6 +367,11 @@ class LiveLab:
     # ------------------------------------------------------------------ evaluation
 
     def _evaluate(self, sym, sess, bar_ts, tf, quote, now, day) -> None:
+        if self.catchup.frozen:
+            # Catching up after a gap: exits only. A signal the runner could not see live
+            # was never decided before its price existed (catchup.py, point 3).
+            self.catchup.suppressed += 1
+            return
         ctx = sess.context(bar_ts, tf, quote)
         for setup in ALL_SETUPS:
             if setup.timeframe != tf:
@@ -387,6 +415,12 @@ class LiveLab:
             self._open(setup, sig, sym, ctx, quote, now, bar_ts, day)
 
     def _open(self, setup, sig, sym, ctx, quote, now, bar_ts, day) -> None:
+        # ---- DECIDED ONCE (store.decision_keys) ---------------------------
+        key = (setup.id, sym, bar_ts.isoformat()[:19])
+        if key in self._decided:
+            self.store.write_skip(setup_id=setup.id, config_hash=self.config_hash,
+                                  symbol=sym, bar_ts=bar_ts, reason="already_decided")
+            return
         # ---- THE ORDERING GUARANTEE -------------------------------------
         state = dict(sig.state)
         state.update({"price_at_bar": ctx.price, "vwap": ctx.vwap,
@@ -397,6 +431,7 @@ class LiveLab:
         signal_id = self.store.write_decision(
             setup_id=setup.id, config_hash=self.config_hash, symbol=sym,
             direction=sig.direction, bar_ts=bar_ts, state=state)
+        self._decided.add(key)
         # ---- only now may a price be requested ---------------------------
 
         if quote is None:

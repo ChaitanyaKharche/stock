@@ -434,6 +434,139 @@ def _options_blocked(out: str) -> list[str]:
 RECOVERY_LOOKBACK_DAYS = 7
 RECOVERY_TIMEOUT_SEC = 2400
 
+# --- terminal watchdog ----------------------------------------------------------------
+# restart_terminal.py names the gap: a terminal that wedges while both arms stay healthy is
+# never restarted, because supervise() only checks it on the arm-restart path -- and the
+# arms survive a dead feed on purpose. A network change (home WiFi -> hotspot -> work
+# WiFi) is the likely cause. So the supervisor now checks it itself, every minute of RTH.
+TERMINAL_CHECK_SEC = 60
+TERMINAL_DOWN_CHECKS = 2       # not answering at all for ~2 minutes -> restart
+UPSTREAM_STUCK_CHECKS = 3      # answering, internet reachable, history failing ~3 min -> restart
+TERMINAL_MAX_RESTARTS = 6      # per session; past this a human is needed, not a loop
+UPSTREAM_HOST = "mdds-01.thetadata.us"
+
+
+def _internet_up(timeout: float = 4.0) -> bool:
+    """Can this machine reach the vendor at all? DNS + a TCP connect, both bounded.
+
+    The distinction that matters: when the network is DOWN (in a car, between networks)
+    restarting the terminal cannot help and only adds a cold start to the recovery. When
+    the network is UP and the terminal still cannot serve history, the terminal is wedged
+    on its old connection and a restart is exactly what fixes it.
+    """
+    import concurrent.futures as cf
+    import socket
+    try:
+        with cf.ThreadPoolExecutor(max_workers=1) as ex:
+            info = ex.submit(socket.getaddrinfo, UPSTREAM_HOST, 443,
+                             type=socket.SOCK_STREAM).result(timeout=timeout)
+        with socket.create_connection(info[0][4][:2], timeout=timeout):
+            return True
+    except Exception:                                        # noqa: BLE001
+        return False
+
+
+def _upstream_serving(timeout: float = 10.0) -> bool:
+    """Does the terminal serve HISTORY (which goes through MDDS), not just a snapshot?"""
+    day = now_et().date() - dt.timedelta(days=1)
+    for _ in range(10):
+        if _is_session(day):
+            break
+        day -= dt.timedelta(days=1)
+    try:
+        import httpx
+        r = httpx.get(f"http://127.0.0.1:{TERMINAL_PORT}/v3/stock/history/ohlc",
+                      params={"symbol": "QQQ", "start_date": day.isoformat(),
+                              "end_date": day.isoformat(), "interval": "1h"},
+                      timeout=timeout)
+        return r.status_code == 200 and r.text.count("\n") > 1
+    except Exception:                                        # noqa: BLE001
+        return False
+
+
+def _mdds_status(timeout: float = 4.0) -> str:
+    """The terminal's own view of its history link: CONNECTED / UNVERIFIED / DISCONNECTED /
+    ERROR (thetadata.net/docs/System). Logged for diagnosis; the decision uses a real
+    history request, because a status string is a claim and served data is evidence."""
+    try:
+        import httpx
+        return httpx.get(f"http://127.0.0.1:{TERMINAL_PORT}/v3/terminal/mdds/status",
+                         timeout=timeout).text.strip()[:40]
+    except Exception as exc:                                 # noqa: BLE001
+        return f"unreachable ({type(exc).__name__})"
+
+
+def _graceful_shutdown(wait_sec: float = 15.0) -> bool:
+    """Ask the terminal to exit via its own endpoint, then wait for the port to free."""
+    try:
+        import httpx
+        httpx.get(f"http://127.0.0.1:{TERMINAL_PORT}/v3/terminal/shutdown", timeout=5.0)
+    except Exception:                                        # noqa: BLE001
+        pass
+    deadline = time.time() + wait_sec
+    while time.time() < deadline:
+        if not terminal_up(timeout=2.0):
+            return True
+        time.sleep(1.0)
+    return False
+
+
+class TerminalWatchdog:
+    """Restart the terminal when it is wedged, never when the network is merely down."""
+
+    def __init__(self, enabled: bool, day: dt.date):
+        self.enabled, self.day = enabled, day
+        self.down = self.stuck = self.restarts = 0
+        self._last = 0.0
+
+    def check(self, now: dt.datetime, probes=None) -> str:
+        """Returns what it concluded; never raises. `probes` injects fakes in tests."""
+        p = probes or {"answering": terminal_up, "serving": _upstream_serving,
+                       "internet": _internet_up, "restart": self._restart}
+        if not self.enabled or now.date() != self.day or \
+                not (dt.time(9, 25) <= now.time() < dt.time(16, 0)):
+            return "idle"
+        if time.monotonic() - self._last < TERMINAL_CHECK_SEC:
+            return "waiting"
+        self._last = time.monotonic()
+        try:
+            if not p["answering"]():
+                self.down, self.stuck = self.down + 1, 0
+                if self.down >= TERMINAL_DOWN_CHECKS:
+                    return p["restart"]("not answering on 127.0.0.1:25503")
+                return "down"
+            self.down = 0
+            if p["serving"]():
+                self.stuck = 0
+                return "ok"
+            if not p["internet"]():
+                self.stuck = 0          # offline: nothing a restart can fix
+                return "offline"
+            self.stuck += 1
+            if self.stuck >= UPSTREAM_STUCK_CHECKS:
+                return p["restart"]("answering, internet reachable, but history not "
+                                    "served -- wedged on a dead upstream connection")
+            return "stuck"
+        except Exception as exc:                             # noqa: BLE001
+            log(f"[watchdog] check failed and was ignored: {exc!r}")
+            return "error"
+
+    def _restart(self, why: str) -> str:
+        self.down = self.stuck = 0
+        if self.restarts >= TERMINAL_MAX_RESTARTS:
+            log(f"[watchdog] terminal {why}, but it has been restarted "
+                f"{self.restarts} times this session -- leaving it for a human")
+            return "gave_up"
+        self.restarts += 1
+        log(f"[watchdog] terminal {why} (mdds status: {_mdds_status()}); restarting it "
+            f"({self.restarts}/{TERMINAL_MAX_RESTARTS}). The arms keep running: they "
+            f"freeze while it is down and catch up from history after (catchup.py).")
+        _graceful_shutdown()
+        _evict_stale_terminal()      # only kills it if the graceful path did not
+        ok = start_terminal()
+        log(f"[watchdog] terminal {'back up' if ok else 'STILL DOWN after restart'}")
+        return "restarted" if ok else "restart_failed"
+
 
 def _arm_dirs(lab_dir) -> dict[str, Path]:
     return {"options": Path(lab_dir), "shares": Path(lab_dir) / "shares"}
@@ -621,8 +754,10 @@ def supervise(args, day: dt.date, specs=None, child_cls=None, post_open=None) ->
 
     pending = {}                    # name -> monotonic time at which to restart
     gate_pending = post_open is not None
+    watchdog = TerminalWatchdog(bool(getattr(args, "start_terminal", False)), day)
     while True:
         now = now_et()
+        watchdog.check(now)
         if gate_pending and now.date() == day and now.time() >= post_open[0]:
             gate_pending = False
             verdict = post_open[1]()

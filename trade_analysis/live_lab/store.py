@@ -258,6 +258,25 @@ class LabStore:
                 per_dir[(sid, sym, direc)] = per_dir.get((sid, sym, direc), 0) + 1
         return per, per_dir
 
+    def decision_keys(self, day) -> set[tuple[str, str, str]]:
+        """(setup_id, symbol, bar_ts) of every DECISION already durable for `day`.
+
+        A decision is taken ONCE. A restart, a catch-up, a replayed batch or a bar the feed
+        re-publishes must never produce a second DECISION for the same setup, symbol and
+        bar -- the idempotency a broker gives you with a unique client order id, and FIX
+        with PossDupFlag. The per-day caps already stop most repeats; this stops all of
+        them, including setups whose cap is above one.
+        """
+        d = day.isoformat() if hasattr(day, "isoformat") else str(day)
+        out = set()
+        for s in self.read("signals.jsonl"):
+            if s.get("phase") != "DECISION":
+                continue
+            b = str(s.get("bar_ts") or "")[:19]
+            if b[:10] == d and s.get("setup_id") and s.get("symbol"):
+                out.add((s["setup_id"], s["symbol"], b))
+        return out
+
     # ------------------------------------------------------------------ reading
 
     def read(self, name: str) -> list[dict]:
