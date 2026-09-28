@@ -42,3 +42,7 @@
 {"date": "2026-09-24", "outcome": "PARTIAL", "reason": "started 09:35 ET, after the 09:30 open", "attempts": 2, "is_session": true, "recorded_at_et": "2026-09-24T16:00:15", "utc_offset_hours": null, "supervisor_rc": 0}
 {"date": "2026-09-25", "outcome": "OPENED", "reason": "", "attempts": 1, "is_session": true, "recorded_at_et": "2026-09-25T09:06:56", "utc_offset_hours": null, "started_et": "09:06:56", "late_start": false, "arms": ["options", "shares"]}
 {"date": "2026-09-25", "outcome": "COLLECTED", "reason": "", "attempts": 2, "is_session": true, "recorded_at_et": "2026-09-25T16:19:28", "utc_offset_hours": null, "supervisor_rc": 0}
+{"date": "2026-09-26", "outcome": "NOT_A_SESSION", "reason": "market holiday or weekend", "attempts": 1, "is_session": false, "recorded_at_et": "2026-09-28T08:30:02", "utc_offset_hours": null}
+{"date": "2026-09-27", "outcome": "NOT_A_SESSION", "reason": "market holiday or weekend", "attempts": 1, "is_session": false, "recorded_at_et": "2026-09-28T08:30:02", "utc_offset_hours": null}
+{"date": "2026-09-28", "outcome": "OPENED", "reason": "", "attempts": 1, "is_session": true, "recorded_at_et": "2026-09-28T09:06:43", "utc_offset_hours": null, "started_et": "09:06:43", "late_start": false, "arms": ["options", "shares"]}
+{"date": "2026-09-28", "outcome": "PARTIAL", "reason": "host suspended during RTH (11:04-11:15); exits of positions open across it are recovered from history", "attempts": 2, "is_session": true, "recorded_at_et": "2026-09-28T16:00:13", "utc_offset_hours": null, "supervisor_rc": 0}

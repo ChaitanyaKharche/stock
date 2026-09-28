@@ -7099,3 +7099,21 @@
 {"seq":115531,"ts":"2026-09-25T16:19:16.635077","kind":"host_suspend","detail":"host suspended or clock stepped: 1289s unaccounted between 15:57:35 and 16:19:09 ET -- the lab was NOT running","gap_sec":1289.3,"from_et":"2026-09-25T15:57:35.512551","to_et":"2026-09-25T16:19:09.798526"}
 {"seq":115533,"ts":"2026-09-25T16:19:18.112776","kind":"flatten_stale_mark","detail":"GOOGL Crabel_Stretch closed on the last known NBBO from 2026-09-25 15:39:04.661000"}
 {"seq":115535,"ts":"2026-09-25T16:19:25.203265","kind":"feed","detail":"upstream recovered after 1316s and 16 failed call(s)","path":"__recovered__"}
+{"seq":115829,"ts":"2026-09-28T09:57:06.969462","kind":"stale_quote","detail":"WMT age=5.5s"}
+{"seq":117535,"ts":"2026-09-28T11:15:20.945386","kind":"host_suspend","detail":"host suspended or clock stepped: 624s unaccounted between 11:04:46 and 11:15:15 ET -- the lab was NOT running","gap_sec":623.6,"from_et":"2026-09-28T11:04:46.861976","to_et":"2026-09-28T11:15:15.500600"}
+{"seq":117535,"ts":"2026-09-28T11:15:26.651179","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":117536,"ts":"2026-09-28T11:15:26.653177","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":117537,"ts":"2026-09-28T11:15:42.057915","kind":"feed","detail":"upstream recovered after 15s and 1 failed call(s)","path":"__recovered__"}
+{"seq":119188,"ts":"2026-09-28T11:52:08.896743","kind":"stale_quote","detail":"XLV age=6.2s"}
+{"seq":119422,"ts":"2026-09-28T11:57:07.019560","kind":"stale_quote","detail":"XLF age=6.6s"}
+{"seq":119705,"ts":"2026-09-28T12:04:05.698706","kind":"degraded_bar","detail":"1m gap before 12:03","symbol":"DIA"}
+{"seq":120125,"ts":"2026-09-28T12:13:07.552533","kind":"degraded_bar","detail":"1m gap before 12:12","symbol":"DIA"}
+{"seq":125604,"ts":"2026-09-28T13:45:07.339058","kind":"stale_quote","detail":"XLF age=6.7s"}
+{"seq":125712,"ts":"2026-09-28T13:47:04.204104","kind":"stale_quote","detail":"XLV age=5.7s"}
+{"seq":125735,"ts":"2026-09-28T13:48:09.477251","kind":"degraded_bar","detail":"1m gap before 13:47","symbol":"XLI"}
+{"seq":126461,"ts":"2026-09-28T13:59:07.935989","kind":"stale_quote","detail":"WMT age=5.9s"}
+{"seq":128905,"ts":"2026-09-28T14:39:10.614158","kind":"stale_quote","detail":"XLV age=6.4s"}
+{"seq":129004,"ts":"2026-09-28T14:41:08.397403","kind":"degraded_bar","detail":"1m gap before 14:40","symbol":"DIA"}
+{"seq":129364,"ts":"2026-09-28T14:47:08.436040","kind":"degraded_bar","detail":"1m gap before 14:46","symbol":"DIA"}
+{"seq":129785,"ts":"2026-09-28T14:54:07.351470","kind":"degraded_bar","detail":"1m gap before 14:53","symbol":"DIA"}
+{"seq":131050,"ts":"2026-09-28T15:14:06.965701","kind":"stale_quote","detail":"XLF age=5.1s"}
