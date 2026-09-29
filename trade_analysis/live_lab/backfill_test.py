@@ -12,6 +12,7 @@ verified to fail with the corresponding guard removed from HistoryFeed.
 from __future__ import annotations
 
 import datetime as dt
+import json
 
 import pytest
 
@@ -95,3 +96,44 @@ def test_backfill_output_is_outside_the_live_record():
     live = B.ROOT / "live_lab_data"
     assert live not in B.OUT.parents and B.OUT != live, \
         "backfill writing into live_lab_data would be archived and counted as prospective"
+
+
+def test_a_whole_shares_session_replays_and_leaves_a_log(tmp_path, monkeypatch):
+    """The full-day harness, end to end, on canned history: warmup, 390 ticks, flatten,
+    daily summary, and the runner's own console output captured as that day's log."""
+    from trade_analysis.live_lab import shares_runner as SR
+    monkeypatch.setattr(B, "CACHE", tmp_path / "cache")
+    monkeypatch.setattr(SR, "ThetaLiveFeed", lambda *a, **k: type(
+        "F", (_Real,), {"close": lambda self: None, "calls": 0})())
+    out = tmp_path / "shares"
+    summary = B.run(DAY, DAY, symbols=("QQQ",), out=out, arm="shares")
+    assert len(summary) == 1 and summary[0]["date"] == DAY.isoformat()
+    log = (out / "logs" / f"{DAY}.log").read_text(encoding="utf-8")
+    assert "NOT the prospective record" in log and "warmup QQQ" in log
+    assert (out / "daily" / f"{DAY}.json").exists()
+    assert json.loads((out / "BACKFILL.json").read_text())["arm"] == "shares"
+
+
+def test_reconcile_bins_every_trade_once_and_the_identity_holds():
+    """live - replay splits exactly into matched differences + live_only - replay_only.
+    A trade counted twice, or dropped, breaks the identity."""
+    def t(setup, bar, exit_ts, reason, pnl):
+        return {"setup_id": setup, "symbol": "QQQ", "direction": "long",
+                "entry_bar_ts": f"2026-09-23T{bar}:00", "exit_ts": f"2026-09-23T{exit_ts}",
+                "exit_reason": reason, "pnl_net": pnl}
+    live = [t("A", "10:00", "10:30:05", "stop", -5),       # same
+            t("B", "10:05", "15:55:02", "eod", 3),         # moved (live exited late)
+            t("C", "09:31", "09:40:00", "target", 7),      # live only (stale entry)
+            t("A", "10:00", "11:00:00", "stop", -1),       # a duplicate decision live
+            t("E", "11:01", "11:30:00", "stop", 2)]        # shifted: revised bar in history
+    replay = [t("A", "10:00", "10:30:02", "stop", -4),
+              t("B", "10:05", "14:10:02", "stop", -2),
+              t("E", "11:02", "11:31:02", "stop", 4),
+              t("D", "09:35", "09:50:02", "bars", 11)]     # replay only (blind open live)
+    r = B.reconcile(live, replay, detail=True)
+    assert [r[k]["n"] for k in ("same", "moved", "shifted", "live_only", "replay_only")]         == [1, 1, 1, 2, 1]
+    assert [x["setup_id"] for x in r["_live_only"]] == ["C", "A"]
+    assert [x["setup_id"] for x in r["_replay_only"]] == ["D"]
+    lhs = sum(x["pnl_net"] for x in live) - sum(x["pnl_net"] for x in replay)
+    rhs = sum(r[k]["live"] - r[k]["replay"] for k in ("same", "moved", "shifted"))         + r["live_only"]["live"] - r["replay_only"]["replay"]
+    assert lhs == pytest.approx(rhs)

@@ -1,12 +1,25 @@
 {
   "provenance": "BACKFILL -- NOT PROSPECTIVE. Never counted by the dashboard, the checkpoint diagnostic or any promotion bar.",
-  "arm": "options",
-  "config_hash": "ccd00ac71f8243e9",
+  "arm": "shares",
+  "config_hash": "7c6414fc549315f3",
   "start": "2026-08-28",
   "end": "2026-09-29",
   "symbols": [
+    "SPY",
     "QQQ",
-    "SPY"
+    "IWM",
+    "DIA",
+    "XLK",
+    "XLY",
+    "XLI",
+    "XLV",
+    "XLP",
+    "XLE",
+    "XLF",
+    "NVDA",
+    "AAPL",
+    "GOOGL",
+    "WMT"
   ],
   "generated_by": "trade_analysis/live_lab/backfill.py",
   "differences_from_live": [

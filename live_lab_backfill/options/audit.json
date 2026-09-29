@@ -1,0 +1,980 @@
+{
+  "arm": "options",
+  "days": [
+    {
+      "day": "2026-08-28",
+      "live_n": 27,
+      "live_net": -1201.18,
+      "replay_n": 28,
+      "replay_net": -1364.26,
+      "bins": {
+        "same": {
+          "n": 18,
+          "live": -730.45,
+          "replay": -701.45
+        },
+        "moved": {
+          "n": 7,
+          "live": -390.57,
+          "replay": -441.57
+        },
+        "shifted": {
+          "n": 0,
+          "live": 0.0,
+          "replay": 0.0
+        },
+        "live_only": {
+          "n": 2,
+          "live": -80.16,
+          "replay": 0.0
+        },
+        "replay_only": {
+          "n": 3,
+          "live": 0.0,
+          "replay": -221.24
+        }
+      },
+      "causes": {
+        "replay_only / no live signal": 2,
+        "replay_only / live skipped: max_per_direction": 1,
+        "live_only / no replay signal": 2
+      },
+      "blind_minutes": 0.0
+    },
+    {
+      "day": "2026-08-31",
+      "live_n": 15,
+      "live_net": -1012.21,
+      "replay_n": 21,
+      "replay_net": -1339.7,
+      "bins": {
+        "same": {
+          "n": 9,
+          "live": -661.73,
+          "replay": -606.73
+        },
+        "moved": {
+          "n": 3,
+          "live": -160.24,
+          "replay": -121.24
+        },
+        "shifted": {
+          "n": 1,
+          "live": -120.08,
+          "replay": -142.08
+        },
+        "live_only": {
+          "n": 2,
+          "live": -70.16,
+          "replay": 0.0
+        },
+        "replay_only": {
+          "n": 8,
+          "live": 0.0,
+          "replay": -469.65
+        }
+      },
+      "causes": {
+        "matched / entered late live": 2,
+        "replay_only / late start": 1,
+        "replay_only / no live signal": 5,
+        "replay_only / live skipped: already_open": 1,
+        "replay_only / live skipped: max_per_day": 1,
+        "live_only / replay skipped: max_per_day": 1,
+        "live_only / late entry": 1
+      },
+      "blind_minutes": 12.2
+    },
+    {
+      "day": "2026-09-01",
+      "live_n": 16,
+      "live_net": -614.29,
+      "replay_n": 17,
+      "replay_net": -664.37,
+      "bins": {
+        "same": {
+          "n": 10,
+          "live": -378.81,
+          "replay": -349.81
+        },
+        "moved": {
+          "n": 2,
+          "live": 78.84,
+          "replay": 77.84
+        },
+        "shifted": {
+          "n": 0,
+          "live": 0.0,
+          "replay": 0.0
+        },
+        "live_only": {
+          "n": 4,
+          "live": -314.32,
+          "replay": 0.0
+        },
+        "replay_only": {
+          "n": 5,
+          "live": 0.0,
+          "replay": -392.4
+        }
+      },
+      "causes": {
+        "matched / entered late live": 1,
+        "replay_only / no live signal": 1,
+        "replay_only / feed down": 4,
+        "live_only / replay skipped: max_per_direction": 1,
+        "live_only / replay skipped: max_per_day": 1,
+        "live_only / late entry": 2
+      },
+      "blind_minutes": 50.2
+    },
+    {
+      "day": "2026-09-02",
+      "live_n": 19,
+      "live_net": -126.53,
+      "replay_n": 19,
+      "replay_net": 91.46,
+      "bins": {
+        "same": {
+          "n": 12,
+          "live": 26.03,
+          "replay": 2.03
+        },
+        "moved": {
+          "n": 5,
+          "live": -70.4,
+          "replay": -91.4
+        },
+        "shifted": {
+          "n": 0,
+          "live": 0.0,
+          "replay": 0.0
+        },
+        "live_only": {
+          "n": 2,
+          "live": -82.16,
+          "replay": 0.0
+        },
+        "replay_only": {
+          "n": 2,
+          "live": 0.0,
+          "replay": 180.84
+        }
+      },
+      "causes": {
+        "replay_only / live skipped: max_per_day": 1,
+        "replay_only / no live signal": 1,
+        "live_only / no replay signal": 1,
+        "live_only / replay skipped: already_open": 1
+      },
+      "blind_minutes": 9.2
+    },
+    {
+      "day": "2026-09-03",
+      "live_n": 22,
+      "live_net": 1246.23,
+      "replay_n": 20,
+      "replay_net": 1540.38,
+      "bins": {
+        "same": {
+          "n": 11,
+          "live": -113.89,
+          "replay": -25.89
+        },
+        "moved": {
+          "n": 5,
+          "live": 1276.6,
+          "replay": 1323.6
+        },
+        "shifted": {
+          "n": 1,
+          "live": 197.92,
+          "replay": 317.92
+        },
+        "live_only": {
+          "n": 5,
+          "live": -114.4,
+          "replay": 0.0
+        },
+        "replay_only": {
+          "n": 3,
+          "live": 0.0,
+          "replay": -75.24
+        }
+      },
+      "causes": {
+        "replay_only / live skipped: already_open": 3,
+        "live_only / no replay signal": 2,
+        "live_only / replay skipped: already_open": 2,
+        "live_only / replay skipped: max_per_day": 1
+      },
+      "blind_minutes": 9.2
+    },
+    {
+      "day": "2026-09-04",
+      "live_n": 20,
+      "live_net": -466.62,
+      "replay_n": 19,
+      "replay_net": -736.54,
+      "bins": {
+        "same": {
+          "n": 14,
+          "live": -297.13,
+          "replay": -334.13
+        },
+        "moved": {
+          "n": 5,
+          "live": -256.4,
+          "replay": -402.4
+        },
+        "shifted": {
+          "n": 0,
+          "live": 0.0,
+          "replay": 0.0
+        },
+        "live_only": {
+          "n": 1,
+          "live": 86.92,
+          "replay": 0.0
+        },
+        "replay_only": {
+          "n": 0,
+          "live": 0.0,
+          "replay": 0.0
+        }
+      },
+      "causes": {
+        "live_only / no replay signal": 1
+      },
+      "blind_minutes": 22.9
+    },
+    {
+      "day": "2026-09-08",
+      "live_n": 0,
+      "live_net": 0,
+      "replay_n": 20,
+      "replay_net": -373.62,
+      "bins": {
+        "same": {
+          "n": 0,
+          "live": 0.0,
+          "replay": 0.0
+        },
+        "moved": {
+          "n": 0,
+          "live": 0.0,
+          "replay": 0.0
+        },
+        "shifted": {
+          "n": 0,
+          "live": 0.0,
+          "replay": 0.0
+        },
+        "live_only": {
+          "n": 0,
+          "live": 0.0,
+          "replay": 0.0
+        },
+        "replay_only": {
+          "n": 20,
+          "live": 0.0,
+          "replay": -373.62
+        }
+      },
+      "causes": {
+        "replay_only / arm blocked": 20
+      },
+      "blind_minutes": 130.5
+    },
+    {
+      "day": "2026-09-09",
+      "live_n": 0,
+      "live_net": 0,
+      "replay_n": 18,
+      "replay_net": -727.45,
+      "bins": {
+        "same": {
+          "n": 0,
+          "live": 0.0,
+          "replay": 0.0
+        },
+        "moved": {
+          "n": 0,
+          "live": 0.0,
+          "replay": 0.0
+        },
+        "shifted": {
+          "n": 0,
+          "live": 0.0,
+          "replay": 0.0
+        },
+        "live_only": {
+          "n": 0,
+          "live": 0.0,
+          "replay": 0.0
+        },
+        "replay_only": {
+          "n": 18,
+          "live": 0.0,
+          "replay": -727.45
+        }
+      },
+      "causes": {
+        "replay_only / arm blocked": 18
+      },
+      "blind_minutes": 29.9
+    },
+    {
+      "day": "2026-09-10",
+      "live_n": 0,
+      "live_net": 0,
+      "replay_n": 16,
+      "replay_net": -1177.29,
+      "bins": {
+        "same": {
+          "n": 0,
+          "live": 0.0,
+          "replay": 0.0
+        },
+        "moved": {
+          "n": 0,
+          "live": 0.0,
+          "replay": 0.0
+        },
+        "shifted": {
+          "n": 0,
+          "live": 0.0,
+          "replay": 0.0
+        },
+        "live_only": {
+          "n": 0,
+          "live": 0.0,
+          "replay": 0.0
+        },
+        "replay_only": {
+          "n": 16,
+          "live": 0.0,
+          "replay": -1177.29
+        }
+      },
+      "causes": {
+        "replay_only / arm blocked": 16
+      },
+      "blind_minutes": 11.3
+    },
+    {
+      "day": "2026-09-11",
+      "live_n": 0,
+      "live_net": 0,
+      "replay_n": 19,
+      "replay_net": -1473.54,
+      "bins": {
+        "same": {
+          "n": 0,
+          "live": 0.0,
+          "replay": 0.0
+        },
+        "moved": {
+          "n": 0,
+          "live": 0.0,
+          "replay": 0.0
+        },
+        "shifted": {
+          "n": 0,
+          "live": 0.0,
+          "replay": 0.0
+        },
+        "live_only": {
+          "n": 0,
+          "live": 0.0,
+          "replay": 0.0
+        },
+        "replay_only": {
+          "n": 19,
+          "live": 0.0,
+          "replay": -1473.54
+        }
+      },
+      "causes": {
+        "replay_only / arm blocked": 19
+      },
+      "blind_minutes": 19.2
+    },
+    {
+      "day": "2026-09-14",
+      "live_n": 15,
+      "live_net": 856.79,
+      "replay_n": 15,
+      "replay_net": 1213.79,
+      "bins": {
+        "same": {
+          "n": 8,
+          "live": 902.35,
+          "replay": 1133.35
+        },
+        "moved": {
+          "n": 3,
+          "live": 30.76,
+          "replay": 5.76
+        },
+        "shifted": {
+          "n": 0,
+          "live": 0.0,
+          "replay": 0.0
+        },
+        "live_only": {
+          "n": 4,
+          "live": -76.32,
+          "replay": 0.0
+        },
+        "replay_only": {
+          "n": 4,
+          "live": 0.0,
+          "replay": 74.68
+        }
+      },
+      "causes": {
+        "replay_only / no live signal": 3,
+        "replay_only / live skipped: max_per_day": 1,
+        "live_only / replay skipped: max_per_day": 2,
+        "live_only / replay skipped: already_open": 1,
+        "live_only / no replay signal": 1
+      },
+      "blind_minutes": 11.2
+    },
+    {
+      "day": "2026-09-15",
+      "live_n": 20,
+      "live_net": 553.38,
+      "replay_n": 23,
+      "replay_net": 321.14,
+      "bins": {
+        "same": {
+          "n": 6,
+          "live": 81.52,
+          "replay": 91.52
+        },
+        "moved": {
+          "n": 2,
+          "live": -96.16,
+          "replay": -98.16
+        },
+        "shifted": {
+          "n": 3,
+          "live": 305.76,
+          "replay": 286.76
+        },
+        "live_only": {
+          "n": 9,
+          "live": 262.27,
+          "replay": 0.0
+        },
+        "replay_only": {
+          "n": 12,
+          "live": 0.0,
+          "replay": 41.03
+        }
+      },
+      "causes": {
+        "replay_only / live skipped: max_per_direction": 1,
+        "replay_only / live skipped: already_open": 2,
+        "replay_only / feed down": 1,
+        "replay_only / no live signal": 7,
+        "replay_only / late start": 1,
+        "live_only / no replay signal": 6,
+        "live_only / replay skipped: already_open": 1,
+        "live_only / replay skipped: max_per_day": 2
+      },
+      "blind_minutes": 16.9
+    },
+    {
+      "day": "2026-09-16",
+      "live_n": 19,
+      "live_net": 88.46,
+      "replay_n": 21,
+      "replay_net": -520.7,
+      "bins": {
+        "same": {
+          "n": 9,
+          "live": -88.73,
+          "replay": -92.73
+        },
+        "moved": {
+          "n": 5,
+          "live": 334.6,
+          "replay": 343.6
+        },
+        "shifted": {
+          "n": 2,
+          "live": -199.16,
+          "replay": -211.16
+        },
+        "live_only": {
+          "n": 3,
+          "live": 41.76,
+          "replay": 0.0
+        },
+        "replay_only": {
+          "n": 5,
+          "live": 0.0,
+          "replay": -560.4
+        }
+      },
+      "causes": {
+        "replay_only / no live signal": 4,
+        "replay_only / live skipped: max_per_day": 1,
+        "live_only / no replay signal": 3
+      },
+      "blind_minutes": 13.3
+    },
+    {
+      "day": "2026-09-17",
+      "live_n": 13,
+      "live_net": -789.05,
+      "replay_n": 12,
+      "replay_net": -1046.97,
+      "bins": {
+        "same": {
+          "n": 2,
+          "live": -30.16,
+          "replay": -9.16
+        },
+        "moved": {
+          "n": 6,
+          "live": -573.48,
+          "replay": -698.48
+        },
+        "shifted": {
+          "n": 2,
+          "live": -218.16,
+          "replay": -197.16
+        },
+        "live_only": {
+          "n": 3,
+          "live": 32.76,
+          "replay": 0.0
+        },
+        "replay_only": {
+          "n": 2,
+          "live": 0.0,
+          "replay": -142.16
+        }
+      },
+      "causes": {
+        "matched / entered late live": 1,
+        "replay_only / live skipped: max_per_day": 1,
+        "replay_only / no live signal": 1,
+        "live_only / no replay signal": 3
+      },
+      "blind_minutes": 50.6
+    },
+    {
+      "day": "2026-09-18",
+      "live_n": 14,
+      "live_net": -506.13,
+      "replay_n": 16,
+      "replay_net": -450.29,
+      "bins": {
+        "same": {
+          "n": 6,
+          "live": -226.48,
+          "replay": -194.48
+        },
+        "moved": {
+          "n": 6,
+          "live": -229.48,
+          "replay": -203.48
+        },
+        "shifted": {
+          "n": 1,
+          "live": -93.08,
+          "replay": -96.08
+        },
+        "live_only": {
+          "n": 1,
+          "live": 42.92,
+          "replay": 0.0
+        },
+        "replay_only": {
+          "n": 3,
+          "live": 0.0,
+          "replay": 43.76
+        }
+      },
+      "causes": {
+        "replay_only / no live signal": 2,
+        "replay_only / live skipped: already_open": 1,
+        "live_only / no replay signal": 1
+      },
+      "blind_minutes": 79.3
+    },
+    {
+      "day": "2026-09-21",
+      "live_n": 13,
+      "live_net": 3280.95,
+      "replay_n": 13,
+      "replay_net": 3316.95,
+      "bins": {
+        "same": {
+          "n": 10,
+          "live": 1842.19,
+          "replay": 1853.19
+        },
+        "moved": {
+          "n": 2,
+          "live": 420.84,
+          "replay": 422.84
+        },
+        "shifted": {
+          "n": 1,
+          "live": 1017.92,
+          "replay": 1040.92
+        },
+        "live_only": {
+          "n": 0,
+          "live": 0.0,
+          "replay": 0.0
+        },
+        "replay_only": {
+          "n": 0,
+          "live": 0.0,
+          "replay": 0.0
+        }
+      },
+      "causes": {},
+      "blind_minutes": 13.9
+    },
+    {
+      "day": "2026-09-22",
+      "live_n": 16,
+      "live_net": 184.71,
+      "replay_n": 19,
+      "replay_net": 641.46,
+      "bins": {
+        "same": {
+          "n": 7,
+          "live": 388.43,
+          "replay": 747.43
+        },
+        "moved": {
+          "n": 5,
+          "live": -230.4,
+          "replay": -116.4
+        },
+        "shifted": {
+          "n": 1,
+          "live": 68.92,
+          "replay": 84.92
+        },
+        "live_only": {
+          "n": 3,
+          "live": -42.24,
+          "replay": 0.0
+        },
+        "replay_only": {
+          "n": 6,
+          "live": 0.0,
+          "replay": -74.48
+        }
+      },
+      "causes": {
+        "matched / entered late live": 2,
+        "replay_only / no live signal": 6,
+        "live_only / no replay signal": 2,
+        "live_only / replay skipped: max_per_day": 1
+      },
+      "blind_minutes": 11.3
+    },
+    {
+      "day": "2026-09-23",
+      "live_n": 20,
+      "live_net": 902.38,
+      "replay_n": 23,
+      "replay_net": 1235.14,
+      "bins": {
+        "same": {
+          "n": 13,
+          "live": 103.95,
+          "replay": 214.95
+        },
+        "moved": {
+          "n": 4,
+          "live": 172.68,
+          "replay": 324.68
+        },
+        "shifted": {
+          "n": 1,
+          "live": 299.92,
+          "replay": 349.92
+        },
+        "live_only": {
+          "n": 2,
+          "live": 325.84,
+          "replay": 0.0
+        },
+        "replay_only": {
+          "n": 5,
+          "live": 0.0,
+          "replay": 345.6
+        }
+      },
+      "causes": {
+        "matched / entered late live": 1,
+        "replay_only / late start": 1,
+        "replay_only / no live signal": 3,
+        "replay_only / live skipped: already_open": 1,
+        "live_only / no replay signal": 1,
+        "live_only / replay skipped: already_open": 1
+      },
+      "blind_minutes": 11.3
+    },
+    {
+      "day": "2026-09-24",
+      "live_n": 22,
+      "live_net": 872.22,
+      "replay_n": 22,
+      "replay_net": 1107.22,
+      "bins": {
+        "same": {
+          "n": 5,
+          "live": 88.6,
+          "replay": 98.6
+        },
+        "moved": {
+          "n": 11,
+          "live": 632.11,
+          "replay": 758.11
+        },
+        "shifted": {
+          "n": 2,
+          "live": 29.84,
+          "replay": 57.84
+        },
+        "live_only": {
+          "n": 4,
+          "live": 121.68,
+          "replay": 0.0
+        },
+        "replay_only": {
+          "n": 4,
+          "live": 0.0,
+          "replay": 192.68
+        }
+      },
+      "causes": {
+        "replay_only / no live signal": 2,
+        "replay_only / live skipped: already_open": 2,
+        "live_only / replay skipped: already_open": 2,
+        "live_only / no replay signal": 1,
+        "live_only / replay skipped: max_per_day": 1
+      },
+      "blind_minutes": 42.3
+    },
+    {
+      "day": "2026-09-25",
+      "live_n": 20,
+      "live_net": -963.62,
+      "replay_n": 21,
+      "replay_net": -956.7,
+      "bins": {
+        "same": {
+          "n": 4,
+          "live": -142.32,
+          "replay": -159.32
+        },
+        "moved": {
+          "n": 6,
+          "live": -221.48,
+          "replay": -175.48
+        },
+        "shifted": {
+          "n": 4,
+          "live": -292.32,
+          "replay": -268.32
+        },
+        "live_only": {
+          "n": 6,
+          "live": -307.48,
+          "replay": 0.0
+        },
+        "replay_only": {
+          "n": 7,
+          "live": 0.0,
+          "replay": -353.57
+        }
+      },
+      "causes": {
+        "replay_only / no live signal": 6,
+        "replay_only / quote too old": 1,
+        "live_only / no replay signal": 4,
+        "live_only / replay skipped: already_open": 1,
+        "live_only / replay skipped: max_per_direction": 1
+      },
+      "blind_minutes": 23.4
+    },
+    {
+      "day": "2026-09-28",
+      "live_n": 25,
+      "live_net": 884.98,
+      "replay_n": 24,
+      "replay_net": 184.06,
+      "bins": {
+        "same": {
+          "n": 13,
+          "live": -65.05,
+          "replay": 29.95
+        },
+        "moved": {
+          "n": 7,
+          "live": 69.43,
+          "replay": 64.43
+        },
+        "shifted": {
+          "n": 0,
+          "live": 0.0,
+          "replay": 0.0
+        },
+        "live_only": {
+          "n": 5,
+          "live": 880.6,
+          "replay": 0.0
+        },
+        "replay_only": {
+          "n": 4,
+          "live": 0.0,
+          "replay": 89.68
+        }
+      },
+      "causes": {
+        "replay_only / live skipped: max_per_day": 2,
+        "replay_only / no live signal": 2,
+        "live_only / no replay signal": 5
+      },
+      "blind_minutes": 11.1
+    },
+    {
+      "day": "2026-09-29",
+      "live_n": 19,
+      "live_net": -508.54,
+      "replay_n": 21,
+      "replay_net": -591.7,
+      "bins": {
+        "same": {
+          "n": 12,
+          "live": -387.97,
+          "replay": -432.97
+        },
+        "moved": {
+          "n": 1,
+          "live": 77.92,
+          "replay": 63.92
+        },
+        "shifted": {
+          "n": 3,
+          "live": -118.24,
+          "replay": -116.24
+        },
+        "live_only": {
+          "n": 3,
+          "live": -80.24,
+          "replay": 0.0
+        },
+        "replay_only": {
+          "n": 5,
+          "live": 0.0,
+          "replay": -106.4
+        }
+      },
+      "causes": {
+        "replay_only / no live signal": 5,
+        "live_only / no replay signal": 3
+      },
+      "blind_minutes": 7.8
+    }
+  ],
+  "causes": {
+    "replay_only / arm blocked": {
+      "n": 73,
+      "net": -3751.9
+    },
+    "replay_only / no live signal": {
+      "n": 50,
+      "net": -1319.04
+    },
+    "live_only / no replay signal": {
+      "n": 36,
+      "net": 1308.09
+    },
+    "replay_only / live skipped: already_open": {
+      "n": 10,
+      "net": -81.81
+    },
+    "live_only / replay skipped: max_per_day": {
+      "n": 9,
+      "net": -239.73
+    },
+    "live_only / replay skipped: already_open": {
+      "n": 9,
+      "net": -79.73
+    },
+    "matched / entered late live": {
+      "n": 7,
+      "net": -127.0
+    },
+    "replay_only / live skipped: max_per_day": {
+      "n": 7,
+      "net": 143.43
+    },
+    "replay_only / feed down": {
+      "n": 5,
+      "net": -376.4
+    },
+    "replay_only / late start": {
+      "n": 3,
+      "net": 395.76
+    },
+    "live_only / late entry": {
+      "n": 3,
+      "net": -278.24
+    },
+    "replay_only / live skipped: max_per_direction": {
+      "n": 2,
+      "net": -36.16
+    },
+    "live_only / replay skipped: max_per_direction": {
+      "n": 2,
+      "net": -83.16
+    },
+    "replay_only / quote too old": {
+      "n": 1,
+      "net": -153.08
+    }
+  },
+  "totals": {
+    "same": {
+      "n": 169,
+      "live": 310.35,
+      "replay": 1264.35
+    },
+    "moved": {
+      "n": 85,
+      "live": 865.17,
+      "replay": 1036.17
+    },
+    "shifted": {
+      "n": 22,
+      "live": 879.24,
+      "replay": 1107.24
+    },
+    "live_only": {
+      "n": 59,
+      "live": 627.27,
+      "replay": 0.0
+    },
+    "replay_only": {
+      "n": 151,
+      "live": 0.0,
+      "replay": -5179.17
+    }
+  }
+}

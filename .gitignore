@@ -141,3 +141,9 @@ vrp_frame.tar.gz
 # Unrelated project that happens to live in this tree (218 MB, its own README/src/
 # requirements.txt). Not part of trade_analysis and must never enter this history.
 /pokemon/
+
+# Backfill replays: the shares decision log is ~80 MB raw; its gzip is committed instead
+live_lab_backfill/shares/signals.jsonl
+# ...but the replay's per-session runner logs ARE the record (research/replay_22_sessions.md)
+!live_lab_backfill/*/logs/
+!live_lab_backfill/*/logs/*.log
