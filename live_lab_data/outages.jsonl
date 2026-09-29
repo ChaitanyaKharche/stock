@@ -1099,3 +1099,17 @@
 {"seq":6646,"ts":"2026-09-28T11:15:28.115896","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
 {"seq":6647,"ts":"2026-09-28T11:15:43.710539","kind":"feed","detail":"upstream recovered after 652s and 2 failed call(s)","path":"__recovered__"}
 {"seq":6749,"ts":"2026-09-28T14:07:48.528957","kind":"stale_quote","detail":"QQQ age=9.8s"}
+{"seq":6869,"ts":"2026-09-29T10:09:38.579198","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/snapshot/quote"}
+{"seq":6870,"ts":"2026-09-29T10:09:38.585776","kind":"tick","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":6871,"ts":"2026-09-29T10:09:43.685551","kind":"feed","detail":"upstream recovered after 5s and 1 failed call(s)","path":"__recovered__"}
+{"seq":6983,"ts":"2026-09-29T11:52:21.103597","kind":"feed","detail":"HTTPError('HTTP 503: io exception')","path":"/stock/snapshot/quote"}
+{"seq":6984,"ts":"2026-09-29T11:52:21.284682","kind":"tick","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: io exception')\")"}
+{"seq":6983,"ts":"2026-09-29T11:52:22.718568","kind":"host_suspend","detail":"host suspended or clock stepped: 245s unaccounted between 11:48:10 and 11:52:19 ET -- the lab was NOT running","gap_sec":244.5,"from_et":"2026-09-29T11:48:10.051548","to_et":"2026-09-29T11:52:19.589959"}
+{"seq":6985,"ts":"2026-09-29T11:52:27.346829","kind":"feed","detail":"upstream recovered after 6s and 1 failed call(s)","path":"__recovered__"}
+{"seq":7055,"ts":"2026-09-29T15:21:39.269852","kind":"feed","detail":"ConnectError('[WinError 10061] No connection could be made because the target machine actively refused it')","path":"/stock/snapshot/quote"}
+{"seq":7056,"ts":"2026-09-29T15:21:39.274098","kind":"tick","detail":"TerminalUnreachable(\"/stock/snapshot/quote failed after 4 attempts: ConnectError('[WinError 10061] No connection could be made because the target machine actively refused it')\")"}
+{"seq":7057,"ts":"2026-09-29T15:21:59.511438","kind":"tick","detail":"TerminalUnreachable(\"/stock/snapshot/quote failed after 4 attempts: ConnectError('[WinError 10061] No connection could be made because the target machine actively refused it')\")"}
+{"seq":7058,"ts":"2026-09-29T15:22:19.744757","kind":"tick","detail":"TerminalUnreachable(\"/stock/snapshot/quote failed after 4 attempts: ConnectError('[WinError 10061] No connection could be made because the target machine actively refused it')\")"}
+{"seq":7059,"ts":"2026-09-29T15:22:39.986168","kind":"tick","detail":"TerminalUnreachable(\"/stock/snapshot/quote failed after 4 attempts: ConnectError('[WinError 10061] No connection could be made because the target machine actively refused it')\")"}
+{"seq":7060,"ts":"2026-09-29T15:23:00.251795","kind":"tick","detail":"TerminalUnreachable(\"/stock/snapshot/quote failed after 4 attempts: ConnectError('[WinError 10061] No connection could be made because the target machine actively refused it')\")"}
+{"seq":7061,"ts":"2026-09-29T15:23:10.809406","kind":"feed","detail":"upstream recovered after 92s and 5 failed call(s)","path":"__recovered__"}
