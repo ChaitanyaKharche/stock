@@ -1113,3 +1113,9 @@
 {"seq":7059,"ts":"2026-09-29T15:22:39.986168","kind":"tick","detail":"TerminalUnreachable(\"/stock/snapshot/quote failed after 4 attempts: ConnectError('[WinError 10061] No connection could be made because the target machine actively refused it')\")"}
 {"seq":7060,"ts":"2026-09-29T15:23:00.251795","kind":"tick","detail":"TerminalUnreachable(\"/stock/snapshot/quote failed after 4 attempts: ConnectError('[WinError 10061] No connection could be made because the target machine actively refused it')\")"}
 {"seq":7061,"ts":"2026-09-29T15:23:10.809406","kind":"feed","detail":"upstream recovered after 92s and 5 failed call(s)","path":"__recovered__"}
+{"seq":7462,"ts":"2026-09-30T13:38:04.946096","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/option/snapshot/quote"}
+{"seq":7463,"ts":"2026-09-30T13:38:19.049254","kind":"feed","detail":"upstream recovered after 14s and 2 failed call(s)","path":"__recovered__"}
+{"seq":7491,"ts":"2026-09-30T14:54:21.502453","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/snapshot/quote"}
+{"seq":7492,"ts":"2026-09-30T14:54:21.504462","kind":"tick","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":7493,"ts":"2026-09-30T14:54:26.860108","kind":"feed","detail":"upstream recovered after 5s and 1 failed call(s)","path":"__recovered__"}
+{"seq":7495,"ts":"2026-09-30T15:28:37.513534","kind":"stale_quote","detail":"QQQ age=7.3s"}
