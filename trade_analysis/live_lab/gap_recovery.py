@@ -187,7 +187,7 @@ def replay_shares(day: dt.date, trades: list[dict], arm_dir: Path,
     clock.now = dt.datetime.combine(day, BF.WARMUP_AT)
     if not lab.warmup(day):
         raise RuntimeError("warmup failed on history")
-    sigs = _jsonl(arm_dir / "signals.jsonl")
+    sigs = S.read_signals(arm_dir, day)        # archived or active, that session only
     decisions = {d["signal_id"]: d for d in sigs if d.get("phase") == "DECISION"}
     # From 2026-09-25 the FILL row carries the exit parameters the runner actually held,
     # which makes a rebuild EXACT. Older rows do not, and must be recomputed -- see below.

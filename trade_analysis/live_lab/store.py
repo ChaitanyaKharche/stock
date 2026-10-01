@@ -7,7 +7,9 @@ before any number that could have influenced it exists in the process.
 Files (under LAB_DIR, one tree per environment):
     config/<hash>.json     frozen setup definitions, git sha, spec version
     events.jsonl           append-only, monotonic seq, every observation
-    signals.jsonl          every signal INCLUDING rejected ones, with skip_reason
+    signals.jsonl          every signal INCLUDING rejected ones, with skip_reason --
+                           TODAY's rows only; earlier sessions are rolled, byte for byte,
+                           into signals_archive/<date>.jsonl.gz (roll_signals)
     positions_open.json    atomic-replace snapshot, for crash recovery
     trades.jsonl           completed trades, one line per (signal x strike arm)
     outages.jsonl          disconnects, stale quotes, degraded bars
@@ -16,6 +18,7 @@ Files (under LAB_DIR, one tree per environment):
 from __future__ import annotations
 
 import datetime as dt
+import gzip
 import json
 import os
 import tempfile
@@ -31,6 +34,70 @@ def _now() -> dt.datetime:
 
 
 DEFAULT_LAB_DIR = Path(__file__).resolve().parents[2] / "live_lab_data"
+SIGNALS = "signals.jsonl"
+SIGNALS_ARCHIVE = "signals_archive"
+
+
+# ---------------------------------------------------------------------- signals archive
+#
+# signals.jsonl is the biggest file in the lab: the shares arm writes a SKIP row every
+# time a capped setup fires again (shares_lab_preregistration.md item 6 -- "every capped
+# signal is written as a SKIP so the denominator stays honest"), 3-4.5 MB a session. One
+# ever-growing file would pass the 100 MB per-file limit of the git host the lab pushes
+# to every night. So the rows are kept -- every one, unchanged -- but each finished
+# session's rows move into their own gzipped file, and the active file holds only today.
+
+def _row_day(line: str) -> str | None:
+    try:
+        r = json.loads(line)
+    except json.JSONDecodeError:
+        return None
+    return str(r.get("ts") or r.get("bar_ts") or "")[:10] or None
+
+
+def _parse_lines(lines) -> list[dict]:
+    out = []
+    for line in lines:
+        if not line.strip():
+            continue
+        try:
+            out.append(json.loads(line))
+        except json.JSONDecodeError:
+            continue          # tolerate a torn final line from an unclean shutdown
+    return out
+
+
+def _archive_lines(path: Path) -> list[str]:
+    with gzip.open(path, "rt", encoding="utf-8") as fh:      # reads every gzip member
+        return [l for l in fh.read().splitlines() if l.strip()]
+
+
+def read_signals(root: Path | str, day=None) -> list[dict]:
+    """Every signal row under `root`, archived sessions first, in session order.
+
+    With `day`, only that session's rows: its archive, if it has been rolled, plus the
+    active file's rows for that day. Every reader of signals goes through here.
+    """
+    root = Path(root)
+    d = (day.isoformat() if hasattr(day, "isoformat") else str(day)) if day else None
+    arch = root / SIGNALS_ARCHIVE
+    if not arch.exists():
+        files = []
+    elif d:
+        files = [arch / f"{d}.jsonl.gz"]
+    else:
+        files = sorted(arch.glob("*.jsonl.gz"))
+    out = []
+    for f in files:
+        if f.exists():
+            out += _parse_lines(_archive_lines(f))
+    active = root / SIGNALS
+    if active.exists():
+        with open(active, "r", encoding="utf-8") as fh:
+            rows = _parse_lines(fh)
+        out += [r for r in rows
+                if not d or str(r.get("ts") or r.get("bar_ts") or "")[:10] == d]
+    return out
 
 
 def _json_default(o):
@@ -67,14 +134,21 @@ class LabStore:
             return self._seq
 
     def _recover_seq(self) -> int:
-        """Resume the monotonic counter after a restart."""
+        """Resume the monotonic counter after a restart.
+
+        A rolled signals file leaves the active one holding only today, so the newest
+        archive is scanned too: without it a restart early in a session could reuse
+        sequence numbers already spent the session before.
+        """
         hi = 0
-        for name in ("events.jsonl", "signals.jsonl", "trades.jsonl"):
-            p = self.root / name
+        paths = [self.root / n for n in ("events.jsonl", SIGNALS, "trades.jsonl")]
+        arch = sorted((self.root / SIGNALS_ARCHIVE).glob("*.jsonl.gz"))
+        for p in paths + arch[-1:]:
             if not p.exists():
                 continue
             try:
-                with open(p, "r", encoding="utf-8") as fh:
+                opener = gzip.open if p.suffix == ".gz" else open
+                with opener(p, "rt", encoding="utf-8") as fh:
                     for line in fh:
                         if not line.strip():
                             continue
@@ -87,6 +161,63 @@ class LabStore:
             except OSError:
                 continue
         return hi
+
+    # ------------------------------------------------------------------ signals archive
+
+    def roll_signals(self, today) -> dict:
+        """Move every signals.jsonl row from a session before `today` into
+        signals_archive/<that date>.jsonl.gz, byte for byte; keep the rest active.
+
+        Called by each runner at start, under its single-instance lock, before it writes
+        anything. Crash-safe in either order: an archive is written and fsynced before the
+        active file is replaced, and a row already in its archive is never added twice, so
+        a crash between the two steps leaves at worst a duplicate that the next roll drops.
+        """
+        today = today.isoformat() if hasattr(today, "isoformat") else str(today)
+        active = self.root / SIGNALS
+        if not active.exists():
+            return {}
+        with self._lock:
+            with open(active, "r", encoding="utf-8") as fh:
+                lines = [l.rstrip("\n") for l in fh if l.strip()]
+            old, keep, last = {}, [], None
+            for line in lines:
+                d = _row_day(line) or last          # a torn line goes with its session
+                last = d
+                if d is not None and d < today:
+                    old.setdefault(d, []).append(line)
+                else:
+                    keep.append(line)
+            if not old:
+                return {}
+            arch = self.root / SIGNALS_ARCHIVE
+            arch.mkdir(exist_ok=True)
+            moved = {}
+            for d, rows in sorted(old.items()):
+                path = arch / f"{d}.jsonl.gz"
+                have = set(_archive_lines(path)) if path.exists() else set()
+                new = [r for r in rows if r not in have]
+                if new:
+                    with open(path, "ab") as raw:
+                        with gzip.GzipFile(fileobj=raw, mode="wb", mtime=0) as gz:
+                            gz.write(("\n".join(new) + "\n").encode("utf-8"))
+                        raw.flush()
+                        os.fsync(raw.fileno())
+                moved[d] = len(rows)
+            fd, tmp = tempfile.mkstemp(dir=str(self.root), suffix=".tmp")
+            try:
+                with os.fdopen(fd, "w", encoding="utf-8") as fh:
+                    fh.write("".join(l + "\n" for l in keep))
+                    fh.flush()
+                    os.fsync(fh.fileno())
+                os.replace(tmp, active)
+            except BaseException:
+                if os.path.exists(tmp):
+                    os.unlink(tmp)
+                raise
+        self.event("signals_rolled", sessions=len(moved), rows=sum(moved.values()),
+                   kept=len(keep))
+        return moved
 
     # ------------------------------------------------------------------ config
 
@@ -244,7 +375,7 @@ class LabStore:
         """
         d = day.isoformat() if hasattr(day, "isoformat") else str(day)
         per, per_dir = {}, {}
-        for s in self.read("signals.jsonl"):
+        for s in read_signals(self.root, d):
             if s.get("phase") != "DECISION":
                 continue
             stamp = str(s.get("bar_ts") or s.get("ts") or "")[:10]
@@ -269,7 +400,7 @@ class LabStore:
         """
         d = day.isoformat() if hasattr(day, "isoformat") else str(day)
         out = set()
-        for s in self.read("signals.jsonl"):
+        for s in read_signals(self.root, d):
             if s.get("phase") != "DECISION":
                 continue
             b = str(s.get("bar_ts") or "")[:19]
@@ -280,19 +411,13 @@ class LabStore:
     # ------------------------------------------------------------------ reading
 
     def read(self, name: str) -> list[dict]:
+        if name == SIGNALS:
+            return read_signals(self.root)        # archived sessions + today
         path = self.root / name
         if not path.exists():
             return []
-        out = []
         with open(path, "r", encoding="utf-8") as fh:
-            for line in fh:
-                if not line.strip():
-                    continue
-                try:
-                    out.append(json.loads(line))
-                except json.JSONDecodeError:
-                    continue      # tolerate a torn final line from an unclean shutdown
-        return out
+            return _parse_lines(fh)
 
     def write_daily(self, day: dt.date, summary: dict[str, Any]) -> None:
         (self.root / "daily" / f"{day.isoformat()}.json").write_text(

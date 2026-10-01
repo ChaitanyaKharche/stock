@@ -26,7 +26,7 @@
   - `live_lab_backfill/<arm>/logs/<day>.log`: the runner's own console output
   - `daily/<day>.json`
   - `trades.jsonl`
-  - `signals.jsonl` (for shares, `signals.jsonl.gz`, 9 MB)
+  - `signals_archive/<day>.jsonl.gz`: every decision and skip, one file per session
 - Comparison files:
   - `report.json`: live vs replay by day
   - `audit.json` (`replay_audit.py`): why each trade differs
@@ -185,9 +185,31 @@ day and month totals can be compared to live; a single trade's P&L cannot.
 | 09-18 | options | 9 | −$506 → −$503 (ATM) |
 | 09-11 | shares | **refused** | the replay reproduced only 80% of checkable exit rules, gate is 90% |
 
-## 6. Still open
+## 6. Fixed 2026-09-30: the signals file outgrowing GitHub
 
-- The live `shares/signals.jsonl` is already 34 MB and has grown 3–4.5 MB per session since
-  the six lines were added on 09-25, mostly `max_per_day` SKIP rows.
-  - It passes GitHub's 50 MB warning in about a week.
-  - It passes the 100 MB hard limit, where the nightly push fails, in about four weeks.
+- **The problem.** The live `shares/signals.jsonl` had reached 37.7 MB and grew 3–4.5 MB
+  a session, almost all of it `max_per_day` SKIP rows. It would have passed GitHub's
+  100 MB per-file limit, and broken the nightly push, in about four weeks.
+- **Nothing was dropped.** The shares pre-registration (item 6) requires every capped
+  signal to be written as a SKIP, so the fix changes only where the rows are stored, not
+  what is recorded.
+- **How it works.** Each runner, at start-up and under its lock, moves every row from
+  earlier sessions into `signals_archive/<date>.jsonl.gz` (`store.roll_signals`). The
+  active file then holds only today. Every reader goes through `store.read_signals`:
+  the store, the daily summary, the checkpoint funnel, gap recovery, the dashboard and
+  the replay audit.
+- **Done once on the real files tonight, with a before/after fingerprint of every row.**
+
+  | | rows (identical) | before | after |
+  |---|---|---|---|
+  | live options | 5,256 | 1.5 MB | 0.3 MB in 19 files |
+  | live shares | 153,447 | 37.7 MB | 5.2 MB in 21 files |
+  | replay shares | 317,763 | 83.7 MB | 9.3 MB in 22 files |
+
+  `report.json` and `audit.json` came out byte-identical when rebuilt from the archive.
+- **Tests:** `signals_archive_test.py`, each verified to fail on the broken version.
+  - nothing lost, reordered or altered
+  - no duplicates after a double roll or a crash mid-roll
+  - the sequence counter still resumes above archived rows
+  - a torn last line stays with its session
+  - both runners roll before writing anything

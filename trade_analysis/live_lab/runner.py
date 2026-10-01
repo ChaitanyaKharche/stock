@@ -36,7 +36,7 @@ from .catchup import CatchUp, checkpoint_time
 from .levels_live import LevelsLoader
 from .session import SessionState, build_warmup
 from .setups import ALL_SETUPS, DEAD_SETUPS, SLOW_SETUPS
-from .store import DEFAULT_LAB_DIR, LabStore
+from .store import DEFAULT_LAB_DIR, LabStore, read_signals
 
 SPEC_VERSION = "live_lab_specification.md @ 2026-08-27"
 RTH_OPEN, RTH_CLOSE = dt.time(9, 30), dt.time(16, 0)
@@ -255,6 +255,9 @@ class LiveLab:
 
     def run(self, day: dt.date | None = None) -> None:
         day = day or today_et()
+        # Earlier sessions' signal rows move to signals_archive/ before anything is
+        # written today -- under this process's single-instance lock (store.roll_signals).
+        self.store.roll_signals(day)
         self.store.event("start", config_hash=self.config_hash, symbols=self.symbols,
                          spec=SPEC_VERSION)
         print(f"[lab] config {self.config_hash} | {len(ALL_SETUPS)} setups | "
@@ -594,7 +597,7 @@ class LiveLab:
     def write_daily(self, day: dt.date) -> None:
         trades = [t for t in self.store.read("trades.jsonl")
                   if str(t.get("entry_ts", "")).startswith(day.isoformat())]
-        sigs = [s for s in self.store.read("signals.jsonl")
+        sigs = [s for s in read_signals(self.store.root, day)
                 if str(s.get("ts", "")).startswith(day.isoformat())]
         summary = {
             "date": day.isoformat(),

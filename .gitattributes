@@ -13,3 +13,4 @@
 *.npz     binary
 *.pkl     binary
 *.parquet binary
+*.gz      binary

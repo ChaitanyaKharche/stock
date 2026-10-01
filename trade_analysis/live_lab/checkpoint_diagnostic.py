@@ -53,6 +53,8 @@ import json
 import sys
 from pathlib import Path
 
+from .store import read_signals
+
 LAB = Path(__file__).resolve().parents[2] / "live_lab_data"
 
 # NYSE closures inside the forward test's span. Without these a closed market reads as
@@ -266,8 +268,9 @@ def funnel(name: str, recs: list[dict], sig_path: Path) -> None:
     tot = dec + skip
     print(f"  {name}: {dec:,} decided / {tot:,} evaluated "
           f"({100*dec/tot if tot else 0:.1f}% conversion)")
-    reasons = collections.Counter(
-        r.get("skip_reason") for r in jsonl(sig_path) if r.get("phase") == "SKIP")
+    reasons = collections.Counter(          # archived sessions + today (store.read_signals)
+        r.get("skip_reason") for r in read_signals(sig_path.parent)
+        if r.get("phase") == "SKIP")
     if reasons:
         print("    why signals were skipped:")
         for k, v in reasons.most_common(8):

@@ -40,7 +40,6 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
-import gzip
 import json
 import re
 from collections import Counter, defaultdict
@@ -48,6 +47,7 @@ from pathlib import Path
 
 from . import backfill as B
 from .feed import _parse_ts
+from .store import read_signals
 
 LAB = B.ROOT / "live_lab_data"
 LATE_OPEN_BLIND_MIN = 6      # a runner started at T processed its first bar at ~T+6 min
@@ -57,10 +57,6 @@ RTH_OPEN = dt.time(9, 30)
 
 
 def _rows(p: Path) -> list[dict]:
-    gz = p.with_name(p.name + ".gz")
-    if not p.exists() and gz.exists():          # a large replay file is committed gzipped
-        with gzip.open(gz, "rt", encoding="utf-8") as fh:
-            return [json.loads(l) for l in fh if l.strip()]
     if not p.exists():
         return []
     return [json.loads(l) for l in p.read_text(encoding="utf-8").splitlines() if l.strip()]
@@ -144,10 +140,10 @@ def guard_hits(lab: Path, day: str) -> dict[str, list[tuple[str, dt.datetime]]]:
     return out
 
 
-def skips(path: Path, day: str) -> dict[tuple, str]:
+def skips(root: Path, day: str) -> dict[tuple, str]:
     """(setup, symbol, bar_ts) -> skip_reason, for SKIP rows on `day`."""
     out = {}
-    for r in _rows(path):
+    for r in read_signals(root, day):
         if r.get("phase") == "SKIP" and (r.get("bar_ts") or "")[:10] == day:
             out.setdefault((r["setup_id"], r["symbol"], r["bar_ts"]), r.get("skip_reason"))
     return out
@@ -211,8 +207,7 @@ def audit(arm: str) -> dict:
         rec = B.reconcile(lv, sc, detail=True)
         ctx = {"live_trades_that_day": len(lv), "spans": blind_spans(lab, d),
                "stale": stale_refused(lab, d), "guards": guard_hits(lab, d),
-               "live_skips": skips(lab / "signals.jsonl", d),
-               "replay_skips": skips(out / "signals.jsonl", d),
+               "live_skips": skips(lab, d), "replay_skips": skips(out, d),
                "live_keys": Counter(B._signal_key(r) for r in lv)}
         day_causes = Counter()
         for lvt, rpt in rec.pop("_pairs"):

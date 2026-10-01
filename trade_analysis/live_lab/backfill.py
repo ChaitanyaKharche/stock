@@ -18,7 +18,7 @@ What it is for:
     the new config have done on the sessions the lab already ran", so the prospective
     record can be read against it without either one overwriting the other.
   * a complete session log for every day, as a runner with a perfect connection would have
-    written it: `<out>/logs/<day>.log`, `daily/`, `signals.jsonl`, `trades.jsonl`. The live
+    written it: `<out>/logs/<day>.log`, `daily/`, `signals_archive/`, `trades.jsonl`. The live
     record lost minutes to late starts, sleeps and feed outages
     (research/replay_22_sessions.md); this is the same day with none of them.
 
@@ -56,7 +56,6 @@ import argparse
 import bisect
 import contextlib
 import datetime as dt
-import gzip
 import json
 import pickle
 import shutil
@@ -79,7 +78,6 @@ TICK_OFFSET = dt.timedelta(seconds=2)
 WARMUP_AT = dt.time(9, 7)
 MIN_RTH_BARS = 300
 SIX_LIVE_FROM = "2026-09-25"     # the amendment that put the six lines into the live config
-SIGNALS_GZIP_OVER = 40_000_000   # bytes
 
 
 class SimClock:
@@ -338,6 +336,7 @@ def run(start: dt.date, end: dt.date, symbols=None, out=None, arm: str = "option
     for f in ("signals.jsonl", "signals.jsonl.gz", "trades.jsonl", "events.jsonl",
               "outages.jsonl"):
         (out / f).unlink(missing_ok=True)      # a backfill is regenerated whole, never appended
+    shutil.rmtree(out / S.SIGNALS_ARCHIVE, ignore_errors=True)
     clock.now = dt.datetime.combine(start, WARMUP_AT)
     lab = make()
     real = lab.feed
@@ -380,12 +379,8 @@ def run(start: dt.date, end: dt.date, symbols=None, out=None, arm: str = "option
             print(f"  {arm} {day}: {d.get('trades_closed')} trades, net {net}", flush=True)
     finally:
         real.close()
-    sig = out / "signals.jsonl"
-    if sig.exists() and sig.stat().st_size > SIGNALS_GZIP_OVER:
-        # The shares arm writes ~300k max_per_day SKIP rows a month (~80 MB), past what git
-        # hosting accepts. The committed copy is the gzip; the raw file is .gitignored.
-        with open(sig, "rb") as src, gzip.open(out / "signals.jsonl.gz", "wb") as dst:
-            shutil.copyfileobj(src, dst)
+    # Same layout as the live lab: one gzipped signals file per session (store.roll_signals).
+    lab.store.roll_signals(end + dt.timedelta(days=1))
     (out / "BACKFILL.json").write_text(json.dumps({
         "provenance": "BACKFILL -- NOT PROSPECTIVE. Never counted by the dashboard, the "
                       "checkpoint diagnostic or any promotion bar.",

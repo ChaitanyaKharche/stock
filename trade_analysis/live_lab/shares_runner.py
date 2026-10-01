@@ -285,6 +285,9 @@ class SharesLab:
 
     def run(self, day=None) -> None:
         day = day or today_et()
+        # Earlier sessions' signal rows move to signals_archive/ before anything is
+        # written today -- under this process's single-instance lock.
+        self.store.roll_signals(day)
         self.store.event("start", config_hash=self.config_hash, symbols=self.symbols,
                          spec=SPEC_VERSION, notional=NOTIONAL)
         print(f"[shares] config {self.config_hash} | {len(ALL_SETUPS)} setups | "

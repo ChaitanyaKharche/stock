@@ -43,7 +43,7 @@ def lab(tmp_path, monkeypatch):
 def _ctx(lab, n_live=5):
     return {"live_trades_that_day": n_live, "spans": A.blind_spans(lab, DAY),
             "stale": A.stale_refused(lab, DAY), "guards": A.guard_hits(lab, DAY),
-            "live_skips": A.skips(lab / "signals.jsonl", DAY), "replay_skips": {},
+            "live_skips": A.skips(lab, DAY), "replay_skips": {},
             "live_keys": {}}
 
 
