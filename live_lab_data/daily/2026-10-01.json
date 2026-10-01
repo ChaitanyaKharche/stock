@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-01",
+  "config_hash": "ccd00ac71f8243e9",
+  "symbols": [
+    "QQQ",
+    "SPY"
+  ],
+  "signals_decided": 29,
+  "signals_skipped": 322,
+  "fills_skipped": 0,
+  "trades_closed": 87,
+  "degraded_bars": {},
+  "atm_net": -581.34,
+  "feed": {
+    "calls": 15561,
+    "retries": 44,
+    "bar_cache_hits": 7781,
+    "bar_cache_misses": 401,
+    "outage_episodes": 3,
+    "upstream_down_now": false
+  }
+}
