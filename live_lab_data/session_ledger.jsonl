@@ -52,3 +52,9 @@
 {"date": "2026-09-30", "outcome": "COLLECTED", "reason": "", "attempts": 2, "is_session": true, "recorded_at_et": "2026-09-30T16:00:08", "utc_offset_hours": null, "supervisor_rc": 0}
 {"date": "2026-10-01", "outcome": "OPENED", "reason": "", "attempts": 1, "is_session": true, "recorded_at_et": "2026-10-01T09:06:54", "utc_offset_hours": null, "started_et": "09:06:54", "late_start": false, "arms": ["options", "shares"]}
 {"date": "2026-10-01", "outcome": "COLLECTED", "reason": "", "attempts": 2, "is_session": true, "recorded_at_et": "2026-10-01T16:00:05", "utc_offset_hours": null, "supervisor_rc": 0}
+{"date": "2026-10-02", "outcome": "OPENED", "reason": "", "attempts": 1, "is_session": true, "recorded_at_et": "2026-10-02T09:06:53", "utc_offset_hours": null, "started_et": "09:06:53", "late_start": false, "arms": ["options", "shares"]}
+{"date": "2026-10-02", "outcome": "ABORTED", "reason": "feed is DELAYED; prices would be stale", "attempts": 2, "is_session": true, "recorded_at_et": "2026-10-02T13:32:19", "utc_offset_hours": null}
+{"date": "2026-10-02", "outcome": "ABORTED", "reason": "feed is DELAYED; prices would be stale", "attempts": 3, "is_session": true, "recorded_at_et": "2026-10-02T14:01:45", "utc_offset_hours": null}
+{"date": "2026-10-02", "outcome": "ABORTED", "reason": "feed is DELAYED; prices would be stale", "attempts": 4, "is_session": true, "recorded_at_et": "2026-10-02T14:31:55", "utc_offset_hours": null}
+{"date": "2026-10-02", "outcome": "OPENED", "reason": "started 15:07 ET, after the 09:30 open", "attempts": 5, "is_session": true, "recorded_at_et": "2026-10-02T15:07:31", "utc_offset_hours": null, "started_et": "15:07:31", "late_start": true, "arms": ["options", "shares"]}
+{"date": "2026-10-02", "outcome": "PARTIAL", "reason": "started 15:07 ET, after the 09:30 open", "attempts": 6, "is_session": true, "recorded_at_et": "2026-10-02T16:00:12", "utc_offset_hours": null, "supervisor_rc": 0}
