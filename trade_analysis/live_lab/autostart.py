@@ -431,6 +431,34 @@ def _options_blocked(out: str) -> list[str]:
     return [l for l in out.splitlines() if FAIL_MARK in l and OPTIONS_TAG in l]
 
 
+def _drop_foreign_options(out: str, option_symbols) -> tuple[str, list[str]]:
+    """Remove OPTIONS-tagged lines about symbols the options arm does not trade.
+
+    Preflight checks option chains for the union of both arms' symbols, but the options
+    arm only trades `option_symbols` (QQQ, SPY). On Fridays the sector ETFs list a weekly
+    that expires the same day, and their thin chains carry quotes minutes old because
+    nobody re-quotes them -- not because the feed is delayed. On 2026-10-02 three
+    mid-session restarts (13:30, 14:00, 14:30) were each ABORTED on "XLY options DELAYED
+    by ~21 min" while every underlying and both traded chains were REAL-TIME, losing the
+    last 2.5 hours of the shares arm to a chain neither arm trades.
+
+    Returns (report without those lines, the lines removed). Nothing else is touched: a
+    DELAYED on QQQ/SPY options, or on any underlying, still decides the session exactly
+    as before.
+    """
+    syms = {s.upper() for s in option_symbols}
+    keep, dropped = [], []
+    for l in out.splitlines():
+        if OPTIONS_TAG in l:
+            rest = l.split(OPTIONS_TAG, 1)[1].strip()
+            sym = rest.split()[0].rstrip(":").upper() if rest else ""
+            if sym and sym not in syms:
+                dropped.append(l)
+                continue
+        keep.append(l)
+    return "\n".join(keep), dropped
+
+
 RECOVERY_LOOKBACK_DAYS = 7
 RECOVERY_TIMEOUT_SEC = 2400
 
@@ -950,6 +978,12 @@ def main(argv=None) -> int:
     out = _preflight(_all_symbols(args))
     for line in out.splitlines():
         log("  " + line)
+    # The full report stays in the log above; the gate only judges the chains the
+    # options arm can actually trade.
+    out, foreign = _drop_foreign_options(out, args.symbols)
+    if foreign:
+        log(f"ignoring {len(foreign)} options check(s) on symbols the options arm does "
+            f"not trade ({', '.join(sorted({l.split(OPTIONS_TAG, 1)[1].split()[0].rstrip(':') for l in foreign}))})")
     if _fatal_lines(out):
         log("ABORT: structural preflight failed")
         ledger.record(day, "ABORTED", "structural preflight failed", args.lab_dir)
