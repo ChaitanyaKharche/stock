@@ -289,14 +289,22 @@ class LabStore:
     # ------------------------------------------------------------------ crash recovery
 
     def save_open_positions(self, positions: list[dict],
-                            session_date=None) -> None:
+                            session_date=None, managed_through=None) -> None:
         """Atomic replace so a crash mid-write cannot corrupt the recovery file.
 
         `session_date` stamps which trading day these positions belong to. Recovery
         refuses to reopen positions from a different day -- see load_open_positions.
+
+        `managed_through` is the last minute the runner actually managed (its catch-up
+        `last_good`). It is NOT `saved_at`: a frozen runner keeps saving its book every idle
+        poll while managing nothing, so on 2026-10-02 `saved_at` reached 13:05 while the
+        book had last been managed at ~12:03, and the 15:07 restart caught up from 13:05 --
+        an hour of stops and targets never checked. A restart resumes from this field.
         """
         path = self.root / "positions_open.json"
         payload = json.dumps({"saved_at": _now().isoformat(),
+                              "managed_through": (managed_through.isoformat()
+                                                  if managed_through else None),
                               "session_date": (session_date.isoformat()
                                                if session_date else None),
                               "positions": positions},

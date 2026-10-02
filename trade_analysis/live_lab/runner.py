@@ -289,7 +289,7 @@ class LiveLab:
                 # FROZEN until the missed minutes are replayed from history -- see catchup.py.
                 if not self.catchup.run(now, day):
                     self.store.save_open_positions([p.to_trade() for p in self.open_pos],
-                                                   session_date=day)
+                                                   session_date=day, managed_through=self.catchup.last_good)
                     time.sleep(self.poll_idle)
                     continue
                 now = now_et()
@@ -304,12 +304,12 @@ class LiveLab:
                 self.store.outage("unhandled", repr(exc))
                 print(f"[lab] ERROR {exc!r}", flush=True)
             self.store.save_open_positions([p.to_trade() for p in self.open_pos],
-                                       session_date=day)
+                                       session_date=day, managed_through=self.catchup.last_good)
             time.sleep(self.poll_open if self.open_pos else self.poll_idle)
 
         self._flatten_all(now_et(), reason="shutdown")
         self.store.save_open_positions([p.to_trade() for p in self.open_pos],
-                                       session_date=day)
+                                       session_date=day, managed_through=self.catchup.last_good)
         self.write_daily(day)
         self.feed.close()
         print("[lab] stopped", flush=True)

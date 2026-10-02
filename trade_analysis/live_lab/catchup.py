@@ -59,10 +59,11 @@ def checkpoint_time(lab_dir, day: dt.date) -> dt.datetime | None:
         d = json.loads((Path(lab_dir) / "positions_open.json").read_text(encoding="utf-8"))
     except Exception:                                        # noqa: BLE001
         return None
-    if d.get("session_date") != day.isoformat() or not d.get("saved_at"):
+    stamp = d.get("managed_through") or d.get("saved_at")   # see store.save_open_positions
+    if d.get("session_date") != day.isoformat() or not stamp:
         return None
     try:
-        t = dt.datetime.fromisoformat(d["saved_at"])
+        t = dt.datetime.fromisoformat(stamp)
     except ValueError:
         return None
     return t if t.time() >= RTH_OPEN else None
