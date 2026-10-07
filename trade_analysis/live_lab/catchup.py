@@ -30,8 +30,10 @@ WHAT HAPPENS NOW
   4. RESUME. The live feed is restored and the next tick is an ordinary one.
 
 If history is still unreachable the runner stays frozen and retries every idle poll. If
-the network never returns before the close, the post-session gap_recovery.py pass
-resolves the exits instead -- the two are the same method at two different times.
+the network never returns before the close, the positions still open get no exit row at
+all, and stranded.py resolves them from the checkpoint the next time the terminal is up
+(CORRECTED 2026-10-06: this said gap_recovery.py did it, but gap_recovery only re-prices
+rows that exist, so 134 positions on 10-05/10-06 had no exit). Same method, later.
 
 Bars that were admitted BEFORE the gap are never re-managed: the catch-up pre-admits them
 silently and manages only minutes the runner did not see, for the same reason

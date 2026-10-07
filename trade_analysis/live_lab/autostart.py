@@ -660,6 +660,71 @@ def recover_session_gaps(day: dt.date, lab_dir) -> None:
             log(f"[recovery] {d}: failed and was ignored, will retry next session: {exc!r}")
 
 
+STRANDED_MARGIN = dt.timedelta(minutes=3)    # the morning replay must end this long before START_AT
+STRANDED_MIN_SEC = 240                       # with less time than this left, do not start one
+
+
+def resolve_stranded(day: dt.date, lab_dir, before: dt.date, deadline: dt.datetime | None = None,
+                     may_start_terminal: bool = False) -> None:
+    """Give positions an earlier session never closed their exits, from history. Never raises.
+
+    2026-10-05 and 10-06 left 134 positions with no exit row: the hotspot died before the
+    close and stayed down, so there was no catch-up, no flatten and no row, and
+    recover_session_gaps cannot see a position without a row (stranded.py). This runs in
+    the idle half hour before START_AT, after the close, and from the evening invocations
+    -- never while a runner trades; stranded.pending also refuses today's book before
+    SETTLED_AT. A terminal it had to start is shut again, so the session that follows
+    starts exactly as it always has. In a SUBPROCESS, like recover_session_gaps, because
+    the replay patches the store's clock.
+    """
+    started = False
+    try:
+        from .stranded import pending
+        items = pending(lab_dir, before)
+        for i in items:
+            if i["status"] != "pending":
+                log(f"[stranded] {i['arm']} {i['session_date']}: {len(i['missing'])} "
+                    f"position(s) have no exit and are left for a human ({i['status']})")
+        todo = [i for i in items if i["status"] == "pending"]
+        if not todo:
+            return
+        timeout = float(RECOVERY_TIMEOUT_SEC)
+        if deadline is not None:
+            timeout = min(timeout, (deadline - now_et()).total_seconds())
+            if timeout < STRANDED_MIN_SEC:
+                log("[stranded] too close to the session to replay; retried after the close")
+                return
+        if not terminal_up():
+            if not may_start_terminal:
+                log("[stranded] terminal is down; retried at the next window")
+                return
+            _evict_stale_terminal()
+            started = start_terminal()
+            if not started:
+                log("[stranded] terminal would not start; retried at the next window")
+                return
+        names = ", ".join(i["arm"] + " " + i["session_date"] for i in todo)
+        log(f"[stranded] positions left without an exit ({names}); resolving from history")
+        root = str(Path(__file__).resolve().parents[2])
+        pr = subprocess.run(
+            [sys.executable, "-m", "trade_analysis.live_lab.stranded",
+             "--before", before.isoformat(), "--write", "--lab-dir", str(lab_dir)],
+            cwd=root, capture_output=True, text=True, timeout=timeout)
+        for l in (pr.stdout or "").splitlines():
+            if l.startswith("[stranded]"):
+                log(l)
+        if pr.returncode != 0:
+            tail = ((pr.stderr or "").strip().splitlines() or [""])[-1]
+            log(f"[stranded] exit {pr.returncode}; retried at the next window. {tail}")
+    except subprocess.TimeoutExpired:
+        log("[stranded] replay ran out of time; retried at the next window")
+    except Exception as exc:                                 # noqa: BLE001
+        log(f"[stranded] failed and was ignored, retried at the next window: {exc!r}")
+    finally:
+        if started and not _graceful_shutdown():
+            _evict_stale_terminal()
+
+
 def _gate_verdict(out: str, options_only: bool = False) -> tuple[str, str] | None:
     """What a preflight report means for the session, in the order autostart always
     applied it: None = run; ("all", reason) = stop every arm; ("options", reason) = stop
@@ -927,7 +992,18 @@ def main(argv=None) -> int:
     # leave a stray assertion behind.
     log(f"host suspend guard: {hold_system_awake()}")
 
+    # The idle half hour before START_AT settles a previous session's stranded positions. A
+    # late boot skips it; the after-close pass below and the evening invocations retry.
+    morning_deadline = dt.datetime.combine(day, START_AT) - STRANDED_MARGIN
+    if not args.now and now_et() < morning_deadline:
+        resolve_stranded(day, args.lab_dir, before=day, deadline=morning_deadline,
+                         may_start_terminal=args.start_terminal)
+
     if not args.now and not wait_for_open(START_AT):
+        # The evening invocations (the task repeats until 16:30 ET) land here. On 2026-10-05
+        # the network came back at 16:26, after the session's own pass had failed.
+        resolve_stranded(day, args.lab_dir, before=day + dt.timedelta(days=1),
+                         may_start_terminal=args.start_terminal)
         return 0
 
     if not terminal_up():
@@ -1089,6 +1165,8 @@ def main(argv=None) -> int:
     # Complete the record before archiving it: any position that outlived a gap gets its
     # real exit from history, appended as a correction (never an edit).
     recover_session_gaps(day, args.lab_dir)
+    # Positions with no row at all -- the network died before the close and stayed down.
+    resolve_stranded(day, args.lab_dir, before=day + dt.timedelta(days=1))
 
     # Make the day durable off this disk. Runs AFTER note_finished so the ledger line it
     # commits is the terminal one, and after the runners have written their daily files.

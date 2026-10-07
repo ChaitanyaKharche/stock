@@ -171,17 +171,20 @@ def _drive(lab, clock, day, tick_fn, flatten_reason, deferred):
 
 
 def replay_shares(day: dt.date, trades: list[dict], arm_dir: Path,
-                  activate: dict | None = None) -> tuple[dict, list]:
+                  activate: dict | None = None, extra: list | None = None) -> tuple[dict, list]:
     """Replay the day's share positions through SharesLab._manage. -> (by signal_id, problems)
 
     `activate` maps signal_id -> the instant a gap began; those positions are rebuilt at
     their entry bar but managed only from that instant. Every other position is managed
-    from its entry, which is what makes the self-check possible."""
+    from its entry, which is what makes the self-check possible.
+
+    `extra` is (instant, SharePos) pairs for positions that have NO trade row -- already
+    built, joining the book at that instant (stranded.py)."""
     activate = activate or {}
-    deferred: list = []
+    deferred: list = list(extra or [])
     from . import shares_runner as SR
     clock = _clock_patch(SR)
-    lab = SR.SharesLab(sorted({t["symbol"] for t in trades}),
+    lab = SR.SharesLab(sorted({t["symbol"] for t in trades} | {p.symbol for _, p in deferred}),
                        lab_dir=tempfile.mkdtemp(prefix="gaprec_shares_"))
     lab.feed = BF.HistoryFeed(lab.feed, clock, day)
     clock.now = dt.datetime.combine(day, BF.WARMUP_AT)
@@ -268,18 +271,21 @@ def replay_shares(day: dt.date, trades: list[dict], arm_dir: Path,
 
 
 def replay_options(day: dt.date, trades: list[dict], arm_dir: Path,
-                   activate: dict | None = None) -> tuple[dict, list]:
+                   activate: dict | None = None, extra: list | None = None) -> tuple[dict, list]:
     """Replay the day's option positions through LiveLab._manage_open. -> (by position_id, problems)
 
     Option trade rows already carry every exit parameter the runner held (stop, target,
-    time and bar exits, trailing, state), so every rebuild here is EXACT."""
+    time and bar exits, trailing, state), so every rebuild here is EXACT.
+
+    `extra` is (instant, Position) pairs for positions that have NO trade row -- already
+    built, joining the book at that instant (stranded.py)."""
     activate = activate or {}
-    deferred: list = []
+    deferred: list = list(extra or [])
     from . import runner as R
     from .positions import Position
     from .setups import by_id
     clock = _clock_patch(R)
-    lab = R.LiveLab(sorted({t["symbol"] for t in trades}),
+    lab = R.LiveLab(sorted({t["symbol"] for t in trades} | {p.symbol for _, p in deferred}),
                     lab_dir=tempfile.mkdtemp(prefix="gaprec_options_"))
     lab.feed = BF.HistoryFeed(lab.feed, clock, day)
     clock.now = dt.datetime.combine(day, BF.WARMUP_AT)
@@ -321,6 +327,40 @@ def _minutes_apart(a: str, b: str) -> float:
     return abs((_ts(a) - _ts(b)).total_seconds()) / 60.0
 
 
+def _grade(r) -> str:
+    q = str((r or {}).get("rebuild") or "exact")
+    return "estimated" if q.startswith("estimate") else \
+           "approximate" if q.startswith("approximate") else "exact"
+
+
+def validate(normal: list[dict], replayed: dict, key: str) -> tuple[dict, float]:
+    """The self-check, shared with stranded.py so the two gates cannot drift apart: do the
+    exits live DID record come out by the same rule on replay? -> (block, rule agreement)."""
+    def same_rule(t):
+        r = replayed.get(t[key])
+        return r is not None and r["exit_reason"] == t["exit_reason"]
+
+    def same_minute(t):
+        r = replayed.get(t[key])
+        return same_rule(t) and _minutes_apart(r["exit_ts"], t["exit_ts"]) <= MATCH_MINUTES
+
+    val = {}
+    for g_ in ("exact", "approximate"):
+        pool = [t for t in normal if t[key] in replayed and _grade(replayed[t[key]]) == g_]
+        rule = sum(same_rule(t) for t in pool)
+        minute = sum(same_minute(t) for t in pool)
+        val[g_] = {"checked": len(pool), "same_rule": rule, "same_rule_and_minute": minute,
+                   "rule_agreement": round(rule / len(pool), 4) if pool else None,
+                   "minute_agreement": round(minute / len(pool), 4) if pool else None}
+    val["not_rebuilt"] = sum(1 for t in normal if t[key] not in replayed
+                             or _grade(replayed[t[key]]) == "estimated")
+    gate_pool = "exact" if val["exact"]["checked"] else "approximate"
+    agreement = val[gate_pool]["rule_agreement"] or 0.0
+    return {**val, "gate_pool": gate_pool, "min_required": MIN_AGREEMENT,
+            "gate": "same exit RULE as live on >= min_required of checkable "
+                    "exits; exit MINUTE agreement is reported, not gated"}, agreement
+
+
 def recover(day: dt.date, arm: str, write: bool = False, lab_dir: Path | None = None) -> dict:
     arm_dir = Path(lab_dir) if lab_dir else ARM_DIR[arm]
     key = "signal_id" if arm == "shares" else "position_id"
@@ -337,35 +377,8 @@ def recover(day: dt.date, arm: str, write: bool = False, lab_dir: Path | None = 
     replayed, problems = replay(day, trades, arm_dir,
                                 activate={trades[i][key]: g[0] for i, g in hit.items()})
 
-    def same_rule(t):
-        r = replayed.get(t[key])
-        return r is not None and r["exit_reason"] == t["exit_reason"]
-
-    def same_minute(t):
-        r = replayed.get(t[key])
-        return same_rule(t) and _minutes_apart(r["exit_ts"], t["exit_ts"]) <= MATCH_MINUTES
-
-    def grade(r):
-        q = str((r or {}).get("rebuild") or "exact")
-        return "estimated" if q.startswith("estimate") else \
-               "approximate" if q.startswith("approximate") else "exact"
-
     normal = [t for i, t in enumerate(trades) if i not in hit]
-    val = {}
-    for g_ in ("exact", "approximate"):
-        pool = [t for t in normal if t[key] in replayed and grade(replayed[t[key]]) == g_]
-        rule = sum(same_rule(t) for t in pool)
-        minute = sum(same_minute(t) for t in pool)
-        val[g_] = {"checked": len(pool), "same_rule": rule, "same_rule_and_minute": minute,
-                   "rule_agreement": round(rule / len(pool), 4) if pool else None,
-                   "minute_agreement": round(minute / len(pool), 4) if pool else None}
-    val["not_rebuilt"] = sum(1 for t in normal if t[key] not in replayed
-                             or grade(replayed[t[key]]) == "estimated")
-    gate_pool = "exact" if val["exact"]["checked"] else "approximate"
-    agreement = val[gate_pool]["rule_agreement"] or 0.0
-    rep["validation"] = {**val, "gate_pool": gate_pool, "min_required": MIN_AGREEMENT,
-                         "gate": "same exit RULE as live on >= min_required of checkable "
-                                 "exits; exit MINUTE agreement is reported, not gated"}
+    rep["validation"], agreement = validate(normal, replayed, key)
     rep["problems"] = len(problems)
 
     rows = []
@@ -383,7 +396,7 @@ def recover(day: dt.date, arm: str, write: bool = False, lab_dir: Path | None = 
             rows.append({**base, "status": "unrecoverable", "why": why})
             continue
         status = {"exact": "recovered", "approximate": "recovered_approximate",
-                  "estimated": "estimated"}[grade(r)]
+                  "estimated": "estimated"}[_grade(r)]
         rows.append({**base, "status": status, "rebuild": r.get("rebuild"),
                      "recovered": {k: r.get(k) for k in ("exit_ts", "exit_px", "exit_bid",
                                                          "exit_reason", "pnl_net") if k in r},
