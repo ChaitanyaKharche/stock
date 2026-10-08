@@ -2018,3 +2018,14 @@
 {"seq":9423,"ts":"2026-10-06T16:12:41.168287","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: TerminalUnreachable(\"/stock/history/ohlc failed after 4 attempts: ConnectError('[WinError 10061] No connection could be made because the target machine actively refused it')\")"}
 {"seq":9424,"ts":"2026-10-06T16:13:11.348189","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: TerminalUnreachable(\"/stock/history/ohlc failed after 4 attempts: ConnectError('[WinError 10061] No connection could be made because the target machine actively refused it')\")"}
 {"seq":9425,"ts":"2026-10-06T16:13:41.607802","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: TerminalUnreachable(\"/stock/history/ohlc failed after 4 attempts: ConnectError('[WinError 10061] No connection could be made because the target machine actively refused it')\")"}
+{"seq":9058,"ts":"2026-10-07T09:50:24.780911","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/snapshot/quote"}
+{"seq":9059,"ts":"2026-10-07T09:50:24.809411","kind":"tick","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":9060,"ts":"2026-10-07T09:50:29.952414","kind":"feed","detail":"upstream recovered after 5s and 1 failed call(s)","path":"__recovered__"}
+{"seq":9117,"ts":"2026-10-07T10:32:45.540208","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/snapshot/quote"}
+{"seq":9118,"ts":"2026-10-07T10:32:45.542600","kind":"tick","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":9119,"ts":"2026-10-07T10:32:53.644835","kind":"feed","detail":"upstream recovered after 8s and 1 failed call(s)","path":"__recovered__"}
+{"seq":9258,"ts":"2026-10-07T14:13:51.525738","kind":"stale_quote","detail":"QQQ age=7.1s"}
+{"seq":9529,"ts":"2026-10-08T15:31:52.427159","kind":"host_suspend","detail":"host suspended or clock stepped: 1101s unaccounted between 15:13:26 and 15:31:51 ET -- the lab was NOT running","gap_sec":1100.9,"from_et":"2026-10-08T15:13:26.060691","to_et":"2026-10-08T15:31:51.962017"}
+{"seq":9529,"ts":"2026-10-08T15:51:30.799506","kind":"feed","detail":"ConnectError('[WinError 10061] No connection could be made because the target machine actively refused it')","path":"/stock/history/ohlc"}
+{"seq":9530,"ts":"2026-10-08T15:51:31.088439","kind":"tick","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: ConnectError('[WinError 10061] No connection could be made because the target machine actively refused it')\")"}
+{"seq":9531,"ts":"2026-10-08T15:51:57.285024","kind":"feed","detail":"upstream recovered after 26s and 1 failed call(s)","path":"__recovered__"}
