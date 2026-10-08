@@ -215,3 +215,114 @@ def test_a_shares_fill_records_the_exit_parameters(tmp_path, monkeypatch):
     f = fills[-1]
     assert (f["stop"], f["target"], f["time_exit_min"], f["trailing"], f["timeframe"]) == \
         (80.0, 83.0, 25, "imb", "1m")
+
+
+# ------------------------------------------------------------ 6. only stolen exits (2026-10-08)
+#
+# The host slept 15:13-15:31, the catch-up replayed 15:12-15:51 at the real minutes and the
+# 15:55 flatten ran live -- and this pass still re-priced all 40 positions open across the
+# suspend, swapping live fills for history estimates. At 15:55 a 0DTE contract's history
+# quote can sit $73 from the live fill of the same minute (2026-09-29, -$417 on the day).
+
+OCT8 = dt.date(2026, 10, 8)
+
+
+def _o8(h, m, s=0):
+    return dt.datetime.combine(OCT8, dt.time(h, m, s))
+
+
+def _oct8(tmp_path, monkeypatch, caught_up=True, replay_exit=("eod", "2026-10-08T15:56:02", 9.0)):
+    _write(tmp_path / "outages.jsonl", [
+        {"ts": "2026-10-08T15:31:52", "kind": "host_suspend",
+         "detail": "host suspended or clock stepped: 1101s unaccounted between 15:13:26 and 15:31:51 ET"}])
+    _write(tmp_path / "events.jsonl", [
+        {"ts": "2026-10-08T15:52:13", "kind": "caught_up", "since": "2026-10-08T15:13:24.86",
+         "until": "2026-10-08T15:52:01.65"}] if caught_up else [])
+    trades = [
+        {"signal_id": "open", "setup_id": "Crabel_Stretch", "symbol": "XLY",
+         "entry_ts": "2026-10-08T10:02:02", "exit_ts": "2026-10-08T15:56:01",
+         "exit_px": 110.0, "exit_reason": "eod", "pnl_net": 50.41},
+        {"signal_id": "done", "setup_id": "ORB_5min", "symbol": "XLF",
+         "entry_ts": "2026-10-08T09:48:00", "exit_ts": "2026-10-08T10:05:03",
+         "exit_px": 54.4, "exit_reason": "target", "pnl_net": 36.65}]
+    _write(tmp_path / "trades.jsonl", trades)
+    reason, ts, pnl = replay_exit
+    fake = {"open": {"signal_id": "open", "exit_ts": ts, "exit_px": 110.1, "exit_reason": reason,
+                     "pnl_net": pnl, "rebuild": "exact (recorded at entry)"},
+            "done": {"signal_id": "done", "exit_ts": "2026-10-08T10:05:02", "exit_px": 54.4,
+                     "exit_reason": "target", "pnl_net": 36.0, "rebuild": "exact (recorded at entry)"}}
+    monkeypatch.setattr(G, "replay_shares", lambda day, trades, arm_dir, activate=None: (fake, []))
+
+
+def _fixes(tmp_path):
+    p = tmp_path / "trade_corrections.jsonl"
+    rows = [json.loads(l) for l in p.read_text().splitlines()] if p.exists() else []
+    return [r for r in rows if r["kind"] == "gap_recovery"]
+
+
+def test_a_suspend_the_catch_up_replayed_steals_nothing(tmp_path, monkeypatch):
+    _oct8(tmp_path, monkeypatch, caught_up=True, replay_exit=("stop", "2026-10-08T15:20:02", -30.0))
+    rep = G.recover(OCT8, "shares", write=True, lab_dir=tmp_path)
+    assert rep["gaps"] == [] and rep["affected"] == 0 and rep["written"] == 0
+    assert _fixes(tmp_path) == []
+
+
+def test_the_same_suspend_without_a_catch_up_is_still_recovered(tmp_path, monkeypatch):
+    _oct8(tmp_path, monkeypatch, caught_up=False, replay_exit=("stop", "2026-10-08T15:20:02", -30.0))
+    rep = G.recover(OCT8, "shares", write=True, lab_dir=tmp_path)
+    assert rep["written"] == 1 and _fixes(tmp_path)[0]["recovered"]["exit_reason"] == "stop"
+
+
+def test_a_replay_that_agrees_with_live_is_not_written(tmp_path, monkeypatch):
+    _oct8(tmp_path, monkeypatch, caught_up=False)          # eod 15:56:02 vs live eod 15:56:01
+    rep = G.recover(OCT8, "shares", write=True, lab_dir=tmp_path)
+    assert rep["affected"] == 1 and rep["written"] == 0
+    assert rep["by_status"]["live_confirmed"] == 1 and _fixes(tmp_path) == []
+
+
+def test_only_the_minutes_no_catch_up_replayed_count():
+    # 2026-10-02: the restart caught up from 13:05, so 12:01:30-13:05 was never managed.
+    assert G.uncovered((_o8(12, 1, 30), _o8(13, 5, 25)), [(_o8(13, 5), _o8(15, 7))]) == \
+        [(_o8(12, 1, 30), _o8(13, 5))]
+    # 2026-09-29: a catch-up that starts 3s after the suspend leaves no unmanaged minute.
+    assert G.uncovered((_o8(11, 48, 10), _o8(11, 52, 19)), [(_o8(11, 48, 13), _o8(11, 52, 23))]) == []
+    assert G.uncovered((_o8(11, 0), _o8(12, 0)), []) == [(_o8(11, 0), _o8(12, 0))]
+
+
+def test_a_retraction_restores_the_live_row():
+    trades = [{"signal_id": "a", "pnl_net": -20.08}]
+    fix = {"kind": "gap_recovery", "status": "recovered", "signal_id": "a",
+           "recovered": {"pnl_net": 13.92}, "original": {"pnl_net": -20.08}}
+    assert G.apply_corrections(trades, [fix], "signal_id")[0]["pnl_net"] == 13.92
+    undo = {"kind": "gap_recovery", "status": "retracted", "signal_id": "a"}
+    out = G.apply_corrections(trades, [fix, undo], "signal_id")
+    assert out[0] == trades[0] and "corrected" not in out[0]
+
+
+def test_overcorrections_keep_the_stolen_and_retract_the_rest(tmp_path):
+    day = "2026-10-08"
+    _write(tmp_path / "events.jsonl", [{"kind": "caught_up", "since": f"{day}T11:04:37",
+                                        "until": f"{day}T11:15:43"}])
+    _write(tmp_path / "trades.jsonl", [
+        {"signal_id": k, "entry_ts": f"{day}T09:40:00"} for k in ("cov", "stolen", "same", "late")])
+
+    def c(k, gap, live, rec):
+        return {"kind": "gap_recovery", "status": "recovered", "day": day, "signal_id": k,
+                "setup_id": "S", "symbol": "X", "gap": [f"{day}T{gap[0]}", f"{day}T{gap[1]}"],
+                "original": {"exit_reason": live[0], "exit_ts": f"{day}T{live[1]}", "pnl_net": live[2]},
+                "recovered": {"exit_reason": rec[0], "exit_ts": f"{day}T{rec[1]}", "pnl_net": rec[2]},
+                "written_at": "2026-10-08T16:01:16"}
+    _write(tmp_path / "trade_corrections.jsonl", [
+        # 2026-09-28's shape: covered by the catch-up, and the replay even disagrees with live
+        c("cov", ("11:04:46", "11:15:15"), ("trail", "12:30:04", -13.13), ("eod", "15:56:02", 33.58)),
+        c("stolen", ("13:00:00", "14:00:00"), ("eod", "15:55:01", -50.0), ("stop", "13:20:02", -20.0)),
+        c("same", ("13:00:00", "14:00:00"), ("eod", "15:55:01", 5.0), ("eod", "15:55:02", 6.0)),
+        c("late", ("16:19:11", "16:19:11"), ("eod", "16:19:11", -620.34), ("eod", "15:56:02", 42.82))])
+    bad = G.retract(tmp_path, OCT8, "signal_id", write=True)
+    assert sorted(x["signal_id"] for x, _ in bad) == ["cov", "same"]
+    view = {r["signal_id"]: r["pnl_net"] for r in G.apply_corrections(
+        [{"signal_id": k, "pnl_net": p} for k, p in
+         (("cov", -13.13), ("stolen", -50.0), ("same", 5.0), ("late", -620.34))],
+        G._jsonl(tmp_path / "trade_corrections.jsonl"), "signal_id")}
+    assert view == {"cov": -13.13, "stolen": -20.0, "same": 5.0, "late": 42.82}
+    assert G.retract(tmp_path, OCT8, "signal_id", write=True) == [], "a second retract re-wrote"

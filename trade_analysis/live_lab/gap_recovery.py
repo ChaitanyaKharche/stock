@@ -107,6 +107,46 @@ def find_gaps(arm_dir: Path, day: dt.date) -> list[tuple[dt.datetime, dt.datetim
     return [(a, b) for a, b in merged if a < close and b > open_]
 
 
+def catchup_windows(arm_dir: Path, day: dt.date) -> list[tuple[dt.datetime, dt.datetime]]:
+    """[since, until] spans the runner ITSELF already replayed from history, minute by
+    minute, through its own exit code -- catchup.py's `caught_up` events."""
+    out = []
+    for e in _jsonl(arm_dir / "events.jsonl"):
+        if e.get("kind") != "caught_up" or not str(e.get("since", "")).startswith(day.isoformat()):
+            continue
+        try:
+            out.append((_ts(e["since"]), _ts(e["until"])))
+        except (KeyError, TypeError, ValueError):
+            continue
+    return sorted(out)
+
+
+def uncovered(gap, covered, min_sec: float = 60.0) -> list[tuple[dt.datetime, dt.datetime]]:
+    """The parts of `gap` no catch-up replayed: the minutes nobody managed.
+
+    CORRECTED 2026-10-08. A suspend used to count as a gap in full. That day the host slept
+    15:13-15:31, the catch-up replayed 15:12-15:51 at the real minutes, the 15:55 flatten
+    ran live -- and this pass still re-priced all 40 positions open across the suspend,
+    replacing live fills with history estimates (net 49 cents, by luck). An exit is only
+    stolen if no runner managed the minutes it could have fired in. Slivers under a minute
+    are dropped: a catch-up starts at the runner's last good tick, so what precedes it was
+    managed live.
+    """
+    pieces = [tuple(gap)]
+    for c0, c1 in covered:
+        nxt = []
+        for p0, p1 in pieces:
+            if c1 <= p0 or c0 >= p1:
+                nxt.append((p0, p1))
+                continue
+            if p0 < c0:
+                nxt.append((p0, c0))
+            if c1 < p1:
+                nxt.append((c1, p1))
+        pieces = nxt
+    return [(a, b) for a, b in pieces if (b - a).total_seconds() >= min_sec]
+
+
 def affected(trades: list[dict], gaps) -> dict[int, tuple]:
     """index -> gap, for trades that were OPEN when a gap began (or closed after 16:00)."""
     out = {}
@@ -365,10 +405,13 @@ def recover(day: dt.date, arm: str, write: bool = False, lab_dir: Path | None = 
     arm_dir = Path(lab_dir) if lab_dir else ARM_DIR[arm]
     key = "signal_id" if arm == "shares" else "position_id"
     trades = [t for t in _jsonl(arm_dir / "trades.jsonl") if t["entry_ts"][:10] == day.isoformat()]
-    gaps = find_gaps(arm_dir, day)
+    suspends = find_gaps(arm_dir, day)
+    caught_up = catchup_windows(arm_dir, day)
+    gaps = [p for g in suspends for p in uncovered(g, caught_up)]
     hit = affected(trades, gaps)
-    rep = {"day": day.isoformat(), "arm": arm, "gaps": [[a.isoformat(), b.isoformat()] for a, b in gaps],
-           "affected": len(hit), "written": 0}
+    iso = lambda ws: [[a.isoformat(), b.isoformat()] for a, b in ws]   # noqa: E731
+    rep = {"day": day.isoformat(), "arm": arm, "suspends": iso(suspends),
+           "caught_up": iso(caught_up), "gaps": iso(gaps), "affected": len(hit), "written": 0}
     if not hit:
         if write:
             _mark_run(arm_dir, rep)
@@ -395,6 +438,13 @@ def recover(day: dt.date, arm: str, write: bool = False, lab_dir: Path | None = 
                    f"replay exited at {r['exit_ts'][11:16]}, before the gap, which live did not")
             rows.append({**base, "status": "unrecoverable", "why": why})
             continue
+        if (r["exit_reason"] == t.get("exit_reason")
+                and _minutes_apart(r["exit_ts"], t["exit_ts"]) <= MATCH_MINUTES):
+            # Nothing was stolen: the rules exit where live did. A history estimate of the
+            # same exit is worse than the fill that was actually observed.
+            rows.append({**base, "status": "live_confirmed",
+                         "why": "replay exits by the same rule within a minute of live"})
+            continue
         status = {"exact": "recovered", "approximate": "recovered_approximate",
                   "estimated": "estimated"}[_grade(r)]
         rows.append({**base, "status": status, "rebuild": r.get("rebuild"),
@@ -407,7 +457,7 @@ def recover(day: dt.date, arm: str, write: bool = False, lab_dir: Path | None = 
                                      for x in rows), 2)
     rep["by_status"] = {s: sum(1 for x in rows if x["status"] == s)
                         for s in ("recovered", "recovered_approximate", "estimated",
-                                  "unrecoverable")}
+                                  "unrecoverable", "live_confirmed")}
 
     if write:
         if agreement < MIN_AGREEMENT:
@@ -420,7 +470,7 @@ def recover(day: dt.date, arm: str, write: bool = False, lab_dir: Path | None = 
         stamp = dt.datetime.now().isoformat(timespec="seconds")
         with open(path, "a", encoding="utf-8") as fh:
             for x in rows:
-                if (x["kind"], x[key]) in done:
+                if (x["kind"], x[key]) in done or x["status"] == "live_confirmed":
                     continue
                 fh.write(json.dumps({**x, "validation": rep["validation"], "written_at": stamp,
                                      "method": "history 1m bars + 1m NBBO/chain replayed through "
@@ -449,9 +499,18 @@ def apply_corrections(trades: list[dict], corrections: list[dict], key: str,
 
     Only EXACT recoveries are applied by default. Pass include=("recovered",
     "recovered_approximate", "estimated") for a best-available view, and say so.
+
+    Lines are read in file order and the latest one for a position wins, so a later
+    `retracted` line (see `retract`) restores the live row without deleting anything.
     """
-    fix = {c[key]: c for c in corrections
-           if c.get("kind") == "gap_recovery" and c.get("status") in include}
+    fix: dict = {}
+    for c in corrections:
+        if c.get("kind") != "gap_recovery" or c.get(key) is None:
+            continue
+        if c.get("status") == "retracted":
+            fix.pop(c[key], None)
+        elif c.get("status") in include:
+            fix[c[key]] = c
     out = []
     for t in trades:
         c = fix.get(t.get(key))
@@ -460,16 +519,86 @@ def apply_corrections(trades: list[dict], corrections: list[dict], key: str,
     return out
 
 
+def overcorrections(arm_dir: Path, day: dt.date, key: str) -> list[tuple[dict, str]]:
+    """Corrections in force for `day` that the current rule would NOT write, with why.
+
+    Judged from what each correction recorded -- its gap, original and recovered exit -- plus
+    the day's catch-up events, so no replay is needed. A correction stands only if the
+    position was open when an UNMANAGED stretch began (or it closed at/after 16:00 or on a
+    stale mark), AND the recovered exit differs from live by rule or by more than a minute.
+    """
+    caught_up = catchup_windows(arm_dir, day)
+    entry = {t.get(key): _ts(t["entry_ts"]) for t in _jsonl(arm_dir / "trades.jsonl")
+             if str(t.get("entry_ts", ""))[:10] == day.isoformat()}
+    latest: dict = {}
+    for c in _jsonl(arm_dir / "trade_corrections.jsonl"):
+        if c.get("kind") == "gap_recovery" and c.get("day") == day.isoformat() and c.get(key):
+            latest[c[key]] = c
+    out = []
+    for k, c in latest.items():
+        if c.get("status") not in ("recovered", "recovered_approximate", "estimated"):
+            continue
+        o, r = c["original"], c["recovered"]
+        a, b = (_ts(x) for x in c["gap"])
+        if a != b:                       # a == b: closed at/after 16:00 or on a stale mark
+            e, x = entry.get(k), _ts(o["exit_ts"])
+            if e is None or not any(e < u0 <= x for u0, _ in uncovered((a, b), caught_up)):
+                out.append((c, "no unmanaged minute while it was open: the catch-up replayed "
+                               "the gap at the real minutes, so the live exit stands"))
+                continue
+        if (r.get("exit_reason") == o.get("exit_reason")
+                and _minutes_apart(r["exit_ts"], o["exit_ts"]) <= MATCH_MINUTES):
+            out.append((c, "replay exits by the same rule within a minute of live, so the "
+                           "live fill stands"))
+    return out
+
+
+def retract(arm_dir: Path, day: dt.date, key: str, write: bool = False,
+            note: str = "") -> list[tuple[dict, str]]:
+    """Append a `retracted` line for each over-correction. Nothing is deleted: the original
+    correction stays in the file, and apply_corrections restores the live row."""
+    bad = overcorrections(arm_dir, day, key)
+    if write and bad:
+        stamp = dt.datetime.now().isoformat(timespec="seconds")
+        with open(arm_dir / "trade_corrections.jsonl", "a", encoding="utf-8") as fh:
+            for c, why in bad:
+                fh.write(json.dumps({"kind": "gap_recovery", "status": "retracted",
+                                     "arm": c.get("arm"), "day": c.get("day"), "key": key,
+                                     key: c[key], "setup_id": c.get("setup_id"),
+                                     "symbol": c.get("symbol"),
+                                     "retracts_written_at": c.get("written_at"),
+                                     "why": why + (f" ({note})" if note else ""),
+                                     "written_at": stamp}) + "\n")
+    return bad
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--day", required=True)
     ap.add_argument("--arm", choices=["shares", "options", "both"], default="both")
     ap.add_argument("--write", action="store_true")
+    ap.add_argument("--retract", action="store_true",
+                    help="list (with --write: retract) corrections the current rule would not write")
+    ap.add_argument("--note", default="", help="appended to each retraction's reason")
     ap.add_argument("--lab-dir", default=str(LAB))
     a = ap.parse_args(argv)
     day = dt.date.fromisoformat(a.day)
     dirs = {"options": Path(a.lab_dir), "shares": Path(a.lab_dir) / "shares"}
     for arm in (["shares", "options"] if a.arm == "both" else [a.arm]):
+        if a.retract:
+            key = "signal_id" if arm == "shares" else "position_id"
+            bad = retract(dirs[arm], day, key, write=a.write, note=a.note)
+            delta = sum((c["original"].get("pnl_net") or 0) - (c["recovered"].get("pnl_net") or 0)
+                        for c, _ in bad)
+            print(f"{arm} {day}: {len(bad)} over-correction(s){' RETRACTED' if a.write else ''}"
+                  f"; the corrected total moves by {delta:+.2f}")
+            for c, why in bad:
+                o, r = c["original"], c["recovered"]
+                print(f"  {c['setup_id']:<24}{c['symbol']:<6}live {o.get('exit_reason')!s:<9}"
+                      f"{o['exit_ts'][11:16]} {o.get('pnl_net') or 0:+8.2f}   recovery "
+                      f"{r.get('exit_reason')!s:<9}{r['exit_ts'][11:16]} {r.get('pnl_net') or 0:+8.2f}"
+                      f"   {why[:60]}")
+            continue
         rep = recover(day, arm, write=a.write, lab_dir=dirs[arm])
         print(json.dumps({k: v for k, v in rep.items() if k != "rows"}, indent=1))
         for x in rep.get("rows", []):
