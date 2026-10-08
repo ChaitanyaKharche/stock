@@ -201,7 +201,8 @@ class _Calls:
         return {"terminal_up": note("terminal_up", self.up),
                 "start_terminal": note("start_terminal", self.start_ok),
                 "_evict_stale_terminal": note("evict", False),
-                "_graceful_shutdown": note("shutdown", True)}, run
+                "_graceful_shutdown": note("shutdown", True),
+                "_kill_terminals": note("kill", 0)}, run
 
 
 def _hook(calls, items, deadline=None, may_start=True):
@@ -221,7 +222,15 @@ def test_hook_does_nothing_when_nothing_is_stranded():
 def test_hook_shuts_down_a_terminal_it_started():
     c = _Calls(up=False)
     _hook(c, [{"arm": "shares", "session_date": "2026-10-05", "status": "pending", "missing": [1]}])
-    assert c.log == ["terminal_up", "evict", "start_terminal", "run", "shutdown"]
+    assert c.log == ["terminal_up", "evict", "start_terminal", "run", "shutdown", "kill"]
+
+
+def test_hook_kills_a_terminal_that_never_answered():
+    # 2026-10-07 16:30: launched with the network down, it missed the 90s window and was left
+    # running; it came up hours later beside the next terminal (HTTP 478, invalid session).
+    c = _Calls(up=False, start_ok=False)
+    _hook(c, [{"arm": "shares", "session_date": "2026-10-07", "status": "pending", "missing": [1]}])
+    assert c.log == ["terminal_up", "evict", "start_terminal", "shutdown", "kill"]
 
 
 def test_hook_leaves_a_terminal_that_was_already_up():

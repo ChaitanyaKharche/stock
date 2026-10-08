@@ -660,6 +660,37 @@ def recover_session_gaps(day: dt.date, lab_dir) -> None:
             log(f"[recovery] {d}: failed and was ignored, will retry next session: {exc!r}")
 
 
+def _kill_terminals() -> int:
+    """Kill every Theta Terminal process -- the launcher and its children -- whether or not
+    it is listening yet. Returns how many were killed.
+
+    _evict_stale_terminal only finds a terminal that holds the port. One launched with the
+    network down never binds it: on 2026-10-07 the 16:30 pass launched one, it did not
+    answer within 90s, and it was left running. When the network came back at ~19:00 it
+    came up on its own, and the next terminal started beside it got
+    `HTTP 478: Invalid session ID ... more than one terminal is running`.
+    """
+    try:
+        import psutil
+    except ImportError:
+        log("cannot clean up the terminal: psutil not installed")
+        return 0
+    jar = TERMINAL_CMD[-1].lower()
+    n = 0
+    for p in psutil.process_iter(["cmdline"]):
+        try:
+            if jar not in " ".join(p.info["cmdline"] or []).lower():
+                continue
+            for c in p.children(recursive=True):
+                c.kill()
+                n += 1
+            p.kill()
+            n += 1
+        except (psutil.NoSuchProcess, psutil.AccessDenied):
+            continue
+    return n
+
+
 STRANDED_MARGIN = dt.timedelta(minutes=3)    # the morning replay must end this long before START_AT
 STRANDED_MIN_SEC = 240                       # with less time than this left, do not start one
 
@@ -673,11 +704,12 @@ def resolve_stranded(day: dt.date, lab_dir, before: dt.date, deadline: dt.dateti
     recover_session_gaps cannot see a position without a row (stranded.py). This runs in
     the idle half hour before START_AT, after the close, and from the evening invocations
     -- never while a runner trades; stranded.pending also refuses today's book before
-    SETTLED_AT. A terminal it had to start is shut again, so the session that follows
-    starts exactly as it always has. In a SUBPROCESS, like recover_session_gaps, because
-    the replay patches the store's clock.
+    SETTLED_AT. A terminal it LAUNCHED is shut again -- including one that never answered,
+    which would otherwise come up later beside the next one (_kill_terminals) -- so the
+    session that follows starts exactly as it always has. In a SUBPROCESS, like
+    recover_session_gaps, because the replay patches the store's clock.
     """
-    started = False
+    launched = False
     try:
         from .stranded import pending
         items = pending(lab_dir, before)
@@ -699,8 +731,8 @@ def resolve_stranded(day: dt.date, lab_dir, before: dt.date, deadline: dt.dateti
                 log("[stranded] terminal is down; retried at the next window")
                 return
             _evict_stale_terminal()
-            started = start_terminal()
-            if not started:
+            launched = True
+            if not start_terminal():
                 log("[stranded] terminal would not start; retried at the next window")
                 return
         names = ", ".join(i["arm"] + " " + i["session_date"] for i in todo)
@@ -721,8 +753,9 @@ def resolve_stranded(day: dt.date, lab_dir, before: dt.date, deadline: dt.dateti
     except Exception as exc:                                 # noqa: BLE001
         log(f"[stranded] failed and was ignored, retried at the next window: {exc!r}")
     finally:
-        if started and not _graceful_shutdown():
-            _evict_stale_terminal()
+        if launched:
+            _graceful_shutdown()
+            _kill_terminals()
 
 
 def _gate_verdict(out: str, options_only: bool = False) -> tuple[str, str] | None:
