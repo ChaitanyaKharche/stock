@@ -231,7 +231,8 @@ def _o8(h, m, s=0):
     return dt.datetime.combine(OCT8, dt.time(h, m, s))
 
 
-def _oct8(tmp_path, monkeypatch, caught_up=True, replay_exit=("eod", "2026-10-08T15:56:02", 9.0)):
+def _oct8(tmp_path, monkeypatch, caught_up=True, replay_exit=("eod", "2026-10-08T15:56:02", 9.0),
+          live_exit=("eod", "2026-10-08T15:56:01"), rebuild="exact (recorded at entry)"):
     _write(tmp_path / "outages.jsonl", [
         {"ts": "2026-10-08T15:31:52", "kind": "host_suspend",
          "detail": "host suspended or clock stepped: 1101s unaccounted between 15:13:26 and 15:31:51 ET"}])
@@ -240,15 +241,15 @@ def _oct8(tmp_path, monkeypatch, caught_up=True, replay_exit=("eod", "2026-10-08
          "until": "2026-10-08T15:52:01.65"}] if caught_up else [])
     trades = [
         {"signal_id": "open", "setup_id": "Crabel_Stretch", "symbol": "XLY",
-         "entry_ts": "2026-10-08T10:02:02", "exit_ts": "2026-10-08T15:56:01",
-         "exit_px": 110.0, "exit_reason": "eod", "pnl_net": 50.41},
+         "entry_ts": "2026-10-08T10:02:02", "exit_ts": live_exit[1],
+         "exit_px": 110.0, "exit_reason": live_exit[0], "pnl_net": 50.41},
         {"signal_id": "done", "setup_id": "ORB_5min", "symbol": "XLF",
          "entry_ts": "2026-10-08T09:48:00", "exit_ts": "2026-10-08T10:05:03",
          "exit_px": 54.4, "exit_reason": "target", "pnl_net": 36.65}]
     _write(tmp_path / "trades.jsonl", trades)
     reason, ts, pnl = replay_exit
     fake = {"open": {"signal_id": "open", "exit_ts": ts, "exit_px": 110.1, "exit_reason": reason,
-                     "pnl_net": pnl, "rebuild": "exact (recorded at entry)"},
+                     "pnl_net": pnl, "rebuild": rebuild},
             "done": {"signal_id": "done", "exit_ts": "2026-10-08T10:05:02", "exit_px": 54.4,
                      "exit_reason": "target", "pnl_net": 36.0, "rebuild": "exact (recorded at entry)"}}
     monkeypatch.setattr(G, "replay_shares", lambda day, trades, arm_dir, activate=None: (fake, []))
@@ -326,3 +327,61 @@ def test_overcorrections_keep_the_stolen_and_retract_the_rest(tmp_path):
         G._jsonl(tmp_path / "trade_corrections.jsonl"), "signal_id")}
     assert view == {"cov": -13.13, "stolen": -20.0, "same": 5.0, "late": 42.82}
     assert G.retract(tmp_path, OCT8, "signal_id", write=True) == [], "a second retract re-wrote"
+
+
+# ------------------------------------------------------------ 7. the review's holes (2026-10-08)
+
+def test_an_exit_live_made_after_the_gap_is_not_overridden(tmp_path, monkeypatch):
+    # 09-24's shape: asleep 15:13-15:31, then a network freeze made the live flatten 2 min
+    # late. The replay's 15:55 history quote must not replace the 15:57 fill live observed.
+    _oct8(tmp_path, monkeypatch, caught_up=False, live_exit=("eod", "2026-10-08T15:57:04"),
+          replay_exit=("eod", "2026-10-08T15:55:02", 80.0))
+    rep = G.recover(OCT8, "shares", write=True, lab_dir=tmp_path)
+    assert rep["affected"] == 1 and rep["written"] == 0 and _fixes(tmp_path) == []
+
+
+def test_an_estimate_never_overrides_a_live_exit_after_the_gap(tmp_path, monkeypatch):
+    # 09-18's shape: live saw the stop at 15:40, after waking at 15:31; the estimate only
+    # assumes a 15:55 flatten because the exit parameters were unknown.
+    _oct8(tmp_path, monkeypatch, caught_up=False, live_exit=("stop", "2026-10-08T15:40:02"),
+          replay_exit=("eod_estimate", "2026-10-08T15:56:02", 20.0),
+          rebuild="estimate (parameters unknown; 15:55 flatten assumed)")
+    rep = G.recover(OCT8, "shares", write=True, lab_dir=tmp_path)
+    assert rep["written"] == 0 and _fixes(tmp_path) == []
+
+
+def test_a_different_rule_from_a_real_rebuild_after_the_gap_stands(tmp_path, monkeypatch):
+    # A trail raised by a run-up inside the gap fires at 15:35, after the wake; live, blind
+    # to the run-up, held to the 15:56 flatten. That exit was stolen.
+    _oct8(tmp_path, monkeypatch, caught_up=False, replay_exit=("trail", "2026-10-08T15:35:02", 70.0))
+    rep = G.recover(OCT8, "shares", write=True, lab_dir=tmp_path)
+    assert rep["written"] == 1 and _fixes(tmp_path)[0]["recovered"]["exit_reason"] == "trail"
+
+
+def test_a_position_due_after_the_close_still_joins_before_the_flatten():
+    # Activated at the live exit time, 16:42 (2026-08-28's late "shutdown"), it used to never
+    # enter the book -- no flatten, no row, always "not replayable".
+    seen = []
+
+    class Lab:
+        def __init__(self):
+            self.open_pos = []
+
+        def _tick(self, t, day):
+            seen.append((t.time(), list(self.open_pos)))
+
+        def _flatten_all(self, now, reason):
+            seen.append(("flatten", list(self.open_pos)))
+
+    lab = Lab()
+    G._drive(lab, SimpleNamespace(now=None), OCT8, lab._tick, "eod", [(_o8(16, 42), "late")])
+    at_1555 = [ps for t, ps in seen if t == dt.time(15, 55, 2)]
+    assert at_1555 == [["late"]], "the position missed the 15:55 tick"
+
+
+def test_the_same_rule_inside_the_gap_is_still_stolen(tmp_path, monkeypatch):
+    # The time exit was due at 15:20, while the host slept; live could only take it at 15:40.
+    _oct8(tmp_path, monkeypatch, caught_up=False, live_exit=("time", "2026-10-08T15:40:02"),
+          replay_exit=("time", "2026-10-08T15:20:02", -5.0))
+    rep = G.recover(OCT8, "shares", write=True, lab_dir=tmp_path)
+    assert rep["written"] == 1

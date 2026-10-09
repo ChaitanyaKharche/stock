@@ -64,6 +64,7 @@ LAB = ROOT / "live_lab_data"
 MIN_AGREEMENT = 0.90
 MATCH_MINUTES = 1
 RTH_OPEN, RTH_CLOSE = dt.time(9, 30), dt.time(16, 0)
+LAST_JOIN = dt.time(15, 54)      # a deferred position joining later would miss the 15:55 flatten
 TICK = dt.timedelta(minutes=1)
 GAP_RE = re.compile(r"between (\d\d:\d\d:\d\d) and (\d\d:\d\d:\d\d)")
 ARM_DIR = {"options": LAB, "shares": LAB / "shares"}
@@ -147,6 +148,35 @@ def uncovered(gap, covered, min_sec: float = 60.0) -> list[tuple[dt.datetime, dt
     return [(a, b) for a, b in pieces if (b - a).total_seconds() >= min_sec]
 
 
+def verdict(gap, live: dict, rec: dict, grade: str) -> str | None:
+    """None: the correction stands. Otherwise why the live exit stands instead.
+
+    `gap` is the unmanaged stretch the position was open across, or (x, x) for a live exit
+    at/after 16:00 or on a stale mark (never a real fill). Shared by recover() and
+    overcorrections() so the rule that writes a correction and the rule that audits it
+    cannot drift apart.
+
+    CORRECTED 2026-10-08 (review): a correction used to stand whenever the replay differed
+    from live at all. On 09-24 that replaced a live 15:57 flatten -- late because of a
+    network freeze, not the 14:55-15:27 sleep -- with a 15:55 history quote; on 09-18 an
+    ESTIMATE (parameters unknown, 15:55 flatten assumed) replaced stops live saw fire at
+    14:38-14:54, after the runner woke. Once the runner is managing again its exit is an
+    observation; the replay may only override it with an exit INSIDE the unmanaged
+    stretch, or with a different rule from a real rebuild (a trail raised inside the gap).
+    """
+    a, b = gap
+    same_rule = rec.get("exit_reason") == live.get("exit_reason")
+    if same_rule and _minutes_apart(rec["exit_ts"], live["exit_ts"]) <= MATCH_MINUTES:
+        return "replay exits by the same rule within a minute of live"
+    if a == b or _ts(rec["exit_ts"]) <= b + TICK:
+        return None
+    if grade == "estimated":
+        return "an estimate cannot override an exit live made after the gap"
+    if same_rule:
+        return "same rule as live, after the gap ended: the live exit stands"
+    return None
+
+
 def affected(trades: list[dict], gaps) -> dict[int, tuple]:
     """index -> gap, for trades that were OPEN when a gap began (or closed after 16:00)."""
     out = {}
@@ -197,11 +227,15 @@ def _drive(lab, clock, day, tick_fn, flatten_reason, deferred):
     'recovery' that contradicts the record it is meant to complete."""
     t = dt.datetime.combine(day, RTH_OPEN) + BF.TICK_OFFSET
     close = dt.datetime.combine(day, RTH_CLOSE)
+    # CORRECTED 2026-10-08: a position due to join at or after 16:00 (a live exit after the
+    # close, or a stranded book managed past 15:55) never entered the book, was never
+    # flattened, and always came back "not replayable". It joins by LAST_JOIN instead.
+    last = dt.datetime.combine(day, LAST_JOIN)
     while t < close:
         clock.now = t
         if hasattr(lab, "_chain_cache"):
             lab._chain_cache.clear()
-        for item in [d for d in deferred if d[0] <= t]:
+        for item in [d for d in deferred if min(d[0], last) <= t]:
             deferred.remove(item)
             lab.open_pos.append(item[1])
         tick_fn(t, day)
@@ -407,7 +441,9 @@ def recover(day: dt.date, arm: str, write: bool = False, lab_dir: Path | None = 
     trades = [t for t in _jsonl(arm_dir / "trades.jsonl") if t["entry_ts"][:10] == day.isoformat()]
     suspends = find_gaps(arm_dir, day)
     caught_up = catchup_windows(arm_dir, day)
-    gaps = [p for g in suspends for p in uncovered(g, caught_up)]
+    open_, close = (dt.datetime.combine(day, x) for x in (RTH_OPEN, RTH_CLOSE))
+    gaps = [(max(a, open_), min(b, close)) for g in suspends for a, b in uncovered(g, caught_up)
+            if a < close and b > open_]
     hit = affected(trades, gaps)
     iso = lambda ws: [[a.isoformat(), b.isoformat()] for a, b in ws]   # noqa: E731
     rep = {"day": day.isoformat(), "arm": arm, "suspends": iso(suspends),
@@ -438,12 +474,11 @@ def recover(day: dt.date, arm: str, write: bool = False, lab_dir: Path | None = 
                    f"replay exited at {r['exit_ts'][11:16]}, before the gap, which live did not")
             rows.append({**base, "status": "unrecoverable", "why": why})
             continue
-        if (r["exit_reason"] == t.get("exit_reason")
-                and _minutes_apart(r["exit_ts"], t["exit_ts"]) <= MATCH_MINUTES):
-            # Nothing was stolen: the rules exit where live did. A history estimate of the
-            # same exit is worse than the fill that was actually observed.
-            rows.append({**base, "status": "live_confirmed",
-                         "why": "replay exits by the same rule within a minute of live"})
+        why = verdict(g, t, r, _grade(r))
+        if why:
+            # Nothing was stolen. A history estimate of an exit live observed is worse
+            # than the fill that was actually observed.
+            rows.append({**base, "status": "live_confirmed", "why": why})
             continue
         status = {"exact": "recovered", "approximate": "recovered_approximate",
                   "estimated": "estimated"}[_grade(r)]
@@ -535,21 +570,25 @@ def overcorrections(arm_dir: Path, day: dt.date, key: str) -> list[tuple[dict, s
         if c.get("kind") == "gap_recovery" and c.get("day") == day.isoformat() and c.get(key):
             latest[c[key]] = c
     out = []
+    grades = {"recovered": "exact", "recovered_approximate": "approximate",
+              "estimated": "estimated"}
     for k, c in latest.items():
-        if c.get("status") not in ("recovered", "recovered_approximate", "estimated"):
+        if c.get("status") not in grades:
             continue
         o, r = c["original"], c["recovered"]
         a, b = (_ts(x) for x in c["gap"])
+        gap = (a, b)
         if a != b:                       # a == b: closed at/after 16:00 or on a stale mark
             e, x = entry.get(k), _ts(o["exit_ts"])
-            if e is None or not any(e < u0 <= x for u0, _ in uncovered((a, b), caught_up)):
+            hit = [u for u in uncovered((a, b), caught_up) if e is not None and e < u[0] <= x]
+            if not hit:
                 out.append((c, "no unmanaged minute while it was open: the catch-up replayed "
                                "the gap at the real minutes, so the live exit stands"))
                 continue
-        if (r.get("exit_reason") == o.get("exit_reason")
-                and _minutes_apart(r["exit_ts"], o["exit_ts"]) <= MATCH_MINUTES):
-            out.append((c, "replay exits by the same rule within a minute of live, so the "
-                           "live fill stands"))
+            gap = hit[0]
+        why = verdict(gap, o, r, grades[c["status"]])
+        if why:
+            out.append((c, why))
     return out
 
 
