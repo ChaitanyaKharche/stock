@@ -62,6 +62,7 @@ from . import store as S
 ROOT = Path(__file__).resolve().parents[2]
 LAB = ROOT / "live_lab_data"
 MIN_AGREEMENT = 0.90
+MIN_CHECKS = 20     # fewer checkable exits than this cannot vouch for a replay
 MATCH_MINUTES = 1
 RTH_OPEN, RTH_CLOSE = dt.time(9, 30), dt.time(16, 0)
 LAST_JOIN = dt.time(15, 54)      # a deferred position joining later would miss the 15:55 flatten
@@ -148,13 +149,22 @@ def uncovered(gap, covered, min_sec: float = 60.0) -> list[tuple[dt.datetime, dt
     return [(a, b) for a, b in pieces if (b - a).total_seconds() >= min_sec]
 
 
-def verdict(gap, live: dict, rec: dict, grade: str) -> str | None:
+def open_across(entry: dt.datetime, exit_: dt.datetime, gaps) -> list[tuple]:
+    """Every unmanaged stretch that began while the position was open."""
+    return sorted({(a, b) for a, b in gaps if entry < a <= exit_})
+
+
+def verdict(gaps, live: dict, rec: dict, grade: str) -> str | None:
     """None: the correction stands. Otherwise why the live exit stands instead.
 
-    `gap` is the unmanaged stretch the position was open across, or (x, x) for a live exit
-    at/after 16:00 or on a stale mark (never a real fill). Shared by recover() and
-    overcorrections() so the rule that writes a correction and the rule that audits it
-    cannot drift apart.
+    `gaps` is EVERY unmanaged stretch the position was open across, or [(x, x)] for a live
+    exit at/after 16:00 or on a stale mark (never a real fill). Shared by recover() and
+    the audit so the rule that writes a correction and the rule that audits it cannot
+    drift apart.
+
+    CORRECTED 2026-10-08 (second review): only the FIRST stretch was looked at. On 09-18
+    the host slept 14:21-14:34 and again 15:03-15:55; a replay stop at 15:51, inside the
+    second sleep, was judged "after the gap ended" and two real steals were retracted.
 
     CORRECTED 2026-10-08 (review): a correction used to stand whenever the replay differed
     from live at all. On 09-24 that replaced a live 15:57 flatten -- late because of a
@@ -164,17 +174,52 @@ def verdict(gap, live: dict, rec: dict, grade: str) -> str | None:
     observation; the replay may only override it with an exit INSIDE the unmanaged
     stretch, or with a different rule from a real rebuild (a trail raised inside the gap).
     """
-    a, b = gap
+    gaps = [tuple(g) for g in gaps]
     same_rule = rec.get("exit_reason") == live.get("exit_reason")
     if same_rule and _minutes_apart(rec["exit_ts"], live["exit_ts"]) <= MATCH_MINUTES:
         return "replay exits by the same rule within a minute of live"
-    if a == b or _ts(rec["exit_ts"]) <= b + TICK:
+    t = _ts(rec["exit_ts"])
+    if grade == "estimated" and _ts(live["exit_ts"]) <= t + TICK:
+        # An estimate knows only "the 15:55 flatten" (its parameters are unknown). It can
+        # correct a live exit made LATER than that -- after-hours, on a stale mark -- but a
+        # live fill taken by then, even on the wake-up tick, is a real in-session quote.
+        return "an estimate only assumes the 15:55 flatten, and live closed no later than that"
+    if not gaps or any(a == b for a, b in gaps) or any(a <= t <= b + TICK for a, b in gaps):
         return None
     if grade == "estimated":
-        return "an estimate cannot override an exit live made after the gap"
+        return "an estimate cannot override an exit live made outside every unmanaged stretch"
     if same_rule:
-        return "same rule as live, after the gap ended: the live exit stands"
+        return "same rule as live, outside every unmanaged stretch: the live exit stands"
     return None
+
+
+def gate(validation: dict | None) -> dict:
+    """{grade: None if this day's self-check lets that grade through, else why not}.
+
+    CORRECTED 2026-10-08 (second review): the EXACT pool decided the whole day whenever it
+    was non-empty. 09-11 was refused on 4 of 5 exact checks although the approximate pool
+    agreed on 61 of 62 -- leaving 32 exits on after-hours prices -- while 09-17, 09-18 and
+    09-24 passed on 2-6 exact checks and then wrote dozens of APPROXIMATE rows. Now the
+    pooled checks must number MIN_CHECKS and agree MIN_AGREEMENT, and a grade with enough
+    checks of its own must pass on them too.
+    """
+    grades = ("exact", "approximate", "estimated")
+    if not validation:
+        return {g: "no self-check recorded" for g in grades}
+    ex, ap = validation["exact"], validation["approximate"]
+    n = ex["checked"] + ap["checked"]
+    pooled = (ex["same_rule"] + ap["same_rule"]) / n if n else 0.0
+    if n < MIN_CHECKS:
+        return {g: f"only {n} exits could be checked; needs {MIN_CHECKS}" for g in grades}
+    if pooled < MIN_AGREEMENT:
+        return {g: f"replay reproduced the exit rule of {pooled:.0%} of {n} checkable exits; "
+                   f"needs {MIN_AGREEMENT:.0%}" for g in grades}
+    out = {"estimated": None}
+    for g, v in (("exact", ex), ("approximate", ap)):
+        own = v.get("rule_agreement")
+        out[g] = (f"{g} rebuilds reproduced {own:.0%} of {v['checked']}; needs {MIN_AGREEMENT:.0%}"
+                  if v["checked"] >= MIN_CHECKS and own is not None and own < MIN_AGREEMENT else None)
+    return out
 
 
 def affected(trades: list[dict], gaps) -> dict[int, tuple]:
@@ -474,7 +519,9 @@ def recover(day: dt.date, arm: str, write: bool = False, lab_dir: Path | None = 
                    f"replay exited at {r['exit_ts'][11:16]}, before the gap, which live did not")
             rows.append({**base, "status": "unrecoverable", "why": why})
             continue
-        why = verdict(g, t, r, _grade(r))
+        spans = [g] if g[0] == g[1] else open_across(_ts(t["entry_ts"]), _ts(t["exit_ts"]), gaps)
+        base["gaps"] = [[a.isoformat(), b.isoformat()] for a, b in spans]
+        why = verdict(spans, t, r, _grade(r))
         if why:
             # Nothing was stolen. A history estimate of an exit live observed is worse
             # than the fill that was actually observed.
@@ -494,10 +541,14 @@ def recover(day: dt.date, arm: str, write: bool = False, lab_dir: Path | None = 
                         for s in ("recovered", "recovered_approximate", "estimated",
                                   "unrecoverable", "live_confirmed")}
 
+    allowed = gate(rep["validation"])
+    rep["gate"] = allowed
+    grade_of = {"recovered": "exact", "recovered_approximate": "approximate", "estimated": "estimated"}
+    writable = [x for x in rows if x["status"] in grade_of]
+    if writable and all(allowed[grade_of[x["status"]]] for x in writable):
+        rep["refused"] = next(allowed[grade_of[x["status"]]] for x in writable)
     if write:
-        if agreement < MIN_AGREEMENT:
-            rep["refused"] = (f"replay reproduced the exit rule of {agreement:.0%} of the exits "
-                              f"it could check; needs {MIN_AGREEMENT:.0%}")
+        if rep.get("refused"):
             _mark_run(arm_dir, rep)
             return rep
         path = arm_dir / "trade_corrections.jsonl"
@@ -505,8 +556,10 @@ def recover(day: dt.date, arm: str, write: bool = False, lab_dir: Path | None = 
         stamp = dt.datetime.now().isoformat(timespec="seconds")
         with open(path, "a", encoding="utf-8") as fh:
             for x in rows:
-                if (x["kind"], x[key]) in done or x["status"] == "live_confirmed":
+                if (x["kind"], x[key]) in done or x["status"] not in grade_of                         and x["status"] != "unrecoverable":
                     continue
+                if x["status"] in grade_of and allowed[grade_of[x["status"]]]:
+                    continue          # this grade did not pass the day's self-check
                 fh.write(json.dumps({**x, "validation": rep["validation"], "written_at": stamp,
                                      "method": "history 1m bars + 1m NBBO/chain replayed through "
                                                "the runner's own exit code (gap_recovery.py)"})
@@ -554,61 +607,106 @@ def apply_corrections(trades: list[dict], corrections: list[dict], key: str,
     return out
 
 
-def overcorrections(arm_dir: Path, day: dt.date, key: str) -> list[tuple[dict, str]]:
-    """Corrections in force for `day` that the current rule would NOT write, with why.
+GRADE_OF = {"recovered": "exact", "recovered_approximate": "approximate", "estimated": "estimated"}
 
-    Judged from what each correction recorded -- its gap, original and recovered exit -- plus
-    the day's catch-up events, so no replay is needed. A correction stands only if the
-    position was open when an UNMANAGED stretch began (or it closed at/after 16:00 or on a
-    stale mark), AND the recovered exit differs from live by rule or by more than a minute.
-    """
+
+def _day_gaps(arm_dir: Path, day: dt.date) -> list[tuple]:
+    """The day's unmanaged stretches, exactly as recover() computes them."""
     caught_up = catchup_windows(arm_dir, day)
+    open_, close = (dt.datetime.combine(day, x) for x in (RTH_OPEN, RTH_CLOSE))
+    return [(max(a, open_), min(b, close)) for g in find_gaps(arm_dir, day)
+            for a, b in uncovered(g, caught_up) if a < close and b > open_]
+
+
+def judge(c: dict, entry: dt.datetime | None, day_gaps, caught_up) -> str | None:
+    """None if correction `c` should be in force under the current rules, else why not.
+
+    Judged from what the correction recorded (its window, original and recovered exit,
+    the day's self-check) plus the day's unmanaged stretches -- no replay needed. The
+    correction's own window is included, so one written for a window passed in by hand
+    (2026-10-02's network freeze) is judged on that window."""
+    o, r = c["original"], c["recovered"]
+    a, b = (_ts(x) for x in c["gap"])
+    if a == b:                           # closed at/after 16:00 or on a stale mark
+        spans = [(a, b)]
+    else:
+        x = _ts(o["exit_ts"])
+        pool = set(day_gaps) | set(uncovered((a, b), caught_up))
+        spans = [] if entry is None else open_across(entry, x, pool)
+        if not spans:
+            return ("no unmanaged minute while it was open: the catch-up replayed the gap "
+                    "at the real minutes, so the live exit stands")
+    blocked = gate(c.get("validation")).get(GRADE_OF[c["status"]])
+    if blocked:
+        return f"the day's self-check does not vouch for it: {blocked}"
+    return verdict(spans, o, r, GRADE_OF[c["status"]])
+
+
+def audit(arm_dir: Path, day: dt.date, key: str) -> tuple[list, list]:
+    """-> (retract, reinstate), each [(correction, why)].
+
+    retract:   corrections in force that the current rules would not write.
+    reinstate: corrections a later line retracted that the current rules WOULD write --
+               the second review found two real 09-18 steals retracted by the first-gap
+               bug. The latest line per position wins in apply_corrections, so a
+               reinstatement is simply the correction appended again."""
+    caught_up = catchup_windows(arm_dir, day)
+    day_gaps = _day_gaps(arm_dir, day)
     entry = {t.get(key): _ts(t["entry_ts"]) for t in _jsonl(arm_dir / "trades.jsonl")
              if str(t.get("entry_ts", ""))[:10] == day.isoformat()}
     latest: dict = {}
+    last_real: dict = {}
     for c in _jsonl(arm_dir / "trade_corrections.jsonl"):
-        if c.get("kind") == "gap_recovery" and c.get("day") == day.isoformat() and c.get(key):
-            latest[c[key]] = c
-    out = []
-    grades = {"recovered": "exact", "recovered_approximate": "approximate",
-              "estimated": "estimated"}
-    for k, c in latest.items():
-        if c.get("status") not in grades:
+        if c.get("kind") != "gap_recovery" or c.get("day") != day.isoformat() or not c.get(key):
             continue
-        o, r = c["original"], c["recovered"]
-        a, b = (_ts(x) for x in c["gap"])
-        gap = (a, b)
-        if a != b:                       # a == b: closed at/after 16:00 or on a stale mark
-            e, x = entry.get(k), _ts(o["exit_ts"])
-            hit = [u for u in uncovered((a, b), caught_up) if e is not None and e < u[0] <= x]
-            if not hit:
-                out.append((c, "no unmanaged minute while it was open: the catch-up replayed "
-                               "the gap at the real minutes, so the live exit stands"))
-                continue
-            gap = hit[0]
-        why = verdict(gap, o, r, grades[c["status"]])
-        if why:
-            out.append((c, why))
-    return out
+        latest[c[key]] = c
+        if c.get("status") in GRADE_OF:
+            last_real[c[key]] = c
+    retract_, reinstate = [], []
+    for k, c in latest.items():
+        if c.get("status") in GRADE_OF:
+            why = judge(c, entry.get(k), day_gaps, caught_up)
+            if why:
+                retract_.append((c, why))
+        elif c.get("status") == "retracted" and k in last_real:
+            if judge(last_real[k], entry.get(k), day_gaps, caught_up) is None:
+                reinstate.append((last_real[k], "the current rules write this correction"))
+    return retract_, reinstate
 
 
-def retract(arm_dir: Path, day: dt.date, key: str, write: bool = False,
-            note: str = "") -> list[tuple[dict, str]]:
-    """Append a `retracted` line for each over-correction. Nothing is deleted: the original
-    correction stays in the file, and apply_corrections restores the live row."""
-    bad = overcorrections(arm_dir, day, key)
-    if write and bad:
+def overcorrections(arm_dir: Path, day: dt.date, key: str) -> list[tuple[dict, str]]:
+    """Corrections in force that the current rules would not write (see audit)."""
+    return audit(arm_dir, day, key)[0]
+
+
+def reconcile(arm_dir: Path, day: dt.date, key: str, write: bool = False,
+              note: str = "") -> tuple[list, list]:
+    """Bring the corrections for `day` in line with the current rules by APPENDING lines:
+    `retracted` for each over-correction, the correction again for each reinstatement.
+    Nothing is deleted; apply_corrections reads the latest line per position."""
+    retract_, reinstate = audit(arm_dir, day, key)
+    if write and (retract_ or reinstate):
         stamp = dt.datetime.now().isoformat(timespec="seconds")
+        suffix = f" ({note})" if note else ""
         with open(arm_dir / "trade_corrections.jsonl", "a", encoding="utf-8") as fh:
-            for c, why in bad:
+            for c, why in retract_:
                 fh.write(json.dumps({"kind": "gap_recovery", "status": "retracted",
                                      "arm": c.get("arm"), "day": c.get("day"), "key": key,
                                      key: c[key], "setup_id": c.get("setup_id"),
                                      "symbol": c.get("symbol"),
                                      "retracts_written_at": c.get("written_at"),
-                                     "why": why + (f" ({note})" if note else ""),
-                                     "written_at": stamp}) + "\n")
-    return bad
+                                     "why": why + suffix, "written_at": stamp}) + "\n")
+            for c, why in reinstate:
+                fh.write(json.dumps({**c, "reinstated": True,
+                                     "reinstates_written_at": c.get("written_at"),
+                                     "why": why + suffix, "written_at": stamp}) + "\n")
+    return retract_, reinstate
+
+
+def retract(arm_dir: Path, day: dt.date, key: str, write: bool = False,
+            note: str = "") -> list[tuple[dict, str]]:
+    """reconcile(), returning only the retractions (kept for callers and tests)."""
+    return reconcile(arm_dir, day, key, write, note)[0]
 
 
 def main(argv=None) -> int:
@@ -626,17 +724,21 @@ def main(argv=None) -> int:
     for arm in (["shares", "options"] if a.arm == "both" else [a.arm]):
         if a.retract:
             key = "signal_id" if arm == "shares" else "position_id"
-            bad = retract(dirs[arm], day, key, write=a.write, note=a.note)
-            delta = sum((c["original"].get("pnl_net") or 0) - (c["recovered"].get("pnl_net") or 0)
-                        for c, _ in bad)
-            print(f"{arm} {day}: {len(bad)} over-correction(s){' RETRACTED' if a.write else ''}"
-                  f"; the corrected total moves by {delta:+.2f}")
-            for c, why in bad:
-                o, r = c["original"], c["recovered"]
-                print(f"  {c['setup_id']:<24}{c['symbol']:<6}live {o.get('exit_reason')!s:<9}"
-                      f"{o['exit_ts'][11:16]} {o.get('pnl_net') or 0:+8.2f}   recovery "
-                      f"{r.get('exit_reason')!s:<9}{r['exit_ts'][11:16]} {r.get('pnl_net') or 0:+8.2f}"
-                      f"   {why[:60]}")
+            bad, back = reconcile(dirs[arm], day, key, write=a.write, note=a.note)
+            delta = (sum((c["original"].get("pnl_net") or 0) - (c["recovered"].get("pnl_net") or 0)
+                         for c, _ in bad)
+                     + sum((c["recovered"].get("pnl_net") or 0) - (c["original"].get("pnl_net") or 0)
+                           for c, _ in back))
+            done = " DONE" if a.write else ""
+            print(f"{arm} {day}: {len(bad)} to retract, {len(back)} to reinstate{done}; "
+                  f"the corrected total moves by {delta:+.2f}")
+            for tag, rows in (("retract", bad), ("reinstate", back)):
+                for c, why in rows:
+                    o, r = c["original"], c["recovered"]
+                    print(f"  {tag:<10}{c['setup_id']:<24}{c['symbol']:<6}live "
+                          f"{o.get('exit_reason')!s:<9}{o['exit_ts'][11:16]} {o.get('pnl_net') or 0:+8.2f}"
+                          f"   recovery {r.get('exit_reason')!s:<9}{r['exit_ts'][11:16]} "
+                          f"{r.get('pnl_net') or 0:+8.2f}   {why[:60]}")
             continue
         rep = recover(day, arm, write=a.write, lab_dir=dirs[arm])
         print(json.dumps({k: v for k, v in rep.items() if k != "rows"}, indent=1))

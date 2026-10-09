@@ -97,22 +97,31 @@ def test_only_exact_recoveries_are_applied_by_default_and_originals_survive():
 
 # ------------------------------------------------------------ 2. append-only
 
+def _closed(day, n=21):
+    """The self-check pool: trades that closed while the runner was managing them. The gate
+    needs at least MIN_CHECKS of them before it will vouch for a replay."""
+    return [{"signal_id": f"done{i}", "setup_id": "ORB_5min", "symbol": "XLF",
+             "entry_ts": f"{day}T09:48:00", "exit_ts": f"{day}T10:05:03",
+             "exit_px": 54.4, "exit_reason": "target", "pnl_net": 36.65} for i in range(n)]
+
+
+def _replayed(closed, agree=True):
+    return {t["signal_id"]: {**t, "exit_ts": t["exit_ts"][:-2] + "02", "pnl_net": 36.0,
+                             "exit_reason": "target" if agree else "stop",
+                             "rebuild": "exact (recorded at entry)"} for t in closed}
+
+
 def _lab(tmp_path, monkeypatch, agreement_rule=True):
     _write(tmp_path / "outages.jsonl", SUSPENDS)
+    closed = _closed("2026-09-25")
     trades = [
         {"signal_id": "open", "setup_id": "Crabel_Stretch", "symbol": "XLP",
          "entry_ts": "2026-09-25T09:52:00", "exit_ts": "2026-09-25T16:19:11",
-         "exit_px": 76.66, "exit_reason": "eod", "pnl_net": -620.34},
-        {"signal_id": "done", "setup_id": "ORB_5min", "symbol": "XLF",
-         "entry_ts": "2026-09-25T09:48:00", "exit_ts": "2026-09-25T10:05:03",
-         "exit_px": 54.4, "exit_reason": "target", "pnl_net": 36.65},
-    ]
+         "exit_px": 76.66, "exit_reason": "eod", "pnl_net": -620.34}] + closed
     _write(tmp_path / "trades.jsonl", trades)
     fake = {"open": {"signal_id": "open", "exit_ts": "2026-09-25T15:56:02", "exit_px": 82.08,
                      "exit_reason": "eod", "pnl_net": 42.82, "rebuild": "exact (recorded at entry)"},
-            "done": {"signal_id": "done", "exit_ts": "2026-09-25T10:05:02", "exit_px": 54.4,
-                     "exit_reason": "target" if agreement_rule else "stop", "pnl_net": 36.0,
-                     "rebuild": "exact (recorded at entry)"}}
+            **_replayed(closed, agreement_rule)}
     monkeypatch.setattr(G, "replay_shares", lambda day, trades, arm_dir, activate=None: (fake, []))
     return trades
 
@@ -239,19 +248,15 @@ def _oct8(tmp_path, monkeypatch, caught_up=True, replay_exit=("eod", "2026-10-08
     _write(tmp_path / "events.jsonl", [
         {"ts": "2026-10-08T15:52:13", "kind": "caught_up", "since": "2026-10-08T15:13:24.86",
          "until": "2026-10-08T15:52:01.65"}] if caught_up else [])
+    closed = _closed("2026-10-08")
     trades = [
         {"signal_id": "open", "setup_id": "Crabel_Stretch", "symbol": "XLY",
          "entry_ts": "2026-10-08T10:02:02", "exit_ts": live_exit[1],
-         "exit_px": 110.0, "exit_reason": live_exit[0], "pnl_net": 50.41},
-        {"signal_id": "done", "setup_id": "ORB_5min", "symbol": "XLF",
-         "entry_ts": "2026-10-08T09:48:00", "exit_ts": "2026-10-08T10:05:03",
-         "exit_px": 54.4, "exit_reason": "target", "pnl_net": 36.65}]
+         "exit_px": 110.0, "exit_reason": live_exit[0], "pnl_net": 50.41}] + closed
     _write(tmp_path / "trades.jsonl", trades)
     reason, ts, pnl = replay_exit
     fake = {"open": {"signal_id": "open", "exit_ts": ts, "exit_px": 110.1, "exit_reason": reason,
-                     "pnl_net": pnl, "rebuild": rebuild},
-            "done": {"signal_id": "done", "exit_ts": "2026-10-08T10:05:02", "exit_px": 54.4,
-                     "exit_reason": "target", "pnl_net": 36.0, "rebuild": "exact (recorded at entry)"}}
+                     "pnl_net": pnl, "rebuild": rebuild}, **_replayed(closed)}
     monkeypatch.setattr(G, "replay_shares", lambda day, trades, arm_dir, activate=None: (fake, []))
 
 
@@ -307,8 +312,12 @@ def test_overcorrections_keep_the_stolen_and_retract_the_rest(tmp_path):
     _write(tmp_path / "trades.jsonl", [
         {"signal_id": k, "entry_ts": f"{day}T09:40:00"} for k in ("cov", "stolen", "same", "late")])
 
+    passing = {"exact": {"checked": 30, "same_rule": 30, "rule_agreement": 1.0},
+               "approximate": {"checked": 0, "same_rule": 0, "rule_agreement": None}}
+
     def c(k, gap, live, rec):
         return {"kind": "gap_recovery", "status": "recovered", "day": day, "signal_id": k,
+                "validation": passing,
                 "setup_id": "S", "symbol": "X", "gap": [f"{day}T{gap[0]}", f"{day}T{gap[1]}"],
                 "original": {"exit_reason": live[0], "exit_ts": f"{day}T{live[1]}", "pnl_net": live[2]},
                 "recovered": {"exit_reason": rec[0], "exit_ts": f"{day}T{rec[1]}", "pnl_net": rec[2]},
@@ -384,4 +393,151 @@ def test_the_same_rule_inside_the_gap_is_still_stolen(tmp_path, monkeypatch):
     _oct8(tmp_path, monkeypatch, caught_up=False, live_exit=("time", "2026-10-08T15:40:02"),
           replay_exit=("time", "2026-10-08T15:20:02", -5.0))
     rep = G.recover(OCT8, "shares", write=True, lab_dir=tmp_path)
+    assert rep["written"] == 1
+
+
+
+# ------------------------------------------------------------ 8. the second review (2026-10-08)
+
+TWO_SLEEPS = [  # 2026-09-18: asleep 14:21:33-14:34:44, then 15:03:33-15:55:29
+    {"ts": "2026-10-08T14:34:50", "kind": "host_suspend",
+     "detail": "host suspended or clock stepped: 791s unaccounted between 14:21:33 and 14:34:44 ET"},
+    {"ts": "2026-10-08T15:55:35", "kind": "host_suspend",
+     "detail": "host suspended or clock stepped: 3116s unaccounted between 15:03:33 and 15:55:29 ET"}]
+
+
+def _two_sleeps(tmp_path, monkeypatch, live=("stop", "2026-10-08T15:55:39"),
+                rec=("stop", "2026-10-08T15:51:02", -10.0), rebuild="exact (recorded at entry)"):
+    _write(tmp_path / "outages.jsonl", TWO_SLEEPS)
+    closed = _closed("2026-10-08")
+    _write(tmp_path / "trades.jsonl", [
+        {"signal_id": "open", "setup_id": "ORB_15min", "symbol": "AAPL",
+         "entry_ts": "2026-10-08T10:00:02", "exit_ts": live[1], "exit_px": 330.0,
+         "exit_reason": live[0], "pnl_net": -40.0}] + closed)
+    fake = {"open": {"signal_id": "open", "exit_ts": rec[1], "exit_px": 331.0,
+                     "exit_reason": rec[0], "pnl_net": rec[2], "rebuild": rebuild},
+            **_replayed(closed)}
+    monkeypatch.setattr(G, "replay_shares", lambda day, trades, arm_dir, activate=None: (fake, []))
+
+
+def test_a_replay_exit_inside_a_later_sleep_is_stolen(tmp_path, monkeypatch):
+    # The stop was due at 15:51, inside the SECOND sleep; live took it on the wake-up tick.
+    _two_sleeps(tmp_path, monkeypatch)
+    rep = G.recover(OCT8, "shares", write=True, lab_dir=tmp_path)
+    assert rep["written"] == 1, rep.get("rows")
+    assert len(_fixes(tmp_path)[0]["gaps"]) == 2
+
+
+def test_an_estimate_that_is_the_live_flatten_is_confirmed(tmp_path, monkeypatch):
+    _oct8(tmp_path, monkeypatch, caught_up=False, live_exit=("eod", "2026-10-08T15:56:01"),
+          replay_exit=("eod_estimate", "2026-10-08T15:56:02", 9.0),
+          rebuild="estimate (parameters unknown; 15:55 flatten assumed)")
+    rep = G.recover(OCT8, "shares", write=True, lab_dir=tmp_path)
+    assert rep["by_status"]["live_confirmed"] == 1 and rep["written"] == 0
+
+
+def _val(ex, ex_n, ap, ap_n):
+    return {"exact": {"checked": ex_n, "same_rule": ex, "rule_agreement": ex / ex_n if ex_n else None},
+            "approximate": {"checked": ap_n, "same_rule": ap,
+                            "rule_agreement": ap / ap_n if ap_n else None}}
+
+
+def test_the_gate_judges_each_grade_on_enough_checks():
+    # 09-11: refused on 4 of 5 exact although 61 of 62 approximate agreed -- now it passes.
+    assert G.gate(_val(4, 5, 61, 62)) == {"exact": None, "approximate": None, "estimated": None}
+    # 09-18-like: 2 exact + 10 approximate is too few to vouch for anything.
+    assert all(G.gate(_val(2, 2, 10, 10)).values())
+    # A large exact pool that fails blocks exact rebuilds, not the approximate ones.
+    g = G.gate(_val(25, 30, 100, 100))
+    assert g["exact"] and g["approximate"] is None
+    assert all(G.gate(None).values())
+
+
+def test_a_day_whose_self_check_is_too_small_writes_nothing(tmp_path, monkeypatch):
+    _write(tmp_path / "outages.jsonl", TWO_SLEEPS)
+    closed = _closed("2026-10-08", n=5)
+    _write(tmp_path / "trades.jsonl", [
+        {"signal_id": "open", "setup_id": "S", "symbol": "X", "entry_ts": "2026-10-08T10:00:02",
+         "exit_ts": "2026-10-08T15:55:39", "exit_reason": "stop", "pnl_net": -40.0}] + closed)
+    fake = {"open": {"signal_id": "open", "exit_ts": "2026-10-08T15:51:02", "exit_reason": "stop",
+                     "pnl_net": -10.0, "rebuild": "exact (recorded at entry)"}, **_replayed(closed)}
+    monkeypatch.setattr(G, "replay_shares", lambda day, trades, arm_dir, activate=None: (fake, []))
+    rep = G.recover(OCT8, "shares", write=True, lab_dir=tmp_path)
+    assert rep["written"] == 0 and "needs 20" in rep["refused"]
+
+
+def test_a_correction_retracted_by_the_first_gap_bug_is_reinstated(tmp_path):
+    _write(tmp_path / "outages.jsonl", TWO_SLEEPS)
+    _write(tmp_path / "trades.jsonl", [{"signal_id": "aapl", "entry_ts": "2026-10-08T10:00:02"}])
+    fix = {"kind": "gap_recovery", "status": "recovered", "day": "2026-10-08", "signal_id": "aapl",
+           "setup_id": "ORB_15min", "symbol": "AAPL", "validation": _val(30, 30, 0, 0),
+           "gap": ["2026-10-08T14:21:33", "2026-10-08T14:34:44"],
+           "original": {"exit_reason": "stop", "exit_ts": "2026-10-08T15:55:39", "pnl_net": -40.0},
+           "recovered": {"exit_reason": "stop", "exit_ts": "2026-10-08T15:51:02", "pnl_net": -10.0},
+           "written_at": "2026-09-18T16:00:00"}
+    undo = {"kind": "gap_recovery", "status": "retracted", "day": "2026-10-08", "signal_id": "aapl"}
+    _write(tmp_path / "trade_corrections.jsonl", [fix, undo])
+    bad, back = G.reconcile(tmp_path, OCT8, "signal_id", write=True)
+    assert bad == [] and [c["signal_id"] for c, _ in back] == ["aapl"]
+    view = G.apply_corrections([{"signal_id": "aapl", "pnl_net": -40.0}],
+                               G._jsonl(tmp_path / "trade_corrections.jsonl"), "signal_id")
+    assert view[0]["pnl_net"] == -10.0
+    assert G.reconcile(tmp_path, OCT8, "signal_id", write=True) == ([], []), "not idempotent"
+
+
+
+def test_an_estimate_is_compared_to_live_as_the_flatten_it_assumes():
+    span = [(_o8(15, 40), _o8(15, 57))]
+    live = {"exit_reason": "eod", "exit_ts": "2026-10-08T15:56:30"}
+    est = {"exit_reason": "eod_estimate", "exit_ts": "2026-10-08T15:56:02"}
+    assert G.verdict(span, live, est, "estimated") is not None, "an estimate equal to live overrode it"
+
+
+def test_only_the_grade_that_failed_its_check_is_withheld(tmp_path, monkeypatch):
+    # 25 exact rebuilds agree on only 20 (80%): exact rows are withheld. 100 approximate
+    # rebuilds agree on all: approximate rows are written. Pooled 120/125 passes.
+    _write(tmp_path / "outages.jsonl", TWO_SLEEPS)
+    exact = _closed("2026-10-08", n=25)
+    approx = [{**t, "signal_id": f"apx{i}"} for i, t in enumerate(_closed("2026-10-08", n=100))]
+    opens = [{"signal_id": k, "setup_id": "S", "symbol": "X", "entry_ts": "2026-10-08T10:00:02",
+              "exit_ts": "2026-10-08T15:55:39", "exit_reason": "stop", "pnl_net": -40.0}
+             for k in ("openA", "openB")]
+    _write(tmp_path / "trades.jsonl", opens + exact + approx)
+    fake = {**_replayed(exact), **_replayed(approx)}
+    for i, t in enumerate(exact[:5]):
+        fake[t["signal_id"]]["exit_reason"] = "stop"
+    for t in approx:
+        fake[t["signal_id"]]["rebuild"] = "approximate (recomputed on history bars)"
+    fake["openA"] = {"signal_id": "openA", "exit_ts": "2026-10-08T15:51:02", "exit_reason": "stop",
+                     "pnl_net": -10.0, "rebuild": "exact (recorded at entry)"}
+    fake["openB"] = {**fake["openA"], "signal_id": "openB",
+                     "rebuild": "approximate (recomputed on history bars)"}
+    monkeypatch.setattr(G, "replay_shares", lambda day, trades, arm_dir, activate=None: (fake, []))
+    rep = G.recover(OCT8, "shares", write=True, lab_dir=tmp_path)
+    assert rep["gate"]["exact"] and rep["gate"]["approximate"] is None
+    assert [f["signal_id"] for f in _fixes(tmp_path) if f["status"] != "unrecoverable"] == ["openB"]
+
+
+
+def test_an_estimate_never_replaces_a_live_fill_taken_by_the_flatten_it_assumes(tmp_path, monkeypatch):
+    # 09-18: woke at 15:55:29 and took the stop on the wake-up tick at 15:55:39. The
+    # estimate (parameters unknown) only says "flatten at 15:55" -- nothing better.
+    _two_sleeps(tmp_path, monkeypatch, rec=("eod_estimate", "2026-10-08T15:56:02", -24.37),
+                rebuild="estimate (parameters unknown; 15:55 flatten assumed)")
+    rep = G.recover(OCT8, "shares", write=True, lab_dir=tmp_path)
+    assert rep["written"] == 0 and rep["by_status"]["live_confirmed"] == 1
+
+
+def test_an_estimate_still_replaces_an_after_hours_fill(tmp_path, monkeypatch):
+    # 09-25's shape: woke at 16:19 and "sold" at an after-hours bid.
+    _write(tmp_path / "outages.jsonl", SUSPENDS)
+    closed = _closed("2026-09-25")
+    _write(tmp_path / "trades.jsonl", [
+        {"signal_id": "open", "setup_id": "S", "symbol": "XLP", "entry_ts": "2026-09-25T09:52:00",
+         "exit_ts": "2026-09-25T16:19:11", "exit_reason": "eod", "pnl_net": -620.34}] + closed)
+    fake = {"open": {"signal_id": "open", "exit_ts": "2026-09-25T15:56:02", "exit_reason": "eod_estimate",
+                     "pnl_net": 42.82, "rebuild": "estimate (parameters unknown; 15:55 flatten assumed)"},
+            **_replayed(closed)}
+    monkeypatch.setattr(G, "replay_shares", lambda day, trades, arm_dir, activate=None: (fake, []))
+    rep = G.recover(DAY, "shares", write=True, lab_dir=tmp_path)
     assert rep["written"] == 1
