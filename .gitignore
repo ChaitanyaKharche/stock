@@ -145,3 +145,6 @@ vrp_frame.tar.gz
 # ...but the replay's per-session runner logs ARE the record (research/replay_22_sessions.md)
 !live_lab_backfill/*/logs/
 !live_lab_backfill/*/logs/*.log
+
+# Day charts (trade_analysis/live_lab/day_charts.py): regenerable PNGs
+live_lab_charts/
