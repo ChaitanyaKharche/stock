@@ -202,7 +202,13 @@ class _Calls:
                 "start_terminal": note("start_terminal", self.start_ok),
                 "_evict_stale_terminal": note("evict", False),
                 "_graceful_shutdown": note("shutdown", True),
-                "_kill_terminals": note("kill", 0)}, run
+                "_kill_terminals": self.kill}, run
+
+    def kill(self, since=None):
+        # "kill" only when scoped to what the hook launched; an unscoped kill could take
+        # down the terminal a runner is using.
+        self.log.append("kill" if since is not None else "kill EVERY terminal")
+        return 0
 
 
 def _hook(calls, items, deadline=None, may_start=True):
@@ -281,6 +287,65 @@ def test_main_settles_stranded_positions_before_the_wait_and_in_the_evening():
         ("stranded", day, dt.datetime.combine(day, A.START_AT) - A.STRANDED_MARGIN, True),
         ("wait",),
         ("stranded", day + dt.timedelta(days=1), None, True)]
+
+
+def test_hook_leaves_everything_alone_while_a_runner_holds_its_lock():
+    # Review of 1d295bc: a runner orphaned by a killed supervisor keeps trading on the
+    # terminal. One missed 4s probe must not start, replay or kill anything.
+    from .lock import SingleInstance
+    c = _Calls(up=False)
+    fakes, run = c.fakes()
+    item = {"arm": "shares", "session_date": "2026-10-05", "status": "pending", "missing": [1]}
+    with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as tmp:
+        guard = SingleInstance("runner", tmp)
+        assert guard.acquire()
+        try:
+            with _patched(A, **fakes), _patched(subprocess, run=run),                     _patched(ST, pending=lambda lab_dir, before: [item]):
+                A.resolve_stranded(DAY, tmp, before=AFTER.date(), may_start_terminal=True)
+        finally:
+            guard.release()
+    assert c.log == []
+
+
+def test_the_lock_probe_sees_a_holder_and_does_not_relabel_it():
+    from .lock import SingleInstance, held
+    with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as tmp:
+        assert held("runner", tmp) is False                  # no lock file at all
+        guard = SingleInstance("runner", tmp)
+        assert guard.acquire()
+        before = guard.info.read_text(encoding="utf-8")
+        try:
+            assert held("runner", tmp) is True
+            assert guard.info.read_text(encoding="utf-8") == before
+        finally:
+            guard.release()
+        assert held("runner", tmp) is False
+
+
+def test_kill_terminals_spares_a_terminal_started_before_the_launch():
+    import psutil
+    jar = A.TERMINAL_CMD[-1]
+    killed = []
+
+    class P:
+        def __init__(self, pid, born):
+            self.pid, self.born = pid, born
+            self.info = {"cmdline": ["java", "-jar", jar]}
+
+        def create_time(self):
+            return self.born
+
+        def children(self, recursive=False):
+            return []
+
+        def kill(self):
+            killed.append(self.pid)
+
+    procs = [P(1, 100.0), P(2, 200.0)]
+    with _patched(psutil, process_iter=lambda attrs=None: iter(procs)):
+        assert A._kill_terminals(since=150.0) == 1
+        assert killed == [2]
+        assert A._kill_terminals() == 2                      # no `since`: every terminal
 
 
 def test_hook_never_raises():

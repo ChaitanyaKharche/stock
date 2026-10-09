@@ -105,3 +105,33 @@ class SingleInstance:
 
     def __exit__(self, *exc) -> None:
         self.release()
+
+
+def held(name: str, lab_dir: str | os.PathLike | None = None) -> bool:
+    """True if a LIVE process holds `name`'s lock. Takes and drops it without writing the
+    holder file, so a probe never relabels the lock it looked at."""
+    from .store import DEFAULT_LAB_DIR
+    path = (Path(lab_dir) if lab_dir else DEFAULT_LAB_DIR) / f"{name}.lock"
+    if not path.exists():
+        return False
+    try:
+        fh = open(path, "a+", encoding="utf-8")
+    except OSError:
+        return False
+    try:
+        fh.seek(0)
+        try:
+            if os.name == "nt":
+                msvcrt.locking(fh.fileno(), msvcrt.LK_NBLCK, 1)
+            else:
+                fcntl.flock(fh.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except OSError:
+            return True
+        fh.seek(0)
+        if os.name == "nt":
+            msvcrt.locking(fh.fileno(), msvcrt.LK_UNLCK, 1)
+        else:
+            fcntl.flock(fh.fileno(), fcntl.LOCK_UN)
+        return False
+    finally:
+        fh.close()
