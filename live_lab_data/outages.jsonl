@@ -2029,3 +2029,8 @@
 {"seq":9529,"ts":"2026-10-08T15:51:30.799506","kind":"feed","detail":"ConnectError('[WinError 10061] No connection could be made because the target machine actively refused it')","path":"/stock/history/ohlc"}
 {"seq":9530,"ts":"2026-10-08T15:51:31.088439","kind":"tick","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: ConnectError('[WinError 10061] No connection could be made because the target machine actively refused it')\")"}
 {"seq":9531,"ts":"2026-10-08T15:51:57.285024","kind":"feed","detail":"upstream recovered after 26s and 1 failed call(s)","path":"__recovered__"}
+{"seq":9690,"ts":"2026-10-09T10:56:04.068293","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/option/snapshot/quote"}
+{"seq":9691,"ts":"2026-10-09T10:56:47.259516","kind":"feed","detail":"upstream recovered after 43s and 7 failed call(s)","path":"__recovered__"}
+{"seq":9721,"ts":"2026-10-09T11:16:27.732798","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/option/snapshot/quote"}
+{"seq":9722,"ts":"2026-10-09T11:17:47.442852","kind":"feed","detail":"ConnectError('[WinError 10061] No connection could be made because the target machine actively refused it')","path":"/option/snapshot/quote"}
+{"seq":9723,"ts":"2026-10-09T11:18:08.341240","kind":"feed","detail":"upstream recovered after 101s and 13 failed call(s)","path":"__recovered__"}
