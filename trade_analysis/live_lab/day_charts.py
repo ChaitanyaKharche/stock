@@ -81,6 +81,21 @@ def lab_days(lab_dir: Path = LAB) -> list[dt.date]:
     return sorted(days)
 
 
+@functools.lru_cache(maxsize=4)
+def _not_sessions(lab_dir: str) -> frozenset:
+    """Dates the session ledger records as NOT_A_SESSION (weekends, market holidays)."""
+    out = set()
+    p = Path(lab_dir) / "session_ledger.jsonl"
+    for line in p.read_text(encoding="utf-8").splitlines() if p.exists() else []:
+        try:
+            r = json.loads(line)
+        except ValueError:
+            continue
+        if r.get("outcome") == "NOT_A_SESSION":
+            out.add(r.get("date"))
+    return frozenset(out)
+
+
 def _now() -> dt.datetime:
     from .clock import now_et
     return now_et()
@@ -91,19 +106,22 @@ def _settled(day: dt.date, now: dt.datetime | None = None) -> bool:
     return day < now.date() or (day == now.date() and now.time() >= SETTLED_AT)
 
 
-def load_bars(sym: str, day: dt.date, cache: Path, feed=None, now=None) -> list[dict] | None:
+def load_bars(sym: str, day: dt.date, cache: Path, feed=None, now=None,
+              lab_dir: Path = LAB) -> list[dict] | None:
     """1-minute bars 04:00-16:00 ET. None = not cached and no feed to fetch with.
 
     Never cached: today's bars before SETTLED_AT (a mid-session copy would be served
-    forever), and an EMPTY answer (a holiday is cheap to ask again; a vendor hiccup cached
-    as a holiday would silently move "yesterday" a day back). The write is atomic."""
+    forever), and an EMPTY answer unless the session ledger says the day was not a
+    session -- a vendor hiccup cached as a holiday would silently move "yesterday" a day
+    back, but a real holiday must be cached or --offline cannot draw the day after it.
+    The write is atomic."""
     path = cache / f"{sym}_{day.isoformat()}.pkl"
     if path.exists():
         return pickle.loads(path.read_bytes())
     if feed is None:
         return None
     bars = feed.extended_bars(sym, day, FETCH_FROM, RTH_CLOSE)
-    if bars and _settled(day, now):
+    if _settled(day, now) and (bars or day.isoformat() in _not_sessions(str(lab_dir))):
         cache.mkdir(parents=True, exist_ok=True)
         tmp = path.with_suffix(".tmp")
         tmp.write_bytes(pickle.dumps(bars))
@@ -128,6 +146,23 @@ def prior_session(sym: str, day: dt.date, cache: Path, feed=None, now=None) -> t
         if bars is None:
             return None
         if len(_rth(bars)) >= MIN_RTH_BARS:
+            return d, bars
+    return None
+
+
+def last_session(sym: str, day: dt.date, cache: Path, feed=None, now=None) -> tuple[dt.date, list] | None:
+    """The most recent earlier weekday with ANY market-hours bars: where the previous
+    close and the indicator warm-up come from. Unlike prior_session it does not skip a
+    half-day -- the day after Thanksgiving's 13:00 close changes against that close."""
+    d = day
+    for _ in range(10):
+        d -= dt.timedelta(days=1)
+        if d.weekday() >= 5:
+            continue
+        bars = load_bars(sym, d, cache, feed, now)
+        if bars is None:
+            return None
+        if _rth(bars):
             return d, bars
     return None
 
@@ -288,6 +323,34 @@ def _spread(prices: list[float], gap: float) -> list[float]:
     return pos
 
 
+def series(bars: list[dict], minutes: int, warm=()) -> dict:
+    """Everything drawn, as numbers: the 07:00-16:00 buckets and each indicator over them.
+
+    EMA, MACD and RSI run over `warm` (the previous session) and then today, so 07:00 is
+    not cold. The volume average uses TODAY's bars only: warmed on yesterday it carried
+    the close's volume into 07:00 (13x today's own average on the 15-minute chart)."""
+    today = resample(bars, minutes)
+    allb = resample(list(warm), minutes) + today
+    closes = [b["close"] for b in allb]
+    e9, e20 = ema(closes, 9), ema(closes, 20)
+    macd = [a - b for a, b in zip(ema(closes, 12), ema(closes, 26))]
+    sig = ema(macd, 9)
+    hist = [a - b for a, b in zip(macd, sig)]
+    r14 = rsi(closes, 14)
+    vt = [b["volume"] for b in today]
+    vma_today = [None if i < 19 else sum(vt[i - 19:i + 1]) / 20 for i in range(len(vt))]
+    off = len(allb) - len(today)
+    keep = [i for i, b in enumerate(today) if SHOW_FROM <= b["ts"].time() < RTH_CLOSE]
+    if not keep:
+        raise ValueError("no bars between 07:00 and 16:00")
+    j0, j1 = keep[0], keep[-1] + 1
+    view = today[j0:j1]
+    cut = lambda xs: xs[off + j0:off + j1]                     # noqa: E731
+    return {"view": view, "e9": cut(e9), "e20": cut(e20), "macd": cut(macd), "sig": cut(sig),
+            "hist": cut(hist), "rsi": cut(r14), "vma": vma_today[j0:j1],
+            "vwap": vwap_series(bars, view)}
+
+
 def build_figure(sym: str, day: dt.date, minutes: int, bars: list[dict], lines: list[dict] | None,
                  lines_note: str, prev_close: float | None, warn: str = "", warm=(),
                  line_times: dict | None = None):
@@ -300,25 +363,9 @@ def build_figure(sym: str, day: dt.date, minutes: int, bars: list[dict], lines: 
     from matplotlib.patches import Rectangle
 
     s = STYLE
-    today = resample(bars, minutes)
-    allb = resample(list(warm), minutes) + today       # indicators warm on yesterday
-    closes = [b["close"] for b in allb]
-    e9, e20 = ema(closes, 9), ema(closes, 20)
-    macd = [a - b for a, b in zip(ema(closes, 12), ema(closes, 26))]
-    sig = ema(macd, 9)
-    hist = [a - b for a, b in zip(macd, sig)]
-    r14 = rsi(closes, 14)
-    vols_all = [b["volume"] for b in allb]
-    vma = [None if i < 19 else sum(vols_all[i - 19:i + 1]) / 20 for i in range(len(vols_all))]
-
-    off = len(allb) - len(today)
-    keep = [off + i for i, b in enumerate(today) if SHOW_FROM <= b["ts"].time() < RTH_CLOSE]
-    if not keep:
-        raise ValueError(f"{sym} {day}: no bars between 07:00 and 16:00")
-    i0, i1 = keep[0], keep[-1] + 1
-    view = allb[i0:i1]
-    e9, e20, vma, macd, sig, hist, r14 = (xs[i0:i1] for xs in (e9, e20, vma, macd, sig, hist, r14))
-    vw = vwap_series(bars, view)
+    ser = series(bars, minutes, warm)
+    view, e9, e20, vma, vw = ser["view"], ser["e9"], ser["e20"], ser["vma"], ser["vwap"]
+    macd, sig, hist, r14 = ser["macd"], ser["sig"], ser["hist"], ser["rsi"]
     vols = [b["volume"] for b in view]
     x = list(range(len(view)))
     rth = [b for b in view if b["ts"].time() >= RTH_OPEN]
@@ -498,6 +545,7 @@ def chart_day(day: dt.date, symbols=SYMBOLS, timeframes=TIMEFRAMES, out: Path = 
             rows.append(rep)
             continue
         yday, ybars = prior
+        last = last_session(sym, day, cache, feed) or prior
         logged = recorded_lines(lab_dir, sym, day)
         rebuilt = rebuilt_lines(ybars, bars)
         diff = compare_lines(logged, rebuilt) if logged else []
@@ -510,14 +558,14 @@ def chart_day(day: dt.date, symbols=SYMBOLS, timeframes=TIMEFRAMES, out: Path = 
             warn = (f"vendor revised since 09:31: {diff[0]}"
                     + (f"  (+{len(diff) - 1} more)" if len(diff) > 1 else ""))
         times = {l["name"]: set_at(l, ybars, bars) for l in (lines or [])}
-        prev_close = _rth(ybars)[-1]["close"]
+        prev_close = _rth(last[1])[-1]["close"]
         rep.update({"yday": yday.isoformat(), "lines": lines, "lines_from":
                     "runner" if logged else "rebuilt", "mismatch": diff, "set_at": times,
                     "premarket_bars": sum(1 for b in bars if SHOW_FROM <= b["ts"].time() < RTH_OPEN),
                     "rth_bars": len(_rth(bars)), "first_bar": bars[0]["ts"].isoformat()})
         for m in timeframes:
             p = render(sym, day, m, bars, lines, note, prev_close,
-                       out / day.isoformat() / f"{sym}_{m:02d}m.png", warn, warm=ybars,
+                       out / day.isoformat() / f"{sym}_{m:02d}m.png", warn, warm=last[1],
                        line_times=times)
             rep["charts"].append(str(p.relative_to(out)))
         rows.append(rep)

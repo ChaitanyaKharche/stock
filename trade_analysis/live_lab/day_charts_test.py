@@ -232,3 +232,67 @@ def test_set_at_looks_only_in_the_window_the_level_came_from():
             b["high"] = 101.0
     line = {"name": "R2", "price": 101.0, "source": "yday market high", "side": "R"}
     assert D.set_at(line, yday, []) == "10:15"
+
+
+
+# ------------------------------------------------------------ second review (2026-10-08)
+
+def test_a_ledger_holiday_is_cached_so_offline_can_draw_the_day_after(tmp_path):
+    # Not caching [] broke `--offline` for 09-08: its "yesterday" search passes 09-07.
+    labor = dt.date(2026, 9, 7)
+    (tmp_path / "session_ledger.jsonl").write_text(json.dumps(
+        {"date": labor.isoformat(), "outcome": "NOT_A_SESSION", "is_session": False}) + "\n",
+        encoding="utf-8")
+    D._not_sessions.cache_clear()
+    try:
+        cache = tmp_path / "_bars"
+        later = dt.datetime(2026, 9, 9, 20, 0)
+        assert D.load_bars("QQQ", labor, cache, FakeFeed({}), now=later, lab_dir=tmp_path) == []
+        assert D.load_bars("QQQ", labor, cache, None) == [], "offline lost the holiday"
+    finally:
+        D._not_sessions.cache_clear()
+
+
+def test_the_previous_close_comes_from_a_half_day(tmp_path):
+    # Mon 11-30 changes against Fri 11-27's 13:00 close; the six lines still skip it.
+    fri, wed = dt.date(2026, 11, 27), dt.date(2026, 11, 25)
+    feed = FakeFeed({fri: _session(fri, end=dt.time(13, 0), px=101.0),
+                     dt.date(2026, 11, 26): [], wed: _session(wed, px=100.0)})
+    later = dt.datetime(2026, 12, 1, 20, 0)
+    mon = dt.date(2026, 11, 30)
+    assert D.last_session("QQQ", mon, tmp_path, feed, now=later)[0] == fri
+    assert D.prior_session("QQQ", mon, tmp_path, feed, now=later)[0] == wed
+
+
+def test_indicators_warm_on_yesterday_but_the_volume_average_does_not():
+    yday = _session(dt.date(2026, 10, 7), px=200.0, vol=10_000.0)
+    today = _session(px=100.0, vol=50.0)
+    warm = D.series(today, 15, warm=yday)
+    cold = D.series(today, 15)
+    assert warm["e20"][0] > cold["e20"][0] + 1, "EMA was not warmed on yesterday"
+    assert warm["vma"][0] is None, "the volume average reached back into yesterday"
+    assert warm["vma"][7] == pytest.approx(15 * 50.0)          # 08:45: today's bars only
+
+
+def test_one_days_feed_outage_does_not_cost_the_rest(tmp_path, monkeypatch, capsys):
+    from trade_analysis.live_lab import feed as F
+    bad, good = dt.date(2026, 10, 8), dt.date(2026, 10, 6)    # good's "yesterday" is 10-05
+
+    class Feed(FakeFeed):
+        def __init__(self):
+            super().__init__({good: _session(good), dt.date(2026, 10, 5): _session(dt.date(2026, 10, 5))})
+
+        def extended_bars(self, sym, day, start, end):
+            if day == bad:
+                raise F.FeedOutage("vendor down")
+            return super().extended_bars(sym, day, start, end)
+
+        def close(self):
+            pass
+
+    monkeypatch.setattr(F, "ThetaLiveFeed", Feed)
+    sat = dt.datetime(2026, 10, 10, 12, 0)
+    rc = D.main(["--fetch-only", "--symbols", "QQQ", "--day", bad.isoformat(), "--day",
+                 good.isoformat(), "--out", str(tmp_path)], now=sat)
+    out = capsys.readouterr().out
+    assert rc == 1 and "FEED OUTAGE" in out and f"{good} QQQ: cached" in out
