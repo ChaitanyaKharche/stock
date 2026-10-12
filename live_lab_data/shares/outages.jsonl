@@ -8293,3 +8293,15 @@
 {"seq":242916,"ts":"2026-10-09T14:28:07.891337","kind":"stale_quote","detail":"XLY age=6.2s"}
 {"seq":243086,"ts":"2026-10-09T14:32:07.307959","kind":"stale_quote","detail":"XLP age=7.2s"}
 {"seq":244826,"ts":"2026-10-09T15:13:08.393806","kind":"stale_quote","detail":"XLF age=5.4s"}
+{"seq":250496,"ts":"2026-10-12T11:54:06.134320","kind":"stale_quote","detail":"XLY age=6.4s"}
+{"seq":251445,"ts":"2026-10-12T12:21:07.581995","kind":"degraded_bar","detail":"1m gap before 12:20","symbol":"XLY"}
+{"seq":252024,"ts":"2026-10-12T12:36:07.450983","kind":"degraded_bar","detail":"1m gap before 12:35","symbol":"XLP"}
+{"seq":252957,"ts":"2026-10-12T13:00:07.918024","kind":"degraded_bar","detail":"1m gap before 12:59","symbol":"XLP"}
+{"seq":253163,"ts":"2026-10-12T13:05:04.880880","kind":"degraded_bar","detail":"1m gap before 13:04","symbol":"XLP"}
+{"seq":253783,"ts":"2026-10-12T13:19:07.443311","kind":"stale_quote","detail":"XLF age=5.5s"}
+{"seq":254527,"ts":"2026-10-12T13:36:04.988724","kind":"stale_quote","detail":"XLV age=6.3s"}
+{"seq":254540,"ts":"2026-10-12T13:36:04.998228","kind":"stale_quote","detail":"AAPL age=5.2s"}
+{"seq":256058,"ts":"2026-10-12T14:11:05.741944","kind":"degraded_bar","detail":"1m gap before 14:10","symbol":"XLV"}
+{"seq":256210,"ts":"2026-10-12T14:14:05.414230","kind":"stale_quote","detail":"XLV age=5.8s"}
+{"seq":257366,"ts":"2026-10-12T14:40:08.675252","kind":"degraded_bar","detail":"1m gap before 14:39","symbol":"XLY"}
+{"seq":257891,"ts":"2026-10-12T14:51:04.653633","kind":"stale_quote","detail":"XLV age=8.9s"}
