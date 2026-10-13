@@ -8305,3 +8305,54 @@
 {"seq":256210,"ts":"2026-10-12T14:14:05.414230","kind":"stale_quote","detail":"XLV age=5.8s"}
 {"seq":257366,"ts":"2026-10-12T14:40:08.675252","kind":"degraded_bar","detail":"1m gap before 14:39","symbol":"XLY"}
 {"seq":257891,"ts":"2026-10-12T14:51:04.653633","kind":"stale_quote","detail":"XLV age=8.9s"}
+{"seq":267084,"ts":"2026-10-13T12:50:04.503421","kind":"degraded_bar","detail":"1m gap before 12:49","symbol":"XLP"}
+{"seq":267243,"ts":"2026-10-13T12:54:05.928939","kind":"degraded_bar","detail":"1m gap before 12:53","symbol":"XLP"}
+{"seq":268992,"ts":"2026-10-13T13:37:06.451367","kind":"degraded_bar","detail":"1m gap before 13:36","symbol":"DIA"}
+{"seq":269063,"ts":"2026-10-13T13:39:06.250940","kind":"degraded_bar","detail":"1m gap before 13:38","symbol":"XLI"}
+{"seq":269505,"ts":"2026-10-13T13:50:07.563230","kind":"stale_quote","detail":"SPY age=10.5s"}
+{"seq":269506,"ts":"2026-10-13T13:50:07.566220","kind":"stale_quote","detail":"QQQ age=10.6s"}
+{"seq":269507,"ts":"2026-10-13T13:50:07.578352","kind":"stale_quote","detail":"IWM age=10.5s"}
+{"seq":269508,"ts":"2026-10-13T13:50:07.584353","kind":"stale_quote","detail":"DIA age=10.7s"}
+{"seq":269509,"ts":"2026-10-13T13:50:07.587376","kind":"stale_quote","detail":"XLK age=10.9s"}
+{"seq":269510,"ts":"2026-10-13T13:50:07.591358","kind":"stale_quote","detail":"XLY age=10.9s"}
+{"seq":269511,"ts":"2026-10-13T13:50:07.594008","kind":"stale_quote","detail":"XLI age=11.1s"}
+{"seq":269512,"ts":"2026-10-13T13:50:07.599665","kind":"stale_quote","detail":"XLV age=10.8s"}
+{"seq":269513,"ts":"2026-10-13T13:50:07.602666","kind":"stale_quote","detail":"XLP age=10.7s"}
+{"seq":269514,"ts":"2026-10-13T13:50:07.628534","kind":"stale_quote","detail":"XLE age=10.7s"}
+{"seq":269515,"ts":"2026-10-13T13:50:07.652225","kind":"stale_quote","detail":"XLF age=11.6s"}
+{"seq":269516,"ts":"2026-10-13T13:50:07.672216","kind":"stale_quote","detail":"NVDA age=10.9s"}
+{"seq":269517,"ts":"2026-10-13T13:50:07.685305","kind":"stale_quote","detail":"AAPL age=11.3s"}
+{"seq":269518,"ts":"2026-10-13T13:50:07.702974","kind":"stale_quote","detail":"GOOGL age=12.0s"}
+{"seq":269519,"ts":"2026-10-13T13:50:07.715651","kind":"stale_quote","detail":"WMT age=11.5s"}
+{"seq":269520,"ts":"2026-10-13T13:51:06.355236","kind":"stale_quote","detail":"SPY age=25.3s"}
+{"seq":269521,"ts":"2026-10-13T13:51:06.361332","kind":"stale_quote","detail":"QQQ age=25.4s"}
+{"seq":269522,"ts":"2026-10-13T13:51:06.363248","kind":"stale_quote","detail":"IWM age=25.3s"}
+{"seq":269523,"ts":"2026-10-13T13:51:06.366569","kind":"stale_quote","detail":"DIA age=25.3s"}
+{"seq":269524,"ts":"2026-10-13T13:51:06.368670","kind":"stale_quote","detail":"XLK age=25.4s"}
+{"seq":269525,"ts":"2026-10-13T13:51:06.371177","kind":"stale_quote","detail":"XLY age=25.4s"}
+{"seq":269526,"ts":"2026-10-13T13:51:06.374199","kind":"stale_quote","detail":"XLI age=25.5s"}
+{"seq":269527,"ts":"2026-10-13T13:51:06.376277","kind":"stale_quote","detail":"XLV age=25.3s"}
+{"seq":269528,"ts":"2026-10-13T13:51:06.378290","kind":"stale_quote","detail":"XLP age=25.4s"}
+{"seq":269529,"ts":"2026-10-13T13:51:06.380291","kind":"stale_quote","detail":"XLE age=25.4s"}
+{"seq":269530,"ts":"2026-10-13T13:51:06.382807","kind":"stale_quote","detail":"XLF age=25.5s"}
+{"seq":269531,"ts":"2026-10-13T13:51:06.385940","kind":"stale_quote","detail":"NVDA age=25.3s"}
+{"seq":269532,"ts":"2026-10-13T13:51:06.389904","kind":"stale_quote","detail":"AAPL age=25.4s"}
+{"seq":269533,"ts":"2026-10-13T13:51:06.394205","kind":"stale_quote","detail":"GOOGL age=26.0s"}
+{"seq":269534,"ts":"2026-10-13T13:51:06.396223","kind":"stale_quote","detail":"WMT age=26.0s"}
+{"seq":269535,"ts":"2026-10-13T13:52:04.176618","kind":"stale_quote","detail":"SPY age=24.8s"}
+{"seq":269536,"ts":"2026-10-13T13:52:04.189695","kind":"stale_quote","detail":"QQQ age=24.6s"}
+{"seq":269537,"ts":"2026-10-13T13:52:04.205688","kind":"stale_quote","detail":"IWM age=24.7s"}
+{"seq":269538,"ts":"2026-10-13T13:52:04.207830","kind":"stale_quote","detail":"DIA age=25.3s"}
+{"seq":269539,"ts":"2026-10-13T13:52:04.212542","kind":"stale_quote","detail":"XLK age=24.6s"}
+{"seq":269540,"ts":"2026-10-13T13:52:04.215730","kind":"stale_quote","detail":"XLY age=24.6s"}
+{"seq":269541,"ts":"2026-10-13T13:52:04.220686","kind":"stale_quote","detail":"XLI age=24.8s"}
+{"seq":269542,"ts":"2026-10-13T13:52:04.224834","kind":"stale_quote","detail":"XLV age=24.8s"}
+{"seq":269543,"ts":"2026-10-13T13:52:04.229215","kind":"stale_quote","detail":"XLP age=24.7s"}
+{"seq":269544,"ts":"2026-10-13T13:52:04.232409","kind":"stale_quote","detail":"XLE age=24.9s"}
+{"seq":269545,"ts":"2026-10-13T13:52:04.234632","kind":"stale_quote","detail":"XLF age=24.9s"}
+{"seq":269546,"ts":"2026-10-13T13:52:04.237791","kind":"stale_quote","detail":"NVDA age=24.6s"}
+{"seq":269547,"ts":"2026-10-13T13:52:04.239806","kind":"stale_quote","detail":"AAPL age=26.6s"}
+{"seq":269548,"ts":"2026-10-13T13:52:04.251236","kind":"stale_quote","detail":"GOOGL age=24.6s"}
+{"seq":269549,"ts":"2026-10-13T13:52:04.253349","kind":"stale_quote","detail":"WMT age=24.6s"}
+{"seq":269829,"ts":"2026-10-13T13:59:05.849815","kind":"stale_quote","detail":"XLI age=7.3s"}
+{"seq":271399,"ts":"2026-10-13T14:36:07.385243","kind":"stale_quote","detail":"XLV age=6.0s"}

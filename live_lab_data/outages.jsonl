@@ -2034,3 +2034,73 @@
 {"seq":9721,"ts":"2026-10-09T11:16:27.732798","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/option/snapshot/quote"}
 {"seq":9722,"ts":"2026-10-09T11:17:47.442852","kind":"feed","detail":"ConnectError('[WinError 10061] No connection could be made because the target machine actively refused it')","path":"/option/snapshot/quote"}
 {"seq":9723,"ts":"2026-10-09T11:18:08.341240","kind":"feed","detail":"upstream recovered after 101s and 13 failed call(s)","path":"__recovered__"}
+{"seq":10309,"ts":"2026-10-13T11:17:36.106448","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/snapshot/quote"}
+{"seq":10310,"ts":"2026-10-13T11:17:36.112520","kind":"tick","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":10311,"ts":"2026-10-13T11:17:44.403522","kind":"feed","detail":"upstream recovered after 8s and 1 failed call(s)","path":"__recovered__"}
+{"seq":10401,"ts":"2026-10-13T13:28:48.329902","kind":"stale_quote","detail":"QQQ age=7.3s"}
+{"seq":10409,"ts":"2026-10-13T13:50:01.117768","kind":"stale_quote","detail":"QQQ age=6.3s"}
+{"seq":10410,"ts":"2026-10-13T13:50:01.806093","kind":"stale_quote","detail":"SPY age=6.8s"}
+{"seq":10411,"ts":"2026-10-13T13:50:07.182277","kind":"stale_quote","detail":"QQQ age=10.8s"}
+{"seq":10413,"ts":"2026-10-13T13:50:07.400223","kind":"stale_quote","detail":"SPY age=11.1s"}
+{"seq":10415,"ts":"2026-10-13T13:50:12.503589","kind":"stale_quote","detail":"QQQ age=14.8s"}
+{"seq":10416,"ts":"2026-10-13T13:50:12.586980","kind":"stale_quote","detail":"SPY age=14.9s"}
+{"seq":10417,"ts":"2026-10-13T13:50:17.665319","kind":"stale_quote","detail":"QQQ age=17.3s"}
+{"seq":10418,"ts":"2026-10-13T13:50:17.740678","kind":"stale_quote","detail":"SPY age=17.2s"}
+{"seq":10419,"ts":"2026-10-13T13:50:22.987072","kind":"stale_quote","detail":"QQQ age=18.5s"}
+{"seq":10420,"ts":"2026-10-13T13:50:23.062327","kind":"stale_quote","detail":"SPY age=18.3s"}
+{"seq":10421,"ts":"2026-10-13T13:50:28.173531","kind":"stale_quote","detail":"QQQ age=20.8s"}
+{"seq":10422,"ts":"2026-10-13T13:50:28.251677","kind":"stale_quote","detail":"SPY age=20.8s"}
+{"seq":10423,"ts":"2026-10-13T13:50:33.337016","kind":"stale_quote","detail":"QQQ age=21.9s"}
+{"seq":10424,"ts":"2026-10-13T13:50:33.418389","kind":"stale_quote","detail":"SPY age=21.8s"}
+{"seq":10425,"ts":"2026-10-13T13:50:38.591129","kind":"stale_quote","detail":"QQQ age=19.8s"}
+{"seq":10426,"ts":"2026-10-13T13:50:38.792709","kind":"stale_quote","detail":"SPY age=19.9s"}
+{"seq":10427,"ts":"2026-10-13T13:50:43.887472","kind":"stale_quote","detail":"QQQ age=18.7s"}
+{"seq":10428,"ts":"2026-10-13T13:50:43.966965","kind":"stale_quote","detail":"SPY age=18.7s"}
+{"seq":10429,"ts":"2026-10-13T13:50:49.072254","kind":"stale_quote","detail":"QQQ age=21.6s"}
+{"seq":10430,"ts":"2026-10-13T13:50:49.158327","kind":"stale_quote","detail":"SPY age=21.7s"}
+{"seq":10431,"ts":"2026-10-13T13:50:54.239966","kind":"stale_quote","detail":"QQQ age=23.0s"}
+{"seq":10432,"ts":"2026-10-13T13:50:54.323173","kind":"stale_quote","detail":"SPY age=23.1s"}
+{"seq":10433,"ts":"2026-10-13T13:50:59.443502","kind":"stale_quote","detail":"QQQ age=23.8s"}
+{"seq":10434,"ts":"2026-10-13T13:50:59.513269","kind":"stale_quote","detail":"SPY age=23.8s"}
+{"seq":10435,"ts":"2026-10-13T13:51:05.237318","kind":"stale_quote","detail":"QQQ age=25.2s"}
+{"seq":10436,"ts":"2026-10-13T13:51:05.688603","kind":"stale_quote","detail":"SPY age=25.3s"}
+{"seq":10437,"ts":"2026-10-13T13:51:10.828310","kind":"stale_quote","detail":"QQQ age=25.5s"}
+{"seq":10438,"ts":"2026-10-13T13:51:10.901595","kind":"stale_quote","detail":"SPY age=25.5s"}
+{"seq":10439,"ts":"2026-10-13T13:51:15.986823","kind":"stale_quote","detail":"QQQ age=26.0s"}
+{"seq":10440,"ts":"2026-10-13T13:51:16.072585","kind":"stale_quote","detail":"SPY age=26.0s"}
+{"seq":10441,"ts":"2026-10-13T13:51:21.169263","kind":"stale_quote","detail":"QQQ age=25.2s"}
+{"seq":10442,"ts":"2026-10-13T13:51:21.258589","kind":"stale_quote","detail":"SPY age=25.3s"}
+{"seq":10443,"ts":"2026-10-13T13:51:26.337287","kind":"stale_quote","detail":"QQQ age=24.9s"}
+{"seq":10444,"ts":"2026-10-13T13:51:26.406051","kind":"stale_quote","detail":"SPY age=24.8s"}
+{"seq":10445,"ts":"2026-10-13T13:51:31.505747","kind":"stale_quote","detail":"QQQ age=24.7s"}
+{"seq":10446,"ts":"2026-10-13T13:51:31.586160","kind":"stale_quote","detail":"SPY age=24.8s"}
+{"seq":10447,"ts":"2026-10-13T13:51:36.667136","kind":"stale_quote","detail":"QQQ age=25.0s"}
+{"seq":10448,"ts":"2026-10-13T13:51:36.738493","kind":"stale_quote","detail":"SPY age=25.0s"}
+{"seq":10449,"ts":"2026-10-13T13:51:41.910437","kind":"stale_quote","detail":"QQQ age=25.9s"}
+{"seq":10450,"ts":"2026-10-13T13:51:41.982276","kind":"stale_quote","detail":"SPY age=26.0s"}
+{"seq":10451,"ts":"2026-10-13T13:51:47.091529","kind":"stale_quote","detail":"QQQ age=26.5s"}
+{"seq":10452,"ts":"2026-10-13T13:51:47.174407","kind":"stale_quote","detail":"SPY age=26.4s"}
+{"seq":10453,"ts":"2026-10-13T13:51:52.274265","kind":"stale_quote","detail":"QQQ age=25.5s"}
+{"seq":10454,"ts":"2026-10-13T13:51:52.356104","kind":"stale_quote","detail":"SPY age=25.5s"}
+{"seq":10455,"ts":"2026-10-13T13:51:57.440808","kind":"stale_quote","detail":"QQQ age=24.2s"}
+{"seq":10456,"ts":"2026-10-13T13:51:57.521764","kind":"stale_quote","detail":"SPY age=24.3s"}
+{"seq":10457,"ts":"2026-10-13T13:52:03.193951","kind":"stale_quote","detail":"QQQ age=25.3s"}
+{"seq":10458,"ts":"2026-10-13T13:52:03.907911","kind":"stale_quote","detail":"SPY age=24.8s"}
+{"seq":10459,"ts":"2026-10-13T13:52:09.016313","kind":"stale_quote","detail":"QQQ age=22.7s"}
+{"seq":10460,"ts":"2026-10-13T13:52:09.086112","kind":"stale_quote","detail":"SPY age=22.8s"}
+{"seq":10461,"ts":"2026-10-13T13:52:14.195230","kind":"stale_quote","detail":"QQQ age=20.6s"}
+{"seq":10462,"ts":"2026-10-13T13:52:14.288166","kind":"stale_quote","detail":"SPY age=20.7s"}
+{"seq":10463,"ts":"2026-10-13T13:52:19.365133","kind":"stale_quote","detail":"QQQ age=18.9s"}
+{"seq":10464,"ts":"2026-10-13T13:52:19.499518","kind":"stale_quote","detail":"SPY age=19.1s"}
+{"seq":10465,"ts":"2026-10-13T13:52:24.598141","kind":"stale_quote","detail":"QQQ age=18.1s"}
+{"seq":10466,"ts":"2026-10-13T13:52:24.670057","kind":"stale_quote","detail":"SPY age=18.2s"}
+{"seq":10467,"ts":"2026-10-13T13:52:29.769516","kind":"stale_quote","detail":"QQQ age=23.3s"}
+{"seq":10468,"ts":"2026-10-13T13:52:29.855782","kind":"stale_quote","detail":"SPY age=23.4s"}
+{"seq":10469,"ts":"2026-10-13T13:52:34.960841","kind":"stale_quote","detail":"QQQ age=28.5s"}
+{"seq":10470,"ts":"2026-10-13T13:52:35.037287","kind":"stale_quote","detail":"SPY age=28.6s"}
+{"seq":10471,"ts":"2026-10-13T13:52:40.138843","kind":"stale_quote","detail":"QQQ age=33.7s"}
+{"seq":10472,"ts":"2026-10-13T13:52:40.226835","kind":"stale_quote","detail":"SPY age=33.8s"}
+{"seq":10473,"ts":"2026-10-13T13:52:45.303713","kind":"stale_quote","detail":"QQQ age=38.9s"}
+{"seq":10474,"ts":"2026-10-13T13:52:45.383512","kind":"stale_quote","detail":"SPY age=38.9s"}
+{"seq":10475,"ts":"2026-10-13T13:52:50.466009","kind":"stale_quote","detail":"QQQ age=44.0s"}
+{"seq":10476,"ts":"2026-10-13T13:52:50.566007","kind":"stale_quote","detail":"SPY age=44.1s"}
