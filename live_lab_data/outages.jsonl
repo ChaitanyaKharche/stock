@@ -2104,3 +2104,5 @@
 {"seq":10474,"ts":"2026-10-13T13:52:45.383512","kind":"stale_quote","detail":"SPY age=38.9s"}
 {"seq":10475,"ts":"2026-10-13T13:52:50.466009","kind":"stale_quote","detail":"QQQ age=44.0s"}
 {"seq":10476,"ts":"2026-10-13T13:52:50.566007","kind":"stale_quote","detail":"SPY age=44.1s"}
+{"seq":10957,"ts":"2026-10-14T15:59:59.789477","kind":"stale_quote","detail":"QQQ age=10.1s"}
+{"seq":10958,"ts":"2026-10-14T15:59:59.894984","kind":"stale_quote","detail":"SPY age=10.2s"}
