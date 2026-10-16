@@ -80,3 +80,5 @@
 {"date": "2026-10-14", "outcome": "COLLECTED", "reason": "", "attempts": 2, "is_session": true, "recorded_at_et": "2026-10-14T16:00:17", "utc_offset_hours": null, "supervisor_rc": 0}
 {"date": "2026-10-15", "outcome": "OPENED", "reason": "started 13:55 ET, after the 09:30 open", "attempts": 1, "is_session": true, "recorded_at_et": "2026-10-15T13:55:14", "utc_offset_hours": null, "started_et": "13:55:14", "late_start": true, "arms": ["options", "shares"]}
 {"date": "2026-10-15", "outcome": "PARTIAL", "reason": "started 13:55 ET, after the 09:30 open", "attempts": 2, "is_session": true, "recorded_at_et": "2026-10-15T16:00:10", "utc_offset_hours": null, "supervisor_rc": 0}
+{"date": "2026-10-16", "outcome": "OPENED", "reason": "", "attempts": 1, "is_session": true, "recorded_at_et": "2026-10-16T09:07:00", "utc_offset_hours": null, "started_et": "09:07:00", "late_start": false, "arms": ["options", "shares"]}
+{"date": "2026-10-16", "outcome": "COLLECTED", "reason": "", "attempts": 2, "is_session": true, "recorded_at_et": "2026-10-16T16:00:08", "utc_offset_hours": null, "supervisor_rc": 0}
