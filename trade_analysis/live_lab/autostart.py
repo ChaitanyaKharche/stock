@@ -45,6 +45,7 @@ import time
 from pathlib import Path
 
 from .clock import now_et
+from .clockcheck import ClockWatch
 from .feed import UPSTREAM_WAIT_SEC, FeedOutage, ThetaLiveFeed
 from . import ledger
 from .lock import SingleInstance
@@ -470,7 +471,15 @@ RECOVERY_TIMEOUT_SEC = 2400
 TERMINAL_CHECK_SEC = 60
 TERMINAL_DOWN_CHECKS = 2       # not answering at all for ~2 minutes -> restart
 UPSTREAM_STUCK_CHECKS = 3      # answering, internet reachable, history failing ~3 min -> restart
-TERMINAL_MAX_RESTARTS = 6      # per session; past this a human is needed, not a loop
+TERMINAL_MAX_RESTARTS = 6      # per outage episode; past this a human is needed, not a loop
+# specs/004 (2026-10-19). The cap used to be per SESSION and permanent: on 2026-10-05 and
+# 10-06 six restarts were spent offline inside ~20 minutes and the watchdog then gave up
+# until the close. On a commute day that turns the first long gap into a lost afternoon,
+# even after the laptop reaches the next network. So: the budget comes back once the
+# terminal has served history again for HEALTHY_RESET_CHECKS minutes, and past the cap it
+# still tries once every SLOW_RETRY_SEC instead of never.
+HEALTHY_RESET_CHECKS = 10
+SLOW_RETRY_SEC = 900
 UPSTREAM_HOST = "mdds-01.thetadata.us"
 
 
@@ -544,8 +553,10 @@ class TerminalWatchdog:
 
     def __init__(self, enabled: bool, day: dt.date):
         self.enabled, self.day = enabled, day
-        self.down = self.stuck = self.restarts = 0
+        self.down = self.stuck = self.restarts = self.healthy = 0
         self._last = 0.0
+        self._last_restart = 0.0          # monotonic time of the last restart attempt
+        self._gave_up_logged = False
 
     def check(self, now: dt.datetime, probes=None) -> str:
         """Returns what it concluded; never raises. `probes` injects fakes in tests."""
@@ -559,6 +570,14 @@ class TerminalWatchdog:
         self._last = time.monotonic()
         try:
             if not p["answering"]():
+                self.healthy = 0
+                # Ask about the network BEFORE spending a restart (specs/004). This branch
+                # used to restart unconditionally, so a terminal that stopped answering
+                # because the WiFi was gone was restarted into a network that was still
+                # gone -- six times on 2026-10-05, all failed, budget spent while offline.
+                if not p["internet"]():
+                    self.down = self.stuck = 0
+                    return "offline"
                 self.down, self.stuck = self.down + 1, 0
                 if self.down >= TERMINAL_DOWN_CHECKS:
                     return p["restart"]("not answering on 127.0.0.1:25503")
@@ -566,7 +585,13 @@ class TerminalWatchdog:
             self.down = 0
             if p["serving"]():
                 self.stuck = 0
+                self.healthy += 1
+                if self.restarts and self.healthy >= HEALTHY_RESET_CHECKS:
+                    log(f"[watchdog] terminal has served history for {self.healthy} checks; "
+                        f"restart budget restored ({self.restarts} used in the last episode)")
+                    self.restarts, self._gave_up_logged = 0, False
                 return "ok"
+            self.healthy = 0
             if not p["internet"]():
                 self.stuck = 0          # offline: nothing a restart can fix
                 return "offline"
@@ -582,13 +607,24 @@ class TerminalWatchdog:
     def _restart(self, why: str) -> str:
         self.down = self.stuck = 0
         if self.restarts >= TERMINAL_MAX_RESTARTS:
-            log(f"[watchdog] terminal {why}, but it has been restarted "
-                f"{self.restarts} times this session -- leaving it for a human")
-            return "gave_up"
-        self.restarts += 1
-        log(f"[watchdog] terminal {why} (mdds status: {_mdds_status()}); restarting it "
-            f"({self.restarts}/{TERMINAL_MAX_RESTARTS}). The arms keep running: they "
-            f"freeze while it is down and catch up from history after (catchup.py).")
+            if time.monotonic() - self._last_restart < SLOW_RETRY_SEC:
+                # Said once per episode. It used to be said every minute until the close
+                # (41 lines on 2026-10-05, 93 on 10-06), which buried everything else.
+                if not self._gave_up_logged:
+                    log(f"[watchdog] terminal {why}, but it has been restarted "
+                        f"{self.restarts} times since it last served history -- leaving it "
+                        f"for a human; one slow retry every {SLOW_RETRY_SEC // 60} min "
+                        f"until the close")
+                    self._gave_up_logged = True
+                return "gave_up"
+            log(f"[watchdog] terminal {why} (mdds status: {_mdds_status()}); slow retry "
+                f"({SLOW_RETRY_SEC // 60} min since the last attempt)")
+        else:
+            self.restarts += 1
+            log(f"[watchdog] terminal {why} (mdds status: {_mdds_status()}); restarting it "
+                f"({self.restarts}/{TERMINAL_MAX_RESTARTS}). The arms keep running: they "
+                f"freeze while it is down and catch up from history after (catchup.py).")
+        self._last_restart = time.monotonic()
         _graceful_shutdown()
         _evict_stale_terminal()      # only kills it if the graceful path did not
         ok = start_terminal()
@@ -893,9 +929,14 @@ def supervise(args, day: dt.date, specs=None, child_cls=None, post_open=None) ->
     pending = {}                    # name -> monotonic time at which to restart
     gate_pending = post_open is not None
     watchdog = TerminalWatchdog(bool(getattr(args, "start_terminal", False)), day)
+    # specs/001: say so, loudly and at once, when this machine's clock is off. Measures
+    # only; never sets the clock and never changes what the arms do. Same enable flag as
+    # the watchdog, so tests and hand runs stay offline.
+    clockwatch = ClockWatch(day, log=log, enabled=bool(getattr(args, "start_terminal", False)))
     while True:
         now = now_et()
         watchdog.check(now)
+        clockwatch.check(now)
         if gate_pending and now.date() == day and now.time() >= post_open[0]:
             gate_pending = False
             verdict = post_open[1]()

@@ -142,6 +142,23 @@ def check_exposure() -> list[str]:
     return _firewall_exposure()
 
 
+def check_clock() -> list[str]:
+    """Is this machine's clock right? (specs/001)
+
+    The arms judge every quote's age by THIS clock and reject anything past 5 s. On
+    2026-10-15 the clock was ~7 s fast after a hibernate; every quote was rejected, the
+    session took zero trades, and this preflight said "All checks passed" because the
+    freshness check below allows 120 s. This line exists so that cannot happen silently.
+
+    Never a FAIL, by the same reasoning as the future-quote WARN in check_freshness: NTP is
+    often blocked on work networks, and refusing to open a session over a clock reading
+    would cost more sessions than skew does. It is the loudest WARN in the run instead.
+    """
+    from . import clockcheck
+    level, text = clockcheck.describe(*clockcheck.measure())
+    return [f"{OK if level == 'OK' else WARN} {text}"]
+
+
 def check_freshness(feed, symbol, now) -> list[str]:
     """Real-time vs delayed. Only meaningful during RTH."""
     out = []
@@ -254,6 +271,10 @@ def main(argv=None) -> int:
             line = WARN + line[len(FAIL):]
         print(line)
         fails += line.startswith(FAIL)
+
+    print("\n-- clock --")
+    for line in check_clock():
+        print(line)                 # advisory only; never counted as a failure
 
     print("\n-- feed --")
     for sym in args.symbols:
