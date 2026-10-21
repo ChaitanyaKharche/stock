@@ -29,7 +29,7 @@ Cite these and move on. Every one is written up in `research/` with the numbers.
 | finding | where | status |
 |---|---|---|
 | Direction prediction, 8 pre-registered nulls | `PROJECT_REPORT.md` | closed |
-| MOMO_CHASE form, 2,822,400 cells, p=0.8227 | `setup_sweep_results.md` | closed |
+| MOMO_CHASE form, 2,822,400 cells, p=0.8227 | `momo_sweep_results.md` (corrected 2026-10-21; was cited as `setup_sweep_results.md`) | closed |
 | Unconditional short 0DTE straddle: real premium, 1.84× too small to trade | `vrp_cost_model_results.md` | closed |
 | 8-line breakout on QQQ | `breakout_options_results.md` | null (wrong level set — superseded) |
 | **His actual 6-line breakout on QQQ, 2,438 trades** | `six_lines_results.md` | **null** |
@@ -54,32 +54,42 @@ price travels, never which way it ends up:
 This is why a directional long call/put keeps failing: you can be right about the travel,
 pay the variance risk premium for the convexity, and collect nothing for the direction.
 
-**THE PROFIT CAP SUBTRACTS VALUE. Measured three separate times:**
+**THE PROFIT CAP SUBTRACTS VALUE. Two mechanical measurements; the journal one is fragile:**
 
 | sample | result |
 |---|---|
-| journal, 422 discretionary trades, dollars | +25% target → 71.6% win rate, still loses (breakeven needs 75.3%) |
+| journal, **296** trades, return space (`construction_results.md:56,82`) | +25% target → 71.6% win rate, still loses (breakeven needs 75.3%) |
+| journal, 422 trades, **dollars** (`journal_reverse_engineering_results.md:235`) | same target **gains** +$4.22/trade, p = 0.487 — sign flips with weighting, **fragile** |
 | 8-line mechanical, 7,938 signals | cap worth **−1.17 bp** |
 | 6-line, his exact set, 2,438 trades | cap worth **−0.72 bp** |
 
-Three datasets, three level definitions, one answer. This is the most robust positive
-*instruction* the project has produced: **stop capping winners.** His win rate goes up
-and his money goes down, everywhere it has been measured.
+Corrected 2026-10-21: this row used to read "journal, 422 discretionary trades, dollars"
+with the 296-trade result. The 296 and 422 are different tests with opposite signs.
+
+The two mechanical samples agree: **stop capping winners** still stands on −1.17 bp and
+−0.72 bp. On his own journal the evidence is fragile in both directions, so do not quote
+"everywhere it has been measured" any more.
 
 ## WHAT CANNOT BE MEASURED — stop offering
 
-- **QQQ options, any expiry.** No archive exists. None.
+- **QQQ options, any expiry.** No archive like the SPY one exists. Not "none" (corrected
+  2026-10-21): QQQ option caches sit on the laptop (771 files in `optcache`, 29 chains in
+  `.cache/backfill`), contents never inspected — `context_recovery/09`.
 - **Any 1DTE, any symbol.** The archive is `option_quote_1m_0dte/` — 0DTE by construction.
-- **Anything new from ThetaData.** Lapsed to `Options: FREE` on 2026-09-08.
+- **ThetaData status UNKNOWN (corrected 2026-10-21).** It lapsed to `Options: FREE` on
+  2026-09-08, but the options entitlement came back on 2026-09-14 (`runner.py:53-55`) and
+  the options arm has traded every session since. Tier and history depth unconfirmed —
+  ask him before saying anything can or cannot be measured.
 
-The only option archive that exists is **SPY 0DTE, 769 sessions, 2020–2024**, and the
-2024 block can be spent exactly once.
+The only option archive that exists is **SPY 0DTE, 769 sessions, 2020-01-03 to
+2024-08-07** (2021 has only 39 sessions; 2024 stops in August), and the 2024 block can be
+spent exactly once.
 
 ## HOW THIS PROJECT FAILS — the one bug class
 
 Every serious defect here has been the same shape: **no crash, no error, a confident
-number that measured nothing.** A 1-minute lookahead once supplied 88–95.7% of a measured
-edge. A coverage tool reported 100% with six sessions missing. A profit cap filled after
+number that measured nothing.** A 5-minute bar-label lookahead once supplied 88–95.7% of a measured
+edge (`PROJECT_REPORT.md:90`; earlier written here as "1-minute"). A coverage tool reported 100% with six sessions missing. A profit cap filled after
 the position had already exited.
 
 So:
@@ -102,10 +112,19 @@ So:
 
 ## OPERATIONAL
 
-- Tests: `pip install -r requirements-dev.txt && pytest` — offline, any OS, ~123 checks.
+- Tests: `pip install -r requirements-dev.txt && pytest` — offline, any OS, **1,161 tests**
+  (counted 2026-10-21). Known gap: `stranded_test.py::test_kill_terminals_spares_a_terminal_started_before_the_launch`
+  needs `psutil`, which `requirements-dev.txt` does not list.
   Do NOT use `requirements.txt`; it is a pip freeze of the trading machine and no longer
   installable (`pandas_ta` was deleted from PyPI).
 - The lab runs on his Windows box under pyenv 3.12.10, **not** the repo venv.
+- Lost context after the 2026-10 account loss is rebuilt in `context_recovery/`. Start at
+  `context_recovery/00_START_HERE.md`; section 8 lists the questions only he can answer.
+- The lab trades **15** setups, not 13: two `Six_Lines` setups were added by dated amendment
+  on 2026-09-25 (`levels_live.py`, `backfill.py:80`). The six-line *research* family is
+  closed; the live forward test of it is not.
+- **Daylight saving ends 2026-11-01.** The scheduled task's 8-hour window then ends at
+  15:30 ET, before the 15:56 close-out. Untested — `context_recovery/02` §3.1.
 - `live_lab_data/` is a FROZEN forward test. Do not touch config hashes. `autostart`
   commits and pushes it at the end of every session.
 - The live lab machine travels in a car. Network drops and host suspends are expected and
@@ -156,6 +175,7 @@ So:
   *after* seeing the histogram — 26 buckets with free choice of contiguous groupings is
   the garden of forking paths that `setup_sweep_results.md` spent 2,822,400 cells
   demonstrating; (b) no day-clustering, and 442 trades over 158 days are not independent;
-  (c) P&L here is tail-dominated (73.9% in the top 1% of trades), so a bucket mean can be
-  one fill. The `med $` and `top1 %` columns were added to the histogram for exactly (c) —
+  (c) P&L here is tail-dominated, so a bucket mean can be one fill. (Corrected 2026-10-21:
+  this used to cite "73.9% in the top 1% of trades" — that figure is the IMB shares
+  strategy, `imb_stress_results.md:69`, not his journal.) The `med $` and `top1 %` columns were added to the histogram for exactly (c) —
   a bucket whose mean and median disagree in sign is one trade, not an hour.
