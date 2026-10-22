@@ -126,8 +126,10 @@ So:
 - **Daylight saving ends 2026-11-01.** With the old settings (8-hour window,
   `StopAtDurationEnd = True`) Windows would end the running session at 15:30 ET, before
   the 15:56 close-out. Fix: `trade_analysis/live_lab/fix_schedule_dst.ps1` (window 10 h,
-  never kill at window end). Written 2026-10-22; **confirm it was run on the laptop**
-  (the script prints `OK`). The task definition itself is not in git.
+  never kill at window end). **Run on the laptop 2026-10-21 23:51 MST, printed `OK`:**
+  before `PT8H, StopAtDurationEnd=True`, after `PT10H, StopAtDurationEnd=False`; start
+  05:30 MST, every 30 min, unchanged. Backup XML in his `Documents` folder. First real
+  test: 2026-11-02, the record should commit at ~16:00 ET. Task definition is not in git.
 - `live_lab_data/` is a FROZEN forward test. Do not touch config hashes. `autostart`
   commits and pushes it at the end of every session.
 - The live lab machine travels in a car. Network drops and host suspends are expected and
