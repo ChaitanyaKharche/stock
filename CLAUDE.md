@@ -123,8 +123,11 @@ So:
 - The lab trades **15** setups, not 13: two `Six_Lines` setups were added by dated amendment
   on 2026-09-25 (`levels_live.py`, `backfill.py:80`). The six-line *research* family is
   closed; the live forward test of it is not.
-- **Daylight saving ends 2026-11-01.** The scheduled task's 8-hour window then ends at
-  15:30 ET, before the 15:56 close-out. Untested — `context_recovery/02` §3.1.
+- **Daylight saving ends 2026-11-01.** With the old settings (8-hour window,
+  `StopAtDurationEnd = True`) Windows would end the running session at 15:30 ET, before
+  the 15:56 close-out. Fix: `trade_analysis/live_lab/fix_schedule_dst.ps1` (window 10 h,
+  never kill at window end). Written 2026-10-22; **confirm it was run on the laptop**
+  (the script prints `OK`). The task definition itself is not in git.
 - `live_lab_data/` is a FROZEN forward test. Do not touch config hashes. `autostart`
   commits and pushes it at the end of every session.
 - The live lab machine travels in a car. Network drops and host suspends are expected and
