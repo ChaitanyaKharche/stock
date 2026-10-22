@@ -14,7 +14,7 @@
 # on a fresh clone every test failed identically with `ModuleNotFoundError: No module
 # named 'httpx'`, which reads like catastrophe and means "nothing is installed".
 #
-# This is the offline set: numpy, pandas, scipy, httpx, pytz, pytest. ~150 MB, no CUDA,
+# This is the offline set: numpy, pandas, scipy, httpx, pytz, psutil, pytest. ~150 MB, no CUDA,
 # no network at runtime. It is enough for every test under trade_analysis/live_lab/.
 #
 #   pip install -r requirements-dev.txt
@@ -40,4 +40,7 @@ pandas==2.3.2
 scipy==1.16.1
 httpx==0.28.1
 pytz==2025.2
+# autostart.py uses it to find and kill stray Theta terminals; stranded_test.py
+# imports it. Missing until 2026-10-22, so that one test failed on every fresh clone.
+psutil==7.0.0
 pytest==9.1.1

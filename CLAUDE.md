@@ -113,8 +113,8 @@ So:
 ## OPERATIONAL
 
 - Tests: `pip install -r requirements-dev.txt && pytest` — offline, any OS, **1,161 tests**
-  (counted 2026-10-21). Known gap: `stranded_test.py::test_kill_terminals_spares_a_terminal_started_before_the_launch`
-  needs `psutil`, which `requirements-dev.txt` does not list.
+  (counted 2026-10-21). `psutil` was missing from `requirements-dev.txt` until 2026-10-22,
+  so one `stranded_test.py` test failed on every fresh clone; now pinned at 7.0.0.
   Do NOT use `requirements.txt`; it is a pip freeze of the trading machine and no longer
   installable (`pandas_ta` was deleted from PyPI).
 - The lab runs on his Windows box under pyenv 3.12.10, **not** the repo venv.
@@ -173,7 +173,7 @@ So:
   **Do NOT treat this as a finding yet, and do not let him trade it yet.** Three reasons,
   all of them this project's own settled lessons: (a) the window boundaries were chosen
   *after* seeing the histogram — 26 buckets with free choice of contiguous groupings is
-  the garden of forking paths that `setup_sweep_results.md` spent 2,822,400 cells
+  the garden of forking paths that `momo_sweep_results.md` spent 2,822,400 cells
   demonstrating; (b) no day-clustering, and 442 trades over 158 days are not independent;
   (c) P&L here is tail-dominated, so a bucket mean can be one fill. (Corrected 2026-10-21:
   this used to cite "73.9% in the top 1% of trades" — that figure is the IMB shares
