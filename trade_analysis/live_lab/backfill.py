@@ -600,13 +600,18 @@ def main(argv=None) -> int:
     ap.add_argument("--end", default=dt.date.today().isoformat())
     ap.add_argument("--arm", choices=["options", "shares", "both"], default="options")
     ap.add_argument("--report", action="store_true", help="report only, no replay")
+    # A run REGENERATES its output directory whole (run() deletes what is there first), so
+    # replaying one lost day into the default directory would wipe the multi-week backfill.
+    # --out gives that day its own <out>/options and <out>/shares.
+    ap.add_argument("--out", help="write to <out>/options and <out>/shares instead of "
+                                  "live_lab_backfill/")
     a = ap.parse_args(argv)
     s, e = dt.date.fromisoformat(a.start), dt.date.fromisoformat(a.end)
     for arm in (["options", "shares"] if a.arm == "both" else [a.arm]):
+        out = Path(a.out) / arm if a.out else (OUT if arm == "options" else OUT_SHARES)
         if not a.report:
-            run(s, e, arm=arm)
-        rep = report(s, e) if arm == "options" else report_shares(s, e)
-        out = OUT if arm == "options" else OUT_SHARES
+            run(s, e, arm=arm, out=out)
+        rep = report(s, e, out=out) if arm == "options" else report_shares(s, e, out=out)
         (out / "report.json").write_text(json.dumps(rep, indent=2), encoding="utf-8")
         print(f"[{arm}] report written to {out / 'report.json'}")
     return 0
