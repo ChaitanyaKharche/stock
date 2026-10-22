@@ -4536,3 +4536,21 @@
 {"seq":14902,"ts":"2026-10-21T15:59:43.000188","kind":"stale_quote","detail":"SPY age=6.7s"}
 {"seq":14903,"ts":"2026-10-21T15:59:58.135933","kind":"stale_quote","detail":"QQQ age=6.6s"}
 {"seq":14904,"ts":"2026-10-21T15:59:58.255819","kind":"stale_quote","detail":"SPY age=6.6s"}
+{"seq":14923,"ts":"2026-10-22T11:01:59.164063","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/snapshot/quote"}
+{"seq":14924,"ts":"2026-10-22T11:01:59.169201","kind":"tick","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":14925,"ts":"2026-10-22T11:02:11.218574","kind":"tick","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":14926,"ts":"2026-10-22T11:02:23.279971","kind":"tick","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":14927,"ts":"2026-10-22T11:02:35.343223","kind":"tick","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":14928,"ts":"2026-10-22T11:02:47.397367","kind":"tick","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":14929,"ts":"2026-10-22T11:02:59.436035","kind":"tick","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":14930,"ts":"2026-10-22T11:03:06.226831","kind":"feed","detail":"upstream recovered after 67s and 6 failed call(s)","path":"__recovered__"}
+{"seq":14948,"ts":"2026-10-22T11:32:21.972748","kind":"stale_quote","detail":"SPY age=5.9s"}
+{"seq":14966,"ts":"2026-10-22T12:51:08.298367","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/snapshot/quote"}
+{"seq":14967,"ts":"2026-10-22T12:51:08.307875","kind":"tick","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":14966,"ts":"2026-10-22T12:51:11.824931","kind":"host_suspend","detail":"host suspended or clock stepped: 1128s unaccounted between 12:32:15 and 12:51:08 ET -- the lab was NOT running","gap_sec":1128.0,"from_et":"2026-10-22T12:32:15.362223","to_et":"2026-10-22T12:51:08.364875"}
+{"seq":14968,"ts":"2026-10-22T14:59:11.231608","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":14966,"ts":"2026-10-22T14:59:22.378084","kind":"host_suspend","detail":"host suspended or clock stepped: 7670s unaccounted between 12:51:17 and 14:59:12 ET -- the lab was NOT running","gap_sec":7670.4,"from_et":"2026-10-22T12:51:17.531059","to_et":"2026-10-22T14:59:12.904901"}
+{"seq":14969,"ts":"2026-10-22T14:59:27.514962","kind":"feed","detail":"upstream recovered after 7699s and 2 failed call(s)","path":"__recovered__"}
+{"seq":14971,"ts":"2026-10-22T15:00:13.431658","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/snapshot/quote"}
+{"seq":14972,"ts":"2026-10-22T15:00:13.455659","kind":"tick","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":14973,"ts":"2026-10-22T15:00:25.548394","kind":"feed","detail":"upstream recovered after 12s and 1 failed call(s)","path":"__recovered__"}
