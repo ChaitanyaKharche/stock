@@ -68,7 +68,7 @@ def _lab(tmp, positions, trades=(), managed=MANAGED, where="archive", saved="202
     return arm
 
 
-def _fake_replay(reason_for_recorded=None, calls=None):
+def _fake_replay(reason_for_recorded=None, calls=None, replay_hash="53229d6f1f24df10"):
     """Recorded trades replay by their live rule (or `reason_for_recorded`); every stranded
     position exits at the 15:55 flatten for +5."""
     def replay(day, trades, arm_dir, activate=None, extra=None):
@@ -77,13 +77,56 @@ def _fake_replay(reason_for_recorded=None, calls=None):
         out = {t["signal_id"]: {**t, "exit_reason": reason_for_recorded or t["exit_reason"]}
                for t in trades}
         for _, p in extra or []:
-            out[p.signal_id] = {"seq": 99, "arm": "SHARES", "config_hash": "53229d6f1f24df10",
+            out[p.signal_id] = {"seq": 99, "arm": "SHARES", "config_hash": replay_hash,
                                 "setup_id": p.setup_id, "symbol": p.symbol,
                                 "direction": p.direction, "entry_ts": p.entry_ts,
                                 "exit_ts": "2026-10-05T15:56:02", "exit_reason": "eod",
                                 "pnl_net": 5.0, "signal_id": p.signal_id, "rebuild": None}
         return out, []
     return replay
+
+
+class _FakeHist:
+    """The history NBBO the estimate reads: (bid, ask) per symbol, None for no quote."""
+    def __init__(self, quotes=None):
+        from . import backfill as BF
+        self.quotes, self.clock, self.asked = quotes or {}, BF.SimClock(), []
+
+    def stock_quote(self, sym):
+        self.asked.append((sym, self.clock.now))
+        q = self.quotes.get(sym, (64.0, 64.02))
+        return None if q is None else {"bid": q[0], "ask": q[1], "mid": (q[0] + q[1]) / 2}
+
+    def chain_quotes(self, sym, expiration):
+        return []
+
+
+def _fake_history(quotes=None, made=None):
+    def make(day):
+        h = _FakeHist(quotes)
+        if made is not None:
+            made.append(h)
+        return h, h.clock, lambda: None
+    return make
+
+
+def _signals(arm, first, last, every=1, day=DAY):
+    """SKIP rows as shares_runner writes them: on the tick at HH:MM:06 for the bar before."""
+    t = dt.datetime.combine(day, dt.time.fromisoformat(first))
+    end = dt.datetime.combine(day, dt.time.fromisoformat(last))
+    with open(arm / "signals.jsonl", "a", encoding="utf-8") as fh:
+        while t <= end:
+            fh.write(json.dumps({"seq": 1, "signal_id": "s", "phase": "SKIP",
+                                 "ts": (t + dt.timedelta(seconds=6)).isoformat(),
+                                 "bar_ts": (t - dt.timedelta(minutes=1)).isoformat(),
+                                 "setup_id": "ORB_5min", "symbol": "XLF",
+                                 "skip_reason": "max_per_day"}) + "\n")
+            t += dt.timedelta(minutes=every)
+
+
+def _outage(arm, **row):
+    with open(arm / "outages.jsonl", "a", encoding="utf-8") as fh:
+        fh.write(json.dumps({"seq": 1, **row}) + "\n")
 
 
 def _no_options(tmp):
@@ -121,15 +164,98 @@ def test_the_latest_copy_of_a_session_wins():
         assert len(items) == 1 and len(items[0]["missing"]) == 2
 
 
-def test_an_old_checkpoint_is_reported_and_never_resolved():
+def test_an_old_checkpoint_with_no_record_is_never_replayed_only_estimated():
+    # CORRECTED 2026-10-21: "reported and never resolved" left 09-08 and 09-10 open for six
+    # weeks. Still never REPLAYED -- saved_at is not a managed minute -- but closed, flagged.
     with tempfile.TemporaryDirectory() as tmp:
-        _lab(tmp, [_pos("a")], managed=None)
+        _no_options(tmp)
+        arm = _lab(tmp, [_pos("a")], managed=None)
         (item,) = ST.pending(tmp, before=AFTER.date(), now=AFTER)
         assert item["status"] == "no_managed_through"
+        assert "no record" in item["anchor"]["why"]
+        calls, made = [], []
+        with _patched(G, replay_shares=_fake_replay(calls=calls)), \
+                _patched(ST, _history=_fake_history(made=made)):
+            rep = ST.resolve(item, tmp, write=True)
+        assert calls == [] and rep["written"] == 0 and rep["estimated"] == 1
+        # priced at the minute the shares arm flattens: the 15:55 bar, admitted at 15:56:02
+        assert made[0].asked == [("XLE", dt.datetime(2026, 10, 5, 15, 56, 2))]
+        (row,) = [r for r in G._jsonl(arm / "trades.jsonl") if r.get("reconstructed")]
+        assert row["estimate"] is True and row["exit_reason"] == "eod_estimate"
+        assert row["exit_mode"] == ST.ESTIMATE_MODE and row["exit_px"] == 64.0
+        assert abs(row["pnl_net"] - 157.0 * (64.0 - 63.69)) < 1e-6
+        assert ST.pending(tmp, before=AFTER.date(), now=AFTER) == []
+
+
+def test_an_old_shares_checkpoint_is_anchored_on_its_own_dense_record():
+    # 2026-09-10: a row every minute to 15:19, then silence; saved_at says 15:42:05. A
+    # replay from saved_at would skip 22 minutes of stops nobody checked.
+    with tempfile.TemporaryDirectory() as tmp:
+        _no_options(tmp)
+        arm = _lab(tmp, [_pos("a")], trades=[_row("r1"), _row("r2", "target")], managed=None,
+                   saved="2026-10-05T15:42:05")
+        _signals(arm, "15:00", "15:19")
+        (item,) = ST.pending(tmp, before=AFTER.date(), now=AFTER)
+        assert item["status"] == "pending"
+        assert item["anchor"]["managed_through"] == "2026-10-05T15:19:00"    # bar 15:18 closed
+        assert item["anchor"]["trace_minutes"] == "10/10"
         calls = []
         with _patched(G, replay_shares=_fake_replay(calls=calls)):
             rep = ST.resolve(item, tmp, write=True)
-        assert calls == [] and rep["written"] == 0 and "managed_through" in rep["refused"]
+        assert calls == [[(dt.datetime(2026, 10, 5, 15, 20), "a")]]
+        assert rep["written"] == 1 and rep["estimated"] == 0
+        (row,) = [r for r in G._jsonl(arm / "trades.jsonl") if r.get("reconstructed")]
+        assert row["reconstruction"]["managed_through_source"] == "record_trace"
+        assert row["reconstruction"]["managed_through"] == "2026-10-05T15:19:00"
+        assert "estimate" not in row and row["exit_mode"] == ST.EXIT_MODE
+
+
+def test_a_sparse_record_proves_nothing_and_rows_after_the_save_are_not_evidence():
+    with tempfile.TemporaryDirectory() as tmp:
+        arm = _lab(tmp, [_pos("a")], managed=None, saved="2026-10-05T15:42:05")
+        _signals(arm, "15:00", "15:18", every=3)       # one minute in three
+        _signals(arm, "15:43", "15:55")                # dense, but after the checkpoint
+        (item,) = ST.pending(tmp, before=AFTER.date(), now=AFTER)
+        assert item["status"] == "no_managed_through"
+        assert "too sparse" in item["anchor"]["why"] and item["anchor"]["trace_minutes"] == "4/10"
+
+
+def test_a_symbol_whose_quotes_failed_inside_the_window_is_estimated_not_replayed():
+    with tempfile.TemporaryDirectory() as tmp:
+        _no_options(tmp)
+        arm = _lab(tmp, [_pos("a"), _pos("b", "XLK")], trades=[_row("r1"), _row("r2", "target")],
+                   managed=None, saved="2026-10-05T15:42:05")
+        _signals(arm, "15:00", "15:19")
+        _outage(arm, ts="2026-10-05T15:17:30", kind="stale_quote", detail="XLK age=6.8s")
+        # after the anchor: the runner stopping, not a hole in what the anchor vouches for
+        _outage(arm, ts="2026-10-05T15:41:58", kind="bars_failed", symbol="XLE", detail="503")
+        (item,) = ST.pending(tmp, before=AFTER.date(), now=AFTER)
+        assert item["status"] == "pending" and item["anchor"]["unproven_symbols"] == ["XLK"]
+        calls = []
+        with _patched(G, replay_shares=_fake_replay(calls=calls)), \
+                _patched(ST, _history=_fake_history()):
+            rep = ST.resolve(item, tmp, write=True)
+        assert calls == [[(dt.datetime(2026, 10, 5, 15, 20), "a")]]
+        assert rep["written"] == 1 and rep["estimated"] == 1
+        new = {r["signal_id"]: r for r in G._jsonl(arm / "trades.jsonl") if r.get("reconstructed")}
+        assert "estimate" not in new["a"] and new["b"]["estimate"] is True
+
+
+def test_options_rows_never_anchor_a_checkpoint():
+    # The options arm writes SKIP and DECISION rows even on a tick whose stale quote made
+    # _manage_open return early (2026-10-21: 95 decisions, nothing managed).
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        (root / "recovery_archive").mkdir()
+        pos = {"position_id": "p1", "setup_id": "ORB_5min", "symbol": "SPY",
+               "entry_ts": "2026-10-05T14:05:02"}
+        (root / "recovery_archive" / f"positions_open_{DAY}_154205.json").write_text(json.dumps(
+            {"saved_at": "2026-10-05T15:42:05", "session_date": DAY.isoformat(),
+             "positions": [pos]}), encoding="utf-8")
+        _signals(root, "15:00", "15:19")
+        (item,) = ST.pending(tmp, before=AFTER.date(), now=AFTER)
+        assert (item["arm"], item["status"]) == ("options", "no_managed_through")
+        assert "anchor" not in item
 
 
 # --------------------------------------------------------------------------- resolving them
@@ -158,17 +284,42 @@ def test_exits_are_appended_flagged_from_the_next_minute_and_written_once():
             assert ST.pending(tmp, before=AFTER.date(), now=AFTER) == []
 
 
-def test_a_failed_self_check_writes_nothing_and_is_not_retried():
+def test_a_failed_self_check_writes_no_replayed_exit_and_is_never_replayed_again():
     with tempfile.TemporaryDirectory() as tmp:
         _no_options(tmp)
         arm = _lab(tmp, [_pos("a")], trades=[_row("r1"), _row("r2", "target")])
-        with _patched(G, replay_shares=_fake_replay(reason_for_recorded="time")):
+        # no history price either: the position must stay open and be retried
+        with _patched(G, replay_shares=_fake_replay(reason_for_recorded="time")), \
+                _patched(ST, _history=_fake_history(quotes={"XLE": None})):
             (item,) = ST.pending(tmp, before=AFTER.date(), now=AFTER)
             rep = ST.resolve(item, tmp, write=True)
-        assert rep["written"] == 0 and "0%" in rep["refused"]
+        assert rep["written"] == 0 and rep["estimated"] == 0 and rep["unpriced"] == 1
+        assert "0%" in rep["refused"]
         assert not any(r.get("reconstructed") for r in G._jsonl(arm / "trades.jsonl"))
         (again,) = ST.pending(tmp, before=AFTER.date(), now=AFTER)
         assert again["status"] == "refused"
+        # Next window: priced now, and closed by the estimate -- without a second replay.
+        calls = []
+        with _patched(G, replay_shares=_fake_replay(calls=calls)), \
+                _patched(ST, _history=_fake_history()):
+            rep = ST.resolve(again, tmp, write=True)
+        assert calls == [] and rep["estimated"] == 1
+        (row,) = [r for r in G._jsonl(arm / "trades.jsonl") if r.get("reconstructed")]
+        assert row["estimate"] is True and "self-check failed" in row["reconstruction"]["why"]
+        assert ST.pending(tmp, before=AFTER.date(), now=AFTER) == []
+
+
+def test_a_rebuilt_shares_exit_carries_its_sessions_config_hash():
+    # The replay runs TODAY's config; a September position was opened under September's.
+    with tempfile.TemporaryDirectory() as tmp:
+        _no_options(tmp)
+        arm = _lab(tmp, [_pos("a")], trades=[_row("r1"), _row("r2", "target")])
+        with _patched(G, replay_shares=_fake_replay(replay_hash="7c6414fc549315f3")):
+            (item,) = ST.pending(tmp, before=AFTER.date(), now=AFTER)
+            ST.resolve(item, tmp, write=True)
+        (row,) = [r for r in G._jsonl(arm / "trades.jsonl") if r.get("reconstructed")]
+        assert row["config_hash"] == "53229d6f1f24df10"
+        assert row["reconstruction"]["replay_config_hash"] == "7c6414fc549315f3"
 
 
 def test_a_dry_run_writes_nothing():
@@ -253,11 +404,34 @@ def test_hook_does_not_start_a_replay_it_cannot_finish_before_the_session():
     assert c.log == []
 
 
-def test_hook_only_reports_what_it_will_not_resolve():
-    c = _Calls(up=False)
-    _hook(c, [{"arm": "shares", "session_date": "2026-09-08", "status": "no_managed_through",
-               "missing": [1, 2]}])
-    assert c.log == []
+def test_hook_settles_old_and_refused_sessions_too():
+    # It used to log these as "left for a human" every 30 minutes and never touch them.
+    for status in ("no_managed_through", "refused"):
+        c = _Calls(up=False)
+        _hook(c, [{"arm": "shares", "session_date": "2026-09-08", "status": status,
+                   "missing": [1, 2]}])
+        assert c.log == ["terminal_up", "evict", "start_terminal", "run", "shutdown", "kill"]
+
+
+def test_hook_says_each_thing_once_a_day():
+    c = _Calls(up=True)
+    fakes, run = c.fakes()
+    item = {"arm": "shares", "session_date": "2026-10-05", "status": "pending", "missing": [1]}
+    with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as tmp:
+        log_file = Path(tmp) / "logs" / f"{DAY}.log"
+        log_file.parent.mkdir()
+
+        def log(msg):
+            with open(log_file, "a", encoding="utf-8") as fh:
+                fh.write(f"[autostart 2026-10-05 16:00:00 ET] {msg}\n")
+        with _patched(A, log=log, **fakes), _patched(subprocess, run=run), \
+                _patched(ST, pending=lambda lab_dir, before: [item]):
+            A.resolve_stranded(DAY, tmp, before=AFTER.date())
+            A.resolve_stranded(DAY, tmp, before=AFTER.date())
+        text = log_file.read_text(encoding="utf-8")
+    assert c.log.count("run") == 2                   # it still tries every window
+    assert text.count("[stranded] shares 2026-10-05: ok") == 1
+    assert text.count("resolving from history") == 1
 
 
 def test_main_settles_stranded_positions_before_the_wait_and_in_the_evening():

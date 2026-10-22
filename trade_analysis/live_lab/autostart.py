@@ -737,6 +737,18 @@ STRANDED_MARGIN = dt.timedelta(minutes=3)    # the morning replay must end this 
 STRANDED_MIN_SEC = 240                       # with less time than this left, do not start one
 
 
+def _log_once(lab_dir, day: dt.date, msg: str) -> None:
+    """log(msg) unless today's log already holds it. The task fires every 30 minutes; a
+    message about an EARLIER session that is still true is news once a day, not 6-26 times."""
+    try:
+        p = Path(lab_dir) / "logs" / f"{day.isoformat()}.log"
+        if p.exists() and msg in p.read_text(encoding="utf-8", errors="replace"):
+            return
+    except OSError:
+        pass
+    log(msg)
+
+
 def resolve_stranded(day: dt.date, lab_dir, before: dt.date, deadline: dt.datetime | None = None,
                      may_start_terminal: bool = False) -> None:
     """Give positions an earlier session never closed their exits, from history. Never raises.
@@ -760,12 +772,10 @@ def resolve_stranded(day: dt.date, lab_dir, before: dt.date, deadline: dt.dateti
             log("[stranded] a runner still holds its lock; leaving the terminal and book alone")
             return
         from .stranded import pending
-        items = pending(lab_dir, before)
-        for i in items:
-            if i["status"] != "pending":
-                log(f"[stranded] {i['arm']} {i['session_date']}: {len(i['missing'])} "
-                    f"position(s) have no exit and are left for a human ({i['status']})")
-        todo = [i for i in items if i["status"] == "pending"]
+        # Every status is settled now -- replayed, or closed at the flagged 15:55 estimate
+        # (stranded.py, 2026-10-21). "Left for a human" left 09-08 and 09-10 open for six
+        # weeks and printed them up to 26 times a day.
+        todo = pending(lab_dir, before)
         if not todo:
             return
         timeout = float(RECOVERY_TIMEOUT_SEC)
@@ -784,7 +794,8 @@ def resolve_stranded(day: dt.date, lab_dir, before: dt.date, deadline: dt.dateti
                 log("[stranded] terminal would not start; retried at the next window")
                 return
         names = ", ".join(i["arm"] + " " + i["session_date"] for i in todo)
-        log(f"[stranded] positions left without an exit ({names}); resolving from history")
+        _log_once(lab_dir, day, f"[stranded] positions left without an exit ({names}); "
+                                f"resolving from history")
         root = str(Path(__file__).resolve().parents[2])
         pr = subprocess.run(
             [sys.executable, "-m", "trade_analysis.live_lab.stranded",
@@ -792,10 +803,11 @@ def resolve_stranded(day: dt.date, lab_dir, before: dt.date, deadline: dt.dateti
             cwd=root, capture_output=True, text=True, timeout=timeout)
         for l in (pr.stdout or "").splitlines():
             if l.startswith("[stranded]"):
-                log(l)
+                _log_once(lab_dir, day, l)
         if pr.returncode != 0:
             tail = ((pr.stderr or "").strip().splitlines() or [""])[-1]
-            log(f"[stranded] exit {pr.returncode}; retried at the next window. {tail}")
+            _log_once(lab_dir, day, f"[stranded] exit {pr.returncode}; retried at the next "
+                                    f"window. {tail}")
     except subprocess.TimeoutExpired:
         log("[stranded] replay ran out of time; retried at the next window")
     except Exception as exc:                                 # noqa: BLE001

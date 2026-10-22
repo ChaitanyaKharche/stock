@@ -132,6 +132,14 @@ So:
   test: 2026-11-02, the record should commit at ~16:00 ET. Task definition is not in git.
 - `live_lab_data/` is a FROZEN forward test. Do not touch config hashes. `autostart`
   commits and pushes it at the end of every session.
+- **Stranded positions: settled 2026-10-21, by code that was not in git for a day.**
+  `stranded.py` was rewritten on the laptop at 11:34 MST on 10-21 and left uncommitted.
+  Its 16:00 ET run that day appended the 51 shares positions open since 09-08 (19) and
+  09-10 (32), replayed from history and flagged `reconstructed`: **+$255.95 and +$584.10**.
+  Self-checks: 26/27 exits same rule on 09-08, but **only 5/5 on 09-10** -- that +$584 rests
+  on five trades. Committed as-is on 2026-10-22; 10-22's session also ran it. The dirty
+  checkout is what blocked `archive.py`'s merge-and-retry on 10-22: **never leave lab code
+  uncommitted on the laptop**, it stops the daily push the first time `main` moves.
 - The live lab machine travels in a car. Network drops and host suspends are expected and
   are guarded, not bugs.
 
