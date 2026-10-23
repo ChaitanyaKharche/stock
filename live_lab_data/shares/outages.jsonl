@@ -13021,3 +13021,8 @@
 {"seq":345996,"ts":"2026-10-22T15:00:21.621258","kind":"quote_failed","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"NVDA"}
 {"seq":345997,"ts":"2026-10-22T15:00:21.623258","kind":"quote_failed","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"WMT"}
 {"seq":345998,"ts":"2026-10-22T15:01:02.008842","kind":"feed","detail":"upstream recovered after 48s and 15 failed call(s)","path":"__recovered__"}
+{"seq":358845,"ts":"2026-10-23T14:29:07.502067","kind":"stale_quote","detail":"WMT age=5.6s"}
+{"seq":363174,"ts":"2026-10-23T16:00:22.404846","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/snapshot/quote"}
+{"seq":363175,"ts":"2026-10-23T16:00:22.435099","kind":"quote_failed","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"GOOGL"}
+{"seq":363176,"ts":"2026-10-23T16:00:22.443108","kind":"quote_failed","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"WMT"}
+{"seq":363177,"ts":"2026-10-23T16:00:22.450040","kind":"quote_failed","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"AAPL"}
