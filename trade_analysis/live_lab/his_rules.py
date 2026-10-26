@@ -97,10 +97,20 @@ class Baselines:
             self.vol[b["ts"].time()].append(b.get("volume", 0.0))
 
 
+DIAG = defaultdict(int)     # where signals die; printed at the end of a run
+
+
 def rate_bars(ten: Sequence[dict], base: Baselines) -> list[dict]:
     out = []
     for b in ten:
         rr, vr = base.rate(b)
+        DIAG["bars"] += 1
+        if rr is None or vr is None:
+            DIAG["bars_without_full_baseline"] += 1
+        else:
+            DIAG["bars_range_ok"] += rr >= RANGE_MULT
+            DIAG["bars_vol_ok"] += vr >= VOL_MULT
+            DIAG["bars_both_ok"] += (rr >= RANGE_MULT and vr >= VOL_MULT)
         out.append({"range_ratio": rr, "vol_ratio": vr,
                     "qualifies": rr is not None and vr is not None
                     and rr >= RANGE_MULT and vr >= VOL_MULT})
@@ -380,6 +390,15 @@ def session_trades(ten: Sequence[dict], rth_1m: Sequence[dict], six: Sequence[Li
     rated = rate_bars(ten, base)
     temps = temp_lines(rth_1m, six)
     out = []
+    DIAG["sessions_with_lines"] += 1
+    r1s1 = [l for l in six if l.name in ("R1", "S1")]
+    crosses = [(i, l.name) for i in range(len(ten)) for l in r1s1 if is_break(ten, i, l)]
+    DIAG["sessions_with_R1S1_cross"] += bool(crosses)
+    DIAG["sessions_with_R1S1_cross_in_morning_window"] += any(
+        i + 1 < len(ten) and _in_window(ten[i + 1]["ts"].time(), MORNING) for i, _ in crosses)
+    DIAG["sessions_with_qualifying_R1S1_cross_in_window"] += any(
+        i + 1 < len(ten) and _in_window(ten[i + 1]["ts"].time(), MORNING) and rated[i]["qualifies"]
+        for i, _ in crosses)
     morning = morning_signal(ten, rated, six)
     pull = pullback_signal(ten, six) if morning is None else None
     busy_until = None
@@ -437,6 +456,8 @@ def run(symbol: str, start: dt.date, end: dt.date, options: bool) -> list[dict]:
                 continue
             if len(rth) < 300:
                 thin += 1
+                if thin <= 3 or thin % 100 == 0:
+                    print(f"  {day}: thin ({len(pre)} premarket, {len(rth)} RTH bars)", flush=True)
                 prev = None
                 continue
             ten = [b for b in resample_10m(rth) if RTH_FROM <= b["ts"].time() < RTH_TO]
@@ -462,6 +483,7 @@ def run(symbol: str, start: dt.date, end: dt.date, options: bool) -> list[dict]:
         feed.close()
     print(f"\n  {tried} days tried, {thin} thin, {no_book} sessions without an option "
           f"book, {len(rows)} trades")
+    print("  where signals died:", json.dumps(dict(DIAG), indent=2))
     return rows
 
 
