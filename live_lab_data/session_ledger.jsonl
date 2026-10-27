@@ -98,3 +98,5 @@
 {"date": "2026-10-25", "outcome": "NOT_A_SESSION", "reason": "market holiday or weekend", "attempts": 1, "is_session": false, "recorded_at_et": "2026-10-26T08:30:15", "utc_offset_hours": null}
 {"date": "2026-10-26", "outcome": "OPENED", "reason": "", "attempts": 1, "is_session": true, "recorded_at_et": "2026-10-26T09:06:48", "utc_offset_hours": null, "started_et": "09:06:47", "late_start": false, "arms": ["options", "shares"]}
 {"date": "2026-10-26", "outcome": "COLLECTED", "reason": "", "attempts": 2, "is_session": true, "recorded_at_et": "2026-10-26T16:00:15", "utc_offset_hours": null, "supervisor_rc": 0}
+{"date": "2026-10-27", "outcome": "OPENED", "reason": "", "attempts": 1, "is_session": true, "recorded_at_et": "2026-10-27T09:06:46", "utc_offset_hours": null, "started_et": "09:06:46", "late_start": false, "arms": ["options", "shares"]}
+{"date": "2026-10-27", "outcome": "COLLECTED", "reason": "", "attempts": 2, "is_session": true, "recorded_at_et": "2026-10-27T16:00:15", "utc_offset_hours": null, "supervisor_rc": 0}
