@@ -13173,3 +13173,14 @@
 {"seq":394331,"ts":"2026-10-27T14:26:07.606769","kind":"degraded_bar","detail":"1m gap before 14:25","symbol":"DIA"}
 {"seq":394667,"ts":"2026-10-27T14:32:08.952327","kind":"stale_quote","detail":"XLV age=8.9s"}
 {"seq":394781,"ts":"2026-10-27T14:35:06.250630","kind":"degraded_bar","detail":"1m gap before 14:34","symbol":"DIA"}
+{"seq":401861,"ts":"2026-10-28T11:41:04.924949","kind":"stale_quote","detail":"WMT age=5.3s"}
+{"seq":402315,"ts":"2026-10-28T11:57:05.982094","kind":"degraded_bar","detail":"1m gap before 11:56","symbol":"DIA"}
+{"seq":402398,"ts":"2026-10-28T12:00:03.499242","kind":"degraded_bar","detail":"1m gap before 11:59","symbol":"XLY"}
+{"seq":402590,"ts":"2026-10-28T12:06:05.852280","kind":"degraded_bar","detail":"1m gap before 12:05","symbol":"DIA"}
+{"seq":402742,"ts":"2026-10-28T12:11:07.112515","kind":"degraded_bar","detail":"1m gap before 12:10","symbol":"DIA"}
+{"seq":403090,"ts":"2026-10-28T12:22:08.007726","kind":"degraded_bar","detail":"1m gap before 12:21","symbol":"DIA"}
+{"seq":403553,"ts":"2026-10-28T12:36:06.909601","kind":"stale_quote","detail":"WMT age=6.0s"}
+{"seq":404789,"ts":"2026-10-28T13:12:06.215097","kind":"degraded_bar","detail":"1m gap before 13:11","symbol":"DIA"}
+{"seq":404859,"ts":"2026-10-28T13:14:05.762504","kind":"degraded_bar","detail":"1m gap before 13:13","symbol":"DIA"}
+{"seq":404940,"ts":"2026-10-28T13:15:08.883395","kind":"stale_quote","detail":"WMT age=8.8s"}
+{"seq":406273,"ts":"2026-10-28T13:49:05.929276","kind":"degraded_bar","detail":"1m gap before 13:48","symbol":"DIA"}
