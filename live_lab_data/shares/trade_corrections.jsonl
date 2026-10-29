@@ -536,3 +536,4 @@
 {"kind": "gap_recovery_run", "day": "2026-10-20", "arm": "shares", "affected": 0, "written": 0, "refused": null, "validation": null, "at": "2026-10-20T13:00:20"}
 {"kind": "gap_recovery_run", "day": "2026-10-21", "arm": "shares", "affected": 0, "written": 0, "refused": null, "validation": null, "at": "2026-10-21T13:00:22"}
 {"kind": "gap_recovery_run", "day": "2026-10-22", "arm": "shares", "affected": 0, "written": 0, "refused": null, "validation": null, "at": "2026-10-22T13:00:21"}
+{"kind": "gap_recovery_run", "day": "2026-10-29", "arm": "shares", "affected": 0, "written": 0, "refused": null, "validation": null, "at": "2026-10-29T13:00:16"}
