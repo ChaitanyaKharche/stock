@@ -20,6 +20,8 @@ Specifically:
 - **Don't keep proposing new instruments.** I trade naked calls and puts. Not straddles,
   not spreads. If the data says calls and puts won't work, say that — don't offer a
   different structure as a consolation prize.
+  (2026-10-28: he asked for a debit-spread arm in the lab himself; parked after the pivot
+  of 2026-10-29. The rule above still binds the assistant: never *propose* one.)
 - **Metric units. No apologies, no fluff, no "great question".**
 
 ## WHAT IS SETTLED — do not re-run these
@@ -37,6 +39,8 @@ Cite these and move on. Every one is written up in `research/` with the numbers.
 | R1/S1 near round numbers (1, 5, 10, 25) | `after_break_results.md` §3 | null, ratio ≈1.00 |
 | S1 (downside) early break | `after_break_results.md` §4 | null, p=0.242 |
 | Removing the close-back-inside stop | `early_r1_hold_results.md` | **null, failed all 3 gates** |
+| His rules as he described them 2026-10-26 (size+volume filter, windows, 2/2/1 ladder, partial stop) on SPY 0DTE 2020–23 and QQQ 2016–26 | `his_rules_results.md` | **SPY options: 41 trades, −$71/trade, underpowered, no verdict. QQQ underlying: −1.6 bp, null.** Pullback arm +4.1 bp (secondary, p=0.006, below the ~5 bp option cost; SPY options −$42) |
+| Scheduled news and the day's range (`news_impact/`, gate-2 audited) | `news_impact/results.md` | **Fed decision days: QQQ range median 1.23× normal vs 0.96× on no-release days, +0.27 [0.12, 0.35], 84 days 2016–2026-09, holds on SPY 2020–26. GDP advance +0.26 (Holm 0.011). CPI and jobs days: 4 in 10 big days vs 1 in 4, mostly the opening gap.** Everything else there is descriptive. Direction was not measured. |
 
 **THE SIX-LINE FAMILY IS CLOSED** — entry timing, level set, profit cap, and stop all
 measured, all null. Do not re-open without a genuinely new hypothesis and fresh data.
@@ -140,6 +144,11 @@ So:
   on five trades. Committed as-is on 2026-10-22; 10-22's session also ran it. The dirty
   checkout is what blocked `archive.py`'s merge-and-retry on 10-22: **never leave lab code
   uncommitted on the laptop**, it stops the daily push the first time `main` moves.
+- **Research runs and the feed.** A backtest that prints zeros for its first hundred days
+  has a dead Theta Terminal upstream link, not a null (2026-10-26 and 10-30, twice). Restart
+  the terminal (`fix` in `news_impact/results.md` §9) before believing any zero.
+- **Lid closed during sessions = host suspend** (owner confirmed 2026-10-30, travelling).
+  Power settings fix in `context_recovery/19` phase 0 / this file's commit history.
 - The live lab machine travels in a car. Network drops and host suspends are expected and
   are guarded, not bugs.
 
