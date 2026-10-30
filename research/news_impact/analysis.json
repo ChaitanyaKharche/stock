@@ -1,0 +1,2537 @@
+{
+ "pre_registration": "research/news_impact/preregistration.md (incl. \u00a79 amendment)",
+ "task_id": "R-2026-10-30-05",
+ "parent": "R-2026-10-30-01",
+ "bootstrap": {
+  "reps": 3000,
+  "seed": 20260828,
+  "unit": "session",
+  "ci": "95% percentile",
+  "p": "two-sided, 2*min(frac<=0, frac>=0), floored 1/reps",
+  "placebo_draws": 200
+ },
+ "thresholds": {
+  "min_event_days": 30,
+  "min_median_diff": 0.2,
+  "alpha": 0.05,
+  "impact_rel_range": [
+   0.8,
+   1.5
+  ],
+  "impact_rel_gap": [
+   1.0,
+   2.5
+  ],
+  "early_fraction": 0.6
+ },
+ "families": {
+  "H1": "none (confirmatory)",
+  "H2": [
+   "CPI",
+   "NFP",
+   "GDP_ADV",
+   "PCE"
+  ],
+  "H3": [
+   "FOMC",
+   "CPI",
+   "NFP",
+   "GDP_ADV",
+   "PCE"
+  ],
+  "geopolitical": "none; descriptive with placebo",
+  "SPY": "none"
+ },
+ "events": {
+  "scheduled_rows": 516,
+  "geopolitical_rows": 321,
+  "unknown_types": [],
+  "surprise_rows": 262,
+  "scheduled_rows_shifted_to_next_session": 6,
+  "features_files": {
+   "QQQ": "research/news_impact/day_features_QQQ.csv",
+   "SPY": "research/news_impact/day_features_SPY.csv"
+  },
+  "lab_days_file": "research/news_impact/lab_days.csv",
+  "unknown_types_note": ""
+ },
+ "primary_symbol": "QQQ",
+ "replication_symbols": [
+  "SPY"
+ ],
+ "replication_label": "robustness check on a second symbol over the same days, not an independent sample (A4)",
+ "symbols": {
+  "QQQ": {
+   "exclusions": {
+    "n_rows": 2697,
+    "n_thin_excluded": 21,
+    "n_rel_range_none_excluded": 21,
+    "n_usable": 2655,
+    "n_rel_gap_none_among_usable": 0,
+    "thin_by_year": {
+     "2016": 1,
+     "2017": 2,
+     "2018": 3,
+     "2019": 3,
+     "2020": 2,
+     "2021": 1,
+     "2022": 1,
+     "2023": 2,
+     "2024": 3,
+     "2025": 3
+    },
+    "impact_column_disagreements": 0
+   },
+   "n_event_days_any_type": 737,
+   "n_nonevent_days": 1918,
+   "n_scheduled_control_days": 2165,
+   "date_range": [
+    "2016-02-03",
+    "2026-09-24"
+   ],
+   "event_coverage": {
+    "CPI": {
+     "sessions_in_file": 129,
+     "usable_event_sessions": 127,
+     "not_usable_sessions": 2
+    },
+    "FOMC": {
+     "sessions_in_file": 86,
+     "usable_event_sessions": 84,
+     "not_usable_sessions": 2
+    },
+    "GDP_ADV": {
+     "sessions_in_file": 44,
+     "usable_event_sessions": 42,
+     "not_usable_sessions": 2
+    },
+    "NFP": {
+     "sessions_in_file": 129,
+     "usable_event_sessions": 126,
+     "not_usable_sessions": 3
+    },
+    "PCE": {
+     "sessions_in_file": 128,
+     "usable_event_sessions": 125,
+     "not_usable_sessions": 3
+    },
+    "cyber_infrastructure": {
+     "sessions_in_file": 10,
+     "usable_event_sessions": 10,
+     "not_usable_sessions": 0
+    },
+    "energy_shock": {
+     "sessions_in_file": 35,
+     "usable_event_sessions": 31,
+     "not_usable_sessions": 4
+    },
+    "financial_stress": {
+     "sessions_in_file": 35,
+     "usable_event_sessions": 32,
+     "not_usable_sessions": 3
+    },
+    "pandemic_health": {
+     "sessions_in_file": 17,
+     "usable_event_sessions": 16,
+     "not_usable_sessions": 1
+    },
+    "political_shock": {
+     "sessions_in_file": 62,
+     "usable_event_sessions": 61,
+     "not_usable_sessions": 1
+    },
+    "trade_tariff": {
+     "sessions_in_file": 70,
+     "usable_event_sessions": 69,
+     "not_usable_sessions": 1
+    },
+    "us_fiscal": {
+     "sessions_in_file": 35,
+     "usable_event_sessions": 34,
+     "not_usable_sessions": 1
+    },
+    "war_military": {
+     "sessions_in_file": 55,
+     "usable_event_sessions": 53,
+     "not_usable_sessions": 2
+    }
+   },
+   "H1": {
+    "type": "FOMC",
+    "control": "sessions with no scheduled event (A1)",
+    "n_event_days": 84,
+    "n_control_days": 2165,
+    "rel_range": {
+     "n_a": 84,
+     "n_b": 2165,
+     "median_a": 1.233011,
+     "median_b": 0.964361,
+     "diff": 0.26865,
+     "ci95": [
+      0.123873,
+      0.352062
+     ],
+     "p": 0.000333,
+     "pass_condition": "ci95 excludes 0 and diff >= 0.2; no family (A3)",
+     "pass": true,
+     "replicated_on_SPY": true,
+     "replicated_on_SPY_rule": "same sign, CI excludes 0, |diff| >= 0.2; robustness check on a second symbol over the same days, not an independent sample (A4)"
+    },
+    "rel_gap": {
+     "n_a": 84,
+     "n_b": 2165,
+     "median_a": 0.689066,
+     "median_b": 0.966575,
+     "diff": -0.277509,
+     "ci95": [
+      -0.450346,
+      0.142025
+     ],
+     "p": 0.229333,
+     "descriptive": true
+    },
+    "status": "tested"
+   },
+   "H2": {
+    "control": "sessions with no scheduled event (A1)",
+    "family": [
+     "CPI",
+     "NFP",
+     "GDP_ADV",
+     "PCE"
+    ],
+    "family_size": 4,
+    "pass_condition": "Holm-adjusted p < 0.05, then diff >= 0.2 (A3)",
+    "types": {
+     "CPI": {
+      "n_event_days": 127,
+      "n_control_days": 2165,
+      "tested": true,
+      "rel_range": {
+       "n_a": 127,
+       "n_b": 2165,
+       "median_a": 0.973537,
+       "median_b": 0.964361,
+       "diff": 0.009176,
+       "ci95": [
+        -0.082556,
+        0.146497
+       ],
+       "p": 0.860667,
+       "p_raw": 0.860667,
+       "p_holm": 0.860667,
+       "pass": false,
+       "replicated_on_SPY": false,
+       "replicated_on_SPY_rule": "same sign, CI excludes 0, |diff| >= 0.2"
+      },
+      "rel_gap": {
+       "n_a": 127,
+       "n_b": 2165,
+       "median_a": 1.478663,
+       "median_b": 0.966575,
+       "diff": 0.512088,
+       "ci95": [
+        0.112312,
+        0.874603
+       ],
+       "p": 0.002667
+      },
+      "status": "tested"
+     },
+     "NFP": {
+      "n_event_days": 126,
+      "n_control_days": 2165,
+      "tested": true,
+      "rel_range": {
+       "n_a": 126,
+       "n_b": 2165,
+       "median_a": 1.085243,
+       "median_b": 0.964361,
+       "diff": 0.120882,
+       "ci95": [
+        0.00156,
+        0.203103
+       ],
+       "p": 0.048,
+       "p_raw": 0.048,
+       "p_holm": 0.144,
+       "pass": false,
+       "replicated_on_SPY": false,
+       "replicated_on_SPY_rule": "same sign, CI excludes 0, |diff| >= 0.2"
+      },
+      "rel_gap": {
+       "n_a": 126,
+       "n_b": 2165,
+       "median_a": 1.323247,
+       "median_b": 0.966575,
+       "diff": 0.356672,
+       "ci95": [
+        0.007937,
+        0.610426
+       ],
+       "p": 0.046667
+      },
+      "status": "tested"
+     },
+     "GDP_ADV": {
+      "n_event_days": 42,
+      "n_control_days": 2165,
+      "tested": true,
+      "rel_range": {
+       "n_a": 42,
+       "n_b": 2165,
+       "median_a": 1.219346,
+       "median_b": 0.964361,
+       "diff": 0.254985,
+       "ci95": [
+        0.157062,
+        0.513482
+       ],
+       "p": 0.002667,
+       "p_raw": 0.002667,
+       "p_holm": 0.010667,
+       "pass": true,
+       "replicated_on_SPY": false,
+       "replicated_on_SPY_rule": "same sign, CI excludes 0, |diff| >= 0.2"
+      },
+      "rel_gap": {
+       "n_a": 42,
+       "n_b": 2165,
+       "median_a": 1.516304,
+       "median_b": 0.966575,
+       "diff": 0.549729,
+       "ci95": [
+        -0.040277,
+        1.008246
+       ],
+       "p": 0.07
+      },
+      "status": "tested"
+     },
+     "PCE": {
+      "n_event_days": 125,
+      "n_control_days": 2165,
+      "tested": true,
+      "rel_range": {
+       "n_a": 125,
+       "n_b": 2165,
+       "median_a": 1.036371,
+       "median_b": 0.964361,
+       "diff": 0.07201,
+       "ci95": [
+        -0.060282,
+        0.192888
+       ],
+       "p": 0.138,
+       "p_raw": 0.138,
+       "p_holm": 0.276,
+       "pass": false,
+       "replicated_on_SPY": false,
+       "replicated_on_SPY_rule": "same sign, CI excludes 0, |diff| >= 0.2"
+      },
+      "rel_gap": {
+       "n_a": 125,
+       "n_b": 2165,
+       "median_a": 0.944163,
+       "median_b": 0.966575,
+       "diff": -0.022412,
+       "ci95": [
+        -0.240923,
+        0.169638
+       ],
+       "p": 0.812
+      },
+      "status": "tested"
+     }
+    }
+   },
+   "H3": {
+    "control": "sessions with no scheduled event (A1)",
+    "family": [
+     "FOMC",
+     "CPI",
+     "NFP",
+     "GDP_ADV",
+     "PCE"
+    ],
+    "family_size": 5,
+    "pass_condition": "Holm-adjusted p < 0.05 and ci95 excludes 0 (\u00a76 + A3)",
+    "control_affected_share": {
+     "n": 2165,
+     "k": 579,
+     "share": 0.267436,
+     "ci95": [
+      0.249885,
+      0.286374
+     ]
+    },
+    "types": {
+     "FOMC": {
+      "n_event_days": 84,
+      "n_control_days": 2165,
+      "tested": true,
+      "share_event": 0.392857,
+      "share_control": 0.267436,
+      "k_event": 33,
+      "k_control": 579,
+      "diff": 0.125421,
+      "ci95": [
+       0.020125,
+       0.232668
+      ],
+      "p_raw": 0.017333,
+      "p_holm": 0.052,
+      "pass": false,
+      "status": "tested",
+      "replicated_on_SPY": true,
+      "replicated_on_SPY_rule": "same sign, CI excludes 0 (no floor defined for a share difference)"
+     },
+     "CPI": {
+      "n_event_days": 127,
+      "n_control_days": 2165,
+      "tested": true,
+      "share_event": 0.393701,
+      "share_control": 0.267436,
+      "k_event": 50,
+      "k_control": 579,
+      "diff": 0.126264,
+      "ci95": [
+       0.041036,
+       0.21246
+      ],
+      "p_raw": 0.003333,
+      "p_holm": 0.013333,
+      "pass": true,
+      "status": "tested",
+      "replicated_on_SPY": true,
+      "replicated_on_SPY_rule": "same sign, CI excludes 0 (no floor defined for a share difference)"
+     },
+     "NFP": {
+      "n_event_days": 126,
+      "n_control_days": 2165,
+      "tested": true,
+      "share_event": 0.436508,
+      "share_control": 0.267436,
+      "k_event": 55,
+      "k_control": 579,
+      "diff": 0.169071,
+      "ci95": [
+       0.079838,
+       0.260152
+      ],
+      "p_raw": 0.000667,
+      "p_holm": 0.003333,
+      "pass": true,
+      "status": "tested",
+      "replicated_on_SPY": true,
+      "replicated_on_SPY_rule": "same sign, CI excludes 0 (no floor defined for a share difference)"
+     },
+     "GDP_ADV": {
+      "n_event_days": 42,
+      "n_control_days": 2165,
+      "tested": true,
+      "share_event": 0.404762,
+      "share_control": 0.267436,
+      "k_event": 17,
+      "k_control": 579,
+      "diff": 0.137325,
+      "ci95": [
+       -0.011074,
+       0.286187
+      ],
+      "p_raw": 0.063333,
+      "p_holm": 0.126667,
+      "pass": false,
+      "status": "tested",
+      "replicated_on_SPY": true,
+      "replicated_on_SPY_rule": "same sign, CI excludes 0 (no floor defined for a share difference)"
+     },
+     "PCE": {
+      "n_event_days": 125,
+      "n_control_days": 2165,
+      "tested": true,
+      "share_event": 0.304,
+      "share_control": 0.267436,
+      "k_event": 38,
+      "k_control": 579,
+      "diff": 0.036564,
+      "ci95": [
+       -0.049589,
+       0.120111
+      ],
+      "p_raw": 0.398,
+      "p_holm": 0.398,
+      "pass": false,
+      "status": "tested",
+      "replicated_on_SPY": false,
+      "replicated_on_SPY_rule": "same sign, CI excludes 0 (no floor defined for a share difference)"
+     }
+    }
+   },
+   "geopolitical_descriptive": {
+    "control": "sessions with no event of any type",
+    "label": "descriptive: selected by salience; may be circular (A1); never tested",
+    "placebo": {
+     "draws": 200,
+     "matching": "calendar year and weekday, with replacement",
+     "flag_rule": "selection when placebo p95 >= 0.5 * observed diff (observed > 0)"
+    },
+    "categories": {
+     "cyber_infrastructure": {
+      "n_event_days": 10,
+      "n_control_days": 1918,
+      "tested": false,
+      "never_tested_reason": "descriptive: selected by salience; may be circular (A1); never tested",
+      "rel_range": {
+       "n_a": 10,
+       "n_b": 1918,
+       "median_a": 1.241885,
+       "median_b": 0.953591,
+       "diff": 0.288293,
+       "ci95": [
+        -0.081332,
+        0.731762
+       ],
+       "p": 0.325333,
+       "placebo_p95": 0.389825,
+       "placebo_median": 0.050641,
+       "placebo_unmatched": 0,
+       "placebo_flag": "selection"
+      },
+      "rel_gap": {
+       "n_a": 10,
+       "n_b": 1918,
+       "median_a": 0.662076,
+       "median_b": 0.946809,
+       "diff": -0.284733,
+       "ci95": [
+        -0.511491,
+        0.400238
+       ],
+       "p": 0.604
+      },
+      "affected_share": {
+       "n_a": 10,
+       "n_b": 1918,
+       "k_a": 4,
+       "k_b": 481,
+       "share_a": 0.4,
+       "share_b": 0.250782,
+       "diff": 0.149218,
+       "ci95": [
+        -0.151303,
+        0.455996
+       ],
+       "p": 0.321333,
+       "placebo_p95": 0.249218,
+       "placebo_median": 0.049218,
+       "placebo_unmatched": 0,
+       "placebo_flag": "selection"
+      }
+     },
+     "energy_shock": {
+      "n_event_days": 31,
+      "n_control_days": 1918,
+      "tested": false,
+      "never_tested_reason": "descriptive: selected by salience; may be circular (A1); never tested",
+      "rel_range": {
+       "n_a": 31,
+       "n_b": 1918,
+       "median_a": 0.964821,
+       "median_b": 0.953591,
+       "diff": 0.01123,
+       "ci95": [
+        -0.343032,
+        0.423561
+       ],
+       "p": 0.896,
+       "placebo_p95": 0.164115,
+       "placebo_median": -0.00024,
+       "placebo_unmatched": 0,
+       "placebo_flag": "selection"
+      },
+      "rel_gap": {
+       "n_a": 31,
+       "n_b": 1918,
+       "median_a": 0.768257,
+       "median_b": 0.946809,
+       "diff": -0.178552,
+       "ci95": [
+        -0.593125,
+        0.513704
+       ],
+       "p": 0.86
+      },
+      "affected_share": {
+       "n_a": 31,
+       "n_b": 1918,
+       "k_a": 11,
+       "k_b": 481,
+       "share_a": 0.354839,
+       "share_b": 0.250782,
+       "diff": 0.104057,
+       "ci95": [
+        -0.060362,
+        0.273689
+       ],
+       "p": 0.226667,
+       "placebo_p95": 0.168573,
+       "placebo_median": 0.007282,
+       "placebo_unmatched": 0,
+       "placebo_flag": "selection"
+      }
+     },
+     "financial_stress": {
+      "n_event_days": 32,
+      "n_control_days": 1918,
+      "tested": false,
+      "never_tested_reason": "category defined by market stress (A1)",
+      "rel_range": {
+       "n_a": 32,
+       "n_b": 1918,
+       "median_a": 0.961952,
+       "median_b": 0.953591,
+       "diff": 0.00836,
+       "ci95": [
+        -0.105911,
+        0.235633
+       ],
+       "p": 0.947333,
+       "placebo_p95": 0.2067,
+       "placebo_median": 0.029856,
+       "placebo_unmatched": 0,
+       "placebo_flag": "selection"
+      },
+      "rel_gap": {
+       "n_a": 32,
+       "n_b": 1918,
+       "median_a": 0.884626,
+       "median_b": 0.946809,
+       "diff": -0.062183,
+       "ci95": [
+        -0.526656,
+        0.466355
+       ],
+       "p": 0.710667
+      },
+      "affected_share": {
+       "n_a": 32,
+       "n_b": 1918,
+       "k_a": 9,
+       "k_b": 481,
+       "share_a": 0.28125,
+       "share_b": 0.250782,
+       "diff": 0.030468,
+       "ci95": [
+        -0.126825,
+        0.188282
+       ],
+       "p": 0.722,
+       "placebo_p95": 0.155468,
+       "placebo_median": -0.000782,
+       "placebo_unmatched": 0,
+       "placebo_flag": "selection"
+      }
+     },
+     "pandemic_health": {
+      "n_event_days": 16,
+      "n_control_days": 1918,
+      "tested": false,
+      "never_tested_reason": "descriptive: selected by salience; may be circular (A1); never tested",
+      "rel_range": {
+       "n_a": 16,
+       "n_b": 1918,
+       "median_a": 1.519363,
+       "median_b": 0.953591,
+       "diff": 0.565772,
+       "ci95": [
+        -0.12734,
+        0.972758
+       ],
+       "p": 0.180667,
+       "placebo_p95": 0.221347,
+       "placebo_median": 0.012319,
+       "placebo_unmatched": 0,
+       "placebo_flag": "placebo not reached (still descriptive)"
+      },
+      "rel_gap": {
+       "n_a": 16,
+       "n_b": 1918,
+       "median_a": 1.423372,
+       "median_b": 0.946809,
+       "diff": 0.476563,
+       "ci95": [
+        -0.100937,
+        2.332226
+       ],
+       "p": 0.114
+      },
+      "affected_share": {
+       "n_a": 16,
+       "n_b": 1918,
+       "k_a": 10,
+       "k_b": 481,
+       "share_a": 0.625,
+       "share_b": 0.250782,
+       "diff": 0.374218,
+       "ci95": [
+        0.124218,
+        0.610662
+       ],
+       "p": 0.003333,
+       "placebo_p95": 0.249218,
+       "placebo_median": 0.061718,
+       "placebo_unmatched": 0,
+       "placebo_flag": "selection"
+      }
+     },
+     "political_shock": {
+      "n_event_days": 61,
+      "n_control_days": 1918,
+      "tested": false,
+      "never_tested_reason": "descriptive: selected by salience; may be circular (A1); never tested",
+      "rel_range": {
+       "n_a": 61,
+       "n_b": 1918,
+       "median_a": 0.989128,
+       "median_b": 0.953591,
+       "diff": 0.035537,
+       "ci95": [
+        -0.054878,
+        0.305719
+       ],
+       "p": 0.236667,
+       "placebo_p95": 0.126778,
+       "placebo_median": 0.015469,
+       "placebo_unmatched": 0,
+       "placebo_flag": "selection"
+      },
+      "rel_gap": {
+       "n_a": 61,
+       "n_b": 1918,
+       "median_a": 1.123572,
+       "median_b": 0.946809,
+       "diff": 0.176763,
+       "ci95": [
+        -0.133139,
+        0.931555
+       ],
+       "p": 0.151333
+      },
+      "affected_share": {
+       "n_a": 61,
+       "n_b": 1918,
+       "k_a": 21,
+       "k_b": 481,
+       "share_a": 0.344262,
+       "share_b": 0.250782,
+       "diff": 0.09348,
+       "ci95": [
+        -0.025214,
+        0.220457
+       ],
+       "p": 0.119333,
+       "placebo_p95": 0.127087,
+       "placebo_median": 0.027906,
+       "placebo_unmatched": 0,
+       "placebo_flag": "selection"
+      }
+     },
+     "trade_tariff": {
+      "n_event_days": 69,
+      "n_control_days": 1918,
+      "tested": false,
+      "never_tested_reason": "descriptive: selected by salience; may be circular (A1); never tested",
+      "rel_range": {
+       "n_a": 69,
+       "n_b": 1918,
+       "median_a": 1.244798,
+       "median_b": 0.953591,
+       "diff": 0.291207,
+       "ci95": [
+        0.147631,
+        0.522529
+       ],
+       "p": 0.000333,
+       "placebo_p95": 0.111141,
+       "placebo_median": -0.017928,
+       "placebo_unmatched": 0,
+       "placebo_flag": "placebo not reached (still descriptive)"
+      },
+      "rel_gap": {
+       "n_a": 69,
+       "n_b": 1918,
+       "median_a": 1.740081,
+       "median_b": 0.946809,
+       "diff": 0.793272,
+       "ci95": [
+        0.172773,
+        1.32774
+       ],
+       "p": 0.000333
+      },
+      "affected_share": {
+       "n_a": 69,
+       "n_b": 1918,
+       "k_a": 37,
+       "k_b": 481,
+       "share_a": 0.536232,
+       "share_b": 0.250782,
+       "diff": 0.28545,
+       "ci95": [
+        0.167528,
+        0.403999
+       ],
+       "p": 0.000333,
+       "placebo_p95": 0.097044,
+       "placebo_median": 0.010088,
+       "placebo_unmatched": 0,
+       "placebo_flag": "placebo not reached (still descriptive)"
+      }
+     },
+     "us_fiscal": {
+      "n_event_days": 34,
+      "n_control_days": 1918,
+      "tested": false,
+      "never_tested_reason": "descriptive: selected by salience; may be circular (A1); never tested",
+      "rel_range": {
+       "n_a": 34,
+       "n_b": 1918,
+       "median_a": 1.051589,
+       "median_b": 0.953591,
+       "diff": 0.097997,
+       "ci95": [
+        -0.046167,
+        0.292891
+       ],
+       "p": 0.156,
+       "placebo_p95": 0.196065,
+       "placebo_median": 0.008227,
+       "placebo_unmatched": 0,
+       "placebo_flag": "selection"
+      },
+      "rel_gap": {
+       "n_a": 34,
+       "n_b": 1918,
+       "median_a": 1.092589,
+       "median_b": 0.946809,
+       "diff": 0.14578,
+       "ci95": [
+        -0.53482,
+        0.843231
+       ],
+       "p": 0.335333
+      },
+      "affected_share": {
+       "n_a": 34,
+       "n_b": 1918,
+       "k_a": 10,
+       "k_b": 481,
+       "share_a": 0.294118,
+       "share_b": 0.250782,
+       "diff": 0.043336,
+       "ci95": [
+        -0.105809,
+        0.201865
+       ],
+       "p": 0.622667,
+       "placebo_p95": 0.160983,
+       "placebo_median": 0.043336,
+       "placebo_unmatched": 0,
+       "placebo_flag": "selection"
+      }
+     },
+     "war_military": {
+      "n_event_days": 53,
+      "n_control_days": 1918,
+      "tested": false,
+      "never_tested_reason": "descriptive: selected by salience; may be circular (A1); never tested",
+      "rel_range": {
+       "n_a": 53,
+       "n_b": 1918,
+       "median_a": 1.143738,
+       "median_b": 0.953591,
+       "diff": 0.190146,
+       "ci95": [
+        0.046981,
+        0.446399
+       ],
+       "p": 0.000333,
+       "placebo_p95": 0.089961,
+       "placebo_median": -0.018491,
+       "placebo_unmatched": 0,
+       "placebo_flag": "placebo not reached (still descriptive)"
+      },
+      "rel_gap": {
+       "n_a": 53,
+       "n_b": 1918,
+       "median_a": 1.219643,
+       "median_b": 0.946809,
+       "diff": 0.272834,
+       "ci95": [
+        -0.153946,
+        0.564236
+       ],
+       "p": 0.216667
+      },
+      "affected_share": {
+       "n_a": 53,
+       "n_b": 1918,
+       "k_a": 23,
+       "k_b": 481,
+       "share_a": 0.433962,
+       "share_b": 0.250782,
+       "diff": 0.18318,
+       "ci95": [
+        0.049639,
+        0.31682
+       ],
+       "p": 0.006,
+       "placebo_p95": 0.107709,
+       "placebo_median": 0.013369,
+       "placebo_unmatched": 0,
+       "placebo_flag": "selection"
+      }
+     }
+    }
+   },
+   "H4": {
+    "overall": {
+     "n": 2655,
+     "ranged_a": {
+      "n": 2655,
+      "k": 218,
+      "share": 0.082109,
+      "ci95": [
+       0.07194,
+       0.093409
+      ]
+     },
+     "ranged_b": {
+      "n": 2655,
+      "k": 339,
+      "share": 0.127684,
+      "ci95": [
+       0.115254,
+       0.140113
+      ]
+     }
+    },
+    "by_year": {
+     "2016": {
+      "n": 230,
+      "ranged_a": {
+       "n": 230,
+       "k": 8,
+       "share": 0.034783,
+       "ci95": [
+        0.013043,
+        0.06087
+       ]
+      },
+      "ranged_b": {
+       "n": 230,
+       "k": 38,
+       "share": 0.165217,
+       "ci95": [
+        0.117391,
+        0.213043
+       ]
+      }
+     },
+     "2017": {
+      "n": 249,
+      "ranged_a": {
+       "n": 249,
+       "k": 10,
+       "share": 0.040161,
+       "ci95": [
+        0.02008,
+        0.068273
+       ]
+      },
+      "ranged_b": {
+       "n": 249,
+       "k": 33,
+       "share": 0.13253,
+       "ci95": [
+        0.092369,
+        0.172691
+       ]
+      }
+     },
+     "2018": {
+      "n": 248,
+      "ranged_a": {
+       "n": 248,
+       "k": 9,
+       "share": 0.03629,
+       "ci95": [
+        0.016129,
+        0.060484
+       ]
+      },
+      "ranged_b": {
+       "n": 248,
+       "k": 31,
+       "share": 0.125,
+       "ci95": [
+        0.084677,
+        0.169355
+       ]
+      }
+     },
+     "2019": {
+      "n": 249,
+      "ranged_a": {
+       "n": 249,
+       "k": 23,
+       "share": 0.092369,
+       "ci95": [
+        0.056225,
+        0.128514
+       ]
+      },
+      "ranged_b": {
+       "n": 249,
+       "k": 43,
+       "share": 0.172691,
+       "ci95": [
+        0.128514,
+        0.220884
+       ]
+      }
+     },
+     "2020": {
+      "n": 251,
+      "ranged_a": {
+       "n": 251,
+       "k": 21,
+       "share": 0.083665,
+       "ci95": [
+        0.051793,
+        0.119522
+       ]
+      },
+      "ranged_b": {
+       "n": 251,
+       "k": 39,
+       "share": 0.155378,
+       "ci95": [
+        0.111554,
+        0.203187
+       ]
+      }
+     },
+     "2021": {
+      "n": 251,
+      "ranged_a": {
+       "n": 251,
+       "k": 11,
+       "share": 0.043825,
+       "ci95": [
+        0.01992,
+        0.071713
+       ]
+      },
+      "ranged_b": {
+       "n": 251,
+       "k": 38,
+       "share": 0.151394,
+       "ci95": [
+        0.10757,
+        0.195219
+       ]
+      }
+     },
+     "2022": {
+      "n": 250,
+      "ranged_a": {
+       "n": 250,
+       "k": 14,
+       "share": 0.056,
+       "ci95": [
+        0.032,
+        0.088
+       ]
+      },
+      "ranged_b": {
+       "n": 250,
+       "k": 19,
+       "share": 0.076,
+       "ci95": [
+        0.044,
+        0.112
+       ]
+      }
+     },
+     "2023": {
+      "n": 248,
+      "ranged_a": {
+       "n": 248,
+       "k": 25,
+       "share": 0.100806,
+       "ci95": [
+        0.064516,
+        0.141129
+       ]
+      },
+      "ranged_b": {
+       "n": 248,
+       "k": 23,
+       "share": 0.092742,
+       "ci95": [
+        0.056452,
+        0.129032
+       ]
+      }
+     },
+     "2024": {
+      "n": 249,
+      "ranged_a": {
+       "n": 249,
+       "k": 33,
+       "share": 0.13253,
+       "ci95": [
+        0.092369,
+        0.176707
+       ]
+      },
+      "ranged_b": {
+       "n": 249,
+       "k": 25,
+       "share": 0.100402,
+       "ci95": [
+        0.064257,
+        0.140562
+       ]
+      }
+     },
+     "2025": {
+      "n": 247,
+      "ranged_a": {
+       "n": 247,
+       "k": 32,
+       "share": 0.129555,
+       "ci95": [
+        0.089069,
+        0.174089
+       ]
+      },
+      "ranged_b": {
+       "n": 247,
+       "k": 36,
+       "share": 0.145749,
+       "ci95": [
+        0.101215,
+        0.190283
+       ]
+      }
+     },
+     "2026": {
+      "n": 183,
+      "ranged_a": {
+       "n": 183,
+       "k": 32,
+       "share": 0.174863,
+       "ci95": [
+        0.120219,
+        0.229508
+       ]
+      },
+      "ranged_b": {
+       "n": 183,
+       "k": 14,
+       "share": 0.076503,
+       "ci95": [
+        0.038251,
+        0.114754
+       ]
+      }
+     }
+    },
+    "event_any": {
+     "n": 737,
+     "ranged_a": {
+      "n": 737,
+      "k": 75,
+      "share": 0.101764,
+      "ci95": [
+       0.080054,
+       0.12483
+      ]
+     },
+     "ranged_b": {
+      "n": 737,
+      "k": 76,
+      "share": 0.103121,
+      "ci95": [
+       0.081411,
+       0.126187
+      ]
+     }
+    },
+    "nonevent": {
+     "n": 1918,
+     "ranged_a": {
+      "n": 1918,
+      "k": 143,
+      "share": 0.074557,
+      "ci95": [
+       0.063087,
+       0.086027
+      ]
+     },
+     "ranged_b": {
+      "n": 1918,
+      "k": 263,
+      "share": 0.137122,
+      "ci95": [
+       0.122523,
+       0.152763
+      ]
+     }
+    },
+    "event_minus_nonevent": {
+     "ranged_a": {
+      "n_a": 737,
+      "n_b": 1918,
+      "k_a": 75,
+      "k_b": 143,
+      "share_a": 0.101764,
+      "share_b": 0.074557,
+      "diff": 0.027207,
+      "ci95": [
+       0.002891,
+       0.053502
+      ],
+      "p": 0.03
+     },
+     "ranged_b": {
+      "n_a": 737,
+      "n_b": 1918,
+      "k_a": 76,
+      "k_b": 263,
+      "share_a": 0.103121,
+      "share_b": 0.137122,
+      "diff": -0.034001,
+      "ci95": [
+       -0.059869,
+       -0.008033
+      ],
+      "p": 0.01
+     }
+    },
+    "descriptive": true
+   },
+   "H5": {
+    "classes": [
+     "trend",
+     "ranged",
+     "chop"
+    ],
+    "event_unaffected": [
+     147,
+     73,
+     230
+    ],
+    "nonevent_unaffected": [
+     464,
+     262,
+     711
+    ],
+    "unclassified_rows": 0,
+    "chi2": 0.978337,
+    "p": 0.613136,
+    "dof": 2,
+    "share_event_unaffected": [
+     0.326667,
+     0.162222,
+     0.511111
+    ],
+    "share_nonevent_unaffected": [
+     0.322895,
+     0.182324,
+     0.494781
+    ],
+    "comparison": "not-affected event days (any type) vs not-affected non-event days (A5)",
+    "n_event_days_affected": 287,
+    "n_nonevent_days_affected": 481,
+    "descriptive": true
+   },
+   "A7_early_knowable": {
+    "rule": "max(first60_hi_bp, -first60_lo_bp) > 0.6 * med20_range_bp by 10:30 ET",
+    "rows_missing_inputs": 0,
+    "by_class": {
+     "trend": {
+      "n": 953,
+      "k": 331,
+      "share": 0.347324,
+      "ci95": [
+       0.315845,
+       0.378804
+      ]
+     },
+     "ranged": {
+      "n": 405,
+      "k": 34,
+      "share": 0.083951,
+      "ci95": [
+       0.059259,
+       0.111111
+      ]
+     },
+     "chop": {
+      "n": 1297,
+      "k": 349,
+      "share": 0.269082,
+      "ci95": [
+       0.245952,
+       0.293755
+      ]
+     }
+    }
+   }
+  },
+  "SPY": {
+   "exclusions": {
+    "n_rows": 1714,
+    "n_thin_excluded": 12,
+    "n_rel_range_none_excluded": 21,
+    "n_usable": 1681,
+    "n_rel_gap_none_among_usable": 0,
+    "thin_by_year": {
+     "2020": 2,
+     "2021": 1,
+     "2022": 1,
+     "2023": 2,
+     "2024": 3,
+     "2025": 3
+    },
+    "impact_column_disagreements": 0
+   },
+   "n_event_days_any_type": 470,
+   "n_nonevent_days": 1211,
+   "n_scheduled_control_days": 1371,
+   "date_range": [
+    "2020-02-05",
+    "2026-10-29"
+   ],
+   "event_coverage": {
+    "CPI": {
+     "sessions_in_file": 129,
+     "usable_event_sessions": 80,
+     "not_usable_sessions": 49
+    },
+    "FOMC": {
+     "sessions_in_file": 86,
+     "usable_event_sessions": 53,
+     "not_usable_sessions": 33
+    },
+    "GDP_ADV": {
+     "sessions_in_file": 44,
+     "usable_event_sessions": 27,
+     "not_usable_sessions": 17
+    },
+    "NFP": {
+     "sessions_in_file": 129,
+     "usable_event_sessions": 79,
+     "not_usable_sessions": 50
+    },
+    "PCE": {
+     "sessions_in_file": 128,
+     "usable_event_sessions": 80,
+     "not_usable_sessions": 48
+    },
+    "cyber_infrastructure": {
+     "sessions_in_file": 10,
+     "usable_event_sessions": 8,
+     "not_usable_sessions": 2
+    },
+    "energy_shock": {
+     "sessions_in_file": 35,
+     "usable_event_sessions": 21,
+     "not_usable_sessions": 14
+    },
+    "financial_stress": {
+     "sessions_in_file": 35,
+     "usable_event_sessions": 30,
+     "not_usable_sessions": 5
+    },
+    "pandemic_health": {
+     "sessions_in_file": 17,
+     "usable_event_sessions": 12,
+     "not_usable_sessions": 5
+    },
+    "political_shock": {
+     "sessions_in_file": 62,
+     "usable_event_sessions": 32,
+     "not_usable_sessions": 30
+    },
+    "trade_tariff": {
+     "sessions_in_file": 70,
+     "usable_event_sessions": 31,
+     "not_usable_sessions": 39
+    },
+    "us_fiscal": {
+     "sessions_in_file": 35,
+     "usable_event_sessions": 27,
+     "not_usable_sessions": 8
+    },
+    "war_military": {
+     "sessions_in_file": 55,
+     "usable_event_sessions": 33,
+     "not_usable_sessions": 22
+    }
+   },
+   "H1": {
+    "type": "FOMC",
+    "control": "sessions with no scheduled event (A1)",
+    "n_event_days": 53,
+    "n_control_days": 1371,
+    "rel_range": {
+     "n_a": 53,
+     "n_b": 1371,
+     "median_a": 1.333258,
+     "median_b": 0.956802,
+     "diff": 0.376456,
+     "ci95": [
+      0.224851,
+      0.679788
+     ],
+     "p": 0.000333,
+     "pass_condition": "ci95 excludes 0 and diff >= 0.2; no family (A3)",
+     "pass": true
+    },
+    "rel_gap": {
+     "n_a": 53,
+     "n_b": 1371,
+     "median_a": 0.637149,
+     "median_b": 0.964178,
+     "diff": -0.327029,
+     "ci95": [
+      -0.515552,
+      -0.068414
+     ],
+     "p": 0.014667,
+     "descriptive": true
+    },
+    "status": "tested"
+   },
+   "H2": {
+    "control": "sessions with no scheduled event (A1)",
+    "family": [
+     "CPI",
+     "NFP",
+     "PCE"
+    ],
+    "family_size": 3,
+    "pass_condition": "Holm-adjusted p < 0.05, then diff >= 0.2 (A3)",
+    "types": {
+     "CPI": {
+      "n_event_days": 80,
+      "n_control_days": 1371,
+      "tested": true,
+      "rel_range": {
+       "n_a": 80,
+       "n_b": 1371,
+       "median_a": 1.065459,
+       "median_b": 0.956802,
+       "diff": 0.108657,
+       "ci95": [
+        0.008196,
+        0.300272
+       ],
+       "p": 0.026,
+       "p_raw": 0.026,
+       "p_holm": 0.078,
+       "pass": false
+      },
+      "rel_gap": {
+       "n_a": 80,
+       "n_b": 1371,
+       "median_a": 1.595296,
+       "median_b": 0.964178,
+       "diff": 0.631118,
+       "ci95": [
+        0.293054,
+        1.013596
+       ],
+       "p": 0.000667
+      },
+      "status": "tested"
+     },
+     "NFP": {
+      "n_event_days": 79,
+      "n_control_days": 1371,
+      "tested": true,
+      "rel_range": {
+       "n_a": 79,
+       "n_b": 1371,
+       "median_a": 1.096407,
+       "median_b": 0.956802,
+       "diff": 0.139605,
+       "ci95": [
+        -0.003374,
+        0.299669
+       ],
+       "p": 0.052,
+       "p_raw": 0.052,
+       "p_holm": 0.098667,
+       "pass": false
+      },
+      "rel_gap": {
+       "n_a": 79,
+       "n_b": 1371,
+       "median_a": 1.463789,
+       "median_b": 0.964178,
+       "diff": 0.499611,
+       "ci95": [
+        0.102138,
+        0.908361
+       ],
+       "p": 0.002667
+      },
+      "status": "tested"
+     },
+     "GDP_ADV": {
+      "n_event_days": 27,
+      "n_control_days": 1371,
+      "tested": false,
+      "rel_range": {
+       "n_a": 27,
+       "n_b": 1371,
+       "median_a": 1.208606,
+       "median_b": 0.956802,
+       "diff": 0.251804,
+       "ci95": [
+        -0.050316,
+        0.695743
+       ],
+       "p": 0.073333,
+       "p_raw": 0.073333,
+       "p_holm": null,
+       "pass": null
+      },
+      "rel_gap": {
+       "n_a": 27,
+       "n_b": 1371,
+       "median_a": 1.485473,
+       "median_b": 0.964178,
+       "diff": 0.521295,
+       "ci95": [
+        -0.190311,
+        0.99034
+       ],
+       "p": 0.062667
+      },
+      "status": "reported, not tested: 27 usable event sessions < 30"
+     },
+     "PCE": {
+      "n_event_days": 80,
+      "n_control_days": 1371,
+      "tested": true,
+      "rel_range": {
+       "n_a": 80,
+       "n_b": 1371,
+       "median_a": 1.1191,
+       "median_b": 0.956802,
+       "diff": 0.162298,
+       "ci95": [
+        0.001233,
+        0.304994
+       ],
+       "p": 0.049333,
+       "p_raw": 0.049333,
+       "p_holm": 0.098667,
+       "pass": false
+      },
+      "rel_gap": {
+       "n_a": 80,
+       "n_b": 1371,
+       "median_a": 1.002867,
+       "median_b": 0.964178,
+       "diff": 0.038689,
+       "ci95": [
+        -0.16754,
+        0.246889
+       ],
+       "p": 0.750667
+      },
+      "status": "tested"
+     }
+    }
+   },
+   "H3": {
+    "control": "sessions with no scheduled event (A1)",
+    "family": [
+     "FOMC",
+     "CPI",
+     "NFP",
+     "PCE"
+    ],
+    "family_size": 4,
+    "pass_condition": "Holm-adjusted p < 0.05 and ci95 excludes 0 (\u00a76 + A3)",
+    "control_affected_share": {
+     "n": 1371,
+     "k": 379,
+     "share": 0.276441,
+     "ci95": [
+      0.252371,
+      0.301969
+     ]
+    },
+    "types": {
+     "FOMC": {
+      "n_event_days": 53,
+      "n_control_days": 1371,
+      "tested": true,
+      "share_event": 0.471698,
+      "share_control": 0.276441,
+      "k_event": 25,
+      "k_control": 379,
+      "diff": 0.195258,
+      "ci95": [
+       0.063182,
+       0.333168
+      ],
+      "p_raw": 0.003333,
+      "p_holm": 0.010667,
+      "pass": true,
+      "status": "tested"
+     },
+     "CPI": {
+      "n_event_days": 80,
+      "n_control_days": 1371,
+      "tested": true,
+      "share_event": 0.45,
+      "share_control": 0.276441,
+      "k_event": 36,
+      "k_control": 379,
+      "diff": 0.173559,
+      "ci95": [
+       0.064077,
+       0.286689
+      ],
+      "p_raw": 0.003333,
+      "p_holm": 0.010667,
+      "pass": true,
+      "status": "tested"
+     },
+     "NFP": {
+      "n_event_days": 79,
+      "n_control_days": 1371,
+      "tested": true,
+      "share_event": 0.443038,
+      "share_control": 0.276441,
+      "k_event": 35,
+      "k_control": 379,
+      "diff": 0.166597,
+      "ci95": [
+       0.055849,
+       0.280521
+      ],
+      "p_raw": 0.002667,
+      "p_holm": 0.010667,
+      "pass": true,
+      "status": "tested"
+     },
+     "GDP_ADV": {
+      "n_event_days": 27,
+      "n_control_days": 1371,
+      "tested": false,
+      "share_event": 0.481481,
+      "share_control": 0.276441,
+      "k_event": 13,
+      "k_control": 379,
+      "diff": 0.205041,
+      "ci95": [
+       0.017668,
+       0.396791
+      ],
+      "p_raw": 0.03,
+      "p_holm": null,
+      "pass": null,
+      "status": "reported, not tested: 27 usable event sessions < 30"
+     },
+     "PCE": {
+      "n_event_days": 80,
+      "n_control_days": 1371,
+      "tested": true,
+      "share_event": 0.3375,
+      "share_control": 0.276441,
+      "k_event": 27,
+      "k_control": 379,
+      "diff": 0.061059,
+      "ci95": [
+       -0.044046,
+       0.168353
+      ],
+      "p_raw": 0.256667,
+      "p_holm": 0.256667,
+      "pass": false,
+      "status": "tested"
+     }
+    }
+   },
+   "geopolitical_descriptive": {
+    "control": "sessions with no event of any type",
+    "label": "descriptive: selected by salience; may be circular (A1); never tested",
+    "placebo": {
+     "draws": 200,
+     "matching": "calendar year and weekday, with replacement",
+     "flag_rule": "selection when placebo p95 >= 0.5 * observed diff (observed > 0)"
+    },
+    "categories": {
+     "cyber_infrastructure": {
+      "n_event_days": 8,
+      "n_control_days": 1211,
+      "tested": false,
+      "never_tested_reason": "descriptive: selected by salience; may be circular (A1); never tested",
+      "rel_range": {
+       "n_a": 8,
+       "n_b": 1211,
+       "median_a": 1.507971,
+       "median_b": 0.927891,
+       "diff": 0.58008,
+       "ci95": [
+        -0.020117,
+        0.70006
+       ],
+       "p": 0.056,
+       "placebo_p95": 0.477966,
+       "placebo_median": 0.017172,
+       "placebo_unmatched": 0,
+       "placebo_flag": "selection"
+      },
+      "rel_gap": {
+       "n_a": 8,
+       "n_b": 1211,
+       "median_a": 0.667857,
+       "median_b": 0.957718,
+       "diff": -0.289861,
+       "ci95": [
+        -0.548054,
+        0.145912
+       ],
+       "p": 0.287333
+      },
+      "affected_share": {
+       "n_a": 8,
+       "n_b": 1211,
+       "k_a": 4,
+       "k_b": 317,
+       "share_a": 0.5,
+       "share_b": 0.261767,
+       "diff": 0.238233,
+       "ci95": [
+        -0.126032,
+        0.602498
+       ],
+       "p": 0.248,
+       "placebo_p95": 0.363233,
+       "placebo_median": -0.011767,
+       "placebo_unmatched": 0,
+       "placebo_flag": "selection"
+      }
+     },
+     "energy_shock": {
+      "n_event_days": 21,
+      "n_control_days": 1211,
+      "tested": false,
+      "never_tested_reason": "descriptive: selected by salience; may be circular (A1); never tested",
+      "rel_range": {
+       "n_a": 21,
+       "n_b": 1211,
+       "median_a": 1.113523,
+       "median_b": 0.927891,
+       "diff": 0.185632,
+       "ci95": [
+        -0.228782,
+        0.538103
+       ],
+       "p": 0.850667,
+       "placebo_p95": 0.229538,
+       "placebo_median": 0.005721,
+       "placebo_unmatched": 0,
+       "placebo_flag": "selection"
+      },
+      "rel_gap": {
+       "n_a": 21,
+       "n_b": 1211,
+       "median_a": 0.69082,
+       "median_b": 0.957718,
+       "diff": -0.266898,
+       "ci95": [
+        -0.661563,
+        1.014665
+       ],
+       "p": 0.282
+      },
+      "affected_share": {
+       "n_a": 21,
+       "n_b": 1211,
+       "k_a": 9,
+       "k_b": 317,
+       "share_a": 0.428571,
+       "share_b": 0.261767,
+       "diff": 0.166804,
+       "ci95": [
+        -0.049271,
+        0.382879
+       ],
+       "p": 0.127333,
+       "placebo_p95": 0.214423,
+       "placebo_median": 0.023947,
+       "placebo_unmatched": 0,
+       "placebo_flag": "selection"
+      }
+     },
+     "financial_stress": {
+      "n_event_days": 30,
+      "n_control_days": 1211,
+      "tested": false,
+      "never_tested_reason": "category defined by market stress (A1)",
+      "rel_range": {
+       "n_a": 30,
+       "n_b": 1211,
+       "median_a": 1.063396,
+       "median_b": 0.927891,
+       "diff": 0.135505,
+       "ci95": [
+        -0.095469,
+        0.375426
+       ],
+       "p": 0.218667,
+       "placebo_p95": 0.189573,
+       "placebo_median": 0.025828,
+       "placebo_unmatched": 0,
+       "placebo_flag": "selection"
+      },
+      "rel_gap": {
+       "n_a": 30,
+       "n_b": 1211,
+       "median_a": 1.17554,
+       "median_b": 0.957718,
+       "diff": 0.217822,
+       "ci95": [
+        -0.47494,
+        0.680696
+       ],
+       "p": 0.783333
+      },
+      "affected_share": {
+       "n_a": 30,
+       "n_b": 1211,
+       "k_a": 11,
+       "k_b": 317,
+       "share_a": 0.366667,
+       "share_b": 0.261767,
+       "diff": 0.1049,
+       "ci95": [
+        -0.069199,
+        0.283127
+       ],
+       "p": 0.254,
+       "placebo_p95": 0.138233,
+       "placebo_median": 0.0049,
+       "placebo_unmatched": 0,
+       "placebo_flag": "selection"
+      }
+     },
+     "pandemic_health": {
+      "n_event_days": 12,
+      "n_control_days": 1211,
+      "tested": false,
+      "never_tested_reason": "descriptive: selected by salience; may be circular (A1); never tested",
+      "rel_range": {
+       "n_a": 12,
+       "n_b": 1211,
+       "median_a": 1.82898,
+       "median_b": 0.927891,
+       "diff": 0.901089,
+       "ci95": [
+        0.148612,
+        1.605769
+       ],
+       "p": 0.027333,
+       "placebo_p95": 0.315288,
+       "placebo_median": -0.02318,
+       "placebo_unmatched": 0,
+       "placebo_flag": "placebo not reached (still descriptive)"
+      },
+      "rel_gap": {
+       "n_a": 12,
+       "n_b": 1211,
+       "median_a": 4.04983,
+       "median_b": 0.957718,
+       "diff": 3.092112,
+       "ci95": [
+        0.136961,
+        6.560518
+       ],
+       "p": 0.032667
+      },
+      "affected_share": {
+       "n_a": 12,
+       "n_b": 1211,
+       "k_a": 9,
+       "k_b": 317,
+       "share_a": 0.75,
+       "share_b": 0.261767,
+       "diff": 0.488233,
+       "ci95": [
+        0.229149,
+        0.727498
+       ],
+       "p": 0.000667,
+       "placebo_p95": 0.238233,
+       "placebo_median": 0.071566,
+       "placebo_unmatched": 0,
+       "placebo_flag": "placebo not reached (still descriptive)"
+      }
+     },
+     "political_shock": {
+      "n_event_days": 32,
+      "n_control_days": 1211,
+      "tested": false,
+      "never_tested_reason": "descriptive: selected by salience; may be circular (A1); never tested",
+      "rel_range": {
+       "n_a": 32,
+       "n_b": 1211,
+       "median_a": 0.988603,
+       "median_b": 0.927891,
+       "diff": 0.060712,
+       "ci95": [
+        -0.147241,
+        0.184849
+       ],
+       "p": 0.555333,
+       "placebo_p95": 0.230915,
+       "placebo_median": 0.045089,
+       "placebo_unmatched": 0,
+       "placebo_flag": "selection"
+      },
+      "rel_gap": {
+       "n_a": 32,
+       "n_b": 1211,
+       "median_a": 0.969685,
+       "median_b": 0.957718,
+       "diff": 0.011967,
+       "ci95": [
+        -0.350625,
+        0.888388
+       ],
+       "p": 0.972
+      },
+      "affected_share": {
+       "n_a": 32,
+       "n_b": 1211,
+       "k_a": 10,
+       "k_b": 317,
+       "share_a": 0.3125,
+       "share_b": 0.261767,
+       "diff": 0.050733,
+       "ci95": [
+        -0.10882,
+        0.216892
+       ],
+       "p": 0.545333,
+       "placebo_p95": 0.175733,
+       "placebo_median": 0.019483,
+       "placebo_unmatched": 0,
+       "placebo_flag": "selection"
+      }
+     },
+     "trade_tariff": {
+      "n_event_days": 31,
+      "n_control_days": 1211,
+      "tested": false,
+      "never_tested_reason": "descriptive: selected by salience; may be circular (A1); never tested",
+      "rel_range": {
+       "n_a": 31,
+       "n_b": 1211,
+       "median_a": 1.138311,
+       "median_b": 0.927891,
+       "diff": 0.21042,
+       "ci95": [
+        0.004914,
+        0.376241
+       ],
+       "p": 0.05,
+       "placebo_p95": 0.229804,
+       "placebo_median": 0.035228,
+       "placebo_unmatched": 0,
+       "placebo_flag": "selection"
+      },
+      "rel_gap": {
+       "n_a": 31,
+       "n_b": 1211,
+       "median_a": 1.497261,
+       "median_b": 0.957718,
+       "diff": 0.539543,
+       "ci95": [
+        -0.135371,
+        1.500539
+       ],
+       "p": 0.190667
+      },
+      "affected_share": {
+       "n_a": 31,
+       "n_b": 1211,
+       "k_a": 12,
+       "k_b": 317,
+       "share_a": 0.387097,
+       "share_b": 0.261767,
+       "diff": 0.12533,
+       "ci95": [
+        -0.041741,
+        0.299006
+       ],
+       "p": 0.142667,
+       "placebo_p95": 0.189846,
+       "placebo_median": 0.060814,
+       "placebo_unmatched": 0,
+       "placebo_flag": "selection"
+      }
+     },
+     "us_fiscal": {
+      "n_event_days": 27,
+      "n_control_days": 1211,
+      "tested": false,
+      "never_tested_reason": "descriptive: selected by salience; may be circular (A1); never tested",
+      "rel_range": {
+       "n_a": 27,
+       "n_b": 1211,
+       "median_a": 1.137214,
+       "median_b": 0.927891,
+       "diff": 0.209323,
+       "ci95": [
+        -0.076726,
+        0.471357
+       ],
+       "p": 0.207333,
+       "placebo_p95": 0.308372,
+       "placebo_median": 0.028911,
+       "placebo_unmatched": 0,
+       "placebo_flag": "selection"
+      },
+      "rel_gap": {
+       "n_a": 27,
+       "n_b": 1211,
+       "median_a": 1.07156,
+       "median_b": 0.957718,
+       "diff": 0.113842,
+       "ci95": [
+        -0.223622,
+        1.09394
+       ],
+       "p": 0.834667
+      },
+      "affected_share": {
+       "n_a": 27,
+       "n_b": 1211,
+       "k_a": 10,
+       "k_b": 317,
+       "share_a": 0.37037,
+       "share_b": 0.261767,
+       "diff": 0.108603,
+       "ci95": [
+        -0.075756,
+        0.309478
+       ],
+       "p": 0.247333,
+       "placebo_p95": 0.182677,
+       "placebo_median": 0.034529,
+       "placebo_unmatched": 0,
+       "placebo_flag": "selection"
+      }
+     },
+     "war_military": {
+      "n_event_days": 33,
+      "n_control_days": 1211,
+      "tested": false,
+      "never_tested_reason": "descriptive: selected by salience; may be circular (A1); never tested",
+      "rel_range": {
+       "n_a": 33,
+       "n_b": 1211,
+       "median_a": 1.240632,
+       "median_b": 0.927891,
+       "diff": 0.312741,
+       "ci95": [
+        0.119405,
+        0.535188
+       ],
+       "p": 0.003333,
+       "placebo_p95": 0.138231,
+       "placebo_median": -0.003648,
+       "placebo_unmatched": 0,
+       "placebo_flag": "placebo not reached (still descriptive)"
+      },
+      "rel_gap": {
+       "n_a": 33,
+       "n_b": 1211,
+       "median_a": 0.955738,
+       "median_b": 0.957718,
+       "diff": -0.00198,
+       "ci95": [
+        -0.460489,
+        0.662571
+       ],
+       "p": 0.951333
+      },
+      "affected_share": {
+       "n_a": 33,
+       "n_b": 1211,
+       "k_a": 14,
+       "k_b": 317,
+       "share_a": 0.424242,
+       "share_b": 0.261767,
+       "diff": 0.162475,
+       "ci95": [
+        -0.011085,
+        0.344293
+       ],
+       "p": 0.064,
+       "placebo_p95": 0.132172,
+       "placebo_median": 0.01096,
+       "placebo_unmatched": 0,
+       "placebo_flag": "selection"
+      }
+     }
+    }
+   },
+   "H4": {
+    "overall": {
+     "n": 1681,
+     "ranged_a": {
+      "n": 1681,
+      "k": 182,
+      "share": 0.108269,
+      "ci95": [
+       0.093992,
+       0.123736
+      ]
+     },
+     "ranged_b": {
+      "n": 1681,
+      "k": 230,
+      "share": 0.136823,
+      "ci95": [
+       0.120761,
+       0.154075
+      ]
+     }
+    },
+    "by_year": {
+     "2020": {
+      "n": 228,
+      "ranged_a": {
+       "n": 228,
+       "k": 32,
+       "share": 0.140351,
+       "ci95": [
+        0.096491,
+        0.184211
+       ]
+      },
+      "ranged_b": {
+       "n": 228,
+       "k": 38,
+       "share": 0.166667,
+       "ci95": [
+        0.118421,
+        0.219298
+       ]
+      }
+     },
+     "2021": {
+      "n": 251,
+      "ranged_a": {
+       "n": 251,
+       "k": 18,
+       "share": 0.071713,
+       "ci95": [
+        0.043825,
+        0.103586
+       ]
+      },
+      "ranged_b": {
+       "n": 251,
+       "k": 42,
+       "share": 0.167331,
+       "ci95": [
+        0.123506,
+        0.215139
+       ]
+      }
+     },
+     "2022": {
+      "n": 250,
+      "ranged_a": {
+       "n": 250,
+       "k": 26,
+       "share": 0.104,
+       "ci95": [
+        0.068,
+        0.144
+       ]
+      },
+      "ranged_b": {
+       "n": 250,
+       "k": 24,
+       "share": 0.096,
+       "ci95": [
+        0.06,
+        0.136
+       ]
+      }
+     },
+     "2023": {
+      "n": 248,
+      "ranged_a": {
+       "n": 248,
+       "k": 25,
+       "share": 0.100806,
+       "ci95": [
+        0.064516,
+        0.141129
+       ]
+      },
+      "ranged_b": {
+       "n": 248,
+       "k": 33,
+       "share": 0.133065,
+       "ci95": [
+        0.092742,
+        0.177419
+       ]
+      }
+     },
+     "2024": {
+      "n": 249,
+      "ranged_a": {
+       "n": 249,
+       "k": 30,
+       "share": 0.120482,
+       "ci95": [
+        0.084337,
+        0.160643
+       ]
+      },
+      "ranged_b": {
+       "n": 249,
+       "k": 30,
+       "share": 0.120482,
+       "ci95": [
+        0.084337,
+        0.164659
+       ]
+      }
+     },
+     "2025": {
+      "n": 247,
+      "ranged_a": {
+       "n": 247,
+       "k": 24,
+       "share": 0.097166,
+       "ci95": [
+        0.064777,
+        0.133603
+       ]
+      },
+      "ranged_b": {
+       "n": 247,
+       "k": 38,
+       "share": 0.153846,
+       "ci95": [
+        0.109312,
+        0.198381
+       ]
+      }
+     },
+     "2026": {
+      "n": 208,
+      "ranged_a": {
+       "n": 208,
+       "k": 27,
+       "share": 0.129808,
+       "ci95": [
+        0.086538,
+        0.177885
+       ]
+      },
+      "ranged_b": {
+       "n": 208,
+       "k": 25,
+       "share": 0.120192,
+       "ci95": [
+        0.076923,
+        0.168269
+       ]
+      }
+     }
+    },
+    "event_any": {
+     "n": 470,
+     "ranged_a": {
+      "n": 470,
+      "k": 48,
+      "share": 0.102128,
+      "ci95": [
+       0.076596,
+       0.129787
+      ]
+     },
+     "ranged_b": {
+      "n": 470,
+      "k": 39,
+      "share": 0.082979,
+      "ci95": [
+       0.059574,
+       0.108511
+      ]
+     }
+    },
+    "nonevent": {
+     "n": 1211,
+     "ranged_a": {
+      "n": 1211,
+      "k": 134,
+      "share": 0.110652,
+      "ci95": [
+       0.093311,
+       0.128819
+      ]
+     },
+     "ranged_b": {
+      "n": 1211,
+      "k": 191,
+      "share": 0.157721,
+      "ci95": [
+       0.137077,
+       0.178365
+      ]
+     }
+    },
+    "event_minus_nonevent": {
+     "ranged_a": {
+      "n_a": 470,
+      "n_b": 1211,
+      "k_a": 48,
+      "k_b": 134,
+      "share_a": 0.102128,
+      "share_b": 0.110652,
+      "diff": -0.008525,
+      "ci95": [
+       -0.040157,
+       0.025265
+      ],
+      "p": 0.596667
+     },
+     "ranged_b": {
+      "n_a": 470,
+      "n_b": 1211,
+      "k_a": 39,
+      "k_b": 191,
+      "share_a": 0.082979,
+      "share_b": 0.157721,
+      "diff": -0.074742,
+      "ci95": [
+       -0.106307,
+       -0.041555
+      ],
+      "p": 0.000333
+     }
+    },
+    "descriptive": true
+   },
+   "H5": {
+    "classes": [
+     "trend",
+     "ranged",
+     "chop"
+    ],
+    "event_unaffected": [
+     87,
+     43,
+     146
+    ],
+    "nonevent_unaffected": [
+     300,
+     195,
+     399
+    ],
+    "unclassified_rows": 0,
+    "chi2": 7.385757,
+    "p": 0.0249,
+    "dof": 2,
+    "share_event_unaffected": [
+     0.315217,
+     0.155797,
+     0.528986
+    ],
+    "share_nonevent_unaffected": [
+     0.33557,
+     0.218121,
+     0.446309
+    ],
+    "comparison": "not-affected event days (any type) vs not-affected non-event days (A5)",
+    "n_event_days_affected": 194,
+    "n_nonevent_days_affected": 317,
+    "descriptive": true
+   },
+   "A7_early_knowable": {
+    "rule": "max(first60_hi_bp, -first60_lo_bp) > 0.6 * med20_range_bp by 10:30 ET",
+    "rows_missing_inputs": 0,
+    "by_class": {
+     "trend": {
+      "n": 603,
+      "k": 146,
+      "share": 0.242123,
+      "ci95": [
+       0.208955,
+       0.27529
+      ]
+     },
+     "ranged": {
+      "n": 291,
+      "k": 27,
+      "share": 0.092784,
+      "ci95": [
+       0.061856,
+       0.127148
+      ]
+     },
+     "chop": {
+      "n": 787,
+      "k": 183,
+      "share": 0.232529,
+      "ci95": [
+       0.202033,
+       0.261753
+      ]
+     }
+    }
+   }
+  }
+ },
+ "H6": {
+  "n_lab_sessions": 44,
+  "event_type_counts": {
+   "CPI": 2,
+   "FOMC": 2,
+   "GDP_ADV": 1,
+   "NFP": 2,
+   "PCE": 2,
+   "energy_shock": 3,
+   "financial_stress": 1,
+   "trade_tariff": 2,
+   "war_military": 1
+  },
+  "note": "counts only; no day-type claim about the lab is made from this study (A8)",
+  "event": {
+   "n": 14,
+   "dates": [
+    "2026-09-04",
+    "2026-09-11",
+    "2026-09-16",
+    "2026-09-24",
+    "2026-09-30",
+    "2026-10-02",
+    "2026-10-05",
+    "2026-10-07",
+    "2026-10-12",
+    "2026-10-14",
+    "2026-10-16",
+    "2026-10-22",
+    "2026-10-28",
+    "2026-10-29"
+   ],
+   "options_green": {
+    "n": 13,
+    "green": 6,
+    "rate": 0.461538
+   },
+   "shares_green": {
+    "n": 14,
+    "green": 6,
+    "rate": 0.428571
+   },
+   "both_green": {
+    "n": 13,
+    "green": 4,
+    "rate": 0.307692
+   },
+   "options_atm_net_sum": -120.5128,
+   "shares_net_sum": -5629.1541,
+   "ledger_outcome_counts": {
+    "COLLECTED": 7,
+    "INTERRUPTED": 1,
+    "PARTIAL": 6
+   }
+  },
+  "nonevent": {
+   "n": 30,
+   "dates": [
+    "2026-08-28",
+    "2026-08-31",
+    "2026-09-01",
+    "2026-09-02",
+    "2026-09-03",
+    "2026-09-08",
+    "2026-09-09",
+    "2026-09-10",
+    "2026-09-14",
+    "2026-09-15",
+    "2026-09-17",
+    "2026-09-18",
+    "2026-09-21",
+    "2026-09-22",
+    "2026-09-23",
+    "2026-09-25",
+    "2026-09-28",
+    "2026-09-29",
+    "2026-10-01",
+    "2026-10-06",
+    "2026-10-08",
+    "2026-10-09",
+    "2026-10-13",
+    "2026-10-15",
+    "2026-10-19",
+    "2026-10-20",
+    "2026-10-21",
+    "2026-10-23",
+    "2026-10-26",
+    "2026-10-27"
+   ],
+   "options_green": {
+    "n": 25,
+    "green": 8,
+    "rate": 0.32
+   },
+   "shares_green": {
+    "n": 26,
+    "green": 12,
+    "rate": 0.461538
+   },
+   "both_green": {
+    "n": 23,
+    "green": 6,
+    "rate": 0.26087
+   },
+   "options_atm_net_sum": -4266.6344,
+   "shares_net_sum": -13470.8384,
+   "ledger_outcome_counts": {
+    "COLLECTED": 14,
+    "PARTIAL": 16
+   }
+  },
+  "descriptive": true
+ },
+ "run": {
+  "repo_sha_at_run": "e39758a",
+  "features_dir": "research/news_impact",
+  "run_at_utc": "2026-10-30T06:53:17+00:00"
+ }
+}
