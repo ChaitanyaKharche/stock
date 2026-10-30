@@ -1,0 +1,13 @@
+# Never ship secrets or local junk to the public Space. The Dockerfile copies the whole
+# folder and the upload script mirrors this list, so a stray .env can't reach the Space
+# either way. Report 05 flagged this gap on 2026-10-13.
+.env
+.env.*
+*.pem
+*.key
+creds*
+__pycache__/
+*.pyc
+.pytest_cache/
+*_test.py
+verify_fix.py
