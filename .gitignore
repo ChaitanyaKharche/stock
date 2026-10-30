@@ -148,3 +148,6 @@ vrp_frame.tar.gz
 
 # Day charts (trade_analysis/live_lab/day_charts.py): regenerable PNGs
 live_lab_charts/
+
+# Research inputs for the news-impact study: small, hand-sourced, deliberately versioned
+!research/news_impact/*.csv
