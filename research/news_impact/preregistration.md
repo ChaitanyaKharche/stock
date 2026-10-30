@@ -22,8 +22,8 @@ assumptions:
   - "10 years of 1-minute QQQ and SPY bars incl. premarket are reachable on the laptop through levels_test.get_ext (proven 2026-09-21 and 2026-10-26); nothing here runs in the cloud sandbox"
 open_questions: []
 errors: []
-status: approved by the owner 2026-10-30 ("yes to all ... go"); frozen
-verified_by: null
+status: approved by the owner 2026-10-30 ("yes to all ... go"); amended 2026-10-30 (section 9) on gate-1 audit and red-team, before any data file existed; frozen
+verified_by: R-2026-10-30-06 (gate 1, with the section 9 amendments applied)
 budget: {agents: 6, passes: 1 each, laptop_runs: 1 feature extraction}
 ---
 
@@ -184,3 +184,65 @@ those days; that would be a new pre-registration with its own rule.
 Finlight text (forward log only, separate spec); any trading rule; intraday reaction
 timing around the release minute (a second study, if H1 passes); anything that changes
 `live_lab/` code.
+
+## 9. Amendment 2026-10-30, before any data existed
+
+From `audit_preregistration.md` (gate 1, five FAILs) and `redteam.md`. Each item names the
+rule it replaces. Nothing below was written after a feature file or an events file existed.
+
+**A1 (audit 7, red-team 4): the geopolitical list is selected partly on market impact, so it
+cannot be used to test anything.** Replaces §3.2 inclusion rule and the §6 control group.
+- A front page counts toward the two-outlet test only if its lead headline is about the
+  event itself, not about the market's reaction to it.
+- `financial_stress` rows are reported, never tested (the category is defined by market
+  stress).
+- For H1 and for the scheduled types in H2/H3, the **control group is sessions with no
+  scheduled event**; geopolitical days are NOT removed from it.
+- All geopolitical H2/H3 results are **descriptive**, labelled "selected by salience; may be
+  circular", and carry a **placebo control**: for each category, 200 draws of the same
+  number of random sessions matched by year and weekday, same statistic; the category's
+  observed difference is reported next to the placebo distribution's 95th percentile. A
+  category whose placebo 95th percentile is at least half its observed difference is
+  marked "selection", never "effect".
+
+**A2 (audit 3): event-date alignment.** Replaces §3.1/§3.2 date rules.
+- Scheduled: `date` = actual release date. New column `session` = the session on which the
+  market could react: the same day if it is a trading session, else the next session
+  (NFP on Good Friday, PCE on a holiday). Analysis joins on `session`. A release on a closed
+  day therefore never becomes a non-event day by accident.
+- Geopolitical: new column `break_time_et` (HH:MM, or `unknown`). News breaking at or after
+  16:00 ET, on a weekend or on a market holiday is assigned to the next session; the
+  front-page test uses the edition dated the assigned session.
+
+**A3 (audit 4): the multiple-testing families.** Replaces the §6 "correction" column.
+- H1 is confirmatory and outside every family.
+- H2 family = CPI, NFP, GDP_ADV, PCE (scheduled types with ≥ 30 distinct non-thin event
+  sessions). Geopolitical categories are not in it (A1).
+- H3 family = FOMC, CPI, NFP, GDP_ADV, PCE.
+- Bootstrap p = 2 × min(share of reps ≤ 0, share ≥ 0), floored at 1/reps. Holm at 0.05
+  within each family; the ≥ 0.2 effect floor is applied after Holm. SPY is in no family.
+
+**A4 (audit 9): replication.** "Holds on SPY" = same sign, SPY 95% CI excludes 0, and the
+difference meets the 0.2 floor; no Holm. It is a robustness check on a second symbol over the
+same days, not an independent sample, and is labelled so.
+
+**A5 (audit 11): H5 comparison group.** H5 compares not-affected event days with
+**not-affected non-event days**, not with all non-event days.
+
+**A6 (audit 11, data hygiene).** `day_features.py` reports thin sessions **by year** in its
+diagnostics; `results.md` prints that table. A thin session is never cached as the previous
+session for the next day's lines; the previous *non-thin* session is used and that is stated
+in the row (`prev_session_date` column added).
+
+**A7 (red-team 3): is day type knowable early?** One added descriptive line, no test: the
+share of `trend` days whose first-hour move (`first60_hi_bp`, `first60_lo_bp`) already
+exceeded 0.6 × the trailing-20 median range by 10:30 ET, against the same share on `chop`
+and `ranged` days. Reported for QQQ and SPY. Red team's prediction on record: a big day is
+knowable early, a trending day is not.
+
+**A8 (red-team 2): the lab.** No day-type claim about the lab record will be made from this
+study. 234 day-type cells per symbol exist by construction; the expected number of
+spuriously "significant" cells on 42 sessions is about 3. H6 stays a count table.
+
+**A9 (audit 10, count).** The lab figures in §1 are recomputed at run time from the record
+at the run's `repo_sha`; the ledger at `a367245` holds 44 session dates, 22 of them PARTIAL.
