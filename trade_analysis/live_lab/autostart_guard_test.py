@@ -108,6 +108,35 @@ def _run_supervise(exits_after, grace, now_time):
         A.now_et, A.HARD_STOP_GRACE_SEC = old_now, old_grace
 
 
+def test_news_snapshot_hook_never_raises(monkeypatch, tmp_path):
+    """specs/001 R1: a crash, a timeout and a bad exit code are all logged and swallowed."""
+    import subprocess as sp
+    logged = []
+
+    def boom(*a, **k):
+        raise OSError("python missing")
+    monkeypatch.setattr(A.subprocess, "run", boom)
+    assert A.run_news_snapshot(tmp_path, log=logged.append) is False
+    assert any("ignored" in l for l in logged)
+
+    def slow(*a, **k):
+        raise sp.TimeoutExpired(cmd="x", timeout=A.NEWS_SNAPSHOT_TIMEOUT_SEC)
+    monkeypatch.setattr(A.subprocess, "run", slow)
+    assert A.run_news_snapshot(tmp_path, log=logged.append) is False
+    assert any("timed out" in l for l in logged)
+
+    def bad(*a, **k):
+        return types.SimpleNamespace(returncode=1, stdout="[news] wrote x.error.json", stderr="")
+    monkeypatch.setattr(A.subprocess, "run", bad)
+    assert A.run_news_snapshot(tmp_path, log=logged.append) is False
+
+    def good(*a, **k):
+        assert k.get("timeout") == A.NEWS_SNAPSHOT_TIMEOUT_SEC
+        return types.SimpleNamespace(returncode=0, stdout="[news] wrote 2026-11-02.json", stderr="")
+    monkeypatch.setattr(A.subprocess, "run", good)
+    assert A.run_news_snapshot(tmp_path, log=logged.append) is True
+
+
 def main() -> int:
     print("autostart host-suspend guards\n")
 

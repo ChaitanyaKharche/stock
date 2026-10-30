@@ -749,6 +749,29 @@ def _log_once(lab_dir, day: dt.date, msg: str) -> None:
     log(msg)
 
 
+NEWS_SNAPSHOT_TIMEOUT_SEC = 60
+
+
+def run_news_snapshot(lab_dir, log=None) -> bool:
+    """specs/001: one Finlight snapshot in the pre-open idle window. Never raises, never
+    blocks the session for more than NEWS_SNAPSHOT_TIMEOUT_SEC. Returns True on exit 0."""
+    log = log or globals()["log"]
+    try:
+        root = str(Path(__file__).resolve().parents[2])
+        pr = subprocess.run([sys.executable, "-m", "trade_analysis.live_lab.news_snapshot",
+                             "--lab-dir", str(lab_dir)], cwd=root, capture_output=True,
+                            text=True, timeout=NEWS_SNAPSHOT_TIMEOUT_SEC)
+        tail = ((pr.stdout or "").strip().splitlines() or [""])[-1]
+        log(f"[news] {tail or 'no output'} (rc={pr.returncode})")
+        return pr.returncode == 0
+    except subprocess.TimeoutExpired:
+        log(f"[news] snapshot timed out after {NEWS_SNAPSHOT_TIMEOUT_SEC}s; session continues")
+        return False
+    except Exception as exc:                                 # noqa: BLE001
+        log(f"[news] snapshot failed and was ignored: {exc!r}")
+        return False
+
+
 def resolve_stranded(day: dt.date, lab_dir, before: dt.date, deadline: dt.datetime | None = None,
                      may_start_terminal: bool = False) -> None:
     """Give positions an earlier session never closed their exits, from history. Never raises.
@@ -1096,6 +1119,7 @@ def main(argv=None) -> int:
     if not args.now and now_et() < morning_deadline:
         resolve_stranded(day, args.lab_dir, before=day, deadline=morning_deadline,
                          may_start_terminal=args.start_terminal)
+        run_news_snapshot(args.lab_dir)                     # specs/001; collection only
 
     if not args.now and not wait_for_open(START_AT):
         # The evening invocations (the task repeats until 16:30 ET) land here. On 2026-10-05

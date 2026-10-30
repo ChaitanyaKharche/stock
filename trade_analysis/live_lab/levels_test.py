@@ -18,6 +18,7 @@ import datetime as dt
 import json
 import pickle
 import random
+import sys
 from collections import defaultdict
 from pathlib import Path
 
@@ -66,7 +67,11 @@ def get_ext(feed, symbol: str, day: dt.date):
         elif dt.time(9, 30) <= t <= dt.time(15, 59):
             rth.append(bar)
     pre.sort(key=lambda b: b["ts"]); rth.sort(key=lambda b: b["ts"])
-    pickle.dump((pre, rth), open(p, "wb"))
+    # Never cache an empty answer. A dead upstream link returns 200 with no rows, and on
+    # 2026-10-30 that wrote 25 QQQ sessions to disk as "no bars" (specs/002). A real holiday
+    # costs one re-request; a cached outage costs every future run.
+    if rth:
+        pickle.dump((pre, rth), open(p, "wb"))
     return (pre, rth)
 
 
@@ -241,6 +246,39 @@ def main(argv=None) -> int:
     print(f"\n  Holm across {len(by)} new level setups would apply before believing any of these.")
     print("  EXPLORATORY. Not in the frozen family; changes no live-lab rule.")
     return 0
+
+
+# --------------------------------------------------------------------------- tests (specs/002)
+
+class _FakeFeed:
+    def __init__(self, rows):
+        self.rows = rows
+
+    def _get_csv(self, *_a, **_k):
+        return self.rows
+
+
+def _rows(n, day="2026-10-01"):
+    out, t = [], dt.datetime.fromisoformat(f"{day}T09:30:00")
+    for _ in range(n):
+        out.append({"timestamp": t.isoformat(), "open": "100", "high": "101", "low": "99",
+                    "close": "100", "volume": "1000"})
+        t += dt.timedelta(minutes=1)
+    return out
+
+
+def test_get_ext_does_not_cache_an_empty_response(tmp_path, monkeypatch):
+    monkeypatch.setattr(sys.modules[__name__], "XCACHE", tmp_path)
+    pre, rth = get_ext(_FakeFeed([]), "QQQ", dt.date(2026, 10, 1))
+    assert (pre, rth) == ([], [])
+    assert list(tmp_path.glob("*.pkl")) == []        # the outage is NOT written to disk
+
+
+def test_get_ext_caches_a_real_session(tmp_path, monkeypatch):
+    monkeypatch.setattr(sys.modules[__name__], "XCACHE", tmp_path)
+    _, rth = get_ext(_FakeFeed(_rows(210)), "QQQ", dt.date(2026, 10, 1))   # a half day
+    assert len(rth) == 210
+    assert len(list(tmp_path.glob("QQQ_2026-10-01.pkl"))) == 1
 
 
 if __name__ == "__main__":
