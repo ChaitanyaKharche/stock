@@ -16,8 +16,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy ALL your files (including run.sh, streamlit_app.py, etc.) into the container
 COPY . .
 
-# NOW that run.sh is copied, make it executable
-RUN chmod +x ./run.sh
+# NOW that run.sh is copied, strip Windows line endings (a CRLF shebang makes the
+# container die with "exec ./run.sh: no such file or directory", 2026-10-31) and make
+# it executable.
+RUN sed -i 's/\r$//' ./run.sh && chmod +x ./run.sh
 
 # This is the command that will run when the Space starts
 CMD ["./run.sh"]
