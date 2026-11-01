@@ -511,3 +511,22 @@ Saturday|Sunday|weekend|holiday returns my 11 rows; adding named holidays return
 the half-day row, that is 13.
 
 **GATE 1 FAIL**
+
+---
+
+## Fifth pass: item 4, commit `4c48a3e`, 2026-11-01
+
+**Item 4: FAIL.** I re-ran the extended marker independently and get the same 13 rows. But
+I also listed every row with a 09:30–16:00 break time whose headline has a parenthetical the
+markers leave unmarked. There are two:
+- 2020-12-24 "(half-day session)": a real trading day. Correctly left unmarked.
+- **2025-07-07, 14:31, "House passes Trump tax and spending bill (after July 3 early
+  close)"**: the vote came on Thu 07-03 after the 13:00 early close. The market was closed,
+  so the row is overnight. "July 3" is not a holiday name, so the rule misses it. Monday
+  07-07 trades before 14:31 would be labelled "pre".
+
+**Minimal fix:** add "early close" to the 15.4 markers, add 2025-07-07 to the list, and
+assert a count of **14**. That is now every in-session row with a parenthetical in the file:
+14 marked, plus 2020-12-24 unmarked.
+
+**GATE 1 FAIL**
