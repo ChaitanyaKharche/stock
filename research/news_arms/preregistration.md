@@ -21,7 +21,7 @@ open_questions:
   - "replay runtime per session on the laptop (timing run requested)"
   - "whether ThetaData history serves 1-minute stock NBBO back to 2016 and option chains back to 2020 on the current tier (probe requested)"
 errors: []
-status: conditionally approved by the owner 2026-11-01; amended (section 13, nine items); gate 1 first pass FAILED 7 of 12; amendment 14; second pass closed 5, left 7 one-sentence fixes; amendment 15; third pass left one item (weekend markers), amendment 16 (11 rows) was itself short by two named-holiday rows; amendment 17 (13 rows) missed the post-early-close row; amendment 18; GATE 1 PASSED on the sixth pass (all 12 items; audit_preregistration.md); awaiting the OWNER'S approval of this text; nothing runs before that, and no replay before barrier tests (a)-(i), probe (h), the section 12 probes and spec 003 pass
+status: conditionally approved by the owner 2026-11-01; amended (section 13, nine items); gate 1 first pass FAILED 7 of 12; amendment 14; second pass closed 5, left 7 one-sentence fixes; amendment 15; third pass left one item (weekend markers), amendment 16 (11 rows) was itself short by two named-holiday rows; amendment 17 (13 rows) missed the post-early-close row; amendment 18; GATE 1 PASSED on the sixth pass (all 12 items; audit_preregistration.md); OWNER APPROVED 2026-11-01 ("start coding spec 003 and the barrier tests; record the three clarifications before discovery; run replay only after the required probes and tests pass"); section 16 records the clarifications; no replay before barrier tests (a)-(i), probe (h), the section 12 probes and specs 003/004 pass
 verified_by: R-2026-11-01-02 (gate 1, six passes, PASS on the text only; probes and tests still to run)
 budget: {agents: 2 (auditor gate 1 and 2), laptop: "one shares replay, one options replay, timed first"}
 ---
@@ -495,6 +495,24 @@ the full session count.
 rule ≈ 50%; 80% needs ≈ 0.31 σ (C1) and ≈ 0.36 σ (C2). Unchanged otherwise.
 
 **15.12 (audit 12)** Opening question reworded (top of document).
+
+## 16. Clarifications recorded on approval, 2026-11-01, before any discovery
+
+1. **A closed-day geopolitical row with no bracket in its headline cannot be caught from the
+   file.** The 15.4 marker covers every bracketed in-session row (14). An unbracketed row
+   whose news actually broke on a closed day would be classed in-session and its morning
+   trades "pre". Known, unmeasured gap; Q5 is descriptive and says so. The forward Finlight
+   log carries real timestamps and does not have this problem.
+2. **Gate 1 approved the text, not any result.** Six audit passes checked the design against
+   the owner's conditions; no number produced after this point inherits that approval.
+   Results pass or fail gate 2 on their own.
+3. **The replay is gated by artefacts that must exist and pass first:** barrier tests (a)–(i)
+   in `backfill_barrier_test.py`, probe (h) on the vendor's minute-stamp content, the §12
+   probes (feed depth, runtime), spec 003 (`backfill._cached` never caches an empty or error
+   response) and spec 004 (the runner reaches history only through a clock-guarded proxy).
+   Probe results are written to `research/news_arms/probes.json` by
+   `trade_analysis/live_lab/backfill_probe.py`, run on the laptop; the orchestrator copies the
+   numbers into §12 and does not edit them.
 
 ## 11. Order of work
 

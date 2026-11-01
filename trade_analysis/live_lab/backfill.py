@@ -98,9 +98,44 @@ def _cached(key: str, fn):
         except Exception:                                    # noqa: BLE001
             pass
     val = fn()
-    with open(p, "wb") as fh:
-        pickle.dump(val, fh)
+    # specs/003: never cache an empty or falsy answer. A dead upstream link returns no rows
+    # with status 200; caching that would turn an outage into a permanent "no data" day.
+    if val:
+        with open(p, "wb") as fh:
+            pickle.dump(val, fh)
     return val
+
+
+GUARDED_SURFACE = frozenset({
+    "minute_bars", "extended_bars", "stock_quote", "chain_quotes", "zero_dte",
+    "open_interest", "minute_bars_many", "stock_quote_many",
+    "calls", "stats", "wait_for_upstream", "close",
+})
+
+
+class GuardedFeed:
+    """specs/004: the only feed a replayed runner can hold. Every attribute outside
+    GUARDED_SURFACE raises, so no runner path can reach the real feed, the disk cache or
+    anything that ignores the simulated clock."""
+
+    def __init__(self, history):
+        object.__setattr__(self, "_h", history)
+
+    def __getattr__(self, name):
+        if name in GUARDED_SURFACE:
+            return getattr(object.__getattribute__(self, "_h"), name)
+        raise AttributeError(f"GuardedFeed: '{name}' is not on the clock-guarded surface "
+                             f"(specs/004); the replay must not read it")
+
+    def __setattr__(self, name, value):
+        raise AttributeError("GuardedFeed is read-only")
+
+
+def _attach_feed(lab, history) -> GuardedFeed:
+    """Give the runner the proxy, never the HistoryFeed itself (specs/004 R1)."""
+    proxy = GuardedFeed(history)
+    lab.feed = proxy
+    return proxy
 
 
 class HistoryFeed:
@@ -349,7 +384,7 @@ def run(start: dt.date, end: dt.date, symbols=None, out=None, arm: str = "option
             if len(feed.minute_bars(symbols[0], day)) < MIN_RTH_BARS:
                 print(f"  {day}: not a session, skipped", flush=True)
                 continue
-            lab.feed = feed
+            _attach_feed(lab, feed)                  # specs/004
             reset(lab)
             log_path = out / "logs" / f"{day}.log"
             with open(log_path, "w", encoding="utf-8") as fh, contextlib.redirect_stdout(fh):
