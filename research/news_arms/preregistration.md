@@ -21,7 +21,7 @@ open_questions:
   - "replay runtime per session on the laptop (timing run requested)"
   - "whether ThetaData history serves 1-minute stock NBBO back to 2016 and option chains back to 2020 on the current tier (probe requested)"
 errors: []
-status: conditionally approved by the owner 2026-11-01; amended (section 13, nine items); gate 1 first pass FAILED on 7 of 12 items (audit_preregistration.md); amended again (section 14) and resubmitted; nothing runs until gate 1 passes and the owner approves the final text
+status: conditionally approved by the owner 2026-11-01; amended (section 13, nine items); gate 1 first pass FAILED 7 of 12; amendment 14; second pass closed 5, left 7 one-sentence fixes; amendment 15 applies them; third pass requested; nothing runs until gate 1 passes and the owner approves the final text
 verified_by: null
 budget: {agents: 2 (auditor gate 1 and 2), laptop: "one shares replay, one options replay, timed first"}
 ---
@@ -31,10 +31,7 @@ budget: {agents: 2 (auditor gate 1 and 2), laptop: "one shares replay, one optio
 (Title reworded 2026-11-01, amendment 14.12: the study measures conditional differences; it
 does not measure what news would do if fed to the runner.)
 
-The question is not "were news days profitable". It is: **given the frozen runners exactly as
-they trade today, does knowing the news calendar or the news flow, at the moment the runner
-could have known it, change the distribution of what each arm earns, and if so, by how much,
-where, and does it survive data it has never seen.**
+The question is not "were news days profitable". It is: **do the frozen runners' outcomes, exactly as they trade today, differ between sessions with and without news information that was knowable at the time, and if so, by how much, where, and does the difference survive data it has never seen** (reworded 2026-11-01, amendment 15.12).
 
 Direction prediction failing (eight nulls, `CLAUDE.md`) does not answer this. Neither does
 the 2026-10-30 finding that release days are wider. Both are inputs here, not conclusions.
@@ -418,7 +415,7 @@ sessions; all geopolitical holdout rows are reported, not tested, and the docume
 in advance.
 
 **14.8 (audit 8) Power, corrected.** Shares holdout has about **170** scheduled sessions (not
-185): SE ≈ 0.082 σ, MDE ≈ 0.23 σ. Because PASS also requires the point estimate ≥ 0.25 σ,
+185): SE ≈ 0.085 σ, MDE ≈ 0.24 σ (figures corrected in 15.8). Because PASS also requires the point estimate ≥ 0.25 σ,
 **power at a true 0.25 σ is about 50% for C1 and lower for C2; 80% power needs about
 0.31 σ (C1) and 0.36 σ (C2).** Both numbers are stated next to each result. The analytic SE
 treats condition and complement as independent samples; the reported CI comes from the
@@ -452,6 +449,42 @@ weigh*; it does not itself propose an amendment.
 - (10) Discovery keeps 2016 as its start, and the shortlist is additionally scored with a
   **2018-start discovery** as a sensitivity; a shortlist row that disappears under the 2018
   start is marked "driven by 2016–2017".
+
+## 15. Amendment 2026-11-01 (third), on the gate-1 second pass
+
+**15.1 (audit 1)** Test (i) is restated: during a replay `lab.feed` is a **proxy** exposing
+only `HistoryFeed`'s clock-guarded methods plus `calls`, `stats`, `wait_for_upstream` and
+`close`; any other attribute access raises. `HistoryFeed` keeps its own reference to the real
+feed for its guarded fetches; the runner never holds one. The runner is shown to complete a
+replayed day through the proxy.
+
+**15.2 (audit 2)** The cached QQQ chains for the live period were written before spec 003 and
+never inspected. Before acceptance they are re-validated under spec 003 (non-empty, no error
+payloads, every minute 09:30–16:00 present); if they do not cover **all 16** acceptance
+sessions, options acceptance is **SPY only** and says so. The clause admitting 2026-08-28 →
+09-04 is **deleted**: those sessions fail the live-hash rule and are out. The 16 sessions all
+started before the open in both arms (auditor verified).
+
+**15.4 (audit 4)** A geopolitical row whose headline marks a date shift ("(Saturday)",
+"(weekend)", "next session") counts as **overnight**: every trade that session is post,
+whatever `break_time_et` holds. Rows with `break_time_et = unknown` carry the label **"time
+unverified"** in every day-level table. New test: **no conditioning column is built from the
+session's own prices**; the analysis module exposes the list of conditioning columns and a
+test asserts none of them is derived from `open`, `high`, `low`, `close`, `gap_bp`,
+`range_bp`, `co_bp`, `first60_*`, `rel_*`, `impact`, `day_class` or any P&L field.
+
+**15.5 (audit 5)** All tests, thresholds (0.25 σ, BH, Holm, MDE) use **discovery σ**. The
+own-σ standardisation is descriptive only and is marked so in every table.
+
+**15.7 (audit 7)** Q7 cells use the **arm's** discovery σ (not a per-setup σ), and a session
+on which the setup did not trade **counts as 0** for that setup, so the cell's day count is
+the full session count.
+
+**15.8 (audit 8)** With 170 scheduled holdout sessions: SE ≈ **0.085 σ**, MDE ≈ **0.24 σ**
+(the draft's 0.082 / 0.23 were the n = 185 values). Power at a true 0.25 σ under the pass
+rule ≈ 50%; 80% needs ≈ 0.31 σ (C1) and ≈ 0.36 σ (C2). Unchanged otherwise.
+
+**15.12 (audit 12)** Opening question reworded (top of document).
 
 ## 11. Order of work
 

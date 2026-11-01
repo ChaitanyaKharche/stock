@@ -424,3 +424,38 @@ None of the 12 items PASS in full. Some sub-checks did reproduce and need no fix
   days). This needs replay output, so it is not applicable before gate 2.
 - **Overlap matrix including the 63 `unknown`-time rows' true sessions.** That cannot be
   verified from the files.
+
+---
+
+## Second pass: amendment 14 (commit `eb8eae4`), 2026-11-01
+
+**Short version: amendment 14 closes 5 of the 12 items. The other 7 each need one more
+sentence. Two of those problems were introduced by the amendment itself:**
+- test (i) cannot pass as written;
+- the live-period options replay now reads an old, uninspected cache.
+
+What I checked:
+- §14 and the reworded title, §5, §7 and §8, read against the code.
+- Start times of the 16 acceptance sessions, from `live_lab_data/{,shares/}events.jsonl`.
+  All 16 started at 09:06–09:08 ET in both arms, so 14.2's count of 16 holds.
+- The geopolitical rows whose break time falls between 09:30 and 16:00, from
+  `events_geopolitical.csv`.
+
+| # | Item | 2nd-pass verdict | What remains (minimal wording change) |
+|---|---|---|---|
+| 1 | Information barrier | **FAIL (new)** | Test (i) cannot pass as written. `HistoryFeed` itself calls the real feed's `_fetch_minute_bars` (`backfill.py:140`), `extended_bars` (`:151`) and `_get_csv` (`:159, :192, :200`). A wrapper on the real feed that "raises on any direct call" therefore raises inside the guarded path. Reword (i): "the object installed as `lab.feed` is a proxy exposing only `minute_bars`, `minute_bars_many`, `extended_bars`, `stock_quote`, `stock_quote_many`, `zero_dte`, `chain_quotes`, `open_interest`, `calls`, `stats`, `wait_for_upstream`, `close`; any other attribute raises; the runner completes a replayed day through it." Probe (h), the extension to (e), the "same time, different content" wording, the OI row and the half-day count are all closed. |
+| 2 | Fidelity acceptance | **FAIL (new + residual)** | (a) **New:** 14.2 has the live-period options replay use "cached" QQQ chains. `CLAUDE.md` says that cache (`.cache/backfill`, 29 chains) has never been inspected. It was written by the old `_cached`, which pickles empty answers, and §9/14.11 require a fresh cache and spec 003. Add: "the cached chains are re-validated under spec 003's rule and must cover all 16 acceptance sessions; otherwise options acceptance is SPY only, with live filtered to SPY." (b) The clause "2026-08-28 → 09-04 … trimmed to scope or excluded if under 5 hours" re-admits days that fail the live-hash rule (09-01 to 09-04 have about 6 h of scope). Delete "2026-08-28 → 09-04 (blind until 09:39) and". The thresholds of 0.90 and 0.85 now come from the measured numbers: closed. |
+| 3 | Disjoint sets | PASS | Holdout ends 2026-08-27; the live period sits in no table; QQQ regimes cover 2016-01-04 → 2026-09-24; forward is pinned to the hashes and a SHA. The §2 table still prints the old dates, but the dated amendment governs. |
+| 4 | Information sets | **FAIL (residual)** | **11 of the 83** rows with a 09:30–16:00 break time actually broke on a closed day. Examples: 2020-11-09 11:25 "Biden declared winner (Saturday)", 2024-07-22 13:46 "Biden drops out (Sunday)". On those Mondays, 14.4 labels every trade before that clock time "pre", but all of them are post. Add: "a row whose headline carries a date-shift parenthetical (Saturday/Sunday/holiday) is overnight: every trade is post." Still open from the first pass: `unknown` rows need the label "time unverified" in day-level tables, and a test that the conditioning set holds no column built from the session's own prices. The 08:30 rule and the 13.8 correction are closed. |
+| 5 | Metrics | **FAIL (new)** | 14.Q(5) reports standardised return two ways but never says which one the 0.25σ bars, BH and Holm use. That leaves a choice to make after seeing the data. Add: "C1, C2, Q7 and every threshold use discovery σ; the own-σ version is descriptive only." The exit-reason mapping is complete for every reason the replay emits: closed. |
+| 6 | Baselines / placebo | PASS | The undiluted condition − complement difference is reported beside the B0 version. The new rule (real effect inside the top 5% of same-sign placebo draws) is a two-sided placebo test at 5%. The four verdict fields (13.9) keep the placebo flag separate from a C1 PASS. |
+| 7 | Multiple testing | **FAIL (residual)** | m pinned before any P&L, financial_stress removed, top 5 by \|effect\|, and C1+C2 as a Holm family of 2 are all closed. Still undefined from the first pass: Q7's σ unit and how a setup's no-trade sessions count. Add: "Q7 standardises by the arm's discovery daily σ; a session on which the setup did not trade contributes 0." |
+| 8 | Power | **FAIL (trivial)** | 14.8 changes n to 170 but keeps the SE and MDE that came from 185. √(1/170 + 1/764) = **0.085σ**, MDE ≈ **0.24σ**. Replace "SE ≈ 0.082 σ, MDE ≈ 0.23 σ" with those values. The 50% power and 0.31σ / 0.36σ are correct (I recomputed 0.305 and 0.363). |
+| 9 | Overlap | PASS | The single-category line now covers C1 and C2. |
+| 10 | 2016–2019 structure | PASS | 2018-start sensitivity with a "driven by 2016–2017" label; regimes now defined for 2016+. |
+| 11 | Bug-class scenario | PASS | Sessions with no 0DTE are excluded from every table, from B0 and from σ. A Mon/Wed/Fri session with no 0DTE, or a session with every symbol skipped, halts the run. Spec 003 lands before the first replay. This is the full first-pass fix. |
+| 12 | Association language | **FAIL (residual)** | The title, §5, §7 and §8 are fixed. The opening question still reads (lines 33-36): "does knowing the news calendar or the news flow … **change** the distribution of what each arm earns". Reword: "does the distribution of what each arm earns **differ** between sessions with and without news information that was knowable at the time". |
+
+**Still not run** (same list as the first pass): probe (h) and the §12 probes, which need the
+laptop and ThetaData; the barrier tests and spec 003, which still do not exist at
+`eb8eae4`; and the September median per-twin gap.
