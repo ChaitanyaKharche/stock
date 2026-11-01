@@ -21,7 +21,7 @@ open_questions:
   - "replay runtime per session on the laptop (timing run requested)"
   - "whether ThetaData history serves 1-minute stock NBBO back to 2016 and option chains back to 2020 on the current tier (probe requested)"
 errors: []
-status: DRAFT for owner review; nothing runs until he approves and gate 1 passes
+status: conditionally approved by the owner 2026-11-01; amended the same day (section 13, nine items) and sent to gate 1; nothing runs until gate 1 passes and the owner approves the final text
 verified_by: null
 budget: {agents: 2 (auditor gate 1 and 2), laptop: "one shares replay, one options replay, timed first"}
 ---
@@ -163,8 +163,9 @@ and by how much, with what CI". Two baselines are computed:
 
 - **B0**: all sessions in the set.
 - **B1**: a **placebo** conditioning: the same number of sessions as the condition, drawn at
-  random matched by year and weekday, 200 draws. The condition's effect is reported next to
-  the placebo 95th percentile, as in `news_impact`. A condition whose placebo 95th percentile
+  random matched by year and weekday, **5,000 draws** (amendment 13.3; the draft said 200).
+  Each draw computes the **identical** condition − B0 statistic. The condition's effect is
+  reported next to the placebo 95th percentile and its placebo rank. A condition whose placebo 95th percentile
   reaches half its effect is marked "selection / chance", not "effect".
 
 **Incremental value** is the difference condition − B0 in standardised daily return, with a
@@ -249,6 +250,96 @@ bars) by year, the events files' SHAs, the exclusion list, the random seeds, and
 command lines. Outputs live under `live_lab_backfill/news_arms/` (provenance `BACKFILL`, never
 read by the dashboard) and `research/news_arms/`. `analysis.json` holds every number quoted
 in `results.md`; gate 2 traces each one.
+
+## 13. Amendment 2026-11-01, on the owner's conditional approval, before gate 1
+
+Nine items, each replacing or extending the section it names. Nothing below was written
+after any replay output existed; no replay has run.
+
+**13.1 (§1.2) Point-in-time options contract universe.** Valid quote stamps do not prove the
+*set of contracts the runner could choose from* was point-in-time. Two more barrier tests:
+(f) a contract whose first quote of the day is stamped 11:00 is absent from `chain_quotes`
+at 10:59 and present at 11:00, and the runner's strike selection at 10:00 cannot pick it;
+(g) `zero_dte()` answers only "does this expiry exist", never a strike list, and the runner's
+ATM / ATM±1 choice is shown (by test) to be made from `chain_quotes` at the decision minute
+alone. In addition the replay logs, per fill, the number of contracts visible at the
+decision minute versus at the close; a fill whose chosen strike was not in the
+decision-minute set is a defect that stops the study. Open interest remains unavailable in
+history (§9).
+
+**13.2 (whole document) Association, not incremental value.** Everything this study can
+produce is a **conditional association**: the frozen runner, unchanged, earns a different
+distribution on sessions with condition X than on sessions without it. It **cannot**
+establish that feeding X into the runner would improve profitability: the runner never saw X,
+no decision was changed, and any policy that acts on X would alter the trade set in ways this
+data cannot show. §5's "incremental value" is renamed **"conditional difference from
+baseline"**; the phrase "incremental trading value" is reserved for a **separate forward
+policy experiment** (a pre-registered rule, run live, compared with the unconditioned runner
+on the same sessions), which this study may motivate and never substitutes for.
+
+**13.3 (§5) Placebo.** 5,000 draws per condition (200 in the draft), each computing exactly
+the condition − B0 statistic used for the real condition, matched by year and weekday, the
+condition's own sessions excluded from the pool. Reported: placebo 95th and 99th percentile
+and the real effect's rank among the 5,000.
+
+**13.4 (§3, new table) Event overlap.** An **overlap matrix** (13 × 13, sessions carrying
+both categories) is produced from the two event files before any P&L is read and committed
+with the discovery report. Handling, fixed now: a session with two or more categories counts
+in each category's cell (as in `news_impact`), **and** every Q1–Q7 table is re-run on
+**single-category sessions only** as a sensitivity line. A category whose effect changes sign
+or loses half its size when overlaps are removed is reported as **confounded by overlap**.
+Scheduled-with-scheduled overlaps (CPI and FOMC on one day; NFP and PCE) are listed
+individually.
+
+**13.5 (§6 Q5) Pre/post trades are descriptive.** The pre-release versus post-release split
+is a description of when the runner's trades happened and what they earned. It is **not** a
+causal estimate of the news: the same minutes on non-event days are not a matched control,
+intraday volatility and the runner's own time-of-day pattern differ, and a release can move
+pre-release behaviour through positioning. Q5 is labelled *descriptive, exploratory* in every
+table, and no rule is derived from it in this study.
+
+**13.6 (§7) Power for C2, computed before the data.** Standardised daily return has σ = 1 by
+construction. SPY 2023 holdout: about 250 sessions, of which about 48 distinct scheduled
+sessions (8 FOMC + 12 CPI + 12 NFP + 4 GDP + 12 PCE, overlaps removed). Two-sample SE of a
+mean difference ≈ √(1/48 + 1/202) ≈ 0.16 σ; **minimum detectable effect at 80% power,
+two-sided 5%: ≈ 0.45 σ**, above the 0.25 σ threshold. Therefore **C2 is pre-declared
+underpowered for a 0.25 σ effect and is reported with its effect size, CI and achieved MDE,
+never as PASS/FAIL**, unless the observed holdout effect itself exceeds the MDE. C1 (shares
+holdout ≈ 930 sessions, ≈ 185 scheduled): SE ≈ 0.082 σ, MDE ≈ 0.23 σ, adequate for 0.25 σ.
+The exact MDEs are recomputed from the realised session counts and written next to each.
+
+**13.7 (§1.4) Live-replay acceptance, per arm, independently.**
+- Sessions used: live sessions with ledger outcome **COLLECTED** only (22 of 44 at
+  `3d21893`); PARTIAL, ABORTED and INTERRUPTED sessions are excluded from acceptance (the
+  replay has trades live could not have) and listed with the hours lost.
+- Minimum valid sessions: **15 per arm**; below that the arm's acceptance is "not
+  established" and that arm's results are labelled so throughout.
+- Shares passes if: Spearman correlation of session net ≥ 0.80, median |per-trade gap| on
+  twinned trades ≤ $3.00, and trade-count ratio replay/live within 0.9–1.3.
+- Options passes if: Spearman ≥ 0.70 (lower fidelity measured in September), median
+  |per-trade gap| on twinned ATM trades ≤ $8.00 (about 5% of a typical premium), trade-count
+  ratio within 0.8–1.5, and exit-reason mix differing by ≤ 15 percentage points on any
+  reason.
+- **An arm that fails is reported as failing; the other arm's pass does not rescue it, and a
+  failing arm's news results are exploratory-descriptive only, with no confirmatory test.**
+
+**13.8 (§3, §8, conclusions) Three information sets, kept apart to the end.** Every finding
+names which set it belongs to: **(i) calendar awareness** (a release is due today; known
+before the open), **(ii) release information** (the number and its time; known at the
+minute), **(iii) post-release market reaction** (what prices did; hindsight). Only (i) can
+become a pre-open rule; (ii) only an intraday rule from the release minute on; (iii) is never
+a conditioning variable and appears only as the descriptive "twin" column. The conclusions
+section of `results.md` is structured as three sub-sections with these names.
+
+**13.9 (results template) Four verdicts per finding.** Every reported row carries four
+separate fields, never collapsed into one word: **statistical** (CI, BH/Holm status),
+**effect size** (σ units and the arm's native units), **replay fidelity** (the setup's or
+arm's one-sided rate and acceptance status from 13.7), and **practical usefulness** (which
+information set, whether a pre-open or intraday rule could use it, expected trades per year
+at that frequency, and whether the native-unit effect exceeds round-trip costs). A row that
+is significant but low-fidelity, or significant but worth less than its spread, says so in
+its own fields. "Actionable" is not a word this study uses; the most it says is "candidate
+for a forward policy experiment".
 
 ## 11. Order of work
 
