@@ -483,3 +483,31 @@ Not run, and still preconditions for step 4: probe (h) and the §12 probes, the 
 and spec 003. None of them exist at `e8940be`.
 
 **GATE 1 FAIL.** The only thing left is the one-sentence fix to item 4 above.
+
+---
+
+## Fourth pass: item 4, commit `f4d943e`, 2026-11-01
+
+**Item 4: FAIL. The error is mine: the 11-row list I gave in the third pass was incomplete.**
+
+What I missed: two rows with a 09:30–16:00 break time name a market holiday by name rather
+than with the word "holiday". The news broke while the market was closed, so the rows are
+overnight. Both are in the CSV, and my third-pass regex missed them:
+
+| row | news actually broke |
+|---|---|
+| 2022-02-22, 15:00, "Putin recognizes Donetsk and Luhansk (Presidents Day)" | Mon 2022-02-21, market closed |
+| 2025-01-21, 12:00, "Trump inaugurated (MLK Day)" | Mon 2025-01-20, market closed |
+
+Because the text pins the count at 11, those two rows stay "pre" for every trade before
+15:00 and 12:00. 2020-12-24 "(half-day session)" names a trading day, not a shift, and is
+correctly left unmarked.
+
+**Minimal fix:** 15.4's marker becomes "any parenthetical naming Saturday, Sunday, weekend,
+'holiday' or a named market holiday (Presidents Day, MLK Day, Memorial Day, Labor Day, Good
+Friday, …); '(half-day session)' is not a shift". Add 2022-02-22 and 2025-01-21 to the list,
+and change the asserted count to **13**. I checked the full in-session set: a regex on
+Saturday|Sunday|weekend|holiday returns my 11 rows; adding named holidays returns 14; minus
+the half-day row, that is 13.
+
+**GATE 1 FAIL**
