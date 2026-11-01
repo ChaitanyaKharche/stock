@@ -21,12 +21,15 @@ open_questions:
   - "replay runtime per session on the laptop (timing run requested)"
   - "whether ThetaData history serves 1-minute stock NBBO back to 2016 and option chains back to 2020 on the current tier (probe requested)"
 errors: []
-status: conditionally approved by the owner 2026-11-01; amended the same day (section 13, nine items) and sent to gate 1; nothing runs until gate 1 passes and the owner approves the final text
+status: conditionally approved by the owner 2026-11-01; amended (section 13, nine items); gate 1 first pass FAILED on 7 of 12 items (audit_preregistration.md); amended again (section 14) and resubmitted; nothing runs until gate 1 passes and the owner approves the final text
 verified_by: null
 budget: {agents: 2 (auditor gate 1 and 2), laptop: "one shares replay, one options replay, timed first"}
 ---
 
-# Pre-registration — does news information change what the frozen runners earn?
+# Pre-registration — does the frozen runners' outcome distribution differ under news conditions?
+
+(Title reworded 2026-11-01, amendment 14.12: the study measures conditional differences; it
+does not measure what news would do if fed to the runner.)
 
 The question is not "were news days profitable". It is: **given the frozen runners exactly as
 they trade today, does knowing the news calendar or the news flow, at the moment the runner
@@ -168,8 +171,9 @@ and by how much, with what CI". Two baselines are computed:
   reported next to the placebo 95th percentile and its placebo rank. A condition whose placebo 95th percentile
   reaches half its effect is marked "selection / chance", not "effect".
 
-**Incremental value** is the difference condition − B0 in standardised daily return, with a
-day-clustered bootstrap CI (3,000 reps, seed 20260828, resampling sessions).
+**Conditional difference from baseline** (amendment 14.12; the draft said "incremental
+value") is condition − B0 in standardised daily return, with a day-clustered bootstrap CI
+(3,000 reps, seed 20260828, resampling sessions).
 
 ## 6. The questions, as tables (Q1–Q7)
 
@@ -209,8 +213,9 @@ is committed):**
 - **C1** shares: standardised daily return on `scheduled_today` sessions minus B0 over the
   holdout. PASS if the 95% day-clustered CI excludes 0 and |effect| ≥ 0.25 σ.
 - **C2** options (SPY): same, holdout 2023.
-A PASS says news *awareness* shifts that arm's outcomes by at least a quarter of a normal
-day's variation. It says nothing about which way to trade and does not change the lab.
+A PASS says that arm's outcomes differ on calendar-release sessions by at least a quarter
+of a normal day's variation (amendment 14.12). It says nothing about which way to trade,
+nothing about what feeding the calendar to the runner would do, and does not change the lab.
 
 **Everything else** (Q1–Q7 by category, by setup, by regime) is exploratory: BH at q = 0.10
 within each table, effect sizes with CIs always shown, p-values never shown alone.
@@ -223,8 +228,7 @@ within each table, effect sizes with CIs always shown, p-values never shown alon
   condition, the arm, the setup, the metric, the forward sample size (sessions), the decision
   rule. It is evaluated on live sessions from its registration date on.
 - **No change to `live_lab/` trading logic, config or setup list from this study.** A forward
-  pass is the earliest point at which a dated amendment could even be proposed, and that is a
-  separate decision for the owner.
+  pass is a result the owner may weigh; it does not itself propose an amendment (14.12).
 
 ## 9. What cannot be validated against live execution (owner's closing ask)
 
@@ -340,6 +344,114 @@ at that frequency, and whether the native-unit effect exceeds round-trip costs).
 is significant but low-fidelity, or significant but worth less than its spread, says so in
 its own fields. "Actionable" is not a word this study uses; the most it says is "candidate
 for a forward policy experiment".
+
+## 14. Amendment 2026-11-01 (second), on the gate-1 audit (`audit_preregistration.md`)
+
+The auditor failed items 1, 2, 3, 4, 7, 8, 12 and found the bug-class scenario (11). Each
+fix below names the audit item. No replay has run; no P&L has been read.
+
+**14.1 (audit 1) Information barrier, completed.**
+- Tests (a)–(g) use constructed rows and prove the *mechanics*; they cannot prove what a
+  vendor 1-minute quote row stamped T *contains*. New **probe (h), mandatory before any
+  replay**: for 5 random sessions × 3 symbols (SPY, QQQ, one shares name) and 5 random
+  option contracts, fetch the 1-second (or tick) quotes for the minute [T, T+59 s] and
+  determine whether the 1-minute row stamped T is the quote **at** T or the **last** quote
+  of the minute. If the latter, `HistoryFeed` must serve a row stamped T only once the clock
+  reaches T + 60 s (a change under `live_lab/`, spec-first), and the barrier tests are
+  re-pointed to that rule. The probe result is recorded in §12.
+- New **test (i)**: during a replay the real feed is wrapped so that any direct call to
+  `_get_csv`, `_fetch_minute_bars`, `extended_bars` or any method not routed through
+  `HistoryFeed`'s clock-guarded methods **raises**. The runner is shown to complete a
+  replayed day under that wrapper.
+- Test (e) extended: every record the store writes during a replayed day carries a stamp
+  ≤ the simulated clock at the moment it was written.
+- §1.2 "as live" is replaced by: **same availability time as live; different content, the
+  vendor's final bar rather than the first print** (fidelity consequence in §1.3).
+- §9 open-interest row rewritten: the options runner **records** OI (`runner.py:476-483`) and
+  **no decision depends on it**; the replay records `null`. Nothing to measure.
+- Half days and short sessions dropped by `MIN_RTH_BARS` (`backfill.py:348`) are counted by
+  year and listed; they are exclusions, not sessions.
+
+**14.2 (audit 2) Acceptance, re-specified from the measured numbers.**
+- Acceptance sessions: live sessions with ledger `COLLECTED` **and** both live config hashes
+  in force **and** a clean start (first live tick before 09:31). At `3d21893` that is **16**
+  sessions, not 22. Each session is compared only over the minutes live was actually trading
+  (its scope); 2026-08-28 → 09-04 (blind until 09:39) and 09-25 (20 minutes asleep) are
+  trimmed to scope or excluded if the scope is under 5 hours.
+- The live-period options replay runs **QQQ and SPY** (the chains for those 29 sessions are
+  cached), so it carries the live hash `ccd00ac71f8243e9`. The historical SPY-only replay
+  cannot carry that hash (symbols are hashed); it runs under a **derived hash recorded as
+  such**, and its results are labelled "SPY-only derived config".
+- Thresholds set from September's measured values (Spearman 0.96 shares, 0.94 options,
+  recomputed by the auditor): **shares pass at Spearman ≥ 0.90, options ≥ 0.85.** The
+  per-trade gap statistic is defined as the **median of |live net − replay net| over twinned
+  trades** (September reported only bin totals, so this is a new statistic with the $3 / $8
+  bars as provisional; the realised September value is computed first and the bar may only
+  be tightened, never loosened).
+- Forward sessions (§2) are admitted to validation under the **same COLLECTED + live-hash +
+  clean-start rule**; PARTIAL forward sessions are listed, never scored.
+
+**14.3 (audit 3) Disjoint sets, repaired.**
+- Shares holdout ends **2026-08-27**. The live period 2026-08-28 → 10-30 is used for §1.4
+  acceptance only and is in no discovery or holdout table.
+- Volatility-regime cut-points come from **`day_features_QQQ.csv`** (2016–2026) for both arms;
+  `day_features_SPY.csv` starts 2020 and is not used for regimes.
+- Forward validation is pinned to the two live hashes and to `live_lab/` code at the SHA of
+  the final approved pre-registration; the news snapshot (specs/001) writes a file and
+  touches no trading path, verified by its tests.
+
+**14.4 (audit 4) Pre/post, made decidable.** A trade is **post** an event only when the event
+minute falls inside 09:30–16:00 **on that session date** and `entry_ts` is at or after it.
+Pre-open releases (08:30 CPI/NFP/GDP/PCE) and overnight or weekend shocks make every trade
+of the session post, by definition. Geopolitical rows with `break_time_et = unknown` are
+excluded from Q5 entirely. Break times are recollections rounded to 30–60 minutes and Q5
+says so in every table. **13.8 corrected:** information set (ii) released before 09:30 is
+available before the open and may inform a pre-open rule; only releases inside the session
+(FOMC 14:00) are intraday-only.
+
+**14.7 (audit 7) Multiple testing, pinned.** For each table, **m = the number of cells
+meeting the §7 minimums**, computed from session and trade counts and **committed before any
+P&L is read**. `financial_stress` is removed from Q7 and from every tested table. If more
+than five cells survive BH on discovery, the shortlist is the **top five by |effect|**.
+**C1 and C2 are one Holm family of two.** No geopolitical category reaches 30 holdout
+sessions; all geopolitical holdout rows are reported, not tested, and the document says so
+in advance.
+
+**14.8 (audit 8) Power, corrected.** Shares holdout has about **170** scheduled sessions (not
+185): SE ≈ 0.082 σ, MDE ≈ 0.23 σ. Because PASS also requires the point estimate ≥ 0.25 σ,
+**power at a true 0.25 σ is about 50% for C1 and lower for C2; 80% power needs about
+0.31 σ (C1) and 0.36 σ (C2).** Both numbers are stated next to each result. The analytic SE
+treats condition and complement as independent samples; the reported CI comes from the
+day-clustered bootstrap of condition − B0, which is the estimand, and the analytic figure is
+labelled approximate.
+
+**14.11 (audit 11) The bug-class scenario, closed.** `backfill.run` does not skip sessions
+without a 0DTE expiry; before Nov 2022 that would have entered Tue/Thu as $0 options days,
+shrunk discovery σ by about a quarter, inflated 2023 effects by about 1.3×, and made
+GDP_ADV (released on Thursdays) "beat baseline" by construction. Rule: **a session where
+`zero_dte()` is None is excluded from every options table, from B0 and from σ**; it is
+counted by weekday and year. A Mon/Wed/Fri session with no 0DTE, or a session on which every
+symbol was skipped, **halts the run** for inspection. **Spec 003** (`backfill._cached` never
+caches an empty or error response; HTTP errors are distinguished from empty data) is
+written, tested and landed before the first replay.
+
+**14.12 (audit 12) Language.** Title reworded (above). §5 "Incremental value" → "conditional
+difference from baseline". §7 "news awareness shifts that arm's outcomes" → "that arm's
+outcomes differ on calendar-release sessions". §8: a forward pass is a *result the owner may
+weigh*; it does not itself propose an amendment.
+
+**14.Q (audit 5, 6, 9, 10: questionable items, answered).**
+- (5) Standardised return is reported twice: with discovery σ (comparable across sets) and
+  with the set's own σ. Replay exit reasons map to §4 as: `failed` → stop (close back inside),
+  `bars` → time, `trail_imb` → trail, `shutdown` → excluded and counted.
+- (6) Condition − B0 is diluted by (1 − p) where p is the condition's share of sessions; the
+  undiluted condition − complement difference is reported beside it. The "half the effect"
+  heuristic is replaced: **a condition is marked "selection / chance" when its real effect
+  ranks below the 95th percentile of the 5,000 placebo effects of the same sign.**
+- (9) The single-category sensitivity line is also computed for C1 and C2.
+- (10) Discovery keeps 2016 as its start, and the shortlist is additionally scored with a
+  **2018-start discovery** as a sensitivity; a shortlist row that disappears under the 2018
+  start is marked "driven by 2016–2017".
 
 ## 11. Order of work
 
