@@ -530,3 +530,21 @@ assert a count of **14**. That is now every in-session row with a parenthetical 
 14 marked, plus 2020-12-24 unmarked.
 
 **GATE 1 FAIL**
+
+---
+
+## Sixth pass: item 4, commit `ee03931`, 2026-11-01
+
+**Item 4: PASS.** My own regex returns exactly the 14 listed rows. The only in-session row
+with a parenthetical that the marker does not match is 2020-12-24 "(half-day session)",
+which the text and its test leave unmarked on purpose. The test that "no other in-session
+row has an unmatched parenthetical" holds with that one exception.
+
+What remains unverified (not a FAIL): a row that broke on a closed day but has no
+parenthetical cannot be detected from the file. The README says date shifts are marked, but
+I did not check that against outside sources.
+
+All 12 items now pass. Probe (h), the §12 probes, the barrier tests (a)–(i) and spec 003 are
+still required by the text before step 4. Gate 1 audits the text, not their results.
+
+**GATE 1 PASS**

@@ -21,8 +21,8 @@ open_questions:
   - "replay runtime per session on the laptop (timing run requested)"
   - "whether ThetaData history serves 1-minute stock NBBO back to 2016 and option chains back to 2020 on the current tier (probe requested)"
 errors: []
-status: conditionally approved by the owner 2026-11-01; amended (section 13, nine items); gate 1 first pass FAILED 7 of 12; amendment 14; second pass closed 5, left 7 one-sentence fixes; amendment 15; third pass left one item (weekend markers), amendment 16 (11 rows) was itself short by two named-holiday rows; amendment 17 (13 rows) missed the post-early-close row; amendment 18 (14 rows, every in-session parenthetical covered); sixth pass requested; nothing runs until gate 1 passes and the owner approves the final text
-verified_by: null
+status: conditionally approved by the owner 2026-11-01; amended (section 13, nine items); gate 1 first pass FAILED 7 of 12; amendment 14; second pass closed 5, left 7 one-sentence fixes; amendment 15; third pass left one item (weekend markers), amendment 16 (11 rows) was itself short by two named-holiday rows; amendment 17 (13 rows) missed the post-early-close row; amendment 18; GATE 1 PASSED on the sixth pass (all 12 items; audit_preregistration.md); awaiting the OWNER'S approval of this text; nothing runs before that, and no replay before barrier tests (a)-(i), probe (h), the section 12 probes and spec 003 pass
+verified_by: R-2026-11-01-02 (gate 1, six passes, PASS on the text only; probes and tests still to run)
 budget: {agents: 2 (auditor gate 1 and 2), laptop: "one shares replay, one options replay, timed first"}
 ---
 
