@@ -459,3 +459,27 @@ What I checked:
 **Still not run** (same list as the first pass): probe (h) and the §12 probes, which need the
 laptop and ThetaData; the barrier tests and spec 003, which still do not exist at
 `eb8eae4`; and the September median per-twin gap.
+
+---
+
+## Third pass: amendment 15 (commit `e8940be`), 2026-11-01
+
+**Short version: amendment 15 closes six of the seven items left open. Item 4 is still open,
+because the rule for spotting weekend news names the wrong words.**
+
+| # | Item | 3rd-pass verdict | Reason |
+|---|---|---|---|
+| 1 | Information barrier | PASS | 15.1 is the proxy allow-list exactly as specified. `HistoryFeed` keeps the only reference to the real feed. |
+| 2 | Fidelity acceptance | PASS | 15.2: the old cache is re-checked under spec 003 (non-empty, no error payloads, full minute grid). If it does not cover all 16 sessions, options acceptance falls back to SPY only. The 08-28 → 09-04 clause is deleted. |
+| 4 | Information sets | **FAIL** | 15.4 names its date-shift markers as "(Saturday)", "(weekend)" and "next session". The CSV uses "(Sunday)" for 8 of the 11 rows (e.g. "(Sunday vote)", "(Sunday; Memorial Day)"). I tested those three literal markers on `events_geopolitical.csv`: they catch **3 of 11**. The 8 Sunday rows would still label Monday-morning trades "pre". **Minimal fix:** "markers: any parenthetical naming Saturday, Sunday, weekend or a holiday; the 11 rows this catches (2017-04-24, 2018-05-29, 2019-03-25, 2019-05-06, 2020-11-09, 2021-03-08, 2022-08-08, 2023-02-06, 2024-06-10, 2024-07-22, 2025-07-28) are listed, and a test asserts the count is 11." The "time unverified" label and the no-own-price test are closed. |
+| 5 | Metrics | PASS | 15.5: every test and threshold uses discovery σ; own σ is descriptive only. |
+| 7 | Multiple testing | PASS | 15.7: arm discovery σ, and a session where the setup did not trade counts as 0. |
+| 8 | Power | PASS | 15.8: SE 0.085σ, MDE 0.24σ, 50% power at a true 0.25σ, 0.31σ / 0.36σ for 80%. All match my recomputation. |
+| 12 | Association language | PASS | The opening question now reads "differ between sessions with and without news information that was knowable at the time". |
+
+Items 3, 6, 9, 10 and 11 passed in the second pass and are unchanged.
+
+Not run, and still preconditions for step 4: probe (h) and the §12 probes, the barrier tests
+and spec 003. None of them exist at `e8940be`.
+
+**GATE 1 FAIL.** The only thing left is the one-sentence fix to item 4 above.

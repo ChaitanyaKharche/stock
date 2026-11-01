@@ -21,7 +21,7 @@ open_questions:
   - "replay runtime per session on the laptop (timing run requested)"
   - "whether ThetaData history serves 1-minute stock NBBO back to 2016 and option chains back to 2020 on the current tier (probe requested)"
 errors: []
-status: conditionally approved by the owner 2026-11-01; amended (section 13, nine items); gate 1 first pass FAILED 7 of 12; amendment 14; second pass closed 5, left 7 one-sentence fixes; amendment 15 applies them; third pass requested; nothing runs until gate 1 passes and the owner approves the final text
+status: conditionally approved by the owner 2026-11-01; amended (section 13, nine items); gate 1 first pass FAILED 7 of 12; amendment 14; second pass closed 5, left 7 one-sentence fixes; amendment 15; third pass left one item (weekend markers), fixed in 15.4 as amendment 16; fourth pass requested; nothing runs until gate 1 passes and the owner approves the final text
 verified_by: null
 budget: {agents: 2 (auditor gate 1 and 2), laptop: "one shares replay, one options replay, timed first"}
 ---
@@ -465,9 +465,12 @@ sessions, options acceptance is **SPY only** and says so. The clause admitting 2
 09-04 is **deleted**: those sessions fail the live-hash rule and are out. The 16 sessions all
 started before the open in both arms (auditor verified).
 
-**15.4 (audit 4)** A geopolitical row whose headline marks a date shift ("(Saturday)",
-"(weekend)", "next session") counts as **overnight**: every trade that session is post,
-whatever `break_time_et` holds. Rows with `break_time_et = unknown` carry the label **"time
+**15.4 (audit 4)** A geopolitical row whose headline carries **any parenthetical naming
+Saturday, Sunday, weekend or a holiday** counts as **overnight**: every trade that session is
+post, whatever `break_time_et` holds. Applied to the frozen file this marks exactly **11
+rows** (2017-04-24, 2018-05-29, 2019-03-25, 2019-05-06, 2020-11-09, 2021-03-08, 2022-08-08,
+2023-02-06, 2024-06-10, 2024-07-22, 2025-07-28); a test asserts that count (amendment 16, on
+the third pass: the draft's three markers caught only 3 of the 11). Rows with `break_time_et = unknown` carry the label **"time
 unverified"** in every day-level table. New test: **no conditioning column is built from the
 session's own prices**; the analysis module exposes the list of conditioning columns and a
 test asserts none of them is derived from `open`, `high`, `low`, `close`, `gap_bp`,
