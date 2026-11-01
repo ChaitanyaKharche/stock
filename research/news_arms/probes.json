@@ -1,0 +1,221 @@
+{
+ "run_at": "2026-11-01T15:12:54",
+ "repo_sha": "77989e9",
+ "stock_nbbo_2016_rows": {
+  "error": "TerminalUnreachable: /stock/history/quote failed after 4 attempts: ConnectError('[WinError 10061] No connection could be made because the target machine actively refused it')"
+ },
+ "stock_nbbo_2018_XLF_rows": {
+  "error": "TerminalUnreachable: /stock/history/quote failed after 4 attempts: ConnectError('[WinError 10061] No connection could be made because the target machine actively refused it')"
+ },
+ "option_chain_2020_rows": {
+  "error": "TerminalUnreachable: /option/history/quote failed after 4 attempts: ConnectError('[WinError 10061] No connection could be made because the target machine actively refused it')"
+ },
+ "stamp_probe_h": {
+  "checks": [
+   {
+    "day": "2021-03-10",
+    "symbol": "SPY",
+    "minute": "10:00",
+    "result": "no data"
+   },
+   {
+    "day": "2021-03-10",
+    "symbol": "SPY",
+    "minute": "13:30",
+    "result": "no data"
+   },
+   {
+    "day": "2021-03-10",
+    "symbol": "QQQ",
+    "minute": "10:00",
+    "result": "no data"
+   },
+   {
+    "day": "2021-03-10",
+    "symbol": "QQQ",
+    "minute": "13:30",
+    "result": "no data"
+   },
+   {
+    "day": "2021-03-10",
+    "symbol": "XLF",
+    "minute": "10:00",
+    "result": "no data"
+   },
+   {
+    "day": "2021-03-10",
+    "symbol": "XLF",
+    "minute": "13:30",
+    "result": "no data"
+   },
+   {
+    "day": "2022-09-14",
+    "symbol": "SPY",
+    "minute": "10:00",
+    "result": "no data"
+   },
+   {
+    "day": "2022-09-14",
+    "symbol": "SPY",
+    "minute": "13:30",
+    "result": "no data"
+   },
+   {
+    "day": "2022-09-14",
+    "symbol": "QQQ",
+    "minute": "10:00",
+    "result": "no data"
+   },
+   {
+    "day": "2022-09-14",
+    "symbol": "QQQ",
+    "minute": "13:30",
+    "result": "no data"
+   },
+   {
+    "day": "2022-09-14",
+    "symbol": "XLF",
+    "minute": "10:00",
+    "result": "no data"
+   },
+   {
+    "day": "2022-09-14",
+    "symbol": "XLF",
+    "minute": "13:30",
+    "result": "no data"
+   },
+   {
+    "day": "2023-06-14",
+    "symbol": "SPY",
+    "minute": "10:00",
+    "result": "no data"
+   },
+   {
+    "day": "2023-06-14",
+    "symbol": "SPY",
+    "minute": "13:30",
+    "result": "no data"
+   },
+   {
+    "day": "2023-06-14",
+    "symbol": "QQQ",
+    "minute": "10:00",
+    "result": "no data"
+   },
+   {
+    "day": "2023-06-14",
+    "symbol": "QQQ",
+    "minute": "13:30",
+    "result": "no data"
+   },
+   {
+    "day": "2023-06-14",
+    "symbol": "XLF",
+    "minute": "10:00",
+    "result": "no data"
+   },
+   {
+    "day": "2023-06-14",
+    "symbol": "XLF",
+    "minute": "13:30",
+    "result": "no data"
+   },
+   {
+    "day": "2024-06-12",
+    "symbol": "SPY",
+    "minute": "10:00",
+    "result": "no data"
+   },
+   {
+    "day": "2024-06-12",
+    "symbol": "SPY",
+    "minute": "13:30",
+    "result": "no data"
+   },
+   {
+    "day": "2024-06-12",
+    "symbol": "QQQ",
+    "minute": "10:00",
+    "result": "no data"
+   },
+   {
+    "day": "2024-06-12",
+    "symbol": "QQQ",
+    "minute": "13:30",
+    "result": "no data"
+   },
+   {
+    "day": "2024-06-12",
+    "symbol": "XLF",
+    "minute": "10:00",
+    "result": "no data"
+   },
+   {
+    "day": "2024-06-12",
+    "symbol": "XLF",
+    "minute": "13:30",
+    "result": "no data"
+   },
+   {
+    "day": "2025-06-11",
+    "symbol": "SPY",
+    "minute": "10:00",
+    "result": "no data"
+   },
+   {
+    "day": "2025-06-11",
+    "symbol": "SPY",
+    "minute": "13:30",
+    "result": "no data"
+   },
+   {
+    "day": "2025-06-11",
+    "symbol": "QQQ",
+    "minute": "10:00",
+    "result": "no data"
+   },
+   {
+    "day": "2025-06-11",
+    "symbol": "QQQ",
+    "minute": "13:30",
+    "result": "no data"
+   },
+   {
+    "day": "2025-06-11",
+    "symbol": "XLF",
+    "minute": "10:00",
+    "result": "no data"
+   },
+   {
+    "day": "2025-06-11",
+    "symbol": "XLF",
+    "minute": "13:30",
+    "result": "no data"
+   }
+  ],
+  "verdict": "MIXED_OR_UNDETERMINED",
+  "counts": {
+   "AT_T": 0,
+   "LAST_OF_MINUTE": 0,
+   "neither": 0
+  }
+ },
+ "feed_stats": {
+  "calls": 252,
+  "retries": 252,
+  "bar_cache_hits": 0,
+  "bar_cache_misses": 0,
+  "outage_episodes": 0,
+  "upstream_down_now": true
+ },
+ "shares_replay_20_sessions_minutes": 0.3,
+ "shares_replay_rc": 1,
+ "shares_replay_tail": [],
+ "shares_replay_stderr_tail": [
+  "    rows = self._get_csv(\"/stock/history/ohlc\", symbol=symbol,",
+  "           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+  "  File \"C:\\Users\\chaitanyakharche\\Documents\\stock\\trade_analysis\\live_lab\\feed.py\", line 182, in _get_csv",
+  "    raise kind(f\"{path} failed after {self.max_retries} attempts: {last!r}\")",
+  "trade_analysis.live_lab.feed.TerminalUnreachable: /stock/history/ohlc failed after 4 attempts: ConnectError('[WinError 10061] No connection could be made because the target machine actively refused it')"
+ ]
+}
