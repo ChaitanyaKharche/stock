@@ -4679,3 +4679,12 @@
 {"seq":17046,"ts":"2026-10-30T13:05:41.011193","kind":"tick","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
 {"seq":17047,"ts":"2026-10-30T13:05:53.053973","kind":"tick","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
 {"seq":17048,"ts":"2026-10-30T13:05:58.375419","kind":"feed","detail":"upstream recovered after 66s and 6 failed call(s)","path":"__recovered__"}
+{"seq":17141,"ts":"2026-11-02T09:43:49.333163","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/snapshot/quote"}
+{"seq":17142,"ts":"2026-11-02T09:43:49.336163","kind":"tick","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":17143,"ts":"2026-11-02T09:43:55.457836","kind":"feed","detail":"upstream recovered after 6s and 1 failed call(s)","path":"__recovered__"}
+{"seq":17483,"ts":"2026-11-02T15:19:31.582832","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/snapshot/quote"}
+{"seq":17484,"ts":"2026-11-02T15:19:31.635837","kind":"tick","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":17483,"ts":"2026-11-02T15:19:34.876615","kind":"host_suspend","detail":"host suspended or clock stepped: 1224s unaccounted between 14:59:02 and 15:19:31 ET -- the lab was NOT running","gap_sec":1224.2,"from_et":"2026-11-02T14:59:02.399214","to_et":"2026-11-02T15:19:31.581828"}
+{"seq":17485,"ts":"2026-11-02T16:23:16.510655","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":17483,"ts":"2026-11-02T16:23:18.251117","kind":"host_suspend","detail":"host suspended or clock stepped: 3812s unaccounted between 15:19:40 and 16:23:18 ET -- the lab was NOT running","gap_sec":3812.3,"from_et":"2026-11-02T15:19:40.772542","to_et":"2026-11-02T16:23:18.052272"}
+{"seq":17486,"ts":"2026-11-02T16:23:32.740894","kind":"feed","detail":"upstream recovered after 3841s and 2 failed call(s)","path":"__recovered__"}

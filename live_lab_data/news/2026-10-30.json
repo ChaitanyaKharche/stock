@@ -1,0 +1,911 @@
+{
+ "session": "2026-10-30",
+ "fetched_at_et": "2026-10-30T19:50:46",
+ "query": "(Fed OR \"Federal Reserve\" OR inflation OR CPI OR jobs OR tariff OR tariffs OR war OR Treasury OR shutdown) AND (stocks OR markets OR economy)",
+ "window_from": "2026-10-29T16:00:00",
+ "window_to": "2026-10-30T19:50:46.417424",
+ "page_size": 100,
+ "n": 100,
+ "articles": [
+  {
+   "title": "Tech Selloff Intensifies on Earnings; Binance Estimates $6.3B Hacked",
+   "link": "https://www.bloomberg.com/news/videos/2026-10-30/bloomberg-brief-10-30-2026-video",
+   "publishDate": "2026-10-30T11:47:12+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "US equity futures slump after disappointing earnings from Amazon and Intel. Binance estimates $6.3 billion was stolen in a hack, the largest to hit the digital-asset industry. The Bank of Japan signals a potential rate hike in December after hitting its inflation target. Jane Foley of Rabobank joins \"Bloomberg Brief\" to discuss the current risks in the FX market, including ECB President Christine Lagarde's plan for an early departure. (Source: Bloomberg)",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Netflix 'Can't Lift,' Jim Cramer Says: It Lost Its Biggest Selling Point",
+   "link": "https://www.benzinga.com/trading-ideas/long-ideas/26/10/62734095/netflix-jim-cramer-selling-point",
+   "publishDate": "2026-10-30T11:46:04.460000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Jim Cramer advised selling AMC, rejected ASTS and IREN, and criticized Netflix’s streaming discoverability problem.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "House prices rise at slowest pace in nearly three years",
+   "link": "https://finance.yahoo.com/real-estate/articles/house-prices-rise-slowest-pace-114505274.html",
+   "publishDate": "2026-10-30T11:45:05+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "House prices have risen at their slowest pace in nearly three years as higher mortgage rates weigh on the property market.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "House prices rise at slowest pace in nearly three years",
+   "link": "https://finance.yahoo.com/news/house-prices-rise-slowest-pace-114505337.html",
+   "publishDate": "2026-10-30T11:45:05+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "House prices have risen at their slowest pace in nearly three years as higher mortgage rates weigh on the property market.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "The financial week in five charts",
+   "link": "https://www.reuters.com/commentary/reuters-open-interest/hawkish-pause-lulas-market-meltdown-anthropic-ipo-bombshell-financial-week-five-2026-10-30/",
+   "publishDate": "2026-10-30T11:43:21.297000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Every Friday, Reuters Open Interest (ROI) distills the financial week into five key charts, spotlighting the major trends, surprises and overlooked moves that defined the past five days.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Europe’s economy brushes off energy shock from Iran war, shows moderate growth in Q3",
+   "link": "https://apnews.com/article/eurozone-gdp-german-france-economy-inflation-interest-905619a8db70802b721fbe6ebefa32aa",
+   "publishDate": "2026-10-30T11:37:36+00:00",
+   "source": "apnews.com",
+   "summary": "Europe’s economy persevered with moderate growth in the third quarter despite higher oil prices from the US-Iran war, as gross domestic product increased by 0.4% over the quarter before.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "For many, striped bass fishing is a way of life. But the iconic species could face collapse",
+   "link": "https://abcnews.com/Technology/wireStory/striped-bass-fishing-life-iconic-species-face-collapse-137701732",
+   "publishDate": "2026-10-30T11:37:11+00:00",
+   "source": "abcnews.com",
+   "summary": "Striped bass are in decline on the East Coast and fishermen and scientists are in a race to save the iconic sport fish",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Generations of anglers have made the pilgrimage to Montauk to catch striped bass",
+   "link": "https://abcnews.com/Technology/wireStory/generations-anglers-made-pilgrimage-montauk-catch-striped-bass-137701823",
+   "publishDate": "2026-10-30T11:37:10+00:00",
+   "source": "abcnews.com",
+   "summary": "Generations of fishermen have come to Montauk, New York, to fish for striped bass, but the fish are in the midst of a decline",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Polaris’s CFO Wants to Restart Buybacks After a Tough Couple of Years",
+   "link": "https://www.wsj.com/business/c-suite/polariss-cfo-wants-to-restart-buybacks-after-a-tough-couple-of-years-afa0cd12",
+   "publishDate": "2026-10-30T11:34:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "Plus, federal debt hits 100% of GDP.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "BP Quadruples Profit to Record as War Boosts Refining and Trading",
+   "link": "https://finance.yahoo.com/energy/articles/bp-quadruples-profit-record-war-113000283.html",
+   "publishDate": "2026-10-30T11:30:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "BP’s third-quarter underlying profit nearly quadrupled to $8.5 billion as refining margins soared, and net debt fell to $13.9 billion.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Scoring a decade of Wall Street and political-risk forecasts: being wrong wasn’t their biggest problem",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/scoring-decade-wall-street-political-113000746.html",
+   "publishDate": "2026-10-30T11:30:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "I graded 135 year-ahead outlooks over a decade. Just 16% named the event that went on to move markets.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Gates Industrial Reports Third-Quarter 2026 Results",
+   "link": "https://www.prnewswire.com/news-releases/gates-industrial-reports-third-quarter-2026-results-302924519.html",
+   "publishDate": "2026-10-30T11:30:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "DENVER, Oct. 30, 2026 /PRNewswire/ -- Third-Quarter 2026 Financial Summary Third-quarter net sales of $903.6 million, up 5.6% compared to the prior-year period, including a core sales increase of 5.5%. Net income attributable to shareholders of $86.5 million, or $0.34 per diluted share....",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Federal Realty Investment Trust Reports Strong Third Quarter 2026 Results and Guidance Raise",
+   "link": "https://www.prnewswire.com/news-releases/federal-realty-investment-trust-reports-strong-third-quarter-2026-results-and-guidance-raise-302924526.html",
+   "publishDate": "2026-10-30T11:30:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "NORTH BETHESDA, Md., Oct. 30, 2026 /PRNewswire/ -- Federal Realty Investment Trust (NYSE: FRT) today reported its results for the third quarter ended September 30, 2026. For the three months ended September 30, 2026 and 2025, net income available for common shareholders per diluted share...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Magna Unveils Massive Stock Buyback Covering 10% of Public Float",
+   "link": "https://www.benzinga.com/markets/earnings/26/10/62733377/magna-unveils-massive-stock-buyback-covering-10-of-public-float",
+   "publishDate": "2026-10-30T11:29:13.509000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Magna beats Q3 2026 earnings estimates with adjusted EPS of $1.83, raises its free cash flow outlook, and announces a new share buyback.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Generations of anglers have made the pilgrimage to Montauk to catch striped bass",
+   "link": "https://apnews.com/article/striped-bass-anglers-surfcasting-montauk-east-coast-1a0fe63b2cb5ae7b8cf1e4775a5f9db8",
+   "publishDate": "2026-10-30T11:25:54+00:00",
+   "source": "apnews.com",
+   "summary": "",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Silver price today, Friday, October 30, 2026: Silver prices fall to 11-month lows amid inflation concerns",
+   "link": "https://finance.yahoo.com/personal-finance/investing/article/silver-price-today-friday-october-30-2026-silver-prices-fall-to-11-month-lows-amid-inflation-concerns-112521822.html",
+   "publishDate": "2026-10-30T11:25:21+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Silver futures opened at $52.25 per ounce on Friday, October 30, 2026, down 0.2% from Thursday's close. Silver is sliding further in early trading this morning, reaching $50.55 as of 7:15 a.m. ET.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "For many, striped bass fishing is a way of life. But the iconic species could face collapse",
+   "link": "https://apnews.com/article/striped-bass-decline-striper-fishing-surfcasting-montauk-fade6e5cd77ffd8a4d30b4b1090a090b",
+   "publishDate": "2026-10-30T11:24:43+00:00",
+   "source": "apnews.com",
+   "summary": "",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "The Morning Risk Report: Binance and Polymarket Suspend Trading After Hacks",
+   "link": "https://www.wsj.com/risk-compliance-journal/the-morning-risk-report-binance-and-polymarket-suspend-trading-after-hacks-9261a44c",
+   "publishDate": "2026-10-30T11:23:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "Plus: Trump administration promised tariff relief in talks to secure U.S. Audi factory and Cleveland-Cliffs to retain Stelco amid jobs dispute with Canadian government.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "New Georgia hub aims to take 26,000 containers off the road",
+   "link": "https://finance.yahoo.com/economy/policy/articles/georgia-hub-aims-26-000-112000863.html",
+   "publishDate": "2026-10-30T11:20:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The state of Georgia officially opens an inland rail hub with plans to take tens of thousands of containers off the roads. The post New Georgia hub aims to take 26,000 containers off the road appeared first on FreightWaves.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Celestica Announces TSX Acceptance of Normal Course Issuer Bid",
+   "link": "https://www.globenewswire.com/news-release/2026/10/30/3392160/0/en/celestica-announces-tsx-acceptance-of-normal-course-issuer-bid.html",
+   "publishDate": "2026-10-30T11:15:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "TORONTO, Oct. 30, 2026 (GLOBE NEWSWIRE) -- Celestica Inc. (NYSE: CLS) (TSX: CLS), a global leader in data center infrastructure and advanced technology solutions, today announced that the Toronto Stock Exchange (the “TSX”) has accepted the Company's notice to launch a Normal Course Issuer Bid (the “Bid”).",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Gold price today, Friday, October 30, 2026: Gold slips below $4,000 as Mid-East concerns mount",
+   "link": "https://finance.yahoo.com/personal-finance/investing/article/gold-price-today-friday-october-30-2026-gold-slips-below-4000-as-mid-east-concerns-mount-111451238.html",
+   "publishDate": "2026-10-30T11:14:51+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Gold futures opened at $4,033.60per troy ounce on Friday, October 30, 2026, up 0.1% from Thursday's closing price. Gold is sliding this morning in early trading to $3,986.20 per troy ounce as of 7:04 a.m. ET.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Advantest (TSE:6857) Q2 Earnings Power Faces A Rich Valuation",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/advantest-tse-6857-q2-earnings-111334015.html",
+   "publishDate": "2026-10-30T11:13:34+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Advantest walked into this Q2 2027 earnings release with its stock at ¥34,860, carrying a rich trailing P/E of about 43.9x and a reputation as one of the purest ways to play high performance chip testing. The print did not disappoint on raw power. Quarterly revenue landed at ¥477,727m and basic EPS came in at ¥267.76, both anchored by very high profitability over the last year. The market reaction now hinges on one question: Are investors paying too much for that earnings strength or simply...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Hayward (HAYW) Stock Gains Ground As Q3 Earnings Lift Margins",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/hayward-hayw-stock-gains-ground-111200792.html",
+   "publishDate": "2026-10-30T11:12:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Hayward Holdings came into the Q3 print with the stock already on a solid run, up roughly 26% over the past month, and the latest session added another 5.3% to about $15.57. That is the short term story. The headline from the quarter is margin strength, with adjusted EBITDA margin reaching 24.8% on $260 million of net sales and adjusted diluted earnings per share at $0.18. For pool equipment investors who care more about multi year cash generation than one day pops, that profitability profile...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Our Pick Of The Best British Growth Stocks In October 2026",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/pick-best-british-growth-stocks-111117973.html",
+   "publishDate": "2026-10-30T11:11:17+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Rising energy costs are squeezing real wages in 2026, and that pressure is hitting consumer facing businesses first. When everyday budgets are under strain, markets tend to reward British companies that can still grow sales and profits from strong balance sheets rather than cheap credit. This article highlights three UK stocks from our screener that analysts expect to deliver robust expansion over the next few years. The three stocks below are just a sample from this theme, and the full...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "BP profit quadruples as Iran war sends refining margins soaring and debt tumbles",
+   "link": "https://finance.yahoo.com/energy/articles/bp-profit-quadruples-iran-war-110731619.html",
+   "publishDate": "2026-10-30T11:07:31+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "BP's net profit quadrupled between July and September as the Iran war sent refining margins and oil prices soaring, with the British energy giant beating forecasts and cutting its net debt by $8.4 billion (€7.5bn) ahead of a strategy update in December.View on euronews",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "AP Decision Notes: What to expect in Texas on Election Day",
+   "link": "https://apnews.com/article/texas-election-senate-paxton-talarico-04e87ff214dc580d4dc6751644fdc467",
+   "publishDate": "2026-10-30T11:01:06+00:00",
+   "source": "apnews.com",
+   "summary": "",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Mammoth Energy Services, Inc. Announces $58 Million Aviation Term Loan Facility with Bank7",
+   "link": "https://www.prnewswire.com/news-releases/mammoth-energy-services-inc-announces-58-million-aviation-term-loan-facility-with-bank7-302924589.html",
+   "publishDate": "2026-10-30T11:01:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "Asset-backed financing to support continued growth of the Company's aviation leasing platform OKLAHOMA CITY, Oct. 30, 2026 /PRNewswire/ -- Mammoth Energy Services, Inc. (\"Mammoth\" or the \"Company\") (NASDAQ: TUSK) today announced that, on October 28, 2026, its aviation subsidiaries, Cobra...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "AP Decision Notes: What to expect in New York on Election Day",
+   "link": "https://apnews.com/article/new-york-midterm-lawler-conley-3a04b6060af431a59f28c885b2b328a0",
+   "publishDate": "2026-10-30T11:00:07+00:00",
+   "source": "apnews.com",
+   "summary": "",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Lear Reports Third Quarter 2026 Results; Year-Over-Year Growth in Revenue, Core Operating Earnings, Net Income and Earnings per Share",
+   "link": "https://www.prnewswire.com/news-releases/lear-reports-third-quarter-2026-results-year-over-year-growth-in-revenue-core-operating-earnings-net-income-and-earnings-per-share-302924380.html",
+   "publishDate": "2026-10-30T11:00:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "SOUTHFIELD, Mich., Oct. 30, 2026 /PRNewswire/ -- Lear Corporation (NYSE: LEA), a global automotive technology leader in Seating and E-Systems, today reported results for the third quarter 2026. Third Quarter 2026 Financial Highlights Revenue of $5.8 billion, an increase of 2%, compared to...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "BNCCORP, INC. REPORTS THIRD QUARTER NET INCOME OF $3.0 MILLION, OR $0.85 PER DILUTED SHARE",
+   "link": "https://www.prnewswire.com/news-releases/bnccorp-inc-reports-third-quarter-net-income-of-3-0-million-or-0-85-per-diluted-share-302924518.html",
+   "publishDate": "2026-10-30T11:00:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "Highlights Net income during the third quarter of 2026 increased $387 thousand, or 14.7%, to $3.0 million, or $0.85 per diluted share, from $2.6 million, or $0.74 per diluted share, in the 2025 period. Adjusting for ongoing merger charges increased net income to $3.3 million, or $0.94 per...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Mammoth Reports Third Quarter 2026 Operational and Financial Results",
+   "link": "https://www.prnewswire.com/news-releases/mammoth-reports-third-quarter-2026-operational-and-financial-results-302924588.html",
+   "publishDate": "2026-10-30T11:00:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "Raises Full-Year 2026 Outlook Third Quarter 2026 Highlights: Revenue increased 95% year-over-year to $21.3 million Net income from continuing operations was $0.3 million, compared with net losses from continuing operations of $12.6 million in the third quarter of 2025 and $1.2 million in...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Elizabeth Warren warns Anthropic's $2 trillion IPO could force Americans' 401(k) plans to buy volatile AI stock",
+   "link": "https://finance.yahoo.com/technology/ai/articles/elizabeth-warren-warns-anthropics-2-110000837.html",
+   "publishDate": "2026-10-30T11:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Warren is demanding answers from the tech company on how it plans to balance public safety and financial stability.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Weekend Reads: Unhedged skies, Fed drama and Ukraine's heritage under fire",
+   "link": "https://www.reuters.com/commentary/reuters-open-interest/weekend-reads-unhedged-skies-fed-drama-ukraines-heritage-under-fire-2026-10-30/",
+   "publishDate": "2026-10-30T10:54:05.035000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Looking for inspiration? Every Friday, Weekend Reads rounds up what the Reuters Open Interest ​team has been reading, watching and listening to.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Foreign firms that win defence contracts will have to invest in UK under new policy – UK politics live",
+   "link": "https://www.theguardian.com/politics/live/2026/oct/30/andy-burnham-labour-conservatives-devolution-scotland-wales-latest-news-updates",
+   "publishDate": "2026-10-30T10:49:34+00:00",
+   "source": "www.theguardian.com",
+   "summary": "Wes Streeting says overseas suppliers of defence contracts will need to spend the equivalent amount in the UKYesterday the Institute for Fiscal Studies (see here) and the Resolution Foundation (see here) delivered fairly negative assessments of the budget. But mostly the gloom was triggered by the thinktanks said about the overall state of the economy and the public finances; they were critical of John Healey for deferring difficult choices, but less hostile about the decisions he did actually announce.However, according to YouGov, voters are quite positive. They regard it as one of the fairest budgets for years.The public’s initial reaction to John Healey’s first budget is in some key respects broadly positive, with nearly half of Britons (45%) regarding the budget as being fair, relative to just 20% seeing the measures announced as not fair.This is a notable improvement on last year, when Rachel Reeves’ second budget was declared ‘not fair’ by a near-inverse margin of 48% to 21%. In fact, on this measure, this is one of the most positively received budgets in recent times. In data going back to 2010, only George Osborne’s first budget in 2010 and Rishi Sunak’s Covid budgets of 2020 and March 2021 have been judged ‘fair’ by a greater proportion of Britons (50-55%). Continue reading...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Morning Bid: Cash burnout",
+   "link": "https://www.reuters.com/commentary/reuters-open-interest/global-markets-view-usa-2026-10-30/",
+   "publishDate": "2026-10-30T10:47:27.178000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Markets have long been stuck in a wait-and-see mode ahead of the US midterm elections, another potential round of fighting in Iran and the latest sweep of AI earnings. With answers now set to come on all these fronts, the next few weeks could be some of the most consequential of the year. And in 2026, that's saying something.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "South Africa’s Crypto Grew 52% in A Bear Market. Then Came the Permission Slips",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/south-africa-crypto-grew-52-104505879.html",
+   "publishDate": "2026-10-30T10:45:05+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Chainalysis data shows South Africa's crypto economy grew 52% to $39.3 billion on stablecoin flows as draft rules loom.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Kite Realty Group Reports Third Quarter 2026 Operating Results",
+   "link": "https://www.globenewswire.com/news-release/2026/10/30/3392129/0/en/kite-realty-group-reports-third-quarter-2026-operating-results.html",
+   "publishDate": "2026-10-30T10:45:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "INDIANAPOLIS, Oct. 30, 2026 (GLOBE NEWSWIRE) -- Kite Realty Group (NYSE: KRG), a premier owner and operator of high-quality, open-air grocery-anchored shopping centers and vibrant mixed-use assets, reported today its operating results for the third quarter ended September 30, 2026. For the quarters ended September 30, 2026 and 2025, net loss attributable to common shareholders was $13.3 million, or $0.07 per diluted share, compared to $16.2 million, or $0.07 per diluted share, respectively. For the nine months ended September 30, 2026 and 2025, net income attributable to common shareholders was $159.4 million, or $0.78 per diluted share, compared to $117.8 million, or $0.54 per diluted share, respectively.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Eurozone growth outpaces expectations in third quarter despite inflation headwinds",
+   "link": "https://finance.yahoo.com/economy/articles/eurozone-growth-outpaces-expectations-third-104202155.html",
+   "publishDate": "2026-10-30T10:42:02+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Investing.com - The Eurozone economy grew by more than anticipated in the third quarter, pointing to resilience in a 21-member currency bloc grappling with headwinds from elevated inflation and bond market ructions in France.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "SoftBank-backed OPay raises $304 million in US IPO",
+   "link": "https://www.reuters.com/legal/transactional/softbank-backed-opay-raises-304-million-us-ipo-2026-10-30/",
+   "publishDate": "2026-10-30T10:39:13.304000+00:00",
+   "source": "www.reuters.com",
+   "summary": "SoftBank-backed fintech OPay said on Friday it has raised $304 million in its US initial public ​offering, tapping public markets to position itself to benefit from ‌expanding digital finance sector across emerging economies.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Pound stands tall as dollar, euro wilt",
+   "link": "https://www.reuters.com/world/uk/pound-stands-tall-dollar-euro-wilt-2026-10-30/",
+   "publishDate": "2026-10-30T10:38:43.635000+00:00",
+   "source": "www.reuters.com",
+   "summary": "The pound was one ​of the better performing currencies on Friday, drawing strength from the government's budget and supported by ‌expectations for the Bank of England to raise rates next week.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "American Oil Giants See Profits Soar as Wars Crimp Energy Supplies",
+   "link": "https://finance.yahoo.com/energy/articles/american-oil-giants-see-profits-103300001.html",
+   "publishDate": "2026-10-30T10:33:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "ExxonMobil and Chevron posted blockbuster earnings for the third quarter as the world turned to U.S. refineries for fuel.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "American Oil Giants See Profits Soar as Wars Crimp Energy Supplies",
+   "link": "https://www.wsj.com/business/energy-oil/exxonmobil-xom-chevron-cvx-3q-earnings-report-2026-stock-1d890682",
+   "publishDate": "2026-10-30T10:33:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "ExxonMobil and Chevron posted blockbuster earnings for the third quarter as the world turned to U.S. refineries for fuel.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Exxon, Chevron earnings propelled by war-driven refining surge",
+   "link": "https://www.reuters.com/business/energy/wrapup-exxon-chevron-earnings-propelled-by-war-driven-refining-surge-2026-10-30/",
+   "publishDate": "2026-10-30T10:32:58.415000+00:00",
+   "source": "www.reuters.com",
+   "summary": "US oil majors ExxonMobil and Chevron both beat analyst expectations for quarterly profit on Friday, as soaring refining margins increased earnings from ‌their fuel-making businesses – which typically have smaller profits – to rival the upstream segments.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Nasdaq Futures Plummet as Disappointing Amazon and Intel Earnings Deepen Tech Rout",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/nasdaq-futures-plummet-disappointing-amazon-103110269.html",
+   "publishDate": "2026-10-30T10:31:10+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "December Nasdaq 100 E-Mini futures (NQZ26) are down -2.43% this morning as disappointing earnings from Amazon and Intel deepened the selloff in the technology sector.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Exxon Reaps Record Oil-Refining Profits on War-Driven Gasoline, Diesel Spikes",
+   "link": "https://www.bloomberg.com/news/articles/2026-10-30/exxon-reaps-record-oil-refining-profits-on-war-driven-gasoline-diesel-spikes",
+   "publishDate": "2026-10-30T10:30:22+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "ExxonMobil Holdings Corp. surpassed profit expectations on the strength of surging gasoline and diesel prices that pushed refining results to an all-time high as conflicts in the Persian Gulf and Russia upended energy markets.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Cahero Heritage Brings Three SEC-Filed Securities to Market, Each Anchored to an Appraised, Vaulted Gemstone Collection Worth a Combined USD 7 Billion",
+   "link": "https://www.accessnewswire.com/newsroom/en/banking-and-financial-services/cahero-heritage-brings-three-sec-filed-securities-to-market-each-anc-1244093",
+   "publishDate": "2026-10-30T10:30:00+00:00",
+   "source": "www.accessnewswire.com",
+   "summary": "Cahero Heritage today introduced EMRL.D, a security anchored to The First Light, a collection of 136 natural cut emeralds, each carrying its own report from the Gemological Institute of America (GIA). EMRL.D is the first of three gemstone-backed securities. Ruby.D is anchored to The Deep Fire, a collection of rubies, and SPHR.D to The Still Water, a collection of sapphires. Each security is tied to appraised gemstone reserves held in independent...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Willis Lease Finance Corporation Declares Fourth Quarter 2026 Dividend and Renewal and Increase of Share Repurchase Plan",
+   "link": "https://www.globenewswire.com/news-release/2026/10/30/3392124/9504/en/willis-lease-finance-corporation-declares-fourth-quarter-2026-dividend-and-renewal-and-increase-of-share-repurchase-plan.html",
+   "publishDate": "2026-10-30T10:30:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "COCONUT CREEK, Fla., Oct. 30, 2026 (GLOBE NEWSWIRE) -- Willis Lease Finance Corporation (NASDAQ: WLFC) (“WLFC” or the “Company”), announced today the Company’s quarterly dividend of $0.15 per share of common stock outstanding. The dividend is expected to be paid on November 25, 2026, to stockholders of record at the close of business on November 16, 2026. This will be the Company’s 10th consecutive quarterly dividend and reflects a 12.8% increase from our prior August distribution. In addition, the Company today announced that its Board of Directors has approved the renewal and increase of its share repurchase program under which the Company may repurchase its common stock for an aggregate purchase price of up to $200.0 million (the “Share Repurchase Program”) through December 31, 2031.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "LyondellBasell reports third quarter 2026 earnings",
+   "link": "https://www.globenewswire.com/news-release/2026/10/30/3392122/0/en/lyondellbasell-reports-third-quarter-2026-earnings.html",
+   "publishDate": "2026-10-30T10:30:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "HOUSTON and LONDON, Oct. 30, 2026 (GLOBE NEWSWIRE) -- LyondellBasell Industries (NYSE: LYB) (the \"company\") today announced results for the third quarter 2026. Comparisons with the prior quarter and third quarter 2025 are available in the following table:",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Alphabet Seen as a Tech One-Stop AI Shop",
+   "link": "https://www.wsj.com/finance/investing/alphabet-seen-as-a-tech-one-stop-ai-shop-659c55ee",
+   "publishDate": "2026-10-30T10:25:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "Some of the best analysis and insight on investing, the wealth-management business and more.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "France races towards recession as economy shrinks",
+   "link": "https://finance.yahoo.com/economy/articles/france-races-towards-recession-economy-102027297.html",
+   "publishDate": "2026-10-30T10:20:27+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "France is heading for recession after its economy shrank unexpectedly in the third quarter of the year, economists have warned.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Wall St Week Ahead Midterm elections, earnings, jobs data loom for AI-wary market",
+   "link": "https://www.reuters.com/legal/legalindustry/wall-st-week-ahead-midterm-elections-earnings-jobs-data-loom-ai-wary-market-2026-10-30/",
+   "publishDate": "2026-10-30T10:16:50.852000+00:00",
+   "source": "www.reuters.com",
+   "summary": "US midterm elections, a heavy slate of corporate earnings and the monthly jobs report will further test stock investors next week, after a series of setbacks ​for the market-leading AI trade.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Midterm elections, earnings, jobs data loom for AI-wary market",
+   "link": "https://www.channelnewsasia.com/business/midterm-elections-earnings-jobs-data-loom-ai-wary-market-6506696",
+   "publishDate": "2026-10-30T10:16:36+00:00",
+   "source": "www.channelnewsasia.com",
+   "summary": "NEW YORK, Oct 30 : US midterm elections, a heavy slate of corporate earnings and the monthly jobs report will further test stock investors next week, after a series of setbacks for the market-leading AI trade.The latest AI turbulence stemmed from the quarterly results of Alphabet, one of the hyperscalers spen",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "How Raised 2027 Guidance At Brinker International Stock Has Changed Its Investment Story",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/raised-2027-guidance-brinker-international-101632077.html",
+   "publishDate": "2026-10-30T10:16:32+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Brinker International reported first quarter fiscal 2027 revenue of US$1.48b and net income of US$113.3 million, with diluted EPS from continuing operations of US$2.64, and then raised full year revenue and non GAAP EPS guidance. Chili's 10.1% same store sales gain, supported by a 6.4% traffic increase and operational upgrades such as kitchen display systems, highlights how Brinker International is leaning on value, execution and throughput, rather than pure pricing, to support its updated...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Jim Cramer sees more pain for beaten-down AI stocks: ‘I think it’s too soon to say the coast is clear’",
+   "link": "https://finance.yahoo.com/technology/ai/articles/jim-cramer-sees-more-pain-101500280.html",
+   "publishDate": "2026-10-30T10:15:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Buy on the dip with AI stocks right now, but do your homework first.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "What Sent Alphabet Stock Lower?",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/sent-alphabet-stock-lower-101440254.html",
+   "publishDate": "2026-10-30T10:14:40+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "For questions about this article or underlying research, email help@trefis.com.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "US midterms: Data centre expansions spark backlash across political divide",
+   "link": "https://www.channelnewsasia.com/world/us-midterms-data-centre-backlash-pennsylvania-6506506",
+   "publishDate": "2026-10-30T10:14:07+00:00",
+   "source": "www.channelnewsasia.com",
+   "summary": "Rising electricity costs, environmental concerns and the spread of large data centres are becoming campaign issues in closely contested congressional races in Pennsylvania.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "German economy grew more than expected in Q3, underpinned by state spending",
+   "link": "https://finance.yahoo.com/economy/articles/german-economy-grows-0-2-092840177.html",
+   "publishDate": "2026-10-30T10:12:09+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "By Miranda Murray BERLIN, Oct 30 (Reuters) - Germany's gross domestic product grew more than expected in the third quarter despite disruptions linked to the Iran war, though economists warned the",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "German economy grew more than expected in Q3, underpinned by state spending",
+   "link": "https://finance.yahoo.com/news/german-economy-grows-0-2-091534152.html",
+   "publishDate": "2026-10-30T10:12:08+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "By Miranda Murray BERLIN, Oct 30 (Reuters) - Germany's gross domestic product grew more than expected in the third quarter despite disruptions linked to the Iran war, though economists warned the",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "New economic data challenges Fed chief's not-too-hot perspective",
+   "link": "https://www.reuters.com/business/new-economic-data-challenges-fed-chiefs-not-too-hot-perspective-2026-10-30/",
+   "publishDate": "2026-10-30T10:11:53.202000+00:00",
+   "source": "www.reuters.com",
+   "summary": "New data may challenge Federal Reserve Chairman Kevin Warsh's sense that the US economy can handle a robust expansion without stoking inflation, as a key measure of price pressures jumped and strong consumer spending and business investment pushed growth ​further beyond the level most central bank officials see as sustainable.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Trump escalates legal challenges against states as Election Day nears",
+   "link": "https://www.reuters.com/legal/government/trump-escalates-legal-challenges-against-states-election-day-nears-2026-10-30/",
+   "publishDate": "2026-10-30T10:11:18.572000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Donald Trump's administration is intensifying legal action against US states with just days to go until a midterm election that will decide the balance of power in Washington during his final two years in office.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "New economic data challenges Fed chief's not-too-hot perspective",
+   "link": "https://finance.yahoo.com/economy/policy/articles/economic-data-challenges-fed-chiefs-101112850.html",
+   "publishDate": "2026-10-30T10:11:12+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "By Howard Schneider WASHINGTON, Oct 30 (Reuters) - New data may challenge Federal Reserve Chairman Kevin Warsh's sense that the US economy can handle a robust expansion without stoking inflation, as a",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Japan pushes to remove Myanmar from global financial watchdog's blacklist",
+   "link": "https://www.reuters.com/world/asia-pacific/japan-pushes-remove-myanmar-global-financial-watchdogs-blacklist-2026-10-30/",
+   "publishDate": "2026-10-30T10:11:00.318000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Japan is pushing a global financial crimes watchdog to remove Myanmar from its blacklist to make it easier to do business there, the latest sign that some major countries are looking to bring the pariah state's military-backed government in from the cold.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Rifts over wars in Ukraine, Middle East loom over G20 meeting in US",
+   "link": "https://www.reuters.com/world/china/rifts-over-wars-ukraine-middle-east-loom-over-g20-meeting-us-2026-10-30/",
+   "publishDate": "2026-10-30T10:10:27.527000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Deep rifts over the wars in Ukraine and the Middle East are likely to derail ​unified actions or statements at a two-day meeting of foreign ministers from the world's 20 largest economies in Atlanta, experts and diplomats said.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "US fiscal deterioration main headache for investors as midterms loom",
+   "link": "https://www.reuters.com/legal/government/us-fiscal-deterioration-main-headache-investors-midterms-loom-2026-10-30/",
+   "publishDate": "2026-10-30T10:10:13.988000+00:00",
+   "source": "www.reuters.com",
+   "summary": "The United States' deteriorating fiscal picture has been a nagging worry for investors, who see no easy solutions however the midterm elections play out.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Euro zone growth beats projections but headwinds mount",
+   "link": "https://www.reuters.com/world/europe/euro-zone-growth-beats-projections-again-2026-10-30/",
+   "publishDate": "2026-10-30T10:10:01.825000+00:00",
+   "source": "www.reuters.com",
+   "summary": "The euro ​zone economy grew faster than predicted last quarter, displaying exceptional resilience to headwinds from expensive energy, even ‌as surging borrowing costs and rapid inflation cloud the outlook.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "T1 Energy Signs New Offtake Deals",
+   "link": "https://www.globenewswire.com/news-release/2026/10/30/3392098/0/en/t1-energy-signs-new-offtake-deals.html",
+   "publishDate": "2026-10-30T10:10:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Strategic deals for nearly 1.6GW of advanced solar modules, including domestic cells from under-construction G2_Austin cell fab, executed Strategic deals for nearly 1.6GW of advanced solar modules, including domestic cells from under-construction G2_Austin cell fab, executed",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Seven governor races to watch as voters weigh Trump, economy",
+   "link": "https://www.reuters.com/world/us/seven-governor-races-watch-voters-weigh-trump-economy-2026-10-30/",
+   "publishDate": "2026-10-30T10:08:15.848000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Three dozen governors' races will be decided in the November 3 elections, with President Donald Trump's unpopularity and the cost of living at the top of voters' minds, alongside local concerns ranging from water rights and data centers to cancer rates.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Analysis-US fiscal deterioration main headache for investors as midterms loom",
+   "link": "https://finance.yahoo.com/economy/policy/articles/analysis-us-fiscal-deterioration-main-100636839.html",
+   "publishDate": "2026-10-30T10:06:36+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "By Gertrude Chavez-Dreyfuss and Saqib Iqbal Ahmed NEW YORK, Oct 30 (Reuters) - The United States' deteriorating fiscal picture has been a nagging worry for investors, who see no easy solutions however",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Euro zone growth beats projections again",
+   "link": "https://finance.yahoo.com/economy/articles/euro-zone-growth-beats-projections-100626401.html",
+   "publishDate": "2026-10-30T10:06:26+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "FRANKFURT, Oct 30 (Reuters) - The euro zone economy grew quicker than predicted last quarter, Eurostat data showed on Friday, remaining resilient to headwinds from expensive energy as investments and",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "PenFed Credit Union Expands Member Lending and Strengthens Credit Quality in Third Quarter 2026",
+   "link": "https://www.prnewswire.com/news-releases/penfed-credit-union-expands-member-lending-and-strengthens-credit-quality-in-third-quarter-2026-302924556.html",
+   "publishDate": "2026-10-30T10:04:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "Member-Focused Flywheel Supports $8.8 Billion in Year-to-Date Loan Originations, Deeper Deposit Relationships and Stronger Capital TYSONS, Va., Oct. 30, 2026 /PRNewswire/ -- PenFed Credit Union, one of the nation's largest federal credit unions, reported $8.8 billion in year-to-date loan...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "NatWest slashes 1,000 jobs in AI overhaul",
+   "link": "https://finance.yahoo.com/news/natwest-slashes-1-000-jobs-100246705.html",
+   "publishDate": "2026-10-30T10:02:46+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "NatWest has cut 1,000 jobs in the last three months as it charges ahead with advances in AI.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "NatWest slashes 1,000 jobs in AI overhaul",
+   "link": "https://finance.yahoo.com/technology/ai/articles/natwest-slashes-1-000-jobs-100246943.html",
+   "publishDate": "2026-10-30T10:02:46+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "NatWest has cut 1,000 jobs in the last three months as it charges ahead with advances in AI.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Nasdaq Futures Slide 2.2% as Amazon and Intel Earnings Fuel AI Spending Concerns, Binance Hit by $6.3 Billion Hack: Dow Jones, S&P, Wall Street",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/nasdaq-futures-slide-2-2-100119879.html",
+   "publishDate": "2026-10-30T10:01:19+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "US stock futures declined sharply on Friday as disappointing earnings from major technology companies intensified concerns over artificial intelligence infrastructure spending, while a reported $6. 3 billion cyberattack on cryptocurrency exchange Binance added to market uncertainty.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Britain’s blighted high streets will improve by next election, says Rayner",
+   "link": "https://www.theguardian.com/uk-news/2026/oct/30/britain-blighted-high-streets-angela-rayner-labour",
+   "publishDate": "2026-10-30T10:00:51+00:00",
+   "source": "www.theguardian.com",
+   "summary": "Housing secretary says Labour wants to reverse fortunes of towns plagued by boarded-up shops and rogue businessesAngela Rayner has said voters will begin to see a difference in their high street before the next general election as Labour prioritises investment in struggling local communities.The housing secretary said the government had made it a top priority before the country goes to the polls to begin turning around the fortunes of places blighted by boarded-up shops and rogue businesses. Continue reading...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Japan's Katayama signals hope of bigger surplus from central bank's ETF sales",
+   "link": "https://www.channelnewsasia.com/business/japans-katayama-signals-hope-bigger-surplus-central-banks-etf-sales-6506621",
+   "publishDate": "2026-10-30T10:00:13+00:00",
+   "source": "www.channelnewsasia.com",
+   "summary": "TOKYO, Oct 30 : Japanese Finance Minister Satsuki Katayama said on Friday it was \"obvious\" that the central bank's decision to speed up sales of its exchange-traded funds (ETF) holdings would boost surplus payments to the government.The remarks came as Prime Minister Sanae Takaichi's administration scrambles",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Wall Street braces for Democratic gains as 2026 midterm election nears",
+   "link": "https://www.cnbc.com/2026/10/30/2026-midterm-election-wall-street-prepares-for-democratic-gains.html",
+   "publishDate": "2026-10-30T10:00:01+00:00",
+   "source": "www.cnbc.com",
+   "summary": "Investors are preparing for a blue wave in the midterm election on Tuesday that will determine who controls Congress for the remainder of President Trump's term.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Google is happy AI is cannibalizing its most profitable business",
+   "link": "https://finance.yahoo.com/technology/article/google-is-happy-ai-is-cannibalizing-its-most-profitable-business-100000654.html",
+   "publishDate": "2026-10-30T10:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Google might have a clear point of view on the future of AI monetization, but the market isn't so sure.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "BrightSpring Health Services, Inc. Reports Third Quarter 2026 Financial Results and Increases Full Year 2026 Guidance",
+   "link": "https://www.globenewswire.com/news-release/2026/10/30/3392093/0/en/brightspring-health-services-inc-reports-third-quarter-2026-financial-results-and-increases-full-year-2026-guidance.html",
+   "publishDate": "2026-10-30T10:00:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "LOUISVILLE, Ky., Oct. 30, 2026 (GLOBE NEWSWIRE) -- BrightSpring Health Services, Inc. (“BrightSpring” or the “Company”) (NASDAQ: BTSG), a leading provider of home- and community-based health services for complex populations, today announced financial results for the third quarter ended September 30, 2026, and increased full year 2026 Revenue and Adjusted EBITDA1 guidance.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Repligen Announces $1 Billion Private Convertible Senior Notes Transaction",
+   "link": "https://www.globenewswire.com/news-release/2026/10/30/3392091/24603/en/repligen-announces-1-billion-private-convertible-senior-notes-transaction.html",
+   "publishDate": "2026-10-30T10:00:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "WALTHAM, Mass., Oct. 30, 2026 (GLOBE NEWSWIRE) -- Repligen Corporation (NASDAQ:RGEN) (“Repligen”), today announced that it entered into privately negotiated exchange and/or subscription agreements with certain holders of its outstanding 1.00% Convertible Senior Notes due 2028 (the “2028 Notes”) and certain new investors, pursuant to which Repligen will issue $1.0 billion aggregate principal amount of 0.25% Convertible Senior Notes due 2031 (the “New Notes”). Approximately $541.4 million principal amount of the New Notes will be issued in exchange for approximately $456.8 million principal amount of 2028 Notes (the “Exchange Transactions”) and approximately $458.6 million principal amount of the New Notes will be issued for cash (the “Subscription Transactions”, and together with the Exchange Transactions, the “Transactions”). The conversion price for the New Notes will initially be approximately $226.37 per share of Repligen’s common stock, which represents a conversion premium of approximately 20% over the closing price of Repligen’s common stock on October 29, 2026, subject to customary anti-dilution adjustments. Following the closing of the Transactions, which is expected to occur on or about November 6, 2026, subject to customary closing conditions, approximately $143.2 million in aggregate principal amount of 2028 Notes will remain outstanding with terms unchanged.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Obamacare insurers want a median 15% increase for 2027 as 11 insurers left the marketplace before open enrollment starts",
+   "link": "https://finance.yahoo.com/healthcare/articles/obamacare-insurers-want-median-15-100000369.html",
+   "publishDate": "2026-10-30T10:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "ACA open enrollment is almost here, and this year, consumers need a sharper game plan.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "How Low Can Snap Stock Go?",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/low-snap-stock-095628871.html",
+   "publishDate": "2026-10-30T09:56:28+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "For questions about this article or underlying research, email help@trefis.com.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "BOE Agents See Little Sign of Energy Shock Feeding Into Pay",
+   "link": "https://www.bloomberg.com/news/articles/2026-10-30/boe-agents-see-little-sign-of-energy-shock-feeding-into-pay",
+   "publishDate": "2026-10-30T09:53:26+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "UK businesses do not expect to hand staff bigger pay rises despite the uptick in inflation, a sign that a subdued labor market is helping to contain price pressures.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Germany rejects 'unfounded' claims in spat with Italy over gas storage",
+   "link": "https://www.reuters.com/business/energy/germany-rejects-unfounded-claims-spat-with-italy-over-gas-storage-2026-10-30/",
+   "publishDate": "2026-10-30T09:50:50.525000+00:00",
+   "source": "www.reuters.com",
+   "summary": "The German government on Friday pushed back against accusations from Italy that it failed to fill its gas stores ahead ​of winter in order to reduce costs for its ‌gas import companies to prepare them for privatisation, calling such claims \"unfounded\".",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Deepening Tech Selloff Pushes Nasdaq Toward Its Worst Month in Over a Year",
+   "link": "https://www.wsj.com/finance/stocks/ai-selloff-deepens-oil-jumps-and-crypto-falls-4703d21b",
+   "publishDate": "2026-10-30T09:48:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "The tech selloff intensified after results from Amazon and Intel compounded worries around the AI trade.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Stock Market Today: Dow Jones, S&P 500 Futures Trade Mixed as AMZN, INTC Slide After Q3 Earnings—DELL, LLY, AZN in Focus",
+   "link": "https://www.benzinga.com/markets/equities/26/10/62729872/stock-market-today-dow-jones-sp-500-futures-trade-mixed-as-amzn-intc-slide-after-q3-earnings-dell-lly-azn-in-focus",
+   "publishDate": "2026-10-30T09:44:18.970000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "U.S. stock were mixed on Friday, as the Dow Jones, S&P 500, and Nasdaq 100 index futures moved in different direction.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "China's Xi, Swiss president praise trade deal that boosts access",
+   "link": "https://www.reuters.com/world/china/chinas-xi-swiss-president-praise-trade-deal-that-boosts-access-2026-10-30/",
+   "publishDate": "2026-10-30T09:40:46.973000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Chinese President Xi Jinping and Swiss President ‌Guy Parmelin hailed an upgraded trade agreement between the two countries on Friday, which bucks a broader global shift towards ​protectionism.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Tech firms take fresh hit as disappointing earnings fan AI fears",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/tech-firms-fresh-hit-disappointing-093652103.html",
+   "publishDate": "2026-10-30T09:36:52+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Tech firms were again on the back foot on Friday after another round of disappointing earnings from Wall Street titans, fanned already by deep concerns about the AI investment boom.View on euronews",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Moeve's profit soars in Q3 on strong refining margins",
+   "link": "https://www.reuters.com/business/energy/moeves-profit-soars-q3-strong-refining-margins-2026-10-30/",
+   "publishDate": "2026-10-30T09:35:11.194000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Spanish energy firm Moeve posted a 12-fold increase in third-quarter ​net profit on Friday on the ‌back of strong refining margins and higher utilisation of its refineries to churn out ​sought-after refined products such as diesel ​and kerosene.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Brent 2026 view tops $90 for first time since May as MidEast stability remains elusive",
+   "link": "https://www.reuters.com/business/energy/brent-2026-view-tops-90-first-time-since-may-mideast-stability-remains-elusive-2026-10-30/",
+   "publishDate": "2026-10-30T09:34:38.217000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Analysts have raised their 2026 oil price view, pushing the Brent forecast above $90 a barrel for the first time since May as disruptions to ​Middle East energy flows persist, tempering expectations of regional stability and underpinning prices.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "TotalEnergies to cut diesel prices in France ahead of state stocks release",
+   "link": "https://www.reuters.com/business/energy/totalenergies-cut-diesel-prices-france-ahead-state-stocks-release-2026-10-30/",
+   "publishDate": "2026-10-30T09:33:53.016000+00:00",
+   "source": "www.reuters.com",
+   "summary": "TotalEnergies will cut diesel prices to €2.15 ($2.40) a litre in around 700 gas stations across France on Saturday, it said, about 9% lower than ​the current national average, as it continues to undercut competitors ​at a time of near-record fuel prices.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Protests spread across Europe as cost-of-living pressures fuel public anger",
+   "link": "https://www.channelnewsasia.com/world/protests-across-europe-cost-living-pressures-fuel-public-anger-6503196",
+   "publishDate": "2026-10-30T09:32:39+00:00",
+   "source": "www.channelnewsasia.com",
+   "summary": "French protesters say new government measures do not go far enough, raising the prospect of further unrest ahead of a presidential election next April.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "China's central bank steps up shift toward overnight rate as policy anchor",
+   "link": "https://www.reuters.com/world/asia-pacific/chinas-central-bank-conduct-overnight-reserve-repos-every-working-day-november-2-2026-10-30/",
+   "publishDate": "2026-10-30T09:30:01.906000+00:00",
+   "source": "www.reuters.com",
+   "summary": "China's central bank said on Friday it would conduct overnight reverse repo operations every working day ​starting next Monday, in a step towards making the rate its main policy ‌anchor.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Chris Murphy Warns Trump Could ‘Restart War With Iran’ After Midterms: ‘The Plan Is Insane’ — Crypto Punters Weigh the Odds",
+   "link": "https://www.benzinga.com/markets/prediction-markets/26/10/62729659/chris-murphy-donald-trump-iran-war-midterms-polymarket",
+   "publishDate": "2026-10-30T09:30:01.182000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Sen. Chris Murphy said on Thursday, October 29, that President Donald Trump may restart military action against Iran after the midterms, though cryptocurrency bettors appear skeptical.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Inflation dips in key German states in October, pointing to national fall",
+   "link": "https://finance.yahoo.com/economy/articles/inflation-dips-key-german-states-092013839.html",
+   "publishDate": "2026-10-30T09:20:13+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "BERLIN, Oct 30 (Reuters) - Inflation fell in several key German states in October, preliminary data showed on Friday, suggesting Germany's national inflation rate could also decrease this month.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "What to know about the US economy as midterm elections near",
+   "link": "https://abcnews.com/Business/us-economy-midterm-elections/story?id=137478975",
+   "publishDate": "2026-10-30T09:17:26+00:00",
+   "source": "abcnews.com",
+   "summary": "Inflation is weighing on shoppers, but the economy continues to grow.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "German inflation cools on fuel tax cut, economy grows more than expected in Q3",
+   "link": "https://www.reuters.com/world/europe/german-economy-grows-by-02-q3-preliminary-data-shows-2026-10-30/",
+   "publishDate": "2026-10-30T09:15:42.853000+00:00",
+   "source": "www.reuters.com",
+   "summary": "German inflation slowed more than expected in October, the first month of ​a government fuel tax cut, adding to evidence that Europe's largest economy could prove more resilient than anticipated despite disruptions linked ‌to the war in Iran.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Georgia Republican bilked 300+ investors out of $76 million in Ponzi scheme — oldest victim, 93, lost $1.3 million",
+   "link": "https://finance.yahoo.com/markets/options/articles/georgia-republican-bilked-300-investors-091500914.html",
+   "publishDate": "2026-10-30T09:15:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Edwin Brant Frost IV acted as “ravenous wolf in sheep’s clothing,” authorities say. But though he’s headed to prison, it’s unclear how much of their stolen saving victims can recover.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Issue of Equity and Total Voting Rights",
+   "link": "https://www.globenewswire.com/news-release/2026/10/30/3392070/0/en/issue-of-equity-and-total-voting-rights.html",
+   "publishDate": "2026-10-30T09:12:48+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Albion Technology & General VCT PLC",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "UK house prices grow at slowest pace in two years as mortgage rates rise",
+   "link": "https://www.yahoo.com/news/articles/uk-house-prices-grow-slowest-090548177.html",
+   "publishDate": "2026-10-30T09:05:48+00:00",
+   "source": "www.yahoo.com",
+   "summary": "Sluggish growth of 0.5% in October comes as higher borrowing costs put break on market",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "UK house prices grow at slowest pace in two years as mortgage rates rise",
+   "link": "https://www.theguardian.com/business/2026/oct/30/uk-house-prices-grow-at-slowest-pace-in-two-years-as-mortgage-rates-rise",
+   "publishDate": "2026-10-30T09:05:48+00:00",
+   "source": "www.theguardian.com",
+   "summary": "Sluggish growth of 0.5% in October comes as higher borrowing costs put break on marketUK house prices grew by an annual rate of just 0.5% in October, the slowest pace in more than two years, as higher mortgage rates put off potential buyers.The average price for a property in the UK stood at £273,566 in October, flat on the previous month and down from 0.8% in the year to September, according to the lender Nationwide. Continue reading...",
+   "sentiment": null,
+   "confidence": null
+  }
+ ]
+}

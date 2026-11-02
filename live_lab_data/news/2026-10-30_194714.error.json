@@ -1,0 +1,9 @@
+{
+ "session": "2026-10-30",
+ "fetched_at_et": "2026-10-30T19:47:14",
+ "query": "(Fed OR \"Federal Reserve\" OR inflation OR CPI OR jobs OR tariff OR tariffs OR war OR Treasury OR shutdown) AND (stocks OR markets OR economy)",
+ "window_from": "2026-10-29T16:00:00",
+ "window_to": "2026-10-30T19:47:14.003212",
+ "page_size": 100,
+ "error": "InvalidHeader: Invalid leading whitespace, reserved character(s), or returncharacter(s) in header value: '[Environment]::SetEnvironmentVariable(\"FINLIGHT_API_KEY\", (Get-Clipboard), \"User\")\\n$env:FINLIGHT_API_KEY = Get-Clipboard\\npython -m trade_analysis.live_lab.news_snapshot'"
+}
