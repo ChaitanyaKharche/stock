@@ -75,6 +75,13 @@ def stamp_probe(feed) -> dict:
 
 def main() -> int:
     feed = ThetaLiveFeed()
+    try:
+        feed._get_csv("/stock/snapshot/quote", symbol="SPY")
+    except Exception as exc:                                  # noqa: BLE001
+        feed.close()
+        print(f"REFUSING: Theta Terminal is not answering ({type(exc).__name__}). Start it, "
+              f"wait 30 s, rerun. Nothing written.")
+        return 2
     res = {"run_at": dt.datetime.now().isoformat(timespec="seconds"),
            "repo_sha": subprocess.run(["git", "rev-parse", "--short", "HEAD"], cwd=ROOT,
                                       capture_output=True, text=True).stdout.strip()}
