@@ -1,221 +1,694 @@
 {
- "run_at": "2026-11-01T15:12:54",
- "repo_sha": "77989e9",
- "stock_nbbo_2016_rows": {
-  "error": "TerminalUnreachable: /stock/history/quote failed after 4 attempts: ConnectError('[WinError 10061] No connection could be made because the target machine actively refused it')"
- },
- "stock_nbbo_2018_XLF_rows": {
-  "error": "TerminalUnreachable: /stock/history/quote failed after 4 attempts: ConnectError('[WinError 10061] No connection could be made because the target machine actively refused it')"
- },
- "option_chain_2020_rows": {
-  "error": "TerminalUnreachable: /option/history/quote failed after 4 attempts: ConnectError('[WinError 10061] No connection could be made because the target machine actively refused it')"
- },
+ "run_at": "2026-11-01T23:11:00",
+ "repo_sha": "78462ed",
+ "stock_nbbo_2016_rows": 0,
+ "stock_nbbo_2018_XLF_rows": 391,
+ "option_chain_2020_rows": 117300,
  "stamp_probe_h": {
   "checks": [
    {
     "day": "2021-03-10",
     "symbol": "SPY",
     "minute": "10:00",
-    "result": "no data"
+    "min_row_stamp": "2021-03-10T10:00:00.000",
+    "min_bid_ask": [
+     390.32,
+     390.33
+    ],
+    "first_sec": [
+     "2021-03-10T10:00:00.000",
+     390.32,
+     390.33
+    ],
+    "last_sec": [
+     "2021-03-10T10:01:00.000",
+     390.23,
+     390.24
+    ],
+    "n_sec_rows": 61,
+    "result": "AT_T"
    },
    {
     "day": "2021-03-10",
     "symbol": "SPY",
     "minute": "13:30",
-    "result": "no data"
+    "min_row_stamp": "2021-03-10T13:30:00.000",
+    "min_bid_ask": [
+     390.36,
+     390.37
+    ],
+    "first_sec": [
+     "2021-03-10T13:30:00.000",
+     390.36,
+     390.37
+    ],
+    "last_sec": [
+     "2021-03-10T13:31:00.000",
+     390.51,
+     390.52
+    ],
+    "n_sec_rows": 61,
+    "result": "AT_T"
    },
    {
     "day": "2021-03-10",
     "symbol": "QQQ",
     "minute": "10:00",
-    "result": "no data"
+    "min_row_stamp": "2021-03-10T10:00:00.000",
+    "min_bid_ask": [
+     314.81,
+     314.82
+    ],
+    "first_sec": [
+     "2021-03-10T10:00:00.000",
+     314.81,
+     314.82
+    ],
+    "last_sec": [
+     "2021-03-10T10:01:00.000",
+     314.71,
+     314.72
+    ],
+    "n_sec_rows": 61,
+    "result": "AT_T"
    },
    {
     "day": "2021-03-10",
     "symbol": "QQQ",
     "minute": "13:30",
-    "result": "no data"
+    "min_row_stamp": "2021-03-10T13:30:00.000",
+    "min_bid_ask": [
+     312.19,
+     312.2
+    ],
+    "first_sec": [
+     "2021-03-10T13:30:00.000",
+     312.19,
+     312.2
+    ],
+    "last_sec": [
+     "2021-03-10T13:31:00.000",
+     312.45,
+     312.46
+    ],
+    "n_sec_rows": 61,
+    "result": "AT_T"
    },
    {
     "day": "2021-03-10",
     "symbol": "XLF",
     "minute": "10:00",
-    "result": "no data"
+    "min_row_stamp": "2021-03-10T10:00:00.000",
+    "min_bid_ask": [
+     34.3,
+     34.31
+    ],
+    "first_sec": [
+     "2021-03-10T10:00:00.000",
+     34.3,
+     34.31
+    ],
+    "last_sec": [
+     "2021-03-10T10:01:00.000",
+     34.31,
+     34.32
+    ],
+    "n_sec_rows": 61,
+    "result": "AT_T"
    },
    {
     "day": "2021-03-10",
     "symbol": "XLF",
     "minute": "13:30",
-    "result": "no data"
+    "min_row_stamp": "2021-03-10T13:30:00.000",
+    "min_bid_ask": [
+     34.49,
+     34.5
+    ],
+    "first_sec": [
+     "2021-03-10T13:30:00.000",
+     34.49,
+     34.5
+    ],
+    "last_sec": [
+     "2021-03-10T13:31:00.000",
+     34.5,
+     34.51
+    ],
+    "n_sec_rows": 61,
+    "result": "AT_T"
    },
    {
     "day": "2022-09-14",
     "symbol": "SPY",
     "minute": "10:00",
-    "result": "no data"
+    "min_row_stamp": "2022-09-14T10:00:00.000",
+    "min_bid_ask": [
+     395.09,
+     395.11
+    ],
+    "first_sec": [
+     "2022-09-14T10:00:00.000",
+     395.09,
+     395.11
+    ],
+    "last_sec": [
+     "2022-09-14T10:01:00.000",
+     394.83,
+     394.84
+    ],
+    "n_sec_rows": 61,
+    "result": "AT_T"
    },
    {
     "day": "2022-09-14",
     "symbol": "SPY",
     "minute": "13:30",
-    "result": "no data"
+    "min_row_stamp": "2022-09-14T13:30:00.000",
+    "min_bid_ask": [
+     394.96,
+     394.98
+    ],
+    "first_sec": [
+     "2022-09-14T13:30:00.000",
+     394.96,
+     394.98
+    ],
+    "last_sec": [
+     "2022-09-14T13:31:00.000",
+     395.1,
+     395.11
+    ],
+    "n_sec_rows": 61,
+    "result": "AT_T"
    },
    {
     "day": "2022-09-14",
     "symbol": "QQQ",
     "minute": "10:00",
-    "result": "no data"
+    "min_row_stamp": "2022-09-14T10:00:00.000",
+    "min_bid_ask": [
+     295.45,
+     295.46
+    ],
+    "first_sec": [
+     "2022-09-14T10:00:00.000",
+     295.45,
+     295.46
+    ],
+    "last_sec": [
+     "2022-09-14T10:01:00.000",
+     295.08,
+     295.11
+    ],
+    "n_sec_rows": 61,
+    "result": "AT_T"
    },
    {
     "day": "2022-09-14",
     "symbol": "QQQ",
     "minute": "13:30",
-    "result": "no data"
+    "min_row_stamp": "2022-09-14T13:30:00.000",
+    "min_bid_ask": [
+     296.05,
+     296.06
+    ],
+    "first_sec": [
+     "2022-09-14T13:30:00.000",
+     296.05,
+     296.06
+    ],
+    "last_sec": [
+     "2022-09-14T13:31:00.000",
+     296.16,
+     296.18
+    ],
+    "n_sec_rows": 61,
+    "result": "AT_T"
    },
    {
     "day": "2022-09-14",
     "symbol": "XLF",
     "minute": "10:00",
-    "result": "no data"
+    "min_row_stamp": "2022-09-14T10:00:00.000",
+    "min_bid_ask": [
+     33.45,
+     33.46
+    ],
+    "first_sec": [
+     "2022-09-14T10:00:00.000",
+     33.45,
+     33.46
+    ],
+    "last_sec": [
+     "2022-09-14T10:01:00.000",
+     33.46,
+     33.47
+    ],
+    "n_sec_rows": 61,
+    "result": "AT_T"
    },
    {
     "day": "2022-09-14",
     "symbol": "XLF",
     "minute": "13:30",
-    "result": "no data"
+    "min_row_stamp": "2022-09-14T13:30:00.000",
+    "min_bid_ask": [
+     33.31,
+     33.32
+    ],
+    "first_sec": [
+     "2022-09-14T13:30:00.000",
+     33.31,
+     33.32
+    ],
+    "last_sec": [
+     "2022-09-14T13:31:00.000",
+     33.32,
+     33.33
+    ],
+    "n_sec_rows": 61,
+    "result": "AT_T"
    },
    {
     "day": "2023-06-14",
     "symbol": "SPY",
     "minute": "10:00",
-    "result": "no data"
+    "min_row_stamp": "2023-06-14T10:00:00.000",
+    "min_bid_ask": [
+     437.5,
+     437.51
+    ],
+    "first_sec": [
+     "2023-06-14T10:00:00.000",
+     437.5,
+     437.51
+    ],
+    "last_sec": [
+     "2023-06-14T10:01:00.000",
+     437.39,
+     437.4
+    ],
+    "n_sec_rows": 61,
+    "result": "AT_T"
    },
    {
     "day": "2023-06-14",
     "symbol": "SPY",
     "minute": "13:30",
-    "result": "no data"
+    "min_row_stamp": "2023-06-14T13:30:00.000",
+    "min_bid_ask": [
+     437.28,
+     437.29
+    ],
+    "first_sec": [
+     "2023-06-14T13:30:00.000",
+     437.28,
+     437.29
+    ],
+    "last_sec": [
+     "2023-06-14T13:31:00.000",
+     437.07,
+     437.08
+    ],
+    "n_sec_rows": 61,
+    "result": "AT_T"
    },
    {
     "day": "2023-06-14",
     "symbol": "QQQ",
     "minute": "10:00",
-    "result": "no data"
+    "min_row_stamp": "2023-06-14T10:00:00.000",
+    "min_bid_ask": [
+     363.87,
+     363.88
+    ],
+    "first_sec": [
+     "2023-06-14T10:00:00.000",
+     363.87,
+     363.88
+    ],
+    "last_sec": [
+     "2023-06-14T10:01:00.000",
+     363.67,
+     363.69
+    ],
+    "n_sec_rows": 61,
+    "result": "AT_T"
    },
    {
     "day": "2023-06-14",
     "symbol": "QQQ",
     "minute": "13:30",
-    "result": "no data"
+    "min_row_stamp": "2023-06-14T13:30:00.000",
+    "min_bid_ask": [
+     364.27,
+     364.29
+    ],
+    "first_sec": [
+     "2023-06-14T13:30:00.000",
+     364.27,
+     364.29
+    ],
+    "last_sec": [
+     "2023-06-14T13:31:00.000",
+     364.02,
+     364.03
+    ],
+    "n_sec_rows": 61,
+    "result": "AT_T"
    },
    {
     "day": "2023-06-14",
     "symbol": "XLF",
     "minute": "10:00",
-    "result": "no data"
+    "min_row_stamp": "2023-06-14T10:00:00.000",
+    "min_bid_ask": [
+     33.51,
+     33.52
+    ],
+    "first_sec": [
+     "2023-06-14T10:00:00.000",
+     33.51,
+     33.52
+    ],
+    "last_sec": [
+     "2023-06-14T10:01:00.000",
+     33.5,
+     33.51
+    ],
+    "n_sec_rows": 61,
+    "result": "AT_T"
    },
    {
     "day": "2023-06-14",
     "symbol": "XLF",
     "minute": "13:30",
-    "result": "no data"
+    "min_row_stamp": "2023-06-14T13:30:00.000",
+    "min_bid_ask": [
+     33.48,
+     33.49
+    ],
+    "first_sec": [
+     "2023-06-14T13:30:00.000",
+     33.48,
+     33.49
+    ],
+    "last_sec": [
+     "2023-06-14T13:31:00.000",
+     33.47,
+     33.48
+    ],
+    "n_sec_rows": 61,
+    "result": "AT_T"
    },
    {
     "day": "2024-06-12",
     "symbol": "SPY",
     "minute": "10:00",
-    "result": "no data"
+    "min_row_stamp": "2024-06-12T10:00:00.000",
+    "min_bid_ask": [
+     542.67,
+     542.68
+    ],
+    "first_sec": [
+     "2024-06-12T10:00:00.000",
+     542.67,
+     542.68
+    ],
+    "last_sec": [
+     "2024-06-12T10:01:00.000",
+     542.68,
+     542.69
+    ],
+    "n_sec_rows": 61,
+    "result": "AT_T"
    },
    {
     "day": "2024-06-12",
     "symbol": "SPY",
     "minute": "13:30",
-    "result": "no data"
+    "min_row_stamp": "2024-06-12T13:30:00.000",
+    "min_bid_ask": [
+     542.91,
+     542.92
+    ],
+    "first_sec": [
+     "2024-06-12T13:30:00.000",
+     542.91,
+     542.92
+    ],
+    "last_sec": [
+     "2024-06-12T13:31:00.000",
+     542.61,
+     542.62
+    ],
+    "n_sec_rows": 61,
+    "result": "AT_T"
    },
    {
     "day": "2024-06-12",
     "symbol": "QQQ",
     "minute": "10:00",
-    "result": "no data"
+    "min_row_stamp": "2024-06-12T10:00:00.000",
+    "min_bid_ask": [
+     474.11,
+     474.13
+    ],
+    "first_sec": [
+     "2024-06-12T10:00:00.000",
+     474.11,
+     474.13
+    ],
+    "last_sec": [
+     "2024-06-12T10:01:00.000",
+     474.08,
+     474.09
+    ],
+    "n_sec_rows": 61,
+    "result": "AT_T"
    },
    {
     "day": "2024-06-12",
     "symbol": "QQQ",
     "minute": "13:30",
-    "result": "no data"
+    "min_row_stamp": "2024-06-12T13:30:00.000",
+    "min_bid_ask": [
+     474.9,
+     474.91
+    ],
+    "first_sec": [
+     "2024-06-12T13:30:00.000",
+     474.9,
+     474.91
+    ],
+    "last_sec": [
+     "2024-06-12T13:31:00.000",
+     474.66,
+     474.68
+    ],
+    "n_sec_rows": 61,
+    "result": "AT_T"
    },
    {
     "day": "2024-06-12",
     "symbol": "XLF",
     "minute": "10:00",
-    "result": "no data"
+    "min_row_stamp": "2024-06-12T10:00:00.000",
+    "min_bid_ask": [
+     41.19,
+     41.2
+    ],
+    "first_sec": [
+     "2024-06-12T10:00:00.000",
+     41.19,
+     41.2
+    ],
+    "last_sec": [
+     "2024-06-12T10:01:00.000",
+     41.17,
+     41.18
+    ],
+    "n_sec_rows": 61,
+    "result": "AT_T"
    },
    {
     "day": "2024-06-12",
     "symbol": "XLF",
     "minute": "13:30",
-    "result": "no data"
+    "min_row_stamp": "2024-06-12T13:30:00.000",
+    "min_bid_ask": [
+     41.03,
+     41.04
+    ],
+    "first_sec": [
+     "2024-06-12T13:30:00.000",
+     41.03,
+     41.04
+    ],
+    "last_sec": [
+     "2024-06-12T13:31:00.000",
+     41.01,
+     41.02
+    ],
+    "n_sec_rows": 61,
+    "result": "AT_T"
    },
    {
     "day": "2025-06-11",
     "symbol": "SPY",
     "minute": "10:00",
-    "result": "no data"
+    "min_row_stamp": "2025-06-11T10:00:00.000",
+    "min_bid_ask": [
+     603.64,
+     603.66
+    ],
+    "first_sec": [
+     "2025-06-11T10:00:00.000",
+     603.64,
+     603.66
+    ],
+    "last_sec": [
+     "2025-06-11T10:01:00.000",
+     603.84,
+     603.85
+    ],
+    "n_sec_rows": 61,
+    "result": "AT_T"
    },
    {
     "day": "2025-06-11",
     "symbol": "SPY",
     "minute": "13:30",
-    "result": "no data"
+    "min_row_stamp": "2025-06-11T13:30:00.000",
+    "min_bid_ask": [
+     604.34,
+     604.35
+    ],
+    "first_sec": [
+     "2025-06-11T13:30:00.000",
+     604.34,
+     604.35
+    ],
+    "last_sec": [
+     "2025-06-11T13:31:00.000",
+     604.4,
+     604.41
+    ],
+    "n_sec_rows": 61,
+    "result": "AT_T"
    },
    {
     "day": "2025-06-11",
     "symbol": "QQQ",
     "minute": "10:00",
-    "result": "no data"
+    "min_row_stamp": "2025-06-11T10:00:00.000",
+    "min_bid_ask": [
+     534.74,
+     534.75
+    ],
+    "first_sec": [
+     "2025-06-11T10:00:00.000",
+     534.74,
+     534.75
+    ],
+    "last_sec": [
+     "2025-06-11T10:01:00.000",
+     535.08,
+     535.09
+    ],
+    "n_sec_rows": 61,
+    "result": "AT_T"
    },
    {
     "day": "2025-06-11",
     "symbol": "QQQ",
     "minute": "13:30",
-    "result": "no data"
+    "min_row_stamp": "2025-06-11T13:30:00.000",
+    "min_bid_ask": [
+     535.36,
+     535.37
+    ],
+    "first_sec": [
+     "2025-06-11T13:30:00.000",
+     535.36,
+     535.37
+    ],
+    "last_sec": [
+     "2025-06-11T13:31:00.000",
+     535.4,
+     535.41
+    ],
+    "n_sec_rows": 61,
+    "result": "AT_T"
    },
    {
     "day": "2025-06-11",
     "symbol": "XLF",
     "minute": "10:00",
-    "result": "no data"
+    "min_row_stamp": "2025-06-11T10:00:00.000",
+    "min_bid_ask": [
+     51.1,
+     51.11
+    ],
+    "first_sec": [
+     "2025-06-11T10:00:00.000",
+     51.1,
+     51.11
+    ],
+    "last_sec": [
+     "2025-06-11T10:01:00.000",
+     51.12,
+     51.13
+    ],
+    "n_sec_rows": 61,
+    "result": "AT_T"
    },
    {
     "day": "2025-06-11",
     "symbol": "XLF",
     "minute": "13:30",
-    "result": "no data"
+    "min_row_stamp": "2025-06-11T13:30:00.000",
+    "min_bid_ask": [
+     51.31,
+     51.32
+    ],
+    "first_sec": [
+     "2025-06-11T13:30:00.000",
+     51.31,
+     51.32
+    ],
+    "last_sec": [
+     "2025-06-11T13:31:00.000",
+     51.32,
+     51.33
+    ],
+    "n_sec_rows": 61,
+    "result": "AT_T"
    }
   ],
-  "verdict": "MIXED_OR_UNDETERMINED",
+  "verdict": "AT_T",
   "counts": {
-   "AT_T": 0,
+   "AT_T": 30,
    "LAST_OF_MINUTE": 0,
    "neither": 0
   }
  },
  "feed_stats": {
-  "calls": 252,
-  "retries": 252,
+  "calls": 63,
+  "retries": 0,
   "bar_cache_hits": 0,
   "bar_cache_misses": 0,
   "outage_episodes": 0,
-  "upstream_down_now": true
+  "upstream_down_now": false
  },
- "shares_replay_20_sessions_minutes": 0.3,
- "shares_replay_rc": 1,
- "shares_replay_tail": [],
- "shares_replay_stderr_tail": [
-  "    rows = self._get_csv(\"/stock/history/ohlc\", symbol=symbol,",
-  "           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
-  "  File \"C:\\Users\\chaitanyakharche\\Documents\\stock\\trade_analysis\\live_lab\\feed.py\", line 182, in _get_csv",
-  "    raise kind(f\"{path} failed after {self.max_retries} attempts: {last!r}\")",
-  "trade_analysis.live_lab.feed.TerminalUnreachable: /stock/history/ohlc failed after 4 attempts: ConnectError('[WinError 10061] No connection could be made because the target machine actively refused it')"
+ "shares_replay_20_sessions_minutes": 26.7,
+ "shares_replay_rc": 0,
+ "shares_replay_tail": [
+  "  shares 2024-06-25: 171 trades, net 1020.43",
+  "  shares 2024-06-26: 164 trades, net 332.97",
+  "  shares 2024-06-27: 170 trades, net -1790.88",
+  "  shares 2024-06-28: 191 trades, net -1709.36",
+  "[shares] report written to C:\\Users\\chaitanyakharche\\Documents\\stock\\live_lab_backfill\\timing_test\\shares\\report.json"
  ]
 }
