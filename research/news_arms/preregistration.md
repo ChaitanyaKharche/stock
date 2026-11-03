@@ -524,11 +524,34 @@ rule ≈ 50%; 80% needs ≈ 0.31 σ (C1) and ≈ 0.36 σ (C2). Unchanged otherwi
 6. Holdout read once; shortlist scored; results and gate 2.
 7. Space: snapshot builder extended; the study published as exploratory.
 
-## 12. Probe results (to be filled from the laptop, before step 3)
+## 12. Probe results (laptop, 2026-11-01 23:11 MST, `backfill_probe.py` at `78462ed`, file `probes.json`)
 
-| probe | result |
-|---|---|
-| shares replay, 20 sessions, minutes | |
-| `/stock/history/quote` 1m, SPY, 2016-06-14, rows | |
-| `/option/history/quote` 1m, SPY 0DTE chain, 2020-06-12, rows | |
-| feed tier string from terminal | |
+| probe | result | consequence |
+|---|---|---|
+| minute-stamp content (h), 30 checks: 5 sessions × SPY/QQQ/XLF × 10:00 and 13:30 | **AT_T 30 / 30**: the 1-minute quote stamped T equals the first 1-second quote of that minute, never the last | no 60-second shift; the barrier as built is correct |
+| `/stock/history/quote` 1m, SPY 2016-06-14 | **0 rows** | 2016–2017 not served on the current tier |
+| `/stock/history/quote` 1m, XLF 2018-06-13 | 391 rows | 2018 is served |
+| `/option/history/quote` 1m, SPY 0DTE 2020-06-12 | 117,300 rows | the options replay 2020–2023 is feasible |
+| shares replay, 20 sessions (2024-06-03 → 06-28) | **26.7 min**, rc 0, ≈ 80 s per session | 2018-01-02 → 2026-08-27 ≈ 2,170 sessions ≈ **48 h** of laptop time |
+| feed | 63 calls, 0 retries, upstream up | |
+
+A first attempt earlier that evening recorded only connection errors: Theta Terminal was not
+running. Both files are in git; the probe now refuses to run without the terminal.
+
+## 17. Amendment 2026-11-02, on the probe results (proposed; owner approval required)
+
+**17.1 (§2) Shares discovery starts 2018-01-02**, not 2016-01-04: the feed does not serve
+2016–2017 minute quotes on the current tier. Discovery = 2018-01-02 → 2022-12-30 (about
+1,255 sessions); holdout unchanged (2023-01-03 → 2026-08-27). This also answers the
+auditor's item 10 (2016–2017 microstructure) by removing those years; the 14.Q "2018-start
+sensitivity" becomes the main run and is dropped as a sensitivity. Regime cut-points still
+come from `day_features_QQQ.csv`, now over 2018–2022.
+
+**17.2 (§11) Runtime and scheduling.** About 48 hours of replay on the laptop, run in
+calendar-year chunks (`--start`/`--end` per year, separate `--out` folders), only outside
+09:00–16:30 ET because the lab needs the terminal during sessions, and only with the host
+prevented from sleeping. Each chunk's `BACKFILL.json` records its own window and hash; the
+join concatenates chunks and asserts no session appears twice.
+
+**17.3 (§1.4) Live-period acceptance run first:** 2026-08-28 → 2026-10-30, both arms
+(≈ 1.5 h shares, options as measured), compared on the 16 qualifying sessions per 14.2.
