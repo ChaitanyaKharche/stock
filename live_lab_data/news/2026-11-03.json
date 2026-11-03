@@ -1,0 +1,911 @@
+{
+ "session": "2026-11-03",
+ "fetched_at_et": "2026-11-03T07:30:19",
+ "query": "(Fed OR \"Federal Reserve\" OR inflation OR CPI OR jobs OR tariff OR tariffs OR war OR Treasury OR shutdown) AND (stocks OR markets OR economy)",
+ "window_from": "2026-11-02T16:00:00",
+ "window_to": "2026-11-03T07:30:19.314108",
+ "page_size": 100,
+ "n": 100,
+ "articles": [
+  {
+   "title": "Lightspeed Commerce And 2 Top Canadian Founder Led Stocks",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/lightspeed-commerce-2-top-canadian-001932126.html",
+   "publishDate": "2026-11-03T00:19:32+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Central banks are treading carefully on interest rates while inflation remains a global concern, which shines a light on leaders who can adapt quickly and control what they can inside their own business. Founder led Canadian companies often show that kind of long term commitment, with executives who have real skin in the game. This article highlights three such stocks from our screener that may deserve a closer look. The three stocks highlighted here offer a compelling starting point if you...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 Canadian Growth Stocks To Watch In November 2026",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/3-canadian-growth-stocks-watch-001729369.html",
+   "publishDate": "2026-11-03T00:17:29+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Global central banks are treading carefully as they try to cool inflation without stalling growth, and the Bank of England’s recent rate move underlines how delicate that balance has become. For Canadian high growth opportunities, that backdrop puts a premium on companies that analysts expect to grow earnings strongly while keeping their finances in decent shape. This article highlights three such Canadian stocks from our screener that fit that brief. The three stocks highlighted here offer a...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 Airline Stocks Retail Investors Are Watching As Lower Oil Reshapes Margins",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/3-airline-stocks-retail-investors-001726234.html",
+   "publishDate": "2026-11-03T00:17:26+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Oil is suddenly cheaper, conflict risk feels lower and fuel dependent businesses are breathing a little easier. That mix can quickly change how investors think about transportation and logistics stocks that live and die by their energy bills, creating room for both opportunity and regret. This article walks through three stocks from our Fuel Intensive Transportation and Logistics Stocks screener that screens for exposure to this news shock, and explains how this backdrop could matter for your...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Pamt Corp. sees Q3 net loss, books 109.1% truckload OR",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/pamt-corp-sees-q3-net-001626610.html",
+   "publishDate": "2026-11-03T00:16:26+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Truckload carrier Pamt Corp. lost money again during the third quarter, pointing to elevated driver procurement costs and a spike in diesel fuel prices as the main culprits, echoing similar challenges across the industry. The post Pamt Corp. sees Q3 net loss, books 109.1% truckload OR appeared first on FreightWaves.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Trump Talks Reflecting Pool in Midterm Closing Message",
+   "link": "https://www.bloomberg.com/news/videos/2026-11-03/balance-of-power-late-edition-11-02-2026-video",
+   "publishDate": "2026-11-03T00:15:08+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "\"Balance of Power\" focuses on the intersection of politics and global business. On today's show, Maria Teresa Kumar, President and CEO of Voto Latino, says Latino voters in Texas’ Rio Grande Valley who moved toward President Trump over the economy and border security are now being pushed back toward Democrats by high costs, tariffs and immigration enforcement. Kumar says businesses in the region are being hurt by workers being picked up by Border Patrol and ICE and by uncertainty over tariff costs.  (Source: Bloomberg)",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Germany Misses Gas Storage Target as Prices Soar",
+   "link": "https://finance.yahoo.com/energy/articles/germany-misses-gas-storage-target-000000687.html",
+   "publishDate": "2026-11-03T00:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Germany enters winter with gas storage at just 61%, well below the EU's 80% target, raising concerns about shortages during colder weather.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Hedge Fund Elliott Warns of FOGO: Fear of Getting Obliterated in the Market",
+   "link": "https://www.wsj.com/finance/investing/hedge-fund-elliott-warns-of-fogo-fear-of-getting-obliterated-in-the-market-a2cc7027",
+   "publishDate": "2026-11-02T23:54:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "The $80 billion hedge-fund firm posted flat returns in third quarter and under 2% gains this year through September.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Apple posts strong Q4 revenue in first earnings report for new CEO John Ternus",
+   "link": "https://abcnews.com/Technology/wireStory/apple-posts-stronger-expected-q4-revenue-earnings-report-137785702",
+   "publishDate": "2026-11-02T23:48:53+00:00",
+   "source": "abcnews.com",
+   "summary": "Apple Inc. posted stronger-than-expected revenue in the fiscal fourth quarter, giving new CEO John Ternus a positive start to his tenure that began in September",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "War, tariffs and China: What the US midterms mean for the Asia-Pacific",
+   "link": "https://www.aljazeera.com/news/2026/11/2/war-tariffs-and-china-what-the-us-midterms-mean-for-the-asia-pacific",
+   "publishDate": "2026-11-02T23:41:18+00:00",
+   "source": "www.aljazeera.com",
+   "summary": "Hit hard by Trump's tariffs and the war on Iran, countries in the Asia-Pacific want 'enormous changes' in US policies.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "South Korea October headline inflation moderates ahead of expected rate hike",
+   "link": "https://www.reuters.com/world/asia-pacific/south-korea-october-headline-inflation-moderates-ahead-expected-rate-hike-2026-11-02/",
+   "publishDate": "2026-11-02T23:35:54.843000+00:00",
+   "source": "www.reuters.com",
+   "summary": "South Korea's headline inflation slowed in October, government data ​showed on Tuesday, providing a slight ‌reprieve for central bankers but remaining firmly above target.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "South Korea October headline inflation moderates ahead of expected rate hike",
+   "link": "https://finance.yahoo.com/economy/policy/articles/south-korea-october-headline-inflation-233544204.html",
+   "publishDate": "2026-11-02T23:35:44+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "SEOUL, Nov 3 (Reuters) - South Korea's headline inflation slowed in October, government data showed on Tuesday, providing a slight reprieve for central bankers but remaining firmly above target.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "South Korea October headline inflation moderates ahead of expected rate hike",
+   "link": "https://www.channelnewsasia.com/business/south-korea-october-headline-inflation-moderates-ahead-expected-rate-hike-6514516",
+   "publishDate": "2026-11-02T23:35:44+00:00",
+   "source": "www.channelnewsasia.com",
+   "summary": "SEOUL, Nov 3 : South Korea's headline inflation slowed in October, government data showed on Tuesday, providing a slight reprieve for central bankers but remaining firmly above target.Consumer prices rose 2.8 per cent year-on-year in October, down from a 2.9 per cent gain in September and nearly matching a 2.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Forage Fish Campaign Demands Immediate Action on \"New\" Science Reviewed Two Years Ago",
+   "link": "https://www.accessnewswire.com/newsroom/en/industrial-and-manufacturing/forage-fish-campaign-demands-immediate-action-on-%22new%22-science-rev-1245534",
+   "publishDate": "2026-11-02T23:35:00+00:00",
+   "source": "www.accessnewswire.com",
+   "summary": "When University of Miami scientists Jerald Ault and Jiangang Luo published Investigation of Atlantic Menhaden Mortality Rates in the peer-reviewed journal Fisheries Research in September 2026, the Forage Fish Campaign presented it as \"new research\" requiring immediate action by fisheries managers. But what was new was the journal publication - not the underlying scientific work. Ault had presented the analysis to the Atlantic States Marine...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Kumar: Costs, ICE Are Pushing Latinos Toward Democrats",
+   "link": "https://www.bloomberg.com/news/videos/2026-11-02/kumar-costs-ice-are-pushing-latinos-toward-democrats-video",
+   "publishDate": "2026-11-02T23:31:11+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "Maria Teresa Kumar, President and CEO of Voto Latino, says Latino voters in Texas’ Rio Grande Valley who moved toward President Trump over the economy and border security are now being pushed back toward Democrats by high costs, tariffs and immigration enforcement. Kumar says businesses in the region are being hurt by workers being picked up by Border Patrol and ICE and by uncertainty over tariff costs. Kumar says Latino voters in Florida are also rethinking their support after the administration rescinded protections for people with Temporary Protected Status. Kumar says Democrats cannot take Latino turnout for granted and need an affordability agenda as well as accountability over ICE detention and enforcement. She speaks with Joe Mathieu and Kailey Leinz on Bloomberg’s \"Balance of Power.\" (Source: Bloomberg)",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Alphabet Lost $500 Billion in Market Value. Should You Really Buy AI Stocks Now?",
+   "link": "https://finance.yahoo.com/technology/ai/articles/alphabet-lost-500-billion-market-232501823.html",
+   "publishDate": "2026-11-02T23:25:01+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Last week, the stock had its worst day ever.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "South Korea Inflation Remains Above Target at 2.8% in October",
+   "link": "https://www.wsj.com/economy/south-korea-inflation-eases-to-2-8-in-october-still-above-target-3d4069db",
+   "publishDate": "2026-11-02T23:21:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "South Korea’s headline inflation remained above the central bank’s 2% target in October, although it eased from the previous month, potentially reinforcing the case for further monetary policy tightening.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Why Intel Stock Is Down After Weak Q4 Guidance",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/why-intel-stock-down-weak-231626988.html",
+   "publishDate": "2026-11-02T23:16:26+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Intel reported Q3 2026 sales of US$16,513 million with net income of US$3,320 million, and issued Q4 guidance calling for US$15.0 billion to US$16.0 billion in revenue and US$0.10 in diluted EPS attributable to Intel. Management attributed the weaker Q4 outlook to soft PC demand, memory shortages, and production disruptions including a shutdown at its Israel facility, while demand for Xeon server and AI chips remained strong. We will now examine how Intel's weaker Q4 outlook and PC headwinds...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Proxy Adviser Split Might Change The Case For Investing In Whitbread Stock",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/proxy-adviser-split-might-change-231541046.html",
+   "publishDate": "2026-11-02T23:15:41+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Whitbread reported that, in October 2026, proxy advisers ISS and PIRC urged shareholders to reject Corvex’s proposed board nominee, while Glass Lewis supported the appointment of James Gemmel ahead of the 9 November general meeting. The split among proxy advisers highlights a deeper question for Whitbread investors about how much direct shareholder representation is needed on the board during execution of the 5 Year Plan. Attention now turns to how Whitbread’s investment narrative could...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 British Value Stocks To Own In November 2026",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/3-british-value-stocks-own-231535345.html",
+   "publishDate": "2026-11-02T23:15:35+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Goldman Sachs now expects Brent crude to average $105 per barrel in December, which keeps pressure on inflation and interest rates and makes dependable cash generation more valuable for investors. When money is no longer cheap, solid free cash flow and a discounted share price can be a powerful combination. This article highlights three United Kingdom listed companies that appear underpriced based on their projected cash flows. The three ideas below are simply a starting sample, and the full...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 Oil And Gas Stocks For Investors Watching Lower Crude Prices",
+   "link": "https://finance.yahoo.com/energy/articles/3-oil-gas-stocks-investors-231513893.html",
+   "publishDate": "2026-11-02T23:15:13+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Oil prices just dropped sharply on renewed US and Iran talks, yet long term forecasts still point to elevated crude and persistent supply risk. That mix of cheaper entry points today and potentially higher input costs ahead creates a fork in the road for investors who care about inflation, rates and energy exposure. This article walks through three global integrated oil and gas producers most exposed to this news shift. The stocks covered below are just a starting sample, as the full screen...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "How Permanent CEO Appointment At MillerKnoll (MLKN) Has Changed Its Investment Story",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/permanent-ceo-appointment-millerknoll-mlkn-231331868.html",
+   "publishDate": "2026-11-02T23:13:31+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "MillerKnoll announced that Jeff Stutz, a 25 year veteran of the design and manufacturing industry and former CFO and COO, was appointed permanent CEO and joined the Board on 21 October 2026, following his interim leadership since June 2026. Stutz’s mix of finance, operations, and brand oversight across MillerKnoll’s international contract and retail businesses gives him direct influence over cost actions, margin execution, and capital allocation decisions. It is now possible to consider how...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Apple posts record September quarter under new CEO as iPhone, Mac sales surge",
+   "link": "https://www.foxbusiness.com/markets/apple-posts-record-september-quarter-under-new-ceo-iphone-mac-sales-surge",
+   "publishDate": "2026-11-02T23:13:01+00:00",
+   "source": "www.foxbusiness.com",
+   "summary": "Apple reported record September-quarter revenue of $114.5 billion, driven by strong iPhone 18 Pro and Mac sales despite price increases.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Allison Transmission Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/62804612/allison-transmission-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-02T23:07:02.250000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Allison Transmission (NYSE:ALSN) reported third-quarter financial results on Monday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by Benzinga",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Apple Q4 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/62804611/apple-q4-2026-earnings-call-transcript",
+   "publishDate": "2026-11-02T23:06:55.306000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Apple (NASDAQ:AAPL) reported fourth-quarter financial results on Monday. The transcript from the company’s fourth-quarter earnings call has been provided below.This transcript is brought to you by Benzinga APIs. For",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Trump approval rating near record low on eve of US midterm elections: Poll",
+   "link": "https://www.aljazeera.com/news/2026/11/2/trump-approval-rating-near-record-low-on-eve-of-us-midterm-elections-poll",
+   "publishDate": "2026-11-02T23:05:30+00:00",
+   "source": "www.aljazeera.com",
+   "summary": "Only 32 percent of voters approve of Trump's job performance in the latest Reuters/Ipsos poll.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Douglas Dynamics Reports Record Third Quarter 2026 Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/02/3393846/12740/en/douglas-dynamics-reports-record-third-quarter-2026-results.html",
+   "publishDate": "2026-11-02T23:03:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Douglas Dynamics Reports Record Third Quarter Results",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "United Foodbrands Ltd (BOM:543283) Q2 2027 Earnings Call Highlights: 40. ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/united-foodbrands-ltd-bom-543283-230236601.html",
+   "publishDate": "2026-11-02T23:02:36+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "United Foodbrands Ltd (BOM:543283) delivered volume-led growth with 27.8% same-store sales growth at BBQ India, even as input cost inflation and rising corporate overheads weighed on margins.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Clorox Q1 2027 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/62804511/clorox-q1-2027-earnings-call-transcript",
+   "publishDate": "2026-11-02T23:01:58.096000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Clorox (NYSE:CLX) reported first-quarter financial results on Monday. The transcript from the company’s first-quarter earnings call has been provided below.This transcript is brought to you by Benzinga APIs. For",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Latest Oil Market News and Analysis for Nov. 3",
+   "link": "https://www.bloomberg.com/news/articles/2026-11-02/latest-oil-market-news-and-analysis-for-nov-3",
+   "publishDate": "2026-11-02T23:01:19+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "Oil steadied after its biggest slump in more than three months, with the US and Iran signaling a willingness to pursue peace talks as the war in the Middle East enters its ninth month.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Elon Musk finds a backdoor into the $235-billion wireless market after being rejected by every major carrier",
+   "link": "https://finance.yahoo.com/technology/articles/elon-musk-finds-backdoor-235-230000466.html",
+   "publishDate": "2026-11-02T23:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Starlink is well on its way to becoming your next cell service provider",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "ELEKTROS (OTC:ELEK) Explores Northern New York Lithium Potential Amid Rising U.S. Focus on Critical Mineral Supply",
+   "link": "https://www.accessnewswire.com/newsroom/en/automotive/elektros-otc-elek-explores-northern-new-york-lithium-potential-amid-rising-u.s.-focus-on-1245510",
+   "publishDate": "2026-11-02T23:00:00+00:00",
+   "source": "www.accessnewswire.com",
+   "summary": "Domestic Supply Takes on Greater Importance Lithium-ion battery technology plays an important role in electric transportation and stationary energy storage. As these markets evolve, the resilience of the supply chain - including the availability of key raw materials - remains an important issue for manufacturers, processors and policymakers. ELEKTROS Inc. (OTC PINK:ELEK), publicly traded under ticker symbol ELEK, is assessing a potential...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Resi cooling trend? Two SF homes near $20M each with no overbid",
+   "link": "https://finance.yahoo.com/real-estate/articles/resi-cooling-trend-two-sf-230000091.html",
+   "publishDate": "2026-11-02T23:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Compass’ Missy Wyant Smit with 2090 Vallejo Street (Missy Wyant Smit, Google Maps, Getty)San Francisco saw two separate $19.5 million resi sales over the past couple of days — both of which go against the city’s drastic overbid trend. The roughly 9,650-square-foot mansion at 2090 Vallejo Street in Pacific Heights fetched that price on Monday following a $25 million listing in mid-September. The six-bedroom 1919-built home has amenities such as Bay views, cathedral ceilings, an elevator, wine cel",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "How Trump’s trade policy is handing Asia to Beijing",
+   "link": "https://finance.yahoo.com/economy/policy/articles/trump-trade-policy-handing-asia-230000809.html",
+   "publishDate": "2026-11-02T23:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Usually, U.S. statecraft is designed to help American companies succeed abroad. President Donald Trump’s trade program is having the reverse effect.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Palantir Technologies Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/62804374/palantir-technologies-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-02T22:55:23.222000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Palantir Technologies (NASDAQ:PLTR) reported third-quarter financial results on Monday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by Benzinga",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "ELEKTROS (OTC:ELEK) Evaluates Northern New York Lithium Opportunity as U.S. Demand for Critical Minerals Takes Center Stage",
+   "link": "https://www.accessnewswire.com/newsroom/en/automotive/elektros-otc-elek-evaluates-northern-new-york-lithium-opportunity-as-u.s.-demand-for-cri-1245508",
+   "publishDate": "2026-11-02T22:55:00+00:00",
+   "source": "www.accessnewswire.com",
+   "summary": "A Strategic Moment for Domestic Lithium Lithium-ion batteries support a broad and expanding range of electric vehicles and stationary energy-storage systems. As electrification and energy-storage technologies continue to develop, secure access to battery materials remains an important consideration for manufacturers, processors and policymakers. ELEKTROS Inc. (OTC PINK:ELEK), a publicly traded company under ticker symbol ELEK, is evaluating a...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "US midterms 2026: What polls reveal about Democratic, Republican voters",
+   "link": "https://www.aljazeera.com/news/2026/11/2/us-midterms-2026-what-polls-reveal-about-democratic-republican-voters",
+   "publishDate": "2026-11-02T22:40:06+00:00",
+   "source": "www.aljazeera.com",
+   "summary": "From the economy and cost of living to immigration, polls suggest where American voters agree and disagree.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Crypto Market Today, Nov. 2: Crypto Market Today, Nov. 2: Bitcoin and Altcoins Retreat as Binance Withdrawals Spark Fresh Concerns",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/crypto-market-today-nov-2-223501665.html",
+   "publishDate": "2026-11-02T22:35:01+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "On Nov. 2, 2026, withdrawals reopened at Binance after a $6.3 billion security breach, triggering mass outflows and FBI scrutiny.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Apple posts stronger-than-expected Q4 revenue in first earnings report for new CEO John Ternus",
+   "link": "https://apnews.com/article/apple-earnings-profit-iphone-9698be9e0226091a537611382144eb44",
+   "publishDate": "2026-11-02T22:31:34+00:00",
+   "source": "apnews.com",
+   "summary": "",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Apple posts stronger-than-expected Q4 revenue in first earnings report for new CEO John Ternus",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/apple-posts-stronger-expected-q4-223133053.html",
+   "publishDate": "2026-11-02T22:31:33+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "posted stronger-than-expected revenue in the fiscal fourth quarter, giving new CEO John Ternus an upbeat start to his tenure, which began in September. The solid results bucked a downward trend for tech giants this quarter, as companies including Alphabet, Amazon and Intel had disappointing quarterly results.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Nasdaq Slide Clouds Asian Open, Oil Falls on Iran: Markets Wrap",
+   "link": "https://www.bloomberg.com/news/articles/2026-11-02/stock-market-today-dow-s-p-live-updates",
+   "publishDate": "2026-11-02T22:25:14+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "Asian technology stocks looked set for losses Tuesday after a selloff in US chipmakers deepened, overshadowing a plunge in oil prices on hopes for diplomatic progress toward ending the war in Iran.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Bitcoin Firm Strive Climbs Up the Treasury Ranks With Another Big Buy",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-firm-strive-climbs-treasury-221602875.html",
+   "publishDate": "2026-11-02T22:16:02+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Strive added 124 Bitcoin for about $10 million and now trails Twenty One Capital by 390 BTC for third place among Treasury companies.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Australian Cash Flow Stocks For November 2026",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/australian-cash-flow-stocks-november-221145811.html",
+   "publishDate": "2026-11-02T22:11:45+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Global markets are fixated on inflation and central bank signals, which keeps a tight spotlight on cash generation and funding costs. That puts Australian companies with strong cash flows and depressed valuations in an interesting position, because their underlying money generation can matter more than short term mood swings. This article walks through three stocks that our cash flow focused screen flags as potentially mispriced, and explains what that could mean for you. The three ideas...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Offerpad Solutions Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/62803135/offerpad-solutions-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-02T22:09:56.769000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Offerpad Solutions (NYSE:OPAD) reported third-quarter financial results on Monday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by Benzinga",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Petrus Resources Declares Monthly Dividend for November 2026",
+   "link": "https://www.globenewswire.com/news-release/2026/11/02/3393820/0/en/petrus-resources-declares-monthly-dividend-for-november-2026.html",
+   "publishDate": "2026-11-02T22:05:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "CALGARY, Alberta, Nov. 02, 2026 (GLOBE NEWSWIRE) -- Petrus Resources Ltd. (“Petrus” or the “Company”) (TSX: PRQ) is pleased to confirm that its Board of Directors has declared a monthly dividend in the amount of $0.01 per share payable November 27, 2026, to shareholders of record on November 16, 2026. The dividend is designated as an eligible dividend for Canadian income tax purposes.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Trading Day: Oil slump no cure for AI angst",
+   "link": "https://finance.yahoo.com/markets/articles/trading-day-oil-slump-no-220421915.html",
+   "publishDate": "2026-11-02T22:04:21+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "By Jamie McGeever ORLANDO, Florida, Nov 2 (Reuters) - Oil prices tumbled on Monday on hopes that US-Iran peace talks could soon take place, which pushed bond yields around the world lower.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Trading Day: Oil slump no cure for AI angst",
+   "link": "https://www.channelnewsasia.com/business/trading-day-oil-slump-no-cure-ai-angst-6514301",
+   "publishDate": "2026-11-02T22:04:21+00:00",
+   "source": "www.channelnewsasia.com",
+   "summary": "ORLANDO, Florida, Nov 2 : Oil prices tumbled on Monday on hopes that US-Iran peace talks could soon take place, which pushed bond yields around the world lower. Stock markets in Asia and Europe mostly benefited as a result, but the momentum evaporated in US hours, as investors turned their attention to Tuesday's mid",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Global Industrial Automation Market to Hit US$ 410.3 Billion by 2031, Registering 9% CAGR: Wissen Research",
+   "link": "https://www.prnewswire.com/news-releases/global-industrial-automation-market-to-hit-us-410-3-billion-by-2031--registering-9-cagr-wissen-research-302926912.html",
+   "publishDate": "2026-11-02T22:01:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "SHERIDAN, Wyo., Nov. 2, 2026 /PRNewswire/ -- The global industrial automation market is valued at USD 266.7 billion in 2026 and is projected to reach USD 410.3 billion by 2031, growing at a CAGR of 9% over the forecast period (2026–2031), according to a new study by Wissen Research. The...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Trading Day: Oil slump no cure for AI angst",
+   "link": "https://www.reuters.com/commentary/reuters-open-interest/global-markets-trading-day-graphic-2026-11-02/",
+   "publishDate": "2026-11-02T22:00:24.298000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Oil prices tumbled on Monday on hopes that US-Iran peace talks could soon take place, which pushed bond yields around the world lower. Stock markets in Asia and Europe mostly benefited as a result, but the momentum evaporated in US hours, as investors turned their attention to Tuesday's midterm elections.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "TETRA TECHNOLOGIES, INC. REPORTS STRONG THIRD-QUARTER 2026 RESULTS",
+   "link": "https://www.prnewswire.com/news-releases/tetra-technologies-inc-reports-strong-third-quarter-2026-results-302926920.html",
+   "publishDate": "2026-11-02T22:00:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "Highest Third Quarter Revenue in a Decade SPRING, Texas, Nov. 2, 2026 /PRNewswire/ -- TETRA Technologies, Inc. (\"TETRA\" or the \"Company\") (NYSE: TTI) announced financial results for the three and nine months ended September 30, 2026. Third-Quarter 2026 Financial Highlights Revenues of...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "4 Energy Stocks for Midterm Elections That Could Go Either Way",
+   "link": "https://finance.yahoo.com/energy/articles/4-energy-stocks-midterm-elections-220000515.html",
+   "publishDate": "2026-11-02T22:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Prediction markets favor a Democratic sweep. Here are four energy stocks to watch if Democrats win both chambers or Republicans hold the Senate.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Commentary: What to watch for in the US midterm elections",
+   "link": "https://www.channelnewsasia.com/commentary/us-midterm-elections-trump-what-watch-6512736",
+   "publishDate": "2026-11-02T21:59:00+00:00",
+   "source": "www.channelnewsasia.com",
+   "summary": "This week will tell us many important things about the future of American politics, says Rana Foroohar for the Financial Times.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Commentary: Binance says everything is okay. It really isn’t",
+   "link": "https://www.channelnewsasia.com/commentary/binance-north-korea-hack-crypto-risk-danger-6512636",
+   "publishDate": "2026-11-02T21:58:00+00:00",
+   "source": "www.channelnewsasia.com",
+   "summary": "The Binance hack might be a moment for the crypto industry to take proper stock if it truly wants legitimacy, says Bloomberg Opinion's Lionel Laurent.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Oil prices plunge on US-Iran detente hopes ahead of US midterms",
+   "link": "https://www.channelnewsasia.com/world/oil-prices-plunge-us-iran-detente-hopes-ahead-us-midterms-6514266",
+   "publishDate": "2026-11-02T21:51:48+00:00",
+   "source": "www.channelnewsasia.com",
+   "summary": "NEW YORK: Oil prices tumbled more than seven per cent on Monday (Nov 2), the eve of crucial midterm elections in the United States, as signals that Tehran and Washin",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Spire Missouri rate case filing supports continued investments in safety and reliability",
+   "link": "https://www.prnewswire.com/news-releases/spire-missouri-rate-case-filing-supports-continued-investments-in-safety-and-reliability-302926996.html",
+   "publishDate": "2026-11-02T21:51:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "ST. LOUIS, Nov. 2, 2026 /PRNewswire/ -- Today, Spire Missouri filed a rate case with the Missouri Public Service Commission (PSC) to support continued investments in its natural gas system that enhance safety, reliability and service for customers. \"Our focus is on safely and reliably...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "AI Data Centers Are on the Ballot. 7 Stocks That Are at Risk.",
+   "link": "https://www.barrons.com/articles/ai-data-centers-midterm-elections-utility-stocks-a43e636f",
+   "publishDate": "2026-11-02T21:49:00+00:00",
+   "source": "www.barrons.com",
+   "summary": "Polls have found that Americans think data centers inflate home energy costs and are bad for the environment.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Lightbridge Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/62801676/lightbridge-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-02T21:44:28.116000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Lightbridge (NASDAQ:LTBR) reported third-quarter financial results on Monday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by Benzinga APIs. For",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Athabasca Files Management Information Circular for Arrangement with Cenovus",
+   "link": "https://www.globenewswire.com/news-release/2026/11/02/3393799/0/en/athabasca-files-management-information-circular-for-arrangement-with-cenovus.html",
+   "publishDate": "2026-11-02T21:43:44+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "CALGARY, Alberta, Nov. 02, 2026 (GLOBE NEWSWIRE) -- Athabasca Oil Corporation (TSX: ATH) (“Athabasca” or the “Corporation”) announced today that it has filed its management information circular (the “Information Circular”) and related materials for the upcoming special meeting (the “Meeting”) of holders (the “Athabasca Shareholders”) of its common shares (the “Athabasca Shares”). At the Meeting, Athabasca Shareholders will consider the previously announced acquisition of all outstanding Athabasca Shares by Cenovus Energy Inc. (“Cenovus”) pursuant to a plan of arrangement (the “Arrangement” or the “Transaction”). The Information Circular and related Meeting materials can be found on Athabasca’s SEDAR+ profile at www.sedarplus.ca and on its website at www.atha.com/2026-special-meeting.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Pampa EnergÃ­a announces nine-month period and third quarter 2026 results",
+   "link": "https://www.prnewswire.com/news-releases/pampa-energia-announces-nine-month-period-and-third-quarter-2026-results-302926982.html",
+   "publishDate": "2026-11-02T21:39:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "BUENOS AIRES, Argentina, Nov. 2, 2026 /PRNewswire/ -- Pampa Energía S.A. (NYSE: PAM; Buenos Aires Stock Exchange: PAMP), an independent energy company with active participation in Argentine oil, gas and electricity, announces the results for the nine-month period and quarter ended on...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Broader Market Settles Lower on Weakness in Chipmakers and AI Stocks",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/broader-market-settles-lower-weakness-213725307.html",
+   "publishDate": "2026-11-02T21:37:25+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The S&P 500 Index ($SPX ) (SPY ) closed down -0.51% on Monday, the Dow Jones Industrial Average ($DOWI ) (DIA ) closed up +0.41%, and the Nasdaq 100 Index ($IUXX ) (QQQ ) closed down -1.39%. December E-mini S&P futures (ESZ26 ) fell -0.49%, and December E-mini Nasdaq futures...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Kimberly-Clark closes its acquisition of Tylenol maker Kenvue. What to expect next",
+   "link": "https://www.cnbc.com/investingclub/2026/11/02/kimberly-clark-closes-its-acquisition-of-tylenol-maker-kenvue-what-to-expect-next.html",
+   "publishDate": "2026-11-02T21:35:06+00:00",
+   "source": "www.cnbc.com",
+   "summary": "Kimberly-Clark has a plan improve growth and earnings following its acquisition of Kenvue",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Trump makes final US midterm pitch at troubled Reflecting Pool",
+   "link": "https://www.channelnewsasia.com/world/trump-makes-final-us-midterm-pitch-troubled-reflecting-pool-6514236",
+   "publishDate": "2026-11-02T21:35:02+00:00",
+   "source": "www.channelnewsasia.com",
+   "summary": "US President Donald Trump described the US midterm elections as “the most important midterm I believe in our lifetime” while urging Republicans to unite ahead of the vote.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "CVG Reports Third Quarter 2026 Results and Announces CEO Succession Plan",
+   "link": "https://www.globenewswire.com/news-release/2026/11/02/3393790/0/en/cvg-reports-third-quarter-2026-results-and-announces-ceo-succession-plan.html",
+   "publishDate": "2026-11-02T21:35:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Delivered strong revenue growth and margin expansionReturned to positive GAAP and Adjusted EPSRaises revenue outlook and narrows Adjusted EBITDA guidance rangeAppoints David Ruppel as President and CEO and a member of the Board",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Trump promised 'no more wars'. His foreign policy tells another story",
+   "link": "https://www.france24.com/en/tv-shows/truth-or-fake/20261102-trump-promised-no-more-wars-his-foreign-policy-tells-another-story",
+   "publishDate": "2026-11-02T21:34:10+00:00",
+   "source": "www.france24.com",
+   "summary": "Donald Trump promised an “America First” foreign policy and pledged to keep the US out of foreign wars. But since returning to the White House, his administration has been deeply involved in conflicts around the world. From the war in Ukraine and threats to Greenland and Canada, to the US intervention in Venezuela, Trump's shifting approach to the Middle East and war with Iran, Vedika Bahl examines his foreign policy record since returning to office.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Apple’s Growth Machine is Slowing. High Prices Might Not Save It.",
+   "link": "https://www.wsj.com/tech/apple-beats-wall-street-expectations-with-boost-from-higher-prices-36749418",
+   "publishDate": "2026-11-02T21:34:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "Shares fall as new CEO John Ternus warns margins may weaken in future quarters.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Apple beats on quarterly revenue in CEO John Ternus' first earnings report: Live updates",
+   "link": "https://www.cnbc.com/2026/11/02/apple-aapl-q4-2026-earnings-live-updates.html",
+   "publishDate": "2026-11-02T21:33:39+00:00",
+   "source": "www.cnbc.com",
+   "summary": "Follow Apple Q4 2026 earnings live for revenue, EPS, iPhone sales, China performance, AI updates, holiday guidance and AAPL stock reaction.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Wall Street’s Most Bullish Crude Analyst Calls the End of the Run: ‘Time to Take Prompt Oil Profits’",
+   "link": "https://www.benzinga.com/markets/commodities/26/11/62799853/jeff-currie-take-prompt-oil-profits-regime-trade-uso-oih",
+   "publishDate": "2026-11-02T21:30:07.254000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Jeff Currie is taking profits on prompt oil after a 130% USO rally; Oil services and producers building the new energy regime get paid next.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "The Chemours Company Reports Third Quarter Results",
+   "link": "https://www.prnewswire.com/news-releases/the-chemours-company-reports-third-quarter-results-302926970.html",
+   "publishDate": "2026-11-02T21:30:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "WILMINGTON, Del., Nov. 2, 2026 /PRNewswire/ -- The Chemours Company (\"Chemours\" or \"the Company\") (NYSE: CC), a global chemistry company with leading market positions in Thermal & Specialized Solutions (\"TSS\"), Titanium Technologies (\"TT\"), and Advanced Performance Materials (\"APM\"),...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "ALAMO GROUP ANNOUNCES FINANCIAL RESULTS FOR THE THIRD QUARTER 2026 AND STRENGTHENS ITS INDUSTRIAL PORTFOLIO",
+   "link": "https://www.prnewswire.com/news-releases/alamo-group-announces-financial-results-for-the-third-quarter-2026-and-strengthens-its-industrial-portfolio-302926944.html",
+   "publishDate": "2026-11-02T21:30:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "SEGUIN, Texas, Nov. 2, 2026 /PRNewswire/ -- Alamo Group Inc. (NYSE: ALG) today reported results for the third quarter of 2026. Highlights: On October 27, 2026, the Company acquired Econ Engineering Group Limited (\"Econ\"), a leading U.K. manufacturer of roadway maintenance vocational...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Unitil Reports 2026 Third Quarter Earnings",
+   "link": "https://www.globenewswire.com/news-release/2026/11/02/3393777/0/en/unitil-reports-2026-third-quarter-earnings.html",
+   "publishDate": "2026-11-02T21:30:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Year-to-Date GAAP Earnings Per Share Improved by 7% Year-to-Date GAAP Earnings Per Share Improved by 7%",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Hillman Reports Third Quarter 2026 Results; Updates Full-Year Outlook",
+   "link": "https://www.globenewswire.com/news-release/2026/11/02/3393780/0/en/hillman-reports-third-quarter-2026-results-updates-full-year-outlook.html",
+   "publishDate": "2026-11-02T21:30:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Hillman Q3 sales rose 7.7% to a record $457.5M; Adjusted EBITDA increased 2.5% to $90.2M, with Kanebridge acquisition completed.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Broadwind Acquires MCM, Expanding Its Precision Manufacturing Platform Within The Power Generation And Critical Infrastructure Market Providing Strategic Entry Into Electrical Transmission And Distribution",
+   "link": "https://www.globenewswire.com/news-release/2026/11/02/3393779/13041/en/broadwind-acquires-mcm-expanding-its-precision-manufacturing-platform-within-the-power-generation-and-critical-infrastructure-market-providing-strategic-entry-into-electrical-trans.html",
+   "publishDate": "2026-11-02T21:30:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Adds high-growth revenue streams, enhances margin profile and expands capabilitiesBroadwind to host investor conference call and webcast on Tuesday, November 3, 2026 at 11:00 a.m. ET",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "NanoXplore Strengthens Leadership Team with Appointment of Veteran Public-Company Finance Executive Constantino Malatesta as Chief Financial Officer",
+   "link": "https://www.globenewswire.com/news-release/2026/11/02/3393774/0/en/nanoxplore-strengthens-leadership-team-with-appointment-of-veteran-public-company-finance-executive-constantino-malatesta-as-chief-financial-officer.html",
+   "publishDate": "2026-11-02T21:30:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "MONTREAL, Nov. 02, 2026 (GLOBE NEWSWIRE) -- (TSX: GRA) (OTCQX: NNXPF) – NanoXplore Inc. (“NanoXplore” or the “Company”), a world leader in graphene production and graphene-enhanced materials, today announced the appointment of Constantino Malatesta as Chief Financial Officer (CFO), effective November 11, 2026.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Amazon (AMZN) Stock for the Next 10 Years: Buy, Hold, or Avoid?",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/amazon-amzn-stock-next-10-212500945.html",
+   "publishDate": "2026-11-02T21:25:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Should you stay invested in the e-commerce and cloud leader?",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "U.S. Stocks Mixed as Percolating AI Fears Offset Oil Relief",
+   "link": "https://www.wsj.com/finance/stocks/u-s-stocks-mixed-as-percolating-ai-fears-offset-oil-relief-6c9535a6",
+   "publishDate": "2026-11-02T21:23:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "Stocks ended mixed after hopes for U.S.-Iranian negotiations caused a slide in the price of oil, while concerns about a potential AI bust weighed on the technology sector.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Palantir Posts Q3 Double Beat, Lifts Guidance — 'Extraordinary' Is an 'Understatement'",
+   "link": "https://www.benzinga.com/markets/earnings/26/11/62799346/palantir-posts-q3-double-beat-lifts-guidance-extraordinary-is-an-understatement",
+   "publishDate": "2026-11-02T21:22:23.392000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Palantir Technologies Inc (NASDAQ:PLTR) reports financial results for the third-quarter after the market close on Monday.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Oil Tumbles, but Stocks Fail To Launch",
+   "link": "https://www.wsj.com/finance/investing/oil-tumbles-but-stocks-fail-to-launch-90972f94",
+   "publishDate": "2026-11-02T21:16:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "Plus, Marvell makes a big acquisition and gets punished",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "ONE Gas Announces Third Quarter 2026 Financial Results; Raises 2026 Adjusted Financial Guidance Above Previous Range",
+   "link": "https://www.prnewswire.com/news-releases/one-gas-announces-third-quarter-2026-financial-results-raises-2026-adjusted-financial-guidance-above-previous-range-302926954.html",
+   "publishDate": "2026-11-02T21:15:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "Declares Fourth Quarter Dividend Analyst call and webcast scheduled tomorrow, Nov. 3 at 11 a.m. EST TULSA, Okla., Nov. 2, 2026 /PRNewswire/ -- ONE Gas, Inc. (NYSE: OGS) today announced its third quarter financial results, raised its 2026 adjusted financial guidance and declared its...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Select Water Solutions Announces Closing of Pilot Water Solutions Acquisition",
+   "link": "https://www.prnewswire.com/news-releases/select-water-solutions-announces-closing-of-pilot-water-solutions-acquisition-302926951.html",
+   "publishDate": "2026-11-02T21:15:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "GAINESVILLE, Texas, Nov. 2, 2026 /PRNewswire/ -- Select Water Solutions, Inc. (NYSE: WTTR) (\"Select,\" the \"Company,\" \"we\" or \"us\") announced today that it has closed the previously announced acquisition of Pilot Water Solutions LLC (\"Pilot Water\"), a leading, private water midstream...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 Japanese Founder Led Stocks With Earnings Growth Up To 50%",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/3-japanese-founder-led-stocks-211239926.html",
+   "publishDate": "2026-11-02T21:12:39+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Japan just crossed an economic milestone, with the Bank of Japan saying inflation finally lines up with its 2% target and hinting at tighter policy after more than a decade of ultra-easy money. That kind of turning point can reward companies where founders still call the shots and think in decades rather than quarters. This article breaks down three founder-led Japanese stocks that fit that brief. The three stocks highlighted here offer a compelling starting point if you want exposure to...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Dow Rises Amid More Selling for AI Stocks: Stock Market Today",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/dow-rises-amid-more-selling-211229247.html",
+   "publishDate": "2026-11-02T21:12:29+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "All three main equity indexes were up before the weight of a mostly risk-off mood for the AI trade dragged the Nasdaq Composite and the S&P 500 into the red.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Australian Stock Market Today: ASX Futures Edge Up On Inflation Gauge And RBA Decision",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/australian-stock-market-today-asx-211058393.html",
+   "publishDate": "2026-11-02T21:10:58+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The Morning Bull - Australian Market Morning Update Monday, 2 Nov 2026 Australian shares are set for a slightly positive open, with SPI 200 futures pointing to a cautious bid rather than a surge. The focus is squarely on inflation data ahead of tomorrow’s RBA decision. The Melbourne Institute’s monthly inflation gauge rose 0.5% in October, with annual inflation sitting at 4.3% in September. Those readings keep alive market expectations that the RBA could lift the cash rate from 4.6% later...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Clorox Reports Q1 Fiscal Year 2027 Results, Updates Outlook",
+   "link": "https://www.prnewswire.com/news-releases/clorox-reports-q1-fiscal-year-2027-results-updates-outlook-302926739.html",
+   "publishDate": "2026-11-02T21:10:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "OAKLAND, Calif., Nov. 2, 2026 /PRNewswire/ -- The Clorox Company (NYSE: CLX) today reported results for the first quarter of fiscal year 2027, which ended Sept. 30, 2026. \"We entered this fiscal year focused on steadily improving performance while navigating continued input cost pressures....",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Metallus Announces Third-Quarter 2026 Results",
+   "link": "https://www.prnewswire.com/news-releases/metallus-announces-third-quarter-2026-results-302926742.html",
+   "publishDate": "2026-11-02T21:10:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "Net sales of $337.2 million, up 10% year over year; net income increased to $23.8 million from $8.1 million in the third quarter of 2025 and $8.9 million in the second quarter of 2026 Adjusted EBITDA of $34.5 million, an increase of 19% sequentially and year over year Invested $13.1...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "onsemi Reports Third Quarter 2026 Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/02/3393744/0/en/onsemi-reports-third-quarter-2026-results.html",
+   "publishDate": "2026-11-02T21:10:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "onsemi Reports Third Quarter 2026 Results, Earnings growth outpaces revenue growth by 4x year-over-year",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Nasdaq, S&P 500 fall behind ahead of U.S. midterms, key earnings results",
+   "link": "https://seekingalpha.com/news/4662849-nasdaq-sp-500-fall-behind-ahead-of-us-midterms-key-earnings-results",
+   "publishDate": "2026-11-02T21:09:07+00:00",
+   "source": "seekingalpha.com",
+   "summary": "Stocks close lower ahead of Apple earnings, jobs data, and U.S. midterm elections.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "SI-BONE, Inc. Reports Financial Results for the Third Quarter 2026 and Reaffirms 2026 Revenue Guidance",
+   "link": "https://www.globenewswire.com/news-release/2026/11/02/3393742/0/en/si-bone-inc-reports-financial-results-for-the-third-quarter-2026-and-reaffirms-2026-revenue-guidance.html",
+   "publishDate": "2026-11-02T21:09:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Delivered ~20% U.S. procedure volume growth in the third quarter",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Diamondback Energy beats profit estimates as Iran war lifts oil prices",
+   "link": "https://www.reuters.com/business/energy/diamondback-energy-beats-third-quarter-profit-estimates-2026-11-02/",
+   "publishDate": "2026-11-02T21:08:25.851000+00:00",
+   "source": "www.reuters.com",
+   "summary": "US shale producer Diamondback Energy surpassed Wall Street expectations for third-quarter profit on ​Monday, helped by higher output and elevated global oil ‌prices amid supply disruptions stemming from the Middle East conflict.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Americans now spend nearly half of their budgets on food and housing alone, the biggest share in 15 years",
+   "link": "https://finance.yahoo.com/economy/articles/americans-now-spend-nearly-half-210655518.html",
+   "publishDate": "2026-11-02T21:06:55+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Housing and food spending rose faster than inflation in 2025, just as consumer sentiment is stuck near all-time lows.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "On the Sidelines of Gateway Gulf 2026, Tamkeen Signs MoU with EY MENA to Establish an EY Talent Hub in Bahrain and Create 125 Jobs, Supporting MENA",
+   "link": "https://www.prnewswire.com/news-releases/on-the-sidelines-of-gateway-gulf-2026-tamkeen-signs-mou-with-ey-mena-to-establish-an-ey-talent-hub-in-bahrain-and-create-125-jobs-supporting-mena-302926949.html",
+   "publishDate": "2026-11-02T21:06:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "MANAMA, Bahrain, Nov. 2, 2026 /PRNewswire/ -- On the sidelines of Gateway Gulf 2026, the Labour Fund (Tamkeen) announced the signing of a Memorandum of Understanding (MoU) with EY MENA that aims to establish an EY Talent Hub in the Kingdom of Bahrain. Once established, the hub is expected...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Harmonic Announces Third Quarter 2026 Results",
+   "link": "https://www.prnewswire.com/news-releases/harmonic-announces-third-quarter-2026-results-302925916.html",
+   "publishDate": "2026-11-02T21:05:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "Revenue increased 64% year over year to $148.8 million, well above the high end of guidance Rest-of-Market revenue more than doubled year over year to a record 46% of total revenue Company raises full-year 2026 revenue outlook to $545 million - $555 million SAN JOSE, Calif., Nov. 2, 2026...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "V2X Reports Third Quarter 2026 Results",
+   "link": "https://www.prnewswire.com/news-releases/v2x-reports-third-quarter-2026-results-302926699.html",
+   "publishDate": "2026-11-02T21:05:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "Third Quarter Financial Highlights Revenue of $1.27 billion, up 9% year-over-year Net income of $32.0 million, up 30% year-over-year; Adjusted net income1 of $51.7 million, up 19% year-over-year Adjusted EBITDA1 of $88.6 million; Adjusted EBITDA margin1 of 7.0% Diluted EPS of $1.01, up...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "ADC Therapeutics Announces New Employee Inducement Grant",
+   "link": "https://www.prnewswire.com/news-releases/adc-therapeutics-announces-new-employee-inducement-grant-302925153.html",
+   "publishDate": "2026-11-02T21:05:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "LAUSANNE, Switzerland, Nov. 2, 2026 /PRNewswire/ -- ADC Therapeutics SA (NYSE: ADCT), a commercial-stage global leader and pioneer in the field of antibody drug conjugates (ADCs), today announced that the Company has made a grant of options to purchase an aggregate of 17,000 of the...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Cooper Standard Adopts Tax Benefits Preservation Plan to Protect its Tax Benefits and Shareholder Value",
+   "link": "https://www.prnewswire.com/news-releases/cooper-standard-adopts-tax-benefits-preservation-plan-to-protect-its-tax-benefits-and-shareholder-value-302926932.html",
+   "publishDate": "2026-11-02T21:05:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "NORTHVILLE, Mich., Nov. 2, 2026 /PRNewswire/ -- Cooper-Standard Holdings Inc. (\"Cooper Standard\" or the \"Company\") (NYSE: CPS) today announced that its Board of Directors (the \"Board\") adopted a tax benefits preservation plan (the \"Rights Agreement\") in an effort to protect stockholder...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Allison Announces Third Quarter 2026 Results",
+   "link": "https://www.prnewswire.com/news-releases/allison-announces-third-quarter-2026-results-302926860.html",
+   "publishDate": "2026-11-02T21:05:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "Raising revenue, earnings and cash flow guidance for the second consecutive quarter Net Sales of $1,534 million, up 121% year over year, including the addition of the Allison Off-Highway business unit acquired on January 1, 2026 Record quarterly net sales of $881 million for the Allison...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Aehr Test Systems Reports Record First Quarter Fiscal 2027 Revenue of $33.0 Million; Raises Full-Year Revenue Outlook to $150 Million, Triple Fiscal 2026 Revenue",
+   "link": "https://www.accessnewswire.com/newsroom/en/industrial-and-manufacturing/aehr-test-systems-reports-record-first-quarter-fiscal-2027-revenue-of-1245375",
+   "publishDate": "2026-11-02T21:05:00+00:00",
+   "source": "www.accessnewswire.com",
+   "summary": "Aehr Test Systems (NASDAQ:AEHR), a leading provider of test and burn-in solutions for semiconductor devices used in artificial intelligence (AI), silicon photonics, data center, automotive, and industrial applications, today announced financial results for its first quarter of fiscal 2027 ended September 25, 2026. Fiscal First Quarter Financial Results: Record revenue was $33.0 million, up 200% from $11.0 million in the first quarter of fiscal...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "American Saltwater Guides Association \"Menhaden Math\" Leaves Out Half the Equation",
+   "link": "https://www.accessnewswire.com/newsroom/en/industrial-and-manufacturing/american-saltwater-guides-association-%22menhaden-math%22-leaves-out-h-1245405",
+   "publishDate": "2026-11-02T21:05:00+00:00",
+   "source": "www.accessnewswire.com",
+   "summary": "The American Saltwater Guides Association's podcast, The Guide Post, opens its latest attack on the menhaden fishery under the title \"Menhaden Math Ain't Mathin'.\" The episode features Dr. Jerald Ault promoting a mortality estimate substantially lower than the revised estimate the Atlantic States Marine Fisheries Commission adopted after considering his work during its 2025 stock assessment.   Promoting the episode, ASGA asks: \"What if one of...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Bioventus Reports Third Quarter Financial Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/02/3393722/0/en/bioventus-reports-third-quarter-financial-results.html",
+   "publishDate": "2026-11-02T21:05:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "DURHAM, N.C., Nov. 02, 2026 (GLOBE NEWSWIRE) -- Bioventus Inc. (Nasdaq: BVS) (“Bioventus” or the “Company”), a global leader in innovations for active healing, today reported financial results for the three and nine months ended September 26, 2026.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Tactile Systems Technology, Inc. Reports Third Quarter 2026 Financial Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/02/3393718/0/en/tactile-systems-technology-inc-reports-third-quarter-2026-financial-results.html",
+   "publishDate": "2026-11-02T21:05:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "MINNEAPOLIS, Nov. 02, 2026 (GLOBE NEWSWIRE) -- Tactile Systems Technology, Inc. (“Tactile Medical”; the “Company”) (Nasdaq: TCMD), a medical technology company providing therapies for people with chronic disorders, today reported financial results for the third quarter ended September 30, 2026.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Camping World Holdings, Inc. Reports Third Quarter 2026 Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/02/3393728/0/en/camping-world-holdings-inc-reports-third-quarter-2026-results.html",
+   "publishDate": "2026-11-02T21:05:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Camping World Q3 2026: cost savings raised to $150M+ annualized, Q4 SG&A to fall $50M+ YoY; Adj. EBITDA $36.0M includes $12.7M F&I chargeback adjustment.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Adeia Announces Third Quarter 2026 Financial Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/02/3393737/0/en/adeia-announces-third-quarter-2026-financial-results.html",
+   "publishDate": "2026-11-02T21:05:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "ADEIA ANNOUNCES THIRD QUARTER 2026 FINANCIAL RESULTS",
+   "sentiment": null,
+   "confidence": null
+  }
+ ]
+}
