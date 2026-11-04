@@ -188,3 +188,4 @@
 {"kind": "gap_recovery_run", "day": "2026-10-22", "arm": "options", "affected": 0, "written": 0, "refused": null, "validation": null, "at": "2026-10-22T13:00:21"}
 {"kind": "gap_recovery_run", "day": "2026-10-29", "arm": "options", "affected": 0, "written": 0, "refused": null, "validation": null, "at": "2026-10-29T13:00:16"}
 {"kind": "gap_recovery_run", "day": "2026-11-02", "arm": "options", "affected": 0, "written": 0, "refused": null, "validation": null, "at": "2026-11-02T14:23:44"}
+{"kind": "gap_recovery_run", "day": "2026-11-04", "arm": "options", "affected": 0, "written": 0, "refused": null, "validation": null, "at": "2026-11-04T14:01:52"}

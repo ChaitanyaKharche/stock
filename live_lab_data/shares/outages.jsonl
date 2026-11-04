@@ -13256,3 +13256,5 @@
 {"seq":458533,"ts":"2026-11-03T12:29:02.570639","kind":"degraded_bar","detail":"1m gap before 12:28","symbol":"DIA"}
 {"seq":461302,"ts":"2026-11-03T13:45:07.973312","kind":"stale_quote","detail":"WMT age=5.9s"}
 {"seq":462517,"ts":"2026-11-03T14:19:05.613140","kind":"degraded_bar","detail":"1m gap before 14:18","symbol":"DIA"}
+{"seq":476643,"ts":"2026-11-04T13:49:07.387332","kind":"stale_quote","detail":"XLF age=6.4s"}
+{"seq":483607,"ts":"2026-11-04T16:00:00.738743","kind":"flatten_after_close","detail":"WMT VWAP_Reclaim closed at 16:00 on the last in-session NBBO from 2026-11-04 15:59:20.816000"}

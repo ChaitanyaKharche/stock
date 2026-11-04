@@ -112,3 +112,5 @@
 {"date": "2026-11-02", "outcome": "PARTIAL", "reason": "host suspended during RTH (14:59-16:23); exits of positions open across it are recovered from history", "attempts": 2, "is_session": true, "recorded_at_et": "2026-11-02T16:23:41", "utc_offset_hours": null, "supervisor_rc": 0}
 {"date": "2026-11-03", "outcome": "OPENED", "reason": "", "attempts": 1, "is_session": true, "recorded_at_et": "2026-11-03T09:06:48", "utc_offset_hours": null, "started_et": "09:06:48", "late_start": false, "arms": ["options", "shares"]}
 {"date": "2026-11-03", "outcome": "COLLECTED", "reason": "", "attempts": 2, "is_session": true, "recorded_at_et": "2026-11-03T16:00:15", "utc_offset_hours": null, "supervisor_rc": 0}
+{"date": "2026-11-04", "outcome": "OPENED", "reason": "", "attempts": 1, "is_session": true, "recorded_at_et": "2026-11-04T09:06:53", "utc_offset_hours": null, "started_et": "09:06:53", "late_start": false, "arms": ["options", "shares"]}
+{"date": "2026-11-04", "outcome": "COLLECTED", "reason": "", "attempts": 2, "is_session": true, "recorded_at_et": "2026-11-04T16:00:04", "utc_offset_hours": null, "supervisor_rc": 0}
