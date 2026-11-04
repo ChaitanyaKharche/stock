@@ -1,0 +1,548 @@
+{
+ "generated": "2026-11-03T23:43:42",
+ "arms": {
+  "options": {
+   "arm": "options",
+   "n_sessions": 17,
+   "n_live_trades": 379,
+   "n_replay_trades": 369,
+   "per_day": [
+    {
+     "day": "2026-09-25",
+     "live_net": -963.62,
+     "replay_net": -956.7,
+     "live_n": 20,
+     "replay_n": 21,
+     "twinned": 14,
+     "live_only": 6,
+     "replay_only": 7
+    },
+    {
+     "day": "2026-09-30",
+     "live_net": -659.1,
+     "replay_net": -789.26,
+     "live_n": 26,
+     "replay_n": 28,
+     "twinned": 22,
+     "live_only": 4,
+     "replay_only": 6
+    },
+    {
+     "day": "2026-10-01",
+     "live_net": -581.34,
+     "replay_net": -857.42,
+     "live_n": 29,
+     "replay_n": 30,
+     "twinned": 22,
+     "live_only": 7,
+     "replay_only": 8
+    },
+    {
+     "day": "2026-10-05",
+     "live_net": 1008.06,
+     "replay_net": 1223.74,
+     "live_n": 24,
+     "replay_n": 28,
+     "twinned": 19,
+     "live_only": 5,
+     "replay_only": 9
+    },
+    {
+     "day": "2026-10-06",
+     "live_net": -718.21,
+     "replay_net": -723.54,
+     "live_n": 15,
+     "replay_n": 19,
+     "twinned": 13,
+     "live_only": 2,
+     "replay_only": 6
+    },
+    {
+     "day": "2026-10-09",
+     "live_net": -968.62,
+     "replay_net": -1346.45,
+     "live_n": 20,
+     "replay_n": 18,
+     "twinned": 11,
+     "live_only": 9,
+     "replay_only": 7
+    },
+    {
+     "day": "2026-10-12",
+     "live_net": -144.7,
+     "replay_net": -197.54,
+     "live_n": 21,
+     "replay_n": 19,
+     "twinned": 15,
+     "live_only": 6,
+     "replay_only": 4
+    },
+    {
+     "day": "2026-10-13",
+     "live_net": -548.54,
+     "replay_net": -572.29,
+     "live_n": 19,
+     "replay_n": 16,
+     "twinned": 14,
+     "live_only": 5,
+     "replay_only": 2
+    },
+    {
+     "day": "2026-10-14",
+     "live_net": 1715.06,
+     "replay_net": 2220.98,
+     "live_n": 24,
+     "replay_n": 25,
+     "twinned": 20,
+     "live_only": 4,
+     "replay_only": 5
+    },
+    {
+     "day": "2026-10-16",
+     "live_net": 3088.82,
+     "replay_net": 3855.82,
+     "live_n": 27,
+     "replay_n": 27,
+     "twinned": 25,
+     "live_only": 2,
+     "replay_only": 2
+    },
+    {
+     "day": "2026-10-19",
+     "live_net": -1084.37,
+     "replay_net": -1087.54,
+     "live_n": 17,
+     "replay_n": 19,
+     "twinned": 12,
+     "live_only": 5,
+     "replay_only": 7
+    },
+    {
+     "day": "2026-10-23",
+     "live_net": -1303.62,
+     "replay_net": -1150.62,
+     "live_n": 20,
+     "replay_n": 20,
+     "twinned": 12,
+     "live_only": 8,
+     "replay_only": 8
+    },
+    {
+     "day": "2026-10-26",
+     "live_net": 429.66,
+     "replay_net": 286.74,
+     "live_n": 29,
+     "replay_n": 28,
+     "twinned": 19,
+     "live_only": 10,
+     "replay_only": 9
+    },
+    {
+     "day": "2026-10-27",
+     "live_net": -558.94,
+     "replay_net": -892.02,
+     "live_n": 24,
+     "replay_n": 25,
+     "twinned": 14,
+     "live_only": 10,
+     "replay_only": 11
+    },
+    {
+     "day": "2026-10-28",
+     "live_net": -1211.62,
+     "replay_net": -1645.7,
+     "live_n": 20,
+     "replay_n": 21,
+     "twinned": 15,
+     "live_only": 5,
+     "replay_only": 6
+    },
+    {
+     "day": "2026-10-30",
+     "live_net": -49.1,
+     "replay_net": -235.02,
+     "live_n": 26,
+     "replay_n": 25,
+     "twinned": 23,
+     "live_only": 3,
+     "replay_only": 2
+    },
+    {
+     "day": "2026-11-03",
+     "live_net": -946.45,
+     "replay_net": 0,
+     "live_n": 18,
+     "replay_n": 0,
+     "twinned": 0,
+     "live_only": 18,
+     "replay_only": 0
+    }
+   ],
+   "bars": {
+    "spearman": 0.85,
+    "gap": 8.0,
+    "ratio": [
+     0.8,
+     1.5
+    ],
+    "exit_mix_pp": 15.0
+   },
+   "checks": {
+    "spearman": {
+     "value": 0.892,
+     "pass": true
+    },
+    "median_gap_$": {
+     "value": 6.0,
+     "pass": true
+    },
+    "count_ratio": {
+     "value": 0.974,
+     "pass": true
+    },
+    "exit_mix_worst_pp": {
+     "value": 1.5,
+     "pass": true
+    }
+   },
+   "exit_mix_pp": {
+    "eod": -1.2,
+    "target": -1.2,
+    "bars": 1.0,
+    "time": -0.3,
+    "trail_imb": -0.5,
+    "failed": 0.8,
+    "stop": 1.5
+   },
+   "twinned_trades": 270,
+   "verdict": "PASS",
+   "excluded_sessions": {
+    "2026-08-28": "late or unknown start",
+    "2026-08-31": "late or unknown start",
+    "2026-09-01": "late or unknown start",
+    "2026-09-02": "late or unknown start",
+    "2026-09-03": "late or unknown start",
+    "2026-09-04": "late or unknown start",
+    "2026-09-08": "PARTIAL",
+    "2026-09-09": "PARTIAL",
+    "2026-09-10": "PARTIAL",
+    "2026-09-11": "PARTIAL",
+    "2026-09-14": "PARTIAL",
+    "2026-09-15": "PARTIAL",
+    "2026-09-16": "PARTIAL",
+    "2026-09-17": "PARTIAL",
+    "2026-09-18": "PARTIAL",
+    "2026-09-21": "PARTIAL",
+    "2026-09-22": "PARTIAL",
+    "2026-09-23": "PARTIAL",
+    "2026-09-24": "PARTIAL",
+    "2026-09-28": "PARTIAL",
+    "2026-09-29": "PARTIAL",
+    "2026-10-02": "PARTIAL",
+    "2026-10-07": "INTERRUPTED",
+    "2026-10-08": "PARTIAL",
+    "2026-10-15": "PARTIAL",
+    "2026-10-20": "PARTIAL",
+    "2026-10-21": "PARTIAL",
+    "2026-10-22": "PARTIAL",
+    "2026-10-29": "PARTIAL",
+    "2026-11-02": "PARTIAL"
+   },
+   "replay_dir": "C:\\Users\\chaitanyakharche\\Documents\\stock\\live_lab_backfill\\news_arms\\accept\\options",
+   "replay_meta": {
+    "provenance": "BACKFILL -- NOT PROSPECTIVE. Never counted by the dashboard, the checkpoint diagnostic or any promotion bar.",
+    "arm": "options",
+    "config_hash": "ccd00ac71f8243e9",
+    "start": "2026-08-28",
+    "end": "2026-10-30",
+    "symbols": [
+     "QQQ",
+     "SPY"
+    ],
+    "generated_by": "trade_analysis/live_lab/backfill.py",
+    "differences_from_live": [
+     "1-minute quote snapshots, live polls every 5s",
+     "vendor's final (revised) bars, not first-print bars",
+     "no feed outages, late starts, sleeps or blind windows",
+     "open interest not replayed"
+    ]
+   }
+  },
+  "shares": {
+   "arm": "shares",
+   "n_sessions": 17,
+   "n_live_trades": 2950,
+   "n_replay_trades": 2811,
+   "per_day": [
+    {
+     "day": "2026-09-25",
+     "live_net": -2843.87,
+     "replay_net": -2766.69,
+     "live_n": 165,
+     "replay_n": 171,
+     "twinned": 123,
+     "live_only": 42,
+     "replay_only": 48
+    },
+    {
+     "day": "2026-09-30",
+     "live_net": 117.63,
+     "replay_net": -58.8,
+     "live_n": 203,
+     "replay_n": 198,
+     "twinned": 130,
+     "live_only": 73,
+     "replay_only": 68
+    },
+    {
+     "day": "2026-10-01",
+     "live_net": -1119.56,
+     "replay_net": -313.95,
+     "live_n": 206,
+     "replay_n": 195,
+     "twinned": 140,
+     "live_only": 66,
+     "replay_only": 55
+    },
+    {
+     "day": "2026-10-05",
+     "live_net": -1359.72,
+     "replay_net": -1030.43,
+     "live_n": 185,
+     "replay_n": 196,
+     "twinned": 128,
+     "live_only": 57,
+     "replay_only": 68
+    },
+    {
+     "day": "2026-10-06",
+     "live_net": 624.48,
+     "replay_net": 812.79,
+     "live_n": 136,
+     "replay_n": 178,
+     "twinned": 111,
+     "live_only": 25,
+     "replay_only": 67
+    },
+    {
+     "day": "2026-10-09",
+     "live_net": 220.55,
+     "replay_net": -112.77,
+     "live_n": 161,
+     "replay_n": 152,
+     "twinned": 106,
+     "live_only": 55,
+     "replay_only": 46
+    },
+    {
+     "day": "2026-10-12",
+     "live_net": 363.19,
+     "replay_net": 74.54,
+     "live_n": 172,
+     "replay_n": 169,
+     "twinned": 118,
+     "live_only": 54,
+     "replay_only": 51
+    },
+    {
+     "day": "2026-10-13",
+     "live_net": 11.5,
+     "replay_net": 343.58,
+     "live_n": 167,
+     "replay_n": 163,
+     "twinned": 112,
+     "live_only": 55,
+     "replay_only": 51
+    },
+    {
+     "day": "2026-10-14",
+     "live_net": 1195.05,
+     "replay_net": 1318.98,
+     "live_n": 181,
+     "replay_n": 183,
+     "twinned": 137,
+     "live_only": 44,
+     "replay_only": 46
+    },
+    {
+     "day": "2026-10-16",
+     "live_net": 1678.14,
+     "replay_net": 1822.75,
+     "live_n": 192,
+     "replay_n": 193,
+     "twinned": 134,
+     "live_only": 58,
+     "replay_only": 59
+    },
+    {
+     "day": "2026-10-19",
+     "live_net": -1719.75,
+     "replay_net": -1436.02,
+     "live_n": 142,
+     "replay_n": 141,
+     "twinned": 97,
+     "live_only": 45,
+     "replay_only": 44
+    },
+    {
+     "day": "2026-10-23",
+     "live_net": -581.07,
+     "replay_net": -1166.27,
+     "live_n": 170,
+     "replay_n": 163,
+     "twinned": 114,
+     "live_only": 56,
+     "replay_only": 49
+    },
+    {
+     "day": "2026-10-26",
+     "live_net": -1263.11,
+     "replay_net": -1871.07,
+     "live_n": 192,
+     "replay_n": 195,
+     "twinned": 135,
+     "live_only": 57,
+     "replay_only": 60
+    },
+    {
+     "day": "2026-10-27",
+     "live_net": -850.48,
+     "replay_net": -818.26,
+     "live_n": 168,
+     "replay_n": 170,
+     "twinned": 115,
+     "live_only": 53,
+     "replay_only": 55
+    },
+    {
+     "day": "2026-10-28",
+     "live_net": -1425.72,
+     "replay_net": -1565.36,
+     "live_n": 169,
+     "replay_n": 168,
+     "twinned": 96,
+     "live_only": 73,
+     "replay_only": 72
+    },
+    {
+     "day": "2026-10-30",
+     "live_net": 1162.73,
+     "replay_net": 728.01,
+     "live_n": 176,
+     "replay_n": 176,
+     "twinned": 142,
+     "live_only": 34,
+     "replay_only": 34
+    },
+    {
+     "day": "2026-11-03",
+     "live_net": -1125.84,
+     "replay_net": 0,
+     "live_n": 165,
+     "replay_n": 0,
+     "twinned": 0,
+     "live_only": 165,
+     "replay_only": 0
+    }
+   ],
+   "bars": {
+    "spearman": 0.9,
+    "gap": 3.0,
+    "ratio": [
+     0.9,
+     1.3
+    ],
+    "exit_mix_pp": null
+   },
+   "checks": {
+    "spearman": {
+     "value": 0.9,
+     "pass": false
+    },
+    "median_gap_$": {
+     "value": 2.33,
+     "pass": true
+    },
+    "count_ratio": {
+     "value": 0.953,
+     "pass": true
+    }
+   },
+   "exit_mix_pp": {
+    "trail": 0.2,
+    "eod": -0.2,
+    "target": -0.3,
+    "eod_estimate": -0.2,
+    "bars": 0.7,
+    "time": -0.2,
+    "stop": 0.1
+   },
+   "twinned_trades": 1938,
+   "verdict": "FAIL",
+   "excluded_sessions": {
+    "2026-08-28": "late or unknown start",
+    "2026-08-31": "late or unknown start",
+    "2026-09-01": "late or unknown start",
+    "2026-09-02": "late or unknown start",
+    "2026-09-03": "late or unknown start",
+    "2026-09-04": "late or unknown start",
+    "2026-09-08": "PARTIAL",
+    "2026-09-09": "PARTIAL",
+    "2026-09-10": "PARTIAL",
+    "2026-09-11": "PARTIAL",
+    "2026-09-14": "PARTIAL",
+    "2026-09-15": "PARTIAL",
+    "2026-09-16": "PARTIAL",
+    "2026-09-17": "PARTIAL",
+    "2026-09-18": "PARTIAL",
+    "2026-09-21": "PARTIAL",
+    "2026-09-22": "PARTIAL",
+    "2026-09-23": "PARTIAL",
+    "2026-09-24": "PARTIAL",
+    "2026-09-28": "PARTIAL",
+    "2026-09-29": "PARTIAL",
+    "2026-10-02": "PARTIAL",
+    "2026-10-07": "INTERRUPTED",
+    "2026-10-08": "PARTIAL",
+    "2026-10-15": "PARTIAL",
+    "2026-10-20": "PARTIAL",
+    "2026-10-21": "PARTIAL",
+    "2026-10-22": "PARTIAL",
+    "2026-10-29": "PARTIAL",
+    "2026-11-02": "PARTIAL"
+   },
+   "replay_dir": "C:\\Users\\chaitanyakharche\\Documents\\stock\\live_lab_backfill\\news_arms\\accept\\shares",
+   "replay_meta": {
+    "provenance": "BACKFILL -- NOT PROSPECTIVE. Never counted by the dashboard, the checkpoint diagnostic or any promotion bar.",
+    "arm": "shares",
+    "config_hash": "7c6414fc549315f3",
+    "start": "2026-08-28",
+    "end": "2026-10-30",
+    "symbols": [
+     "SPY",
+     "QQQ",
+     "IWM",
+     "DIA",
+     "XLK",
+     "XLY",
+     "XLI",
+     "XLV",
+     "XLP",
+     "XLE",
+     "XLF",
+     "NVDA",
+     "AAPL",
+     "GOOGL",
+     "WMT"
+    ],
+    "generated_by": "trade_analysis/live_lab/backfill.py",
+    "differences_from_live": [
+     "1-minute quote snapshots, live polls every 5s",
+     "vendor's final (revised) bars, not first-print bars",
+     "no feed outages, late starts, sleeps or blind windows",
+     "open interest not replayed"
+    ]
+   }
+  }
+ }
+}

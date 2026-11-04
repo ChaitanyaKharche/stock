@@ -1,0 +1,10 @@
+{"seq":3860,"ts":"2026-09-16T15:55:02","kind":"exit_no_quote","detail":"IntradayMomentumBoundary ATM wanted eod, no bid","provenance":"BACKFILL"}
+{"seq":3861,"ts":"2026-09-16T15:55:02","kind":"exit_no_quote","detail":"IntradayMomentumBoundary ATM-1 wanted eod, no bid","provenance":"BACKFILL"}
+{"seq":3863,"ts":"2026-09-16T15:56:02","kind":"exit_no_quote","detail":"IntradayMomentumBoundary ATM wanted eod, no bid","provenance":"BACKFILL"}
+{"seq":3864,"ts":"2026-09-16T15:56:02","kind":"exit_no_quote","detail":"IntradayMomentumBoundary ATM-1 wanted eod, no bid","provenance":"BACKFILL"}
+{"seq":3865,"ts":"2026-09-16T15:57:02","kind":"exit_no_quote","detail":"IntradayMomentumBoundary ATM wanted eod, no bid","provenance":"BACKFILL"}
+{"seq":3866,"ts":"2026-09-16T15:57:02","kind":"exit_no_quote","detail":"IntradayMomentumBoundary ATM-1 wanted eod, no bid","provenance":"BACKFILL"}
+{"seq":3867,"ts":"2026-09-16T15:58:02","kind":"exit_no_quote","detail":"IntradayMomentumBoundary ATM wanted eod, no bid","provenance":"BACKFILL"}
+{"seq":3868,"ts":"2026-09-16T15:58:02","kind":"exit_no_quote","detail":"IntradayMomentumBoundary ATM-1 wanted eod, no bid","provenance":"BACKFILL"}
+{"seq":7756,"ts":"2026-10-01T10:23:02","kind":"exit_no_quote","detail":"Six_Lines ATM-1 wanted target, no bid","provenance":"BACKFILL"}
+{"seq":11130,"ts":"2026-10-16T09:38:02","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM wanted target, no bid","provenance":"BACKFILL"}

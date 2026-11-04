@@ -1,0 +1,14 @@
+{
+ "arm": "options",
+ "start": "2026-08-28",
+ "end": "2026-10-30",
+ "label": "accept",
+ "repo_sha": "8e5b958",
+ "minutes": 5.7,
+ "sessions_replayed": 45,
+ "started_at": "2026-11-03T23:43:40",
+ "sessions_without_0dte": 1,
+ "halt": [
+  "2026-09-07"
+ ]
+}
