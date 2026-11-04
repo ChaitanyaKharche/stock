@@ -538,7 +538,7 @@ rule ≈ 50%; 80% needs ≈ 0.31 σ (C1) and ≈ 0.36 σ (C2). Unchanged otherwi
 A first attempt earlier that evening recorded only connection errors: Theta Terminal was not
 running. Both files are in git; the probe now refuses to run without the terminal.
 
-## 17. Amendment 2026-11-02, on the probe results (proposed; owner approval required)
+## 17. Amendment 2026-11-02, on the probe results (OWNER APPROVED 2026-11-04: "approved 17.1 to 17.3, go")
 
 **17.1 (§2) Shares discovery starts 2018-01-02**, not 2016-01-04: the feed does not serve
 2016–2017 minute quotes on the current tier. Discovery = 2018-01-02 → 2022-12-30 (about
