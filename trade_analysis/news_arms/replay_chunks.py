@@ -91,7 +91,9 @@ def main(argv=None) -> int:
                 "repo_sha": sha, "minutes": round((time.time() - t0) / 60.0, 1),
                 "sessions_replayed": len(summary), "started_at": dt.datetime.now().isoformat(timespec="seconds")}
     if a.arm == "options":
-        days = sessions_between(start, end)
+        # only sessions the replay actually produced: a holiday has no bars and no 0DTE,
+        # and is not a missing expiry (2026-09-07 Labor Day was flagged on the first run)
+        days = [dt.date.fromisoformat(p.stem) for p in sorted((out / "daily").glob("*.json"))]
         has = zero_dte_map("SPY", days)
         (out / "sessions.json").write_text(json.dumps(has, indent=1), encoding="utf-8")
         bad = halt_reasons(has)

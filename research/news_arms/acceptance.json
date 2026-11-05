@@ -1,10 +1,10 @@
 {
- "generated": "2026-11-03T23:43:42",
+ "generated": "2026-11-05T03:54:37",
  "arms": {
   "options": {
    "arm": "options",
-   "n_sessions": 17,
-   "n_live_trades": 379,
+   "n_sessions": 16,
+   "n_live_trades": 361,
    "n_replay_trades": 369,
    "per_day": [
     {
@@ -166,16 +166,6 @@
      "twinned": 23,
      "live_only": 3,
      "replay_only": 2
-    },
-    {
-     "day": "2026-11-03",
-     "live_net": -946.45,
-     "replay_net": 0,
-     "live_n": 18,
-     "replay_n": 0,
-     "twinned": 0,
-     "live_only": 18,
-     "replay_only": 0
     }
    ],
    "bars": {
@@ -189,7 +179,7 @@
    },
    "checks": {
     "spearman": {
-     "value": 0.892,
+     "value": 0.953,
      "pass": true
     },
     "median_gap_$": {
@@ -197,22 +187,22 @@
      "pass": true
     },
     "count_ratio": {
-     "value": 0.974,
+     "value": 1.022,
      "pass": true
     },
     "exit_mix_worst_pp": {
-     "value": 1.5,
+     "value": 1.7,
      "pass": true
     }
    },
    "exit_mix_pp": {
-    "eod": -1.2,
-    "target": -1.2,
-    "bars": 1.0,
-    "time": -0.3,
-    "trail_imb": -0.5,
-    "failed": 0.8,
-    "stop": 1.5
+    "eod": -1.1,
+    "time": -0.1,
+    "trail_imb": 0.0,
+    "failed": 0.3,
+    "stop": 1.3,
+    "bars": 1.2,
+    "target": -1.7
    },
    "twinned_trades": 270,
    "verdict": "PASS",
@@ -246,9 +236,11 @@
     "2026-10-21": "PARTIAL",
     "2026-10-22": "PARTIAL",
     "2026-10-29": "PARTIAL",
-    "2026-11-02": "PARTIAL"
+    "2026-11-02": "not in the replay window",
+    "2026-11-03": "not in the replay window",
+    "2026-11-04": "not in the replay window"
    },
-   "replay_dir": "C:\\Users\\chaitanyakharche\\Documents\\stock\\live_lab_backfill\\news_arms\\accept\\options",
+   "replay_dir": "/home/user/stock/live_lab_backfill/news_arms/accept/options",
    "replay_meta": {
     "provenance": "BACKFILL -- NOT PROSPECTIVE. Never counted by the dashboard, the checkpoint diagnostic or any promotion bar.",
     "arm": "options",
@@ -270,8 +262,8 @@
   },
   "shares": {
    "arm": "shares",
-   "n_sessions": 17,
-   "n_live_trades": 2950,
+   "n_sessions": 16,
+   "n_live_trades": 2785,
    "n_replay_trades": 2811,
    "per_day": [
     {
@@ -433,16 +425,6 @@
      "twinned": 142,
      "live_only": 34,
      "replay_only": 34
-    },
-    {
-     "day": "2026-11-03",
-     "live_net": -1125.84,
-     "replay_net": 0,
-     "live_n": 165,
-     "replay_n": 0,
-     "twinned": 0,
-     "live_only": 165,
-     "replay_only": 0
     }
    ],
    "bars": {
@@ -456,29 +438,29 @@
    },
    "checks": {
     "spearman": {
-     "value": 0.9,
-     "pass": false
+     "value": 0.932,
+     "pass": true
     },
     "median_gap_$": {
      "value": 2.33,
      "pass": true
     },
     "count_ratio": {
-     "value": 0.953,
+     "value": 1.009,
      "pass": true
     }
    },
    "exit_mix_pp": {
-    "trail": 0.2,
-    "eod": -0.2,
-    "target": -0.3,
+    "eod": 0.1,
+    "time": -0.1,
+    "stop": -0.2,
     "eod_estimate": -0.2,
     "bars": 0.7,
-    "time": -0.2,
-    "stop": 0.1
+    "trail": 0.3,
+    "target": -0.6
    },
    "twinned_trades": 1938,
-   "verdict": "FAIL",
+   "verdict": "PASS",
    "excluded_sessions": {
     "2026-08-28": "late or unknown start",
     "2026-08-31": "late or unknown start",
@@ -509,9 +491,11 @@
     "2026-10-21": "PARTIAL",
     "2026-10-22": "PARTIAL",
     "2026-10-29": "PARTIAL",
-    "2026-11-02": "PARTIAL"
+    "2026-11-02": "not in the replay window",
+    "2026-11-03": "not in the replay window",
+    "2026-11-04": "not in the replay window"
    },
-   "replay_dir": "C:\\Users\\chaitanyakharche\\Documents\\stock\\live_lab_backfill\\news_arms\\accept\\shares",
+   "replay_dir": "/home/user/stock/live_lab_backfill/news_arms/accept/shares",
    "replay_meta": {
     "provenance": "BACKFILL -- NOT PROSPECTIVE. Never counted by the dashboard, the checkpoint diagnostic or any promotion bar.",
     "arm": "shares",

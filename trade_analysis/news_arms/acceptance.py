@@ -44,8 +44,12 @@ def _rows(p: Path) -> list[dict]:
     return [json.loads(l) for l in p.read_text(encoding="utf-8").splitlines() if l.strip()]
 
 
-def qualifying_sessions(lab: Path, arm: str, live: list[dict]) -> tuple[list[str], dict]:
-    """Dates that meet 14.2, with the reason each other session was excluded."""
+def qualifying_sessions(lab: Path, arm: str, live: list[dict],
+                        replayed: set | None = None) -> tuple[list[str], dict]:
+    """Dates that meet 14.2, with the reason each other session was excluded. `replayed`
+    is the set of session dates the replay actually produced; a live session outside it
+    cannot be compared (defect found 2026-11-05: 2026-11-03 was compared against an
+    unreplayed, zero-trade day)."""
     ledger = _rows(lab / "session_ledger.jsonl")
     opened = {r["date"]: r for r in ledger if r.get("outcome") == "OPENED"}
     final: dict = {}
@@ -58,7 +62,9 @@ def qualifying_sessions(lab: Path, arm: str, live: list[dict]) -> tuple[list[str
     ok, why = [], {}
     for day, fin in sorted(final.items()):
         op = opened.get(day)
-        if fin["outcome"] != "COLLECTED":
+        if replayed is not None and day not in replayed:
+            why[day] = "not in the replay window"
+        elif fin["outcome"] != "COLLECTED":
             why[day] = fin["outcome"]
         elif op is None or op.get("late_start") or (op.get("started_et") or "99") >= CLEAN_START:
             why[day] = "late or unknown start"
@@ -146,7 +152,8 @@ def run(replay_root: Path, lab: Path = LAB) -> dict:
         live = B._corrected(lab / sub if sub else lab, _rows((lab / sub if sub else lab) / "trades.jsonl"), key)
         live = [t for t in live if t.get("pnl_net") is not None]
         replay = [t for t in _rows(replay_root / arm / "trades.jsonl") if t.get("pnl_net") is not None]
-        days, why = qualifying_sessions(lab, arm, live)
+        replayed = {p.stem for p in (replay_root / arm / "daily").glob("*.json")}
+        days, why = qualifying_sessions(lab, arm, live, replayed)
         scope = B._live_scope if arm == "shares" else None
         res = compare_arm(arm, live, replay, days, windows, scope)
         res["excluded_sessions"] = why

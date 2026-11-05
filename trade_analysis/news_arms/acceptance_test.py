@@ -48,6 +48,12 @@ def test_qualifying_sessions_apply_the_four_rules(tmp_path):
     assert why[DAYS[1]] == "PARTIAL" and why[DAYS[2]] == "not under the live hash"
 
 
+def test_a_session_outside_the_replay_window_is_excluded(tmp_path):
+    lab = _lab(tmp_path, DAYS[:2])
+    ok, why = A.qualifying_sessions(lab, "shares", [], replayed={DAYS[0]})
+    assert ok == [DAYS[0]] and why[DAYS[1]] == "not in the replay window"
+
+
 def test_a_late_start_disqualifies(tmp_path):
     lab = _lab(tmp_path, DAYS[:1], started="09:39:10")
     ok, why = A.qualifying_sessions(lab, "options", [])
@@ -126,6 +132,10 @@ def test_one_arm_failing_is_reported_as_failing(tmp_path):
     root = tmp_path / "replay"
     _w(root / "shares" / "trades.jsonl", rep_s)
     _w(root / "options" / "trades.jsonl", [])
+    for arm in ("shares", "options"):
+        for d in DAYS[:16]:
+            (root / arm / "daily").mkdir(parents=True, exist_ok=True)
+            (root / arm / "daily" / f"{d}.json").write_text("{}", encoding="utf-8")
     import trade_analysis.live_lab.backfill as B
     orig = B._live_scope
     B._live_scope = lambda d: (set(), set())

@@ -555,3 +555,26 @@ join concatenates chunks and asserts no session appears twice.
 
 **17.3 (§1.4) Live-period acceptance run first:** 2026-08-28 → 2026-10-30, both arms
 (≈ 1.5 h shares, options as measured), compared on the 16 qualifying sessions per 14.2.
+
+## 18. Step 4 record: live-period acceptance, 2026-11-03/05
+
+Replay 2026-08-28 → 2026-10-30, both arms, on the laptop 2026-11-03 23:37–23:49 MST at
+`8e5b958` (shares 17.5 min for 45 sessions, options 5.7 min). Compared with the live record
+by `acceptance.py` on **16 qualifying sessions per arm** (COLLECTED, clean start, live
+hash; 6 excluded for late starts, 22 PARTIAL, 1 INTERRUPTED).
+
+| arm | Spearman (bar) | median twinned gap (bar) | count ratio (bar) | exit mix worst pp (bar) | verdict |
+|---|---|---|---|---|---|
+| options (ATM, 270 twinned trades) | **0.953** (≥ 0.85) | **$6.00** (≤ $8) | 1.022 (0.8–1.5) | 1.7 (≤ 15) | **PASS** |
+| shares (1,938 twinned) | **0.932** (≥ 0.90) | **$2.33** (≤ $3) | 1.009 (0.9–1.3) | — | **PASS** |
+
+**Defect found and corrected before the verdict was read as final:** the first run of
+`acceptance.py` (commit `e9e2b0d`) admitted 2026-11-03 as a qualifying session although the
+replay ended 2026-10-30, so both arms were scored against a day with zero replay trades;
+that run printed shares FAIL at 0.8995. The fix restricts qualifying sessions to dates the
+replay produced (test added). Nothing else changed; the bars were not moved. The halt rule
+also flagged Labor Day (a holiday, no bars) as a missing 0DTE; it now checks only replayed
+sessions. Both runs' JSON are in git.
+
+Both arms clear 14.2. The options arm's confirmatory test C2 stays pre-declared underpowered
+(13.6); C1 (shares) stands.
