@@ -13258,3 +13258,9 @@
 {"seq":462517,"ts":"2026-11-03T14:19:05.613140","kind":"degraded_bar","detail":"1m gap before 14:18","symbol":"DIA"}
 {"seq":476643,"ts":"2026-11-04T13:49:07.387332","kind":"stale_quote","detail":"XLF age=6.4s"}
 {"seq":483607,"ts":"2026-11-04T16:00:00.738743","kind":"flatten_after_close","detail":"WMT VWAP_Reclaim closed at 16:00 on the last in-session NBBO from 2026-11-04 15:59:20.816000"}
+{"seq":498124,"ts":"2026-11-05T14:44:27.599756","kind":"host_suspend","detail":"host suspended or clock stepped: 947s unaccounted between 14:28:31 and 14:44:23 ET -- the lab was NOT running","gap_sec":947.5,"from_et":"2026-11-05T14:28:31.520865","to_et":"2026-11-05T14:44:23.981602"}
+{"seq":498124,"ts":"2026-11-05T14:44:32.204124","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":498125,"ts":"2026-11-05T14:44:32.215019","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":498124,"ts":"2026-11-05T15:30:39.829632","kind":"host_suspend","detail":"host suspended or clock stepped: 2747s unaccounted between 14:44:33 and 15:30:25 ET -- the lab was NOT running","gap_sec":2747.4,"from_et":"2026-11-05T14:44:33.142808","to_et":"2026-11-05T15:30:25.524010"}
+{"seq":498126,"ts":"2026-11-05T15:30:42.429461","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":498127,"ts":"2026-11-05T15:30:59.127324","kind":"feed","detail":"upstream recovered after 2787s and 2 failed call(s)","path":"__recovered__"}
