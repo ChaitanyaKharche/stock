@@ -27,11 +27,18 @@ AKIA[0-9A-Z]{16}
 staged=$(git diff --cached --name-only --diff-filter=ACM)
 [ -z "$staged" ] && exit 0
 
+# One diff of everything staged, taken once. Passing the file list on the command line
+# broke with "Argument list too long" on a 570-file commit (2026-11-06) and the scan
+# silently passed; the staged diff needs no pathspec, and a failed diff now BLOCKS.
+added=$(git diff --cached -U0 --diff-filter=ACM | grep -E '^\+' | grep -vE '^\+\+\+') || true
+if ! git diff --cached -U0 --diff-filter=ACM >/dev/null 2>&1; then
+    echo "BLOCKED: could not read the staged diff, refusing to commit unscanned"
+    exit 1
+fi
+
 for pat in $patterns; do
     # -I skips binary; only added lines matter, hence the diff scan
-    hits=$(git diff --cached -U0 --diff-filter=ACM -- $staged \
-           | grep -E '^\+' | grep -vE '^\+\+\+' \
-           | grep -nEI "$pat" 2>/dev/null)
+    hits=$(printf '%s\n' "$added" | grep -nEI "$pat" 2>/dev/null)
     if [ -n "$hits" ]; then
         # print WHICH pattern and how many, never the matching text
         n=$(printf '%s\n' "$hits" | wc -l | tr -d ' ')
@@ -50,8 +57,7 @@ done
 #
 # Do not put a quoted example in these comments: the net scans added lines, including
 # lines of this file, and an example with trailing prose defeats the end-of-line anchor.
-generic=$(git diff --cached -U0 --diff-filter=ACM -- $staged \
-    | grep -E '^\+' | grep -vE '^\+\+\+' \
+generic=$(printf '%s\n' "$added" \
     | grep -EI '(API_KEY|SECRET_KEY|CLIENT_SECRET|CLIENT_ID|_TOKEN)[A-Za-z0-9_]*[[:space:]]*=[[:space:]]*["\x27][A-Za-z0-9_-]{16,}["\x27]' \
     | grep -viE 'your-|yourusername|xxx|placeholder|example|changeme|<|os\.getenv|os\.environ|getenv\(' \
     | grep -vE '=[[:space:]]*["\x27][A-Z][A-Z0-9_]+["\x27][[:space:]]*$')
