@@ -123,6 +123,10 @@ def main(argv=None) -> int:
     ap.add_argument("--end")
     ap.add_argument("--label")
     ap.add_argument("--force", action="store_true", help="run even inside market hours (never for the lab machine)")
+    ap.add_argument("--workers", type=int, default=1,
+                    help="months of a --year run replayed in parallel (the terminal allows 4 "
+                         "concurrent requests; 4 is the sensible maximum)")
+    ap.add_argument("--month", help="internal: replay one YYYY-MM into <label>/<arm>/<YYYY-MM>")
     a = ap.parse_args(argv)
     if in_market_hours(now_et()) and not a.force:
         print("REFUSING: inside 09:00-16:30 ET on a weekday; the lab needs the terminal. Rerun after close.")
@@ -132,10 +136,46 @@ def main(argv=None) -> int:
         return 2
     sha = subprocess.run(["git", "rev-parse", "--short", "HEAD"], cwd=ROOT, capture_output=True,
                          text=True).stdout.strip()
+    if a.month:
+        y, m = (int(x) for x in a.month.split("-"))
+        m_start, m_end = months(y)[m - 1]
+        out = OUT_ROOT / (a.label or str(y)) / a.arm / a.month
+        if (out / "RUN.json").exists():
+            return 0
+        try:
+            meta = replay_window(a.arm, m_start, m_end, out, sha)
+        except Exception:                                 # noqa: BLE001
+            return 1
+        return 3 if meta.get("halt") else 0
     if a.year:
         label = a.label or str(a.year)
         base = OUT_ROOT / label / a.arm
         halted = False
+        if a.workers > 1:
+            from concurrent.futures import ThreadPoolExecutor
+            import sys as _sys
+            todo = [f"{a.year}-{ms.month:02d}" for ms, _ in months(a.year)
+                    if not (base / f"{a.year}-{ms.month:02d}" / "RUN.json").exists()]
+            print(f"{a.arm} {a.year}: {len(todo)} month(s) to run, {a.workers} at a time", flush=True)
+
+            def one(month):
+                cmd = [_sys.executable, "-m", "trade_analysis.news_arms.replay_chunks", "--arm", a.arm,
+                       "--month", month, "--label", label] + (["--force"] if a.force else [])
+                log = base / f"{month}.log"
+                base.mkdir(parents=True, exist_ok=True)
+                with open(log, "w", encoding="utf-8") as fh:
+                    rc = subprocess.run(cmd, cwd=ROOT, stdout=fh, stderr=subprocess.STDOUT).returncode
+                print(f"  {month}: rc={rc} (log {log.name})", flush=True)
+                return month, rc
+            with ThreadPoolExecutor(max_workers=a.workers) as ex:
+                results = list(ex.map(one, todo))
+            halted = any(rc == 3 for _, rc in results)
+            failed = [m for m, rc in results if rc not in (0, 3)]
+            if failed:
+                print(f"STOPPED: {len(failed)} month(s) failed {failed}; see FAILED.json in each. Rerun to resume.")
+            done = sorted(p.name for p in base.glob("*") if (p / "RUN.json").exists())
+            print(f"{a.arm} {a.year}: {len(done)}/12 months complete")
+            return 3 if halted else (0 if len(done) == 12 else 1)
         for m_start, m_end in months(a.year):
             out = base / f"{a.year}-{m_start.month:02d}"
             if (out / "RUN.json").exists():
