@@ -151,3 +151,7 @@ live_lab_charts/
 
 # Research inputs for the news-impact study: small, hand-sourced, deliberately versioned
 !research/news_impact/*.csv
+
+# Replay runs roll signals into per-session .gz archives; the raw file is only left behind by a
+# run that died, and GitHub refuses it above 100 MB (2026-11-06, a 440 MB 2019 file).
+live_lab_backfill/news_arms/**/signals.jsonl
