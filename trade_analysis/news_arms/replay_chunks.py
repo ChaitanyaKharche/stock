@@ -167,8 +167,28 @@ def main(argv=None) -> int:
                     rc = subprocess.run(cmd, cwd=ROOT, stdout=fh, stderr=subprocess.STDOUT).returncode
                 print(f"  {month}: rc={rc} (log {log.name})", flush=True)
                 return month, rc
-            with ThreadPoolExecutor(max_workers=a.workers) as ex:
-                results = list(ex.map(one, todo))
+            import threading
+            stop = threading.Event()
+
+            def heartbeat():
+                # the month logs are the only live view; echo their last line every 2 min
+                while not stop.wait(120):
+                    for month in todo:
+                        log = base / f"{month}.log"
+                        if log.exists() and not (base / month / "RUN.json").exists():
+                            try:
+                                last = log.read_text(encoding="utf-8", errors="replace").strip().splitlines()[-1:]
+                            except OSError:
+                                last = []
+                            if last:
+                                print(f"    {month}: {last[0][:90]}", flush=True)
+            hb = threading.Thread(target=heartbeat, daemon=True)
+            hb.start()
+            try:
+                with ThreadPoolExecutor(max_workers=a.workers) as ex:
+                    results = list(ex.map(one, todo))
+            finally:
+                stop.set()
             halted = any(rc == 3 for _, rc in results)
             failed = [m for m, rc in results if rc not in (0, 3)]
             if failed:
