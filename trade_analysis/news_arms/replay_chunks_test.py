@@ -18,3 +18,32 @@ def test_halt_only_where_a_zero_dte_was_expected():
            "2022-11-03": False,   # Thursday after 2022-11-01: expected -> halt
            "2023-06-14": True}
     assert R.halt_reasons(has) == ["2021-03-10", "2022-11-03"]
+
+
+def test_a_year_is_twelve_calendar_months():
+    ms = R.months(2019)
+    assert len(ms) == 12 and ms[0] == (dt.date(2019, 1, 1), dt.date(2019, 1, 31))
+    assert ms[1][1] == dt.date(2019, 2, 28) and ms[11][1] == dt.date(2019, 12, 31)
+
+
+def test_a_failed_window_writes_failed_json_and_reraises(tmp_path, monkeypatch):
+    def boom(*a, **k):
+        raise RuntimeError("TerminalUnreachable: dead")
+    monkeypatch.setattr(R.B, "run", boom)
+    out = tmp_path / "2019-03"
+    import pytest
+    with pytest.raises(RuntimeError):
+        R.replay_window("shares", dt.date(2019, 3, 1), dt.date(2019, 3, 31), out, "abc")
+    f = (out / "FAILED.json")
+    assert f.exists() and "TerminalUnreachable" in f.read_text(encoding="utf-8")
+    assert not (out / "RUN.json").exists()
+
+
+def test_a_good_window_writes_run_json_and_clears_failed(tmp_path, monkeypatch):
+    monkeypatch.setattr(R.B, "run", lambda *a, **k: [{"date": "2019-03-01"}])
+    out = tmp_path / "2019-03"
+    out.mkdir()
+    (out / "FAILED.json").write_text("{}", encoding="utf-8")
+    meta = R.replay_window("shares", dt.date(2019, 3, 1), dt.date(2019, 3, 31), out, "abc")
+    assert meta["sessions_replayed"] == 1 and (out / "RUN.json").exists()
+    assert not (out / "FAILED.json").exists()
