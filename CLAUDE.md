@@ -80,10 +80,11 @@ The two mechanical samples agree: **stop capping winners** still stands on −1.
   2026-10-21): QQQ option caches sit on the laptop (771 files in `optcache`, 29 chains in
   `.cache/backfill`), contents never inspected — `context_recovery/09`.
 - **Any 1DTE, any symbol.** The archive is `option_quote_1m_0dte/` — 0DTE by construction.
-- **ThetaData status UNKNOWN (corrected 2026-10-21).** It lapsed to `Options: FREE` on
-  2026-09-08, but the options entitlement came back on 2026-09-14 (`runner.py:53-55`) and
-  the options arm has traded every session since. Tier and history depth unconfirmed —
-  ask him before saying anything can or cannot be measured.
+- **ThetaData tier, confirmed from the terminal's own startup log 2026-11-05: Stock
+  STANDARD, Options VALUE, Index FREE, 4 concurrent requests.** (It lapsed to `Options:
+  FREE` on 2026-09-08 and came back 2026-09-14.) Measured depth on this tier
+  (`research/news_arms/probes.json`): stock 1-minute quotes from **2018**, not 2016; SPY
+  0DTE option chains from **2020**. The terminal logs to `C:\tmp`, not to its own folder.
 
 The only option archive that exists is **SPY 0DTE, 769 sessions, 2020-01-03 to
 2024-08-07** (2021 has only 39 sessions; 2024 stops in August), and the 2024 block can be
