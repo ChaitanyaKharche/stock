@@ -1,0 +1,133 @@
+{"seq":3421,"ts":"2022-07-01T10:57:02","kind":"degraded_bar","detail":"1m gap before 10:56","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":7308,"ts":"2022-07-01T11:48:02","kind":"degraded_bar","detail":"1m gap before 11:47","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":8374,"ts":"2022-07-01T12:02:02","kind":"degraded_bar","detail":"1m gap before 12:01","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":8976,"ts":"2022-07-01T12:10:02","kind":"degraded_bar","detail":"1m gap before 12:09","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":9281,"ts":"2022-07-01T12:14:02","kind":"degraded_bar","detail":"1m gap before 12:13","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":10046,"ts":"2022-07-01T12:24:02","kind":"degraded_bar","detail":"1m gap before 12:23","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":10427,"ts":"2022-07-01T12:29:02","kind":"degraded_bar","detail":"1m gap before 12:28","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":10732,"ts":"2022-07-01T12:33:02","kind":"degraded_bar","detail":"1m gap before 12:32","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":13127,"ts":"2022-07-01T13:04:02","kind":"degraded_bar","detail":"1m gap before 13:03","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":13667,"ts":"2022-07-01T13:11:02","kind":"degraded_bar","detail":"1m gap before 13:10","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":14125,"ts":"2022-07-01T13:17:02","kind":"degraded_bar","detail":"1m gap before 13:16","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":15601,"ts":"2022-07-01T13:36:02","kind":"degraded_bar","detail":"1m gap before 13:35","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":18438,"ts":"2022-07-01T14:12:02","kind":"degraded_bar","detail":"1m gap before 14:11","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":22198,"ts":"2022-07-01T14:58:02","kind":"degraded_bar","detail":"1m gap before 14:57","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":28402,"ts":"2022-07-05T10:28:02","kind":"degraded_bar","detail":"1m gap before 10:27","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":30017,"ts":"2022-07-05T11:06:02","kind":"degraded_bar","detail":"1m gap before 11:05","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":36625,"ts":"2022-07-05T13:08:02","kind":"degraded_bar","detail":"1m gap before 13:07","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":41519,"ts":"2022-07-05T14:23:02","kind":"degraded_bar","detail":"1m gap before 14:22","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":51604,"ts":"2022-07-06T11:10:02","kind":"degraded_bar","detail":"1m gap before 11:09","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":51980,"ts":"2022-07-06T11:17:02","kind":"degraded_bar","detail":"1m gap before 11:16","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":52240,"ts":"2022-07-06T11:22:02","kind":"degraded_bar","detail":"1m gap before 11:21","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":52340,"ts":"2022-07-06T11:24:02","kind":"degraded_bar","detail":"1m gap before 11:23","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":52444,"ts":"2022-07-06T11:26:02","kind":"degraded_bar","detail":"1m gap before 11:25","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":52544,"ts":"2022-07-06T11:28:02","kind":"degraded_bar","detail":"1m gap before 11:27","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":54703,"ts":"2022-07-06T12:05:02","kind":"degraded_bar","detail":"1m gap before 12:04","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":54990,"ts":"2022-07-06T12:10:02","kind":"degraded_bar","detail":"1m gap before 12:09","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":55471,"ts":"2022-07-06T12:18:02","kind":"degraded_bar","detail":"1m gap before 12:17","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":55823,"ts":"2022-07-06T12:24:02","kind":"degraded_bar","detail":"1m gap before 12:23","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":55993,"ts":"2022-07-06T12:27:02","kind":"degraded_bar","detail":"1m gap before 12:26","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":56528,"ts":"2022-07-06T12:36:02","kind":"degraded_bar","detail":"1m gap before 12:35","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":57293,"ts":"2022-07-06T12:49:02","kind":"degraded_bar","detail":"1m gap before 12:48","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":57709,"ts":"2022-07-06T12:56:02","kind":"degraded_bar","detail":"1m gap before 12:55","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":58800,"ts":"2022-07-06T13:14:02","kind":"degraded_bar","detail":"1m gap before 13:13","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":59218,"ts":"2022-07-06T13:21:02","kind":"degraded_bar","detail":"1m gap before 13:20","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":59628,"ts":"2022-07-06T13:28:02","kind":"degraded_bar","detail":"1m gap before 13:27","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":60284,"ts":"2022-07-06T13:39:02","kind":"degraded_bar","detail":"1m gap before 13:38","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":60520,"ts":"2022-07-06T13:43:02","kind":"degraded_bar","detail":"1m gap before 13:42","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":61119,"ts":"2022-07-06T13:53:02","kind":"degraded_bar","detail":"1m gap before 13:52","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":61228,"ts":"2022-07-06T13:55:02","kind":"degraded_bar","detail":"1m gap before 13:54","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":61229,"ts":"2022-07-06T13:55:02","kind":"degraded_bar","detail":"1m gap before 13:54","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":61414,"ts":"2022-07-06T13:58:02","kind":"degraded_bar","detail":"1m gap before 13:57","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":63343,"ts":"2022-07-06T14:27:02","kind":"degraded_bar","detail":"1m gap before 14:26","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":72805,"ts":"2022-07-07T11:05:02","kind":"degraded_bar","detail":"1m gap before 11:04","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":74923,"ts":"2022-07-07T12:10:02","kind":"degraded_bar","detail":"1m gap before 12:09","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":75571,"ts":"2022-07-07T12:30:02","kind":"degraded_bar","detail":"1m gap before 12:29","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":78228,"ts":"2022-07-07T13:46:02","kind":"degraded_bar","detail":"1m gap before 13:45","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":79650,"ts":"2022-07-07T14:21:02","kind":"degraded_bar","detail":"1m gap before 14:20","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":86176,"ts":"2022-07-08T10:50:02","kind":"degraded_bar","detail":"1m gap before 10:49","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":94086,"ts":"2022-07-08T13:16:02","kind":"degraded_bar","detail":"1m gap before 13:15","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":94257,"ts":"2022-07-08T13:19:02","kind":"degraded_bar","detail":"1m gap before 13:18","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":97186,"ts":"2022-07-08T14:05:02","kind":"degraded_bar","detail":"1m gap before 14:04","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":97662,"ts":"2022-07-08T14:12:02","kind":"degraded_bar","detail":"1m gap before 14:11","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":98175,"ts":"2022-07-08T14:20:02","kind":"degraded_bar","detail":"1m gap before 14:19","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":100183,"ts":"2022-07-08T14:50:02","kind":"degraded_bar","detail":"1m gap before 14:49","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":107441,"ts":"2022-07-11T11:08:02","kind":"degraded_bar","detail":"1m gap before 11:07","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":107667,"ts":"2022-07-11T11:15:02","kind":"degraded_bar","detail":"1m gap before 11:14","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":108250,"ts":"2022-07-11T11:32:02","kind":"degraded_bar","detail":"1m gap before 11:31","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":108594,"ts":"2022-07-11T11:42:02","kind":"degraded_bar","detail":"1m gap before 11:41","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":108972,"ts":"2022-07-11T11:53:02","kind":"degraded_bar","detail":"1m gap before 11:52","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":109146,"ts":"2022-07-11T11:58:02","kind":"degraded_bar","detail":"1m gap before 11:57","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":109254,"ts":"2022-07-11T12:01:02","kind":"degraded_bar","detail":"1m gap before 12:00","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":109328,"ts":"2022-07-11T12:03:02","kind":"degraded_bar","detail":"1m gap before 12:02","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":109470,"ts":"2022-07-11T12:07:02","kind":"degraded_bar","detail":"1m gap before 12:06","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":109571,"ts":"2022-07-11T12:10:02","kind":"degraded_bar","detail":"1m gap before 12:09","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":109832,"ts":"2022-07-11T12:17:02","kind":"degraded_bar","detail":"1m gap before 12:16","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":110047,"ts":"2022-07-11T12:23:02","kind":"degraded_bar","detail":"1m gap before 12:22","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":110523,"ts":"2022-07-11T12:36:02","kind":"degraded_bar","detail":"1m gap before 12:35","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":110976,"ts":"2022-07-11T12:48:02","kind":"degraded_bar","detail":"1m gap before 12:47","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":111389,"ts":"2022-07-11T12:59:02","kind":"degraded_bar","detail":"1m gap before 12:58","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":115419,"ts":"2022-07-11T14:17:02","kind":"degraded_bar","detail":"1m gap before 14:16","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":115644,"ts":"2022-07-11T14:21:02","kind":"degraded_bar","detail":"1m gap before 14:20","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":121414,"ts":"2022-07-12T09:31:02","kind":"feed","detail":"HTTPError('HTTP 500: Internal server error')","path":"/stock/history/quote","provenance":"BACKFILL"}
+{"seq":121415,"ts":"2022-07-12T09:31:02","kind":"tick","detail":"FeedOutage(\"/stock/history/quote failed after 4 attempts: HTTPError('HTTP 500: Internal server error')\")","provenance":"BACKFILL"}
+{"seq":121416,"ts":"2022-07-12T09:32:02","kind":"feed","detail":"upstream recovered after 0s and 1 failed call(s)","path":"__recovered__","provenance":"BACKFILL"}
+{"seq":123494,"ts":"2022-07-12T10:54:02","kind":"degraded_bar","detail":"1m gap before 10:53","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":123934,"ts":"2022-07-12T11:06:02","kind":"degraded_bar","detail":"1m gap before 11:05","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":124721,"ts":"2022-07-12T11:27:02","kind":"degraded_bar","detail":"1m gap before 11:26","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":125800,"ts":"2022-07-12T11:55:02","kind":"degraded_bar","detail":"1m gap before 11:54","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":126321,"ts":"2022-07-12T12:08:02","kind":"degraded_bar","detail":"1m gap before 12:07","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":127049,"ts":"2022-07-12T12:26:02","kind":"degraded_bar","detail":"1m gap before 12:25","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":127368,"ts":"2022-07-12T12:34:02","kind":"degraded_bar","detail":"1m gap before 12:33","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":129014,"ts":"2022-07-12T13:13:02","kind":"degraded_bar","detail":"1m gap before 13:12","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":129455,"ts":"2022-07-12T13:23:02","kind":"degraded_bar","detail":"1m gap before 13:22","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":129494,"ts":"2022-07-12T13:24:02","kind":"degraded_bar","detail":"1m gap before 13:23","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":129536,"ts":"2022-07-12T13:25:02","kind":"degraded_bar","detail":"1m gap before 13:24","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":129667,"ts":"2022-07-12T13:28:02","kind":"degraded_bar","detail":"1m gap before 13:27","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":130065,"ts":"2022-07-12T13:37:02","kind":"degraded_bar","detail":"1m gap before 13:36","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":130190,"ts":"2022-07-12T13:40:02","kind":"degraded_bar","detail":"1m gap before 13:39","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":130278,"ts":"2022-07-12T13:42:02","kind":"degraded_bar","detail":"1m gap before 13:41","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":130797,"ts":"2022-07-12T13:54:02","kind":"degraded_bar","detail":"1m gap before 13:53","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":131017,"ts":"2022-07-12T13:59:02","kind":"degraded_bar","detail":"1m gap before 13:58","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":132923,"ts":"2022-07-12T14:41:02","kind":"degraded_bar","detail":"1m gap before 14:40","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":133479,"ts":"2022-07-12T14:53:02","kind":"degraded_bar","detail":"1m gap before 14:52","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":133628,"ts":"2022-07-12T14:56:02","kind":"degraded_bar","detail":"1m gap before 14:55","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":142147,"ts":"2022-07-13T11:59:02","kind":"degraded_bar","detail":"1m gap before 11:58","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":144633,"ts":"2022-07-13T12:54:02","kind":"degraded_bar","detail":"1m gap before 12:53","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":150424,"ts":"2022-07-13T14:45:02","kind":"degraded_bar","detail":"1m gap before 14:44","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":157375,"ts":"2022-07-14T11:30:02","kind":"degraded_bar","detail":"1m gap before 11:29","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":160625,"ts":"2022-07-14T12:26:02","kind":"degraded_bar","detail":"1m gap before 12:25","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":161313,"ts":"2022-07-14T12:37:02","kind":"degraded_bar","detail":"1m gap before 12:36","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":161681,"ts":"2022-07-14T12:43:02","kind":"degraded_bar","detail":"1m gap before 12:42","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":166376,"ts":"2022-07-14T13:56:02","kind":"degraded_bar","detail":"1m gap before 13:55","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":167528,"ts":"2022-07-14T14:13:02","kind":"degraded_bar","detail":"1m gap before 14:12","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":167802,"ts":"2022-07-14T14:17:02","kind":"degraded_bar","detail":"1m gap before 14:16","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":168946,"ts":"2022-07-14T14:33:02","kind":"degraded_bar","detail":"1m gap before 14:32","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":175611,"ts":"2022-07-15T09:07:00","kind":"feed","detail":"HTTPError('HTTP 500: Internal server error')","path":"/stock/history/ohlc","provenance":"BACKFILL"}
+{"seq":175612,"ts":"2022-07-15T09:07:00","kind":"warmup","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 500: Internal server error')\")","symbol":"SPY","provenance":"BACKFILL"}
+{"seq":175613,"ts":"2022-07-18T09:07:00","kind":"warmup","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 500: Internal server error')\")","symbol":"SPY","provenance":"BACKFILL"}
+{"seq":175614,"ts":"2022-07-19T09:07:00","kind":"feed","detail":"upstream recovered after 11s and 2 failed call(s)","path":"__recovered__","provenance":"BACKFILL"}
+{"seq":175617,"ts":"2022-07-19T09:07:00","kind":"feed","detail":"HTTPError('HTTP 500: Internal server error')","path":"/stock/history/ohlc","provenance":"BACKFILL"}
+{"seq":175618,"ts":"2022-07-19T09:07:00","kind":"warmup","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 500: Internal server error')\")","symbol":"IWM","provenance":"BACKFILL"}
+{"seq":175619,"ts":"2022-07-20T09:07:00","kind":"feed","detail":"upstream recovered after 1s and 1 failed call(s)","path":"__recovered__","provenance":"BACKFILL"}
+{"seq":175620,"ts":"2022-07-20T09:07:00","kind":"feed","detail":"HTTPError('HTTP 500: Internal server error')","path":"/stock/history/ohlc","provenance":"BACKFILL"}
+{"seq":175621,"ts":"2022-07-20T09:07:00","kind":"warmup","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 500: Internal server error')\")","symbol":"SPY","provenance":"BACKFILL"}
+{"seq":175622,"ts":"2022-07-21T09:07:00","kind":"feed","detail":"upstream recovered after 1s and 1 failed call(s)","path":"__recovered__","provenance":"BACKFILL"}
+{"seq":175627,"ts":"2022-07-21T09:07:00","kind":"feed","detail":"HTTPError('HTTP 500: Internal server error')","path":"/stock/history/ohlc","provenance":"BACKFILL"}
+{"seq":175628,"ts":"2022-07-21T09:07:00","kind":"warmup","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 500: Internal server error')\")","symbol":"XLK","provenance":"BACKFILL"}
+{"seq":175629,"ts":"2022-07-22T09:07:00","kind":"feed","detail":"upstream recovered after 1s and 1 failed call(s)","path":"__recovered__","provenance":"BACKFILL"}
+{"seq":175642,"ts":"2022-07-22T09:07:00","kind":"feed","detail":"HTTPError('HTTP 500: Internal server error')","path":"/stock/history/ohlc","provenance":"BACKFILL"}
+{"seq":175643,"ts":"2022-07-22T09:07:00","kind":"levels_warmup","detail":"yesterday's extended bars failed: FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 500: Internal server error')\")","symbol":"AAPL","provenance":"BACKFILL"}
+{"seq":175645,"ts":"2022-07-22T09:07:00","kind":"warmup","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 500: Internal server error')\")","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":175646,"ts":"2022-07-25T09:07:00","kind":"warmup","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 500: Internal server error')\")","symbol":"SPY","provenance":"BACKFILL"}
+{"seq":175647,"ts":"2022-07-26T09:07:00","kind":"feed","detail":"upstream recovered after 16s and 3 failed call(s)","path":"__recovered__","provenance":"BACKFILL"}
+{"seq":195999,"ts":"2022-07-27T12:31:02","kind":"degraded_bar","detail":"1m gap before 12:30","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":196771,"ts":"2022-07-27T12:53:02","kind":"degraded_bar","detail":"1m gap before 12:52","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":196876,"ts":"2022-07-27T12:56:02","kind":"degraded_bar","detail":"1m gap before 12:55","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":198205,"ts":"2022-07-27T13:32:02","kind":"degraded_bar","detail":"1m gap before 13:31","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":213145,"ts":"2022-07-28T12:39:02","kind":"degraded_bar","detail":"1m gap before 12:38","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":215931,"ts":"2022-07-28T13:30:02","kind":"degraded_bar","detail":"1m gap before 13:29","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":218191,"ts":"2022-07-28T14:07:02","kind":"degraded_bar","detail":"1m gap before 14:06","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":229293,"ts":"2022-07-29T12:22:02","kind":"degraded_bar","detail":"1m gap before 12:21","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":231264,"ts":"2022-07-29T13:15:02","kind":"degraded_bar","detail":"1m gap before 13:14","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":235288,"ts":"2022-07-29T14:50:02","kind":"degraded_bar","detail":"1m gap before 14:49","symbol":"DIA","provenance":"BACKFILL"}

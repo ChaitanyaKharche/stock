@@ -1,0 +1,42 @@
+{"seq":1,"ts":"2022-10-03T09:07:00","kind":"feed","detail":"HTTPError('HTTP 500: Internal server error')","path":"/stock/history/ohlc","provenance":"BACKFILL"}
+{"seq":2,"ts":"2022-10-03T09:07:00","kind":"warmup","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 500: Internal server error')\")","symbol":"SPY","provenance":"BACKFILL"}
+{"seq":3,"ts":"2022-10-04T16:01:00","kind":"feed","detail":"upstream recovered after 4s and 1 failed call(s)","path":"__recovered__","provenance":"BACKFILL"}
+{"seq":17,"ts":"2022-10-04T09:07:00","kind":"feed","detail":"HTTPError('HTTP 500: Internal server error')","path":"/stock/history/ohlc","provenance":"BACKFILL"}
+{"seq":18,"ts":"2022-10-04T09:07:00","kind":"warmup","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 500: Internal server error')\")","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":19,"ts":"2022-10-05T16:01:00","kind":"feed","detail":"upstream recovered after 1s and 1 failed call(s)","path":"__recovered__","provenance":"BACKFILL"}
+{"seq":33,"ts":"2022-10-05T09:07:00","kind":"feed","detail":"HTTPError('HTTP 500: Internal server error')","path":"/stock/history/ohlc","provenance":"BACKFILL"}
+{"seq":34,"ts":"2022-10-05T09:07:00","kind":"warmup","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 500: Internal server error')\")","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":35,"ts":"2022-10-06T09:07:00","kind":"feed","detail":"upstream recovered after 1s and 1 failed call(s)","path":"__recovered__","provenance":"BACKFILL"}
+{"seq":38,"ts":"2022-10-06T09:07:00","kind":"feed","detail":"HTTPError('HTTP 500: Internal server error')","path":"/stock/history/ohlc","provenance":"BACKFILL"}
+{"seq":39,"ts":"2022-10-06T09:07:00","kind":"warmup","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 500: Internal server error')\")","symbol":"IWM","provenance":"BACKFILL"}
+{"seq":40,"ts":"2022-10-07T09:07:00","kind":"warmup","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 500: Internal server error')\")","symbol":"SPY","provenance":"BACKFILL"}
+{"seq":41,"ts":"2022-10-10T09:07:00","kind":"feed","detail":"upstream recovered after 11s and 2 failed call(s)","path":"__recovered__","provenance":"BACKFILL"}
+{"seq":49,"ts":"2022-10-10T09:07:00","kind":"feed","detail":"HTTPError('HTTP 500: Internal server error')","path":"/stock/history/ohlc","provenance":"BACKFILL"}
+{"seq":50,"ts":"2022-10-10T09:07:00","kind":"warmup","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 500: Internal server error')\")","symbol":"XLV","provenance":"BACKFILL"}
+{"seq":51,"ts":"2022-10-11T09:07:00","kind":"feed","detail":"upstream recovered after 1s and 1 failed call(s)","path":"__recovered__","provenance":"BACKFILL"}
+{"seq":66,"ts":"2022-10-11T09:07:00","kind":"feed","detail":"HTTPError('HTTP 500: Internal server error')","path":"/stock/history/ohlc","provenance":"BACKFILL"}
+{"seq":67,"ts":"2022-10-11T09:07:00","kind":"warmup","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 500: Internal server error')\")","symbol":"WMT","provenance":"BACKFILL"}
+{"seq":68,"ts":"2022-10-12T09:07:00","kind":"levels_warmup","detail":"yesterday's extended bars failed: FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 500: Internal server error')\")","symbol":"SPY","provenance":"BACKFILL"}
+{"seq":70,"ts":"2022-10-12T09:07:00","kind":"feed","detail":"upstream recovered after 8s and 2 failed call(s)","path":"__recovered__","provenance":"BACKFILL"}
+{"seq":84,"ts":"2022-10-12T09:07:00","kind":"feed","detail":"HTTPError('HTTP 500: Internal server error')","path":"/stock/history/ohlc","provenance":"BACKFILL"}
+{"seq":85,"ts":"2022-10-12T09:07:00","kind":"warmup","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 500: Internal server error')\")","symbol":"WMT","provenance":"BACKFILL"}
+{"seq":86,"ts":"2022-10-13T09:07:00","kind":"feed","detail":"upstream recovered after 4s and 1 failed call(s)","path":"__recovered__","provenance":"BACKFILL"}
+{"seq":33716,"ts":"2022-10-14T14:05:02","kind":"degraded_bar","detail":"1m gap before 14:04","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":54576,"ts":"2022-10-18T09:31:02","kind":"feed","detail":"HTTPError('HTTP 500: Internal server error')","path":"/stock/history/ohlc","provenance":"BACKFILL"}
+{"seq":54577,"ts":"2022-10-18T09:31:02","kind":"levels_fetch","detail":"today's premarket fetch failed, will retry: FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 500: Internal server error')\")","symbol":"IWM","provenance":"BACKFILL"}
+{"seq":54578,"ts":"2022-10-18T09:31:02","kind":"feed","detail":"upstream recovered after 1s and 1 failed call(s)","path":"__recovered__","provenance":"BACKFILL"}
+{"seq":54587,"ts":"2022-10-18T09:31:02","kind":"feed","detail":"HTTPError('HTTP 500: Internal server error')","path":"/stock/history/ohlc","provenance":"BACKFILL"}
+{"seq":54588,"ts":"2022-10-18T09:31:02","kind":"levels_fetch","detail":"today's premarket fetch failed, will retry: FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 500: Internal server error')\")","symbol":"NVDA","provenance":"BACKFILL"}
+{"seq":54589,"ts":"2022-10-18T09:31:02","kind":"feed","detail":"upstream recovered after 4s and 1 failed call(s)","path":"__recovered__","provenance":"BACKFILL"}
+{"seq":54592,"ts":"2022-10-18T09:31:02","kind":"feed","detail":"HTTPError('HTTP 500: Internal server error')","path":"/stock/history/ohlc","provenance":"BACKFILL"}
+{"seq":54593,"ts":"2022-10-18T09:31:02","kind":"levels_fetch","detail":"today's premarket fetch failed, will retry: FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 500: Internal server error')\")","symbol":"WMT","provenance":"BACKFILL"}
+{"seq":54594,"ts":"2022-10-18T09:32:02","kind":"feed","detail":"upstream recovered after 4s and 1 failed call(s)","path":"__recovered__","provenance":"BACKFILL"}
+{"seq":112005,"ts":"2022-10-21T09:31:02","kind":"feed","detail":"HTTPError('HTTP 500: Internal server error')","path":"/stock/history/quote","provenance":"BACKFILL"}
+{"seq":112006,"ts":"2022-10-21T09:31:02","kind":"tick","detail":"FeedOutage(\"/stock/history/quote failed after 4 attempts: HTTPError('HTTP 500: Internal server error')\")","provenance":"BACKFILL"}
+{"seq":112007,"ts":"2022-10-21T09:32:02","kind":"feed","detail":"upstream recovered after 1s and 1 failed call(s)","path":"__recovered__","provenance":"BACKFILL"}
+{"seq":166780,"ts":"2022-10-26T09:31:02","kind":"feed","detail":"HTTPError('HTTP 500: Internal server error')","path":"/stock/history/quote","provenance":"BACKFILL"}
+{"seq":166781,"ts":"2022-10-26T09:31:02","kind":"tick","detail":"FeedOutage(\"/stock/history/quote failed after 4 attempts: HTTPError('HTTP 500: Internal server error')\")","provenance":"BACKFILL"}
+{"seq":166782,"ts":"2022-10-26T09:32:02","kind":"feed","detail":"upstream recovered after 3s and 1 failed call(s)","path":"__recovered__","provenance":"BACKFILL"}
+{"seq":166783,"ts":"2022-10-26T09:32:02","kind":"feed","detail":"HTTPError('HTTP 500: Internal server error')","path":"/stock/history/ohlc","provenance":"BACKFILL"}
+{"seq":166784,"ts":"2022-10-26T09:32:02","kind":"levels_fetch","detail":"today's premarket fetch failed, will retry: FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 500: Internal server error')\")","symbol":"SPY","provenance":"BACKFILL"}
+{"seq":166785,"ts":"2022-10-26T09:32:02","kind":"feed","detail":"upstream recovered after 2s and 1 failed call(s)","path":"__recovered__","provenance":"BACKFILL"}

@@ -1,0 +1,31 @@
+{"seq":2,"ts":"2022-11-01T09:07:00","kind":"feed","detail":"HTTPError('HTTP 500: Internal server error')","path":"/stock/history/ohlc","provenance":"BACKFILL"}
+{"seq":3,"ts":"2022-11-01T09:07:00","kind":"warmup","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 500: Internal server error')\")","symbol":"QQQ","provenance":"BACKFILL"}
+{"seq":4,"ts":"2022-11-02T16:01:00","kind":"feed","detail":"upstream recovered after 2s and 1 failed call(s)","path":"__recovered__","provenance":"BACKFILL"}
+{"seq":8,"ts":"2022-11-02T09:07:00","kind":"feed","detail":"HTTPError('HTTP 500: Internal server error')","path":"/stock/history/ohlc","provenance":"BACKFILL"}
+{"seq":9,"ts":"2022-11-02T09:07:00","kind":"warmup","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 500: Internal server error')\")","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":10,"ts":"2022-11-03T09:07:00","kind":"feed","detail":"upstream recovered after 1s and 1 failed call(s)","path":"__recovered__","provenance":"BACKFILL"}
+{"seq":24,"ts":"2022-11-03T09:07:00","kind":"feed","detail":"HTTPError('HTTP 500: Internal server error')","path":"/stock/history/ohlc","provenance":"BACKFILL"}
+{"seq":25,"ts":"2022-11-03T09:07:00","kind":"warmup","detail":"FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 500: Internal server error')\")","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":26,"ts":"2022-11-04T09:07:00","kind":"feed","detail":"upstream recovered after 2s and 1 failed call(s)","path":"__recovered__","provenance":"BACKFILL"}
+{"seq":24069,"ts":"2022-11-07T09:31:02","kind":"feed","detail":"HTTPError('HTTP 500: Internal server error')","path":"/stock/history/quote","provenance":"BACKFILL"}
+{"seq":24070,"ts":"2022-11-07T09:31:02","kind":"tick","detail":"FeedOutage(\"/stock/history/quote failed after 4 attempts: HTTPError('HTTP 500: Internal server error')\")","provenance":"BACKFILL"}
+{"seq":24071,"ts":"2022-11-07T09:32:02","kind":"feed","detail":"upstream recovered after 3s and 1 failed call(s)","path":"__recovered__","provenance":"BACKFILL"}
+{"seq":24076,"ts":"2022-11-07T09:32:02","kind":"feed","detail":"HTTPError('HTTP 500: Internal server error')","path":"/stock/history/ohlc","provenance":"BACKFILL"}
+{"seq":24077,"ts":"2022-11-07T09:32:02","kind":"levels_fetch","detail":"today's premarket fetch failed, will retry: FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 500: Internal server error')\")","symbol":"XLK","provenance":"BACKFILL"}
+{"seq":24078,"ts":"2022-11-07T09:32:02","kind":"feed","detail":"upstream recovered after 0s and 1 failed call(s)","path":"__recovered__","provenance":"BACKFILL"}
+{"seq":24087,"ts":"2022-11-07T09:32:02","kind":"feed","detail":"HTTPError('HTTP 500: Internal server error')","path":"/stock/history/ohlc","provenance":"BACKFILL"}
+{"seq":24088,"ts":"2022-11-07T09:32:02","kind":"levels_fetch","detail":"today's premarket fetch failed, will retry: FeedOutage(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 500: Internal server error')\")","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":24089,"ts":"2022-11-07T09:32:02","kind":"feed","detail":"upstream recovered after 4s and 1 failed call(s)","path":"__recovered__","provenance":"BACKFILL"}
+{"seq":24092,"ts":"2022-11-07T09:33:02","kind":"feed","detail":"HTTPError('HTTP 500: Internal server error')","path":"/stock/history/ohlc","provenance":"BACKFILL"}
+{"seq":24099,"ts":"2022-11-07T09:34:02","kind":"feed","detail":"upstream recovered after 0s and 1 failed call(s)","path":"__recovered__","provenance":"BACKFILL"}
+{"seq":192134,"ts":"2022-11-18T13:42:02","kind":"degraded_bar","detail":"1m gap before 13:41","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":192425,"ts":"2022-11-18T13:53:02","kind":"degraded_bar","detail":"1m gap before 13:52","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":193068,"ts":"2022-11-18T14:17:02","kind":"degraded_bar","detail":"1m gap before 14:16","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":198046,"ts":"2022-11-21T11:13:02","kind":"degraded_bar","detail":"1m gap before 11:12","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":209286,"ts":"2022-11-21T14:59:02","kind":"degraded_bar","detail":"1m gap before 14:58","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":219598,"ts":"2022-11-22T12:57:02","kind":"degraded_bar","detail":"1m gap before 12:56","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":249006,"ts":"2022-11-28T12:26:02","kind":"degraded_bar","detail":"1m gap before 12:25","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":249118,"ts":"2022-11-28T12:29:02","kind":"degraded_bar","detail":"1m gap before 12:28","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":251502,"ts":"2022-11-28T13:19:02","kind":"degraded_bar","detail":"1m gap before 13:18","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":273257,"ts":"2022-11-29T14:00:02","kind":"degraded_bar","detail":"1m gap before 13:59","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":285855,"ts":"2022-11-30T12:59:02","kind":"degraded_bar","detail":"1m gap before 12:58","symbol":"DIA","provenance":"BACKFILL"}
