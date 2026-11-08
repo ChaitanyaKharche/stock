@@ -20,8 +20,8 @@
     "WMT"
   ],
   "notional_per_trade": 10000.0,
-  "trades_closed": 188,
-  "net": -1106.04,
+  "trades_closed": 194,
+  "net": -941.21,
   "still_open": 0,
   "degraded_bars": {},
   "feed": {
