@@ -1,0 +1,18 @@
+{
+  "provenance": "BACKFILL -- NOT PROSPECTIVE. Never counted by the dashboard, the checkpoint diagnostic or any promotion bar.",
+  "arm": "options",
+  "config_hash": "ccd00ac71f8243e9",
+  "start": "2020-04-01",
+  "end": "2020-04-30",
+  "symbols": [
+    "QQQ",
+    "SPY"
+  ],
+  "generated_by": "trade_analysis/live_lab/backfill.py",
+  "differences_from_live": [
+    "1-minute quote snapshots, live polls every 5s",
+    "vendor's final (revised) bars, not first-print bars",
+    "no feed outages, late starts, sleeps or blind windows",
+    "open interest not replayed"
+  ]
+}

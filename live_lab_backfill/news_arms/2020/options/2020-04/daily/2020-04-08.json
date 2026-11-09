@@ -1,0 +1,23 @@
+{
+  "date": "2020-04-08",
+  "config_hash": "ccd00ac71f8243e9",
+  "symbols": [
+    "QQQ",
+    "SPY"
+  ],
+  "signals_decided": 82,
+  "signals_skipped": 29,
+  "fills_skipped": 72,
+  "trades_closed": 30,
+  "degraded_bars": {},
+  "atm_net": -55.81,
+  "feed": {
+    "source": "HISTORY_BACKFILL",
+    "calls": 0,
+    "retries": 0,
+    "bar_cache_hits": 0,
+    "bar_cache_misses": 0,
+    "outage_episodes": 0,
+    "upstream_down_now": false
+  }
+}

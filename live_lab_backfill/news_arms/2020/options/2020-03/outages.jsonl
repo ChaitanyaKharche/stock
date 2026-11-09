@@ -1,0 +1,8 @@
+{"seq":1818,"ts":"2020-03-09T09:50:02","kind":"degraded_bar","detail":"gap in admitted 1m sequence before 09:49","symbol":"QQQ","provenance":"BACKFILL"}
+{"seq":1821,"ts":"2020-03-09T09:50:02","kind":"degraded_bar","detail":"gap in admitted 1m sequence before 09:49","symbol":"SPY","provenance":"BACKFILL"}
+{"seq":2830,"ts":"2020-03-12T09:51:02","kind":"degraded_bar","detail":"gap in admitted 1m sequence before 09:50","symbol":"QQQ","provenance":"BACKFILL"}
+{"seq":2831,"ts":"2020-03-12T09:51:02","kind":"degraded_bar","detail":"gap in admitted 1m sequence before 09:50","symbol":"SPY","provenance":"BACKFILL"}
+{"seq":3452,"ts":"2020-03-16T09:46:02","kind":"degraded_bar","detail":"gap in admitted 1m sequence before 09:45","symbol":"QQQ","provenance":"BACKFILL"}
+{"seq":3453,"ts":"2020-03-16T09:46:02","kind":"degraded_bar","detail":"gap in admitted 1m sequence before 09:45","symbol":"SPY","provenance":"BACKFILL"}
+{"seq":4612,"ts":"2020-03-18T13:12:02","kind":"degraded_bar","detail":"gap in admitted 1m sequence before 13:11","symbol":"QQQ","provenance":"BACKFILL"}
+{"seq":4613,"ts":"2020-03-18T13:12:02","kind":"degraded_bar","detail":"gap in admitted 1m sequence before 13:11","symbol":"SPY","provenance":"BACKFILL"}

@@ -1,0 +1,11 @@
+{
+ "arm": "options",
+ "start": "2022-01-01",
+ "end": "2022-01-31",
+ "repo_sha": "13e8f5c",
+ "minutes": 3.7,
+ "sessions_replayed": 20,
+ "started_at": "2026-11-08T23:30:16",
+ "sessions_without_0dte": 7,
+ "halt": []
+}

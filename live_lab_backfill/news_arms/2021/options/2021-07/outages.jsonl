@@ -1,0 +1,2 @@
+{"seq":6088,"ts":"2021-07-23T10:07:02","kind":"exit_no_quote","detail":"ORB_15min ATM wanted stop, no bid","provenance":"BACKFILL"}
+{"seq":6089,"ts":"2021-07-23T10:07:02","kind":"exit_no_quote","detail":"ORB_15min ATM+1 wanted stop, no bid","provenance":"BACKFILL"}
