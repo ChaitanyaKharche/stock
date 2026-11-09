@@ -578,3 +578,20 @@ sessions. Both runs' JSON are in git.
 
 Both arms clear 14.2. The options arm's confirmatory test C2 stays pre-declared underpowered
 (13.6); C1 (shares) stands.
+
+## 19. Step 5 record: shares holdout replay, 2026-11-08
+
+Holdout 2023-01-03 → 2026-08-27 replayed on the laptop 2026-11-08 at `7b2cb4a` (2023, 2024,
+2025 as monthly chunks with 3 workers, rc 0 for all 36 months; 2026-01-02 → 08-27 as one
+chunk, 164 sessions, 221 min). **Not joined, not read.** The join and the analysis code read
+discovery only until the discovery report is committed and gate 2 has passed (§2, 14.3).
+
+**Exposure, recorded rather than hidden (CLAUDE.md: wrong things are corrected in place,
+never deleted):** the replay heartbeat prints one session's trade count and net P&L every
+two minutes, and the owner pasted those consoles into the chat. The assistant therefore saw
+roughly one in five holdout sessions' daily nets, unaggregated, before discovery was
+analysed. No sum, mean or event join was computed from them, and no event calendar was
+beside them. The heartbeat print is a replay diagnostic, not an analysis read, but it is a
+read of holdout numbers and is logged here as one. Mitigation for the options holdout (2023):
+run with `--workers 3` and do not paste the console; the exit code and `RUN.json` are
+enough.
