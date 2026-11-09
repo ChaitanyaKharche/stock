@@ -1,0 +1,1617 @@
+{
+ "arm": "shares",
+ "set": "discovery",
+ "window": [
+  "2018-01-02",
+  "2022-12-30"
+ ],
+ "regime_cuts_med20_range_bp": [
+  111.2118,
+  184.4911
+ ],
+ "chunks": [
+  {
+   "dir": "live_lab_backfill/news_arms/2018/shares",
+   "start": "2018-01-01",
+   "end": "2018-12-31",
+   "repo_sha": "be9cc6a",
+   "sessions_replayed": 248
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2019/shares/2019-01",
+   "start": "2019-01-01",
+   "end": "2019-01-31",
+   "repo_sha": "9aca83c",
+   "sessions_replayed": 21
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2019/shares/2019-02",
+   "start": "2019-02-01",
+   "end": "2019-02-28",
+   "repo_sha": "9aca83c",
+   "sessions_replayed": 19
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2019/shares/2019-03",
+   "start": "2019-03-01",
+   "end": "2019-03-31",
+   "repo_sha": "9aca83c",
+   "sessions_replayed": 21
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2019/shares/2019-04",
+   "start": "2019-04-01",
+   "end": "2019-04-30",
+   "repo_sha": "9aca83c",
+   "sessions_replayed": 21
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2019/shares/2019-05",
+   "start": "2019-05-01",
+   "end": "2019-05-31",
+   "repo_sha": "9aca83c",
+   "sessions_replayed": 22
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2019/shares/2019-06",
+   "start": "2019-06-01",
+   "end": "2019-06-30",
+   "repo_sha": "9aca83c",
+   "sessions_replayed": 20
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2019/shares/2019-07",
+   "start": "2019-07-01",
+   "end": "2019-07-31",
+   "repo_sha": "9aca83c",
+   "sessions_replayed": 21
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2019/shares/2019-08",
+   "start": "2019-08-01",
+   "end": "2019-08-31",
+   "repo_sha": "9aca83c",
+   "sessions_replayed": 22
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2019/shares/2019-09",
+   "start": "2019-09-01",
+   "end": "2019-09-30",
+   "repo_sha": "9aca83c",
+   "sessions_replayed": 20
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2019/shares/2019-10",
+   "start": "2019-10-01",
+   "end": "2019-10-31",
+   "repo_sha": "9aca83c",
+   "sessions_replayed": 23
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2019/shares/2019-11",
+   "start": "2019-11-01",
+   "end": "2019-11-30",
+   "repo_sha": "9aca83c",
+   "sessions_replayed": 19
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2019/shares/2019-12",
+   "start": "2019-12-01",
+   "end": "2019-12-31",
+   "repo_sha": "9aca83c",
+   "sessions_replayed": 20
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2020/shares/2020-01",
+   "start": "2020-01-01",
+   "end": "2020-01-31",
+   "repo_sha": "4948861",
+   "sessions_replayed": 21
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2020/shares/2020-02",
+   "start": "2020-02-01",
+   "end": "2020-02-29",
+   "repo_sha": "4948861",
+   "sessions_replayed": 19
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2020/shares/2020-03",
+   "start": "2020-03-01",
+   "end": "2020-03-31",
+   "repo_sha": "4948861",
+   "sessions_replayed": 22
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2020/shares/2020-04",
+   "start": "2020-04-01",
+   "end": "2020-04-30",
+   "repo_sha": "4948861",
+   "sessions_replayed": 21
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2020/shares/2020-05",
+   "start": "2020-05-01",
+   "end": "2020-05-31",
+   "repo_sha": "4948861",
+   "sessions_replayed": 20
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2020/shares/2020-06",
+   "start": "2020-06-01",
+   "end": "2020-06-30",
+   "repo_sha": "4948861",
+   "sessions_replayed": 22
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2020/shares/2020-07",
+   "start": "2020-07-01",
+   "end": "2020-07-31",
+   "repo_sha": "4948861",
+   "sessions_replayed": 22
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2020/shares/2020-08",
+   "start": "2020-08-01",
+   "end": "2020-08-31",
+   "repo_sha": "4948861",
+   "sessions_replayed": 21
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2020/shares/2020-09",
+   "start": "2020-09-01",
+   "end": "2020-09-30",
+   "repo_sha": "4948861",
+   "sessions_replayed": 21
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2020/shares/2020-10",
+   "start": "2020-10-01",
+   "end": "2020-10-31",
+   "repo_sha": "4948861",
+   "sessions_replayed": 22
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2020/shares/2020-11",
+   "start": "2020-11-01",
+   "end": "2020-11-30",
+   "repo_sha": "4948861",
+   "sessions_replayed": 19
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2020/shares/2020-12",
+   "start": "2020-12-01",
+   "end": "2020-12-31",
+   "repo_sha": "4948861",
+   "sessions_replayed": 21
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2021/shares/2021-01",
+   "start": "2021-01-01",
+   "end": "2021-01-31",
+   "repo_sha": "4948861",
+   "sessions_replayed": 19
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2021/shares/2021-02",
+   "start": "2021-02-01",
+   "end": "2021-02-28",
+   "repo_sha": "4948861",
+   "sessions_replayed": 19
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2021/shares/2021-03",
+   "start": "2021-03-01",
+   "end": "2021-03-31",
+   "repo_sha": "4948861",
+   "sessions_replayed": 23
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2021/shares/2021-04",
+   "start": "2021-04-01",
+   "end": "2021-04-30",
+   "repo_sha": "4948861",
+   "sessions_replayed": 21
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2021/shares/2021-05",
+   "start": "2021-05-01",
+   "end": "2021-05-31",
+   "repo_sha": "4948861",
+   "sessions_replayed": 20
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2021/shares/2021-06",
+   "start": "2021-06-01",
+   "end": "2021-06-30",
+   "repo_sha": "4948861",
+   "sessions_replayed": 22
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2021/shares/2021-07",
+   "start": "2021-07-01",
+   "end": "2021-07-31",
+   "repo_sha": "4948861",
+   "sessions_replayed": 21
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2021/shares/2021-08",
+   "start": "2021-08-01",
+   "end": "2021-08-31",
+   "repo_sha": "4948861",
+   "sessions_replayed": 22
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2021/shares/2021-09",
+   "start": "2021-09-01",
+   "end": "2021-09-30",
+   "repo_sha": "4948861",
+   "sessions_replayed": 21
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2021/shares/2021-10",
+   "start": "2021-10-01",
+   "end": "2021-10-31",
+   "repo_sha": "4948861",
+   "sessions_replayed": 21
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2021/shares/2021-11",
+   "start": "2021-11-01",
+   "end": "2021-11-30",
+   "repo_sha": "4948861",
+   "sessions_replayed": 20
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2021/shares/2021-12",
+   "start": "2021-12-01",
+   "end": "2021-12-31",
+   "repo_sha": "4948861",
+   "sessions_replayed": 22
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2022/shares/2022-01",
+   "start": "2022-01-01",
+   "end": "2022-01-31",
+   "repo_sha": "c808dbd",
+   "sessions_replayed": 20
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2022/shares/2022-02",
+   "start": "2022-02-01",
+   "end": "2022-02-28",
+   "repo_sha": "c808dbd",
+   "sessions_replayed": 19
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2022/shares/2022-03",
+   "start": "2022-03-01",
+   "end": "2022-03-31",
+   "repo_sha": "c808dbd",
+   "sessions_replayed": 23
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2022/shares/2022-04",
+   "start": "2022-04-01",
+   "end": "2022-04-30",
+   "repo_sha": "c808dbd",
+   "sessions_replayed": 20
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2022/shares/2022-05",
+   "start": "2022-05-01",
+   "end": "2022-05-31",
+   "repo_sha": "c808dbd",
+   "sessions_replayed": 20
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2022/shares/2022-06",
+   "start": "2022-06-01",
+   "end": "2022-06-30",
+   "repo_sha": "61fd647",
+   "sessions_replayed": 21
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2022/shares/2022-07",
+   "start": "2022-07-01",
+   "end": "2022-07-31",
+   "repo_sha": "c808dbd",
+   "sessions_replayed": 13
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2022/shares/2022-08",
+   "start": "2022-08-01",
+   "end": "2022-08-31",
+   "repo_sha": "c808dbd",
+   "sessions_replayed": 19
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2022/shares/2022-09",
+   "start": "2022-09-01",
+   "end": "2022-09-30",
+   "repo_sha": "61fd647",
+   "sessions_replayed": 21
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2022/shares/2022-10",
+   "start": "2022-10-01",
+   "end": "2022-10-31",
+   "repo_sha": "c808dbd",
+   "sessions_replayed": 13
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2022/shares/2022-11",
+   "start": "2022-11-01",
+   "end": "2022-11-30",
+   "repo_sha": "c808dbd",
+   "sessions_replayed": 17
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2022/shares/2022-12",
+   "start": "2022-12-01",
+   "end": "2022-12-31",
+   "repo_sha": "61fd647",
+   "sessions_replayed": 21
+  }
+ ],
+ "config_hashes": [
+  "7c6414fc549315f3"
+ ],
+ "live_hash": "7c6414fc549315f3",
+ "generated": "2026-11-08T07:01:10",
+ "n_sessions": 1226,
+ "n_scheduled_sessions": 231,
+ "n_no_scheduled_control": 995,
+ "n_no_event_any_type": 866,
+ "n_multi_category_sessions": 37,
+ "by_year": {
+  "2018": 248,
+  "2019": 249,
+  "2020": 251,
+  "2021": 251,
+  "2022": 227
+ },
+ "by_regime": {
+  "low": 416,
+  "mid": 416,
+  "high": 394
+ },
+ "per_category": {
+  "FOMC": {
+   "sessions": 38,
+   "trades": 7406,
+   "single_category_sessions": 33,
+   "meets_minimums": true,
+   "tested": true,
+   "descriptive_placebo": false,
+   "never_tested": false
+  },
+  "CPI": {
+   "sessions": 60,
+   "trades": 11168,
+   "single_category_sessions": 51,
+   "meets_minimums": true,
+   "tested": true,
+   "descriptive_placebo": false,
+   "never_tested": false
+  },
+  "NFP": {
+   "sessions": 58,
+   "trades": 10421,
+   "single_category_sessions": 50,
+   "meets_minimums": true,
+   "tested": true,
+   "descriptive_placebo": false,
+   "never_tested": false
+  },
+  "GDP_ADV": {
+   "sessions": 20,
+   "trades": 3747,
+   "single_category_sessions": 15,
+   "meets_minimums": false,
+   "tested": false,
+   "descriptive_placebo": false,
+   "never_tested": false
+  },
+  "PCE": {
+   "sessions": 59,
+   "trades": 10784,
+   "single_category_sessions": 51,
+   "meets_minimums": true,
+   "tested": true,
+   "descriptive_placebo": false,
+   "never_tested": false
+  },
+  "war_military": {
+   "sessions": 19,
+   "trades": 3513,
+   "single_category_sessions": 15,
+   "meets_minimums": false,
+   "tested": false,
+   "descriptive_placebo": false,
+   "never_tested": false
+  },
+  "trade_tariff": {
+   "sessions": 40,
+   "trades": 7345,
+   "single_category_sessions": 28,
+   "meets_minimums": true,
+   "tested": false,
+   "descriptive_placebo": true,
+   "never_tested": false
+  },
+  "financial_stress": {
+   "sessions": 17,
+   "trades": 3231,
+   "single_category_sessions": 16,
+   "meets_minimums": false,
+   "tested": false,
+   "descriptive_placebo": false,
+   "never_tested": true
+  },
+  "us_fiscal": {
+   "sessions": 18,
+   "trades": 3262,
+   "single_category_sessions": 13,
+   "meets_minimums": false,
+   "tested": false,
+   "descriptive_placebo": false,
+   "never_tested": false
+  },
+  "pandemic_health": {
+   "sessions": 16,
+   "trades": 2813,
+   "single_category_sessions": 10,
+   "meets_minimums": false,
+   "tested": false,
+   "descriptive_placebo": false,
+   "never_tested": false
+  },
+  "political_shock": {
+   "sessions": 29,
+   "trades": 5291,
+   "single_category_sessions": 22,
+   "meets_minimums": false,
+   "tested": false,
+   "descriptive_placebo": false,
+   "never_tested": false
+  },
+  "energy_shock": {
+   "sessions": 19,
+   "trades": 3564,
+   "single_category_sessions": 16,
+   "meets_minimums": false,
+   "tested": false,
+   "descriptive_placebo": false,
+   "never_tested": false
+  },
+  "cyber_infrastructure": {
+   "sessions": 5,
+   "trades": 958,
+   "single_category_sessions": 3,
+   "meets_minimums": false,
+   "tested": false,
+   "descriptive_placebo": false,
+   "never_tested": false
+  }
+ },
+ "m_H2_scheduled_types": 3,
+ "m_H3_scheduled_types": 4,
+ "m_Q7_setup_x_category": 66,
+ "q7_cells": {
+  "Crabel_Stretch|FOMC": {
+   "sessions": 38,
+   "trades": 523,
+   "tested": true
+  },
+  "EMA_9_20_Pullback|FOMC": {
+   "sessions": 38,
+   "trades": 133,
+   "tested": true
+  },
+  "Gap_Fade|FOMC": {
+   "sessions": 38,
+   "trades": 138,
+   "tested": true
+  },
+  "IntradayMomentumBoundary|FOMC": {
+   "sessions": 38,
+   "trades": 750,
+   "tested": true
+  },
+  "MOMO_CHASE|FOMC": {
+   "sessions": 38,
+   "trades": 1311,
+   "tested": true
+  },
+  "ORB_15min|FOMC": {
+   "sessions": 38,
+   "trades": 484,
+   "tested": true
+  },
+  "ORB_5min|FOMC": {
+   "sessions": 38,
+   "trades": 496,
+   "tested": true
+  },
+  "PDH_PDL_Breakout|FOMC": {
+   "sessions": 38,
+   "trades": 490,
+   "tested": true
+  },
+  "PDH_PDL_FailedBreak|FOMC": {
+   "sessions": 38,
+   "trades": 426,
+   "tested": true
+  },
+  "Six_Lines|FOMC": {
+   "sessions": 38,
+   "trades": 549,
+   "tested": true
+  },
+  "Six_Lines_NoCap|FOMC": {
+   "sessions": 38,
+   "trades": 549,
+   "tested": true
+  },
+  "TTM_Squeeze|FOMC": {
+   "sessions": 38,
+   "trades": 654,
+   "tested": true
+  },
+  "ThreeBarPlay|FOMC": {
+   "sessions": 38,
+   "trades": 27,
+   "tested": false
+  },
+  "VWAP_2sigma_Fade|FOMC": {
+   "sessions": 38,
+   "trades": 52,
+   "tested": true
+  },
+  "VWAP_Reclaim|FOMC": {
+   "sessions": 38,
+   "trades": 824,
+   "tested": true
+  },
+  "Crabel_Stretch|CPI": {
+   "sessions": 60,
+   "trades": 832,
+   "tested": true
+  },
+  "EMA_9_20_Pullback|CPI": {
+   "sessions": 60,
+   "trades": 164,
+   "tested": true
+  },
+  "Gap_Fade|CPI": {
+   "sessions": 60,
+   "trades": 337,
+   "tested": true
+  },
+  "IntradayMomentumBoundary|CPI": {
+   "sessions": 60,
+   "trades": 1107,
+   "tested": true
+  },
+  "MOMO_CHASE|CPI": {
+   "sessions": 60,
+   "trades": 1926,
+   "tested": true
+  },
+  "ORB_15min|CPI": {
+   "sessions": 60,
+   "trades": 805,
+   "tested": true
+  },
+  "ORB_5min|CPI": {
+   "sessions": 60,
+   "trades": 825,
+   "tested": true
+  },
+  "PDH_PDL_Breakout|CPI": {
+   "sessions": 60,
+   "trades": 776,
+   "tested": true
+  },
+  "PDH_PDL_FailedBreak|CPI": {
+   "sessions": 60,
+   "trades": 633,
+   "tested": true
+  },
+  "Six_Lines|CPI": {
+   "sessions": 60,
+   "trades": 826,
+   "tested": true
+  },
+  "Six_Lines_NoCap|CPI": {
+   "sessions": 60,
+   "trades": 826,
+   "tested": true
+  },
+  "TTM_Squeeze|CPI": {
+   "sessions": 60,
+   "trades": 905,
+   "tested": true
+  },
+  "ThreeBarPlay|CPI": {
+   "sessions": 60,
+   "trades": 15,
+   "tested": false
+  },
+  "VWAP_2sigma_Fade|CPI": {
+   "sessions": 60,
+   "trades": 18,
+   "tested": false
+  },
+  "VWAP_Reclaim|CPI": {
+   "sessions": 60,
+   "trades": 1173,
+   "tested": true
+  },
+  "Crabel_Stretch|NFP": {
+   "sessions": 58,
+   "trades": 812,
+   "tested": true
+  },
+  "EMA_9_20_Pullback|NFP": {
+   "sessions": 58,
+   "trades": 158,
+   "tested": true
+  },
+  "Gap_Fade|NFP": {
+   "sessions": 58,
+   "trades": 324,
+   "tested": true
+  },
+  "IntradayMomentumBoundary|NFP": {
+   "sessions": 58,
+   "trades": 976,
+   "tested": true
+  },
+  "MOMO_CHASE|NFP": {
+   "sessions": 58,
+   "trades": 1863,
+   "tested": true
+  },
+  "ORB_15min|NFP": {
+   "sessions": 58,
+   "trades": 773,
+   "tested": true
+  },
+  "ORB_5min|NFP": {
+   "sessions": 58,
+   "trades": 792,
+   "tested": true
+  },
+  "PDH_PDL_Breakout|NFP": {
+   "sessions": 58,
+   "trades": 746,
+   "tested": true
+  },
+  "PDH_PDL_FailedBreak|NFP": {
+   "sessions": 58,
+   "trades": 510,
+   "tested": true
+  },
+  "Six_Lines|NFP": {
+   "sessions": 58,
+   "trades": 762,
+   "tested": true
+  },
+  "Six_Lines_NoCap|NFP": {
+   "sessions": 58,
+   "trades": 762,
+   "tested": true
+  },
+  "TTM_Squeeze|NFP": {
+   "sessions": 58,
+   "trades": 815,
+   "tested": true
+  },
+  "ThreeBarPlay|NFP": {
+   "sessions": 58,
+   "trades": 10,
+   "tested": false
+  },
+  "VWAP_2sigma_Fade|NFP": {
+   "sessions": 58,
+   "trades": 8,
+   "tested": false
+  },
+  "VWAP_Reclaim|NFP": {
+   "sessions": 58,
+   "trades": 1110,
+   "tested": true
+  },
+  "Crabel_Stretch|GDP_ADV": {
+   "sessions": 20,
+   "trades": 291,
+   "tested": false
+  },
+  "EMA_9_20_Pullback|GDP_ADV": {
+   "sessions": 20,
+   "trades": 59,
+   "tested": false
+  },
+  "Gap_Fade|GDP_ADV": {
+   "sessions": 20,
+   "trades": 115,
+   "tested": false
+  },
+  "IntradayMomentumBoundary|GDP_ADV": {
+   "sessions": 20,
+   "trades": 378,
+   "tested": false
+  },
+  "MOMO_CHASE|GDP_ADV": {
+   "sessions": 20,
+   "trades": 673,
+   "tested": false
+  },
+  "ORB_15min|GDP_ADV": {
+   "sessions": 20,
+   "trades": 266,
+   "tested": false
+  },
+  "ORB_5min|GDP_ADV": {
+   "sessions": 20,
+   "trades": 275,
+   "tested": false
+  },
+  "PDH_PDL_Breakout|GDP_ADV": {
+   "sessions": 20,
+   "trades": 239,
+   "tested": false
+  },
+  "PDH_PDL_FailedBreak|GDP_ADV": {
+   "sessions": 20,
+   "trades": 214,
+   "tested": false
+  },
+  "Six_Lines|GDP_ADV": {
+   "sessions": 20,
+   "trades": 276,
+   "tested": false
+  },
+  "Six_Lines_NoCap|GDP_ADV": {
+   "sessions": 20,
+   "trades": 276,
+   "tested": false
+  },
+  "TTM_Squeeze|GDP_ADV": {
+   "sessions": 20,
+   "trades": 279,
+   "tested": false
+  },
+  "ThreeBarPlay|GDP_ADV": {
+   "sessions": 20,
+   "trades": 5,
+   "tested": false
+  },
+  "VWAP_2sigma_Fade|GDP_ADV": {
+   "sessions": 20,
+   "trades": 9,
+   "tested": false
+  },
+  "VWAP_Reclaim|GDP_ADV": {
+   "sessions": 20,
+   "trades": 392,
+   "tested": false
+  },
+  "Crabel_Stretch|PCE": {
+   "sessions": 59,
+   "trades": 829,
+   "tested": true
+  },
+  "EMA_9_20_Pullback|PCE": {
+   "sessions": 59,
+   "trades": 184,
+   "tested": true
+  },
+  "Gap_Fade|PCE": {
+   "sessions": 59,
+   "trades": 286,
+   "tested": true
+  },
+  "IntradayMomentumBoundary|PCE": {
+   "sessions": 59,
+   "trades": 993,
+   "tested": true
+  },
+  "MOMO_CHASE|PCE": {
+   "sessions": 59,
+   "trades": 1884,
+   "tested": true
+  },
+  "ORB_15min|PCE": {
+   "sessions": 59,
+   "trades": 764,
+   "tested": true
+  },
+  "ORB_5min|PCE": {
+   "sessions": 59,
+   "trades": 804,
+   "tested": true
+  },
+  "PDH_PDL_Breakout|PCE": {
+   "sessions": 59,
+   "trades": 726,
+   "tested": true
+  },
+  "PDH_PDL_FailedBreak|PCE": {
+   "sessions": 59,
+   "trades": 607,
+   "tested": true
+  },
+  "Six_Lines|PCE": {
+   "sessions": 59,
+   "trades": 801,
+   "tested": true
+  },
+  "Six_Lines_NoCap|PCE": {
+   "sessions": 59,
+   "trades": 801,
+   "tested": true
+  },
+  "TTM_Squeeze|PCE": {
+   "sessions": 59,
+   "trades": 920,
+   "tested": true
+  },
+  "ThreeBarPlay|PCE": {
+   "sessions": 59,
+   "trades": 23,
+   "tested": false
+  },
+  "VWAP_2sigma_Fade|PCE": {
+   "sessions": 59,
+   "trades": 14,
+   "tested": false
+  },
+  "VWAP_Reclaim|PCE": {
+   "sessions": 59,
+   "trades": 1148,
+   "tested": true
+  },
+  "Crabel_Stretch|war_military": {
+   "sessions": 19,
+   "trades": 259,
+   "tested": false
+  },
+  "EMA_9_20_Pullback|war_military": {
+   "sessions": 19,
+   "trades": 51,
+   "tested": false
+  },
+  "Gap_Fade|war_military": {
+   "sessions": 19,
+   "trades": 121,
+   "tested": false
+  },
+  "IntradayMomentumBoundary|war_military": {
+   "sessions": 19,
+   "trades": 317,
+   "tested": false
+  },
+  "MOMO_CHASE|war_military": {
+   "sessions": 19,
+   "trades": 649,
+   "tested": false
+  },
+  "ORB_15min|war_military": {
+   "sessions": 19,
+   "trades": 255,
+   "tested": false
+  },
+  "ORB_5min|war_military": {
+   "sessions": 19,
+   "trades": 260,
+   "tested": false
+  },
+  "PDH_PDL_Breakout|war_military": {
+   "sessions": 19,
+   "trades": 255,
+   "tested": false
+  },
+  "PDH_PDL_FailedBreak|war_military": {
+   "sessions": 19,
+   "trades": 220,
+   "tested": false
+  },
+  "Six_Lines|war_military": {
+   "sessions": 19,
+   "trades": 252,
+   "tested": false
+  },
+  "Six_Lines_NoCap|war_military": {
+   "sessions": 19,
+   "trades": 252,
+   "tested": false
+  },
+  "TTM_Squeeze|war_military": {
+   "sessions": 19,
+   "trades": 258,
+   "tested": false
+  },
+  "ThreeBarPlay|war_military": {
+   "sessions": 19,
+   "trades": 6,
+   "tested": false
+  },
+  "VWAP_2sigma_Fade|war_military": {
+   "sessions": 19,
+   "trades": 5,
+   "tested": false
+  },
+  "VWAP_Reclaim|war_military": {
+   "sessions": 19,
+   "trades": 353,
+   "tested": false
+  },
+  "Crabel_Stretch|trade_tariff": {
+   "sessions": 40,
+   "trades": 586,
+   "tested": true
+  },
+  "EMA_9_20_Pullback|trade_tariff": {
+   "sessions": 40,
+   "trades": 87,
+   "tested": true
+  },
+  "Gap_Fade|trade_tariff": {
+   "sessions": 40,
+   "trades": 262,
+   "tested": true
+  },
+  "IntradayMomentumBoundary|trade_tariff": {
+   "sessions": 40,
+   "trades": 777,
+   "tested": true
+  },
+  "MOMO_CHASE|trade_tariff": {
+   "sessions": 40,
+   "trades": 1364,
+   "tested": true
+  },
+  "ORB_15min|trade_tariff": {
+   "sessions": 40,
+   "trades": 518,
+   "tested": true
+  },
+  "ORB_5min|trade_tariff": {
+   "sessions": 40,
+   "trades": 549,
+   "tested": true
+  },
+  "PDH_PDL_Breakout|trade_tariff": {
+   "sessions": 40,
+   "trades": 533,
+   "tested": true
+  },
+  "PDH_PDL_FailedBreak|trade_tariff": {
+   "sessions": 40,
+   "trades": 316,
+   "tested": true
+  },
+  "Six_Lines|trade_tariff": {
+   "sessions": 40,
+   "trades": 516,
+   "tested": true
+  },
+  "Six_Lines_NoCap|trade_tariff": {
+   "sessions": 40,
+   "trades": 516,
+   "tested": true
+  },
+  "TTM_Squeeze|trade_tariff": {
+   "sessions": 40,
+   "trades": 549,
+   "tested": true
+  },
+  "ThreeBarPlay|trade_tariff": {
+   "sessions": 40,
+   "trades": 17,
+   "tested": false
+  },
+  "VWAP_2sigma_Fade|trade_tariff": {
+   "sessions": 40,
+   "trades": 9,
+   "tested": false
+  },
+  "VWAP_Reclaim|trade_tariff": {
+   "sessions": 40,
+   "trades": 746,
+   "tested": true
+  },
+  "Crabel_Stretch|us_fiscal": {
+   "sessions": 18,
+   "trades": 242,
+   "tested": false
+  },
+  "EMA_9_20_Pullback|us_fiscal": {
+   "sessions": 18,
+   "trades": 48,
+   "tested": false
+  },
+  "Gap_Fade|us_fiscal": {
+   "sessions": 18,
+   "trades": 113,
+   "tested": false
+  },
+  "IntradayMomentumBoundary|us_fiscal": {
+   "sessions": 18,
+   "trades": 332,
+   "tested": false
+  },
+  "MOMO_CHASE|us_fiscal": {
+   "sessions": 18,
+   "trades": 580,
+   "tested": false
+  },
+  "ORB_15min|us_fiscal": {
+   "sessions": 18,
+   "trades": 238,
+   "tested": false
+  },
+  "ORB_5min|us_fiscal": {
+   "sessions": 18,
+   "trades": 244,
+   "tested": false
+  },
+  "PDH_PDL_Breakout|us_fiscal": {
+   "sessions": 18,
+   "trades": 223,
+   "tested": false
+  },
+  "PDH_PDL_FailedBreak|us_fiscal": {
+   "sessions": 18,
+   "trades": 177,
+   "tested": false
+  },
+  "Six_Lines|us_fiscal": {
+   "sessions": 18,
+   "trades": 234,
+   "tested": false
+  },
+  "Six_Lines_NoCap|us_fiscal": {
+   "sessions": 18,
+   "trades": 234,
+   "tested": false
+  },
+  "TTM_Squeeze|us_fiscal": {
+   "sessions": 18,
+   "trades": 229,
+   "tested": false
+  },
+  "ThreeBarPlay|us_fiscal": {
+   "sessions": 18,
+   "trades": 1,
+   "tested": false
+  },
+  "VWAP_2sigma_Fade|us_fiscal": {
+   "sessions": 18,
+   "trades": 4,
+   "tested": false
+  },
+  "VWAP_Reclaim|us_fiscal": {
+   "sessions": 18,
+   "trades": 363,
+   "tested": false
+  },
+  "Crabel_Stretch|pandemic_health": {
+   "sessions": 16,
+   "trades": 220,
+   "tested": false
+  },
+  "EMA_9_20_Pullback|pandemic_health": {
+   "sessions": 16,
+   "trades": 35,
+   "tested": false
+  },
+  "Gap_Fade|pandemic_health": {
+   "sessions": 16,
+   "trades": 146,
+   "tested": false
+  },
+  "IntradayMomentumBoundary|pandemic_health": {
+   "sessions": 16,
+   "trades": 241,
+   "tested": false
+  },
+  "MOMO_CHASE|pandemic_health": {
+   "sessions": 16,
+   "trades": 520,
+   "tested": false
+  },
+  "ORB_15min|pandemic_health": {
+   "sessions": 16,
+   "trades": 185,
+   "tested": false
+  },
+  "ORB_5min|pandemic_health": {
+   "sessions": 16,
+   "trades": 221,
+   "tested": false
+  },
+  "PDH_PDL_Breakout|pandemic_health": {
+   "sessions": 16,
+   "trades": 180,
+   "tested": false
+  },
+  "PDH_PDL_FailedBreak|pandemic_health": {
+   "sessions": 16,
+   "trades": 114,
+   "tested": false
+  },
+  "Six_Lines|pandemic_health": {
+   "sessions": 16,
+   "trades": 200,
+   "tested": false
+  },
+  "Six_Lines_NoCap|pandemic_health": {
+   "sessions": 16,
+   "trades": 200,
+   "tested": false
+  },
+  "TTM_Squeeze|pandemic_health": {
+   "sessions": 16,
+   "trades": 193,
+   "tested": false
+  },
+  "ThreeBarPlay|pandemic_health": {
+   "sessions": 16,
+   "trades": 0,
+   "tested": false
+  },
+  "VWAP_2sigma_Fade|pandemic_health": {
+   "sessions": 16,
+   "trades": 3,
+   "tested": false
+  },
+  "VWAP_Reclaim|pandemic_health": {
+   "sessions": 16,
+   "trades": 355,
+   "tested": false
+  },
+  "Crabel_Stretch|political_shock": {
+   "sessions": 29,
+   "trades": 411,
+   "tested": false
+  },
+  "EMA_9_20_Pullback|political_shock": {
+   "sessions": 29,
+   "trades": 74,
+   "tested": false
+  },
+  "Gap_Fade|political_shock": {
+   "sessions": 29,
+   "trades": 158,
+   "tested": false
+  },
+  "IntradayMomentumBoundary|political_shock": {
+   "sessions": 29,
+   "trades": 473,
+   "tested": false
+  },
+  "MOMO_CHASE|political_shock": {
+   "sessions": 29,
+   "trades": 928,
+   "tested": false
+  },
+  "ORB_15min|political_shock": {
+   "sessions": 29,
+   "trades": 385,
+   "tested": false
+  },
+  "ORB_5min|political_shock": {
+   "sessions": 29,
+   "trades": 400,
+   "tested": false
+  },
+  "PDH_PDL_Breakout|political_shock": {
+   "sessions": 29,
+   "trades": 390,
+   "tested": false
+  },
+  "PDH_PDL_FailedBreak|political_shock": {
+   "sessions": 29,
+   "trades": 299,
+   "tested": false
+  },
+  "Six_Lines|political_shock": {
+   "sessions": 29,
+   "trades": 394,
+   "tested": false
+  },
+  "Six_Lines_NoCap|political_shock": {
+   "sessions": 29,
+   "trades": 394,
+   "tested": false
+  },
+  "TTM_Squeeze|political_shock": {
+   "sessions": 29,
+   "trades": 397,
+   "tested": false
+  },
+  "ThreeBarPlay|political_shock": {
+   "sessions": 29,
+   "trades": 12,
+   "tested": false
+  },
+  "VWAP_2sigma_Fade|political_shock": {
+   "sessions": 29,
+   "trades": 3,
+   "tested": false
+  },
+  "VWAP_Reclaim|political_shock": {
+   "sessions": 29,
+   "trades": 573,
+   "tested": false
+  },
+  "Crabel_Stretch|energy_shock": {
+   "sessions": 19,
+   "trades": 269,
+   "tested": false
+  },
+  "EMA_9_20_Pullback|energy_shock": {
+   "sessions": 19,
+   "trades": 56,
+   "tested": false
+  },
+  "Gap_Fade|energy_shock": {
+   "sessions": 19,
+   "trades": 100,
+   "tested": false
+  },
+  "IntradayMomentumBoundary|energy_shock": {
+   "sessions": 19,
+   "trades": 342,
+   "tested": false
+  },
+  "MOMO_CHASE|energy_shock": {
+   "sessions": 19,
+   "trades": 634,
+   "tested": false
+  },
+  "ORB_15min|energy_shock": {
+   "sessions": 19,
+   "trades": 245,
+   "tested": false
+  },
+  "ORB_5min|energy_shock": {
+   "sessions": 19,
+   "trades": 265,
+   "tested": false
+  },
+  "PDH_PDL_Breakout|energy_shock": {
+   "sessions": 19,
+   "trades": 248,
+   "tested": false
+  },
+  "PDH_PDL_FailedBreak|energy_shock": {
+   "sessions": 19,
+   "trades": 211,
+   "tested": false
+  },
+  "Six_Lines|energy_shock": {
+   "sessions": 19,
+   "trades": 255,
+   "tested": false
+  },
+  "Six_Lines_NoCap|energy_shock": {
+   "sessions": 19,
+   "trades": 255,
+   "tested": false
+  },
+  "TTM_Squeeze|energy_shock": {
+   "sessions": 19,
+   "trades": 261,
+   "tested": false
+  },
+  "ThreeBarPlay|energy_shock": {
+   "sessions": 19,
+   "trades": 3,
+   "tested": false
+  },
+  "VWAP_2sigma_Fade|energy_shock": {
+   "sessions": 19,
+   "trades": 5,
+   "tested": false
+  },
+  "VWAP_Reclaim|energy_shock": {
+   "sessions": 19,
+   "trades": 415,
+   "tested": false
+  },
+  "Crabel_Stretch|cyber_infrastructure": {
+   "sessions": 5,
+   "trades": 72,
+   "tested": false
+  },
+  "EMA_9_20_Pullback|cyber_infrastructure": {
+   "sessions": 5,
+   "trades": 9,
+   "tested": false
+  },
+  "Gap_Fade|cyber_infrastructure": {
+   "sessions": 5,
+   "trades": 16,
+   "tested": false
+  },
+  "IntradayMomentumBoundary|cyber_infrastructure": {
+   "sessions": 5,
+   "trades": 139,
+   "tested": false
+  },
+  "MOMO_CHASE|cyber_infrastructure": {
+   "sessions": 5,
+   "trades": 195,
+   "tested": false
+  },
+  "ORB_15min|cyber_infrastructure": {
+   "sessions": 5,
+   "trades": 67,
+   "tested": false
+  },
+  "ORB_5min|cyber_infrastructure": {
+   "sessions": 5,
+   "trades": 71,
+   "tested": false
+  },
+  "PDH_PDL_Breakout|cyber_infrastructure": {
+   "sessions": 5,
+   "trades": 67,
+   "tested": false
+  },
+  "PDH_PDL_FailedBreak|cyber_infrastructure": {
+   "sessions": 5,
+   "trades": 36,
+   "tested": false
+  },
+  "Six_Lines|cyber_infrastructure": {
+   "sessions": 5,
+   "trades": 71,
+   "tested": false
+  },
+  "Six_Lines_NoCap|cyber_infrastructure": {
+   "sessions": 5,
+   "trades": 71,
+   "tested": false
+  },
+  "TTM_Squeeze|cyber_infrastructure": {
+   "sessions": 5,
+   "trades": 53,
+   "tested": false
+  },
+  "ThreeBarPlay|cyber_infrastructure": {
+   "sessions": 5,
+   "trades": 0,
+   "tested": false
+  },
+  "VWAP_2sigma_Fade|cyber_infrastructure": {
+   "sessions": 5,
+   "trades": 0,
+   "tested": false
+  },
+  "VWAP_Reclaim|cyber_infrastructure": {
+   "sessions": 5,
+   "trades": 91,
+   "tested": false
+  }
+ },
+ "overlap_matrix": {
+  "FOMC": {
+   "FOMC": 38,
+   "CPI": 2,
+   "NFP": 0,
+   "GDP_ADV": 2,
+   "PCE": 0,
+   "war_military": 1,
+   "trade_tariff": 0,
+   "financial_stress": 0,
+   "us_fiscal": 0,
+   "pandemic_health": 0,
+   "political_shock": 0,
+   "energy_shock": 0,
+   "cyber_infrastructure": 0
+  },
+  "CPI": {
+   "FOMC": 2,
+   "CPI": 60,
+   "NFP": 0,
+   "GDP_ADV": 0,
+   "PCE": 0,
+   "war_military": 1,
+   "trade_tariff": 3,
+   "financial_stress": 0,
+   "us_fiscal": 0,
+   "pandemic_health": 1,
+   "political_shock": 1,
+   "energy_shock": 1,
+   "cyber_infrastructure": 0
+  },
+  "NFP": {
+   "FOMC": 0,
+   "CPI": 0,
+   "NFP": 58,
+   "GDP_ADV": 0,
+   "PCE": 0,
+   "war_military": 1,
+   "trade_tariff": 3,
+   "financial_stress": 0,
+   "us_fiscal": 0,
+   "pandemic_health": 0,
+   "political_shock": 3,
+   "energy_shock": 2,
+   "cyber_infrastructure": 0
+  },
+  "GDP_ADV": {
+   "FOMC": 2,
+   "CPI": 0,
+   "NFP": 0,
+   "GDP_ADV": 20,
+   "PCE": 0,
+   "war_military": 0,
+   "trade_tariff": 0,
+   "financial_stress": 1,
+   "us_fiscal": 1,
+   "pandemic_health": 1,
+   "political_shock": 0,
+   "energy_shock": 0,
+   "cyber_infrastructure": 0
+  },
+  "PCE": {
+   "FOMC": 0,
+   "CPI": 0,
+   "NFP": 0,
+   "GDP_ADV": 0,
+   "PCE": 59,
+   "war_military": 0,
+   "trade_tariff": 4,
+   "financial_stress": 0,
+   "us_fiscal": 2,
+   "pandemic_health": 1,
+   "political_shock": 1,
+   "energy_shock": 0,
+   "cyber_infrastructure": 0
+  },
+  "war_military": {
+   "FOMC": 1,
+   "CPI": 1,
+   "NFP": 1,
+   "GDP_ADV": 0,
+   "PCE": 0,
+   "war_military": 19,
+   "trade_tariff": 0,
+   "financial_stress": 0,
+   "us_fiscal": 0,
+   "pandemic_health": 0,
+   "political_shock": 0,
+   "energy_shock": 0,
+   "cyber_infrastructure": 1
+  },
+  "trade_tariff": {
+   "FOMC": 0,
+   "CPI": 3,
+   "NFP": 3,
+   "GDP_ADV": 0,
+   "PCE": 4,
+   "war_military": 0,
+   "trade_tariff": 40,
+   "financial_stress": 0,
+   "us_fiscal": 1,
+   "pandemic_health": 0,
+   "political_shock": 2,
+   "energy_shock": 0,
+   "cyber_infrastructure": 0
+  },
+  "financial_stress": {
+   "FOMC": 0,
+   "CPI": 0,
+   "NFP": 0,
+   "GDP_ADV": 1,
+   "PCE": 0,
+   "war_military": 0,
+   "trade_tariff": 0,
+   "financial_stress": 17,
+   "us_fiscal": 0,
+   "pandemic_health": 0,
+   "political_shock": 0,
+   "energy_shock": 0,
+   "cyber_infrastructure": 0
+  },
+  "us_fiscal": {
+   "FOMC": 0,
+   "CPI": 0,
+   "NFP": 0,
+   "GDP_ADV": 1,
+   "PCE": 2,
+   "war_military": 0,
+   "trade_tariff": 1,
+   "financial_stress": 0,
+   "us_fiscal": 18,
+   "pandemic_health": 1,
+   "political_shock": 0,
+   "energy_shock": 0,
+   "cyber_infrastructure": 0
+  },
+  "pandemic_health": {
+   "FOMC": 0,
+   "CPI": 1,
+   "NFP": 0,
+   "GDP_ADV": 1,
+   "PCE": 1,
+   "war_military": 0,
+   "trade_tariff": 0,
+   "financial_stress": 0,
+   "us_fiscal": 1,
+   "pandemic_health": 16,
+   "political_shock": 1,
+   "energy_shock": 0,
+   "cyber_infrastructure": 1
+  },
+  "political_shock": {
+   "FOMC": 0,
+   "CPI": 1,
+   "NFP": 3,
+   "GDP_ADV": 0,
+   "PCE": 1,
+   "war_military": 0,
+   "trade_tariff": 2,
+   "financial_stress": 0,
+   "us_fiscal": 0,
+   "pandemic_health": 1,
+   "political_shock": 29,
+   "energy_shock": 0,
+   "cyber_infrastructure": 0
+  },
+  "energy_shock": {
+   "FOMC": 0,
+   "CPI": 1,
+   "NFP": 2,
+   "GDP_ADV": 0,
+   "PCE": 0,
+   "war_military": 0,
+   "trade_tariff": 0,
+   "financial_stress": 0,
+   "us_fiscal": 0,
+   "pandemic_health": 0,
+   "political_shock": 0,
+   "energy_shock": 19,
+   "cyber_infrastructure": 0
+  },
+  "cyber_infrastructure": {
+   "FOMC": 0,
+   "CPI": 0,
+   "NFP": 0,
+   "GDP_ADV": 0,
+   "PCE": 0,
+   "war_military": 1,
+   "trade_tariff": 0,
+   "financial_stress": 0,
+   "us_fiscal": 0,
+   "pandemic_health": 1,
+   "political_shock": 0,
+   "energy_shock": 0,
+   "cyber_infrastructure": 5
+  }
+ },
+ "setups": [
+  "Crabel_Stretch",
+  "EMA_9_20_Pullback",
+  "Gap_Fade",
+  "IntradayMomentumBoundary",
+  "MOMO_CHASE",
+  "ORB_15min",
+  "ORB_5min",
+  "PDH_PDL_Breakout",
+  "PDH_PDL_FailedBreak",
+  "Six_Lines",
+  "Six_Lines_NoCap",
+  "TTM_Squeeze",
+  "ThreeBarPlay",
+  "VWAP_2sigma_Fade",
+  "VWAP_Reclaim"
+ ]
+}
