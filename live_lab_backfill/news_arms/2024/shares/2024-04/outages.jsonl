@@ -1,0 +1,13 @@
+{"seq":5346,"ts":"2024-04-01T13:00:02","kind":"degraded_bar","detail":"1m gap before 12:59","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":35771,"ts":"2024-04-03T13:55:02","kind":"degraded_bar","detail":"1m gap before 13:54","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":42908,"ts":"2024-04-04T10:53:02","kind":"degraded_bar","detail":"1m gap before 10:52","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":43846,"ts":"2024-04-04T11:42:02","kind":"degraded_bar","detail":"1m gap before 11:41","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":45857,"ts":"2024-04-04T12:49:02","kind":"degraded_bar","detail":"1m gap before 12:48","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":46460,"ts":"2024-04-04T13:06:02","kind":"degraded_bar","detail":"1m gap before 13:05","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":76103,"ts":"2024-04-08T13:41:02","kind":"degraded_bar","detail":"1m gap before 13:40","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":78346,"ts":"2024-04-08T14:36:02","kind":"degraded_bar","detail":"1m gap before 14:35","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":94327,"ts":"2024-04-09T13:55:02","kind":"degraded_bar","detail":"1m gap before 13:54","symbol":"XLP","provenance":"BACKFILL"}
+{"seq":162600,"ts":"2024-04-15T12:10:02","kind":"degraded_bar","detail":"1m gap before 12:09","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":238678,"ts":"2024-04-18T16:00:00","kind":"flatten_after_close","detail":"GOOGL VWAP_Reclaim closed at 16:00 on the last in-session NBBO from 2024-04-18 15:59:00","provenance":"BACKFILL"}
+{"seq":281796,"ts":"2024-04-23T14:01:02","kind":"degraded_bar","detail":"1m gap before 14:00","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":323204,"ts":"2024-04-26T13:15:02","kind":"degraded_bar","detail":"1m gap before 13:14","symbol":"DIA","provenance":"BACKFILL"}

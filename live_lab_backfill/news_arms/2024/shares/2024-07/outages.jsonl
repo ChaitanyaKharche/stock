@@ -1,0 +1,97 @@
+{"seq":7574,"ts":"2024-07-01T12:18:02","kind":"degraded_bar","detail":"1m gap before 12:17","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":11429,"ts":"2024-07-01T13:16:02","kind":"degraded_bar","detail":"1m gap before 13:15","symbol":"XLY","provenance":"BACKFILL"}
+{"seq":12296,"ts":"2024-07-01T13:29:02","kind":"degraded_bar","detail":"1m gap before 13:28","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":12297,"ts":"2024-07-01T13:29:02","kind":"degraded_bar","detail":"1m gap before 13:28","symbol":"XLY","provenance":"BACKFILL"}
+{"seq":13251,"ts":"2024-07-01T13:43:02","kind":"degraded_bar","detail":"1m gap before 13:42","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":13526,"ts":"2024-07-01T13:47:02","kind":"degraded_bar","detail":"1m gap before 13:46","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":13803,"ts":"2024-07-01T13:51:02","kind":"degraded_bar","detail":"1m gap before 13:50","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":14067,"ts":"2024-07-01T13:55:02","kind":"degraded_bar","detail":"1m gap before 13:54","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":15189,"ts":"2024-07-01T14:11:02","kind":"degraded_bar","detail":"1m gap before 14:10","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":16554,"ts":"2024-07-01T14:30:02","kind":"degraded_bar","detail":"1m gap before 14:29","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":19753,"ts":"2024-07-01T15:13:02","kind":"degraded_bar","detail":"1m gap before 15:12","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":24191,"ts":"2024-07-02T10:38:02","kind":"degraded_bar","detail":"1m gap before 10:37","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":24527,"ts":"2024-07-02T10:51:02","kind":"degraded_bar","detail":"1m gap before 10:50","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":28570,"ts":"2024-07-02T12:47:02","kind":"degraded_bar","detail":"1m gap before 12:46","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":28972,"ts":"2024-07-02T12:57:02","kind":"degraded_bar","detail":"1m gap before 12:56","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":33951,"ts":"2024-07-02T14:44:02","kind":"degraded_bar","detail":"1m gap before 14:43","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":34913,"ts":"2024-07-02T15:04:02","kind":"degraded_bar","detail":"1m gap before 15:03","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":41725,"ts":"2024-07-05T12:12:02","kind":"degraded_bar","detail":"1m gap before 12:11","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":41879,"ts":"2024-07-05T12:16:02","kind":"degraded_bar","detail":"1m gap before 12:15","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":44939,"ts":"2024-07-05T13:30:02","kind":"degraded_bar","detail":"1m gap before 13:29","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":45106,"ts":"2024-07-05T13:34:02","kind":"degraded_bar","detail":"1m gap before 13:33","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":45288,"ts":"2024-07-05T13:38:02","kind":"degraded_bar","detail":"1m gap before 13:37","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":47663,"ts":"2024-07-05T14:31:02","kind":"degraded_bar","detail":"1m gap before 14:30","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":48022,"ts":"2024-07-05T14:39:02","kind":"degraded_bar","detail":"1m gap before 14:38","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":50229,"ts":"2024-07-05T15:26:02","kind":"degraded_bar","detail":"1m gap before 15:25","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":50406,"ts":"2024-07-05T15:30:02","kind":"degraded_bar","detail":"1m gap before 15:29","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":57199,"ts":"2024-07-08T12:40:02","kind":"degraded_bar","detail":"1m gap before 12:39","symbol":"XLV","provenance":"BACKFILL"}
+{"seq":58312,"ts":"2024-07-08T13:05:02","kind":"degraded_bar","detail":"1m gap before 13:04","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":59282,"ts":"2024-07-08T13:26:02","kind":"degraded_bar","detail":"1m gap before 13:25","symbol":"XLY","provenance":"BACKFILL"}
+{"seq":60936,"ts":"2024-07-08T14:01:02","kind":"degraded_bar","detail":"1m gap before 14:00","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":64116,"ts":"2024-07-08T15:06:02","kind":"degraded_bar","detail":"1m gap before 15:05","symbol":"XLY","provenance":"BACKFILL"}
+{"seq":64713,"ts":"2024-07-08T15:18:02","kind":"degraded_bar","detail":"1m gap before 15:17","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":71703,"ts":"2024-07-09T12:15:02","kind":"degraded_bar","detail":"1m gap before 12:14","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":96253,"ts":"2024-07-10T14:26:02","kind":"degraded_bar","detail":"1m gap before 14:25","symbol":"XLY","provenance":"BACKFILL"}
+{"seq":112311,"ts":"2024-07-11T13:40:02","kind":"degraded_bar","detail":"1m gap before 13:39","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":116851,"ts":"2024-07-11T15:01:02","kind":"degraded_bar","detail":"1m gap before 15:00","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":117722,"ts":"2024-07-11T15:17:02","kind":"degraded_bar","detail":"1m gap before 15:16","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":117876,"ts":"2024-07-11T15:20:02","kind":"degraded_bar","detail":"1m gap before 15:19","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":145823,"ts":"2024-07-15T14:07:02","kind":"degraded_bar","detail":"1m gap before 14:06","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":146427,"ts":"2024-07-15T14:18:02","kind":"degraded_bar","detail":"1m gap before 14:17","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":159769,"ts":"2024-07-16T12:42:02","kind":"degraded_bar","detail":"1m gap before 12:41","symbol":"XLY","provenance":"BACKFILL"}
+{"seq":160362,"ts":"2024-07-16T12:53:02","kind":"degraded_bar","detail":"1m gap before 12:52","symbol":"XLY","provenance":"BACKFILL"}
+{"seq":179008,"ts":"2024-07-17T13:06:02","kind":"degraded_bar","detail":"1m gap before 13:05","symbol":"XLY","provenance":"BACKFILL"}
+{"seq":208738,"ts":"2024-07-19T11:06:02","kind":"degraded_bar","detail":"1m gap before 11:05","symbol":"XLY","provenance":"BACKFILL"}
+{"seq":231302,"ts":"2024-07-22T12:17:02","kind":"degraded_bar","detail":"1m gap before 12:16","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":233395,"ts":"2024-07-22T12:48:02","kind":"degraded_bar","detail":"1m gap before 12:47","symbol":"XLY","provenance":"BACKFILL"}
+{"seq":236197,"ts":"2024-07-22T13:28:02","kind":"degraded_bar","detail":"1m gap before 13:27","symbol":"XLY","provenance":"BACKFILL"}
+{"seq":237427,"ts":"2024-07-22T13:45:02","kind":"degraded_bar","detail":"1m gap before 13:44","symbol":"XLY","provenance":"BACKFILL"}
+{"seq":252638,"ts":"2024-07-23T12:15:02","kind":"degraded_bar","detail":"1m gap before 12:14","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":254298,"ts":"2024-07-23T12:49:02","kind":"degraded_bar","detail":"1m gap before 12:48","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":257177,"ts":"2024-07-23T13:42:02","kind":"degraded_bar","detail":"1m gap before 13:41","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":257617,"ts":"2024-07-23T13:50:02","kind":"degraded_bar","detail":"1m gap before 13:49","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":330133,"ts":"2024-07-29T12:52:02","kind":"degraded_bar","detail":"1m gap before 12:51","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":331589,"ts":"2024-07-29T13:20:02","kind":"degraded_bar","detail":"1m gap before 13:19","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":331803,"ts":"2024-07-29T13:24:02","kind":"degraded_bar","detail":"1m gap before 13:23","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":333911,"ts":"2024-07-29T14:04:02","kind":"degraded_bar","detail":"1m gap before 14:03","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":337597,"ts":"2024-07-29T15:14:02","kind":"degraded_bar","detail":"1m gap before 15:13","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":340117,"ts":"2024-07-30T09:31:02","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/quote","provenance":"BACKFILL"}
+{"seq":340118,"ts":"2024-07-30T09:31:02","kind":"tick","detail":"UpstreamUnreachable(\"/stock/history/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","provenance":"BACKFILL"}
+{"seq":340119,"ts":"2024-07-30T09:32:02","kind":"tick","detail":"UpstreamUnreachable(\"/stock/history/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","provenance":"BACKFILL"}
+{"seq":340120,"ts":"2024-07-30T09:33:02","kind":"tick","detail":"UpstreamUnreachable(\"/stock/history/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","provenance":"BACKFILL"}
+{"seq":340121,"ts":"2024-07-30T09:34:02","kind":"tick","detail":"UpstreamUnreachable(\"/stock/history/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","provenance":"BACKFILL"}
+{"seq":340122,"ts":"2024-07-30T09:35:02","kind":"feed","detail":"HTTPError('HTTP 503: io exception')","path":"/stock/history/quote","provenance":"BACKFILL"}
+{"seq":340123,"ts":"2024-07-30T09:35:02","kind":"tick","detail":"UpstreamUnreachable(\"/stock/history/quote failed after 4 attempts: HTTPError('HTTP 503: io exception')\")","provenance":"BACKFILL"}
+{"seq":340124,"ts":"2024-07-30T09:36:02","kind":"tick","detail":"UpstreamUnreachable(\"/stock/history/quote failed after 4 attempts: HTTPError('HTTP 503: io exception')\")","provenance":"BACKFILL"}
+{"seq":340125,"ts":"2024-07-30T09:37:02","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/quote","provenance":"BACKFILL"}
+{"seq":340126,"ts":"2024-07-30T09:37:02","kind":"tick","detail":"UpstreamUnreachable(\"/stock/history/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","provenance":"BACKFILL"}
+{"seq":340127,"ts":"2024-07-30T09:38:02","kind":"tick","detail":"UpstreamUnreachable(\"/stock/history/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","provenance":"BACKFILL"}
+{"seq":340128,"ts":"2024-07-30T09:39:02","kind":"feed","detail":"ReadTimeout('timed out')","path":"/stock/history/quote","provenance":"BACKFILL"}
+{"seq":340129,"ts":"2024-07-30T09:39:02","kind":"tick","detail":"UpstreamUnreachable(\"/stock/history/quote failed after 4 attempts: ReadTimeout('timed out')\")","provenance":"BACKFILL"}
+{"seq":340130,"ts":"2024-07-30T09:40:02","kind":"feed","detail":"HTTPError('HTTP 503: io exception')","path":"/stock/history/quote","provenance":"BACKFILL"}
+{"seq":340131,"ts":"2024-07-30T09:40:02","kind":"tick","detail":"UpstreamUnreachable(\"/stock/history/quote failed after 4 attempts: HTTPError('HTTP 503: io exception')\")","provenance":"BACKFILL"}
+{"seq":340132,"ts":"2024-07-30T09:41:02","kind":"tick","detail":"UpstreamUnreachable(\"/stock/history/quote failed after 4 attempts: HTTPError('HTTP 503: io exception')\")","provenance":"BACKFILL"}
+{"seq":340133,"ts":"2024-07-30T09:42:02","kind":"tick","detail":"UpstreamUnreachable(\"/stock/history/quote failed after 4 attempts: HTTPError('HTTP 503: io exception')\")","provenance":"BACKFILL"}
+{"seq":340134,"ts":"2024-07-30T09:43:02","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/quote","provenance":"BACKFILL"}
+{"seq":340135,"ts":"2024-07-30T09:43:02","kind":"tick","detail":"UpstreamUnreachable(\"/stock/history/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","provenance":"BACKFILL"}
+{"seq":340136,"ts":"2024-07-30T09:44:02","kind":"tick","detail":"UpstreamUnreachable(\"/stock/history/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","provenance":"BACKFILL"}
+{"seq":340137,"ts":"2024-07-30T09:45:02","kind":"tick","detail":"UpstreamUnreachable(\"/stock/history/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","provenance":"BACKFILL"}
+{"seq":340138,"ts":"2024-07-30T09:46:02","kind":"tick","detail":"UpstreamUnreachable(\"/stock/history/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","provenance":"BACKFILL"}
+{"seq":340139,"ts":"2024-07-30T09:47:02","kind":"tick","detail":"UpstreamUnreachable(\"/stock/history/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","provenance":"BACKFILL"}
+{"seq":340140,"ts":"2024-07-30T09:48:02","kind":"tick","detail":"UpstreamUnreachable(\"/stock/history/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","provenance":"BACKFILL"}
+{"seq":340141,"ts":"2024-07-30T09:49:02","kind":"tick","detail":"UpstreamUnreachable(\"/stock/history/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","provenance":"BACKFILL"}
+{"seq":340142,"ts":"2024-07-30T09:50:02","kind":"tick","detail":"UpstreamUnreachable(\"/stock/history/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","provenance":"BACKFILL"}
+{"seq":340143,"ts":"2024-07-30T09:51:02","kind":"tick","detail":"UpstreamUnreachable(\"/stock/history/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","provenance":"BACKFILL"}
+{"seq":340144,"ts":"2024-07-30T09:52:02","kind":"tick","detail":"UpstreamUnreachable(\"/stock/history/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","provenance":"BACKFILL"}
+{"seq":340145,"ts":"2024-07-30T09:53:02","kind":"tick","detail":"UpstreamUnreachable(\"/stock/history/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","provenance":"BACKFILL"}
+{"seq":340146,"ts":"2024-07-30T09:54:02","kind":"tick","detail":"UpstreamUnreachable(\"/stock/history/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","provenance":"BACKFILL"}
+{"seq":340147,"ts":"2024-07-30T09:55:02","kind":"tick","detail":"UpstreamUnreachable(\"/stock/history/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","provenance":"BACKFILL"}
+{"seq":340148,"ts":"2024-07-30T09:56:02","kind":"tick","detail":"UpstreamUnreachable(\"/stock/history/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","provenance":"BACKFILL"}
+{"seq":340149,"ts":"2024-07-30T09:57:02","kind":"feed","detail":"upstream recovered after 213s and 26 failed call(s)","path":"__recovered__","provenance":"BACKFILL"}
+{"seq":345026,"ts":"2024-07-30T13:42:02","kind":"degraded_bar","detail":"1m gap before 13:41","symbol":"XLY","provenance":"BACKFILL"}
+{"seq":353037,"ts":"2024-07-31T12:03:02","kind":"degraded_bar","detail":"1m gap before 12:02","symbol":"XLY","provenance":"BACKFILL"}
+{"seq":353605,"ts":"2024-07-31T12:18:02","kind":"degraded_bar","detail":"1m gap before 12:17","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":354319,"ts":"2024-07-31T12:36:02","kind":"degraded_bar","detail":"1m gap before 12:35","symbol":"XLY","provenance":"BACKFILL"}
+{"seq":356993,"ts":"2024-07-31T13:41:02","kind":"degraded_bar","detail":"1m gap before 13:40","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":357536,"ts":"2024-07-31T13:53:02","kind":"degraded_bar","detail":"1m gap before 13:52","symbol":"XLY","provenance":"BACKFILL"}
+{"seq":364545,"ts":"2024-07-31T16:00:00","kind":"flatten_after_close","detail":"GOOGL VWAP_Reclaim closed at 16:00 on the last in-session NBBO from 2024-07-31 15:59:00","provenance":"BACKFILL"}

@@ -1,0 +1,52 @@
+{
+  "date": "2023-11-10",
+  "arm": "SHARES",
+  "config_hash": "7c6414fc549315f3",
+  "symbols": [
+    "SPY",
+    "QQQ",
+    "IWM",
+    "DIA",
+    "XLK",
+    "XLY",
+    "XLI",
+    "XLV",
+    "XLP",
+    "XLE",
+    "XLF",
+    "NVDA",
+    "AAPL",
+    "GOOGL",
+    "WMT"
+  ],
+  "notional_per_trade": 10000.0,
+  "trades_closed": 183,
+  "net": 664.4,
+  "still_open": 0,
+  "degraded_bars": {
+    "SPY": 1,
+    "QQQ": 1,
+    "IWM": 1,
+    "DIA": 2,
+    "XLK": 1,
+    "XLY": 1,
+    "XLI": 1,
+    "XLV": 1,
+    "XLP": 1,
+    "XLE": 1,
+    "XLF": 1,
+    "NVDA": 1,
+    "AAPL": 1,
+    "GOOGL": 1,
+    "WMT": 1
+  },
+  "feed": {
+    "source": "HISTORY_BACKFILL",
+    "calls": 390,
+    "retries": 0,
+    "bar_cache_hits": 0,
+    "bar_cache_misses": 0,
+    "outage_episodes": 0,
+    "upstream_down_now": false
+  }
+}

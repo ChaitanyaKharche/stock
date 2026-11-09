@@ -1,0 +1,6 @@
+{"seq":74076,"ts":"2023-12-07T14:01:02","kind":"degraded_bar","detail":"1m gap before 14:00","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":83560,"ts":"2023-12-08T12:06:02","kind":"degraded_bar","detail":"1m gap before 12:05","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":101928,"ts":"2023-12-11T13:49:02","kind":"degraded_bar","detail":"1m gap before 13:48","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":230089,"ts":"2023-12-22T12:29:02","kind":"degraded_bar","detail":"1m gap before 12:28","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":243228,"ts":"2023-12-26T12:44:02","kind":"degraded_bar","detail":"1m gap before 12:43","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":252913,"ts":"2023-12-27T12:10:02","kind":"degraded_bar","detail":"1m gap before 12:09","symbol":"XLI","provenance":"BACKFILL"}

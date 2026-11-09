@@ -1,0 +1,105 @@
+{"seq":64294,"ts":"2024-08-06T12:40:02","kind":"degraded_bar","detail":"1m gap before 12:39","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":69071,"ts":"2024-08-06T14:01:02","kind":"degraded_bar","detail":"1m gap before 14:00","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":102572,"ts":"2024-08-08T12:04:02","kind":"degraded_bar","detail":"1m gap before 12:03","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":116218,"ts":"2024-08-09T10:52:02","kind":"degraded_bar","detail":"1m gap before 10:51","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":122137,"ts":"2024-08-09T12:39:02","kind":"degraded_bar","detail":"1m gap before 12:38","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":122645,"ts":"2024-08-09T12:48:02","kind":"degraded_bar","detail":"1m gap before 12:47","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":139805,"ts":"2024-08-12T12:11:02","kind":"degraded_bar","detail":"1m gap before 12:10","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":140493,"ts":"2024-08-12T12:27:02","kind":"degraded_bar","detail":"1m gap before 12:26","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":141334,"ts":"2024-08-12T12:46:02","kind":"degraded_bar","detail":"1m gap before 12:45","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":143139,"ts":"2024-08-12T13:26:02","kind":"degraded_bar","detail":"1m gap before 13:25","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":143948,"ts":"2024-08-12T13:44:02","kind":"degraded_bar","detail":"1m gap before 13:43","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":156558,"ts":"2024-08-13T12:41:02","kind":"degraded_bar","detail":"1m gap before 12:40","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":159010,"ts":"2024-08-13T13:31:02","kind":"degraded_bar","detail":"1m gap before 13:30","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":159802,"ts":"2024-08-13T13:47:02","kind":"degraded_bar","detail":"1m gap before 13:46","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":177693,"ts":"2024-08-14T14:40:02","kind":"degraded_bar","detail":"1m gap before 14:39","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":187730,"ts":"2024-08-15T13:08:02","kind":"degraded_bar","detail":"1m gap before 13:07","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":191065,"ts":"2024-08-15T14:38:02","kind":"degraded_bar","detail":"1m gap before 14:37","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":191133,"ts":"2024-08-15T14:40:02","kind":"degraded_bar","detail":"1m gap before 14:39","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":194652,"ts":"2024-08-16T09:31:02","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc","provenance":"BACKFILL"}
+{"seq":194653,"ts":"2024-08-16T09:31:02","kind":"levels_fetch","detail":"today's premarket fetch failed, will retry: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"NVDA","provenance":"BACKFILL"}
+{"seq":194654,"ts":"2024-08-16T09:31:02","kind":"levels_fetch","detail":"today's premarket fetch failed, will retry: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"AAPL","provenance":"BACKFILL"}
+{"seq":194655,"ts":"2024-08-16T09:31:02","kind":"levels_fetch","detail":"today's premarket fetch failed, will retry: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":194656,"ts":"2024-08-16T09:31:02","kind":"levels_fetch","detail":"today's premarket fetch failed, will retry: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"WMT","provenance":"BACKFILL"}
+{"seq":194657,"ts":"2024-08-16T09:32:02","kind":"feed","detail":"HTTPError('HTTP 503: io exception')","path":"/stock/history/ohlc","provenance":"BACKFILL"}
+{"seq":194658,"ts":"2024-08-16T09:32:02","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc","provenance":"BACKFILL"}
+{"seq":194661,"ts":"2024-08-16T09:33:02","kind":"feed","detail":"ReadTimeout('timed out')","path":"/stock/history/ohlc","provenance":"BACKFILL"}
+{"seq":194662,"ts":"2024-08-16T09:33:02","kind":"feed","detail":"HTTPError('HTTP 503: io exception')","path":"/stock/history/ohlc","provenance":"BACKFILL"}
+{"seq":194663,"ts":"2024-08-16T09:34:02","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc","provenance":"BACKFILL"}
+{"seq":194670,"ts":"2024-08-16T09:37:02","kind":"feed","detail":"upstream recovered after 214s and 26 failed call(s)","path":"__recovered__","provenance":"BACKFILL"}
+{"seq":198855,"ts":"2024-08-16T12:33:02","kind":"degraded_bar","detail":"1m gap before 12:32","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":211787,"ts":"2024-08-19T12:20:02","kind":"degraded_bar","detail":"1m gap before 12:19","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":213599,"ts":"2024-08-19T13:07:02","kind":"degraded_bar","detail":"1m gap before 13:06","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":213989,"ts":"2024-08-19T13:17:02","kind":"degraded_bar","detail":"1m gap before 13:16","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":214497,"ts":"2024-08-19T13:30:02","kind":"degraded_bar","detail":"1m gap before 13:29","symbol":"XLV","provenance":"BACKFILL"}
+{"seq":214991,"ts":"2024-08-19T13:42:02","kind":"degraded_bar","detail":"1m gap before 13:41","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":227498,"ts":"2024-08-20T12:24:02","kind":"degraded_bar","detail":"1m gap before 12:23","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":228038,"ts":"2024-08-20T12:34:02","kind":"degraded_bar","detail":"1m gap before 12:33","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":228147,"ts":"2024-08-20T12:36:02","kind":"degraded_bar","detail":"1m gap before 12:35","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":228679,"ts":"2024-08-20T12:46:02","kind":"degraded_bar","detail":"1m gap before 12:45","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":229703,"ts":"2024-08-20T13:05:02","kind":"degraded_bar","detail":"1m gap before 13:04","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":230646,"ts":"2024-08-20T13:22:02","kind":"degraded_bar","detail":"1m gap before 13:21","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":231977,"ts":"2024-08-20T13:46:02","kind":"degraded_bar","detail":"1m gap before 13:45","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":232909,"ts":"2024-08-20T14:03:02","kind":"degraded_bar","detail":"1m gap before 14:02","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":244492,"ts":"2024-08-21T11:56:02","kind":"degraded_bar","detail":"1m gap before 11:55","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":246125,"ts":"2024-08-21T12:26:02","kind":"degraded_bar","detail":"1m gap before 12:25","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":246284,"ts":"2024-08-21T12:29:02","kind":"degraded_bar","detail":"1m gap before 12:28","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":246397,"ts":"2024-08-21T12:31:02","kind":"degraded_bar","detail":"1m gap before 12:30","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":246552,"ts":"2024-08-21T12:34:02","kind":"degraded_bar","detail":"1m gap before 12:33","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":247554,"ts":"2024-08-21T12:52:02","kind":"degraded_bar","detail":"1m gap before 12:51","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":247883,"ts":"2024-08-21T12:58:02","kind":"degraded_bar","detail":"1m gap before 12:57","symbol":"XLY","provenance":"BACKFILL"}
+{"seq":249012,"ts":"2024-08-21T13:18:02","kind":"degraded_bar","detail":"1m gap before 13:17","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":249467,"ts":"2024-08-21T13:26:02","kind":"degraded_bar","detail":"1m gap before 13:25","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":251357,"ts":"2024-08-21T13:59:02","kind":"degraded_bar","detail":"1m gap before 13:58","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":260770,"ts":"2024-08-22T11:06:02","kind":"degraded_bar","detail":"1m gap before 11:05","symbol":"XLY","provenance":"BACKFILL"}
+{"seq":261169,"ts":"2024-08-22T11:19:02","kind":"degraded_bar","detail":"1m gap before 11:18","symbol":"XLY","provenance":"BACKFILL"}
+{"seq":262568,"ts":"2024-08-22T11:54:02","kind":"degraded_bar","detail":"1m gap before 11:53","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":265174,"ts":"2024-08-22T12:46:02","kind":"degraded_bar","detail":"1m gap before 12:45","symbol":"XLY","provenance":"BACKFILL"}
+{"seq":267509,"ts":"2024-08-22T13:29:02","kind":"degraded_bar","detail":"1m gap before 13:28","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":268542,"ts":"2024-08-22T13:47:02","kind":"degraded_bar","detail":"1m gap before 13:46","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":270673,"ts":"2024-08-22T14:23:02","kind":"degraded_bar","detail":"1m gap before 14:22","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":270779,"ts":"2024-08-22T14:25:02","kind":"degraded_bar","detail":"1m gap before 14:24","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":271515,"ts":"2024-08-22T14:37:02","kind":"degraded_bar","detail":"1m gap before 14:36","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":272875,"ts":"2024-08-22T15:00:02","kind":"degraded_bar","detail":"1m gap before 14:59","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":276635,"ts":"2024-08-23T09:31:02","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc","provenance":"BACKFILL"}
+{"seq":276636,"ts":"2024-08-23T09:31:02","kind":"levels_fetch","detail":"today's premarket fetch failed, will retry: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"AAPL","provenance":"BACKFILL"}
+{"seq":276637,"ts":"2024-08-23T09:31:02","kind":"levels_fetch","detail":"today's premarket fetch failed, will retry: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")","symbol":"GOOGL","provenance":"BACKFILL"}
+{"seq":276638,"ts":"2024-08-23T09:31:02","kind":"feed","detail":"upstream recovered after 11s and 2 failed call(s)","path":"__recovered__","provenance":"BACKFILL"}
+{"seq":288581,"ts":"2024-08-23T13:26:02","kind":"degraded_bar","detail":"1m gap before 13:25","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":289490,"ts":"2024-08-23T13:39:02","kind":"degraded_bar","detail":"1m gap before 13:38","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":290976,"ts":"2024-08-23T14:00:02","kind":"degraded_bar","detail":"1m gap before 13:59","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":292327,"ts":"2024-08-23T14:19:02","kind":"degraded_bar","detail":"1m gap before 14:18","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":294805,"ts":"2024-08-23T14:54:02","kind":"degraded_bar","detail":"1m gap before 14:53","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":300299,"ts":"2024-08-26T10:18:02","kind":"degraded_bar","detail":"1m gap before 10:17","symbol":"XLY","provenance":"BACKFILL"}
+{"seq":302123,"ts":"2024-08-26T11:07:02","kind":"degraded_bar","detail":"1m gap before 11:06","symbol":"XLY","provenance":"BACKFILL"}
+{"seq":307136,"ts":"2024-08-26T12:38:02","kind":"degraded_bar","detail":"1m gap before 12:37","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":307755,"ts":"2024-08-26T12:49:02","kind":"degraded_bar","detail":"1m gap before 12:48","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":310089,"ts":"2024-08-26T13:28:02","kind":"degraded_bar","detail":"1m gap before 13:27","symbol":"XLY","provenance":"BACKFILL"}
+{"seq":310382,"ts":"2024-08-26T13:33:02","kind":"degraded_bar","detail":"1m gap before 13:32","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":310613,"ts":"2024-08-26T13:37:02","kind":"degraded_bar","detail":"1m gap before 13:36","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":312664,"ts":"2024-08-26T14:10:02","kind":"degraded_bar","detail":"1m gap before 14:09","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":313110,"ts":"2024-08-26T14:17:02","kind":"degraded_bar","detail":"1m gap before 14:16","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":315328,"ts":"2024-08-26T14:52:02","kind":"degraded_bar","detail":"1m gap before 14:51","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":316017,"ts":"2024-08-26T15:03:02","kind":"degraded_bar","detail":"1m gap before 15:02","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":316523,"ts":"2024-08-26T15:11:02","kind":"degraded_bar","detail":"1m gap before 15:10","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":317150,"ts":"2024-08-26T15:21:02","kind":"degraded_bar","detail":"1m gap before 15:20","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":327983,"ts":"2024-08-27T12:38:02","kind":"degraded_bar","detail":"1m gap before 12:37","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":328396,"ts":"2024-08-27T12:45:02","kind":"degraded_bar","detail":"1m gap before 12:44","symbol":"XLY","provenance":"BACKFILL"}
+{"seq":329438,"ts":"2024-08-27T13:02:02","kind":"degraded_bar","detail":"1m gap before 13:01","symbol":"XLY","provenance":"BACKFILL"}
+{"seq":330302,"ts":"2024-08-27T13:16:02","kind":"degraded_bar","detail":"1m gap before 13:15","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":332501,"ts":"2024-08-27T13:51:02","kind":"degraded_bar","detail":"1m gap before 13:50","symbol":"XLI","provenance":"BACKFILL"}
+{"seq":332621,"ts":"2024-08-27T13:53:02","kind":"degraded_bar","detail":"1m gap before 13:52","symbol":"XLY","provenance":"BACKFILL"}
+{"seq":333000,"ts":"2024-08-27T13:59:02","kind":"degraded_bar","detail":"1m gap before 13:58","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":336461,"ts":"2024-08-27T14:53:02","kind":"degraded_bar","detail":"1m gap before 14:52","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":339565,"ts":"2024-08-27T15:41:02","kind":"degraded_bar","detail":"1m gap before 15:40","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":348245,"ts":"2024-08-28T13:11:02","kind":"degraded_bar","detail":"1m gap before 13:10","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":377375,"ts":"2024-08-29T15:28:02","kind":"degraded_bar","detail":"1m gap before 15:27","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":380801,"ts":"2024-08-30T10:31:02","kind":"degraded_bar","detail":"1m gap before 10:30","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":381403,"ts":"2024-08-30T10:50:02","kind":"degraded_bar","detail":"1m gap before 10:49","symbol":"XLY","provenance":"BACKFILL"}
+{"seq":384622,"ts":"2024-08-30T11:52:02","kind":"degraded_bar","detail":"1m gap before 11:51","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":385913,"ts":"2024-08-30T12:13:02","kind":"degraded_bar","detail":"1m gap before 12:12","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":386156,"ts":"2024-08-30T12:17:02","kind":"degraded_bar","detail":"1m gap before 12:16","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":388748,"ts":"2024-08-30T12:57:02","kind":"degraded_bar","detail":"1m gap before 12:56","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":389692,"ts":"2024-08-30T13:11:02","kind":"degraded_bar","detail":"1m gap before 13:10","symbol":"XLY","provenance":"BACKFILL"}
+{"seq":391900,"ts":"2024-08-30T13:44:02","kind":"degraded_bar","detail":"1m gap before 13:43","symbol":"DIA","provenance":"BACKFILL"}
+{"seq":392375,"ts":"2024-08-30T13:51:02","kind":"degraded_bar","detail":"1m gap before 13:50","symbol":"DIA","provenance":"BACKFILL"}
