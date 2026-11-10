@@ -1,0 +1,7148 @@
+{
+ "arm": "options",
+ "set": "discovery",
+ "window": [
+  "2020-01-02",
+  "2022-12-30"
+ ],
+ "repo_sha": "6e91528",
+ "config_hashes": [
+  "ccd00ac71f8243e9"
+ ],
+ "live_hash": "ccd00ac71f8243e9",
+ "chunks": [
+  {
+   "dir": "live_lab_backfill/news_arms/2020/options/2020-01",
+   "start": "2020-01-01",
+   "end": "2020-01-31",
+   "repo_sha": "13e8f5c",
+   "sessions_replayed": 21
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2020/options/2020-02",
+   "start": "2020-02-01",
+   "end": "2020-02-29",
+   "repo_sha": "13e8f5c",
+   "sessions_replayed": 19
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2020/options/2020-03",
+   "start": "2020-03-01",
+   "end": "2020-03-31",
+   "repo_sha": "13e8f5c",
+   "sessions_replayed": 22
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2020/options/2020-04",
+   "start": "2020-04-01",
+   "end": "2020-04-30",
+   "repo_sha": "13e8f5c",
+   "sessions_replayed": 21
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2020/options/2020-05",
+   "start": "2020-05-01",
+   "end": "2020-05-31",
+   "repo_sha": "13e8f5c",
+   "sessions_replayed": 20
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2020/options/2020-06",
+   "start": "2020-06-01",
+   "end": "2020-06-30",
+   "repo_sha": "13e8f5c",
+   "sessions_replayed": 22
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2020/options/2020-07",
+   "start": "2020-07-01",
+   "end": "2020-07-31",
+   "repo_sha": "13e8f5c",
+   "sessions_replayed": 22
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2020/options/2020-08",
+   "start": "2020-08-01",
+   "end": "2020-08-31",
+   "repo_sha": "13e8f5c",
+   "sessions_replayed": 21
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2020/options/2020-09",
+   "start": "2020-09-01",
+   "end": "2020-09-30",
+   "repo_sha": "13e8f5c",
+   "sessions_replayed": 21
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2020/options/2020-10",
+   "start": "2020-10-01",
+   "end": "2020-10-31",
+   "repo_sha": "13e8f5c",
+   "sessions_replayed": 22
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2020/options/2020-11",
+   "start": "2020-11-01",
+   "end": "2020-11-30",
+   "repo_sha": "13e8f5c",
+   "sessions_replayed": 19
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2020/options/2020-12",
+   "start": "2020-12-01",
+   "end": "2020-12-31",
+   "repo_sha": "13e8f5c",
+   "sessions_replayed": 21
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2021/options/2021-01",
+   "start": "2021-01-01",
+   "end": "2021-01-31",
+   "repo_sha": "13e8f5c",
+   "sessions_replayed": 19
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2021/options/2021-02",
+   "start": "2021-02-01",
+   "end": "2021-02-28",
+   "repo_sha": "13e8f5c",
+   "sessions_replayed": 19
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2021/options/2021-03",
+   "start": "2021-03-01",
+   "end": "2021-03-31",
+   "repo_sha": "13e8f5c",
+   "sessions_replayed": 23
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2021/options/2021-04",
+   "start": "2021-04-01",
+   "end": "2021-04-30",
+   "repo_sha": "13e8f5c",
+   "sessions_replayed": 21
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2021/options/2021-05",
+   "start": "2021-05-01",
+   "end": "2021-05-31",
+   "repo_sha": "13e8f5c",
+   "sessions_replayed": 20
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2021/options/2021-06",
+   "start": "2021-06-01",
+   "end": "2021-06-30",
+   "repo_sha": "13e8f5c",
+   "sessions_replayed": 22
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2021/options/2021-07",
+   "start": "2021-07-01",
+   "end": "2021-07-31",
+   "repo_sha": "13e8f5c",
+   "sessions_replayed": 21
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2021/options/2021-08",
+   "start": "2021-08-01",
+   "end": "2021-08-31",
+   "repo_sha": "13e8f5c",
+   "sessions_replayed": 22
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2021/options/2021-09",
+   "start": "2021-09-01",
+   "end": "2021-09-30",
+   "repo_sha": "13e8f5c",
+   "sessions_replayed": 21
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2021/options/2021-10",
+   "start": "2021-10-01",
+   "end": "2021-10-31",
+   "repo_sha": "13e8f5c",
+   "sessions_replayed": 21
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2021/options/2021-11",
+   "start": "2021-11-01",
+   "end": "2021-11-30",
+   "repo_sha": "13e8f5c",
+   "sessions_replayed": 20
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2021/options/2021-12",
+   "start": "2021-12-01",
+   "end": "2021-12-31",
+   "repo_sha": "13e8f5c",
+   "sessions_replayed": 22
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2022/options/2022-01",
+   "start": "2022-01-01",
+   "end": "2022-01-31",
+   "repo_sha": "13e8f5c",
+   "sessions_replayed": 20
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2022/options/2022-02",
+   "start": "2022-02-01",
+   "end": "2022-02-28",
+   "repo_sha": "13e8f5c",
+   "sessions_replayed": 19
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2022/options/2022-03",
+   "start": "2022-03-01",
+   "end": "2022-03-31",
+   "repo_sha": "13e8f5c",
+   "sessions_replayed": 23
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2022/options/2022-04",
+   "start": "2022-04-01",
+   "end": "2022-04-30",
+   "repo_sha": "13e8f5c",
+   "sessions_replayed": 20
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2022/options/2022-05",
+   "start": "2022-05-01",
+   "end": "2022-05-31",
+   "repo_sha": "13e8f5c",
+   "sessions_replayed": 21
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2022/options/2022-06",
+   "start": "2022-06-01",
+   "end": "2022-06-30",
+   "repo_sha": "13e8f5c",
+   "sessions_replayed": 21
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2022/options/2022-07",
+   "start": "2022-07-01",
+   "end": "2022-07-31",
+   "repo_sha": "13e8f5c",
+   "sessions_replayed": 20
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2022/options/2022-08",
+   "start": "2022-08-01",
+   "end": "2022-08-31",
+   "repo_sha": "13e8f5c",
+   "sessions_replayed": 23
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2022/options/2022-09",
+   "start": "2022-09-01",
+   "end": "2022-09-30",
+   "repo_sha": "13e8f5c",
+   "sessions_replayed": 21
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2022/options/2022-10",
+   "start": "2022-10-01",
+   "end": "2022-10-31",
+   "repo_sha": "13e8f5c",
+   "sessions_replayed": 21
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2022/options/2022-11",
+   "start": "2022-11-01",
+   "end": "2022-11-30",
+   "repo_sha": "13e8f5c",
+   "sessions_replayed": 20
+  },
+  {
+   "dir": "live_lab_backfill/news_arms/2022/options/2022-12",
+   "start": "2022-12-01",
+   "end": "2022-12-31",
+   "repo_sha": "13e8f5c",
+   "sessions_replayed": 21
+  }
+ ],
+ "excluded_no_0dte": {
+  "n": 270,
+  "by_year": {
+   "2020": 94,
+   "2021": 95,
+   "2022": 81
+  },
+  "by_weekday": {
+   "3": 138,
+   "1": 132
+  }
+ },
+ "events_sha": {
+  "scheduled": "f42fa7cdda6c4af5",
+  "geopolitical": "cd86aaba92bcbbf8"
+ },
+ "regime_cuts_med20_range_bp": [
+  111.2118,
+  184.4911
+ ],
+ "seeds": {
+  "bootstrap": 20260828,
+  "placebo": 20260828
+ },
+ "n_boot": 3000,
+ "n_placebo": 5000,
+ "command": "/home/user/stock/trade_analysis/news_arms/analyze.py --arm options --set discovery",
+ "generated": "2026-11-10T06:11:41",
+ "n_sessions": 482,
+ "n_trades": 9943,
+ "sigma_discovery_usd": 1032.2508604554341,
+ "sigma_own_usd_descriptive": 1032.2508604554341,
+ "b0": {
+  "net_mean": -100.29145228215769,
+  "net_median": -214.31,
+  "z_mean_discovery_sigma": -0.09715802245774696
+ },
+ "conditioning_columns": [
+  "scheduled_today",
+  "any_event",
+  "categories",
+  "single_category",
+  "surprise_geo",
+  "regime",
+  "year",
+  "weekday",
+  "entry_before_event_minute",
+  "entry_in_first_60"
+ ],
+ "q1": {
+  "FOMC": {
+   "cell": "FOMC",
+   "n_sessions": 22,
+   "n_trades": 493,
+   "meets_minimums": false,
+   "tested": false,
+   "descriptive_placebo": false,
+   "never_tested": false,
+   "effect_sigma": -0.28619752227340267,
+   "ci95": [
+    -0.7733380828930726,
+    0.2246226962414236
+   ],
+   "p_boot": 0.264,
+   "undiluted_sigma": -0.2998852298603915,
+   "effect_native": -295.4276386269332,
+   "metrics": {
+    "n_sessions": 22,
+    "n_trades": 493,
+    "daily_net_mean": -395.7190909090909,
+    "daily_net_median": -244.39,
+    "z_mean": -0.38335554473114963,
+    "win_rate_trade": 0.3509127789046653,
+    "win_rate_day": 0.22727272727272727,
+    "expectancy_usd": -17.65889330628804,
+    "trades_per_session": 22.40909090909091,
+    "avg_winner_usd": 80.6648647398844,
+    "avg_loser_usd": -70.815175,
+    "max_drawdown_usd": -8705.82,
+    "return_on_premium_mean": -0.05422173466011273,
+    "avg_winner_pct_premium": 0.44282874974654435,
+    "avg_loser_pct_premium": -0.3229396527924616,
+    "median_premium_usd": 212.0,
+    "median_entry_spread_pct": 0.011834319526627229,
+    "exit_mix": {
+     "eod": 0.0791,
+     "stop": 0.4118,
+     "target": 0.1744,
+     "time": 0.2515,
+     "trail": 0.0832
+    },
+    "exits_shutdown_excluded": 0,
+    "underlying_twin_bp": -7.901634512513031
+   },
+   "by_year": {
+    "2020": {
+     "n": 6,
+     "net_mean": -163.98333333333335,
+     "z_mean": -0.15885996283983053
+    },
+    "2021": {
+     "n": 8,
+     "net_mean": -195.56124999999997,
+     "z_mean": -0.18945128310546275
+    },
+    "2022": {
+     "n": 8,
+     "net_mean": -769.67875,
+     "z_mean": -0.7456314927753259
+    }
+   },
+   "by_regime": {
+    "high": {
+     "n": 10,
+     "net_mean": -531.292,
+     "z_mean": -0.5146927170063984
+    },
+    "low": {
+     "n": 6,
+     "net_mean": -211.7833333333334,
+     "z_mean": -0.20516653601033913
+    },
+    "mid": {
+     "n": 6,
+     "net_mean": -353.7,
+     "z_mean": -0.3426492663265457
+    }
+   },
+   "placebo": {
+    "n_draws": 5000,
+    "mean": -0.05858683030197441,
+    "sd": 0.16187502027414005,
+    "p95_same_sign": -0.31260433440570556,
+    "p99_same_sign": -0.39736076213679494,
+    "rank": 0.9324,
+    "strata": 15,
+    "strata_fallback": 0,
+    "verdict": "selection / chance"
+   },
+   "day_direction_co_bp_mean": -0.037213636363634735,
+   "post_hoc_within_regime": {
+    "low": {
+     "n_regime": 86,
+     "n_condition": 6,
+     "effect_sigma": -0.2087082431404694,
+     "ci95": [
+      -0.51243338262946,
+      0.06644636527820003
+     ]
+    },
+    "mid": {
+     "n_regime": 169,
+     "n_condition": 6,
+     "effect_sigma": -0.3340710111931988,
+     "ci95": [
+      -0.787156783480564,
+      0.2127125129828773
+     ]
+    },
+    "high": {
+     "n_regime": 227,
+     "n_condition": 10,
+     "effect_sigma": -0.31343708475842647,
+     "ci95": [
+      -1.3315986680976508,
+      0.7891993997108305
+     ]
+    }
+   },
+   "bh_q10": null,
+   "confounded_by_overlap": false
+  },
+  "CPI": {
+   "cell": "CPI",
+   "n_sessions": 19,
+   "n_trades": 403,
+   "meets_minimums": false,
+   "tested": false,
+   "descriptive_placebo": false,
+   "never_tested": false,
+   "effect_sigma": -0.32677860393106106,
+   "ci95": [
+    -0.7025528381443653,
+    0.05510097426953456
+   ],
+   "p_boot": 0.08266666666666667,
+   "undiluted_sigma": -0.3401885250427029,
+   "effect_native": -337.3174950862633,
+   "metrics": {
+    "n_sessions": 19,
+    "n_trades": 403,
+    "daily_net_mean": -437.608947368421,
+    "daily_net_median": -430.18,
+    "z_mean": -0.4239366263888081,
+    "win_rate_trade": 0.31017369727047145,
+    "win_rate_day": 0.15789473684210525,
+    "expectancy_usd": -20.63166848635236,
+    "trades_per_session": 21.210526315789473,
+    "avg_winner_usd": 74.48720000000002,
+    "avg_loser_usd": -63.40094388489207,
+    "max_drawdown_usd": -10204.95,
+    "return_on_premium_mean": -0.1389769542368739,
+    "avg_winner_pct_premium": 0.4852616701794162,
+    "avg_loser_pct_premium": -0.4196597889564288,
+    "median_premium_usd": 145.0,
+    "median_entry_spread_pct": 0.018018018018018035,
+    "exit_mix": {
+     "eod": 0.1117,
+     "stop": 0.4069,
+     "target": 0.1514,
+     "time": 0.2605,
+     "trail": 0.0695
+    },
+    "exits_shutdown_excluded": 0,
+    "underlying_twin_bp": -4.8125260911416365
+   },
+   "by_year": {
+    "2020": {
+     "n": 5,
+     "net_mean": -301.166,
+     "z_mean": -0.29175659864998715
+    },
+    "2021": {
+     "n": 8,
+     "net_mean": -427.10625,
+     "z_mean": -0.4137620673055759
+    },
+    "2022": {
+     "n": 6,
+     "net_mean": -565.3149999999999,
+     "z_mean": -0.5476527282821351
+    }
+   },
+   "by_regime": {
+    "high": {
+     "n": 9,
+     "net_mean": -707.0877777777778,
+     "z_mean": -0.6849960652644137
+    },
+    "low": {
+     "n": 2,
+     "net_mean": -271.275,
+     "z_mean": -0.2627994903102451
+    },
+    "mid": {
+     "n": 8,
+     "net_mean": -176.02875,
+     "z_mean": -0.1705290416733925
+    }
+   },
+   "placebo": {
+    "n_draws": 5000,
+    "mean": -0.04516574596830553,
+    "sd": 0.1960132799818554,
+    "p95_same_sign": -0.34641719000061105,
+    "p99_same_sign": -0.47546450821198605,
+    "rank": 0.9346,
+    "strata": 15,
+    "strata_fallback": 0,
+    "verdict": "selection / chance"
+   },
+   "day_direction_co_bp_mean": -45.59047368421054,
+   "post_hoc_within_regime": {
+    "low": {
+     "n_regime": 86,
+     "n_condition": 2,
+     "effect_sigma": -0.2663411974403754,
+     "ci95": [
+      null,
+      null
+     ]
+    },
+    "mid": {
+     "n_regime": 169,
+     "n_condition": 8,
+     "effect_sigma": -0.16195078654004563,
+     "ci95": [
+      -0.6742449810380835,
+      0.4770686535337297
+     ]
+    },
+    "high": {
+     "n_regime": 227,
+     "n_condition": 9,
+     "effect_sigma": -0.483740433016442,
+     "ci95": [
+      -1.0847614731262685,
+      0.05159595622751503
+     ]
+    }
+   },
+   "bh_q10": null,
+   "confounded_by_overlap": false
+  },
+  "NFP": {
+   "cell": "NFP",
+   "n_sessions": 36,
+   "n_trades": 849,
+   "meets_minimums": true,
+   "tested": true,
+   "descriptive_placebo": false,
+   "never_tested": false,
+   "effect_sigma": -0.10043122108783634,
+   "ci95": [
+    -0.3887890391066011,
+    0.2203804574919495
+   ],
+   "p_boot": 0.518,
+   "undiluted_sigma": -0.10853777705008323,
+   "effect_native": -103.670214384509,
+   "metrics": {
+    "n_sessions": 36,
+    "n_trades": 849,
+    "daily_net_mean": -203.9616666666667,
+    "daily_net_median": -432.94,
+    "z_mean": -0.1975892435455833,
+    "win_rate_trade": 0.36042402826855124,
+    "win_rate_day": 0.25,
+    "expectancy_usd": -8.648526737338045,
+    "trades_per_session": 23.583333333333332,
+    "avg_winner_usd": 80.22312156862745,
+    "avg_loser_usd": -58.73089208103131,
+    "max_drawdown_usd": -8539.54,
+    "return_on_premium_mean": -0.05393500405196065,
+    "avg_winner_pct_premium": 0.5985276726171977,
+    "avg_loser_pct_premium": -0.42162115333513284,
+    "median_premium_usd": 125.0,
+    "median_entry_spread_pct": 0.01941747572815536,
+    "exit_mix": {
+     "eod": 0.1307,
+     "stop": 0.3852,
+     "target": 0.1625,
+     "time": 0.2615,
+     "trail": 0.0601
+    },
+    "exits_shutdown_excluded": 0,
+    "underlying_twin_bp": -1.3494146817774264
+   },
+   "by_year": {
+    "2020": {
+     "n": 12,
+     "net_mean": -304.2699999999999,
+     "z_mean": -0.29476361963578745
+    },
+    "2021": {
+     "n": 12,
+     "net_mean": 84.38833333333332,
+     "z_mean": 0.0817517684568466
+    },
+    "2022": {
+     "n": 12,
+     "net_mean": -392.0033333333333,
+     "z_mean": -0.3797558794578088
+    }
+   },
+   "by_regime": {
+    "high": {
+     "n": 17,
+     "net_mean": -514.4341176470589,
+     "z_mean": -0.49836152950271023
+    },
+    "low": {
+     "n": 6,
+     "net_mean": -251.01833333333335,
+     "z_mean": -0.2431757075238308
+    },
+    "mid": {
+     "n": 13,
+     "net_mean": 223.75923076923075,
+     "z_mean": 0.21676826761908155
+    }
+   },
+   "placebo": {
+    "n_draws": 5000,
+    "mean": 0.10828249029779656,
+    "sd": 0.15579862090064356,
+    "p95_same_sign": -0.14692126602489353,
+    "p99_same_sign": -0.25004841022157237,
+    "rank": 0.912,
+    "strata": 15,
+    "strata_fallback": 0,
+    "verdict": "selection / chance"
+   },
+   "day_direction_co_bp_mean": 2.568619444444444,
+   "post_hoc_within_regime": {
+    "low": {
+     "n_regime": 86,
+     "n_condition": 6,
+     "effect_sigma": -0.2467174146539611,
+     "ci95": [
+      -0.5724222897737185,
+      0.10428053172768317
+     ]
+    },
+    "mid": {
+     "n_regime": 169,
+     "n_condition": 13,
+     "effect_sigma": 0.2253465227524284,
+     "ci95": [
+      -0.3080689557076318,
+      0.8776480163165116
+     ]
+    },
+    "high": {
+     "n_regime": 227,
+     "n_condition": 17,
+     "effect_sigma": -0.29710589725473824,
+     "ci95": [
+      -0.6823060710251635,
+      0.16155737108529386
+     ]
+    }
+   },
+   "bh_q10": false,
+   "confounded_by_overlap": false
+  },
+  "GDP_ADV": {
+   "cell": "GDP_ADV",
+   "n_sessions": 1,
+   "n_trades": 13,
+   "meets_minimums": false,
+   "tested": false,
+   "descriptive_placebo": false,
+   "never_tested": false,
+   "effect_sigma": -0.10632933516705068,
+   "ci95": [
+    null,
+    null
+   ],
+   "p_boot": null,
+   "undiluted_sigma": -0.1065503940759219,
+   "effect_native": -109.7585477178423,
+   "metrics": {
+    "n_sessions": 1,
+    "n_trades": 13,
+    "daily_net_mean": -210.05,
+    "daily_net_median": -210.05,
+    "z_mean": -0.20348735762479764,
+    "win_rate_trade": 0.23076923076923078,
+    "win_rate_day": 0.0,
+    "expectancy_usd": -16.15772307692308,
+    "trades_per_session": 13.0,
+    "avg_winner_usd": 22.252533333333332,
+    "avg_loser_usd": -27.680799999999998,
+    "max_drawdown_usd": -210.05,
+    "return_on_premium_mean": -0.15807657572914574,
+    "avg_winner_pct_premium": 0.19821049931205495,
+    "avg_loser_pct_premium": -0.264962698241506,
+    "median_premium_usd": 112.99999999999999,
+    "median_entry_spread_pct": 0.015873015873015886,
+    "exit_mix": {
+     "stop": 0.5385,
+     "target": 0.0769,
+     "time": 0.2308,
+     "trail": 0.1538
+    },
+    "exits_shutdown_excluded": 0,
+    "underlying_twin_bp": -6.232705545962371
+   },
+   "by_year": {
+    "2020": {
+     "n": 1,
+     "net_mean": -210.05,
+     "z_mean": -0.20348735762479764
+    }
+   },
+   "by_regime": {
+    "high": {
+     "n": 1,
+     "net_mean": -210.05,
+     "z_mean": -0.20348735762479764
+    }
+   },
+   "day_direction_co_bp_mean": 56.941,
+   "post_hoc_within_regime": {
+    "high": {
+     "n_regime": 227,
+     "n_condition": 1,
+     "effect_sigma": -0.0022317253768257828,
+     "ci95": [
+      null,
+      null
+     ]
+    }
+   },
+   "bh_q10": null,
+   "confounded_by_overlap": null
+  },
+  "PCE": {
+   "cell": "PCE",
+   "n_sessions": 34,
+   "n_trades": 810,
+   "meets_minimums": true,
+   "tested": true,
+   "descriptive_placebo": false,
+   "never_tested": false,
+   "effect_sigma": 0.1630494381919282,
+   "ci95": [
+    -0.20548487136540886,
+    0.5551518194108293
+   ],
+   "p_boot": 0.41,
+   "undiluted_sigma": 0.17542372591185126,
+   "effect_native": 168.30792287039299,
+   "metrics": {
+    "n_sessions": 34,
+    "n_trades": 810,
+    "daily_net_mean": 68.01647058823525,
+    "daily_net_median": -304.495,
+    "z_mean": 0.06589141573418118,
+    "win_rate_trade": 0.37777777777777777,
+    "win_rate_day": 0.29411764705882354,
+    "expectancy_usd": 2.8550024691358,
+    "trades_per_session": 23.823529411764707,
+    "avg_winner_usd": 106.74272941176471,
+    "avg_loser_usd": -60.219688888888875,
+    "max_drawdown_usd": -5060.030000000001,
+    "return_on_premium_mean": 0.0543991905151122,
+    "avg_winner_pct_premium": 0.7722627827535749,
+    "avg_loser_pct_premium": -0.381446561915383,
+    "median_premium_usd": 139.5,
+    "median_entry_spread_pct": 0.019230769230769246,
+    "exit_mix": {
+     "eod": 0.1259,
+     "stop": 0.3432,
+     "target": 0.1889,
+     "time": 0.2704,
+     "trail": 0.0716
+    },
+    "exits_shutdown_excluded": 0,
+    "underlying_twin_bp": 2.5916693830716304
+   },
+   "by_year": {
+    "2020": {
+     "n": 10,
+     "net_mean": 162.43599999999998,
+     "z_mean": 0.15736097321181444
+    },
+    "2021": {
+     "n": 12,
+     "net_mean": -189.87250000000003,
+     "z_mean": -0.1839402680819538
+    },
+    "2022": {
+     "n": 12,
+     "net_mean": 247.2225,
+     "z_mean": 0.23949846831895516
+    }
+   },
+   "by_regime": {
+    "high": {
+     "n": 15,
+     "net_mean": -92.89466666666665,
+     "z_mean": -0.08999233638389129
+    },
+    "low": {
+     "n": 7,
+     "net_mean": 380.3985714285714,
+     "z_mean": 0.3685136879040602
+    },
+    "mid": {
+     "n": 12,
+     "net_mean": 86.93249999999999,
+     "z_mean": 0.08421644711600913
+    }
+   },
+   "placebo": {
+    "n_draws": 5000,
+    "mean": 0.11539269088724663,
+    "sd": 0.1488346218845705,
+    "p95_same_sign": 0.36233863140772027,
+    "p99_same_sign": 0.4624122561935995,
+    "rank": 0.6238,
+    "strata": 15,
+    "strata_fallback": 0,
+    "verdict": "selection / chance"
+   },
+   "day_direction_co_bp_mean": 7.7516,
+   "post_hoc_within_regime": {
+    "low": {
+     "n_regime": 86,
+     "n_condition": 7,
+     "effect_sigma": 0.36497198077392984,
+     "ci95": [
+      -0.30323603508688857,
+      1.2449918331105672
+     ]
+    },
+    "mid": {
+     "n_regime": 169,
+     "n_condition": 12,
+     "effect_sigma": 0.09279470224935597,
+     "ci95": [
+      -0.5143122836468673,
+      0.7916997836923957
+     ]
+    },
+    "high": {
+     "n_regime": 227,
+     "n_condition": 15,
+     "effect_sigma": 0.11126329586408057,
+     "ci95": [
+      -0.49656355812477926,
+      0.8489949242499392
+     ]
+    }
+   },
+   "bh_q10": false,
+   "confounded_by_overlap": false
+  },
+  "war_military": {
+   "cell": "war_military",
+   "n_sessions": 9,
+   "n_trades": 228,
+   "meets_minimums": false,
+   "tested": false,
+   "descriptive_placebo": false,
+   "never_tested": false,
+   "effect_sigma": -0.12365501163735529,
+   "ci95": [
+    -1.1080055951101704,
+    0.8894588496230273
+   ],
+   "p_boot": 0.8206666666666667,
+   "undiluted_sigma": -0.12600785541058196,
+   "effect_native": -127.64299216228672,
+   "metrics": {
+    "n_sessions": 9,
+    "n_trades": 228,
+    "daily_net_mean": -227.93444444444452,
+    "daily_net_median": -22.13,
+    "z_mean": -0.22081303409510236,
+    "win_rate_trade": 0.3508771929824561,
+    "win_rate_day": 0.4444444444444444,
+    "expectancy_usd": -8.997466666666666,
+    "trades_per_session": 25.333333333333332,
+    "avg_winner_usd": 106.4692,
+    "avg_loser_usd": -71.41188108108108,
+    "max_drawdown_usd": -5668.94,
+    "return_on_premium_mean": 0.024157635420811487,
+    "avg_winner_pct_premium": 0.8697217078694873,
+    "avg_loser_pct_premium": -0.4329040253622565,
+    "median_premium_usd": 144.0,
+    "median_entry_spread_pct": 0.017699115044247746,
+    "exit_mix": {
+     "eod": 0.1096,
+     "stop": 0.4123,
+     "target": 0.1447,
+     "time": 0.2675,
+     "trail": 0.0658
+    },
+    "exits_shutdown_excluded": 0,
+    "underlying_twin_bp": -6.735805645347344
+   },
+   "by_year": {
+    "2020": {
+     "n": 2,
+     "net_mean": -307.075,
+     "z_mean": -0.297480982350082
+    },
+    "2021": {
+     "n": 2,
+     "net_mean": 1167.56,
+     "z_mean": 1.131081643743912
+    },
+    "2022": {
+     "n": 5,
+     "net_mean": -754.4759999999999,
+     "z_mean": -0.730903725928716
+    }
+   },
+   "by_regime": {
+    "high": {
+     "n": 5,
+     "net_mean": -754.4759999999999,
+     "z_mean": -0.730903725928716
+    },
+    "low": {
+     "n": 3,
+     "net_mean": -190.47,
+     "z_mean": -0.18451910024658513
+    },
+    "mid": {
+     "n": 1,
+     "net_mean": 2292.38,
+     "z_mean": 2.2207586235274155
+    }
+   },
+   "placebo": {
+    "n_draws": 5000,
+    "mean": 0.008117554821051302,
+    "sd": 0.3606016648169887,
+    "p95_same_sign": -0.526759543627198,
+    "p99_same_sign": -0.6989912022177638,
+    "rank": 0.6218,
+    "strata": 15,
+    "strata_fallback": 0,
+    "verdict": "selection / chance"
+   },
+   "day_direction_co_bp_mean": -79.5884875,
+   "post_hoc_within_regime": {
+    "low": {
+     "n_regime": 86,
+     "n_condition": 3,
+     "effect_sigma": -0.1880608073767154,
+     "ci95": [
+      null,
+      null
+     ]
+    },
+    "mid": {
+     "n_regime": 169,
+     "n_condition": 1,
+     "effect_sigma": 2.2293368786607624,
+     "ci95": [
+      null,
+      null
+     ]
+    },
+    "high": {
+     "n_regime": 227,
+     "n_condition": 5,
+     "effect_sigma": -0.5296480936807443,
+     "ci95": [
+      -2.0122781441892115,
+      1.048512813956636
+     ]
+    }
+   },
+   "bh_q10": null,
+   "confounded_by_overlap": false
+  },
+  "trade_tariff": {
+   "cell": "trade_tariff",
+   "n_sessions": 4,
+   "n_trades": 94,
+   "meets_minimums": false,
+   "tested": false,
+   "descriptive_placebo": false,
+   "never_tested": false,
+   "effect_sigma": 0.2943993208667109,
+   "ci95": [
+    null,
+    null
+   ],
+   "p_boot": null,
+   "undiluted_sigma": 0.2968629135099469,
+   "effect_native": 303.8939522821578,
+   "metrics": {
+    "n_sessions": 4,
+    "n_trades": 94,
+    "daily_net_mean": 203.60250000000008,
+    "daily_net_median": -330.655,
+    "z_mean": 0.19724129840896393,
+    "win_rate_trade": 0.35106382978723405,
+    "win_rate_day": 0.25,
+    "expectancy_usd": 8.663880851063828,
+    "trades_per_session": 23.5,
+    "avg_winner_usd": 87.79798787878786,
+    "avg_loser_usd": -34.14637377049181,
+    "max_drawdown_usd": -1423.4099999999999,
+    "return_on_premium_mean": -0.04466634828433145,
+    "avg_winner_pct_premium": 0.5956918565459602,
+    "avg_loser_pct_premium": -0.39108963942203023,
+    "median_premium_usd": 101.5,
+    "median_entry_spread_pct": 0.018518518518518535,
+    "exit_mix": {
+     "eod": 0.1064,
+     "stop": 0.3723,
+     "target": 0.1489,
+     "time": 0.2766,
+     "trail": 0.0957
+    },
+    "exits_shutdown_excluded": 0,
+    "underlying_twin_bp": 5.456977756016419
+   },
+   "by_year": {
+    "2020": {
+     "n": 3,
+     "net_mean": -474.46999999999997,
+     "z_mean": -0.45964602033914653
+    },
+    "2022": {
+     "n": 1,
+     "net_mean": 2237.82,
+     "z_mean": 2.1679032546532953
+    }
+   },
+   "by_regime": {
+    "high": {
+     "n": 2,
+     "net_mean": 898.9000000000001,
+     "z_mean": 0.8708154523633925
+    },
+    "low": {
+     "n": 1,
+     "net_mean": -221.29,
+     "z_mean": -0.21437618361719338
+    },
+    "mid": {
+     "n": 1,
+     "net_mean": -762.1,
+     "z_mean": -0.7382895274737361
+    }
+   },
+   "day_direction_co_bp_mean": -11.965199999999996,
+   "post_hoc_within_regime": {
+    "low": {
+     "n_regime": 86,
+     "n_condition": 1,
+     "effect_sigma": -0.21791789074732368,
+     "ci95": [
+      null,
+      null
+     ]
+    },
+    "mid": {
+     "n_regime": 169,
+     "n_condition": 1,
+     "effect_sigma": -0.7297112723403892,
+     "ci95": [
+      null,
+      null
+     ]
+    },
+    "high": {
+     "n_regime": 227,
+     "n_condition": 2,
+     "effect_sigma": 1.0720710846113644,
+     "ci95": [
+      null,
+      null
+     ]
+    }
+   },
+   "bh_q10": null,
+   "confounded_by_overlap": null
+  },
+  "financial_stress": {
+   "cell": "financial_stress",
+   "n_sessions": 12,
+   "n_trades": 265,
+   "meets_minimums": false,
+   "tested": false,
+   "descriptive_placebo": false,
+   "never_tested": true,
+   "effect_sigma": -0.3374424064232083,
+   "ci95": [
+    -0.8604527641256611,
+    0.12116763814182195
+   ],
+   "p_boot": 0.156,
+   "undiluted_sigma": -0.346057957225503,
+   "effect_native": -348.325214384509,
+   "metrics": {
+    "n_sessions": 12,
+    "n_trades": 265,
+    "daily_net_mean": -448.6166666666666,
+    "daily_net_median": -260.65500000000003,
+    "z_mean": -0.4346004288809551,
+    "win_rate_trade": 0.35094339622641507,
+    "win_rate_day": 0.25,
+    "expectancy_usd": -20.314762264150936,
+    "trades_per_session": 22.083333333333332,
+    "avg_winner_usd": 85.67188817204303,
+    "avg_loser_usd": -77.62149767441858,
+    "max_drawdown_usd": -5755.42,
+    "return_on_premium_mean": -0.05209253117238464,
+    "avg_winner_pct_premium": 0.5676441334187787,
+    "avg_loser_pct_premium": -0.3871827044687694,
+    "median_premium_usd": 165.0,
+    "median_entry_spread_pct": 0.01612903225806453,
+    "exit_mix": {
+     "eod": 0.1208,
+     "stop": 0.3509,
+     "target": 0.166,
+     "time": 0.2679,
+     "trail": 0.0943
+    },
+    "exits_shutdown_excluded": 0,
+    "underlying_twin_bp": -4.502196602879093
+   },
+   "by_year": {
+    "2020": {
+     "n": 3,
+     "net_mean": -1547.2366666666667,
+     "z_mean": -1.498895981529159
+    },
+    "2021": {
+     "n": 3,
+     "net_mean": 120.38333333333333,
+     "z_mean": 0.11662216806505699
+    },
+    "2022": {
+     "n": 6,
+     "net_mean": -183.80666666666664,
+     "z_mean": -0.1780639510298594
+    }
+   },
+   "by_regime": {
+    "high": {
+     "n": 10,
+     "net_mean": -603.552,
+     "z_mean": -0.5846950805482592
+    },
+    "low": {
+     "n": 2,
+     "net_mean": 326.06,
+     "z_mean": 0.31587282945556544
+    }
+   },
+   "placebo": {
+    "n_draws": 5000,
+    "mean": 0.02592816353156873,
+    "sd": 0.30754747691637124,
+    "p95_same_sign": -0.4285646361092169,
+    "p99_same_sign": -0.5732526966588627,
+    "rank": 0.8958,
+    "strata": 15,
+    "strata_fallback": 0,
+    "verdict": "selection / chance"
+   },
+   "day_direction_co_bp_mean": -7.977350000000001,
+   "post_hoc_within_regime": {
+    "low": {
+     "n_regime": 86,
+     "n_condition": 2,
+     "effect_sigma": 0.31233112232543514,
+     "ci95": [
+      null,
+      null
+     ]
+    },
+    "high": {
+     "n_regime": 227,
+     "n_condition": 10,
+     "effect_sigma": -0.38343944830028753,
+     "ci95": [
+      -0.9265968913836579,
+      0.17016797840018266
+     ]
+    }
+   },
+   "bh_q10": null,
+   "confounded_by_overlap": false
+  },
+  "us_fiscal": {
+   "cell": "us_fiscal",
+   "n_sessions": 12,
+   "n_trades": 198,
+   "meets_minimums": false,
+   "tested": false,
+   "descriptive_placebo": false,
+   "never_tested": false,
+   "effect_sigma": -0.3821335776949339,
+   "ci95": [
+    -0.6597576963471368,
+    -0.11851523203194146
+   ],
+   "p_boot": 0.006,
+   "undiluted_sigma": -0.3918901796786344,
+   "effect_native": -394.457714384509,
+   "metrics": {
+    "n_sessions": 12,
+    "n_trades": 198,
+    "daily_net_mean": -494.74916666666667,
+    "daily_net_median": -443.51,
+    "z_mean": -0.47929160015268085,
+    "win_rate_trade": 0.30808080808080807,
+    "win_rate_day": 0.08333333333333333,
+    "expectancy_usd": -29.984840404040405,
+    "trades_per_session": 16.5,
+    "avg_winner_usd": 55.394609836065555,
+    "avg_loser_usd": -68.00050802919708,
+    "max_drawdown_usd": -5936.99,
+    "return_on_premium_mean": -0.16587436631704905,
+    "avg_winner_pct_premium": 0.41971015107960635,
+    "avg_loser_pct_premium": -0.4266090784425671,
+    "median_premium_usd": 135.5,
+    "median_entry_spread_pct": 0.01834862385321089,
+    "exit_mix": {
+     "eod": 0.1061,
+     "stop": 0.3687,
+     "target": 0.1667,
+     "time": 0.2778,
+     "trail": 0.0808
+    },
+    "exits_shutdown_excluded": 0,
+    "underlying_twin_bp": -11.991947641398879
+   },
+   "by_year": {
+    "2020": {
+     "n": 6,
+     "net_mean": -479.6233333333333,
+     "z_mean": -0.46463834684692934
+    },
+    "2021": {
+     "n": 5,
+     "net_mean": -491.582,
+     "z_mean": -0.4762233860314843
+    },
+    "2022": {
+     "n": 1,
+     "net_mean": -601.34,
+     "z_mean": -0.5825521905931722
+    }
+   },
+   "by_regime": {
+    "high": {
+     "n": 6,
+     "net_mean": -622.3000000000001,
+     "z_mean": -0.6028573323014119
+    },
+    "low": {
+     "n": 1,
+     "net_mean": -547.13,
+     "z_mean": -0.5300358865853632
+    },
+    "mid": {
+     "n": 5,
+     "net_mean": -331.212,
+     "z_mean": -0.3208638642876671
+    }
+   },
+   "placebo": {
+    "n_draws": 5000,
+    "mean": 0.026547753876482068,
+    "sd": 0.2103579781516679,
+    "p95_same_sign": -0.27971011419044606,
+    "p99_same_sign": -0.4019252379550375,
+    "rank": 0.987,
+    "strata": 15,
+    "strata_fallback": 0,
+    "verdict": "effect"
+   },
+   "day_direction_co_bp_mean": 15.707450000000001,
+   "post_hoc_within_regime": {
+    "low": {
+     "n_regime": 86,
+     "n_condition": 1,
+     "effect_sigma": -0.5335775937154934,
+     "ci95": [
+      null,
+      null
+     ]
+    },
+    "mid": {
+     "n_regime": 169,
+     "n_condition": 5,
+     "effect_sigma": -0.31228560915432024,
+     "ci95": [
+      -0.6684401587126334,
+      -0.044885792020996636
+     ]
+    },
+    "high": {
+     "n_regime": 227,
+     "n_condition": 6,
+     "effect_sigma": -0.40160170005344,
+     "ci95": [
+      -0.8942532199499114,
+      0.1178756216687371
+     ]
+    }
+   },
+   "bh_q10": null,
+   "confounded_by_overlap": false
+  },
+  "pandemic_health": {
+   "cell": "pandemic_health",
+   "n_sessions": 13,
+   "n_trades": 199,
+   "meets_minimums": false,
+   "tested": false,
+   "descriptive_placebo": false,
+   "never_tested": false,
+   "effect_sigma": -0.22440140918423862,
+   "ci95": [
+    -0.9255939507743295,
+    0.49380746860263613
+   ],
+   "p_boot": 0.5173333333333333,
+   "undiluted_sigma": -0.23062149088870582,
+   "effect_native": -231.63854771784227,
+   "metrics": {
+    "n_sessions": 13,
+    "n_trades": 199,
+    "daily_net_mean": -331.93,
+    "daily_net_median": -338.73,
+    "z_mean": -0.32155943164198564,
+    "win_rate_trade": 0.34673366834170855,
+    "win_rate_day": 0.15384615384615385,
+    "expectancy_usd": -21.683815075376884,
+    "trades_per_session": 15.307692307692308,
+    "avg_winner_usd": 88.62934492753624,
+    "avg_loser_usd": -80.23464615384616,
+    "max_drawdown_usd": -6767.609999999999,
+    "return_on_premium_mean": -0.0008926086593181603,
+    "avg_winner_pct_premium": 0.7849526044153803,
+    "avg_loser_pct_premium": -0.4179950679066582,
+    "median_premium_usd": 139.0,
+    "median_entry_spread_pct": 0.024179620034542413,
+    "exit_mix": {
+     "eod": 0.1005,
+     "stop": 0.407,
+     "target": 0.1558,
+     "time": 0.2814,
+     "trail": 0.0553
+    },
+    "exits_shutdown_excluded": 0,
+    "underlying_twin_bp": -11.60534156540753
+   },
+   "by_year": {
+    "2020": {
+     "n": 11,
+     "net_mean": -240.77545454545455,
+     "z_mean": -0.23325284944710362
+    },
+    "2022": {
+     "n": 2,
+     "net_mean": -833.28,
+     "z_mean": -0.8072456337138365
+    }
+   },
+   "by_regime": {
+    "high": {
+     "n": 7,
+     "net_mean": -802.6485714285715,
+     "z_mean": -0.7775712301895675
+    },
+    "low": {
+     "n": 3,
+     "net_mean": 817.5066666666667,
+     "z_mean": 0.7919651104054093
+    },
+    "mid": {
+     "n": 3,
+     "net_mean": -383.0233333333333,
+     "z_mean": -0.37105644374502295
+    }
+   },
+   "placebo": {
+    "n_draws": 5000,
+    "mean": -0.04294503313912605,
+    "sd": 0.21865959520081213,
+    "p95_same_sign": -0.3742371171373404,
+    "p99_same_sign": -0.4987581005841178,
+    "rank": 0.803,
+    "strata": 15,
+    "strata_fallback": 0,
+    "verdict": "selection / chance"
+   },
+   "day_direction_co_bp_mean": -64.77613846153848,
+   "post_hoc_within_regime": {
+    "low": {
+     "n_regime": 86,
+     "n_condition": 3,
+     "effect_sigma": 0.7884234032752792,
+     "ci95": [
+      null,
+      null
+     ]
+    },
+    "mid": {
+     "n_regime": 169,
+     "n_condition": 3,
+     "effect_sigma": -0.3624781886116761,
+     "ci95": [
+      null,
+      null
+     ]
+    },
+    "high": {
+     "n_regime": 227,
+     "n_condition": 7,
+     "effect_sigma": -0.5763155979415955,
+     "ci95": [
+      -1.7264427630039918,
+      0.3168733011220782
+     ]
+    }
+   },
+   "bh_q10": null,
+   "confounded_by_overlap": false
+  },
+  "political_shock": {
+   "cell": "political_shock",
+   "n_sessions": 12,
+   "n_trades": 214,
+   "meets_minimums": false,
+   "tested": false,
+   "descriptive_placebo": false,
+   "never_tested": false,
+   "effect_sigma": -0.0814395520879023,
+   "ci95": [
+    -0.46100615463958405,
+    0.3257851220740043
+   ],
+   "p_boot": 0.678,
+   "undiluted_sigma": -0.08351885980078491,
+   "effect_native": -84.0660477178423,
+   "metrics": {
+    "n_sessions": 12,
+    "n_trades": 214,
+    "daily_net_mean": -184.35749999999996,
+    "daily_net_median": -229.88,
+    "z_mean": -0.17859757454564923,
+    "win_rate_trade": 0.32710280373831774,
+    "win_rate_day": 0.3333333333333333,
+    "expectancy_usd": -10.337809345794396,
+    "trades_per_session": 17.833333333333332,
+    "avg_winner_usd": 93.06205714285716,
+    "avg_loser_usd": -60.60163333333334,
+    "max_drawdown_usd": -2416.3999999999996,
+    "return_on_premium_mean": -0.06296659384192661,
+    "avg_winner_pct_premium": 0.679317213071512,
+    "avg_loser_pct_premium": -0.4237989999804037,
+    "median_premium_usd": 133.0,
+    "median_entry_spread_pct": 0.01844735909252033,
+    "exit_mix": {
+     "eod": 0.1355,
+     "stop": 0.4206,
+     "target": 0.1636,
+     "time": 0.2523,
+     "trail": 0.028
+    },
+    "exits_shutdown_excluded": 0,
+    "underlying_twin_bp": -1.891814664758993
+   },
+   "by_year": {
+    "2020": {
+     "n": 6,
+     "net_mean": -172.01166666666663,
+     "z_mean": -0.16663746503517007
+    },
+    "2021": {
+     "n": 2,
+     "net_mean": 223.28999999999996,
+     "z_mean": 0.21631369713897194
+    },
+    "2022": {
+     "n": 4,
+     "net_mean": -406.7,
+     "z_mean": -0.3939933746536786
+    }
+   },
+   "by_regime": {
+    "high": {
+     "n": 8,
+     "net_mean": -379.63625,
+     "z_mean": -0.3677751838661608
+    },
+    "low": {
+     "n": 2,
+     "net_mean": 223.28999999999996,
+     "z_mean": 0.21631369713897194
+    },
+    "mid": {
+     "n": 2,
+     "net_mean": 189.11,
+     "z_mean": 0.1832015910517757
+    }
+   },
+   "placebo": {
+    "n_draws": 5000,
+    "mean": -0.017283071781573525,
+    "sd": 0.27323290435313313,
+    "p95_same_sign": -0.41437339904867937,
+    "p99_same_sign": -0.5454632954268054,
+    "rank": 0.5556,
+    "strata": 15,
+    "strata_fallback": 0,
+    "verdict": "selection / chance"
+   },
+   "day_direction_co_bp_mean": 19.82300833333333,
+   "post_hoc_within_regime": {
+    "low": {
+     "n_regime": 86,
+     "n_condition": 2,
+     "effect_sigma": 0.21277199000884162,
+     "ci95": [
+      null,
+      null
+     ]
+    },
+    "mid": {
+     "n_regime": 169,
+     "n_condition": 2,
+     "effect_sigma": 0.19177984618512256,
+     "ci95": [
+      null,
+      null
+     ]
+    },
+    "high": {
+     "n_regime": 227,
+     "n_condition": 8,
+     "effect_sigma": -0.16651955161818896,
+     "ci95": [
+      -0.6482159363794333,
+      0.34165459985668173
+     ]
+    }
+   },
+   "bh_q10": null,
+   "confounded_by_overlap": false
+  },
+  "energy_shock": {
+   "cell": "energy_shock",
+   "n_sessions": 10,
+   "n_trades": 218,
+   "meets_minimums": false,
+   "tested": false,
+   "descriptive_placebo": false,
+   "never_tested": false,
+   "effect_sigma": 0.1957183665538635,
+   "ci95": [
+    -0.8260197622865109,
+    1.8506357111779537
+   ],
+   "p_boot": 0.8706666666666667,
+   "undiluted_sigma": 0.19986494211644534,
+   "effect_native": 202.03045228215765,
+   "metrics": {
+    "n_sessions": 10,
+    "n_trades": 218,
+    "daily_net_mean": 101.73899999999989,
+    "daily_net_median": -461.355,
+    "z_mean": 0.09856034409611647,
+    "win_rate_trade": 0.39908256880733944,
+    "win_rate_day": 0.2,
+    "expectancy_usd": 4.666906422018349,
+    "trades_per_session": 21.8,
+    "avg_winner_usd": 132.81575172413795,
+    "avg_loser_usd": -80.43957862595418,
+    "max_drawdown_usd": -4253.740000000001,
+    "return_on_premium_mean": 0.06923066121221431,
+    "avg_winner_pct_premium": 0.8356020114172092,
+    "avg_loser_pct_premium": -0.43973351793156085,
+    "median_premium_usd": 167.0,
+    "median_entry_spread_pct": 0.015503875968992262,
+    "exit_mix": {
+     "eod": 0.1239,
+     "stop": 0.3486,
+     "target": 0.1881,
+     "time": 0.2706,
+     "trail": 0.0688
+    },
+    "exits_shutdown_excluded": 0,
+    "underlying_twin_bp": 3.660133724174133
+   },
+   "by_year": {
+    "2020": {
+     "n": 2,
+     "net_mean": -962.63,
+     "z_mean": -0.9325543207348677
+    },
+    "2021": {
+     "n": 2,
+     "net_mean": 492.745,
+     "z_mean": 0.4773500501443985
+    },
+    "2022": {
+     "n": 6,
+     "net_mean": 326.19333333333316,
+     "z_mean": 0.3160019970236838
+    }
+   },
+   "by_regime": {
+    "high": {
+     "n": 7,
+     "net_mean": 27.77142857142843,
+     "z_mean": 0.026903759188125587
+    },
+    "low": {
+     "n": 1,
+     "net_mean": 1105.3,
+     "z_mean": 1.0707668478109442
+    },
+    "mid": {
+     "n": 2,
+     "net_mean": -141.155,
+     "z_mean": -0.13674486058332924
+    }
+   },
+   "placebo": {
+    "n_draws": 5000,
+    "mean": -0.06628288039174395,
+    "sd": 0.33613214049400475,
+    "p95_same_sign": 0.5141155339391162,
+    "p99_same_sign": 0.8241990342413379,
+    "rank": 0.7894,
+    "strata": 15,
+    "strata_fallback": 0,
+    "verdict": "selection / chance"
+   },
+   "day_direction_co_bp_mean": -55.06617,
+   "post_hoc_within_regime": {
+    "low": {
+     "n_regime": 86,
+     "n_condition": 1,
+     "effect_sigma": 1.067225140680814,
+     "ci95": [
+      null,
+      null
+     ]
+    },
+    "mid": {
+     "n_regime": 169,
+     "n_condition": 2,
+     "effect_sigma": -0.12816660544998237,
+     "ci95": [
+      null,
+      null
+     ]
+    },
+    "high": {
+     "n_regime": 227,
+     "n_condition": 7,
+     "effect_sigma": 0.22815939143609745,
+     "ci95": [
+      -1.0338811847047784,
+      2.5711092265718944
+     ]
+    }
+   },
+   "bh_q10": null,
+   "confounded_by_overlap": false
+  },
+  "cyber_infrastructure": {
+   "cell": "cyber_infrastructure",
+   "n_sessions": 4,
+   "n_trades": 70,
+   "meets_minimums": false,
+   "tested": false,
+   "descriptive_placebo": false,
+   "never_tested": false,
+   "effect_sigma": 1.12606004684686,
+   "ci95": [
+    null,
+    null
+   ],
+   "p_boot": null,
+   "undiluted_sigma": 1.1354831434731936,
+   "effect_native": 1162.3764522821577,
+   "metrics": {
+    "n_sessions": 4,
+    "n_trades": 70,
+    "daily_net_mean": 1062.085,
+    "daily_net_median": 1044.845,
+    "z_mean": 1.0289020243891132,
+    "win_rate_trade": 0.5428571428571428,
+    "win_rate_day": 0.5,
+    "expectancy_usd": 60.69062857142855,
+    "trades_per_session": 17.5,
+    "avg_winner_usd": 144.76130526315794,
+    "avg_loser_usd": -39.143299999999996,
+    "max_drawdown_usd": -228.85999999999999,
+    "return_on_premium_mean": 0.48645516683251994,
+    "avg_winner_pct_premium": 1.2546451983164562,
+    "avg_loser_pct_premium": -0.4257704955546543,
+    "median_premium_usd": 95.5,
+    "median_entry_spread_pct": 0.016950369891546378,
+    "exit_mix": {
+     "eod": 0.1857,
+     "stop": 0.2286,
+     "target": 0.2,
+     "time": 0.3143,
+     "trail": 0.0714
+    },
+    "exits_shutdown_excluded": 0,
+    "underlying_twin_bp": 26.39493993229542
+   },
+   "by_year": {
+    "2020": {
+     "n": 1,
+     "net_mean": -95.13,
+     "z_mean": -0.09215783066339918
+    },
+    "2021": {
+     "n": 3,
+     "net_mean": 1447.8233333333335,
+     "z_mean": 1.4025886427399505
+    }
+   },
+   "by_regime": {
+    "high": {
+     "n": 1,
+     "net_mean": -133.73,
+     "z_mean": -0.12955184163372618
+    },
+    "mid": {
+     "n": 3,
+     "net_mean": 1460.6899999999998,
+     "z_mean": 1.4150533130633927
+    }
+   },
+   "day_direction_co_bp_mean": -101.4075,
+   "post_hoc_within_regime": {
+    "mid": {
+     "n_regime": 169,
+     "n_condition": 3,
+     "effect_sigma": 1.42363156819674,
+     "ci95": [
+      null,
+      null
+     ]
+    },
+    "high": {
+     "n_regime": 227,
+     "n_condition": 1,
+     "effect_sigma": 0.07170379061424567,
+     "ci95": [
+      null,
+      null
+     ]
+    }
+   },
+   "bh_q10": null,
+   "confounded_by_overlap": null
+  }
+ },
+ "q1_single_category": {
+  "FOMC": {
+   "cell": "FOMC",
+   "n_sessions": 19,
+   "n_trades": 432,
+   "meets_minimums": false,
+   "tested": false,
+   "descriptive_placebo": false,
+   "never_tested": false,
+   "effect_sigma": -0.14694139141274337,
+   "ci95": [
+    -0.6274274604256749,
+    0.37087607516898335
+   ],
+   "p_boot": 0.544,
+   "undiluted_sigma": -0.15321529351800656,
+   "effect_native": -151.68037772232307,
+   "metrics": {
+    "n_sessions": 19,
+    "n_trades": 432,
+    "daily_net_mean": -252.36315789473687,
+    "daily_net_median": -236.05,
+    "z_mean": -0.24447851540990048,
+    "win_rate_trade": 0.3819444444444444,
+    "win_rate_day": 0.2631578947368421,
+    "expectancy_usd": -11.099318518518523,
+    "trades_per_session": 22.736842105263158,
+    "avg_winner_usd": 82.49495757575758,
+    "avg_loser_usd": -68.93847790262171,
+    "max_drawdown_usd": -6652.950000000001,
+    "return_on_premium_mean": -0.02347900087026757,
+    "avg_winner_pct_premium": 0.4493445153560365,
+    "avg_loser_pct_premium": -0.3156733086505678,
+    "median_premium_usd": 212.0,
+    "median_entry_spread_pct": 0.012158167036215872,
+    "exit_mix": {
+     "eod": 0.0856,
+     "stop": 0.3889,
+     "target": 0.1875,
+     "time": 0.2569,
+     "trail": 0.081
+    },
+    "exits_shutdown_excluded": 0,
+    "underlying_twin_bp": -3.3561351984157795
+   },
+   "by_year": {
+    "2020": {
+     "n": 4,
+     "net_mean": -16.87000000000001,
+     "z_mean": -0.016342926556202515
+    },
+    "2021": {
+     "n": 8,
+     "net_mean": -195.56124999999997,
+     "z_mean": -0.18945128310546275
+    },
+    "2022": {
+     "n": 7,
+     "net_mean": -451.8471428571429,
+     "z_mean": -0.4377299745313709
+    }
+   },
+   "by_regime": {
+    "high": {
+     "n": 8,
+     "net_mean": -263.54625000000004,
+     "z_mean": -0.25531221149452193
+    },
+    "low": {
+     "n": 6,
+     "net_mean": -211.7833333333334,
+     "z_mean": -0.20516653601033913
+    },
+    "mid": {
+     "n": 5,
+     "net_mean": -283.166,
+     "z_mean": -0.2743189769539797
+    }
+   },
+   "placebo": {
+    "n_draws": 5000,
+    "mean": -0.06613301151233074,
+    "sd": 0.18218829965296449,
+    "p95_same_sign": -0.3420171870443331,
+    "p99_same_sign": -0.4437518768137356,
+    "rank": 0.656,
+    "strata": 15,
+    "strata_fallback": 0,
+    "verdict": "selection / chance"
+   },
+   "day_direction_co_bp_mean": 12.792763157894736,
+   "post_hoc_within_regime": {
+    "low": {
+     "n_regime": 85,
+     "n_condition": 6,
+     "effect_sigma": -0.17959625829235784,
+     "ci95": [
+      -0.4973652763314379,
+      0.07470393385380882
+     ]
+    },
+    "mid": {
+     "n_regime": 162,
+     "n_condition": 5,
+     "effect_sigma": -0.2643086100243904,
+     "ci95": [
+      -0.8476504695352455,
+      0.4249148316754735
+     ]
+    },
+    "high": {
+     "n_regime": 217,
+     "n_condition": 8,
+     "effect_sigma": -0.06424275303342045,
+     "ci95": [
+      -1.1544420417076189,
+      1.1509426873007358
+     ]
+    }
+   },
+   "bh_q10": null
+  },
+  "CPI": {
+   "cell": "CPI",
+   "n_sessions": 16,
+   "n_trades": 355,
+   "meets_minimums": false,
+   "tested": false,
+   "descriptive_placebo": false,
+   "never_tested": false,
+   "effect_sigma": -0.3155589230353074,
+   "ci95": [
+    -0.7511602519598662,
+    0.12173227747844974
+   ],
+   "p_boot": 0.154,
+   "undiluted_sigma": -0.32682888457228265,
+   "effect_native": -325.7359698275862,
+   "metrics": {
+    "n_sessions": 16,
+    "n_trades": 355,
+    "daily_net_mean": -426.41875000000005,
+    "daily_net_median": -332.505,
+    "z_mean": -0.41309604703246455,
+    "win_rate_trade": 0.3154929577464789,
+    "win_rate_day": 0.1875,
+    "expectancy_usd": -19.218828169014085,
+    "trades_per_session": 22.1875,
+    "avg_winner_usd": 73.9727714285714,
+    "avg_loser_usd": -62.17133497942386,
+    "max_drawdown_usd": -8933.95,
+    "return_on_premium_mean": -0.13421596033378017,
+    "avg_winner_pct_premium": 0.4962771103302145,
+    "avg_loser_pct_premium": -0.4248135896110123,
+    "median_premium_usd": 140.0,
+    "median_entry_spread_pct": 0.017699115044247607,
+    "exit_mix": {
+     "eod": 0.1155,
+     "stop": 0.4197,
+     "target": 0.1465,
+     "time": 0.2648,
+     "trail": 0.0535
+    },
+    "exits_shutdown_excluded": 0,
+    "underlying_twin_bp": -4.71427062910167
+   },
+   "by_year": {
+    "2020": {
+     "n": 2,
+     "net_mean": -6.980000000000004,
+     "z_mean": -0.006761922191007324
+    },
+    "2021": {
+     "n": 8,
+     "net_mean": -427.10625,
+     "z_mean": -0.4137620673055759
+    },
+    "2022": {
+     "n": 6,
+     "net_mean": -565.3149999999999,
+     "z_mean": -0.5476527282821351
+    }
+   },
+   "by_regime": {
+    "high": {
+     "n": 7,
+     "net_mean": -796.8985714285715,
+     "z_mean": -0.772000878814454
+    },
+    "low": {
+     "n": 2,
+     "net_mean": -271.275,
+     "z_mean": -0.2627994903102451
+    },
+    "mid": {
+     "n": 7,
+     "net_mean": -100.26571428571424,
+     "z_mean": -0.09713308859968062
+    }
+   },
+   "placebo": {
+    "n_draws": 5000,
+    "mean": -0.051580794933021,
+    "sd": 0.21759788400206573,
+    "p95_same_sign": -0.38742357008173417,
+    "p99_same_sign": -0.5043371502716831,
+    "rank": 0.8944,
+    "strata": 15,
+    "strata_fallback": 0,
+    "verdict": "selection / chance"
+   },
+   "day_direction_co_bp_mean": -31.795325,
+   "post_hoc_within_regime": {
+    "low": {
+     "n_regime": 85,
+     "n_condition": 2,
+     "effect_sigma": -0.23722921259226382,
+     "ci95": [
+      null,
+      null
+     ]
+    },
+    "mid": {
+     "n_regime": 162,
+     "n_condition": 7,
+     "effect_sigma": -0.08712272167009136,
+     "ci95": [
+      -0.6650274738408929,
+      0.6853565463612616
+     ]
+    },
+    "high": {
+     "n_regime": 217,
+     "n_condition": 7,
+     "effect_sigma": -0.5809314203533527,
+     "ci95": [
+      -1.372537784802717,
+      0.12759161924810664
+     ]
+    }
+   },
+   "bh_q10": null
+  },
+  "NFP": {
+   "cell": "NFP",
+   "n_sessions": 31,
+   "n_trades": 719,
+   "meets_minimums": true,
+   "tested": true,
+   "descriptive_placebo": false,
+   "never_tested": false,
+   "effect_sigma": -0.12787444913528917,
+   "ci95": [
+    -0.41462681951856084,
+    0.20183336300297955
+   ],
+   "p_boot": 0.41,
+   "undiluted_sigma": -0.13702943279162622,
+   "effect_native": -131.99851015016688,
+   "metrics": {
+    "n_sessions": 31,
+    "n_trades": 719,
+    "daily_net_mean": -232.68129032258068,
+    "daily_net_median": -466.54,
+    "z_mean": -0.22541157313244628,
+    "win_rate_trade": 0.36022253129346316,
+    "win_rate_day": 0.25806451612903225,
+    "expectancy_usd": -10.032121279554943,
+    "trades_per_session": 23.193548387096776,
+    "avg_winner_usd": 76.16630424710425,
+    "avg_loser_usd": -58.56558260869564,
+    "max_drawdown_usd": -7649.479999999999,
+    "return_on_premium_mean": -0.058855875059040864,
+    "avg_winner_pct_premium": 0.5782002597242706,
+    "avg_loser_pct_premium": -0.41754617703486185,
+    "median_premium_usd": 119.0,
+    "median_entry_spread_pct": 0.02020202020202022,
+    "exit_mix": {
+     "eod": 0.1293,
+     "stop": 0.3811,
+     "target": 0.1641,
+     "time": 0.2643,
+     "trail": 0.0612
+    },
+    "exits_shutdown_excluded": 0,
+    "underlying_twin_bp": -2.122180145429129
+   },
+   "by_year": {
+    "2020": {
+     "n": 10,
+     "net_mean": -174.73599999999996,
+     "z_mean": -0.16927668137075283
+    },
+    "2021": {
+     "n": 12,
+     "net_mean": 84.38833333333332,
+     "z_mean": 0.0817517684568466
+    },
+    "2022": {
+     "n": 9,
+     "net_mean": -719.8244444444445,
+     "z_mean": -0.6973347972089404
+    }
+   },
+   "by_regime": {
+    "high": {
+     "n": 13,
+     "net_mean": -675.26,
+     "z_mean": -0.6541626903581093
+    },
+    "low": {
+     "n": 6,
+     "net_mean": -251.01833333333335,
+     "z_mean": -0.2431757075238308
+    },
+    "mid": {
+     "n": 12,
+     "net_mean": 255.9475,
+     "z_mean": 0.2479508710577143
+    }
+   },
+   "placebo": {
+    "n_draws": 5000,
+    "mean": 0.08362911593408956,
+    "sd": 0.16236871167475309,
+    "p95_same_sign": -0.17781570392200016,
+    "p99_same_sign": -0.27822275778118194,
+    "rank": 0.9054,
+    "strata": 15,
+    "strata_fallback": 0,
+    "verdict": "selection / chance"
+   },
+   "day_direction_co_bp_mean": 10.318293548387096,
+   "post_hoc_within_regime": {
+    "low": {
+     "n_regime": 85,
+     "n_condition": 6,
+     "effect_sigma": -0.21760542980584954,
+     "ci95": [
+      -0.5298490343009413,
+      0.1409924467833247
+     ]
+    },
+    "mid": {
+     "n_regime": 162,
+     "n_condition": 12,
+     "effect_sigma": 0.2579612379873036,
+     "ci95": [
+      -0.3354370796188886,
+      0.9538698499026583
+     ]
+    },
+    "high": {
+     "n_regime": 217,
+     "n_condition": 13,
+     "effect_sigma": -0.4630932318970077,
+     "ci95": [
+      -0.77344714091675,
+      -0.14845646434164586
+     ]
+    }
+   },
+   "bh_q10": false
+  },
+  "GDP_ADV": {
+   "cell": "GDP_ADV",
+   "n_sessions": 0,
+   "n_trades": 0,
+   "meets_minimums": false,
+   "tested": false,
+   "descriptive_placebo": false,
+   "never_tested": false,
+   "effect_sigma": null,
+   "ci95": [
+    null,
+    null
+   ],
+   "p_boot": null,
+   "undiluted_sigma": null,
+   "effect_native": null,
+   "metrics": {
+    "n_sessions": 0,
+    "n_trades": 0,
+    "daily_net_mean": null,
+    "daily_net_median": null,
+    "z_mean": null,
+    "win_rate_trade": null,
+    "win_rate_day": null,
+    "expectancy_usd": null,
+    "trades_per_session": null,
+    "avg_winner_usd": null,
+    "avg_loser_usd": null,
+    "max_drawdown_usd": null,
+    "return_on_premium_mean": null,
+    "avg_winner_pct_premium": null,
+    "avg_loser_pct_premium": null,
+    "median_premium_usd": null,
+    "median_entry_spread_pct": null,
+    "exit_mix": {},
+    "exits_shutdown_excluded": 0,
+    "underlying_twin_bp": null
+   },
+   "by_year": {},
+   "by_regime": {},
+   "day_direction_co_bp_mean": null,
+   "post_hoc_within_regime": {},
+   "bh_q10": null
+  },
+  "PCE": {
+   "cell": "PCE",
+   "n_sessions": 30,
+   "n_trades": 732,
+   "meets_minimums": true,
+   "tested": true,
+   "descriptive_placebo": false,
+   "never_tested": false,
+   "effect_sigma": 0.1611153385386407,
+   "ci95": [
+    -0.21355574054868381,
+    0.5862573469141902
+   ],
+   "p_boot": 0.42733333333333334,
+   "undiluted_sigma": 0.1722523435067495,
+   "effect_native": 166.31144683908045,
+   "metrics": {
+    "n_sessions": 30,
+    "n_trades": 732,
+    "daily_net_mean": 65.62866666666666,
+    "daily_net_median": -304.495,
+    "z_mean": 0.06357821454148362,
+    "win_rate_trade": 0.3756830601092896,
+    "win_rate_day": 0.3,
+    "expectancy_usd": 2.689691803278687,
+    "trades_per_session": 24.4,
+    "avg_winner_usd": 108.25738181818183,
+    "avg_loser_usd": -60.835723413566726,
+    "max_drawdown_usd": -4395.549999999999,
+    "return_on_premium_mean": 0.032472218770684555,
+    "avg_winner_pct_premium": 0.7260360308233764,
+    "avg_loser_pct_premium": -0.38488018454329853,
+    "median_premium_usd": 144.0,
+    "median_entry_spread_pct": 0.01863372008911774,
+    "exit_mix": {
+     "eod": 0.127,
+     "stop": 0.3415,
+     "target": 0.1844,
+     "time": 0.2705,
+     "trail": 0.0765
+    },
+    "exits_shutdown_excluded": 0,
+    "underlying_twin_bp": 2.826887480255384
+   },
+   "by_year": {
+    "2020": {
+     "n": 6,
+     "net_mean": 213.4433333333333,
+     "z_mean": 0.2067746722334153
+    },
+    "2021": {
+     "n": 12,
+     "net_mean": -189.87250000000003,
+     "z_mean": -0.1839402680819538
+    },
+    "2022": {
+     "n": 12,
+     "net_mean": 247.2225,
+     "z_mean": 0.23949846831895516
+    }
+   },
+   "by_regime": {
+    "high": {
+     "n": 14,
+     "net_mean": 0.704999999999976,
+     "z_mean": 0.0006829735164269338
+    },
+    "low": {
+     "n": 6,
+     "net_mean": 17.468333333333316,
+     "z_mean": 0.016922566018134588
+    },
+    "mid": {
+     "n": 10,
+     "net_mean": 185.41799999999995,
+     "z_mean": 0.17962494109057234
+    }
+   },
+   "placebo": {
+    "n_draws": 5000,
+    "mean": 0.14501919398388013,
+    "sd": 0.1629009588937761,
+    "p95_same_sign": 0.4181104581322337,
+    "p99_same_sign": 0.530321088742796,
+    "rank": 0.5484,
+    "strata": 15,
+    "strata_fallback": 0,
+    "verdict": "selection / chance"
+   },
+   "day_direction_co_bp_mean": 12.79439333333333,
+   "post_hoc_within_regime": {
+    "low": {
+     "n_regime": 85,
+     "n_condition": 6,
+     "effect_sigma": 0.04249284373611586,
+     "ci95": [
+      -0.43685807472270044,
+      0.5169005744492021
+     ]
+    },
+    "mid": {
+     "n_regime": 162,
+     "n_condition": 10,
+     "effect_sigma": 0.1896353080201617,
+     "ci95": [
+      -0.5285080129064231,
+      0.9976228562826374
+     ]
+    },
+    "high": {
+     "n_regime": 217,
+     "n_condition": 14,
+     "effect_sigma": 0.19175243197752845,
+     "ci95": [
+      -0.41833602593823993,
+      0.8684528654509481
+     ]
+    }
+   },
+   "bh_q10": false
+  },
+  "war_military": {
+   "cell": "war_military",
+   "n_sessions": 7,
+   "n_trades": 177,
+   "meets_minimums": false,
+   "tested": false,
+   "descriptive_placebo": false,
+   "never_tested": false,
+   "effect_sigma": -0.08919627741717497,
+   "ci95": [
+    -0.8132817009828285,
+    0.642784097971732
+   ],
+   "p_boot": 0.7774441107774441,
+   "undiluted_sigma": -0.09056252236667217,
+   "effect_native": -92.07293411330046,
+   "metrics": {
+    "n_sessions": 7,
+    "n_trades": 177,
+    "daily_net_mean": -192.75571428571422,
+    "daily_net_median": -22.13,
+    "z_mean": -0.18673340141433203,
+    "win_rate_trade": 0.3559322033898305,
+    "win_rate_day": 0.42857142857142855,
+    "expectancy_usd": -7.623172881355931,
+    "trades_per_session": 25.285714285714285,
+    "avg_winner_usd": 95.10967619047624,
+    "avg_loser_usd": -64.39658947368419,
+    "max_drawdown_usd": -2674.4399999999996,
+    "return_on_premium_mean": -0.043508410396199806,
+    "avg_winner_pct_premium": 0.7032014109707365,
+    "avg_loser_pct_premium": -0.45616383799371724,
+    "median_premium_usd": 140.0,
+    "median_entry_spread_pct": 0.018867924528301903,
+    "exit_mix": {
+     "eod": 0.1073,
+     "stop": 0.3955,
+     "target": 0.1525,
+     "time": 0.2712,
+     "trail": 0.0734
+    },
+    "exits_shutdown_excluded": 0,
+    "underlying_twin_bp": -2.8633730758986533
+   },
+   "by_year": {
+    "2020": {
+     "n": 2,
+     "net_mean": -307.075,
+     "z_mean": -0.297480982350082
+    },
+    "2021": {
+     "n": 1,
+     "net_mean": 42.74,
+     "z_mean": 0.04140466396040872
+    },
+    "2022": {
+     "n": 4,
+     "net_mean": -194.46999999999994,
+     "z_mean": -0.18839412729014227
+    }
+   },
+   "by_regime": {
+    "high": {
+     "n": 4,
+     "net_mean": -194.46999999999994,
+     "z_mean": -0.18839412729014227
+    },
+    "low": {
+     "n": 3,
+     "net_mean": -190.47,
+     "z_mean": -0.18451910024658513
+    }
+   },
+   "placebo": {
+    "n_draws": 5000,
+    "mean": 0.007657931575509062,
+    "sd": 0.40642509465948956,
+    "p95_same_sign": -0.5770445369885964,
+    "p99_same_sign": -0.7603622127790918,
+    "rank": 0.5522,
+    "strata": 15,
+    "strata_fallback": 0,
+    "verdict": "selection / chance"
+   },
+   "day_direction_co_bp_mean": -50.68664999999999,
+   "post_hoc_within_regime": {
+    "low": {
+     "n_regime": 85,
+     "n_condition": 3,
+     "effect_sigma": -0.15894882252860384,
+     "ci95": [
+      null,
+      null
+     ]
+    },
+    "high": {
+     "n_regime": 217,
+     "n_condition": 4,
+     "effect_sigma": 0.0026753311709591943,
+     "ci95": [
+      null,
+      null
+     ]
+    }
+   },
+   "bh_q10": null
+  },
+  "trade_tariff": {
+   "cell": "trade_tariff",
+   "n_sessions": 1,
+   "n_trades": 16,
+   "meets_minimums": false,
+   "tested": false,
+   "descriptive_placebo": false,
+   "never_tested": false,
+   "effect_sigma": -0.11683905962003628,
+   "ci95": [
+    null,
+    null
+   ],
+   "p_boot": null,
+   "undiluted_sigma": -0.11709141180064109,
+   "effect_native": -120.60721982758622,
+   "metrics": {
+    "n_sessions": 1,
+    "n_trades": 16,
+    "daily_net_mean": -221.29,
+    "daily_net_median": -221.29,
+    "z_mean": -0.21437618361719338,
+    "win_rate_trade": 0.1875,
+    "win_rate_day": 0.0,
+    "expectancy_usd": -13.8308,
+    "trades_per_session": 16.0,
+    "avg_winner_usd": 15.252533333333337,
+    "avg_loser_usd": -20.542338461538463,
+    "max_drawdown_usd": -221.29,
+    "return_on_premium_mean": -0.28308063282880336,
+    "avg_winner_pct_premium": 0.26426269005847963,
+    "avg_loser_pct_premium": -0.4093906304181764,
+    "median_premium_usd": 49.5,
+    "median_entry_spread_pct": 0.029009880176581904,
+    "exit_mix": {
+     "eod": 0.0625,
+     "stop": 0.3125,
+     "target": 0.0625,
+     "time": 0.3125,
+     "trail": 0.25
+    },
+    "exits_shutdown_excluded": 0,
+    "underlying_twin_bp": -3.7568532484100885
+   },
+   "by_year": {
+    "2020": {
+     "n": 1,
+     "net_mean": -221.29,
+     "z_mean": -0.21437618361719338
+    }
+   },
+   "by_regime": {
+    "low": {
+     "n": 1,
+     "net_mean": -221.29,
+     "z_mean": -0.21437618361719338
+    }
+   },
+   "day_direction_co_bp_mean": 25.0496,
+   "post_hoc_within_regime": {
+    "low": {
+     "n_regime": 85,
+     "n_condition": 1,
+     "effect_sigma": -0.18880590589921212,
+     "ci95": [
+      null,
+      null
+     ]
+    }
+   },
+   "bh_q10": null
+  },
+  "financial_stress": {
+   "cell": "financial_stress",
+   "n_sessions": 12,
+   "n_trades": 265,
+   "meets_minimums": false,
+   "tested": false,
+   "descriptive_placebo": false,
+   "never_tested": true,
+   "effect_sigma": -0.33706330488379815,
+   "ci95": [
+    -0.8556935859159219,
+    0.14988742133340863
+   ],
+   "p_boot": 0.162,
+   "undiluted_sigma": -0.3460118881992972,
+   "effect_native": -347.933886494253,
+   "metrics": {
+    "n_sessions": 12,
+    "n_trades": 265,
+    "daily_net_mean": -448.6166666666666,
+    "daily_net_median": -260.65500000000003,
+    "z_mean": -0.4346004288809551,
+    "win_rate_trade": 0.35094339622641507,
+    "win_rate_day": 0.25,
+    "expectancy_usd": -20.314762264150936,
+    "trades_per_session": 22.083333333333332,
+    "avg_winner_usd": 85.67188817204303,
+    "avg_loser_usd": -77.62149767441858,
+    "max_drawdown_usd": -5755.42,
+    "return_on_premium_mean": -0.05209253117238464,
+    "avg_winner_pct_premium": 0.5676441334187787,
+    "avg_loser_pct_premium": -0.3871827044687694,
+    "median_premium_usd": 165.0,
+    "median_entry_spread_pct": 0.01612903225806453,
+    "exit_mix": {
+     "eod": 0.1208,
+     "stop": 0.3509,
+     "target": 0.166,
+     "time": 0.2679,
+     "trail": 0.0943
+    },
+    "exits_shutdown_excluded": 0,
+    "underlying_twin_bp": -4.502196602879093
+   },
+   "by_year": {
+    "2020": {
+     "n": 3,
+     "net_mean": -1547.2366666666667,
+     "z_mean": -1.498895981529159
+    },
+    "2021": {
+     "n": 3,
+     "net_mean": 120.38333333333333,
+     "z_mean": 0.11662216806505699
+    },
+    "2022": {
+     "n": 6,
+     "net_mean": -183.80666666666664,
+     "z_mean": -0.1780639510298594
+    }
+   },
+   "by_regime": {
+    "high": {
+     "n": 10,
+     "net_mean": -603.552,
+     "z_mean": -0.5846950805482592
+    },
+    "low": {
+     "n": 2,
+     "net_mean": 326.06,
+     "z_mean": 0.31587282945556544
+    }
+   },
+   "placebo": {
+    "n_draws": 5000,
+    "mean": 0.026392840037992558,
+    "sd": 0.3082594323723339,
+    "p95_same_sign": -0.4301259947267331,
+    "p99_same_sign": -0.5650563819698897,
+    "rank": 0.8942,
+    "strata": 15,
+    "strata_fallback": 0,
+    "verdict": "selection / chance"
+   },
+   "day_direction_co_bp_mean": -7.977350000000001,
+   "post_hoc_within_regime": {
+    "low": {
+     "n_regime": 85,
+     "n_condition": 2,
+     "effect_sigma": 0.3414431071735467,
+     "ci95": [
+      null,
+      null
+     ]
+    },
+    "high": {
+     "n_regime": 217,
+     "n_condition": 10,
+     "effect_sigma": -0.3936256220871579,
+     "ci95": [
+      -0.9298918729228954,
+      0.17891822717408776
+     ]
+    }
+   },
+   "bh_q10": null
+  },
+  "us_fiscal": {
+   "cell": "us_fiscal",
+   "n_sessions": 9,
+   "n_trades": 160,
+   "meets_minimums": false,
+   "tested": false,
+   "descriptive_placebo": false,
+   "never_tested": false,
+   "effect_sigma": -0.3486205730412074,
+   "ci95": [
+    -0.6320128055930139,
+    -0.06156219605484303
+   ],
+   "p_boot": 0.02,
+   "undiluted_sigma": -0.35551636459586866,
+   "effect_native": -359.8638864942529,
+   "metrics": {
+    "n_sessions": 9,
+    "n_trades": 160,
+    "daily_net_mean": -460.5466666666667,
+    "daily_net_median": -547.13,
+    "z_mean": -0.44615769703836455,
+    "win_rate_trade": 0.31875,
+    "win_rate_day": 0.1111111111111111,
+    "expectancy_usd": -25.9058,
+    "trades_per_session": 17.77777777777778,
+    "avg_winner_usd": 63.13488627450978,
+    "avg_loser_usd": -67.56703853211008,
+    "max_drawdown_usd": -4144.92,
+    "return_on_premium_mean": -0.1554788726252794,
+    "avg_winner_pct_premium": 0.46809496431521963,
+    "avg_loser_pct_premium": -0.4472427779827607,
+    "median_premium_usd": 133.5,
+    "median_entry_spread_pct": 0.017291066282420765,
+    "exit_mix": {
+     "eod": 0.1125,
+     "stop": 0.3563,
+     "target": 0.1688,
+     "time": 0.275,
+     "trail": 0.0875
+    },
+    "exits_shutdown_excluded": 0,
+    "underlying_twin_bp": -9.16031587827703
+   },
+   "by_year": {
+    "2020": {
+     "n": 3,
+     "net_mean": -361.89000000000004,
+     "z_mean": -0.3505833841982291
+    },
+    "2021": {
+     "n": 5,
+     "net_mean": -491.582,
+     "z_mean": -0.4762233860314843
+    },
+    "2022": {
+     "n": 1,
+     "net_mean": -601.34,
+     "z_mean": -0.5825521905931722
+    }
+   },
+   "by_regime": {
+    "high": {
+     "n": 5,
+     "net_mean": -466.10200000000003,
+     "z_mean": -0.45153946376402493
+    },
+    "low": {
+     "n": 1,
+     "net_mean": -547.13,
+     "z_mean": -0.5300358865853632
+    },
+    "mid": {
+     "n": 3,
+     "net_mean": -422.42666666666673,
+     "z_mean": -0.40922868931326445
+    }
+   },
+   "placebo": {
+    "n_draws": 5000,
+    "mean": 0.03789532381653759,
+    "sd": 0.24892374117738694,
+    "p95_same_sign": -0.31461834095021407,
+    "p99_same_sign": -0.453231018388358,
+    "rank": 0.9678,
+    "strata": 15,
+    "strata_fallback": 0,
+    "verdict": "effect"
+   },
+   "day_direction_co_bp_mean": 13.668188888888892,
+   "post_hoc_within_regime": {
+    "low": {
+     "n_regime": 85,
+     "n_condition": 1,
+     "effect_sigma": -0.5044656088673819,
+     "ci95": [
+      null,
+      null
+     ]
+    },
+    "mid": {
+     "n_regime": 162,
+     "n_condition": 3,
+     "effect_sigma": -0.39921832238367505,
+     "ci95": [
+      null,
+      null
+     ]
+    },
+    "high": {
+     "n_regime": 217,
+     "n_condition": 5,
+     "effect_sigma": -0.2604700053029234,
+     "ci95": [
+      -0.7307871229944163,
+      0.2690723131057172
+     ]
+    }
+   },
+   "bh_q10": null
+  },
+  "pandemic_health": {
+   "cell": "pandemic_health",
+   "n_sessions": 8,
+   "n_trades": 124,
+   "meets_minimums": false,
+   "tested": false,
+   "descriptive_placebo": false,
+   "never_tested": false,
+   "effect_sigma": -0.7656287827930631,
+   "ci95": [
+    -1.6987901179162084,
+    -0.17985409521317208
+   ],
+   "p_boot": 0.0040013337779259755,
+   "undiluted_sigma": -0.7790608667017134,
+   "effect_native": -790.320969827586,
+   "metrics": {
+    "n_sessions": 8,
+    "n_trades": 124,
+    "daily_net_mean": -891.00375,
+    "daily_net_median": -629.86,
+    "z_mean": -0.8631659067902203,
+    "win_rate_trade": 0.23387096774193547,
+    "win_rate_day": 0.0,
+    "expectancy_usd": -57.48402580645159,
+    "trades_per_session": 15.5,
+    "avg_winner_usd": 54.5743724137931,
+    "avg_loser_usd": -91.69132631578942,
+    "max_drawdown_usd": -7128.03,
+    "return_on_premium_mean": -0.2722799425018241,
+    "avg_winner_pct_premium": 0.3213076366983574,
+    "avg_loser_pct_premium": -0.4534803614155637,
+    "median_premium_usd": 149.0,
+    "median_entry_spread_pct": 0.026490066225165587,
+    "exit_mix": {
+     "eod": 0.0806,
+     "stop": 0.4839,
+     "target": 0.1048,
+     "time": 0.2903,
+     "trail": 0.0403
+    },
+    "exits_shutdown_excluded": 0,
+    "underlying_twin_bp": -32.1942875231179
+   },
+   "by_year": {
+    "2020": {
+     "n": 6,
+     "net_mean": -910.2449999999999,
+     "z_mean": -0.8818059978156815
+    },
+    "2022": {
+     "n": 2,
+     "net_mean": -833.28,
+     "z_mean": -0.8072456337138365
+    }
+   },
+   "by_regime": {
+    "high": {
+     "n": 5,
+     "net_mean": -1261.704,
+     "z_mean": -1.2222842802410743
+    },
+    "low": {
+     "n": 2,
+     "net_mean": -52.730000000000004,
+     "z_mean": -0.051082544001692834
+    },
+    "mid": {
+     "n": 1,
+     "net_mean": -714.05,
+     "z_mean": -0.6917407651130052
+    }
+   },
+   "placebo": {
+    "n_draws": 5000,
+    "mean": -0.031907083674461316,
+    "sd": 0.3234120273605908,
+    "p95_same_sign": -0.505404369047857,
+    "p99_same_sign": -0.6548577683232368,
+    "rank": 0.9978,
+    "strata": 15,
+    "strata_fallback": 0,
+    "verdict": "effect"
+   },
+   "day_direction_co_bp_mean": -21.008025000000004,
+   "post_hoc_within_regime": {
+    "low": {
+     "n_regime": 85,
+     "n_condition": 2,
+     "effect_sigma": -0.025512266283711563,
+     "ci95": [
+      null,
+      null
+     ]
+    },
+    "mid": {
+     "n_regime": 162,
+     "n_condition": 1,
+     "effect_sigma": -0.6817303981834159,
+     "ci95": [
+      null,
+      null
+     ]
+    },
+    "high": {
+     "n_regime": 217,
+     "n_condition": 5,
+     "effect_sigma": -1.031214821779973,
+     "ci95": [
+      -2.4164034710627114,
+      -0.23373745341083263
+     ]
+    }
+   },
+   "bh_q10": null
+  },
+  "political_shock": {
+   "cell": "political_shock",
+   "n_sessions": 9,
+   "n_trades": 157,
+   "meets_minimums": false,
+   "tested": false,
+   "descriptive_placebo": false,
+   "never_tested": false,
+   "effect_sigma": -0.058398269821188745,
+   "ci95": [
+    -0.40034186841386826,
+    0.3156733959482958
+   ],
+   "p_boot": 0.7053333333333334,
+   "undiluted_sigma": -0.059553400433036446,
+   "effect_native": -60.281664272030696,
+   "metrics": {
+    "n_sessions": 9,
+    "n_trades": 157,
+    "daily_net_mean": -160.96444444444447,
+    "daily_net_median": -229.42,
+    "z_mean": -0.15593539381834584,
+    "win_rate_trade": 0.33121019108280253,
+    "win_rate_day": 0.3333333333333333,
+    "expectancy_usd": -9.227296815286627,
+    "trades_per_session": 17.444444444444443,
+    "avg_winner_usd": 88.1115076923077,
+    "avg_loser_usd": -57.43318095238094,
+    "max_drawdown_usd": -1851.31,
+    "return_on_premium_mean": -0.04897810297884785,
+    "avg_winner_pct_premium": 0.6806133989934485,
+    "avg_loser_pct_premium": -0.41029960871750887,
+    "median_premium_usd": 129.0,
+    "median_entry_spread_pct": 0.018018018018018035,
+    "exit_mix": {
+     "eod": 0.1274,
+     "stop": 0.414,
+     "target": 0.1656,
+     "time": 0.2548,
+     "trail": 0.0382
+    },
+    "exits_shutdown_excluded": 0,
+    "underlying_twin_bp": -2.3826218960122896
+   },
+   "by_year": {
+    "2020": {
+     "n": 4,
+     "net_mean": -142.35,
+     "z_mean": -0.13790252491259197
+    },
+    "2021": {
+     "n": 2,
+     "net_mean": 223.28999999999996,
+     "z_mean": 0.21631369713897194
+    },
+    "2022": {
+     "n": 3,
+     "net_mean": -441.9533333333334,
+     "z_mean": -0.4281452796642295
+    }
+   },
+   "by_regime": {
+    "high": {
+     "n": 5,
+     "net_mean": -454.696,
+     "z_mean": -0.44048982414932153
+    },
+    "low": {
+     "n": 2,
+     "net_mean": 223.28999999999996,
+     "z_mean": 0.21631369713897194
+    },
+    "mid": {
+     "n": 2,
+     "net_mean": 189.11,
+     "z_mean": 0.1832015910517757
+    }
+   },
+   "placebo": {
+    "n_draws": 5000,
+    "mean": -0.03592401003731752,
+    "sd": 0.301566114168987,
+    "p95_same_sign": -0.45043906140347506,
+    "p99_same_sign": -0.6035751356855555,
+    "rank": 0.4652,
+    "strata": 15,
+    "strata_fallback": 0,
+    "verdict": "selection / chance"
+   },
+   "day_direction_co_bp_mean": 43.90378888888889,
+   "post_hoc_within_regime": {
+    "low": {
+     "n_regime": 85,
+     "n_condition": 2,
+     "effect_sigma": 0.24188397485695318,
+     "ci95": [
+      null,
+      null
+     ]
+    },
+    "mid": {
+     "n_regime": 162,
+     "n_condition": 2,
+     "effect_sigma": 0.19321195798136503,
+     "ci95": [
+      null,
+      null
+     ]
+    },
+    "high": {
+     "n_regime": 217,
+     "n_condition": 5,
+     "effect_sigma": -0.24942036568821999,
+     "ci95": [
+      -0.6023398956545415,
+      0.04687790342266551
+     ]
+    }
+   },
+   "bh_q10": null
+  },
+  "energy_shock": {
+   "cell": "energy_shock",
+   "n_sessions": 8,
+   "n_trades": 171,
+   "meets_minimums": false,
+   "tested": false,
+   "descriptive_placebo": false,
+   "never_tested": false,
+   "effect_sigma": 0.2978493813381399,
+   "ci95": [
+    -0.9803855478277586,
+    2.374388792662505
+   ],
+   "p_boot": 0.792,
+   "undiluted_sigma": 0.3030748090809143,
+   "effect_native": 307.4552801724136,
+   "metrics": {
+    "n_sessions": 8,
+    "n_trades": 171,
+    "daily_net_mean": 206.77250000000004,
+    "daily_net_median": -742.5600000000001,
+    "z_mean": 0.20031225734098299,
+    "win_rate_trade": 0.4152046783625731,
+    "win_rate_day": 0.25,
+    "expectancy_usd": 9.673585964912276,
+    "trades_per_session": 21.375,
+    "avg_winner_usd": 138.4966647887324,
+    "avg_loser_usd": -81.79079999999998,
+    "max_drawdown_usd": -4091.2400000000007,
+    "return_on_premium_mean": 0.09959809014558461,
+    "avg_winner_pct_premium": 0.8528294779742156,
+    "avg_loser_pct_premium": -0.4351961952127433,
+    "median_premium_usd": 168.0,
+    "median_entry_spread_pct": 0.015503875968992262,
+    "exit_mix": {
+     "eod": 0.1287,
+     "stop": 0.3392,
+     "target": 0.1988,
+     "time": 0.2749,
+     "trail": 0.0585
+    },
+    "exits_shutdown_excluded": 0,
+    "underlying_twin_bp": 5.558829798606212
+   },
+   "by_year": {
+    "2020": {
+     "n": 1,
+     "net_mean": -1450.97,
+     "z_mean": -1.4056369973475489
+    },
+    "2021": {
+     "n": 2,
+     "net_mean": 492.745,
+     "z_mean": 0.4773500501443985
+    },
+    "2022": {
+     "n": 5,
+     "net_mean": 423.9319999999998,
+     "z_mean": 0.4106869911573229
+    }
+   },
+   "by_regime": {
+    "high": {
+     "n": 6,
+     "net_mean": 111.44833333333315,
+     "z_mean": 0.10796632640651092
+    },
+    "low": {
+     "n": 1,
+     "net_mean": 1105.3,
+     "z_mean": 1.0707668478109442
+    },
+    "mid": {
+     "n": 1,
+     "net_mean": -119.81,
+     "z_mean": -0.11606674752214713
+    }
+   },
+   "placebo": {
+    "n_draws": 5000,
+    "mean": -0.09844499042873263,
+    "sd": 0.3642772688006466,
+    "p95_same_sign": 0.5498751460686427,
+    "p99_same_sign": 0.8590572932835047,
+    "rank": 0.8564,
+    "strata": 15,
+    "strata_fallback": 0,
+    "verdict": "selection / chance"
+   },
+   "day_direction_co_bp_mean": -36.7377125,
+   "post_hoc_within_regime": {
+    "low": {
+     "n_regime": 85,
+     "n_condition": 1,
+     "effect_sigma": 1.0963371255289256,
+     "ci95": [
+      null,
+      null
+     ]
+    },
+    "mid": {
+     "n_regime": 162,
+     "n_condition": 1,
+     "effect_sigma": -0.1060563805925578,
+     "ci95": [
+      null,
+      null
+     ]
+    },
+    "high": {
+     "n_regime": 217,
+     "n_condition": 6,
+     "effect_sigma": 0.2990357848676124,
+     "ci95": [
+      -1.118979684564158,
+      3.0269979938941955
+     ]
+    }
+   },
+   "bh_q10": null
+  },
+  "cyber_infrastructure": {
+   "cell": "cyber_infrastructure",
+   "n_sessions": 2,
+   "n_trades": 36,
+   "meets_minimums": false,
+   "tested": false,
+   "descriptive_placebo": false,
+   "never_tested": false,
+   "effect_sigma": 1.0910407763433752,
+   "ci95": [
+    null,
+    null
+   ],
+   "p_boot": null,
+   "undiluted_sigma": 1.0957638965872858,
+   "effect_native": 1126.2277801724138,
+   "metrics": {
+    "n_sessions": 2,
+    "n_trades": 36,
+    "daily_net_mean": 1025.545,
+    "daily_net_median": 1025.545,
+    "z_mean": 0.9935036523462181,
+    "win_rate_trade": 0.5277777777777778,
+    "win_rate_day": 0.5,
+    "expectancy_usd": 56.974755555555554,
+    "trades_per_session": 18.0,
+    "avg_winner_usd": 148.23498947368418,
+    "avg_loser_usd": -45.02197647058823,
+    "max_drawdown_usd": -133.73,
+    "return_on_premium_mean": 0.3243320619638986,
+    "avg_winner_pct_premium": 1.0176406110902558,
+    "avg_loser_pct_premium": -0.4505421988243829,
+    "median_premium_usd": 141.0,
+    "median_entry_spread_pct": 0.013889558717144937,
+    "exit_mix": {
+     "eod": 0.1667,
+     "stop": 0.2222,
+     "target": 0.2222,
+     "time": 0.3056,
+     "trail": 0.0833
+    },
+    "exits_shutdown_excluded": 0,
+    "underlying_twin_bp": 23.527822590416225
+   },
+   "by_year": {
+    "2021": {
+     "n": 2,
+     "net_mean": 1025.545,
+     "z_mean": 0.9935036523462181
+    }
+   },
+   "by_regime": {
+    "high": {
+     "n": 1,
+     "net_mean": -133.73,
+     "z_mean": -0.12955184163372618
+    },
+    "mid": {
+     "n": 1,
+     "net_mean": 2184.82,
+     "z_mean": 2.1165591463261624
+    }
+   },
+   "day_direction_co_bp_mean": -94.78184999999999,
+   "post_hoc_within_regime": {
+    "mid": {
+     "n_regime": 162,
+     "n_condition": 1,
+     "effect_sigma": 2.1265695132557516,
+     "ci95": [
+      null,
+      null
+     ]
+    },
+    "high": {
+     "n_regime": 217,
+     "n_condition": 1,
+     "effect_sigma": 0.061517616827375304,
+     "ci95": [
+      null,
+      null
+     ]
+    }
+   },
+   "bh_q10": null
+  }
+ },
+ "q3": {
+  "scheduled": {
+   "cell": "scheduled",
+   "n_sessions": 110,
+   "n_trades": 2538,
+   "meets_minimums": true,
+   "tested": true,
+   "descriptive_placebo": false,
+   "never_tested": false,
+   "effect_sigma": -0.09081672122372675,
+   "ci95": [
+    -0.2647994097728269,
+    0.08546045468490397
+   ],
+   "p_boot": 0.30933333333333335,
+   "undiluted_sigma": -0.11767112803719436,
+   "effect_native": -93.74563862693323,
+   "metrics": {
+    "n_sessions": 110,
+    "n_trades": 2538,
+    "daily_net_mean": -194.03709090909086,
+    "daily_net_median": -319.45500000000004,
+    "z_mean": -0.18797474368147365,
+    "win_rate_trade": 0.35736800630417653,
+    "win_rate_day": 0.24545454545454545,
+    "expectancy_usd": -8.409799211977937,
+    "trades_per_session": 23.072727272727274,
+    "avg_winner_usd": 88.48369834619626,
+    "avg_loser_usd": -62.292326670754136,
+    "max_drawdown_usd": -27646.510000000002,
+    "return_on_premium_mean": -0.03145405872287754,
+    "avg_winner_pct_premium": 0.6119389080703724,
+    "avg_loser_pct_premium": -0.38924524258644455,
+    "median_premium_usd": 143.0,
+    "median_entry_spread_pct": 0.017699115044247607,
+    "exit_mix": {
+     "eod": 0.1162,
+     "stop": 0.3802,
+     "target": 0.1718,
+     "time": 0.2628,
+     "trail": 0.069
+    },
+    "exits_shutdown_excluded": 0,
+    "underlying_twin_bp": -1.8044039794813
+   },
+   "by_year": {
+    "2020": {
+     "n": 32,
+     "net_mean": -119.07,
+     "z_mean": -0.11534986751908904
+    },
+    "2021": {
+     "n": 40,
+     "net_mean": -156.17875,
+     "z_mean": -0.15129921996973988
+    },
+    "2022": {
+     "n": 38,
+     "net_mean": -297.0181578947369,
+     "z_mean": -0.2877383485674122
+    }
+   },
+   "by_regime": {
+    "high": {
+     "n": 51,
+     "net_mean": -427.7550980392157,
+     "z_mean": -0.4143906432303559
+    },
+    "low": {
+     "n": 21,
+     "net_mean": -31.265238095238107,
+     "z_mean": -0.03028841078557564
+    },
+    "mid": {
+     "n": 38,
+     "net_mean": 29.684210526315777,
+     "z_mean": 0.02875677963902976
+    }
+   },
+   "placebo": {
+    "n_draws": 5000,
+    "mean": 0.07955561918219436,
+    "sd": 0.05663640389934772,
+    "p95_same_sign": -0.012378894976102879,
+    "p99_same_sign": -0.04282538933517135,
+    "rank": 0.9998,
+    "strata": 15,
+    "strata_fallback": 0,
+    "verdict": "effect"
+   },
+   "post_hoc_within_regime": {
+    "low": {
+     "n_regime": 86,
+     "n_condition": 21,
+     "effect_sigma": -0.033830117915705935,
+     "ci95": [
+      -0.2651596521807839,
+      0.2462016029242453
+     ]
+    },
+    "mid": {
+     "n_regime": 169,
+     "n_condition": 38,
+     "effect_sigma": 0.03733503477237663,
+     "ci95": [
+      -0.22736695161950138,
+      0.33277244001491757
+     ]
+    },
+    "high": {
+     "n_regime": 227,
+     "n_condition": 51,
+     "effect_sigma": -0.2131350109823841,
+     "ci95": [
+      -0.5167119775662096,
+      0.09249663910471684
+     ]
+    }
+   },
+   "bh_q10": false
+  },
+  "unscheduled_surprise": {
+   "cell": "unscheduled_surprise",
+   "n_sessions": 51,
+   "n_trades": 981,
+   "meets_minimums": true,
+   "tested": false,
+   "descriptive_placebo": true,
+   "never_tested": false,
+   "effect_sigma": -0.10636181701138639,
+   "ci95": [
+    -0.4180557162140561,
+    0.23176716789278676
+   ],
+   "p_boot": 0.5026666666666667,
+   "undiluted_sigma": -0.11894755405913748,
+   "effect_native": -109.79207712960704,
+   "metrics": {
+    "n_sessions": 51,
+    "n_trades": 981,
+    "daily_net_mean": -210.08352941176472,
+    "daily_net_median": -276.1,
+    "z_mean": -0.20351983946913335,
+    "win_rate_trade": 0.3567787971457696,
+    "win_rate_day": 0.23529411764705882,
+    "expectancy_usd": -10.92177859327217,
+    "trades_per_session": 19.235294117647058,
+    "avg_winner_usd": 101.00205714285717,
+    "avg_loser_usd": -73.00314548335975,
+    "max_drawdown_usd": -13788.05,
+    "return_on_premium_mean": -0.021452256933679952,
+    "avg_winner_pct_premium": 0.7057182908483179,
+    "avg_loser_pct_premium": -0.42479566695539034,
+    "median_premium_usd": 145.0,
+    "median_entry_spread_pct": 0.017699115044247607,
+    "exit_mix": {
+     "eod": 0.1193,
+     "stop": 0.3741,
+     "target": 0.1611,
+     "time": 0.2773,
+     "trail": 0.0683
+    },
+    "exits_shutdown_excluded": 0,
+    "underlying_twin_bp": -4.132861645886991
+   },
+   "by_year": {
+    "2020": {
+     "n": 20,
+     "net_mean": -681.771,
+     "z_mean": -0.6604702656282595
+    },
+    "2021": {
+     "n": 13,
+     "net_mean": 384.29846153846154,
+     "z_mean": 0.37229173281474154
+    },
+    "2022": {
+     "n": 18,
+     "net_mean": -115.26222222222226,
+     "z_mean": -0.11166105705290283
+    }
+   },
+   "by_regime": {
+    "high": {
+     "n": 33,
+     "net_mean": -457.5393939393939,
+     "z_mean": -0.443244381251981
+    },
+    "low": {
+     "n": 10,
+     "net_mean": 152.713,
+     "z_mean": 0.14794175122568778
+    },
+    "mid": {
+     "n": 8,
+     "net_mean": 357.1762500000001,
+     "z_mean": 0.3460169070165872
+    }
+   },
+   "placebo": {
+    "n_draws": 5000,
+    "mean": -0.0005994234430844938,
+    "sd": 0.1158817570415296,
+    "p95_same_sign": -0.18425794305750895,
+    "p99_same_sign": -0.25178836036497754,
+    "rank": 0.818,
+    "strata": 15,
+    "strata_fallback": 0,
+    "verdict": "selection / chance"
+   },
+   "post_hoc_within_regime": {
+    "low": {
+     "n_regime": 86,
+     "n_condition": 10,
+     "effect_sigma": 0.14440004409555748,
+     "ci95": [
+      -0.1761911405092996,
+      0.4968603580104214
+     ]
+    },
+    "mid": {
+     "n_regime": 169,
+     "n_condition": 8,
+     "effect_sigma": 0.35459516214993403,
+     "ci95": [
+      -0.31778959390810463,
+      1.1959171661672068
+     ]
+    },
+    "high": {
+     "n_regime": 227,
+     "n_condition": 33,
+     "effect_sigma": -0.24198874900400927,
+     "ci95": [
+      -0.6495064317342462,
+      0.26124103397577403
+     ]
+    }
+   },
+   "bh_q10": null
+  },
+  "no_event": {
+   "cell": "no_event",
+   "n_sessions": 312,
+   "n_trades": 6244,
+   "meets_minimums": true,
+   "tested": true,
+   "descriptive_placebo": false,
+   "never_tested": false,
+   "effect_sigma": 0.05404645255450597,
+   "ci95": [
+    -0.01604302286748591,
+    0.12467727618703534
+   ],
+   "p_boot": 0.12466666666666666,
+   "undiluted_sigma": 0.15323758900748152,
+   "effect_native": 55.78949715395258,
+   "metrics": {
+    "n_sessions": 312,
+    "n_trades": 6244,
+    "daily_net_mean": -44.50195512820513,
+    "daily_net_median": -152.2,
+    "z_mean": -0.04311156990324101,
+    "win_rate_trade": 0.3669122357463165,
+    "win_rate_day": 0.3557692307692308,
+    "expectancy_usd": -2.223657142857145,
+    "trades_per_session": 20.012820512820515,
+    "avg_winner_usd": 81.68829646442602,
+    "avg_loser_usd": -50.855654540855035,
+    "max_drawdown_usd": -21948.81000000002,
+    "return_on_premium_mean": -0.0024702699370435653,
+    "avg_winner_pct_premium": 0.6724438005142384,
+    "avg_loser_pct_premium": -0.39362335250822666,
+    "median_premium_usd": 117.0,
+    "median_entry_spread_pct": 0.017699115044247607,
+    "exit_mix": {
+     "eod": 0.1365,
+     "stop": 0.3549,
+     "target": 0.177,
+     "time": 0.2641,
+     "trail": 0.0676
+    },
+    "exits_shutdown_excluded": 0,
+    "underlying_twin_bp": 2.110283622669232
+   },
+   "by_year": {
+    "2020": {
+     "n": 102,
+     "net_mean": -48.50529411764706,
+     "z_mean": -0.04698983161539462
+    },
+    "2021": {
+     "n": 100,
+     "net_mean": -51.1766,
+     "z_mean": -0.04957767724932739
+    },
+    "2022": {
+     "n": 110,
+     "net_mean": -34.72190909090912,
+     "z_mean": -0.03363708418280189
+    }
+   },
+   "by_regime": {
+    "high": {
+     "n": 139,
+     "net_mean": -65.84992805755398,
+     "z_mean": -0.06379256300982948
+    },
+    "low": {
+     "n": 53,
+     "net_mean": 4.005094339622645,
+     "z_mean": 0.003879962219508907
+    },
+    "mid": {
+     "n": 120,
+     "net_mean": -41.19783333333332,
+     "z_mean": -0.039910679575657255
+    }
+   },
+   "post_hoc_within_regime": {
+    "low": {
+     "n_regime": 86,
+     "n_condition": 53,
+     "effect_sigma": 0.0003382550893786182,
+     "ci95": [
+      -0.10715407801170017,
+      0.1025470157580097
+     ]
+    },
+    "mid": {
+     "n_regime": 169,
+     "n_condition": 120,
+     "effect_sigma": -0.031332424442310394,
+     "ci95": [
+      -0.12065894838063243,
+      0.055512539343935775
+     ]
+    },
+    "high": {
+     "n_regime": 227,
+     "n_condition": 139,
+     "effect_sigma": 0.1374630692381424,
+     "ci95": [
+      0.001258067432206478,
+      0.2713674112100282
+     ]
+    }
+   }
+  }
+ },
+ "q3_single_category": {
+  "scheduled": {
+   "cell": "scheduled",
+   "n_sessions": 96,
+   "n_trades": 2238,
+   "meets_minimums": true,
+   "tested": true,
+   "descriptive_placebo": false,
+   "never_tested": false,
+   "effect_sigma": -0.07261955179626857,
+   "ci95": [
+    -0.2566041203522472,
+    0.1159787801900944
+   ],
+   "p_boot": 0.422,
+   "undiluted_sigma": -0.09156378269964298,
+   "effect_native": -74.9615948275862,
+   "metrics": {
+    "n_sessions": 96,
+    "n_trades": 2238,
+    "daily_net_mean": -175.644375,
+    "daily_net_median": -319.45500000000004,
+    "z_mean": -0.1701566757934257,
+    "win_rate_trade": 0.3623771224307417,
+    "win_rate_day": 0.2604166666666667,
+    "expectancy_usd": -7.5343299374441495,
+    "trades_per_session": 23.3125,
+    "avg_winner_usd": 88.0326401972873,
+    "avg_loser_usd": -61.84744330763839,
+    "max_drawdown_usd": -22600.88,
+    "return_on_premium_mean": -0.03410960872285828,
+    "avg_winner_pct_premium": 0.5907998238418554,
+    "avg_loser_pct_premium": -0.3892613605168195,
+    "median_premium_usd": 143.0,
+    "median_entry_spread_pct": 0.01766013020934848,
+    "exit_mix": {
+     "eod": 0.118,
+     "stop": 0.3758,
+     "target": 0.1725,
+     "time": 0.265,
+     "trail": 0.0688
+    },
+    "exits_shutdown_excluded": 0,
+    "underlying_twin_bp": -1.1528071349702023
+   },
+   "by_year": {
+    "2020": {
+     "n": 22,
+     "net_mean": -24.915454545454534,
+     "z_mean": -0.02413701504153914
+    },
+    "2021": {
+     "n": 40,
+     "net_mean": -156.17875,
+     "z_mean": -0.15129921996973988
+    },
+    "2022": {
+     "n": 34,
+     "net_mean": -296.07558823529416,
+     "z_mean": -0.2868252278372179
+    }
+   },
+   "by_regime": {
+    "high": {
+     "n": 42,
+     "net_mean": -391.789761904762,
+     "z_mean": -0.3795489806924476
+    },
+    "low": {
+     "n": 20,
+     "net_mean": -160.7275,
+     "z_mean": -0.15570585228583508
+    },
+    "mid": {
+     "n": 34,
+     "net_mean": 82.58411764705882,
+     "z_mean": 0.08000392231266565
+    }
+   },
+   "placebo": {
+    "n_draws": 5000,
+    "mean": 0.09205758394135669,
+    "sd": 0.06654941364289206,
+    "p95_same_sign": -0.016750738877198912,
+    "p99_same_sign": -0.05991709407113623,
+    "rank": 0.9944,
+    "strata": 15,
+    "strata_fallback": 0,
+    "verdict": "effect"
+   },
+   "post_hoc_within_regime": {
+    "low": {
+     "n_regime": 85,
+     "n_condition": 20,
+     "effect_sigma": -0.13013557456785382,
+     "ci95": [
+      -0.3243585808710127,
+      0.049315003124279146
+     ]
+    },
+    "mid": {
+     "n_regime": 162,
+     "n_condition": 34,
+     "effect_sigma": 0.09001428924225496,
+     "ci95": [
+      -0.20424641846332092,
+      0.4157446309880385
+     ]
+    },
+    "high": {
+     "n_regime": 217,
+     "n_condition": 42,
+     "effect_sigma": -0.18847952223134604,
+     "ci95": [
+      -0.49594404110967094,
+      0.1337138974363316
+     ]
+    }
+   },
+   "bh_q10": false
+  },
+  "unscheduled_surprise": {
+   "cell": "unscheduled_surprise",
+   "n_sessions": 47,
+   "n_trades": 926,
+   "meets_minimums": true,
+   "tested": false,
+   "descriptive_placebo": true,
+   "never_tested": false,
+   "effect_sigma": -0.18222354518935163,
+   "ci95": [
+    -0.5101874353437674,
+    0.18929925303514908
+   ],
+   "p_boot": 0.31,
+   "undiluted_sigma": -0.2027619303785591,
+   "effect_native": -188.1004113169479,
+   "metrics": {
+    "n_sessions": 47,
+    "n_trades": 926,
+    "daily_net_mean": -288.78319148936174,
+    "daily_net_median": -290.97,
+    "z_mean": -0.27976066918650877,
+    "win_rate_trade": 0.34557235421166305,
+    "win_rate_day": 0.2127659574468085,
+    "expectancy_usd": -14.657473866090713,
+    "trades_per_session": 19.70212765957447,
+    "avg_winner_usd": 98.22545,
+    "avg_loser_usd": -74.26561848184818,
+    "max_drawdown_usd": -14299.519999999997,
+    "return_on_premium_mean": -0.05005460016660304,
+    "avg_winner_pct_premium": 0.6628675328399132,
+    "avg_loser_pct_premium": -0.42651513244727174,
+    "median_premium_usd": 149.0,
+    "median_entry_spread_pct": 0.017353660831921715,
+    "exit_mix": {
+     "eod": 0.1156,
+     "stop": 0.379,
+     "target": 0.1609,
+     "time": 0.2754,
+     "trail": 0.0691
+    },
+    "exits_shutdown_excluded": 0,
+    "underlying_twin_bp": -5.864295977278
+   },
+   "by_year": {
+    "2020": {
+     "n": 17,
+     "net_mean": -835.3876470588235,
+     "z_mean": -0.8092874310516402
+    },
+    "2021": {
+     "n": 12,
+     "net_mean": 225.29166666666666,
+     "z_mean": 0.21825282525535206
+    },
+    "2022": {
+     "n": 18,
+     "net_mean": -115.26222222222226,
+     "z_mean": -0.11166105705290283
+    }
+   },
+   "by_regime": {
+    "high": {
+     "n": 32,
+     "net_mean": -503.12468750000005,
+     "z_mean": -0.48740544258594176
+    },
+    "low": {
+     "n": 10,
+     "net_mean": 152.713,
+     "z_mean": 0.14794175122568778
+    },
+    "mid": {
+     "n": 5,
+     "net_mean": 200.01000000000005,
+     "z_mean": 0.1937610397454691
+    }
+   },
+   "placebo": {
+    "n_draws": 5000,
+    "mean": -0.006576817547307985,
+    "sd": 0.12141366837879841,
+    "p95_same_sign": -0.19709670284451739,
+    "p99_same_sign": -0.266285708515859,
+    "rank": 0.9364,
+    "strata": 15,
+    "strata_fallback": 0,
+    "verdict": "selection / chance"
+   },
+   "post_hoc_within_regime": {
+    "low": {
+     "n_regime": 85,
+     "n_condition": 10,
+     "effect_sigma": 0.17351202894366904,
+     "ci95": [
+      -0.15074736103256856,
+      0.5076833605671178
+     ]
+    },
+    "mid": {
+     "n_regime": 162,
+     "n_condition": 5,
+     "effect_sigma": 0.20377140667505841,
+     "ci95": [
+      -0.49710199287230045,
+      1.2991668948282924
+     ]
+    },
+    "high": {
+     "n_regime": 217,
+     "n_condition": 32,
+     "effect_sigma": -0.2963359841248402,
+     "ci95": [
+      -0.7225803610534763,
+      0.19709865793837728
+     ]
+    }
+   },
+   "bh_q10": null
+  },
+  "no_event": {
+   "cell": "no_event",
+   "n_sessions": 312,
+   "n_trades": 6244,
+   "meets_minimums": true,
+   "tested": true,
+   "descriptive_placebo": false,
+   "never_tested": false,
+   "effect_sigma": 0.054425554093916105,
+   "ci95": [
+    -0.012740068164259774,
+    0.11837699832843578
+   ],
+   "p_boot": 0.12,
+   "undiluted_sigma": 0.16614116512879654,
+   "effect_native": 56.180825044208675,
+   "metrics": {
+    "n_sessions": 312,
+    "n_trades": 6244,
+    "daily_net_mean": -44.50195512820513,
+    "daily_net_median": -152.2,
+    "z_mean": -0.04311156990324101,
+    "win_rate_trade": 0.3669122357463165,
+    "win_rate_day": 0.3557692307692308,
+    "expectancy_usd": -2.223657142857145,
+    "trades_per_session": 20.012820512820515,
+    "avg_winner_usd": 81.68829646442602,
+    "avg_loser_usd": -50.855654540855035,
+    "max_drawdown_usd": -21948.81000000002,
+    "return_on_premium_mean": -0.0024702699370435653,
+    "avg_winner_pct_premium": 0.6724438005142384,
+    "avg_loser_pct_premium": -0.39362335250822666,
+    "median_premium_usd": 117.0,
+    "median_entry_spread_pct": 0.017699115044247607,
+    "exit_mix": {
+     "eod": 0.1365,
+     "stop": 0.3549,
+     "target": 0.177,
+     "time": 0.2641,
+     "trail": 0.0676
+    },
+    "exits_shutdown_excluded": 0,
+    "underlying_twin_bp": 2.110283622669232
+   },
+   "by_year": {
+    "2020": {
+     "n": 102,
+     "net_mean": -48.50529411764706,
+     "z_mean": -0.04698983161539462
+    },
+    "2021": {
+     "n": 100,
+     "net_mean": -51.1766,
+     "z_mean": -0.04957767724932739
+    },
+    "2022": {
+     "n": 110,
+     "net_mean": -34.72190909090912,
+     "z_mean": -0.03363708418280189
+    }
+   },
+   "by_regime": {
+    "high": {
+     "n": 139,
+     "net_mean": -65.84992805755398,
+     "z_mean": -0.06379256300982948
+    },
+    "low": {
+     "n": 53,
+     "net_mean": 4.005094339622645,
+     "z_mean": 0.003879962219508907
+    },
+    "mid": {
+     "n": 120,
+     "net_mean": -41.19783333333332,
+     "z_mean": -0.039910679575657255
+    }
+   },
+   "post_hoc_within_regime": {
+    "low": {
+     "n_regime": 85,
+     "n_condition": 53,
+     "effect_sigma": 0.029450239937490182,
+     "ci95": [
+      -0.05390999218902522,
+      0.11923540244668966
+     ]
+    },
+    "mid": {
+     "n_regime": 162,
+     "n_condition": 120,
+     "effect_sigma": -0.029900312646067923,
+     "ci95": [
+      -0.11993280339970008,
+      0.05316303197144966
+     ]
+    },
+    "high": {
+     "n_regime": 217,
+     "n_condition": 139,
+     "effect_sigma": 0.12727689545127202,
+     "ci95": [
+      0.005121651225086875,
+      0.2535998483817407
+     ]
+    }
+   }
+  }
+ },
+ "q5": {
+  "pre_post": {
+   "FOMC": {
+    "pre_n": 373,
+    "pre_mean_usd": -20.488306702412874,
+    "pre_total_usd": -7642.138400000002,
+    "post_n": 120,
+    "post_mean_usd": -8.864133333333337,
+    "post_total_usd": -1063.6960000000004,
+    "sessions_excluded_unknown_time": 0,
+    "note": "descriptive, exploratory; break times are recollections rounded to 30-60 min; pre-open releases make every trade post"
+   },
+   "CPI": {
+    "pre_n": 0,
+    "pre_mean_usd": null,
+    "pre_total_usd": 0.0,
+    "post_n": 403,
+    "post_mean_usd": -20.63166848635236,
+    "post_total_usd": -8314.5624,
+    "sessions_excluded_unknown_time": 0,
+    "note": "descriptive, exploratory; break times are recollections rounded to 30-60 min; pre-open releases make every trade post"
+   },
+   "NFP": {
+    "pre_n": 0,
+    "pre_mean_usd": null,
+    "pre_total_usd": 0.0,
+    "post_n": 849,
+    "post_mean_usd": -8.648526737338045,
+    "post_total_usd": -7342.599200000001,
+    "sessions_excluded_unknown_time": 0,
+    "note": "descriptive, exploratory; break times are recollections rounded to 30-60 min; pre-open releases make every trade post"
+   },
+   "GDP_ADV": {
+    "pre_n": 0,
+    "pre_mean_usd": null,
+    "pre_total_usd": 0.0,
+    "post_n": 13,
+    "post_mean_usd": -16.15772307692308,
+    "post_total_usd": -210.05040000000005,
+    "sessions_excluded_unknown_time": 0,
+    "note": "descriptive, exploratory; break times are recollections rounded to 30-60 min; pre-open releases make every trade post"
+   },
+   "PCE": {
+    "pre_n": 6,
+    "pre_mean_usd": -34.41413333333333,
+    "pre_total_usd": -206.4848,
+    "post_n": 804,
+    "post_mean_usd": 3.133130348258705,
+    "post_total_usd": 2519.036799999999,
+    "sessions_excluded_unknown_time": 0,
+    "note": "descriptive, exploratory; break times are recollections rounded to 30-60 min; pre-open releases make every trade post"
+   },
+   "war_military": {
+    "pre_n": 59,
+    "pre_mean_usd": 60.83445423728812,
+    "pre_total_usd": 3589.2327999999993,
+    "post_n": 115,
+    "post_mean_usd": -39.79384347826087,
+    "post_total_usd": -4576.2919999999995,
+    "sessions_excluded_unknown_time": 2,
+    "note": "descriptive, exploratory; break times are recollections rounded to 30-60 min; pre-open releases make every trade post"
+   },
+   "trade_tariff": {
+    "pre_n": 31,
+    "pre_mean_usd": -30.371122580645157,
+    "pre_total_usd": -941.5047999999998,
+    "post_n": 63,
+    "post_mean_usd": 27.871580952380953,
+    "post_total_usd": 1755.9096,
+    "sessions_excluded_unknown_time": 0,
+    "note": "descriptive, exploratory; break times are recollections rounded to 30-60 min; pre-open releases make every trade post"
+   },
+   "financial_stress": {
+    "pre_n": 0,
+    "pre_mean_usd": null,
+    "pre_total_usd": 0.0,
+    "post_n": 240,
+    "post_mean_usd": -17.647466666666656,
+    "post_total_usd": -4235.391999999997,
+    "sessions_excluded_unknown_time": 1,
+    "note": "descriptive, exploratory; break times are recollections rounded to 30-60 min; pre-open releases make every trade post"
+   },
+   "us_fiscal": {
+    "pre_n": 37,
+    "pre_mean_usd": -46.1618810810811,
+    "pre_total_usd": -1707.9896000000006,
+    "post_n": 152,
+    "post_mean_usd": -27.738694736842106,
+    "post_total_usd": -4216.2816,
+    "sessions_excluded_unknown_time": 1,
+    "note": "descriptive, exploratory; break times are recollections rounded to 30-60 min; pre-open releases make every trade post"
+   },
+   "pandemic_health": {
+    "pre_n": 72,
+    "pre_mean_usd": -20.62246666666667,
+    "pre_total_usd": -1484.8176000000003,
+    "post_n": 79,
+    "post_mean_usd": -15.321306329113924,
+    "post_total_usd": -1210.3832,
+    "sessions_excluded_unknown_time": 3,
+    "note": "descriptive, exploratory; break times are recollections rounded to 30-60 min; pre-open releases make every trade post"
+   },
+   "political_shock": {
+    "pre_n": 10,
+    "pre_mean_usd": 88.5192,
+    "pre_total_usd": 885.192,
+    "post_n": 130,
+    "post_mean_usd": -11.357723076923078,
+    "post_total_usd": -1476.5040000000001,
+    "sessions_excluded_unknown_time": 3,
+    "note": "descriptive, exploratory; break times are recollections rounded to 30-60 min; pre-open releases make every trade post"
+   },
+   "energy_shock": {
+    "pre_n": 45,
+    "pre_mean_usd": -23.4808,
+    "pre_total_usd": -1056.636,
+    "post_n": 98,
+    "post_mean_usd": -33.84610612244899,
+    "post_total_usd": -3316.9184000000005,
+    "sessions_excluded_unknown_time": 4,
+    "note": "descriptive, exploratory; break times are recollections rounded to 30-60 min; pre-open releases make every trade post"
+   },
+   "cyber_infrastructure": {
+    "pre_n": 21,
+    "pre_mean_usd": 113.87158095238094,
+    "pre_total_usd": 2391.3032,
+    "post_n": 35,
+    "post_mean_usd": 55.77634285714285,
+    "post_total_usd": 1952.1719999999998,
+    "sessions_excluded_unknown_time": 1,
+    "note": "descriptive, exploratory; break times are recollections rounded to 30-60 min; pre-open releases make every trade post"
+   }
+  },
+  "first60": {
+   "scheduled_today": {
+    "n_sessions": 110,
+    "first60_net_mean_usd": -144.40872000000005
+   },
+   "non_release": {
+    "n_sessions": 372,
+    "first60_net_mean_usd": -56.37386881720432
+   },
+   "difference_usd": -88.03485118279573,
+   "ci95": [
+    -275.97753025884464,
+    108.72760175308584
+   ]
+  }
+ },
+ "q7": {
+  "m_tested": 20,
+  "cells": {
+   "Crabel_Stretch|FOMC": {
+    "setup": "Crabel_Stretch",
+    "category": "FOMC",
+    "n_sessions": 22,
+    "n_trades": 30,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": -0.09718240399342652,
+    "ci95": [
+     -0.20049255635971644,
+     0.02068272744030973
+    ],
+    "p_boot": 0.09466666666666666,
+    "one_sided_rate": 0.0,
+    "low_fidelity": false
+   },
+   "Crabel_Stretch|CPI": {
+    "setup": "Crabel_Stretch",
+    "category": "CPI",
+    "n_sessions": 19,
+    "n_trades": 27,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": -0.06303238396413295,
+    "ci95": [
+     -0.16700306534655668,
+     0.054816657519649016
+    ],
+    "p_boot": 0.25866666666666666,
+    "one_sided_rate": 0.0,
+    "low_fidelity": false
+   },
+   "Crabel_Stretch|NFP": {
+    "setup": "Crabel_Stretch",
+    "category": "NFP",
+    "n_sessions": 36,
+    "n_trades": 63,
+    "tested": true,
+    "geopolitical": false,
+    "effect_sigma": -0.05801439390005281,
+    "ci95": [
+     -0.12971051953852747,
+     0.02178157721697157
+    ],
+    "p_boot": 0.14066666666666666,
+    "one_sided_rate": 0.0,
+    "low_fidelity": false,
+    "placebo": {
+     "n_draws": 5000,
+     "mean": 0.03818661070261183,
+     "sd": 0.045538824078350616,
+     "p95_same_sign": -0.03647532517754036,
+     "p99_same_sign": -0.06547088239672585,
+     "rank": 0.9844,
+     "strata": 15,
+     "strata_fallback": 0,
+     "verdict": "effect"
+    },
+    "bh_q10": false
+   },
+   "Crabel_Stretch|GDP_ADV": {
+    "setup": "Crabel_Stretch",
+    "category": "GDP_ADV",
+    "n_sessions": 1,
+    "n_trades": 0,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": 0.006624286375684294,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": 0.0,
+    "low_fidelity": false
+   },
+   "Crabel_Stretch|PCE": {
+    "setup": "Crabel_Stretch",
+    "category": "PCE",
+    "n_sessions": 34,
+    "n_trades": 59,
+    "tested": true,
+    "geopolitical": false,
+    "effect_sigma": 0.040453272465938675,
+    "ci95": [
+     -0.0661568704545813,
+     0.15560681614060476
+    ],
+    "p_boot": 0.502,
+    "one_sided_rate": 0.0,
+    "low_fidelity": false,
+    "placebo": {
+     "n_draws": 5000,
+     "mean": 0.027425929600445834,
+     "sd": 0.04181182505119027,
+     "p95_same_sign": 0.09747834139600194,
+     "p99_same_sign": 0.12498475358201983,
+     "rank": 0.627,
+     "strata": 15,
+     "strata_fallback": 0,
+     "verdict": "selection / chance"
+    },
+    "bh_q10": false
+   },
+   "Crabel_Stretch|war_military": {
+    "setup": "Crabel_Stretch",
+    "category": "war_military",
+    "n_sessions": 9,
+    "n_trades": 12,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.050007366921109145,
+    "ci95": [
+     -0.1702289910402857,
+     0.3113385596398042
+    ],
+    "p_boot": 0.69,
+    "one_sided_rate": 0.0,
+    "low_fidelity": false
+   },
+   "Crabel_Stretch|trade_tariff": {
+    "setup": "Crabel_Stretch",
+    "category": "trade_tariff",
+    "n_sessions": 4,
+    "n_trades": 6,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.05107084656528542,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": 0.0,
+    "low_fidelity": false
+   },
+   "Crabel_Stretch|us_fiscal": {
+    "setup": "Crabel_Stretch",
+    "category": "us_fiscal",
+    "n_sessions": 12,
+    "n_trades": 12,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.06078180904699325,
+    "ci95": [
+     -0.12208193626745951,
+     -0.0036928841129308474
+    ],
+    "p_boot": 0.04133333333333333,
+    "one_sided_rate": 0.0,
+    "low_fidelity": false
+   },
+   "Crabel_Stretch|pandemic_health": {
+    "setup": "Crabel_Stretch",
+    "category": "pandemic_health",
+    "n_sessions": 13,
+    "n_trades": 15,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.00017191490070834342,
+    "ci95": [
+     -0.16496574303955244,
+     0.16559791416790873
+    ],
+    "p_boot": 0.9693333333333334,
+    "one_sided_rate": 0.0,
+    "low_fidelity": false
+   },
+   "Crabel_Stretch|political_shock": {
+    "setup": "Crabel_Stretch",
+    "category": "political_shock",
+    "n_sessions": 12,
+    "n_trades": 18,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.022716126722449666,
+    "ci95": [
+     -0.13770038019370615,
+     0.1202565498086803
+    ],
+    "p_boot": 0.718,
+    "one_sided_rate": 0.0,
+    "low_fidelity": false
+   },
+   "Crabel_Stretch|energy_shock": {
+    "setup": "Crabel_Stretch",
+    "category": "energy_shock",
+    "n_sessions": 10,
+    "n_trades": 17,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.01317322678984946,
+    "ci95": [
+     -0.2580672029724624,
+     0.38961301735238674
+    ],
+    "p_boot": 0.834,
+    "one_sided_rate": 0.0,
+    "low_fidelity": false
+   },
+   "Crabel_Stretch|cyber_infrastructure": {
+    "setup": "Crabel_Stretch",
+    "category": "cyber_infrastructure",
+    "n_sessions": 4,
+    "n_trades": 6,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.30052571249428034,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": 0.0,
+    "low_fidelity": false
+   },
+   "EMA_9_20_Pullback|FOMC": {
+    "setup": "EMA_9_20_Pullback",
+    "category": "FOMC",
+    "n_sessions": 22,
+    "n_trades": 12,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": -0.017996175198038377,
+    "ci95": [
+     -0.06453178224532229,
+     0.034286419988697824
+    ],
+    "p_boot": 0.464,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "EMA_9_20_Pullback|CPI": {
+    "setup": "EMA_9_20_Pullback",
+    "category": "CPI",
+    "n_sessions": 19,
+    "n_trades": 6,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": -0.017549620048066723,
+    "ci95": [
+     -0.0396146439080526,
+     0.0011074923996096844
+    ],
+    "p_boot": 0.06666666666666667,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "EMA_9_20_Pullback|NFP": {
+    "setup": "EMA_9_20_Pullback",
+    "category": "NFP",
+    "n_sessions": 36,
+    "n_trades": 17,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": -0.0035912514347058297,
+    "ci95": [
+     -0.02036523448089712,
+     0.01241927751929083
+    ],
+    "p_boot": 0.6726666666666666,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "EMA_9_20_Pullback|GDP_ADV": {
+    "setup": "EMA_9_20_Pullback",
+    "category": "GDP_ADV",
+    "n_sessions": 1,
+    "n_trades": 0,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": 0.00322664336915287,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "EMA_9_20_Pullback|PCE": {
+    "setup": "EMA_9_20_Pullback",
+    "category": "PCE",
+    "n_sessions": 34,
+    "n_trades": 10,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": -0.004375247919237291,
+    "ci95": [
+     -0.019949485662120774,
+     0.012366870374754852
+    ],
+    "p_boot": 0.53,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "EMA_9_20_Pullback|war_military": {
+    "setup": "EMA_9_20_Pullback",
+    "category": "war_military",
+    "n_sessions": 9,
+    "n_trades": 7,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.012871941204025343,
+    "ci95": [
+     -0.09451739635146483,
+     0.06312401685338487
+    ],
+    "p_boot": 0.766,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "EMA_9_20_Pullback|trade_tariff": {
+    "setup": "EMA_9_20_Pullback",
+    "category": "trade_tariff",
+    "n_sessions": 4,
+    "n_trades": 1,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.0010275655219341572,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "EMA_9_20_Pullback|us_fiscal": {
+    "setup": "EMA_9_20_Pullback",
+    "category": "us_fiscal",
+    "n_sessions": 12,
+    "n_trades": 5,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.0278058648713344,
+    "ci95": [
+     -0.050526373071221785,
+     -0.005546916304922661
+    ],
+    "p_boot": 0.012,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "EMA_9_20_Pullback|pandemic_health": {
+    "setup": "EMA_9_20_Pullback",
+    "category": "pandemic_health",
+    "n_sessions": 13,
+    "n_trades": 2,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.011411892801159083,
+    "ci95": [
+     -0.01579677339651241,
+     0.04904285678967238
+    ],
+    "p_boot": 0.5246666666666666,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "EMA_9_20_Pullback|political_shock": {
+    "setup": "EMA_9_20_Pullback",
+    "category": "political_shock",
+    "n_sessions": 12,
+    "n_trades": 3,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.0235511602126104,
+    "ci95": [
+     -0.00046908770059922813,
+     0.0553271597890045
+    ],
+    "p_boot": 0.059333333333333335,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "EMA_9_20_Pullback|energy_shock": {
+    "setup": "EMA_9_20_Pullback",
+    "category": "energy_shock",
+    "n_sessions": 10,
+    "n_trades": 7,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.04269766883482656,
+    "ci95": [
+     -0.06868794647538336,
+     0.256534246653109
+    ],
+    "p_boot": 0.756,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "EMA_9_20_Pullback|cyber_infrastructure": {
+    "setup": "EMA_9_20_Pullback",
+    "category": "cyber_infrastructure",
+    "n_sessions": 4,
+    "n_trades": 0,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.00322664336915287,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "Gap_Fade|FOMC": {
+    "setup": "Gap_Fade",
+    "category": "FOMC",
+    "n_sessions": 22,
+    "n_trades": 7,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": -0.020073063985227454,
+    "ci95": [
+     -0.055628722226279945,
+     0.0067392086156322
+    ],
+    "p_boot": 0.182,
+    "one_sided_rate": 0.08,
+    "low_fidelity": false
+   },
+   "Gap_Fade|CPI": {
+    "setup": "Gap_Fade",
+    "category": "CPI",
+    "n_sessions": 19,
+    "n_trades": 19,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": 0.02587845287961547,
+    "ci95": [
+     -0.035730850792472305,
+     0.10034210328393293
+    ],
+    "p_boot": 0.49933333333333335,
+    "one_sided_rate": 0.08,
+    "low_fidelity": false
+   },
+   "Gap_Fade|NFP": {
+    "setup": "Gap_Fade",
+    "category": "NFP",
+    "n_sessions": 36,
+    "n_trades": 26,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": -0.016344328997986365,
+    "ci95": [
+     -0.049410266483587977,
+     0.016278500530446376
+    ],
+    "p_boot": 0.31666666666666665,
+    "one_sided_rate": 0.08,
+    "low_fidelity": false
+   },
+   "Gap_Fade|GDP_ADV": {
+    "setup": "Gap_Fade",
+    "category": "GDP_ADV",
+    "n_sessions": 1,
+    "n_trades": 1,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": -0.017307703776870725,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": 0.08,
+    "low_fidelity": false
+   },
+   "Gap_Fade|PCE": {
+    "setup": "Gap_Fade",
+    "category": "PCE",
+    "n_sessions": 34,
+    "n_trades": 23,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": 0.00967160215697813,
+    "ci95": [
+     -0.03210515524138259,
+     0.048722401298566705
+    ],
+    "p_boot": 0.6413333333333333,
+    "one_sided_rate": 0.08,
+    "low_fidelity": false
+   },
+   "Gap_Fade|war_military": {
+    "setup": "Gap_Fade",
+    "category": "war_military",
+    "n_sessions": 9,
+    "n_trades": 7,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.05751906843421886,
+    "ci95": [
+     -0.02609065154810418,
+     0.1772101669951371
+    ],
+    "p_boot": 0.28933333333333333,
+    "one_sided_rate": 0.08,
+    "low_fidelity": false
+   },
+   "Gap_Fade|trade_tariff": {
+    "setup": "Gap_Fade",
+    "category": "trade_tariff",
+    "n_sessions": 4,
+    "n_trades": 0,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.00892622930801154,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": 0.08,
+    "low_fidelity": false
+   },
+   "Gap_Fade|us_fiscal": {
+    "setup": "Gap_Fade",
+    "category": "us_fiscal",
+    "n_sessions": 12,
+    "n_trades": 8,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.05990716774237624,
+    "ci95": [
+     -0.14358152694763962,
+     -0.0005737104707866749
+    ],
+    "p_boot": 0.04533333333333334,
+    "one_sided_rate": 0.08,
+    "low_fidelity": false
+   },
+   "Gap_Fade|pandemic_health": {
+    "setup": "Gap_Fade",
+    "category": "pandemic_health",
+    "n_sessions": 13,
+    "n_trades": 10,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.052612180933710354,
+    "ci95": [
+     -0.1939667539992987,
+     0.06164563882070554
+    ],
+    "p_boot": 0.4,
+    "one_sided_rate": 0.08,
+    "low_fidelity": false
+   },
+   "Gap_Fade|political_shock": {
+    "setup": "Gap_Fade",
+    "category": "political_shock",
+    "n_sessions": 12,
+    "n_trades": 9,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.0226972205566182,
+    "ci95": [
+     -0.10111130630942257,
+     0.0757886244585294
+    ],
+    "p_boot": 0.5626666666666666,
+    "one_sided_rate": 0.08,
+    "low_fidelity": false
+   },
+   "Gap_Fade|energy_shock": {
+    "setup": "Gap_Fade",
+    "category": "energy_shock",
+    "n_sessions": 10,
+    "n_trades": 5,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.04565352660049166,
+    "ci95": [
+     -0.12662281249005883,
+     0.007906361583575744
+    ],
+    "p_boot": 0.15266666666666667,
+    "one_sided_rate": 0.08,
+    "low_fidelity": false
+   },
+   "Gap_Fade|cyber_infrastructure": {
+    "setup": "Gap_Fade",
+    "category": "cyber_infrastructure",
+    "n_sessions": 4,
+    "n_trades": 1,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.03457890833636022,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": 0.08,
+    "low_fidelity": false
+   },
+   "IntradayMomentumBoundary|FOMC": {
+    "setup": "IntradayMomentumBoundary",
+    "category": "FOMC",
+    "n_sessions": 22,
+    "n_trades": 53,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": -0.020401308448788825,
+    "ci95": [
+     -0.07596279841848418,
+     0.043563900445829105
+    ],
+    "p_boot": 0.4633333333333333,
+    "one_sided_rate": 0.19,
+    "low_fidelity": false
+   },
+   "IntradayMomentumBoundary|CPI": {
+    "setup": "IntradayMomentumBoundary",
+    "category": "CPI",
+    "n_sessions": 19,
+    "n_trades": 33,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": -0.050275936050688794,
+    "ci95": [
+     -0.09196708061480034,
+     -0.010078864610562198
+    ],
+    "p_boot": 0.014666666666666666,
+    "one_sided_rate": 0.19,
+    "low_fidelity": false
+   },
+   "IntradayMomentumBoundary|NFP": {
+    "setup": "IntradayMomentumBoundary",
+    "category": "NFP",
+    "n_sessions": 36,
+    "n_trades": 67,
+    "tested": true,
+    "geopolitical": false,
+    "effect_sigma": -0.02508231176114045,
+    "ci95": [
+     -0.06424967335887506,
+     0.014879983937429316
+    ],
+    "p_boot": 0.226,
+    "one_sided_rate": 0.19,
+    "low_fidelity": false,
+    "placebo": {
+     "n_draws": 5000,
+     "mean": 0.022892881853170854,
+     "sd": 0.02859240451877866,
+     "p95_same_sign": -0.022491721632972337,
+     "p99_same_sign": -0.03927361071447083,
+     "rank": 0.9602,
+     "strata": 15,
+     "strata_fallback": 0,
+     "verdict": "effect"
+    },
+    "bh_q10": false
+   },
+   "IntradayMomentumBoundary|GDP_ADV": {
+    "setup": "IntradayMomentumBoundary",
+    "category": "GDP_ADV",
+    "n_sessions": 1,
+    "n_trades": 2,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": -0.08690513905189265,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": 0.19,
+    "low_fidelity": false
+   },
+   "IntradayMomentumBoundary|PCE": {
+    "setup": "IntradayMomentumBoundary",
+    "category": "PCE",
+    "n_sessions": 34,
+    "n_trades": 80,
+    "tested": true,
+    "geopolitical": false,
+    "effect_sigma": 0.05795334433234357,
+    "ci95": [
+     -0.023531406788897105,
+     0.15267567478469252
+    ],
+    "p_boot": 0.178,
+    "one_sided_rate": 0.19,
+    "low_fidelity": false,
+    "placebo": {
+     "n_draws": 5000,
+     "mean": 0.0045185035722156265,
+     "sd": 0.02192458494525818,
+     "p95_same_sign": 0.041233357699810826,
+     "p99_same_sign": 0.05752628216072848,
+     "rank": 0.9902,
+     "strata": 15,
+     "strata_fallback": 0,
+     "verdict": "effect"
+    },
+    "bh_q10": false
+   },
+   "IntradayMomentumBoundary|war_military": {
+    "setup": "IntradayMomentumBoundary",
+    "category": "war_military",
+    "n_sessions": 9,
+    "n_trades": 19,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.07379223244442455,
+    "ci95": [
+     -0.07068621185368239,
+     0.30192420466263253
+    ],
+    "p_boot": 0.48533333333333334,
+    "one_sided_rate": 0.19,
+    "low_fidelity": false
+   },
+   "IntradayMomentumBoundary|trade_tariff": {
+    "setup": "IntradayMomentumBoundary",
+    "category": "trade_tariff",
+    "n_sessions": 4,
+    "n_trades": 12,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.007955522974387678,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": 0.19,
+    "low_fidelity": false
+   },
+   "IntradayMomentumBoundary|us_fiscal": {
+    "setup": "IntradayMomentumBoundary",
+    "category": "us_fiscal",
+    "n_sessions": 12,
+    "n_trades": 17,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.07886768712571443,
+    "ci95": [
+     -0.12770510843674437,
+     -0.035478504414194666
+    ],
+    "p_boot": 0.0003333333333333333,
+    "one_sided_rate": 0.19,
+    "low_fidelity": false
+   },
+   "IntradayMomentumBoundary|pandemic_health": {
+    "setup": "IntradayMomentumBoundary",
+    "category": "pandemic_health",
+    "n_sessions": 13,
+    "n_trades": 15,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.012420746444578981,
+    "ci95": [
+     -0.05291942668813102,
+     0.10765897906436628
+    ],
+    "p_boot": 0.814,
+    "one_sided_rate": 0.19,
+    "low_fidelity": false
+   },
+   "IntradayMomentumBoundary|political_shock": {
+    "setup": "IntradayMomentumBoundary",
+    "category": "political_shock",
+    "n_sessions": 12,
+    "n_trades": 10,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.030485576043469843,
+    "ci95": [
+     -0.02558684828818898,
+     0.09179490647709161
+    ],
+    "p_boot": 0.2946666666666667,
+    "one_sided_rate": 0.19,
+    "low_fidelity": false
+   },
+   "IntradayMomentumBoundary|energy_shock": {
+    "setup": "IntradayMomentumBoundary",
+    "category": "energy_shock",
+    "n_sessions": 10,
+    "n_trades": 20,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.03661134796149318,
+    "ci95": [
+     -0.15916071765280276,
+     0.33201281951350203
+    ],
+    "p_boot": 0.8573333333333333,
+    "one_sided_rate": 0.19,
+    "low_fidelity": false
+   },
+   "IntradayMomentumBoundary|cyber_infrastructure": {
+    "setup": "IntradayMomentumBoundary",
+    "category": "cyber_infrastructure",
+    "n_sessions": 4,
+    "n_trades": 8,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.07318191568506431,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": 0.19,
+    "low_fidelity": false
+   },
+   "MOMO_CHASE|FOMC": {
+    "setup": "MOMO_CHASE",
+    "category": "FOMC",
+    "n_sessions": 22,
+    "n_trades": 87,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": -0.013047680883495592,
+    "ci95": [
+     -0.0729511519826018,
+     0.04528938793573625
+    ],
+    "p_boot": 0.72,
+    "one_sided_rate": 0.54,
+    "low_fidelity": true
+   },
+   "MOMO_CHASE|CPI": {
+    "setup": "MOMO_CHASE",
+    "category": "CPI",
+    "n_sessions": 19,
+    "n_trades": 66,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": -0.024762963002525607,
+    "ci95": [
+     -0.06663268411907178,
+     0.022577158219463572
+    ],
+    "p_boot": 0.272,
+    "one_sided_rate": 0.54,
+    "low_fidelity": true
+   },
+   "MOMO_CHASE|NFP": {
+    "setup": "MOMO_CHASE",
+    "category": "NFP",
+    "n_sessions": 36,
+    "n_trades": 153,
+    "tested": true,
+    "geopolitical": false,
+    "effect_sigma": 0.01580375468593494,
+    "ci95": [
+     -0.023524490325583992,
+     0.06371122302630101
+    ],
+    "p_boot": 0.514,
+    "one_sided_rate": 0.54,
+    "low_fidelity": true,
+    "placebo": {
+     "n_draws": 5000,
+     "mean": -0.02095927292941212,
+     "sd": 0.015130988417521184,
+     "p95_same_sign": 0.0035824037689359657,
+     "p99_same_sign": 0.01441862626921547,
+     "rank": 0.9922,
+     "strata": 15,
+     "strata_fallback": 0,
+     "verdict": "effect"
+    },
+    "bh_q10": false
+   },
+   "MOMO_CHASE|GDP_ADV": {
+    "setup": "MOMO_CHASE",
+    "category": "GDP_ADV",
+    "n_sessions": 1,
+    "n_trades": 3,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": 0.03982354037398466,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": 0.54,
+    "low_fidelity": true
+   },
+   "MOMO_CHASE|PCE": {
+    "setup": "MOMO_CHASE",
+    "category": "PCE",
+    "n_sessions": 34,
+    "n_trades": 146,
+    "tested": true,
+    "geopolitical": false,
+    "effect_sigma": -0.01367234767615887,
+    "ci95": [
+     -0.058944717006548804,
+     0.02389151395296755
+    ],
+    "p_boot": 0.5086666666666667,
+    "one_sided_rate": 0.54,
+    "low_fidelity": true,
+    "placebo": {
+     "n_draws": 5000,
+     "mean": -0.011202694470024406,
+     "sd": 0.016178580132537722,
+     "p95_same_sign": -0.03613143456369827,
+     "p99_same_sign": -0.0453889425535866,
+     "rank": 0.546,
+     "strata": 15,
+     "strata_fallback": 0,
+     "verdict": "selection / chance"
+    },
+    "bh_q10": false
+   },
+   "MOMO_CHASE|war_military": {
+    "setup": "MOMO_CHASE",
+    "category": "war_military",
+    "n_sessions": 9,
+    "n_trades": 48,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.03017041744992327,
+    "ci95": [
+     -0.09838896713936886,
+     0.14836523718539177
+    ],
+    "p_boot": 0.5846666666666667,
+    "one_sided_rate": 0.54,
+    "low_fidelity": true
+   },
+   "MOMO_CHASE|trade_tariff": {
+    "setup": "MOMO_CHASE",
+    "category": "trade_tariff",
+    "n_sessions": 4,
+    "n_trades": 17,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.02760193018391068,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": 0.54,
+    "low_fidelity": true
+   },
+   "MOMO_CHASE|us_fiscal": {
+    "setup": "MOMO_CHASE",
+    "category": "us_fiscal",
+    "n_sessions": 12,
+    "n_trades": 37,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.039978541455726956,
+    "ci95": [
+     -0.02157266797836586,
+     0.11569000651671107
+    ],
+    "p_boot": 0.24933333333333332,
+    "one_sided_rate": 0.54,
+    "low_fidelity": true
+   },
+   "MOMO_CHASE|pandemic_health": {
+    "setup": "MOMO_CHASE",
+    "category": "pandemic_health",
+    "n_sessions": 13,
+    "n_trades": 39,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.023220168834657533,
+    "ci95": [
+     -0.05603633682633017,
+     0.008464948268018522
+    ],
+    "p_boot": 0.144,
+    "one_sided_rate": 0.54,
+    "low_fidelity": true
+   },
+   "MOMO_CHASE|political_shock": {
+    "setup": "MOMO_CHASE",
+    "category": "political_shock",
+    "n_sessions": 12,
+    "n_trades": 38,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.004267809003290384,
+    "ci95": [
+     -0.03210504042305958,
+     0.03128053237145974
+    ],
+    "p_boot": 0.7226666666666667,
+    "one_sided_rate": 0.54,
+    "low_fidelity": true
+   },
+   "MOMO_CHASE|energy_shock": {
+    "setup": "MOMO_CHASE",
+    "category": "energy_shock",
+    "n_sessions": 10,
+    "n_trades": 42,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.04505870190983044,
+    "ci95": [
+     -0.04994494620251459,
+     0.19667669252637465
+    ],
+    "p_boot": 0.6213333333333333,
+    "one_sided_rate": 0.54,
+    "low_fidelity": true
+   },
+   "MOMO_CHASE|cyber_infrastructure": {
+    "setup": "MOMO_CHASE",
+    "category": "cyber_infrastructure",
+    "n_sessions": 4,
+    "n_trades": 18,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.10727807363470666,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": 0.54,
+    "low_fidelity": true
+   },
+   "ORB_15min|FOMC": {
+    "setup": "ORB_15min",
+    "category": "FOMC",
+    "n_sessions": 22,
+    "n_trades": 33,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": -0.016606244948957696,
+    "ci95": [
+     -0.05650169628917392,
+     0.027432097896195825
+    ],
+    "p_boot": 0.444,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "ORB_15min|CPI": {
+    "setup": "ORB_15min",
+    "category": "CPI",
+    "n_sessions": 19,
+    "n_trades": 30,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": -0.018911422519892952,
+    "ci95": [
+     -0.09528099037631924,
+     0.057303310498183914
+    ],
+    "p_boot": 0.5526666666666666,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "ORB_15min|NFP": {
+    "setup": "ORB_15min",
+    "category": "NFP",
+    "n_sessions": 36,
+    "n_trades": 64,
+    "tested": true,
+    "geopolitical": false,
+    "effect_sigma": 0.0030727276165617833,
+    "ci95": [
+     -0.052651390168759145,
+     0.06774388696286655
+    ],
+    "p_boot": 0.912,
+    "one_sided_rate": null,
+    "low_fidelity": false,
+    "placebo": {
+     "n_draws": 5000,
+     "mean": 0.008980498478447967,
+     "sd": 0.0237683745987427,
+     "p95_same_sign": 0.04908603658762117,
+     "p99_same_sign": 0.06525509283317205,
+     "rank": 0.4068,
+     "strata": 15,
+     "strata_fallback": 0,
+     "verdict": "selection / chance"
+    },
+    "bh_q10": false
+   },
+   "ORB_15min|GDP_ADV": {
+    "setup": "ORB_15min",
+    "category": "GDP_ADV",
+    "n_sessions": 1,
+    "n_trades": 1,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": -0.02202776005808,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "ORB_15min|PCE": {
+    "setup": "ORB_15min",
+    "category": "PCE",
+    "n_sessions": 34,
+    "n_trades": 63,
+    "tested": true,
+    "geopolitical": false,
+    "effect_sigma": -0.009243589955850257,
+    "ci95": [
+     -0.058531041318407716,
+     0.044909588738733436
+    ],
+    "p_boot": 0.6973333333333334,
+    "one_sided_rate": null,
+    "low_fidelity": false,
+    "placebo": {
+     "n_draws": 5000,
+     "mean": 0.025766121205488594,
+     "sd": 0.024783504831691488,
+     "p95_same_sign": -0.013601798680323952,
+     "p99_same_sign": -0.02756021594813516,
+     "rank": 0.9268,
+     "strata": 15,
+     "strata_fallback": 0,
+     "verdict": "selection / chance"
+    },
+    "bh_q10": false
+   },
+   "ORB_15min|war_military": {
+    "setup": "ORB_15min",
+    "category": "war_military",
+    "n_sessions": 9,
+    "n_trades": 15,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.04296151726449679,
+    "ci95": [
+     -0.11306234596963945,
+     0.03596110787177312
+    ],
+    "p_boot": 0.24933333333333332,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "ORB_15min|trade_tariff": {
+    "setup": "ORB_15min",
+    "category": "trade_tariff",
+    "n_sessions": 4,
+    "n_trades": 7,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.029742601243844237,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "ORB_15min|us_fiscal": {
+    "setup": "ORB_15min",
+    "category": "us_fiscal",
+    "n_sessions": 12,
+    "n_trades": 17,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.07090153864494521,
+    "ci95": [
+     -0.12291195330433419,
+     -0.0073341864698357505
+    ],
+    "p_boot": 0.028,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "ORB_15min|pandemic_health": {
+    "setup": "ORB_15min",
+    "category": "pandemic_health",
+    "n_sessions": 13,
+    "n_trades": 16,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.05341845990092686,
+    "ci95": [
+     -0.12174488235463791,
+     0.01568330432076939
+    ],
+    "p_boot": 0.12466666666666666,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "ORB_15min|political_shock": {
+    "setup": "ORB_15min",
+    "category": "political_shock",
+    "n_sessions": 12,
+    "n_trades": 17,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.00882037621795587,
+    "ci95": [
+     -0.08439138518265608,
+     0.07463407704496539
+    ],
+    "p_boot": 0.81,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "ORB_15min|energy_shock": {
+    "setup": "ORB_15min",
+    "category": "energy_shock",
+    "n_sessions": 10,
+    "n_trades": 16,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.008538453261499216,
+    "ci95": [
+     -0.09483976341051328,
+     0.1257065833710706
+    ],
+    "p_boot": 0.9053333333333333,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "ORB_15min|cyber_infrastructure": {
+    "setup": "ORB_15min",
+    "category": "cyber_infrastructure",
+    "n_sessions": 4,
+    "n_trades": 6,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.1525518958217809,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "ORB_5min|FOMC": {
+    "setup": "ORB_5min",
+    "category": "FOMC",
+    "n_sessions": 22,
+    "n_trades": 28,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": -0.029543660775859275,
+    "ci95": [
+     -0.09072809521019075,
+     0.034506058247225004
+    ],
+    "p_boot": 0.35533333333333333,
+    "one_sided_rate": 0.72,
+    "low_fidelity": true
+   },
+   "ORB_5min|CPI": {
+    "setup": "ORB_5min",
+    "category": "CPI",
+    "n_sessions": 19,
+    "n_trades": 28,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": 0.032276648056327954,
+    "ci95": [
+     -0.06810371630461129,
+     0.13097547925397185
+    ],
+    "p_boot": 0.5433333333333333,
+    "one_sided_rate": 0.72,
+    "low_fidelity": true
+   },
+   "ORB_5min|NFP": {
+    "setup": "ORB_5min",
+    "category": "NFP",
+    "n_sessions": 36,
+    "n_trades": 66,
+    "tested": true,
+    "geopolitical": false,
+    "effect_sigma": -0.031693420097069075,
+    "ci95": [
+     -0.09120094349534584,
+     0.03535571963863283
+    ],
+    "p_boot": 0.3433333333333333,
+    "one_sided_rate": 0.72,
+    "low_fidelity": true,
+    "placebo": {
+     "n_draws": 5000,
+     "mean": 0.02247215462227992,
+     "sd": 0.029719588219577434,
+     "p95_same_sign": -0.026120000992212785,
+     "p99_same_sign": -0.045120388802994904,
+     "rank": 0.9674,
+     "strata": 15,
+     "strata_fallback": 0,
+     "verdict": "effect"
+    },
+    "bh_q10": false
+   },
+   "ORB_5min|GDP_ADV": {
+    "setup": "ORB_5min",
+    "category": "GDP_ADV",
+    "n_sessions": 1,
+    "n_trades": 1,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": -0.005876052419369206,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": 0.72,
+    "low_fidelity": true
+   },
+   "ORB_5min|PCE": {
+    "setup": "ORB_5min",
+    "category": "PCE",
+    "n_sessions": 34,
+    "n_trades": 58,
+    "tested": true,
+    "geopolitical": false,
+    "effect_sigma": 0.025838764504473817,
+    "ci95": [
+     -0.041219595919907995,
+     0.10037605995766577
+    ],
+    "p_boot": 0.4673333333333333,
+    "one_sided_rate": 0.72,
+    "low_fidelity": true,
+    "placebo": {
+     "n_draws": 5000,
+     "mean": 0.026183443829085648,
+     "sd": 0.02940220064089197,
+     "p95_same_sign": 0.07425808219909837,
+     "p99_same_sign": 0.09549745873612464,
+     "rank": 0.5,
+     "strata": 15,
+     "strata_fallback": 0,
+     "verdict": "selection / chance"
+    },
+    "bh_q10": false
+   },
+   "ORB_5min|war_military": {
+    "setup": "ORB_5min",
+    "category": "war_military",
+    "n_sessions": 9,
+    "n_trades": 17,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.016816545439012388,
+    "ci95": [
+     -0.16722840886059748,
+     0.14854951143193637
+    ],
+    "p_boot": 0.818,
+    "one_sided_rate": 0.72,
+    "low_fidelity": true
+   },
+   "ORB_5min|trade_tariff": {
+    "setup": "ORB_5min",
+    "category": "trade_tariff",
+    "n_sessions": 4,
+    "n_trades": 7,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.02215976824076715,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": 0.72,
+    "low_fidelity": true
+   },
+   "ORB_5min|us_fiscal": {
+    "setup": "ORB_5min",
+    "category": "us_fiscal",
+    "n_sessions": 12,
+    "n_trades": 15,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.08573713059788017,
+    "ci95": [
+     -0.14734944124632418,
+     -0.016425457320136106
+    ],
+    "p_boot": 0.016,
+    "one_sided_rate": 0.72,
+    "low_fidelity": true
+   },
+   "ORB_5min|pandemic_health": {
+    "setup": "ORB_5min",
+    "category": "pandemic_health",
+    "n_sessions": 13,
+    "n_trades": 14,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.055437648306465845,
+    "ci95": [
+     -0.1994669324851284,
+     0.07501549637893513
+    ],
+    "p_boot": 0.41533333333333333,
+    "one_sided_rate": 0.72,
+    "low_fidelity": true
+   },
+   "ORB_5min|political_shock": {
+    "setup": "ORB_5min",
+    "category": "political_shock",
+    "n_sessions": 12,
+    "n_trades": 18,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.0012324783455064936,
+    "ci95": [
+     -0.10183843447887905,
+     0.10747319303758006
+    ],
+    "p_boot": 0.9913333333333333,
+    "one_sided_rate": 0.72,
+    "low_fidelity": true
+   },
+   "ORB_5min|energy_shock": {
+    "setup": "ORB_5min",
+    "category": "energy_shock",
+    "n_sessions": 10,
+    "n_trades": 15,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.07043400296503222,
+    "ci95": [
+     -0.2275624779040146,
+     0.15723876732674694
+    ],
+    "p_boot": 0.44733333333333336,
+    "one_sided_rate": 0.72,
+    "low_fidelity": true
+   },
+   "ORB_5min|cyber_infrastructure": {
+    "setup": "ORB_5min",
+    "category": "cyber_infrastructure",
+    "n_sessions": 4,
+    "n_trades": 4,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.1721330023940398,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": 0.72,
+    "low_fidelity": true
+   },
+   "PDH_PDL_Breakout|FOMC": {
+    "setup": "PDH_PDL_Breakout",
+    "category": "FOMC",
+    "n_sessions": 22,
+    "n_trades": 36,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": -0.008526923192348114,
+    "ci95": [
+     -0.1246566798403071,
+     0.10460963457245773
+    ],
+    "p_boot": 0.918,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "PDH_PDL_Breakout|CPI": {
+    "setup": "PDH_PDL_Breakout",
+    "category": "CPI",
+    "n_sessions": 19,
+    "n_trades": 29,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": -0.001514607507449696,
+    "ci95": [
+     -0.031073567580449695,
+     0.03254602069320054
+    ],
+    "p_boot": 0.88,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "PDH_PDL_Breakout|NFP": {
+    "setup": "PDH_PDL_Breakout",
+    "category": "NFP",
+    "n_sessions": 36,
+    "n_trades": 62,
+    "tested": true,
+    "geopolitical": false,
+    "effect_sigma": -0.0024079032153855153,
+    "ci95": [
+     -0.045806503170105616,
+     0.047137501417202375
+    ],
+    "p_boot": 0.8913333333333333,
+    "one_sided_rate": null,
+    "low_fidelity": false,
+    "placebo": {
+     "n_draws": 5000,
+     "mean": 0.0024977445346942603,
+     "sd": 0.012933541064970668,
+     "p95_same_sign": -0.018608583987197447,
+     "p99_same_sign": -0.026859743654827885,
+     "rank": 0.6442,
+     "strata": 15,
+     "strata_fallback": 0,
+     "verdict": "selection / chance"
+    },
+    "bh_q10": false
+   },
+   "PDH_PDL_Breakout|GDP_ADV": {
+    "setup": "PDH_PDL_Breakout",
+    "category": "GDP_ADV",
+    "n_sessions": 1,
+    "n_trades": 1,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": -0.030230597388126234,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "PDH_PDL_Breakout|PCE": {
+    "setup": "PDH_PDL_Breakout",
+    "category": "PCE",
+    "n_sessions": 34,
+    "n_trades": 52,
+    "tested": true,
+    "geopolitical": false,
+    "effect_sigma": -0.016766018125601294,
+    "ci95": [
+     -0.04406468754194601,
+     0.011395329306741909
+    ],
+    "p_boot": 0.23666666666666666,
+    "one_sided_rate": null,
+    "low_fidelity": false,
+    "placebo": {
+     "n_draws": 5000,
+     "mean": 0.014360978850297,
+     "sd": 0.01809224376812168,
+     "p95_same_sign": -0.014809129468604906,
+     "p99_same_sign": -0.02627515213627696,
+     "rank": 0.9614,
+     "strata": 15,
+     "strata_fallback": 0,
+     "verdict": "effect"
+    },
+    "bh_q10": false
+   },
+   "PDH_PDL_Breakout|war_military": {
+    "setup": "PDH_PDL_Breakout",
+    "category": "war_military",
+    "n_sessions": 9,
+    "n_trades": 18,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.03795051237601298,
+    "ci95": [
+     -0.26831558979934717,
+     0.12368568178858336
+    ],
+    "p_boot": 0.8193333333333334,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "PDH_PDL_Breakout|trade_tariff": {
+    "setup": "PDH_PDL_Breakout",
+    "category": "trade_tariff",
+    "n_sessions": 4,
+    "n_trades": 6,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.08791897716993288,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "PDH_PDL_Breakout|us_fiscal": {
+    "setup": "PDH_PDL_Breakout",
+    "category": "us_fiscal",
+    "n_sessions": 12,
+    "n_trades": 13,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.0005209713917031368,
+    "ci95": [
+     -0.05415122753891323,
+     0.05721417015217533
+    ],
+    "p_boot": 0.996,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "PDH_PDL_Breakout|pandemic_health": {
+    "setup": "PDH_PDL_Breakout",
+    "category": "pandemic_health",
+    "n_sessions": 13,
+    "n_trades": 11,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.02723788419448667,
+    "ci95": [
+     -0.049403118536280405,
+     -0.007051553169408511
+    ],
+    "p_boot": 0.01,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "PDH_PDL_Breakout|political_shock": {
+    "setup": "PDH_PDL_Breakout",
+    "category": "political_shock",
+    "n_sessions": 12,
+    "n_trades": 16,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.009589620002778196,
+    "ci95": [
+     -0.05286860868384365,
+     0.03435438669682446
+    ],
+    "p_boot": 0.6526666666666666,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "PDH_PDL_Breakout|energy_shock": {
+    "setup": "PDH_PDL_Breakout",
+    "category": "energy_shock",
+    "n_sessions": 10,
+    "n_trades": 14,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.036873245925153855,
+    "ci95": [
+     -0.04621667531225061,
+     0.1374623775320812
+    ],
+    "p_boot": 0.428,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "PDH_PDL_Breakout|cyber_infrastructure": {
+    "setup": "PDH_PDL_Breakout",
+    "category": "cyber_infrastructure",
+    "n_sessions": 4,
+    "n_trades": 4,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.06010597056480107,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "PDH_PDL_FailedBreak|FOMC": {
+    "setup": "PDH_PDL_FailedBreak",
+    "category": "FOMC",
+    "n_sessions": 22,
+    "n_trades": 32,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": -0.07719455113664273,
+    "ci95": [
+     -0.1651510523993675,
+     -0.003213192293506323
+    ],
+    "p_boot": 0.03933333333333333,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "PDH_PDL_FailedBreak|CPI": {
+    "setup": "PDH_PDL_FailedBreak",
+    "category": "CPI",
+    "n_sessions": 19,
+    "n_trades": 22,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": -0.06027625722766898,
+    "ci95": [
+     -0.11674680130826097,
+     -0.015249964883309831
+    ],
+    "p_boot": 0.0033333333333333335,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "PDH_PDL_FailedBreak|NFP": {
+    "setup": "PDH_PDL_FailedBreak",
+    "category": "NFP",
+    "n_sessions": 36,
+    "n_trades": 44,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": 0.021949777148697218,
+    "ci95": [
+     -0.039613521662427355,
+     0.09057007803837634
+    ],
+    "p_boot": 0.5033333333333333,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "PDH_PDL_FailedBreak|GDP_ADV": {
+    "setup": "PDH_PDL_FailedBreak",
+    "category": "GDP_ADV",
+    "n_sessions": 1,
+    "n_trades": 1,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": -0.008817937577146981,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "PDH_PDL_FailedBreak|PCE": {
+    "setup": "PDH_PDL_FailedBreak",
+    "category": "PCE",
+    "n_sessions": 34,
+    "n_trades": 44,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": 0.033357172936627814,
+    "ci95": [
+     -0.03217324244674202,
+     0.11228819932164016
+    ],
+    "p_boot": 0.35533333333333333,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "PDH_PDL_FailedBreak|war_military": {
+    "setup": "PDH_PDL_FailedBreak",
+    "category": "war_military",
+    "n_sessions": 9,
+    "n_trades": 18,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.10071205112230408,
+    "ci95": [
+     -0.3123153381954227,
+     0.10103823273759248
+    ],
+    "p_boot": 0.344,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "PDH_PDL_FailedBreak|trade_tariff": {
+    "setup": "PDH_PDL_FailedBreak",
+    "category": "trade_tariff",
+    "n_sessions": 4,
+    "n_trades": 5,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.0037513397176959368,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "PDH_PDL_FailedBreak|us_fiscal": {
+    "setup": "PDH_PDL_FailedBreak",
+    "category": "us_fiscal",
+    "n_sessions": 12,
+    "n_trades": 9,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.013402113328450614,
+    "ci95": [
+     -0.04646975843799847,
+     0.06431799955751574
+    ],
+    "p_boot": 0.5953333333333334,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "PDH_PDL_FailedBreak|pandemic_health": {
+    "setup": "PDH_PDL_FailedBreak",
+    "category": "pandemic_health",
+    "n_sessions": 13,
+    "n_trades": 10,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.018325136467954476,
+    "ci95": [
+     -0.007718309945237473,
+     0.05015119123412223
+    ],
+    "p_boot": 0.17933333333333334,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "PDH_PDL_FailedBreak|political_shock": {
+    "setup": "PDH_PDL_FailedBreak",
+    "category": "political_shock",
+    "n_sessions": 12,
+    "n_trades": 10,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.03245883173204889,
+    "ci95": [
+     -0.08774521974132916,
+     0.016648763769069347
+    ],
+    "p_boot": 0.224,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "PDH_PDL_FailedBreak|energy_shock": {
+    "setup": "PDH_PDL_FailedBreak",
+    "category": "energy_shock",
+    "n_sessions": 10,
+    "n_trades": 11,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.024208917915091055,
+    "ci95": [
+     -0.07065612163588503,
+     0.13358140557504128
+    ],
+    "p_boot": 0.642,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "PDH_PDL_FailedBreak|cyber_infrastructure": {
+    "setup": "PDH_PDL_FailedBreak",
+    "category": "cyber_infrastructure",
+    "n_sessions": 4,
+    "n_trades": 2,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.0042990289652941535,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "Six_Lines|FOMC": {
+    "setup": "Six_Lines",
+    "category": "FOMC",
+    "n_sessions": 22,
+    "n_trades": 34,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": 0.00989423328167812,
+    "ci95": [
+     -0.017881587444781598,
+     0.043293055441783246
+    ],
+    "p_boot": 0.5466666666666666,
+    "one_sided_rate": 0.25,
+    "low_fidelity": false
+   },
+   "Six_Lines|CPI": {
+    "setup": "Six_Lines",
+    "category": "CPI",
+    "n_sessions": 19,
+    "n_trades": 26,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": -0.021027370077953272,
+    "ci95": [
+     -0.05341899535058882,
+     0.011096472308055787
+    ],
+    "p_boot": 0.212,
+    "one_sided_rate": 0.25,
+    "low_fidelity": false
+   },
+   "Six_Lines|NFP": {
+    "setup": "Six_Lines",
+    "category": "NFP",
+    "n_sessions": 36,
+    "n_trades": 62,
+    "tested": true,
+    "geopolitical": false,
+    "effect_sigma": -0.003608670297626386,
+    "ci95": [
+     -0.02243069846147083,
+     0.01554162409343699
+    ],
+    "p_boot": 0.7406666666666667,
+    "one_sided_rate": 0.25,
+    "low_fidelity": false,
+    "placebo": {
+     "n_draws": 5000,
+     "mean": -0.0030330193149185093,
+     "sd": 0.009863136142335336,
+     "p95_same_sign": -0.019241713427377235,
+     "p99_same_sign": -0.026758523178361537,
+     "rank": 0.5354,
+     "strata": 15,
+     "strata_fallback": 0,
+     "verdict": "selection / chance"
+    },
+    "bh_q10": false
+   },
+   "Six_Lines|GDP_ADV": {
+    "setup": "Six_Lines",
+    "category": "GDP_ADV",
+    "n_sessions": 1,
+    "n_trades": 1,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": 0.03116108624709161,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": 0.25,
+    "low_fidelity": false
+   },
+   "Six_Lines|PCE": {
+    "setup": "Six_Lines",
+    "category": "PCE",
+    "n_sessions": 34,
+    "n_trades": 56,
+    "tested": true,
+    "geopolitical": false,
+    "effect_sigma": -0.011058473106300466,
+    "ci95": [
+     -0.03774741327072769,
+     0.012438762079242388
+    ],
+    "p_boot": 0.35133333333333333,
+    "one_sided_rate": 0.25,
+    "low_fidelity": false,
+    "placebo": {
+     "n_draws": 5000,
+     "mean": 0.00478825897228775,
+     "sd": 0.009374290071972524,
+     "p95_same_sign": -0.011065539332085775,
+     "p99_same_sign": -0.017216244389802245,
+     "rank": 0.9498,
+     "strata": 15,
+     "strata_fallback": 0,
+     "verdict": "selection / chance"
+    },
+    "bh_q10": false
+   },
+   "Six_Lines|war_military": {
+    "setup": "Six_Lines",
+    "category": "war_military",
+    "n_sessions": 9,
+    "n_trades": 15,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.04359249100873079,
+    "ci95": [
+     -0.08039733891014701,
+     -0.007202497490856898
+    ],
+    "p_boot": 0.024,
+    "one_sided_rate": 0.25,
+    "low_fidelity": false
+   },
+   "Six_Lines|trade_tariff": {
+    "setup": "Six_Lines",
+    "category": "trade_tariff",
+    "n_sessions": 4,
+    "n_trades": 7,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.018751312140099664,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": 0.25,
+    "low_fidelity": false
+   },
+   "Six_Lines|us_fiscal": {
+    "setup": "Six_Lines",
+    "category": "us_fiscal",
+    "n_sessions": 12,
+    "n_trades": 14,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.0039422504553052184,
+    "ci95": [
+     -0.022931556854466555,
+     0.02708082972034746
+    ],
+    "p_boot": 0.7326666666666667,
+    "one_sided_rate": 0.25,
+    "low_fidelity": false
+   },
+   "Six_Lines|pandemic_health": {
+    "setup": "Six_Lines",
+    "category": "pandemic_health",
+    "n_sessions": 13,
+    "n_trades": 14,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.0156432788590124,
+    "ci95": [
+     -0.06545972221651972,
+     0.02146677100617475
+    ],
+    "p_boot": 0.506,
+    "one_sided_rate": 0.25,
+    "low_fidelity": false
+   },
+   "Six_Lines|political_shock": {
+    "setup": "Six_Lines",
+    "category": "political_shock",
+    "n_sessions": 12,
+    "n_trades": 16,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.009956179874253282,
+    "ci95": [
+     -0.04341008847005131,
+     0.020562446194064034
+    ],
+    "p_boot": 0.5346666666666666,
+    "one_sided_rate": 0.25,
+    "low_fidelity": false
+   },
+   "Six_Lines|energy_shock": {
+    "setup": "Six_Lines",
+    "category": "energy_shock",
+    "n_sessions": 10,
+    "n_trades": 15,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.015234725098071505,
+    "ci95": [
+     -0.03127600738662604,
+     0.05645005850408239
+    ],
+    "p_boot": 0.46,
+    "one_sided_rate": 0.25,
+    "low_fidelity": false
+   },
+   "Six_Lines|cyber_infrastructure": {
+    "setup": "Six_Lines",
+    "category": "cyber_infrastructure",
+    "n_sessions": 4,
+    "n_trades": 6,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.005450281813089566,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": 0.25,
+    "low_fidelity": false
+   },
+   "Six_Lines_NoCap|FOMC": {
+    "setup": "Six_Lines_NoCap",
+    "category": "FOMC",
+    "n_sessions": 22,
+    "n_trades": 34,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": -0.051351219608372814,
+    "ci95": [
+     -0.1200527851539753,
+     0.022726639640917652
+    ],
+    "p_boot": 0.164,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "Six_Lines_NoCap|CPI": {
+    "setup": "Six_Lines_NoCap",
+    "category": "CPI",
+    "n_sessions": 19,
+    "n_trades": 26,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": -0.03724880958571605,
+    "ci95": [
+     -0.0750193258119745,
+     0.0038907269338159934
+    ],
+    "p_boot": 0.06866666666666667,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "Six_Lines_NoCap|NFP": {
+    "setup": "Six_Lines_NoCap",
+    "category": "NFP",
+    "n_sessions": 36,
+    "n_trades": 62,
+    "tested": true,
+    "geopolitical": false,
+    "effect_sigma": -0.04344851294075463,
+    "ci95": [
+     -0.09082514974504079,
+     0.0071495050060949175
+    ],
+    "p_boot": 0.08,
+    "one_sided_rate": null,
+    "low_fidelity": false,
+    "placebo": {
+     "n_draws": 5000,
+     "mean": 0.014697849719972086,
+     "sd": 0.02859514719208284,
+     "p95_same_sign": -0.03159458993523296,
+     "p99_same_sign": -0.04867371780989129,
+     "rank": 0.9822,
+     "strata": 15,
+     "strata_fallback": 0,
+     "verdict": "effect"
+    },
+    "bh_q10": false
+   },
+   "Six_Lines_NoCap|GDP_ADV": {
+    "setup": "Six_Lines_NoCap",
+    "category": "GDP_ADV",
+    "n_sessions": 1,
+    "n_trades": 1,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": -0.012338504159396226,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "Six_Lines_NoCap|PCE": {
+    "setup": "Six_Lines_NoCap",
+    "category": "PCE",
+    "n_sessions": 34,
+    "n_trades": 56,
+    "tested": true,
+    "geopolitical": false,
+    "effect_sigma": 0.02835611808097245,
+    "ci95": [
+     -0.03502268837666154,
+     0.09846174763573971
+    ],
+    "p_boot": 0.428,
+    "one_sided_rate": null,
+    "low_fidelity": false,
+    "placebo": {
+     "n_draws": 5000,
+     "mean": 0.008022429276445586,
+     "sd": 0.027168950337375226,
+     "p95_same_sign": 0.055182645375059895,
+     "p99_same_sign": 0.0731979652204315,
+     "rank": 0.773,
+     "strata": 15,
+     "strata_fallback": 0,
+     "verdict": "selection / chance"
+    },
+    "bh_q10": false
+   },
+   "Six_Lines_NoCap|war_military": {
+    "setup": "Six_Lines_NoCap",
+    "category": "war_military",
+    "n_sessions": 9,
+    "n_trades": 15,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.014758243268817504,
+    "ci95": [
+     -0.08900926110712362,
+     0.08017977838419932
+    ],
+    "p_boot": 0.6833333333333333,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "Six_Lines_NoCap|trade_tariff": {
+    "setup": "Six_Lines_NoCap",
+    "category": "trade_tariff",
+    "n_sessions": 4,
+    "n_trades": 7,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.08786969518699304,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "Six_Lines_NoCap|us_fiscal": {
+    "setup": "Six_Lines_NoCap",
+    "category": "us_fiscal",
+    "n_sessions": 12,
+    "n_trades": 14,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.05699496164719002,
+    "ci95": [
+     -0.10688706694741947,
+     -0.013144156226202576
+    ],
+    "p_boot": 0.008666666666666666,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "Six_Lines_NoCap|pandemic_health": {
+    "setup": "Six_Lines_NoCap",
+    "category": "pandemic_health",
+    "n_sessions": 13,
+    "n_trades": 14,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.02553446163772527,
+    "ci95": [
+     -0.11436267772253561,
+     0.09036725898445896
+    ],
+    "p_boot": 0.58,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "Six_Lines_NoCap|political_shock": {
+    "setup": "Six_Lines_NoCap",
+    "category": "political_shock",
+    "n_sessions": 12,
+    "n_trades": 16,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.005179391696424288,
+    "ci95": [
+     -0.06900083567531526,
+     0.07328820056193354
+    ],
+    "p_boot": 0.8286666666666667,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "Six_Lines_NoCap|energy_shock": {
+    "setup": "Six_Lines_NoCap",
+    "category": "energy_shock",
+    "n_sessions": 10,
+    "n_trades": 15,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.0761671135154503,
+    "ci95": [
+     -0.12512942843078562,
+     0.41125144904178784
+    ],
+    "p_boot": 0.6906666666666667,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "Six_Lines_NoCap|cyber_infrastructure": {
+    "setup": "Six_Lines_NoCap",
+    "category": "cyber_infrastructure",
+    "n_sessions": 4,
+    "n_trades": 6,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.15594423277468422,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "TTM_Squeeze|FOMC": {
+    "setup": "TTM_Squeeze",
+    "category": "FOMC",
+    "n_sessions": 22,
+    "n_trades": 45,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": -0.0022314367348749715,
+    "ci95": [
+     -0.04354049988771221,
+     0.03154928980346455
+    ],
+    "p_boot": 0.982,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "TTM_Squeeze|CPI": {
+    "setup": "TTM_Squeeze",
+    "category": "CPI",
+    "n_sessions": 19,
+    "n_trades": 45,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": -0.029988867294250522,
+    "ci95": [
+     -0.05070895836937608,
+     -0.010103807816348112
+    ],
+    "p_boot": 0.002,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "TTM_Squeeze|NFP": {
+    "setup": "TTM_Squeeze",
+    "category": "NFP",
+    "n_sessions": 36,
+    "n_trades": 74,
+    "tested": true,
+    "geopolitical": false,
+    "effect_sigma": 0.00820637916550675,
+    "ci95": [
+     -0.010328330571373006,
+     0.028477626920880517
+    ],
+    "p_boot": 0.378,
+    "one_sided_rate": null,
+    "low_fidelity": false,
+    "placebo": {
+     "n_draws": 5000,
+     "mean": 0.0015235169984763246,
+     "sd": 0.006720524582122684,
+     "p95_same_sign": 0.012530747886656443,
+     "p99_same_sign": 0.017603448913701088,
+     "rank": 0.8388,
+     "strata": 15,
+     "strata_fallback": 0,
+     "verdict": "selection / chance"
+    },
+    "bh_q10": false
+   },
+   "TTM_Squeeze|GDP_ADV": {
+    "setup": "TTM_Squeeze",
+    "category": "GDP_ADV",
+    "n_sessions": 1,
+    "n_trades": 0,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": 0.0024185957173936696,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "TTM_Squeeze|PCE": {
+    "setup": "TTM_Squeeze",
+    "category": "PCE",
+    "n_sessions": 34,
+    "n_trades": 79,
+    "tested": true,
+    "geopolitical": false,
+    "effect_sigma": 0.0010418214030945238,
+    "ci95": [
+     -0.01785682150470629,
+     0.01988245038434233
+    ],
+    "p_boot": 0.9633333333333334,
+    "one_sided_rate": null,
+    "low_fidelity": false,
+    "placebo": {
+     "n_draws": 5000,
+     "mean": 0.0036473175572679295,
+     "sd": 0.007121305774673438,
+     "p95_same_sign": 0.015471168428081583,
+     "p99_same_sign": 0.021195517936761363,
+     "rank": 0.3642,
+     "strata": 15,
+     "strata_fallback": 0,
+     "verdict": "selection / chance"
+    },
+    "bh_q10": false
+   },
+   "TTM_Squeeze|war_military": {
+    "setup": "TTM_Squeeze",
+    "category": "war_military",
+    "n_sessions": 9,
+    "n_trades": 14,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.021673174538269016,
+    "ci95": [
+     -0.010757756783868184,
+     0.0776725424281187
+    ],
+    "p_boot": 0.42933333333333334,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "TTM_Squeeze|trade_tariff": {
+    "setup": "TTM_Squeeze",
+    "category": "trade_tariff",
+    "n_sessions": 4,
+    "n_trades": 10,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.019662466061223224,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "TTM_Squeeze|us_fiscal": {
+    "setup": "TTM_Squeeze",
+    "category": "us_fiscal",
+    "n_sessions": 12,
+    "n_trades": 19,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.005131248639136949,
+    "ci95": [
+     -0.03685244760183983,
+     0.020656031781189188
+    ],
+    "p_boot": 0.7493333333333333,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "TTM_Squeeze|pandemic_health": {
+    "setup": "TTM_Squeeze",
+    "category": "pandemic_health",
+    "n_sessions": 13,
+    "n_trades": 18,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.023174467510284902,
+    "ci95": [
+     -0.05462853373340142,
+     0.005260039825825189
+    ],
+    "p_boot": 0.116,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "TTM_Squeeze|political_shock": {
+    "setup": "TTM_Squeeze",
+    "category": "political_shock",
+    "n_sessions": 12,
+    "n_trades": 17,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.0023735210598054028,
+    "ci95": [
+     -0.027908099941392976,
+     0.02015145374077916
+    ],
+    "p_boot": 0.8726666666666667,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "TTM_Squeeze|energy_shock": {
+    "setup": "TTM_Squeeze",
+    "category": "energy_shock",
+    "n_sessions": 10,
+    "n_trades": 18,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.019232338059388378,
+    "ci95": [
+     -0.011191326320589823,
+     0.055805787021239846
+    ],
+    "p_boot": 0.23333333333333334,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "TTM_Squeeze|cyber_infrastructure": {
+    "setup": "TTM_Squeeze",
+    "category": "cyber_infrastructure",
+    "n_sessions": 4,
+    "n_trades": 4,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.015903689828972736,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "ThreeBarPlay|FOMC": {
+    "setup": "ThreeBarPlay",
+    "category": "FOMC",
+    "n_sessions": 22,
+    "n_trades": 3,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": -0.0038523045632131454,
+    "ci95": [
+     -0.012142367628919532,
+     0.0008228020986091761
+    ],
+    "p_boot": 0.3,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "ThreeBarPlay|CPI": {
+    "setup": "ThreeBarPlay",
+    "category": "CPI",
+    "n_sessions": 19,
+    "n_trades": 1,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": -0.0005849522151228675,
+    "ci95": [
+     -0.0038686289779641374,
+     0.0012914150681981936
+    ],
+    "p_boot": 0.7526666666666667,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "ThreeBarPlay|NFP": {
+    "setup": "ThreeBarPlay",
+    "category": "NFP",
+    "n_sessions": 36,
+    "n_trades": 3,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": -0.0012501651909335204,
+    "ci95": [
+     -0.006937714744535278,
+     0.002264540942684482
+    ],
+    "p_boot": 0.7566666666666667,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "ThreeBarPlay|GDP_ADV": {
+    "setup": "ThreeBarPlay",
+    "category": "GDP_ADV",
+    "n_sessions": 1,
+    "n_trades": 0,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": 0.0006938067092510095,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "ThreeBarPlay|PCE": {
+    "setup": "ThreeBarPlay",
+    "category": "PCE",
+    "n_sessions": 34,
+    "n_trades": 1,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": 0.001033441432480435,
+    "ci95": [
+     4.0108673760868735e-05,
+     0.002184156816847476
+    ],
+    "p_boot": 0.03933333333333333,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "ThreeBarPlay|war_military": {
+    "setup": "ThreeBarPlay",
+    "category": "war_military",
+    "n_sessions": 9,
+    "n_trades": 0,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.0006938067092510095,
+    "ci95": [
+     -0.00013474964372834508,
+     0.0015573810063070743
+    ],
+    "p_boot": 0.10333333333333333,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "ThreeBarPlay|trade_tariff": {
+    "setup": "ThreeBarPlay",
+    "category": "trade_tariff",
+    "n_sessions": 4,
+    "n_trades": 0,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.0006938067092510095,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "ThreeBarPlay|us_fiscal": {
+    "setup": "ThreeBarPlay",
+    "category": "us_fiscal",
+    "n_sessions": 12,
+    "n_trades": 0,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.0006938067092510095,
+    "ci95": [
+     -0.00013474964372834508,
+     0.0015573810063070743
+    ],
+    "p_boot": 0.10333333333333333,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "ThreeBarPlay|pandemic_health": {
+    "setup": "ThreeBarPlay",
+    "category": "pandemic_health",
+    "n_sessions": 13,
+    "n_trades": 0,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.0006938067092510095,
+    "ci95": [
+     -0.00013474964372834508,
+     0.0015573810063070743
+    ],
+    "p_boot": 0.10333333333333333,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "ThreeBarPlay|political_shock": {
+    "setup": "ThreeBarPlay",
+    "category": "political_shock",
+    "n_sessions": 12,
+    "n_trades": 2,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.007069164134675254,
+    "ci95": [
+     -0.024427748008163157,
+     0.001096305044712529
+    ],
+    "p_boot": 0.6646666666666666,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "ThreeBarPlay|energy_shock": {
+    "setup": "ThreeBarPlay",
+    "category": "energy_shock",
+    "n_sessions": 10,
+    "n_trades": 0,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.0006938067092510095,
+    "ci95": [
+     -0.00013474964372834508,
+     0.0015573810063070743
+    ],
+    "p_boot": 0.10333333333333333,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "ThreeBarPlay|cyber_infrastructure": {
+    "setup": "ThreeBarPlay",
+    "category": "cyber_infrastructure",
+    "n_sessions": 4,
+    "n_trades": 0,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.0006938067092510095,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "VWAP_2sigma_Fade|FOMC": {
+    "setup": "VWAP_2sigma_Fade",
+    "category": "FOMC",
+    "n_sessions": 22,
+    "n_trades": 7,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": 0.016428806422810045,
+    "ci95": [
+     0.0018701459957381683,
+     0.034732871572879485
+    ],
+    "p_boot": 0.021333333333333333,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "VWAP_2sigma_Fade|CPI": {
+    "setup": "VWAP_2sigma_Fade",
+    "category": "CPI",
+    "n_sessions": 19,
+    "n_trades": 2,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": 0.003355503462606125,
+    "ci95": [
+     -0.0014601294847528202,
+     0.011123628034269533
+    ],
+    "p_boot": 0.38333333333333336,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "VWAP_2sigma_Fade|NFP": {
+    "setup": "VWAP_2sigma_Fade",
+    "category": "NFP",
+    "n_sessions": 36,
+    "n_trades": 1,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": 0.00021729808174636368,
+    "ci95": [
+     -0.0018979974913307916,
+     0.0033258042045642314
+    ],
+    "p_boot": 0.9546666666666667,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "VWAP_2sigma_Fade|GDP_ADV": {
+    "setup": "VWAP_2sigma_Fade",
+    "category": "GDP_ADV",
+    "n_sessions": 1,
+    "n_trades": 0,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": -0.0010722248066373946,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "VWAP_2sigma_Fade|PCE": {
+    "setup": "VWAP_2sigma_Fade",
+    "category": "PCE",
+    "n_sessions": 34,
+    "n_trades": 0,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": -0.0010722248066373946,
+    "ci95": [
+     -0.0023741635478646663,
+     9.573005087377067e-05
+    ],
+    "p_boot": 0.08,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "VWAP_2sigma_Fade|war_military": {
+    "setup": "VWAP_2sigma_Fade",
+    "category": "war_military",
+    "n_sessions": 9,
+    "n_trades": 0,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.0010722248066373946,
+    "ci95": [
+     -0.0023741635478646663,
+     9.573005087377067e-05
+    ],
+    "p_boot": 0.08,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "VWAP_2sigma_Fade|trade_tariff": {
+    "setup": "VWAP_2sigma_Fade",
+    "category": "trade_tariff",
+    "n_sessions": 4,
+    "n_trades": 0,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.0010722248066373946,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "VWAP_2sigma_Fade|us_fiscal": {
+    "setup": "VWAP_2sigma_Fade",
+    "category": "us_fiscal",
+    "n_sessions": 12,
+    "n_trades": 0,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.0010722248066373946,
+    "ci95": [
+     -0.0023741635478646663,
+     9.573005087377067e-05
+    ],
+    "p_boot": 0.08,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "VWAP_2sigma_Fade|pandemic_health": {
+    "setup": "VWAP_2sigma_Fade",
+    "category": "pandemic_health",
+    "n_sessions": 13,
+    "n_trades": 0,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.0010722248066373946,
+    "ci95": [
+     -0.0023741635478646663,
+     9.573005087377067e-05
+    ],
+    "p_boot": 0.08,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "VWAP_2sigma_Fade|political_shock": {
+    "setup": "VWAP_2sigma_Fade",
+    "category": "political_shock",
+    "n_sessions": 12,
+    "n_trades": 0,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.0010722248066373946,
+    "ci95": [
+     -0.0023741635478646663,
+     9.573005087377067e-05
+    ],
+    "p_boot": 0.08,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "VWAP_2sigma_Fade|energy_shock": {
+    "setup": "VWAP_2sigma_Fade",
+    "category": "energy_shock",
+    "n_sessions": 10,
+    "n_trades": 0,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.0010722248066373946,
+    "ci95": [
+     -0.0023741635478646663,
+     9.573005087377067e-05
+    ],
+    "p_boot": 0.08,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "VWAP_2sigma_Fade|cyber_infrastructure": {
+    "setup": "VWAP_2sigma_Fade",
+    "category": "cyber_infrastructure",
+    "n_sessions": 4,
+    "n_trades": 0,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.0010722248066373946,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": null,
+    "low_fidelity": false
+   },
+   "VWAP_Reclaim|FOMC": {
+    "setup": "VWAP_Reclaim",
+    "category": "FOMC",
+    "n_sessions": 22,
+    "n_trades": 52,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": 0.045486765959124556,
+    "ci95": [
+     -0.012712784796984719,
+     0.10898573631362762
+    ],
+    "p_boot": 0.13666666666666666,
+    "one_sided_rate": 0.79,
+    "low_fidelity": true
+   },
+   "VWAP_Reclaim|CPI": {
+    "setup": "VWAP_Reclaim",
+    "category": "CPI",
+    "n_sessions": 19,
+    "n_trades": 43,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": -0.06311513132039391,
+    "ci95": [
+     -0.1375355495281501,
+     0.0022177213769710154
+    ],
+    "p_boot": 0.05733333333333333,
+    "one_sided_rate": 0.79,
+    "low_fidelity": true
+   },
+   "VWAP_Reclaim|NFP": {
+    "setup": "VWAP_Reclaim",
+    "category": "NFP",
+    "n_sessions": 36,
+    "n_trades": 85,
+    "tested": true,
+    "geopolitical": false,
+    "effect_sigma": 0.03576269872681622,
+    "ci95": [
+     -0.009762730545602985,
+     0.09089089040706437
+    ],
+    "p_boot": 0.11266666666666666,
+    "one_sided_rate": 0.79,
+    "low_fidelity": true,
+    "placebo": {
+     "n_draws": 5000,
+     "mean": 0.000705814949089606,
+     "sd": 0.018460462443187414,
+     "p95_same_sign": 0.031195387337963513,
+     "p99_same_sign": 0.04305097875790671,
+     "rank": 0.9696,
+     "strata": 15,
+     "strata_fallback": 0,
+     "verdict": "effect"
+    },
+    "bh_q10": false
+   },
+   "VWAP_Reclaim|GDP_ADV": {
+    "setup": "VWAP_Reclaim",
+    "category": "GDP_ADV",
+    "n_sessions": 1,
+    "n_trades": 1,
+    "tested": false,
+    "geopolitical": false,
+    "effect_sigma": -0.005707625414052772,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": 0.79,
+    "low_fidelity": true
+   },
+   "VWAP_Reclaim|PCE": {
+    "setup": "VWAP_Reclaim",
+    "category": "PCE",
+    "n_sessions": 34,
+    "n_trades": 83,
+    "tested": true,
+    "geopolitical": false,
+    "effect_sigma": 0.021533814702154364,
+    "ci95": [
+     -0.022181837060563626,
+     0.06305284537932634
+    ],
+    "p_boot": 0.33666666666666667,
+    "one_sided_rate": 0.79,
+    "low_fidelity": true,
+    "placebo": {
+     "n_draws": 5000,
+     "mean": 0.007372643938457571,
+     "sd": 0.019942870560824513,
+     "p95_same_sign": 0.04146501630069085,
+     "p99_same_sign": 0.05616780346929266,
+     "rank": 0.7666,
+     "strata": 15,
+     "strata_fallback": 0,
+     "verdict": "selection / chance"
+    },
+    "bh_q10": false
+   },
+   "VWAP_Reclaim|war_military": {
+    "setup": "VWAP_Reclaim",
+    "category": "war_military",
+    "n_sessions": 9,
+    "n_trades": 23,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.08677319116526946,
+    "ci95": [
+     -0.15995825614246656,
+     -0.011786796392303255
+    ],
+    "p_boot": 0.032,
+    "one_sided_rate": 0.79,
+    "low_fidelity": true
+   },
+   "VWAP_Reclaim|trade_tariff": {
+    "setup": "VWAP_Reclaim",
+    "category": "trade_tariff",
+    "n_sessions": 4,
+    "n_trades": 9,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.008952960563031926,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": 0.79,
+    "low_fidelity": true
+   },
+   "VWAP_Reclaim|us_fiscal": {
+    "setup": "VWAP_Reclaim",
+    "category": "us_fiscal",
+    "n_sessions": 12,
+    "n_trades": 18,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.006524543286776135,
+    "ci95": [
+     -0.09147279904132254,
+     0.09612176198236845
+    ],
+    "p_boot": 0.8626666666666667,
+    "one_sided_rate": 0.79,
+    "low_fidelity": true
+   },
+   "VWAP_Reclaim|pandemic_health": {
+    "setup": "VWAP_Reclaim",
+    "category": "pandemic_health",
+    "n_sessions": 13,
+    "n_trades": 21,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.010266428375503423,
+    "ci95": [
+     -0.0933872955717226,
+     0.09542512592599516
+    ],
+    "p_boot": 0.7966666666666666,
+    "one_sided_rate": 0.79,
+    "low_fidelity": true
+   },
+   "VWAP_Reclaim|political_shock": {
+    "setup": "VWAP_Reclaim",
+    "category": "political_shock",
+    "n_sessions": 12,
+    "n_trades": 24,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": -0.008045558396998952,
+    "ci95": [
+     -0.06613688000106352,
+     0.043762288431921585
+    ],
+    "p_boot": 0.792,
+    "one_sided_rate": 0.79,
+    "low_fidelity": true
+   },
+   "VWAP_Reclaim|energy_shock": {
+    "setup": "VWAP_Reclaim",
+    "category": "energy_shock",
+    "n_sessions": 10,
+    "n_trades": 23,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.02073555913118158,
+    "ci95": [
+     -0.08824188939066666,
+     0.14183997474841792
+    ],
+    "p_boot": 0.762,
+    "one_sided_rate": 0.79,
+    "low_fidelity": true
+   },
+   "VWAP_Reclaim|cyber_infrastructure": {
+    "setup": "VWAP_Reclaim",
+    "category": "cyber_infrastructure",
+    "n_sessions": 4,
+    "n_trades": 5,
+    "tested": false,
+    "geopolitical": true,
+    "effect_sigma": 0.04125770235386053,
+    "ci95": [
+     null,
+     null
+    ],
+    "p_boot": null,
+    "one_sided_rate": 0.79,
+    "low_fidelity": true
+   }
+  },
+  "bh_pass": [],
+  "bh_pass_and_quarter_sigma": [],
+  "shortlist": [],
+  "note": "15.7: a setup's z is its net over the ARM's sigma, so one setup's cell is a fraction of a day's variation; the 0.25-sigma bar is the pre-registered one"
+ }
+}

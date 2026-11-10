@@ -1,0 +1,200 @@
+{
+ "generated": "2026-11-10T06:11:47",
+ "q6": {
+  "FOMC": {
+   "options_effect": -0.28619752227340267,
+   "options_ci": [
+    -0.7733380828930726,
+    0.2246226962414236
+   ],
+   "shares_effect": -0.28216979169816164,
+   "shares_ci": [
+    -0.5535671055160326,
+    -0.007976471718038034
+   ],
+   "difference": -0.004027730575241029,
+   "divergence": false,
+   "note": "different windows and session sets per arm; sigma is each arm's own"
+  },
+  "CPI": {
+   "options_effect": -0.32677860393106106,
+   "options_ci": [
+    -0.7025528381443653,
+    0.05510097426953456
+   ],
+   "shares_effect": 0.09226729329002445,
+   "shares_ci": [
+    -0.1749688645415612,
+    0.40596916962474133
+   ],
+   "difference": -0.41904589722108554,
+   "divergence": false,
+   "note": "different windows and session sets per arm; sigma is each arm's own"
+  },
+  "NFP": {
+   "options_effect": -0.10043122108783634,
+   "options_ci": [
+    -0.3887890391066011,
+    0.2203804574919495
+   ],
+   "shares_effect": 0.06190763572238728,
+   "shares_ci": [
+    -0.14545173628214056,
+    0.27896691790902467
+   ],
+   "difference": -0.16233885681022361,
+   "divergence": false,
+   "note": "different windows and session sets per arm; sigma is each arm's own"
+  },
+  "GDP_ADV": {
+   "options_effect": -0.10632933516705068,
+   "options_ci": [
+    null,
+    null
+   ],
+   "shares_effect": -0.2036414831887398,
+   "shares_ci": [
+    -0.5855612981807021,
+    0.16589060474701559
+   ],
+   "difference": 0.09731214802168914,
+   "divergence": false,
+   "note": "different windows and session sets per arm; sigma is each arm's own"
+  },
+  "PCE": {
+   "options_effect": 0.1630494381919282,
+   "options_ci": [
+    -0.20548487136540886,
+    0.5551518194108293
+   ],
+   "shares_effect": -0.07641362689169098,
+   "shares_ci": [
+    -0.33493025220092393,
+    0.20945637263222272
+   ],
+   "difference": 0.23946306508361917,
+   "divergence": false,
+   "note": "different windows and session sets per arm; sigma is each arm's own"
+  },
+  "war_military": {
+   "options_effect": -0.12365501163735529,
+   "options_ci": [
+    -1.1080055951101704,
+    0.8894588496230273
+   ],
+   "shares_effect": -0.11441237855706574,
+   "shares_ci": [
+    -0.6382916476400705,
+    0.555038733521045
+   ],
+   "difference": -0.009242633080289553,
+   "divergence": false,
+   "note": "different windows and session sets per arm; sigma is each arm's own"
+  },
+  "trade_tariff": {
+   "options_effect": 0.2943993208667109,
+   "options_ci": [
+    null,
+    null
+   ],
+   "shares_effect": 0.07103684840263408,
+   "shares_ci": [
+    -0.21165661863530788,
+    0.35923756764913145
+   ],
+   "difference": 0.2233624724640768,
+   "divergence": false,
+   "note": "different windows and session sets per arm; sigma is each arm's own"
+  },
+  "financial_stress": {
+   "options_effect": -0.3374424064232083,
+   "options_ci": [
+    -0.8604527641256611,
+    0.12116763814182195
+   ],
+   "shares_effect": -1.2989970984987464,
+   "shares_ci": [
+    -2.4650094517843724,
+    -0.31014035030788845
+   ],
+   "difference": 0.9615546920755382,
+   "divergence": false,
+   "note": "different windows and session sets per arm; sigma is each arm's own"
+  },
+  "us_fiscal": {
+   "options_effect": -0.3821335776949339,
+   "options_ci": [
+    -0.6597576963471368,
+    -0.11851523203194146
+   ],
+   "shares_effect": -0.4568543222183688,
+   "shares_ci": [
+    -1.1108990955377185,
+    0.004939115196623008
+   ],
+   "difference": 0.07472074452343491,
+   "divergence": false,
+   "note": "different windows and session sets per arm; sigma is each arm's own"
+  },
+  "pandemic_health": {
+   "options_effect": -0.22440140918423862,
+   "options_ci": [
+    -0.9255939507743295,
+    0.49380746860263613
+   ],
+   "shares_effect": -0.778717974907948,
+   "shares_ci": [
+    -1.7307399181744845,
+    0.079360004515262
+   ],
+   "difference": 0.5543165657237095,
+   "divergence": false,
+   "note": "different windows and session sets per arm; sigma is each arm's own"
+  },
+  "political_shock": {
+   "options_effect": -0.0814395520879023,
+   "options_ci": [
+    -0.46100615463958405,
+    0.3257851220740043
+   ],
+   "shares_effect": -0.18427213834803263,
+   "shares_ci": [
+    -0.4182749543282081,
+    0.06133150404467116
+   ],
+   "difference": 0.10283258626013034,
+   "divergence": false,
+   "note": "different windows and session sets per arm; sigma is each arm's own"
+  },
+  "energy_shock": {
+   "options_effect": 0.1957183665538635,
+   "options_ci": [
+    -0.8260197622865109,
+    1.8506357111779537
+   ],
+   "shares_effect": -0.26959245677782356,
+   "shares_ci": [
+    -0.7828960188502256,
+    0.27961234620354464
+   ],
+   "difference": 0.46531082333168705,
+   "divergence": false,
+   "note": "different windows and session sets per arm; sigma is each arm's own"
+  },
+  "cyber_infrastructure": {
+   "options_effect": 1.12606004684686,
+   "options_ci": [
+    null,
+    null
+   ],
+   "shares_effect": 0.8828623084123242,
+   "shares_ci": [
+    0.2061682297586937,
+    1.5524494617951294
+   ],
+   "difference": 0.24319773843453585,
+   "divergence": false,
+   "note": "different windows and session sets per arm; sigma is each arm's own"
+  }
+ }
+}
