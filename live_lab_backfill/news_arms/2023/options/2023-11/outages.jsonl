@@ -1,0 +1,2 @@
+{"seq":2152,"ts":"2023-11-10T12:09:02","kind":"degraded_bar","detail":"gap in admitted 1m sequence before 12:08","symbol":"QQQ","provenance":"BACKFILL"}
+{"seq":2153,"ts":"2023-11-10T12:09:02","kind":"degraded_bar","detail":"gap in admitted 1m sequence before 12:08","symbol":"SPY","provenance":"BACKFILL"}

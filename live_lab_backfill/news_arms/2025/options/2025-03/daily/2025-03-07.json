@@ -1,0 +1,23 @@
+{
+  "date": "2025-03-07",
+  "config_hash": "ccd00ac71f8243e9",
+  "symbols": [
+    "QQQ",
+    "SPY"
+  ],
+  "signals_decided": 31,
+  "signals_skipped": 172,
+  "fills_skipped": 0,
+  "trades_closed": 93,
+  "degraded_bars": {},
+  "atm_net": -2192.5,
+  "feed": {
+    "source": "HISTORY_BACKFILL",
+    "calls": 0,
+    "retries": 0,
+    "bar_cache_hits": 0,
+    "bar_cache_misses": 0,
+    "outage_episodes": 0,
+    "upstream_down_now": false
+  }
+}
