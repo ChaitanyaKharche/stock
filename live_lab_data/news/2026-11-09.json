@@ -1,0 +1,911 @@
+{
+ "session": "2026-11-09",
+ "fetched_at_et": "2026-11-09T07:30:17",
+ "query": "(Fed OR \"Federal Reserve\" OR inflation OR CPI OR jobs OR tariff OR tariffs OR war OR Treasury OR shutdown) AND (stocks OR markets OR economy)",
+ "window_from": "2026-11-06T16:00:00",
+ "window_to": "2026-11-09T07:30:17.552733",
+ "page_size": 100,
+ "n": 100,
+ "articles": [
+  {
+   "title": "European Indexes Steady to Start Week",
+   "link": "https://www.wsj.com/finance/stocks/nikkei-rises-1-7-led-by-machinery-financial-stocks-45670eb5",
+   "publishDate": "2026-11-09T00:29:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "European stocks indexes are little moved in quiet early trade after heavy selling at the end of last week.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Brazil's Lula, worried about high interest rates, pledges budget discipline",
+   "link": "https://www.reuters.com/world/americas/brazils-lula-worried-about-high-interest-rates-pledges-budget-discipline-2026-11-09/",
+   "publishDate": "2026-11-09T00:26:52.701000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Brazil's reelected President Luiz Inacio Lula da Silva on Sunday reaffirmed his commitment to fiscal responsibility and said he wanted to help bring down high ​interest rates but stopped short of announcing new measures to address investor concerns.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Top 3 Australian Undervalued Stocks To Watch In November 2026",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/top-3-australian-undervalued-stocks-001911449.html",
+   "publishDate": "2026-11-09T00:19:11+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Australian investors just watched global markets react to rising U.S. fiscal risks as debt concerns pushed Treasury yields higher. When big money frets about government balance sheets, attention often shifts toward businesses that generate solid cash and trade at a discount to what those cash flows suggest. That is where undervalued Australian cash flow stocks come in. This article highlights three candidates from that group worth a closer look. The three Australian stocks that follow are...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 Japanese Founder Led Growth Stocks To Own In November 2026",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/3-japanese-founder-led-growth-001907265.html",
+   "publishDate": "2026-11-09T00:19:07+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Rising U.S. Treasury yields tied to mounting federal debt have investors rethinking where growth can come from without relying on cheap money. That pushes attention toward fast growing Japanese businesses where founders and executives own meaningful stakes and have clear incentives to build long term value. This article highlights three stocks from this high growth, high insider alignment group so you can see which traits to watch. The three stocks highlighted here offer a compelling starting...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Nvidia CEO Jensen Huang's image tarnished by board investigation and affair, analysts say",
+   "link": "https://finance.yahoo.com/technology/articles/nvidia-ceo-jensen-huangs-image-000737077.html",
+   "publishDate": "2026-11-09T00:07:37+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Nvidia's board of directors said Sunday it will launch an investigation into its CEO Jensen Huang, after he revealed he had an affair with a former Chinese executive.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Cathie Wood buys $17.2 million of tumbling tech stock",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/cathie-wood-buys-17-2-000640768.html",
+   "publishDate": "2026-11-09T00:06:40+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Here are Cathie Wood’s latest moves.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Rubio says Trump’s war against Iran not ‘necessarily popular’ but needed to stop a nuclear threat",
+   "link": "https://apnews.com/article/iran-war-rubio-vance-trump-midterm-election-f7b507b55634985d6013d36265b3fbc0",
+   "publishDate": "2026-11-09T00:06:33+00:00",
+   "source": "apnews.com",
+   "summary": "",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "UK employers report weaker hiring but stronger pay growth in October",
+   "link": "https://www.reuters.com/world/uk/uk-employers-report-weaker-hiring-stronger-pay-growth-october-2026-11-09/",
+   "publishDate": "2026-11-09T00:06:23.206000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Britain's jobs market cooled in October but starting salaries for permanent jobs rose at a faster pace, according to a survey ​of recruiters published a few days after the Bank of ‌England raised interest rates.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Iraq’s 5 Million Bpd Oil Claim Complicates Its OPEC Quota Push",
+   "link": "https://finance.yahoo.com/energy/articles/iraq-5-million-bpd-oil-000000879.html",
+   "publishDate": "2026-11-09T00:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Iraq claims oil production exceeds 5 million bpd, potentially putting output at least 569,000 bpd above its current OPEC+ production target of 4.431 million bpd.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Gold's short-term volatility contrasts with long-term bullishness",
+   "link": "https://www.reuters.com/commentary/reuters-open-interest/golds-short-term-volatility-contrasts-with-long-term-bullishness-2026-11-08/",
+   "publishDate": "2026-11-08T23:52:21.311000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Gold appears to be finding a floor around $4,000 an ounce as it battles competing short-term influences and a shift in how it is traded.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Sudden Distress at Top-Rated Firm Tests China’s Rating Crackdown",
+   "link": "https://www.bloomberg.com/news/articles/2026-11-08/sudden-distress-at-top-rated-firm-tests-china-s-rating-crackdown",
+   "publishDate": "2026-11-08T23:52:21+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "Less than six months ago, China’s central bank made its biggest push yet to tackle inflated credit ratings in the nation’s $5.6 trillion corporate debt market. Now it has a live test case.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 Rate Sensitive Financial Stocks As Treasury Yields Reshape Retirement Investing",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/3-rate-sensitive-financial-stocks-231543759.html",
+   "publishDate": "2026-11-08T23:15:43+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Rising Treasury yields and growing concern about U.S. debt sustainability have pushed long-term rates back to the center of every market conversation, and that shift ripples straight into life insurers and pension-linked asset managers. For investors, this environment can quietly reshape how retirement-focused businesses are priced. This article walks through 3 stocks exposed to these fiscal crosscurrents and explains why their profiles may now look very different. The three stocks covered...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Forget the High-Beta Hype: 5 ‘Sleep Well at Night’ Stocks to Buy Now",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/forget-high-beta-hype-5-231024225.html",
+   "publishDate": "2026-11-08T23:10:24+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Yahoo Finance reported that the S&P 500 fell more than 4% on Thursday, November 5, its worst day since the April 2025 tariff crash, erasing roughly $3 trillion in market value. The Nasdaq slid into a correction, and the PHLX Semiconductor Index dropped 12%, its worst session since March 2020. The shock rippled well beyond […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Iran vows ‘astonishing’ strikes and lifts missile-range limit as US targets land routes",
+   "link": "https://www.foxnews.com/world/iran-vows-astonishing-strikes-lifts-missile-range-limit-us-targets-land-routes",
+   "publishDate": "2026-11-08T23:08:57+00:00",
+   "source": "www.foxnews.com",
+   "summary": "Iran's IRGC lifted its 2,000-kilometer ballistic missile-range limit and threatened new weapons hours after U.S. Central Command launched a new task force.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "RBA's Hunter says AI has yet to deliver productivity boost, trigger job losses",
+   "link": "https://www.channelnewsasia.com/business/rbas-hunter-says-ai-has-yet-deliver-productivity-boost-trigger-job-losses-6534796",
+   "publishDate": "2026-11-08T22:42:58+00:00",
+   "source": "www.channelnewsasia.com",
+   "summary": "SYDNEY, Nov 9 : A senior Australian central banker said on Monday there was limited evidence that artificial intelligence had meaningfully lifted productivity and caused widespread job losses, but warned the technology could pose growing risks to financial stability. Speaking at a UBS conference in Sydney, Re",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "RBA's Hunter says AI has yet to deliver productivity boost, trigger job losses",
+   "link": "https://www.reuters.com/world/asia-pacific/rbas-hunter-says-ai-has-yet-deliver-productivity-boost-trigger-job-losses-2026-11-08/",
+   "publishDate": "2026-11-08T22:42:34.593000+00:00",
+   "source": "www.reuters.com",
+   "summary": "A senior Australian central banker said on Monday there was limited evidence that artificial intelligence had meaningfully lifted productivity ​and caused widespread job losses, but warned the technology ‌could pose growing risks to financial stability.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "RBA’s Hunter Says AI Boom Will Put Near-Term Pressure on Prices",
+   "link": "https://www.bloomberg.com/news/articles/2026-11-08/rba-s-hunter-says-ai-boom-will-put-near-term-pressure-on-prices",
+   "publishDate": "2026-11-08T22:30:00+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "A senior official at Australia’s central bank said surging investment in areas related to artificial intelligence will further fuel demand in the economy, at a time when policymakers are already aggressively raising interest rates to combat inflation.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Pope Leo arrives in Argentina amid divisions over Milei’s austerity",
+   "link": "https://www.france24.com/en/americas/20261108-pope-leo-argentina-visit-milei",
+   "publishDate": "2026-11-08T22:23:19+00:00",
+   "source": "www.france24.com",
+   "summary": "Pope Leo XIV arrived in Argentina on Sunday from Uruguay, where his tour began, facing calls to help bridge divisions after three years of austerity under President Javier Milei. The visit to Buenos Aires is the first by a pontiff to the late Pope Francis’ homeland in nearly four decades.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Has LANXESS (XTRA:LXS) Fallen Far Enough To Trade At A Discount?",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/lanxess-xtra-lxs-fallen-far-220943845.html",
+   "publishDate": "2026-11-08T22:09:43+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "LANXESS has seen its share price fall a long way over recent years, even after some short term rebounds. This puts fresh focus on whether the current valuation lines up with its sales power today. With the stock now around €13.10, the key issue is how that price stacks up against what the chemicals group actually generates in revenue. The share price has fallen 75.7% over 5 years, which makes the link between LANXESS' sales base and its current market value especially important for anyone...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "5 Best Materials Stocks to Invest In According to Wall Street Analysts",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/5-best-materials-stocks-invest-220811650.html",
+   "publishDate": "2026-11-08T22:08:11+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "A quarry can sell crushed stone cheaply and still lose a job to a closer supplier. Stone is heavy and inexpensive per ton, so freight can wipe out a price advantage at the quarry. The U.S. Justice Department has treated construction aggregates as local markets in merger reviews for that reason. A well-located quarry may […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Nvidia launches investigation into CEO Jensen Huang over foreign intelligence concerns",
+   "link": "https://finance.yahoo.com/technology/articles/nvidia-launches-investigation-ceo-jensen-220135253.html",
+   "publishDate": "2026-11-08T22:01:35+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Nvidia announced Sunday that it is launching an independent investigation into its chief executive and founder Jensen Huang over concerns that he was the “target of a foreign intelligence effort.”",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Democratic Win Set to Reshuffle U.S. Energy Policy",
+   "link": "https://finance.yahoo.com/energy/articles/democratic-win-set-reshuffle-u-220000106.html",
+   "publishDate": "2026-11-08T22:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Political gridlock could stall energy reforms, with the odds of bipartisan permitting legislation passing falling to just 25%, down from 40% before the elections.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "31% of homeowners don't know HELOCs can help pay back your debt at a lower interest rate than your credit card",
+   "link": "https://finance.yahoo.com/real-estate/articles/31-homeowners-dont-know-helocs-213000289.html",
+   "publishDate": "2026-11-08T21:30:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "That lack of knowledge could be costing homeowners a lot in unnecessary interest payments each year, new study finds.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Where Does CPI FIM (BDL:ORCL) Value Sit After A 58% Rise?",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/where-does-cpi-fim-bdl-211258633.html",
+   "publishDate": "2026-11-08T21:12:58+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "CPI FIM has dropped sharply this year, yet over three years the stock is still well ahead of where it was. This puts fresh focus on whether today's share price is adequately backed by its earnings power. With the recent pullback sitting against a much stronger multi year gain, the question is how much of the business's profit profile the current market value is really reflecting. Over the past three years CPI FIM has delivered a 58.1% gain, which now raises the issue of whether that share...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 Indian Growth Stocks With Up To 46% Earnings Growth",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/3-indian-growth-stocks-46-211118901.html",
+   "publishDate": "2026-11-08T21:11:18+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "AI and electrification are front and center at the COP31 climate summit in Turkey, where global banks are talking about funding huge energy and technology build outs. That kind of long term capital focus rewards businesses that can grow earnings from a solid financial base. This article looks at three Indian growth stocks that analysts expect to expand profits quickly while keeping balance sheets in reasonable shape. The three stocks highlighted here offer a compelling starting point if you...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Australian Stock Market Today: ASX Futures Edge Higher On Firm US Jobs And CPI Watch",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/australian-stock-market-today-asx-210943264.html",
+   "publishDate": "2026-11-08T21:09:43+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The Morning Bull - Australian Market Morning Update Monday, 9 Nov 2026 Australian shares are set for a mildly positive open, with SPI 200 futures up around 20 points, as strong United States jobs data keeps global risk appetite supported but also reinforces higher rate expectations. The United States unemployment rate edged to 4.1% in October while non farm payrolls added 165,000 jobs, both pointing to a firm labour market. Pricing now suggests a high probability of a Federal Reserve rate...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Trump says he is highly unlikely to order Iran strikes if talks progress",
+   "link": "https://www.channelnewsasia.com/world/trump-says-he-highly-unlikely-order-iran-strikes-if-talks-progress-6534521",
+   "publishDate": "2026-11-08T21:05:09+00:00",
+   "source": "www.channelnewsasia.com",
+   "summary": "Both the US and Iran have continued strikes on vessels in the Strait of Hormuz, however, restricting exports of energy and other commodities vital to the world economy.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Climate talks should focus on implementation, not new targets, Singapore says",
+   "link": "https://www.reuters.com/sustainability/cop/climate-talks-should-focus-implementation-not-new-targets-singapore-says-2026-11-08/",
+   "publishDate": "2026-11-08T21:02:27.871000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Global climate ​talks starting on Monday are unlikely to yield new targets on curbing greenhouse gases, but negotiators have ‌plenty to do to implement measures already agreed, Singapore's environment minister said.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "The market bloodbath just exposed Wall Street’s true fears about U.S. debt, top economist warns",
+   "link": "https://finance.yahoo.com/economy/policy/articles/market-bloodbath-just-exposed-wall-204604891.html",
+   "publishDate": "2026-11-08T20:46:04+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "\"They’re up because of mounting fiscal stress, not because of AI.\"",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Trump vows comeback as bitter showdown with Congress looms",
+   "link": "https://www.channelnewsasia.com/world/trump-vows-comeback-bitter-showdown-congress-looms-6534601",
+   "publishDate": "2026-11-08T20:37:26+00:00",
+   "source": "www.channelnewsasia.com",
+   "summary": "Amid Democrat threats for administration officials to \"lawyer up,\" Trump said Saturday he was ordering the Justice Department to examine Democratic threats to impeach members of his administration, likening it to \"extortion.\"",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Sell Alert: 5 High-Profile Stocks Just Dumped by Top Analysts",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/sell-alert-5-high-profile-203124084.html",
+   "publishDate": "2026-11-08T20:31:24+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Wall Street had one of its roughest sessions of the year this week. The Nasdaq Composite fell 5.52% on November 5, its deepest one-day drop in 19 months, Reuters reported that day. The index closed more than 10% below its October 6 record, which confirmed a technical correction. The S&P 500 slid 4.36% and the […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Gildan (GIL): Here’s Why UBS Downgraded the Stock",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/gildan-gil-why-ubs-downgraded-202908949.html",
+   "publishDate": "2026-11-08T20:29:08+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published a list of the 10 High-Profile Stocks Just Dumped by Top Analysts and Gildan Activewear (NYSE:GIL) ranked 9th on this list. Wall Street had one of its roughest sessions of the year this week. The Nasdaq Composite fell 5.52% on November 5, its deepest one-day drop in 19 months, Reuters reported that […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Five9 (FIVN): Evercore ISI Downgraded the Stock Despite AI Revenue Growth Rate of 91%",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/five9-fivn-evercore-isi-downgraded-202815705.html",
+   "publishDate": "2026-11-08T20:28:15+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published a list of the 10 High-Profile Stocks Just Dumped by Top Analysts and Five9 (NASDAQ:FIVN) ranked 8th on this list. Wall Street had one of its roughest sessions of the year this week. The Nasdaq Composite fell 5.52% on November 5, its deepest one-day drop in 19 months, Reuters reported that day. […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Here’s Why BofA Cut International Flavors & Fragrances (IFF) to Underperform",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/why-bofa-cut-international-flavors-202614886.html",
+   "publishDate": "2026-11-08T20:26:14+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published a list of the 10 High-Profile Stocks Just Dumped by Top Analysts and International Flavors & Fragrances (NYSE:IFF) ranked 7th on this list. Wall Street had one of its roughest sessions of the year this week. The Nasdaq Composite fell 5.52% on November 5, its deepest one-day drop in 19 months, Reuters […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Here’s Why Citi Downgraded iRhythm (IRTC) Despite 14.9% Revenue Growth",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/why-citi-downgraded-irhythm-irtc-202511900.html",
+   "publishDate": "2026-11-08T20:25:11+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published a list of the 10 High-Profile Stocks Just Dumped by Top Analysts and iRhythm Holdings (NASDAQ:IRTC) ranked 10th on this list. Wall Street had one of its roughest sessions of the year this week. The Nasdaq Composite fell 5.52% on November 5, its deepest one-day drop in 19 months, Reuters reported that […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Why Barclays Cut Gartner (IT) Despite a 27% Rally in Its Shares",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/why-barclays-cut-gartner-despite-202403354.html",
+   "publishDate": "2026-11-08T20:24:03+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published a list of the 10 High-Profile Stocks Just Dumped by Top Analysts and Gartner (NYSE:IT) ranked 6th on this list. Wall Street had one of its roughest sessions of the year this week. The Nasdaq Composite fell 5.52% on November 5, its deepest one-day drop in 19 months, Reuters reported that day. […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "White House vows not to slow down immigration enforcement in wake of midterms defeat",
+   "link": "https://www.bbc.co.uk/news/articles/cmg476w7wnl2o",
+   "publishDate": "2026-11-08T20:23:58+00:00",
+   "source": "www.bbc.co.uk",
+   "summary": "The Department of Homeland Security also insists it is not backing away on the round-up.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "A Popular New Bet Hailing From Cryptoland Sets Off a Wall Street Turf War",
+   "link": "https://www.wsj.com/finance/regulation/a-popular-new-bet-hailing-from-cryptoland-sets-off-a-wall-street-turf-war-70e37095",
+   "publishDate": "2026-11-08T20:00:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "A group backed by Citadel Securities and Cboe is suing over the approval of single-stock perps.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Treasury Rally Gets New Boost as Election Hammers the AI Trade",
+   "link": "https://www.bloomberg.com/news/articles/2026-11-08/treasury-rally-gets-new-boost-as-election-hammers-the-ai-trade",
+   "publishDate": "2026-11-08T20:00:00+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "Wall Street sees the Treasury market emerging as a winner from the Democratic landslide in the US midterm elections, giving traders another reason to rethink this year’s sharp selloff.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Treasury Rally Gets New Boost as Election Hammers the AI Trade",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/treasury-rally-gets-boost-election-200000014.html",
+   "publishDate": "2026-11-08T20:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Wall Street sees the Treasury market emerging as a winner from the Democratic landslide in the US midterm elections, giving traders another reason to rethink this year’s sharp selloff.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Dear AST SpaceMobile Stock Fans, Mark Your Calendars for November 9",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/dear-ast-spacemobile-stock-fans-195454954.html",
+   "publishDate": "2026-11-08T19:54:54+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "AST SpaceMobile heads into its Nov. 9 earnings report with investors focused on whether accelerating deployment, partnerships, and government contracts can offset losses and intensifying competition.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Larry Fink says his parents didn't come from money and had regular jobs — so their retirement nest egg stunned him",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/larry-fink-says-parents-didnt-194500314.html",
+   "publishDate": "2026-11-08T19:45:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The BlackRock CEO says his parents managed to build an impressive retirement fund, even though their combined income was probably not more than $150,000 in today’s dollars.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Bitcoin, Ethereum, and Solana ETF Outflows Jump as Key Fear Gauge Drops After Midterms",
+   "link": "https://www.benzinga.com/crypto/26/11/63020476/bitcoin-ethereum-and-solana-etf-outflows-jump-as-key-fear-gauge-drops-after-midterms",
+   "publishDate": "2026-11-08T19:30:07.101000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Bitcoin, Ethereum, and Solana ETF outflows are rising as the Crypto Fear and Greed Index has dropped after the midterm elections",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "After the midterms, where does the Republican Party stand?",
+   "link": "https://www.aljazeera.com/opinions/2026/11/8/after-the-midterms-where-does-the-republican-party-stand",
+   "publishDate": "2026-11-08T19:09:18+00:00",
+   "source": "www.aljazeera.com",
+   "summary": "GOP suffered a loss, but it is hardly a historic one. A party in power has always been held to account in the midterms.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "The Bet Grupo Bimbo. de Holders Made",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/bet-grupo-bimbo-holders-made-190708999.html",
+   "publishDate": "2026-11-08T19:07:08+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "If Grupo Bimbo. de was on your watchlist rather than in your portfolio, the gap between watching and owning may feel sharp. For Grupo Bimbo. de shareholders, the return from the start of the year was 22.2%, including dividends. That outcome invites a hard question. Back on 1 January 2026, when analysts were arguing over modest revenue growth and small margin shifts, what would have signalled that the market was underestimating Grupo Bimbo. de’s ability to lift profitability? Narratives are...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "US asks Iraq to shut most Iran border crossings, Iraqi foreign minister says",
+   "link": "https://www.reuters.com/world/middle-east/us-asks-iraq-shut-most-iran-border-crossings-iraqi-foreign-minister-says-2026-11-08/",
+   "publishDate": "2026-11-08T19:01:26.099000+00:00",
+   "source": "www.reuters.com",
+   "summary": "The US Treasury ​has asked Iraq to close ‌all border crossings with Iran except for two as part ​of Washington's policy of ​increasing economic pressure on Tehran, Iraqi ⁠Foreign Minister Fuad Hussein ​said in an interview with ​Al Jazeera.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "The Race to Remake the U.S. Auto Market",
+   "link": "https://www.wsj.com/opinion/the-race-to-remake-the-u-s-auto-market-5b2b5025",
+   "publishDate": "2026-11-08T18:35:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "Will Chinese cars, autonomous cars or click-to-buy cars win in the next decade?",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Bitcoin Trades $200 Above Strategy’s Average Cost of $75,451. What Happens to MSTR if BTC Closes Below It?",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-trades-200-above-strategy-183103897.html",
+   "publishDate": "2026-11-08T18:31:03+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Strategy's Bitcoin hoard sits barely above water, and a billion-dollar dividend bill, a razor-thin premium, and an MSCI verdict all loom. One bad daily close could set off all three at once for MSTR holders.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Elizabeth Warren's 50/30/20 rule still powers budget apps — but does the philosophy still hold up in 2026",
+   "link": "https://finance.yahoo.com/markets/articles/elizabeth-warrens-50-30-20-183000808.html",
+   "publishDate": "2026-11-08T18:30:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The senator helped popularize the 50/30/20 budget rule two decades ago. But rising living costs raise questions about how well it works today.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Leaked records point to nearly 400,000 Russian war deaths in Ukraine",
+   "link": "https://seekingalpha.com/news/4668769-leaked-records-point-to-nearly-400000-russian-war-deaths-in-ukraine",
+   "publishDate": "2026-11-08T18:13:08+00:00",
+   "source": "seekingalpha.com",
+   "summary": "Leaked records link nearly 400,000 Russian deaths to the Ukraine war, with risks for labor, sanctions and energy markets.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Cementir Holding (BIT:CEM) Stock Looks About Right After Its 94% Run",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/cementir-holding-bit-cem-stock-181002615.html",
+   "publishDate": "2026-11-08T18:10:02+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Cementir Holding has seen its share price move sharply over recent years, which puts a spotlight on whether the current €15.41 level is properly backed by the earnings that drive the business. The question for anyone looking at the stock now is how that track record lines up with what the income statement can reasonably support. Over the past 3 years the share price has returned 94.1%, which raises the issue of how much of that rise can be traced to sustainable earnings power rather than...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Poland in shock as mass shooting shatters sense of security",
+   "link": "https://www.channelnewsasia.com/world/poland-in-shock-mass-shooting-shatters-sense-security-6534516",
+   "publishDate": "2026-11-08T18:08:07+00:00",
+   "source": "www.channelnewsasia.com",
+   "summary": "Germany, France and other European countries have already seen such brutal killings in markets and other public spaces.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Top 3 Japanese Undervalued Stocks To Watch In November 2026",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/top-3-japanese-undervalued-stocks-180756391.html",
+   "publishDate": "2026-11-08T18:07:56+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Wars and energy stress are pushing countries to think harder about electrification and cleaner power, and that ripple reaches straight into Japanese boardrooms. When capital is flowing into AI, grids and efficiency, solid Japanese companies with strong cash generation and low debt can get ignored and mispriced. This article walks through three high quality Japanese stocks that currently look cheap on our value scores and highlights what makes each one interesting now. The three Japanese...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Not Bloom Energy. Not Vistra. This AI Power Stock Just Posted a 96% Jump in Orders.",
+   "link": "https://finance.yahoo.com/energy/articles/not-bloom-energy-not-vistra-180500572.html",
+   "publishDate": "2026-11-08T18:05:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The impending change in the political backdrop isn't apt to actually affect the growing demand for its equipment, either.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Inflation Data, Post Midterm Weakness and Other Key Things to Watch this Week",
+   "link": "https://finance.yahoo.com/economy/articles/inflation-data-post-midterm-weakness-180003198.html",
+   "publishDate": "2026-11-08T18:00:03+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Markets open the week digesting last week’s Democratic midterm sweep and Thursday’s market weakness. Investors are reassessing policy risks now that Democrats control Congress opposite President Trump. Inflation data then takes center stage with October CPI on Tuesday and PPI on Friday.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Trump set to lurch further right, claiming US took ‘giant step back’ in elections",
+   "link": "https://www.theguardian.com/us-news/2026/nov/08/trump-midterm-elections-loss-democrats-immigration",
+   "publishDate": "2026-11-08T17:58:43+00:00",
+   "source": "www.theguardian.com",
+   "summary": "Trump poised to double down on immigration crackdown and refuse concessions to new Democratic majority in CongressDonald Trump set the stage for his administration to lurch further to the right this weekend, claiming the US had taken a “giant step back” by widely rejecting his party.The US president’s hardline aide, Stephen Miller, will begin as White House chief of staff on Monday. He will also meet with Dana White, CEO and president of the Ultimate Fighting Championship, after offering him the job of press secretary. Continue reading...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Kroger, Albertsons, Publix have a pricing problem they can't fix",
+   "link": "https://finance.yahoo.com/small-business/articles/kroger-albertsons-publix-pricing-problem-174700659.html",
+   "publishDate": "2026-11-08T17:47:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Regional grocers face competitors with advantages they may never be able to overcome.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Here are the 2 big things we're watching in the stock market in the week ahead",
+   "link": "https://www.cnbc.com/investingclub/2026/11/08/here-are-the-2-big-things-were-watching-in-the-stock-market-in-the-week-ahead.html",
+   "publishDate": "2026-11-08T17:40:15+00:00",
+   "source": "www.cnbc.com",
+   "summary": "CoreWeave earnings and inflation data will take center stage.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Boeing (BA): A Top 10 Dow Stock for 2027 With a Record $745B of Orders",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/boeing-ba-top-10-dow-173734444.html",
+   "publishDate": "2026-11-08T17:37:34+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published a list of the 10 Best Dow Stocks to Buy for 2027 and Boeing (NYSE:BA) ranked 6th on this list. Yahoo Finance reported on November 5 that the Dow Jones Industrial Average tumbled 3.4%, or more than 1,800 points, while the S&P 500 fell 4.4% and the Nasdaq Composite sank 5.5% into […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Amazon (AMZN): AWS Grew 39%, and Management Expects Growth Above 40% in 2027 and 2028",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/amazon-amzn-aws-grew-39-173722876.html",
+   "publishDate": "2026-11-08T17:37:22+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published a list of the 10 Best Dow Stocks to Buy for 2027 and Amazon (NASDAQ:AMZN) ranked 7th on this list. Yahoo Finance reported on November 5 that the Dow Jones Industrial Average tumbled 3.4%, or more than 1,800 points, while the S&P 500 fell 4.4% and the Nasdaq Composite sank 5.5% into […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "UnitedHealth (UNH): A Dow Stock for 2027 Where the Margin Repair Is Starting to Show",
+   "link": "https://finance.yahoo.com/healthcare/articles/unitedhealth-unh-dow-stock-2027-173658226.html",
+   "publishDate": "2026-11-08T17:36:58+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published a list of the 10 Best Dow Stocks to Buy for 2027 and UnitedHealth Group (NYSE:UNH) ranked 8th on this list. Yahoo Finance reported on November 5 that the Dow Jones Industrial Average tumbled 3.4%, or more than 1,800 points, while the S&P 500 fell 4.4% and the Nasdaq Composite sank 5.5% […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Goldman Sachs (GS) Is Riding a Busy Capital Markets Cycle With Record Quarterly Advisory Revenue",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/goldman-sachs-gs-riding-busy-173646707.html",
+   "publishDate": "2026-11-08T17:36:46+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published a list of the 10 Best Dow Stocks to Buy for 2027 and Goldman Sachs (NYSE:GS) ranked 9th on this list. Yahoo Finance reported on November 5 that the Dow Jones Industrial Average tumbled 3.4%, or more than 1,800 points, while the S&P 500 fell 4.4% and the Nasdaq Composite sank 5.5% […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Microsoft (MSFT) Makes the 10 Best Dow Stocks for 2027 List as Azure Growth Speeds Up",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/microsoft-msft-makes-10-best-173628657.html",
+   "publishDate": "2026-11-08T17:36:28+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published a list of the 10 Best Dow Stocks to Buy for 2027 and Microsoft (NASDAQ:MSFT) ranked 10th on this list. Yahoo Finance reported on November 5 that the Dow Jones Industrial Average tumbled 3.4%, or more than 1,800 points, while the S&P 500 fell 4.4% and the Nasdaq Composite sank 5.5% into […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Johnson & Johnson (JNJ): Limited Analyst Upside, but Management Sees a Clearer Path to Growth",
+   "link": "https://finance.yahoo.com/healthcare/articles/johnson-johnson-jnj-limited-analyst-173436500.html",
+   "publishDate": "2026-11-08T17:34:36+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published a list of the 10 Worst Dow Stocks To Buy and Johnson & Johnson (NYSE:JNJ) ranked 6th on this list. Yahoo Finance reported on November 5 that the Dow Jones Industrial Average tumbled 3.4%, or more than 1,800 points, while the S&P 500 fell 4.4% and the Nasdaq Composite sank 5.5% into […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Coca-Cola (KO) Makes the Dow’s Low-Upside List While Selling More Drinks, Not Just Charging More",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/coca-cola-ko-makes-dow-173403975.html",
+   "publishDate": "2026-11-08T17:34:03+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We recently published our list of the 10 Worst Dow Stocks To Buy and Coca-Cola (NYSE:KO) ranks 7th on this list. Yahoo Finance reported on November 5 that the Dow Jones Industrial Average tumbled 3.4%, or more than 1,800 points, while the S&P 500 fell 4.4% and the Nasdaq Composite sank 5.5% into correction territory. […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Volume, Not Price, Drove the Surprise at Procter & Gamble (PG)",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/volume-not-price-drove-surprise-173329362.html",
+   "publishDate": "2026-11-08T17:33:29+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Our latest list of the 10 Worst Dow Stocks To Buy is live, and Procter & Gamble (NYSE:PG) comes in at 8th on this list. Yahoo Finance reported on November 5 that the Dow Jones Industrial Average tumbled 3.4%, or more than 1,800 points, while the S&P 500 fell 4.4% and the Nasdaq Composite sank […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "IBM (IBM): Software Is Speeding Up, Yet Analysts’ Average Upside Is 5%",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/ibm-ibm-software-speeding-yet-173256823.html",
+   "publishDate": "2026-11-08T17:32:56+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published the list of the 10 Worst Dow Stocks To Buy, and IBM (NYSE:IBM) ranks 9th on this list. Yahoo Finance reported on November 5 that the Dow Jones Industrial Average tumbled 3.4%, or more than 1,800 points, while the S&P 500 fell 4.4% and the Nasdaq Composite sank 5.5% into correction territory. […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Visa (V): A 15% Revenue Gain at Scale, With 7% Average Analyst Upside",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/visa-v-15-revenue-gain-173201141.html",
+   "publishDate": "2026-11-08T17:32:01+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We recently covered the 10 Worst Dow Stocks To Buy in a new list, and Visa (NYSE:V) ranks 10th on this list. Yahoo Finance reported on November 5 that the Dow Jones Industrial Average tumbled 3.4%, or more than 1,800 points, while the S&P 500 fell 4.4% and the Nasdaq Composite sank 5.5% into correction […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "It Was the Economy, Not the War",
+   "link": "https://www.wsj.com/opinion/it-was-the-economy-not-the-war-a4029e99",
+   "publishDate": "2026-11-08T17:23:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "Polls find most Americans think the conflict with Iran was justified. The only way to help the GOP is to win.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 US Healthcare Dividend Stocks For Higher Rates and Steady Income",
+   "link": "https://finance.yahoo.com/healthcare/articles/3-us-healthcare-dividend-stocks-170913075.html",
+   "publishDate": "2026-11-08T17:09:13+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Wall Street just received a clear message from the October jobs report. The economy is still running hot, the Federal Reserve may stay tough on rates, and investors are again asking what truly holds up when borrowing costs stay elevated. That is where defensive, dividend-paying US healthcare stocks earn a closer look. This article explains the backdrop and then outlines three stocks connected to this news that some investors may want on their watchlist. The three defensive, dividend-paying US...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "What Investors Got Wrong About Korea Electric Power Before The Drop",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/investors-got-wrong-korea-electric-170810213.html",
+   "publishDate": "2026-11-08T17:08:10+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "If you only glanced at Korea Electric Power’s story through the lens of electrification, tariff reform talk, and overseas nuclear ambitions, it might have looked like a rare utility with multiple ways to win. Holding Korea Electric Power over the past year would have meant a 28.8% loss, including dividends. If you had been weighing those bullish and bearish narratives back in November 2025, what warning signs were already on the table before that drop? Narratives are how investors here put a...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Power Solutions International Inc (PSIX) (Q3 2026) Earnings Call Highlights: Strong Sales ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/power-solutions-international-inc-psix-170625911.html",
+   "publishDate": "2026-11-08T17:06:25+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Power Solutions International Inc (PSIX) posted 32.5% sequential sales growth and expanded gross margin to 29.7%, while outlining its Power Boost 2030 strategy to capture AI data center demand.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Challenging the politics that brought Donald Trump to power",
+   "link": "https://www.theguardian.com/us-news/2026/nov/08/challenging-the-politics-that-brought-donald-trump-to-power",
+   "publishDate": "2026-11-08T16:37:43+00:00",
+   "source": "www.theguardian.com",
+   "summary": "Readers respond to an editorial commenting on the Republicans’ rout in the US midterm electionsYour editorial on the US midterms (4 November) notes that culture war attacks, bigotry and smears failed this time. It is worth asking why they worked before. For a decade we have argued over whether Donald Trump’s support was about economics or culture. My research, combining a survey of 6,600 US residents with social mobility data, suggests the question was badly posed. Trump’s 2016 gains over Mitt Romney’s in 2012 were largest in counties where children born poor are least likely to rise, and people there describe success as luck and connections rather than effort.The grievance was economic. The language it found was cultural. Factory jobs lost to China became Beijing; the end of the male family wage became feminism; the decline of coal towns became climate politics. Trump’s gift was to translate economic pain into identity, which is how his coalition absorbed tariffs, welfare cuts and tax cuts for the rich. Continue reading...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Top 5 stocks to watch this week",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/top-5-stocks-watch-week-162025831.html",
+   "publishDate": "2026-11-08T16:20:25+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Investing.com -- Investors are preparing for a busy week on Wall Street, with earnings from five closely watched companies, fresh U.S. inflation data and shifting interest rate expectations likely to shape market sentiment.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Will US inflation data ease affordability concerns?",
+   "link": "https://www.ft.com/content/3d46dfb4-eef8-4ea0-9264-282bd269647e",
+   "publishDate": "2026-11-08T16:20:06+00:00",
+   "source": "www.ft.com",
+   "summary": "Market Questions is the FT’s guide to the week ahead",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Markets Brace for Washington Policy Battles",
+   "link": "https://www.bloomberg.com/news/videos/2026-11-08/markets-brace-for-washington-policy-battles-video",
+   "publishDate": "2026-11-08T16:17:03+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "On Bloomberg This Weekend, SMBC Nikko Securities Chief Economist Joe Lavorgna says affordability helped drive the midterm results but argues the underlying US economy remains healthy and major policy changes may be limited by divided government. Speaking with hosts David Gura and Christina Ruffini, Lavorgna discusses the outlook for AI investment, inflation and markets as Washington prepares for two years of potential policy.  (Source: Bloomberg)",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Goldman Sachs revamps 2027 gold price target, but signals rebound",
+   "link": "https://finance.yahoo.com/markets/commodities/articles/goldman-sachs-revamps-2027-gold-161700634.html",
+   "publishDate": "2026-11-08T16:17:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "That forecast price drop comes with one twist.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Dave Ramsey tells caller to cover these 5 expenses before paying her credit card — even with a growing balance",
+   "link": "https://finance.yahoo.com/markets/articles/dave-ramsey-tells-caller-cover-161500009.html",
+   "publishDate": "2026-11-08T16:15:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Dave Ramsey says the best way to get out of credit card debt is to stop using it. An emergency fund could prevent the problem altogether.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "How These 4 Transportation Stocks Move the Economy",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/4-transportation-stocks-move-economy-150500897.html",
+   "publishDate": "2026-11-08T15:05:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Railroads and delivery giants did the heavy lifting for the economy this year. Their latest earnings show how.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "'This Week' Transcript 11-8-26: House Democratic Leader Hakeem Jeffries, Senator-elect Abdul El-Sayed & Governor-elect Keisha Lance Bottoms",
+   "link": "https://abcnews.com/Politics/week-transcript-11-8-26-house-democratic-leader/story?id=137944448",
+   "publishDate": "2026-11-08T15:03:46+00:00",
+   "source": "abcnews.com",
+   "summary": "This is a rush transcript of \"This Week\" airing Sunday, November 8.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "After a Tech Rout, Stock Funds Hold a 9.9% Gain for 2026",
+   "link": "https://www.wsj.com/finance/investing/after-tech-rout-stock-funds-hold-9-9-gain-2026-9d6d9773",
+   "publishDate": "2026-11-08T15:00:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "Fund investors in October felt the downdraft in artificial-intelligence shares. Plus: A Financial Flashback to 40 years ago, the Boesky insider-trading bombshell.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Wall Street hiring helps lift finance jobs in October",
+   "link": "https://finance.yahoo.com/economy/article/wall-street-hiring-helps-lift-finance-jobs-in-october-145237476.html",
+   "publishDate": "2026-11-08T14:52:37+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Firms in financial activities-related businesses added 7,000 jobs last month, according to Bureau of Labor Statistics data released Friday. The additions mark the first net hiring in that corner of the labor market since June.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Morgan Stanley Spots a New Productivity Catalyst for Union Pacific (UNP)",
+   "link": "https://finance.yahoo.com/technology/ai/articles/morgan-stanley-spots-productivity-catalyst-143840219.html",
+   "publishDate": "2026-11-08T14:38:40+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published a list of the 10 Stocks to Watch from Morgan Stanley’s Ultra-Selective Tailwinds Strategy, and Union Pacific Corporation (NYSE:UNP) ranked 6th on this list. Artificial intelligence is rapidly reshaping the current corporate landscape. However, the next phase of its economic impact may extend well beyond the companies developing AI models, semiconductors, and […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Cintas (CTAS): Among the 10 Stocks to Watch from Morgan Stanley’s Ultra-Selective Tailwinds Strategy",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/cintas-ctas-among-10-stocks-143805556.html",
+   "publishDate": "2026-11-08T14:38:05+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published a list of the 10 Stocks to Watch from Morgan Stanley’s Ultra-Selective Tailwinds Strategy, and Cintas Corporation (NASDAQ:CTAS) ranked 7th on this list. Artificial intelligence is rapidly reshaping the current corporate landscape. However, the next phase of its economic impact may extend well beyond the companies developing AI models, semiconductors, and data […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Morgan Stanley Sees Shake Shack (SHAK) Serving Up AI-Driven Growth",
+   "link": "https://finance.yahoo.com/technology/ai/articles/morgan-stanley-sees-shake-shack-143718161.html",
+   "publishDate": "2026-11-08T14:37:18+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published a list of the 10 Stocks to Watch from Morgan Stanley’s Ultra-Selective Tailwinds Strategy, and Shake Shack Inc. (NYSE:SHAK) ranked 9th on this list. Artificial intelligence is rapidly reshaping the current corporate landscape. However, the next phase of its economic impact may extend well beyond the companies developing AI models, semiconductors, and […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Morgan Stanley Sees AI Making Ecolab’s (ECL) Competitive Moat Even Stronger",
+   "link": "https://finance.yahoo.com/technology/ai/articles/morgan-stanley-sees-ai-making-143634996.html",
+   "publishDate": "2026-11-08T14:36:34+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published a list of the 10 Stocks to Watch from Morgan Stanley’s Ultra-Selective Tailwinds Strategy, and Ecolab Inc. (NYSE:ECL) ranked 8th on this list. Artificial intelligence is rapidly reshaping the current corporate landscape. However, the next phase of its economic impact may extend well beyond the companies developing AI models, semiconductors, and data […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Morgan Stanley Sees a Big Opportunity for Itron (ITRI) in the AI Power Boom",
+   "link": "https://finance.yahoo.com/technology/ai/articles/morgan-stanley-sees-big-opportunity-143533004.html",
+   "publishDate": "2026-11-08T14:35:33+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published a list of the 10 Stocks to Watch from Morgan Stanley’s Ultra-Selective Tailwinds Strategy, and Itron, Inc. (NASDAQ:ITRI) ranked 10th on this list. Artificial intelligence is rapidly reshaping the current corporate landscape. However, the next phase of its economic impact may extend well beyond the companies developing AI models, semiconductors, and data […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Iran suggests blasts are not US attacks as both sides report ships hit",
+   "link": "https://www.reuters.com/world/middle-east/iran-suggests-blasts-are-not-us-attacks-both-sides-report-ships-hit-2026-11-08/",
+   "publishDate": "2026-11-08T14:20:14.368000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Iranian media suggested explosions in southern Iran on Saturday evening were related to Iranian military ​activities rather than US strikes while both sides reported that shipping had been hit in or near the Strait of Hormuz.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Voters demanded economic relief. Trump and Democrats face tough choices on how to deliver",
+   "link": "https://abcnews.com/Politics/wireStory/voters-demanded-economic-relief-trump-democrats-face-tough-137952337",
+   "publishDate": "2026-11-08T14:16:52+00:00",
+   "source": "abcnews.com",
+   "summary": "Voters have sent a strong election-year message to President Donald Trump and the new Democratic congressional majority to repair the U.S. economy damaged by inflation",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Democrats plan to push clean energy to lower bills and challenge Trump’s fossil fuel agenda",
+   "link": "https://abcnews.com/Business/wireStory/democrats-plan-push-clean-energy-lower-bills-challenge-137953636",
+   "publishDate": "2026-11-08T14:14:11+00:00",
+   "source": "abcnews.com",
+   "summary": "Some Democrats are promising to push for more clean energy to help tackle rising energy costs when they take control of Congress in January",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "US task force to cut off Iran’s transport of advanced weapons: What we know",
+   "link": "https://www.aljazeera.com/news/2026/11/8/us-task-force-to-cut-off-irans-transport-of-advanced-weapons-what-we-know",
+   "publishDate": "2026-11-08T14:06:19+00:00",
+   "source": "www.aljazeera.com",
+   "summary": "As fears of an escalation grow, Washington announces 'Task Force Iron Gate'.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Democrats plan to push clean energy to lower bills and challenge Trump’s fossil fuel agenda",
+   "link": "https://apnews.com/article/elections-midterms-climate-policy-clean-energy-trump-b193e352f5905acc0e921a13ee237a4a",
+   "publishDate": "2026-11-08T13:59:47+00:00",
+   "source": "apnews.com",
+   "summary": "",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Apple’s iPhone Demand Surges, But AAPL Still Isn’t a ‘Strong Buy’",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/apple-iphone-demand-surges-aapl-134145318.html",
+   "publishDate": "2026-11-08T13:41:45+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Analysts’ sentiment toward the stock remains divided, with some analysts adopting a more cautious stance.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "It’s Game Over for DJT Stock as Trump Becomes a Lame-Duck President Following Midterm Losses",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/game-over-djt-stock-trump-132732829.html",
+   "publishDate": "2026-11-08T13:27:32+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "DJT stock fell to record lows following the midterm election results. Things might not improve for the stock, which has always been a play on Donald Trump, who is now staring at a lame duck presidency.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "The October jobs report just gave the Fed a new reason to hike rates: Chart of the Day",
+   "link": "https://finance.yahoo.com/markets/article/the-october-jobs-report-just-gave-the-fed-a-new-reason-to-hike-rates-chart-of-the-day-131105180.html",
+   "publishDate": "2026-11-08T13:11:05+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "A blowout October jobs report revived the odds of a December Fed rate hike a day after the AI sell-off had knocked them down.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "The Call Honda Motor Bulls Got Right",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/call-honda-motor-bulls-got-131008513.html",
+   "publishDate": "2026-11-08T13:10:08+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "If you had picked through the noise around Honda Motor at the start of 2026, the year would have looked very different by November. Holding Honda Motor from the start of the year would have returned 23.2%, including dividends. Early buyers had to weigh upbeat motorcycle expansion plans and talk of share buybacks against warnings about EV setbacks, tariff risk, and shrinking auto profitability. If you were deciding back on 2026-01-01, which of those signals would have mattered most to you? A...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 Stocks Investors Watch When Demand For U.S. Dollar Safety Rises",
+   "link": "https://finance.yahoo.com/markets/currencies/articles/3-stocks-investors-watch-demand-130904157.html",
+   "publishDate": "2026-11-08T13:09:04+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "French unrest has reminded investors that high public debt, weak growth and social strains can quickly shift where money feels safest. When confidence in parts of Europe wobbles and U.S. Treasuries draw in cautious capital, demand for dollar exposure and hedging tools can change fast. This article walks through three stocks exposed to that story and explains how they might benefit if the hunt for U.S. Dollar security intensifies. The stocks highlighted below are only a sample of the idea, and...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "What America’s Factories Reveal About the Economy",
+   "link": "https://www.bloomberg.com/news/videos/2026-11-08/what-america-s-factories-reveal-about-the-economy-video",
+   "publishDate": "2026-11-08T13:03:53+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "Richmond Fed President Tom Barkin traveled to Union, South Carolina, to hear directly from manufacturers about what is happening beneath the economic data. At auto-parts maker Gestamp, demand remains solid and investment continues, but businesses are navigating rising costs, changing technology and an uncertain policy environment, giving Barkin a ground-level view of the forces shaping the economy. (Source: Bloomberg)",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Advanced Drainage Systems Inc (WMS) (Q2 2027) Earnings Call Highlights: Record Margins, ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/advanced-drainage-systems-inc-wms-130351234.html",
+   "publishDate": "2026-11-08T13:03:51+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Advanced Drainage Systems Inc (WMS) posted 5% revenue growth and a record 34.1% first-half EBITDA margin while lowering fiscal 2027 guidance on softer resin inflation and residential demand.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "How Democrats will try to end Trump's tariffs",
+   "link": "https://www.cnbc.com/2026/11/08/trump-tariffs-democrats-congress-canada.html",
+   "publishDate": "2026-11-08T13:00:01+00:00",
+   "source": "www.cnbc.com",
+   "summary": "Rep. Hakeem Jeffries, D-N.Y., who is likely the next House speaker, has made clear that ending President Trump's tariffs is one of Democrats' top priorities.",
+   "sentiment": null,
+   "confidence": null
+  }
+ ]
+}

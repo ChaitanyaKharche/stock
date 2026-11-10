@@ -1,0 +1,911 @@
+{
+ "session": "2026-11-06",
+ "fetched_at_et": "2026-11-06T07:30:15",
+ "query": "(Fed OR \"Federal Reserve\" OR inflation OR CPI OR jobs OR tariff OR tariffs OR war OR Treasury OR shutdown) AND (stocks OR markets OR economy)",
+ "window_from": "2026-11-05T16:00:00",
+ "window_to": "2026-11-06T07:30:15.477706",
+ "page_size": 100,
+ "n": 100,
+ "articles": [
+  {
+   "title": "Gold Falls But Remains on Track for Weekly Gains Ahead of Payrolls Data",
+   "link": "https://www.wsj.com/finance/commodities-futures/gold-continues-to-rise-amid-better-risk-sentiment-e2d133ff",
+   "publishDate": "2026-11-06T00:25:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "Gold prices edged lower in early trading but remained on course for a weekly gain of more than 4%, as investors turned their attention to U.S. payrolls data due later on Friday.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "What American Eagle Outfitters Holders Got Right",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/american-eagle-outfitters-holders-got-002131311.html",
+   "publishDate": "2026-11-06T00:21:31+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "If you only glanced at the headlines this year, American Eagle Outfitters might have looked like a bundle of tariff worries, mixed brand trends, and sharp share price drops around earnings. Investors who held American Eagle Outfitters over the past year are up 25.9%, including dividends. That payoff sits next to falling American Eagle brand comps, heavy reliance on tariff refunds, and questions about Aerie’s runway. If you had been deciding on 5 November 2025, what exactly were you betting...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "CORRECTION – Lassonde Industries Inc. announces its Q3-2026 results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/06/3397278/0/en/correction-lassonde-industries-inc-announces-its-q3-2026-results.html",
+   "publishDate": "2026-11-06T00:06:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "In a press release issued earlier today, November 05, 2026, by Lassonde Industries Inc., please note that the financial results released were for the second quarter while the third quarter results were to be included. Please disregard the second quarter results released earlier. The corrected press release follows:",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Malaysian Bonds Lure Buyers as Oil Squeezes Peers, Analysts Say",
+   "link": "https://www.bloomberg.com/news/articles/2026-11-06/malaysian-bonds-lure-buyers-as-oil-squeezes-peers-analysts-say",
+   "publishDate": "2026-11-06T00:00:49+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "Malaysia’s status as a net energy exporter is bolstering the appeal of its sovereign debt, analysts say, shielding the market from regional inflation pressures even as global oil prices fluctuate.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Costco is taking aim at its May record high — how it got here and where's it going",
+   "link": "https://www.cnbc.com/investingclub/2026/11/05/costco-is-taking-aim-at-its-may-record-high-how-it-got-here-and-wheres-going.html",
+   "publishDate": "2026-11-05T23:56:24+00:00",
+   "source": "www.cnbc.com",
+   "summary": "Costco is finally back.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Japan Bonds Rally as Global Risk-Off Move Boosts Haven Demand",
+   "link": "https://www.bloomberg.com/news/articles/2026-11-05/japan-bonds-rally-as-global-risk-off-move-boosts-haven-demand",
+   "publishDate": "2026-11-05T23:54:47+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "Japanese government bonds rose on Friday, tracking a rally in US Treasuries, as a US stock selloff spilled into Asian markets and deepened a broader risk-off move.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "An Olympic gold medalist gave a stranger $150K after he promised to double it in a month. Now she’s a financial planner",
+   "link": "https://finance.yahoo.com/small-business/articles/olympic-gold-medalist-gave-stranger-234000863.html",
+   "publishDate": "2026-11-05T23:40:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "When the tax bill came due, Lauryn Williams had to take out a second mortgage to cover it.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Dominion Lending Centres Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/62962553/dominion-lending-centres-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-05T23:37:38.391000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Dominion Lending Centres (TSX:DLCG) reported third-quarter financial results on Thursday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Matrix Service Co (MTRX) (Q1 2027) Earnings Call Highlights: Third Straight Profitable Quarter ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/matrix-co-mtrx-q1-2027-232618412.html",
+   "publishDate": "2026-11-05T23:26:18+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Matrix Service Co (MTRX) posted $0.22 EPS and 8.2% gross margin on $219.4 million in revenue, but a soft 0.6 book-to-bill points to a second-half award pickup.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "LSI Industries Inc (LYTS) (Q1 2027) Earnings Call Highlights: Revenue Surges 44% on Royston ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/lsi-industries-inc-lyts-q1-232524018.html",
+   "publishDate": "2026-11-05T23:25:24+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "LSI Industries Inc (LYTS) posted record revenue of $226 million and strong free cash flow of $13.8 million, while navigating a 6% lighting sales decline and double-digit QSR softness.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Black Hills Corp (BKH) (Q3 2026) Earnings Call Highlights: Google Data Center Deal Anchors $2. ...",
+   "link": "https://finance.yahoo.com/energy/articles/black-hills-corp-bkh-q3-232515906.html",
+   "publishDate": "2026-11-05T23:25:15+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Black Hills Corp (BKH) posted adjusted EPS of $0.57, reaffirmed 2026 guidance, and unveiled a landmark Google data center agreement expected to generate roughly $150 million in net income by 2030.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Granite Real Estate Investment Trust (GRTUF) (Q3 2026) Earnings Call Highlights: Strong FFO ...",
+   "link": "https://finance.yahoo.com/real-estate/articles/granite-real-estate-investment-trust-232504687.html",
+   "publishDate": "2026-11-05T23:25:04+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Granite Real Estate Investment Trust (GRTUF) posted 8.1% year-over-year FFO per unit growth and 6.9% same-property NOI gains, offset by a Pennsylvania vacancy that pushed occupancy just below 97%.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Magnolia Oil & Gas Corp (MGY) (Q3 2026) Earnings Call Highlights: Strong Production Growth, ...",
+   "link": "https://finance.yahoo.com/energy/articles/magnolia-oil-gas-corp-mgy-232415351.html",
+   "publishDate": "2026-11-05T23:24:15+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Magnolia Oil & Gas Corp (MGY) posted 17% production growth and $224 million in adjusted free cash flow while accelerating Wildfire synergies and boosting its buyback authorization.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Anglogold Ashanti PLC (AU) (Q3 2026) Earnings Call Highlights: Strong Free Cash Flow and $2 ...",
+   "link": "https://finance.yahoo.com/markets/commodities/articles/anglogold-ashanti-plc-au-q3-232348366.html",
+   "publishDate": "2026-11-05T23:23:48+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Anglogold Ashanti PLC (AU) delivered $722 million in Q3 free cash flow and over $1.3 billion in year-to-date dividends while navigating production setbacks and a 20% rise in cash costs.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Porto Seguro SA (BSP:PSSA3) (Q3 2026) Earnings Call Highlights: Strong Insurance ROAE of 32% ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/porto-seguro-sa-bsp-pssa3-232316002.html",
+   "publishDate": "2026-11-05T23:23:16+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Porto Seguro SA (BSP:PSSA3) posted an 18% recurring ROE on R$11 billion in revenue, but rising health loss ratios and a downwardly revised PortoBank guidance weighed on the quarter.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Cattle Fall on Tuesday with Equity and Cash Pressure",
+   "link": "https://finance.yahoo.com/markets/commodities/articles/cattle-fall-tuesday-equity-cash-232228240.html",
+   "publishDate": "2026-11-05T23:22:28+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Live cattle futures were $2.40 to $3.60 lower across the board. Losses in the stock market added pressure. Cash trade has been active at $218 in the South, and $214-216 in the North. The Thursday Fed Cattle Exchange online auction showed sales of $215 on 582 of the 3,018 head...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Teleflex Inc (TFX) (Q3 2026) Earnings Call Highlights: Raised EPS Guidance and Strong Margin ...",
+   "link": "https://finance.yahoo.com/healthcare/articles/teleflex-inc-tfx-q3-2026-232222072.html",
+   "publishDate": "2026-11-05T23:22:22+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Teleflex Inc (TFX) posted 39.2% adjusted EPS growth and lifted its full-year outlook, though Interventional integration delays and tariff pressures remain key concerns.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Nordex SE (NRDXF) (Q3 2026) Earnings Call Highlights: EBITDA More Than Doubles as Margin ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/nordex-se-nrdxf-q3-2026-232144850.html",
+   "publishDate": "2026-11-05T23:21:44+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Nordex SE (NRDXF) lifted its full-year 2026 EBITDA margin outlook to 11.5%--12.5% after posting a 12.7% margin, EUR278 million in EBITDA and EUR379 million in free cash flow for the third quarter.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Advance Auto Parts Inc (AAP) (Q3 2026) Earnings Call Highlights: Margin Expansion and Pro ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/advance-auto-parts-inc-aap-232141814.html",
+   "publishDate": "2026-11-05T23:21:41+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Advance Auto Parts Inc (AAP) delivered 4.5% adjusted operating margin and raised free cash flow guidance to ~$150 million, even as comparable sales slipped 1.2% on DIY weakness.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Vontier Corp (VNT) Q3 2026 Earnings Call Highlights: Margin Expansion and Cost Savings Drive ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/vontier-corp-vnt-q3-2026-232036872.html",
+   "publishDate": "2026-11-05T23:20:36+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Vontier Corp (VNT) delivered 6% core sales growth and a 300 basis-point margin expansion in Q3 2026, prompting an upward revision to full-year operating margin and EPS guidance.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Krispy Kreme Inc (DNUT) (Q3 2026) Earnings Call Highlights: Margin Expansion and Raised Revenue ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/krispy-kreme-inc-dnut-q3-232020517.html",
+   "publishDate": "2026-11-05T23:20:20+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Krispy Kreme Inc (DNUT) lifted its full-year revenue outlook and expanded adjusted EBITDA margins by 240 basis points, even as re-franchising pulled reported sales down 12% in the third quarter.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "GigaCloud Technology Inc (GCT) (Q3 2026) Earnings Call Highlights: Record Revenue of $424 ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/gigacloud-technology-inc-gct-q3-231953342.html",
+   "publishDate": "2026-11-05T23:19:53+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "GigaCloud Technology Inc (GCT) delivered strong third-quarter results with revenue up 27% year-over-year and net income rising 36%, as robust European marketplace growth offset U.S. market headwinds.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Cognex Corp (CGNX) (Q3 2026) Earnings Call Highlights: Record Revenue, 1,340 Basis Point Margin ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/cognex-corp-cgnx-q3-2026-231915134.html",
+   "publishDate": "2026-11-05T23:19:15+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Cognex Corp (CGNX) posts record Q3 revenue of $313 million and record EPS of $0.53, with broad-based growth across four of five end markets and a ninth straight quarter of margin expansion.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Mativ Holdings Inc (MATV) (Q3 2026) Earnings Call Highlights: FAM Segment Shines With Record ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/mativ-holdings-inc-matv-q3-231853509.html",
+   "publishDate": "2026-11-05T23:18:53+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Mativ Holdings Inc (MATV) delivered record organic growth in its FAM segment, but tornado-related disruptions and new Canadian tariffs pressured overall Q3 results and tempered the Q4 outlook.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 Logistics Stocks to Watch as Tariffs and Supply Chains Reshape Freight Demand",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/3-logistics-stocks-watch-tariffs-231846029.html",
+   "publishDate": "2026-11-05T23:18:46+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Global supply chains for vehicles are being redrawn in real time, as rising prices, tariff swings and clogged ports reshuffle who earns a healthy return and who faces pressure on margins. Investors watching logistics and supply‑chain optimization providers may see both risk and potential opportunity as this plays out. This article unpacks the news catalysts and then walks through three stocks exposed to these trends from our screener, along with why they could matter for your portfolio...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Molson Coors Beverage Co (TAP) (Q3 2026) Earnings Call Highlights: Guidance Cut as Cost ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/molson-coors-beverage-co-tap-231838183.html",
+   "publishDate": "2026-11-05T23:18:38+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Molson Coors Beverage Co (TAP) lowered full-year 2026 outlook as Midwest Premium, freight and fuel costs weighed on margins despite narrowing US share losses and Beyond Beer gains.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Savaria Corp (SISXF) (Q3 2026) Earnings Call Highlights: Record EBITDA Margin of 21. ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/savaria-corp-sisxf-q3-2026-231756146.html",
+   "publishDate": "2026-11-05T23:17:56+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Savaria Corp (SISXF) posted record adjusted EBITDA of $52.1 million on 9% revenue growth, though patient care margins and foreign currency losses weighed on results.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Jim Cramer says the AI sell-off isn't over, but it isn't another dot-com crash",
+   "link": "https://www.cnbc.com/2026/11/05/jim-cramer-ai-stocks-sell-off.html",
+   "publishDate": "2026-11-05T23:17:51+00:00",
+   "source": "www.cnbc.com",
+   "summary": "Cramer warned that the sell-off in AI stocks likely has further to run.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Enovis Corp (ENOV) Q3 2026 Earnings Call Highlights: Organic Growth of 5%, Raised Guidance, and ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/enovis-corp-enov-q3-2026-231743273.html",
+   "publishDate": "2026-11-05T23:17:43+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Enovis Corp (ENOV) delivered 5% organic growth with adjusted EPS up 17% to $0.88, raised full-year adjusted EBITDA and EPS guidance, and announced a new $200 million share repurchase program.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 Canadian Penny Stocks With Net Margins Up To 67%",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/3-canadian-penny-stocks-net-231711639.html",
+   "publishDate": "2026-11-05T23:17:11+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Canada’s latest federal budget puts real money behind infrastructure, capital attraction, and AI related jobs. That points attention toward smaller Canadian businesses that already keep their balance sheets in decent shape. When bigger tech and growth stories swing wildly, financially healthier penny stocks can offer a different way to target upside without relying on heavy debt. This article breaks down three such Canadian penny stocks on that theme. The three stocks highlighted here offer a...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Canada Goose Holdings Inc (GOOS) (Q2 2027) Earnings Call Highlights: Revenue Growth and Margin ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/canada-goose-holdings-inc-goos-231653342.html",
+   "publishDate": "2026-11-05T23:16:53+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Canada Goose Holdings Inc (GOOS) posted 5% Q2 revenue growth and a 280-basis-point gross margin gain, but softer store traffic and EMEA weakness weighed on direct-to-consumer comparable sales.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Holley Inc (HLLY) (Q3 2026) Earnings Call Highlights: Core Sales Accelerate, Margins Top ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/holley-inc-hlly-q3-2026-231551033.html",
+   "publishDate": "2026-11-05T23:15:51+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Holley Inc (HLLY) posted 6.7% core sales growth, a 20.8% adjusted EBITDA margin, and a 3.5x leverage ratio a full quarter ahead of plan, while tightening full-year guidance on a cautious consumer.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Arhaus Inc (ARHS) Q3 2026 Earnings Call Highlights: Record Revenue and Surging Written Sales ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/arhaus-inc-arhs-q3-2026-231520808.html",
+   "publishDate": "2026-11-05T23:15:20+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Arhaus Inc (ARHS) posted record Q3 net revenue of $368 million and a 13.9% jump in comparable written sales, but higher SG&A and cost headwinds dragged net income down 36%.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Madison Air Solutions Corp (MAIR) (Q3 2026) Earnings Call Highlights: Record $3. ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/madison-air-solutions-corp-mair-231510226.html",
+   "publishDate": "2026-11-05T23:15:10+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Madison Air Solutions Corp (MAIR) posted 25% sales growth and a 119% jump in backlog while lifting full-year outlook, even as data center mix and inflation pressure commercial margins.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Ralph Lauren Corp (RL) (Q2 2027) Earnings Call Highlights: Broad-Based 10% Revenue Growth and ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/ralph-lauren-corp-rl-q2-231428444.html",
+   "publishDate": "2026-11-05T23:14:28+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Ralph Lauren Corp (RL) beat expectations with double-digit revenue growth led by Asia and China, expanded gross margins to 70.2%, and raised its full-year outlook despite Europe traffic headwinds.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Callaway Golf Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/62961268/callaway-golf-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-05T23:14:23.295000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Callaway Golf (NYSE:CALY) reported third-quarter financial results on Thursday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by Benzinga APIs.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "PENN Entertainment Inc (PENN) Q3 2026 Earnings Call Highlights: Record Retail Revenue, Raised ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/penn-entertainment-inc-penn-q3-231358988.html",
+   "publishDate": "2026-11-05T23:13:58+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "PENN Entertainment Inc (PENN) posts a record third-quarter with retail revenue of $1.5 billion, lifts full-year 2026 guidance, and signals that interactive losses are largely in the rearview mirror.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "The Middleby Corp (MIDD) (Q3 2026) Earnings Call Highlights: Record Revenue, Raised Guidance ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/middleby-corp-midd-q3-2026-231147316.html",
+   "publishDate": "2026-11-05T23:11:47+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The Middleby Corp (MIDD) beat guidance across revenue, EBITDA and EPS in Q3 2026, lifted full-year outlook and reaffirmed 2028 targets while repurchasing 11% of shares outstanding year to date.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Curtiss-Wright Corp (CW) (Q3 2026) Earnings Call Highlights: Record Backlog and Raised Guidance ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/curtiss-wright-corp-cw-q3-231137591.html",
+   "publishDate": "2026-11-05T23:11:37+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Curtiss-Wright Corp (CW) posted 10% sales growth, a record $4.6 billion backlog, and lifted full-year 2026 guidance across sales, margins, EPS, and free cash flow.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Cummins Inc (CMI) (Q3 2026) Earnings Call Highlights: Record EBITDA of $1. ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/cummins-inc-cmi-q3-2026-231049016.html",
+   "publishDate": "2026-11-05T23:10:49+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Cummins Inc (CMI) delivers record gross margin and EBITDA in Q3 2026, but lowers full-year revenue growth guidance to ~10% on weaker pickup truck demand and supply chain delays.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Supremex Inc (SUMXF) (Q3 2026) Earnings Call Highlights: Revenue Jumps 16. ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/supremex-inc-sumxf-q3-2026-231045383.html",
+   "publishDate": "2026-11-05T23:10:45+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Supremex Inc (SUMXF) posted double-digit top-line growth and a 38.5% rise in adjusted EBITDA, though tariffs and a soft commercial print market continue to weigh on results.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Monster Beverage Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/62960816/monster-beverage-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-05T23:08:42.472000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Monster Beverage (NASDAQ:MNST) reported third-quarter financial results on Thursday. The transcript from the company’s third-quarter earnings call has been provided below.Benzinga APIs provide real-time access to",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Latest Oil Market News and Analysis for Nov. 6",
+   "link": "https://www.bloomberg.com/news/articles/2026-11-05/latest-oil-market-news-and-analysis-for-nov-6",
+   "publishDate": "2026-11-05T23:08:17+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "Oil was on track for the biggest weekly loss since April after a volatile stretch of trading, as investors weighed prospects for an end to the months-long war in the Middle East.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Analysis-China's yuan dilemma: too weak abroad and too strong at home",
+   "link": "https://finance.yahoo.com/markets/currencies/articles/analysis-chinas-yuan-dilemma-too-230801256.html",
+   "publishDate": "2026-11-05T23:08:01+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Nov 6 (Reuters) - Chen Lifeng, who runs a Chinese company exporting dresses to Europe, says the yuan's recent strength has made his products too expensive and all but swallowed his profit margins. \"It has hurt our ability to take orders.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Simon Property Group Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/62960627/simon-property-group-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-05T23:05:42.767000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Simon Property Group (NYSE:SPG) reported third-quarter financial results on Thursday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by Benzinga",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Carney unveils budget to strengthen Canada's economy as Trump's trade war continues",
+   "link": "https://abcnews.com/International/wireStory/carney-unveils-budget-strengthen-canadas-economy-trumps-trade-137894318",
+   "publishDate": "2026-11-05T23:04:49+00:00",
+   "source": "abcnews.com",
+   "summary": "Canadian Prime Minister Mark Carney’s government unveiled a sweeping budget Thursday aimed at making Canada less dependent on the United States as President Donald Trump’s trade war reshapes the longtime allies’ economic relationship",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Bulls vs. Bears on AI Stocks",
+   "link": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-11-05-2026/card/bulls-vs-bears-on-ai-stocks-qzG94DIkm3jEnpqSSOkF",
+   "publishDate": "2026-11-05T23:04:33.970000+00:00",
+   "source": "www.wsj.com",
+   "summary": "🐂 Paisley Nardini, head of investment strategy at Tema ETFs  “Fundamentals have not changed. The incoming Democratic governor of Texas has already said the data centers being built in 2027, 2028, that's not changing.”  🐻 Jay Hatfield, CEO at Infrastructure Capital Advisors  “Do you really want to...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "China's yuan dilemma: too weak abroad and too strong at home",
+   "link": "https://www.reuters.com/world/asia-pacific/chinas-yuan-dilemma-too-weak-abroad-too-strong-home-2026-11-05/",
+   "publishDate": "2026-11-05T23:03:22.646000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Chen Lifeng, who runs a Chinese company exporting dresses to Europe, says the yuan's recent strength has made his products too expensive and all but swallowed his profit margins.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Hawaiʻi Doctors May Soon Start Prescribing Fresh Food",
+   "link": "https://apnews.com/article/hawaii-doctors-prescriptions-fresh-food-7acdfd4c37d8004b5271b378da6644e1",
+   "publishDate": "2026-11-05T23:02:15+00:00",
+   "source": "apnews.com",
+   "summary": "",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Texas Roadhouse Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/62960434/texas-roadhouse-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-05T23:01:30.154000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Texas Roadhouse (NASDAQ:TXRH) reported third-quarter financial results on Thursday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by Benzinga",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "The 'couch economy' is booming. But is staying home actually saving you money?",
+   "link": "https://finance.yahoo.com/personal-finance/banking/article/what-is-the-couch-economy-230110110.html",
+   "publishDate": "2026-11-05T23:01:10+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "What is the \"couch economy,\" and is it helping you save money? Learn how staying home affects your spending habits and get tips to avoid overspending.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Karat Packaging Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/62960417/karat-packaging-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-05T23:00:54.916000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Karat Packaging (NASDAQ:KRT) reported third-quarter financial results on Thursday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by Benzinga",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Clarus Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/62960399/clarus-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-05T23:00:24.075000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Clarus (NASDAQ:CLAR) reported third-quarter financial results on Thursday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by Benzinga APIs. For",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "James Hardie Industries Q2 2027 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/62960383/james-hardie-industries-q2-2027-earnings-call-transcript",
+   "publishDate": "2026-11-05T23:00:08.289000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "James Hardie Industries (NYSE:JHX) reported second-quarter financial results on Thursday. The transcript from the company’s second-quarter earnings call has been provided below.This transcript is brought to you by",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Asia Hopes U.S. Midterm Results Will Ease Energy Crisis",
+   "link": "https://finance.yahoo.com/energy/articles/asia-hopes-u-midterm-results-230000306.html",
+   "publishDate": "2026-11-05T23:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Democratic victories in the U.S. midterms have raised hopes for an end to the Iran war and Asia’s severe energy crisis.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Fox Factory Hldg Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/62960368/fox-factory-hldg-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-05T22:59:50.528000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Fox Factory Hldg (NASDAQ:FOXF) reported third-quarter financial results on Thursday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by Benzinga",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Stock Market Today, Nov. 5: Amazon Shares Slide as Technology Selloff Erases Early Gains",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-nov-5-225937741.html",
+   "publishDate": "2026-11-05T22:59:37+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "On Nov. 5, 2026, Amazon shares reversed an early rally as rising yields and tech selling took over the session.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Power Solutions Intl Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/62960359/power-solutions-intl-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-05T22:59:31.205000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Power Solutions Intl (NASDAQ:PSIX) reported third-quarter financial results on Thursday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Kura Sushi USA Q4 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/62960132/kura-sushi-usa-q4-2026-earnings-call-transcript",
+   "publishDate": "2026-11-05T22:54:20.781000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Kura Sushi USA (NASDAQ:KRUS) reported fourth-quarter financial results on Thursday. The transcript from the company’s fourth-quarter earnings call has been provided below.This transcript is brought to you by Benzinga",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Mattel Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/62960109/mattel-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-05T22:53:41.755000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Mattel (NASDAQ:MAT) reported third-quarter financial results on Thursday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by Benzinga APIs. For",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Why Investors Are Searching for Hope in Home Builders",
+   "link": "https://www.wsj.com/finance/stocks/why-investors-are-searching-for-hope-in-home-builders-07a525bd",
+   "publishDate": "2026-11-05T22:45:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "D.R. Horton, PulteGroup and Lennar have all outperformed since Tuesday’s midterm elections.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Arlo Technologies Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/62959684/arlo-technologies-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-05T22:43:39.149000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Arlo Technologies (NYSE:ARLO) reported third-quarter financial results on Thursday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by Benzinga",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Century Aluminum Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/62959622/century-aluminum-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-05T22:42:04.269000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Century Aluminum (NASDAQ:CENX) reported third-quarter financial results on Thursday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by Benzinga",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Wynn Resorts Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/62959599/wynn-resorts-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-05T22:41:18.591000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Wynn Resorts (NASDAQ:WYNN) reported third-quarter financial results on Thursday. The transcript from the company’s third-quarter earnings call has been provided below.Benzinga APIs provide real-time access to earnings",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "ICU Medical Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/62959435/icu-medical-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-05T22:40:00.855000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "ICU Medical (NASDAQ:ICUI) reported third-quarter financial results on Thursday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by Benzinga APIs.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Politics Shakes Up the Markets",
+   "link": "https://www.wsj.com/opinion/tech-selloff-economy-politics-2e789982",
+   "publishDate": "2026-11-05T22:40:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "A tech correction could force Washington to focus on the economy.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Inspired Entertainment Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/62959149/inspired-entertainment-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-05T22:35:41.489000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Inspired Entertainment (NASDAQ:INSE) reported third-quarter financial results on Thursday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Canada's federal budget includes billions for sovereignty and tackling homelessness",
+   "link": "https://www.bbc.co.uk/news/articles/cwdr87r8pjlvo",
+   "publishDate": "2026-11-05T22:34:16+00:00",
+   "source": "www.bbc.co.uk",
+   "summary": "Prime Minister Mark Carney plans to use an oil revenue windfall to bolster Canada's economic and cultural sovereignty and address cost of living concerns.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Neighborhood Intelligence Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/62958989/neighborhood-intelligence-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-05T22:33:02.307000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Neighborhood Intelligence (NASDAQ:NXH) reported third-quarter financial results on Thursday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Sui Group Holdings Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/62958897/sui-group-holdings-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-05T22:31:26.586000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Sui Group Holdings (NASDAQ:SUIG) reported third-quarter financial results on Thursday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by Benzinga",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Sweetgreen Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/62958660/sweetgreen-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-05T22:28:04.425000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Sweetgreen (NYSE:SG) reported third-quarter financial results on Thursday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by Benzinga APIs. For",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "El Pollo Loco Holdings Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/62958530/el-pollo-loco-holdings-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-05T22:26:14.589000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "El Pollo Loco Holdings (NASDAQ:LOCO) reported third-quarter financial results on Thursday. The transcript from the company’s third-quarter earnings call has been provided below.This content is powered by Benzinga APIs.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Trump Administration Tells Conservative Groups: We’re Watching You",
+   "link": "https://www.wsj.com/politics/policy/trump-administration-tells-conservative-groups-were-watching-you-095ed5ca",
+   "publishDate": "2026-11-05T22:26:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "Plus, the Nasdaq saw its worst day since last April’s tariff turmoil, and Wendy’s rejected a $1.4 billion takeover offer.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Solventum Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/62958448/solventum-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-05T22:24:40.443000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Solventum (NYSE:SOLV) reported third-quarter financial results on Thursday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by Benzinga APIs. For",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Carney unveils budget to strengthen Canada’s economy as Trump’s trade war continues",
+   "link": "https://apnews.com/article/canada-budget-carney-trump-1ec6134771fbeaea75552415b1bab8c9",
+   "publishDate": "2026-11-05T22:23:48+00:00",
+   "source": "apnews.com",
+   "summary": "",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Carney unveils budget to strengthen Canada's economy as Trump's trade war continues",
+   "link": "https://finance.yahoo.com/economy/policy/articles/carney-unveils-budget-strengthen-canadas-222347593.html",
+   "publishDate": "2026-11-05T22:23:47+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "OTTAWA, Ontario (AP) — Canadian Prime Minister Mark Carney’s government unveiled a budget Thursday aimed at making Canada less dependent on the United States as President Donald Trump’s trade war reshapes the allies’ economic relationship.The budget, titled “Masters of Our Destiny,” proposes $142.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Alarm.com Holdings Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/62958183/alarmcom-holdings-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-05T22:20:36.849000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Alarm.com Holdings (NASDAQ:ALRM) reported third-quarter financial results on Thursday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by Benzinga",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Beauty Health Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/62958168/beauty-health-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-05T22:20:22.245000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Beauty Health (NASDAQ:SKIN) reported third-quarter financial results on Thursday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by Benzinga APIs.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Westrock Coffee Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/62958004/westrock-coffee-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-05T22:17:24.362000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Westrock Coffee (NASDAQ:WEST) reported third-quarter financial results on Thursday. The transcript from the company’s third-quarter earnings call has been provided below.Benzinga APIs provide real-time access to",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Canva CEO apologizes to workers, makes unusual promise amid layoffs",
+   "link": "https://finance.yahoo.com/technology/articles/canva-ceo-apologizes-workers-makes-221700453.html",
+   "publishDate": "2026-11-05T22:17:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The design giant is cutting 22% workforce, but its severance package stands out among major tech companies.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Unusual Machines Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/62957978/unusual-machines-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-05T22:16:46.142000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Unusual Machines (AMEX:UMAC) reported third-quarter financial results on Thursday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by Benzinga",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "MasterBrand Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/62957874/masterbrand-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-05T22:14:59.201000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "MasterBrand (NYSE:MBC) reported third-quarter financial results on Thursday. The transcript from the company’s third-quarter earnings call has been provided below.Benzinga APIs provide real-time access to earnings call",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Kratos Defense Beats Q3 Expectations, Lifts 2026 Outlook",
+   "link": "https://www.benzinga.com/markets/earnings/26/11/62957706/kratos-defense-beats-q3-expectations-lifts-2026-outlook",
+   "publishDate": "2026-11-05T22:12:50.724000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Kratos Defense & Security Solutions Inc (NASDAQ:KTOS) reported third-quarter financial results after the close on Thursday.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Fairfax Launches C$650 Million Senior Notes Offering",
+   "link": "https://www.globenewswire.com/news-release/2026/11/05/3397220/0/en/fairfax-launches-c-650-million-senior-notes-offering.html",
+   "publishDate": "2026-11-05T22:12:35+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Not for distribution to U.S. news wire services or dissemination in the United States.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Trading Day: A November 5 market bonfire",
+   "link": "https://www.channelnewsasia.com/business/trading-day-november-5-market-bonfire-6529156",
+   "publishDate": "2026-11-05T22:09:50+00:00",
+   "source": "www.channelnewsasia.com",
+   "summary": "ORLANDO, Florida, Nov 5 : US stocks plunged on Thursday, led by a ferocious selloff in tech and AI-related stocks as investors reassessed implications for the AI data center buildout from the Democrats' sweeping wins in this week's midterm elections. Chip stocks posted their second-biggest fall on record, and intere",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Lassonde Industries Inc. Announces Its Q2-2026 Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/05/3397216/0/en/lassonde-industries-inc-announces-its-q2-2026-results.html",
+   "publishDate": "2026-11-05T22:08:44+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "ROUGEMONT, Quebec, Nov. 05, 2026 (GLOBE NEWSWIRE) -- Lassonde Industries Inc. (TSX: LAS.A) (“Lassonde” or the “Corporation”) today announced its financial results for the second quarter of 2026.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Universal Electronics Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/62957195/universal-electronics-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-05T22:07:37.724000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Universal Electronics (NASDAQ:UEIC) reported third-quarter financial results on Thursday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Petrus Resources Announces Third Quarter 2026 Financial and Operating Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/05/3397211/0/en/petrus-resources-announces-third-quarter-2026-financial-and-operating-results.html",
+   "publishDate": "2026-11-05T22:05:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "CALGARY, Alberta, Nov. 05, 2026 (GLOBE NEWSWIRE) -- Petrus Resources Ltd. (“Petrus” or the “Company”) (TSX: PRQ) is pleased to report financial and operating results as at and for the three and nine months ended September 30, 2026.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Turtle Beach Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/62956938/turtle-beach-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-05T22:04:41.578000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Turtle Beach (NASDAQ:TBCH) reported third-quarter financial results on Thursday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by Benzinga APIs.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Japanese savers have rediscovered interest rates and banks are feeling it",
+   "link": "https://www.reuters.com/world/asia-pacific/japanese-savers-have-rediscovered-interest-rates-banks-are-feeling-it-2026-11-05/",
+   "publishDate": "2026-11-05T22:03:03.416000+00:00",
+   "source": "www.reuters.com",
+   "summary": "For years, Japanese savers left their cash in bank accounts that paid next to nothing because few things paid much more. With government bonds now yielding four times as much as deposits, that no longer holds and ​banks are starting to worry.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Analysis:Japanese savers have rediscovered interest rates and banks are feeling it",
+   "link": "https://www.channelnewsasia.com/business/analysisjapanese-savers-have-rediscovered-interest-rates-and-banks-are-feeling-it-6529141",
+   "publishDate": "2026-11-05T22:02:51+00:00",
+   "source": "www.channelnewsasia.com",
+   "summary": "TOKYO, Nov 6 : For years, Japanese savers left their cash in bank accounts that paid next to nothing because few things paid much more. With government bonds now yielding four times as much as deposits, that no longer holds and banks are starting to worry.When the Bank of Japan last week declared victory in i",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "TRADING DAY A November 5 market bonfire",
+   "link": "https://www.reuters.com/commentary/reuters-open-interest/global-markets-trading-day-graphic-2026-11-05/",
+   "publishDate": "2026-11-05T22:00:32.487000+00:00",
+   "source": "www.reuters.com",
+   "summary": "US stocks plunged on Thursday, led by a ferocious selloff in tech and AI-related stocks as investors reassessed implications for the AI data center buildout from the Democrats' sweeping wins in this week's midterm elections. Chip stocks posted their second-biggest fall on record, and interest rates traders pushed back the expected timing of the Federal Reserve's next rate hike ​to March.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Robert Kiyosaki Says 'Why Worry?' as He Eyes Buying Bitcoin, Gold, Silver in Next Crash",
+   "link": "https://www.benzinga.com/crypto/cryptocurrency/26/11/62956561/robert-kiyosaki-says-why-worry-as-he-eyes-buying-bitcoin-gold-silver-in-next-crash",
+   "publishDate": "2026-11-05T22:00:11.996000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Bitcoin fell to $76K, but Robert Kiyosaki looks to buy more, citing global debt and inflation.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Tianci International, Inc. Reports Financial Results for Fiscal Year Ended July 31, 2026",
+   "link": "https://www.accessnewswire.com/newsroom/en/transportation/tianci-international-inc.-reports-financial-results-for-fiscal-year-ended-july-31-20-1247514",
+   "publishDate": "2026-11-05T22:00:00+00:00",
+   "source": "www.accessnewswire.com",
+   "summary": "Tianci International, Inc. (the \"Company\" or \"Tianci\"), a global logistics service provider specializing in ocean freight forwarding, today announced its financial results for the fiscal year ended July 31, 2026. Fiscal 2026 Highlights: For the year ended July 31, 2026, our total revenue increased to $14,242,611 from $9,282,997 for the year ended July 31, 2025. The increase was primarily attributable to the launch of our global mineral trading...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "DIVIDEND DECLARATION - Wheaton Precious Metals Announces Quarterly Dividend",
+   "link": "https://www.prnewswire.com/news-releases/dividend-declaration---wheaton-precious-metals-announces-quarterly-dividend-302931283.html",
+   "publishDate": "2026-11-05T22:00:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "VANCOUVER, BC, Nov. 5, 2026 /PRNewswire/ -- Wheaton Precious Metals™ Corp. (\"Wheaton\" or the \"Company\") is pleased to announce that its Board of Directors has declared its fourth quarterly cash dividend payment for 2026 of US$0.195 per common share, an 18% increase from the fourth...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "NFI Reports Third Quarter 2026 Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/05/3397206/0/en/nfi-reports-third-quarter-2026-results.html",
+   "publishDate": "2026-11-05T22:00:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Year-over-year improvements in revenue, gross profit, Free Cash Flow1, Adjusted EBITDA1 and net earnings. Closing backlog1 of $12.5 billion and tightened guidance.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Saputo Reports Financial Results for the Second Quarter of Fiscal 2027 Ended September 30, 2026",
+   "link": "https://www.globenewswire.com/news-release/2026/11/05/3397203/0/en/saputo-reports-financial-results-for-the-second-quarter-of-fiscal-2027-ended-september-30-2026.html",
+   "publishDate": "2026-11-05T22:00:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "MONTRÉAL, Nov. 05, 2026 (GLOBE NEWSWIRE) -- Saputo Inc. (TSX: SAP) (we, Saputo or the Company) reported today its financial results for the second quarter of fiscal 2027, which ended on September 30, 2026. All amounts in this news release are in millions of Canadian dollars (CDN), except per share amounts, unless otherwise indicated, and are presented according to International Financial Reporting Standards (IFRS) Accounting Standards. The results of the Dairy Division (UK) have been presented as discontinued operations following the announced divestiture and were previously reported under the Europe Sector. The results of the Dairy Division (Argentina) were presented as discontinued operations up to the disposal of an 80% interest on June 18, 2026, with comparative information re-presented accordingly. The Company’s remaining 20% interest is accounted for as an investment in an associate using the equity method and is presented within the International Sector.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Entrée Resources Announces Third Quarter 2026 Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/05/3397201/0/en/entr%C3%A9e-resources-announces-third-quarter-2026-results.html",
+   "publishDate": "2026-11-05T22:00:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Entrée Resources Ltd. (TSX:ETG; OTCQB:ERLFF) has today filed its interim financial results for the third quarter ended September 30, 2026.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Interfor Reports Q3’26 Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/05/3397202/0/en/interfor-reports-q3-26-results.html",
+   "publishDate": "2026-11-05T22:00:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Adjusted EBITDA of $77 million and Net Loss of $46 million",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Inside Europe’s China dilemma: Trade war or economic opportunity?",
+   "link": "https://www.channelnewsasia.com/cna-insider/insider/europe-china-shock-dilemma-trade-war-export-surge-jobs-6525186",
+   "publishDate": "2026-11-05T22:00:00+00:00",
+   "source": "www.channelnewsasia.com",
+   "summary": "China’s growing exports are putting pressure on European manufacturers, but Chinese investment also brings jobs and technology. Experts speak to CNA’s When Titans Clash about some of the thorny questions facing Europe’s leaders.",
+   "sentiment": null,
+   "confidence": null
+  }
+ ]
+}
