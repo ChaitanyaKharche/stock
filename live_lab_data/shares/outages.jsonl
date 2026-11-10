@@ -13787,3 +13787,6 @@
 {"seq":517858,"ts":"2026-11-09T16:13:04.305537","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
 {"seq":517859,"ts":"2026-11-09T16:13:26.359465","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
 {"seq":517860,"ts":"2026-11-09T16:13:48.415603","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":517816,"ts":"2026-11-10T09:36:03.611694","kind":"stale_quote","detail":"XLV age=5.0s"}
+{"seq":527186,"ts":"2026-11-10T13:37:07.273999","kind":"degraded_bar","detail":"1m gap before 13:36","symbol":"XLF"}
+{"seq":532719,"ts":"2026-11-10T15:11:03.190728","kind":"degraded_bar","detail":"1m gap before 15:10","symbol":"DIA"}

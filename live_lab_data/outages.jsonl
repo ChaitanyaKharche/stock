@@ -5063,3 +5063,6 @@
 {"seq":19951,"ts":"2026-11-09T16:13:04.305537","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
 {"seq":19952,"ts":"2026-11-09T16:13:26.358465","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
 {"seq":19953,"ts":"2026-11-09T16:13:48.415603","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":20134,"ts":"2026-11-10T11:15:06.812762","kind":"exit_no_quote","detail":"MOMO_CHASE ATM wanted time, no bid"}
+{"seq":20136,"ts":"2026-11-10T11:15:06.817839","kind":"exit_no_quote","detail":"MOMO_CHASE ATM+1 wanted time, no bid"}
+{"seq":20139,"ts":"2026-11-10T11:15:12.283692","kind":"exit_no_quote","detail":"MOMO_CHASE ATM+1 wanted time, no bid"}

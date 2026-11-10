@@ -1,0 +1,911 @@
+{
+ "session": "2026-11-10",
+ "fetched_at_et": "2026-11-10T07:30:18",
+ "query": "(Fed OR \"Federal Reserve\" OR inflation OR CPI OR jobs OR tariff OR tariffs OR war OR Treasury OR shutdown) AND (stocks OR markets OR economy)",
+ "window_from": "2026-11-09T16:00:00",
+ "window_to": "2026-11-10T07:30:18.173726",
+ "page_size": 100,
+ "n": 100,
+ "articles": [
+  {
+   "title": "Some in BOJ called for faster rate hikes, October summary shows",
+   "link": "https://www.reuters.com/world/asia-pacific/some-boj-called-faster-rate-hikes-october-summary-shows-2026-11-10/",
+   "publishDate": "2026-11-10T00:22:39.329000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Some Bank of ​Japan policymakers called for speeding up ‌the pace of interest rate hikes as underlying inflation reached the central bank's 2% ​target, a summary of opinions ​at its October meeting showed on ⁠Tuesday.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Gildan Activewear Stock What A Class Action Lawsuit Means",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/gildan-activewear-stock-class-action-002123509.html",
+   "publishDate": "2026-11-10T00:21:23+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Gildan Activewear disclosed a securities class action lawsuit alleging false and misleading statements about its financial condition and sales drivers, alongside updated 2026 guidance that now points to US$5.4b to US$5.5b in revenue and details softer apparel demand, product mix issues and pricing pressure. The combination of litigation over alleged revenue inflation and a detailed guidance cut that breaks out demand softness, customer inventory discipline and service constraints gives...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 Canadian Growth Stocks To Own In November 2026",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/3-canadian-growth-stocks-own-001900465.html",
+   "publishDate": "2026-11-10T00:19:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Global leaders have just agreed on a fresh multilateral trade framework aimed at lowering tariffs and strengthening supply chains, which puts fast growing Canadian businesses in a stronger position to reach more customers worldwide. That backdrop makes financially healthy, growth focused Canadian stocks especially interesting for investors who do not want to wait on the sidelines. This article walks through three standouts from our screen that aim to pair growth potential with balance sheet...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 Great Canadian Dividend Stocks To Own In November 2026",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/3-great-canadian-dividend-stocks-001537995.html",
+   "publishDate": "2026-11-10T00:15:37+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "With the Federal Reserve openly worried that strong demand, including heavy AI related investment, could keep inflation sticky and interest rates higher for longer, dependable income is back in focus for many investors. Canadian dividend payers offering yields above 3% with well covered and stable payouts can help counter that uncertainty. This article highlights three dividend stocks from that group that merit a closer look. The three stocks highlighted here offer a compelling starting point...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "As Organic Sales Growth Accelerates, 3M Seems Attractive",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/organic-sales-growth-accelerates-3m-001006752.html",
+   "publishDate": "2026-11-10T00:10:06+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "3M recently authorized an additional $6 billion in share buybacks, making for a total of $7.5 billion.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "The superpower battle over energy, and the impact on your bills",
+   "link": "https://www.bbc.co.uk/news/articles/cw62y2z53pg1o",
+   "publishDate": "2026-11-10T00:08:28+00:00",
+   "source": "www.bbc.co.uk",
+   "summary": "A tug-of-war between China and the US could have a big impact on energy costs, but who will win?",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Iraq to reopen Sheeb border crossing with Iran, temporarily close Mandali border",
+   "link": "https://www.reuters.com/world/middle-east/iraq-reopen-sheeb-border-crossing-with-iran-temporarily-close-mandali-border-2026-11-09/",
+   "publishDate": "2026-11-09T23:29:00.174000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Iraq will reopen the Sheeb border crossing with Iran ​on Tuesday morning after completing technical ‌requirements and necessary procedures, the head of the country's Border Ports Authority said, according to state news agency ​INA.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 Financially Strong Penny Stocks To Own In November 2026",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/3-financially-strong-penny-stocks-232111280.html",
+   "publishDate": "2026-11-09T23:21:11+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Rising expectations of another Federal Reserve rate hike have pushed borrowing costs higher and rewarded companies that keep their finances tight. That backdrop makes low-priced shares of financially disciplined smaller businesses especially interesting, as every dollar of cash and every line of credit can matter more. This article examines three financially solid penny stocks that screen well for balance sheet strength and aims to highlight where disciplined risk could meet opportunity. The...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Polaris (PII) Returns To Profit On A Valuation That Still Looks Tight",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/polaris-pii-returns-profit-valuation-231808252.html",
+   "publishDate": "2026-11-09T23:18:08+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Polaris (PII) just turned in a sharply improved third quarter, shifting from a loss a year ago to a profit, and that earnings reset is now being weighed alongside fresh product and capital moves. The earnings rebound has arrived alongside a sharp shift in sentiment toward Polaris. The 1-day share price return of 6.45% and 30-day share price return of 30.12% point to building momentum that contrasts with a weaker 5-year total shareholder return of 36.49%. Spot opportunities that may mirror a...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 High Growth Stocks With At Least 33% Earnings Growth",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/3-high-growth-stocks-least-231740234.html",
+   "publishDate": "2026-11-09T23:17:40+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Federal Reserve officials are again talking about higher interest rates, which keeps pressure on weaker balance sheets and rewards companies that can grow earnings without leaning heavily on cheap debt. That sets the stage for investors who want businesses expected to expand profits while keeping their finances in reasonable shape. This article walks through three stocks from our high quality growth shortlist that fit that profile. The three stocks highlighted here offer a compelling starting...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 Defensive Dividend Stocks For Higher Rates and Sticky Inflation",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/3-defensive-dividend-stocks-higher-231717150.html",
+   "publishDate": "2026-11-09T23:17:17+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Fed officials are again putting inflation and higher for longer rates back in the spotlight, and that reshapes where reliable dividends and value pricing might matter most. Investors who ignore this shift risk missing income opportunities or holding stocks whose cash flows feel the strain of tighter policy. This article walks through three U.S. dividend-paying value stocks exposed to these macro crosscurrents and explains why each one might warrant a closer look right now. The three stocks...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Perimeter Group (PRM) Could Be 24% Undervalued Following Its Third Quarter Profit Turnaround",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/perimeter-group-prm-could-24-231553823.html",
+   "publishDate": "2026-11-09T23:15:53+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Perimeter Group (PRM) drew fresh attention after its 2026 third quarter update, as the business shifted from a net loss a year ago to solid profitability and higher sales. The earnings release quickly fed into trading action, with Perimeter Group’s 7.05% 1 day share price return and 12.54% 7 day share price return lifting the stock to US$31.58, even though the 90 day share price return is still down 8.54% after a stronger year to date gain of 14.79% and a 1 year total shareholder return of...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Abeona Therapeutics Inc (ABEO) (Q3 2026) Earnings Call Highlights: ZivaSkin Revenue Jumps 18% ...",
+   "link": "https://finance.yahoo.com/healthcare/articles/abeona-therapeutics-inc-abeo-q3-230415724.html",
+   "publishDate": "2026-11-09T23:04:15+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Abeona Therapeutics Inc (ABEO) posted $13.5 million in ZivaSkin net revenue and added a Phase III-ready eosinophilic esophagitis candidate with peak sales potential exceeding $750 million.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Treasurer Frerichs Clinches 8th Gold Rating For Bright Start 529 College Savings Plan",
+   "link": "https://www.prnewswire.com/news-releases/treasurer-frerichs-clinches-8th-gold-rating-for-bright-start-529-college-savings-plan-302933957.html",
+   "publishDate": "2026-11-09T23:03:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "Morningstar again ranks Illinois' Bright Start 529 among the nation's best college savings plans CHICAGO, Nov. 9, 2026 /PRNewswire/ -- Illinois State Treasurer Michael Frerichs today announced that the Bright Start 529 College Savings Plan has earned its eighth Gold rating from...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Latest Oil Market News and Analysis for Nov. 10",
+   "link": "https://www.bloomberg.com/news/articles/2026-11-09/latest-oil-market-news-and-analysis-for-nov-10",
+   "publishDate": "2026-11-09T23:01:44+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "Oil steadied after slumping to its lowest since August, as optimism around diplomatic efforts to end the war in the Middle East outweighed concerns over attacks in the region.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Fund sellers, China buyers squeeze copper's tariff trade",
+   "link": "https://www.reuters.com/commentary/reuters-open-interest/fund-sellers-china-buyers-squeeze-coppers-tariff-trade-2026-11-09/",
+   "publishDate": "2026-11-09T23:00:45.157000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Copper has been a casualty of the AI stocks selloff as investors scale back expectations for the much-hyped demand boost from data-center construction.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Skydance Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/63076257/skydance-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-09T23:00:33.231000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Skydance (NYSE:SKYD) reported third-quarter financial results on Monday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by Benzinga APIs. For",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "CNBC's The China Connection newsletter: Wall Street dips in again. What needs to go right",
+   "link": "https://www.cnbc.com/2026/11/09/cnbcs-the-china-connection-newsletter-wall-street-dips-in-again.html",
+   "publishDate": "2026-11-09T23:00:02+00:00",
+   "source": "www.cnbc.com",
+   "summary": "Following the latest Trump-Xi summit, China pledged further opening of its financial market to companies from all countries, including the U.S.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Nvidia is about 6% of the S&P 500. If Jensen Huang is ousted, there’s no clear successor — could chaos hit portfolios?",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/nvidia-6-p-500-jensen-230000817.html",
+   "publishDate": "2026-11-09T23:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "An Nvidia leadership shake-up could send shockwaves through the market — and analysts are looking ahead to glean how much investor portfolios could be at risk.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Markets Surge as Nvidia Slides on Jensen Huang Scrutiny",
+   "link": "https://www.bloomberg.com/news/videos/2026-11-09/the-close-11-9-2026-video",
+   "publishDate": "2026-11-09T22:58:44+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "The Close brings you the latest news and analysis leading up to the final minutes and seconds before and after the closing bell on Wall Street. Today's guests are Citi Wealth Head of Portfolio Construction & Analytics Olaolu Aganga, Former Federal Reserve Governor Betsy Duke, Citigroup Managing Director Jason Bazinet, CVS Heath CEO & Chairman David Joyner, Morgan Stanley Head of Wealth Management Jed Finn, Bokeh Capital Partners Founder & CIO Kim Forrest, Seaport Research Partners Senior Analyst David Joyce, Gerber Kawasaki Wealth & Investment Management President & CEO Ross Gerber, Yale School of Management Lecturer of Management Practice Gautam Mukunda, & Dutch Bros CEO Christine Barone. (Source: Bloomberg)",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Bloomberg Businessweek Daily Podcast: China’s 25 Year Rise",
+   "link": "https://www.bloomberg.com/news/videos/2026-11-09/businessweek-daily-podcast-china-s-25-year-rise-video",
+   "publishDate": "2026-11-09T22:57:44+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "The people, companies and trends shaping the global economy. Watch Carol and Tim LIVE every day on YouTube: http://bit.ly/3vTiACF\n\nNvidia’s investigation into Chief Executive Officer Jensen Huang’s affair with an alleged Chinese spy raises a series of once-unthinkable questions, including whether the man at the center of the AI boom is at risk of losing his job. Nvidia makes chips that are crucial to AI computing equipment and is one of the world’s most valuable businesses. Turmoil within the company risks reverberating through the broader industry.\n\nOn today’s episode:\n\nIan King, Bloomberg News US Semiconductor Reporter\nElizabeth Saunders, Professor of Political Science at Columbia University\nRachel Metz, Bloomberg News AI Reporter\nLynn Martin, NYSE Group President (Source: Bloomberg)",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "BitGo Holdings Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/63076115/bitgo-holdings-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-09T22:51:23.865000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "BitGo Holdings (NYSE:BTGO) reported third-quarter financial results on Monday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by Benzinga APIs.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "AI is not popular right now, but the US has to lead: Sierra co-founder Bret Taylor",
+   "link": "https://finance.yahoo.com/technology/article/ai-is-not-popular-right-now-but-the-us-has-to-lead-sierra-co-founder-bret-taylor-224639941.html",
+   "publishDate": "2026-11-09T22:46:39+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Sierre cofounder Bret Taylor says the US must lead in AI.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Betsy Duke on Post-Midterms Inflation Outlook",
+   "link": "https://www.bloomberg.com/news/videos/2026-11-09/betsy-duke-on-post-midterms-inflation-outlook-video",
+   "publishDate": "2026-11-09T22:43:00+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "Ahead of the October CPI report, Betsy Duke said the data is unlikely to alter the Federal Reserve’s policy direction. She argued that labor-market and economic indicators show no weakness the Fed needs to guard against, and that interest rates do not yet appear restrictive. Duke said fiscal policy and supply-side factors have contributed substantially to inflation, but the Fed remains responsible for controlling it and should act amid public frustration over persistent price increases. She speaks with Vonnie Quinn & Scarlet Fu on \"The Close.\" (Source: Bloomberg)",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Public Policy Holding Co Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/63075869/public-policy-holding-co-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-09T22:42:49.372000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Public Policy Holding Co (NASDAQ:PPHC) reported third-quarter financial results on Monday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Crypto Market Today, Nov. 9: Bitcoin and Ethereum Lag as Nasdaq Surges Nearly 3%",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/crypto-market-today-nov-9-224002038.html",
+   "publishDate": "2026-11-09T22:40:02+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Stocks staged a powerful recovery on Monday, but cryptocurrencies failed to follow as persistent ETF outflows and weakening investor confidence cast doubt on across the asset class.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "ZipRecruiter Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/63075717/ziprecruiter-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-09T22:39:13.531000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "ZipRecruiter (NYSE:ZIP) reported third-quarter financial results on Monday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by Benzinga APIs. For",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Microvast Holdings Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/63075654/microvast-holdings-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-09T22:37:20.957000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Microvast Holdings (NASDAQ:MVST) reported third-quarter financial results on Monday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by Benzinga",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Solidion Technology (NASDAQ: STI) Reports Third Quarter Financial Results, Highlighting Strong Cash Balance, Reduction in Liabilities and Positive EPS",
+   "link": "https://www.prnewswire.com/news-releases/solidion-technology-nasdaq-sti-reports-third-quarter-financial-results-highlighting-strong-cash-balance-reduction-in-liabilities-and-positive-eps-302933931.html",
+   "publishDate": "2026-11-09T22:36:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "Company Maintains Strong Cash Position of $26.2 Million, Reduces Total Liabilities by Approximately 40%, and Reports Positive Earnings per Share (EPS) of $0.02 DALLAS, Nov. 9, 2026 /PRNewswire/ -- Solidion Technology, Inc. (NASDAQ: STI) (\"Solidion Technology\" or \"the Company\"), an...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "TechPrecision Corporation Secures $10.0M Financing Agreement with Rosenthal Capital Group, Strengthening Capital Structure",
+   "link": "https://www.accessnewswire.com/newsroom/en/industrial-and-manufacturing/techprecision-corporation-secures-10.0m-financing-agreement-with-rosen-1249248",
+   "publishDate": "2026-11-09T22:30:00+00:00",
+   "source": "www.accessnewswire.com",
+   "summary": "TechPrecision Corporation (NASDAQ:TPCS) (\"TechPrecision\" or \"the Company\"), a custom manufacturer of precision, large-scale fabrication components and precision, large-scale machined metal structural components, today announces that it has secured a new non-dilutive $10.0 million financing agreement with Rosenthal Capital Group. The three-year agreement was finalized on November 3, 2026. At the time of closing, the Company utilized the Rosenthal...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Digital Asset CEO says Treasury will issue bills on-chain within five years",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/digital-asset-ceo-says-treasury-222527541.html",
+   "publishDate": "2026-11-09T22:25:27+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Yuval Rooz says the US Treasury could issue debt directly on blockchain rails within two to five years as Wall Street moves repo and collateral onto the Canton Network.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "The race is on to sue Nvidia",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/race-sue-nvidia-222342148.html",
+   "publishDate": "2026-11-09T22:23:42+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Nvidia’s stock slid more than 4% after its board opened an investigation into Jensen Huang’s relationship with a suspected Chinese spy, and one securities law expert says the company’s earlier insistence that it was all “normal” could turn into a very expensive problem.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Investors Brush Off Election, Selloff and Even Nvidia’s Spy Scandal to Buy Stocks",
+   "link": "https://www.wsj.com/finance/stocks/investors-brush-off-election-selloff-and-even-nvidias-spy-scandal-to-buy-stocks-8f6d406a",
+   "publishDate": "2026-11-09T22:22:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "Faith in tech stocks wobbled last week. By Monday, cooler heads had prevailed; eulogies for the AI trade appear “hyperbolic at best right now.”",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Mesa Laboratories Q2 2027 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/63074889/mesa-laboratories-q2-2027-earnings-call-transcript",
+   "publishDate": "2026-11-09T22:16:48.400000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Mesa Laboratories (NASDAQ:MLAB) reported second-quarter financial results on Monday. The transcript from the company’s second-quarter earnings call has been provided below.This transcript is brought to you by Benzinga",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "First Horizon Bank Names Elizabeth Adler Treasury Management Sales Officer for New Orleans",
+   "link": "https://www.prnewswire.com/news-releases/first-horizon-bank-names-elizabeth-adler-treasury-management-sales-officer-for-new-orleans-302933907.html",
+   "publishDate": "2026-11-09T22:15:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "NEW ORLEANS, Nov. 9, 2026 /PRNewswire/ -- First Horizon Bank (NYSE: FHN or \"First Horizon\") has named Elizabeth Adler Treasury Management Sales Officer for the New Orleans market. \"We are excited to have Elizabeth on the Treasury Management Sales team in New Orleans,\" said Tony Adams,...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Sterlite Technologies And 2 Indian Growth Stocks To Watch",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/sterlite-technologies-2-indian-growth-221147866.html",
+   "publishDate": "2026-11-09T22:11:47+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Global leaders have just agreed a new trade framework that aims to cut tariffs and strengthen supply chains. That kind of coordination can help Indian companies that already have solid balance sheets and strong earnings potential. If you care about long term compounding, this is a moment to pay attention. This piece discusses three high quality growth candidates from our screen and explains why they may deserve a closer look. The three stocks highlighted here offer a compelling starting point...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Amaero Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/63074317/amaero-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-09T22:07:56.267000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Amaero (NASDAQ:AMRO) held its third-quarter earnings conference call on Monday. Below is the complete transcript from the call.This transcript is brought to you by Benzinga APIs. For real-time access to our entire",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Why Is FedEx (FDX) Bringing In Jamere Jackson As CFO?",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/why-fedex-fdx-bringing-jamere-220752427.html",
+   "publishDate": "2026-11-09T22:07:52+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "FedEx (NYSE:FDX) appointed Jamere Jackson as its new Chief Financial Officer, effective immediately. Jackson brings prior CFO experience from several large publicly traded companies across different sectors. He is expected to oversee FedEx's global finance organization, including corporate finance, treasury, tax, and investor relations functions. FedEx's choice of Jamere Jackson as CFO is only one piece of the broader investment story around the business. We have also spotted 3 warning signs...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "HF Foods Group Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/63074300/hf-foods-group-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-09T22:07:15.541000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "HF Foods Group (NASDAQ:HFFG) reported third-quarter financial results on Monday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by Benzinga APIs.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "BlackRock® Canada Announces a Special Distribution for the iShares Canadian Real Return Bond Index ETF",
+   "link": "https://www.globenewswire.com/news-release/2026/11/09/3399065/0/en/blackrock-canada-announces-a-special-distribution-for-the-ishares-canadian-real-return-bond-index-etf.html",
+   "publishDate": "2026-11-09T22:06:07+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Listing: TSX (Toronto Stock Exchange)",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Dorel Reports Third Quarter 2026 Financial Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/09/3399061/0/en/dorel-reports-third-quarter-2026-financial-results.html",
+   "publishDate": "2026-11-09T22:05:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "MONTRÉAL, Nov. 09, 2026 (GLOBE NEWSWIRE) -- Dorel Industries Inc. (TSX: DII.B, DII.A) today announced its financial results for the third quarter and nine months ended September 30, 2026.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Radiant Logistics Q1 2027 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/63074188/radiant-logistics-q1-2027-earnings-call-transcript",
+   "publishDate": "2026-11-09T22:04:46.046000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Radiant Logistics (AMEX:RLGT) reported first-quarter financial results on Monday. The transcript from the company’s first-quarter earnings call has been provided below.This transcript is brought to you by Benzinga APIs.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Jeff Bezos says your family is 'not going to need' 2 paychecks thanks to AI",
+   "link": "https://finance.yahoo.com/technology/ai/articles/jeff-bezos-says-family-not-220300084.html",
+   "publishDate": "2026-11-09T22:03:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The Amazon founder says AI could let one parent stop working and others get by on a 3-day workweek.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Dow Jones Soars 1,132 Points As Amazon, Tesla Rally, But Nvidia Dives; CPI Inflation Report Next",
+   "link": "https://www.investors.com/market-trend/stock-market-today/dow-jones-sp500-nasdaq-amazon-tesla-nvidia-cpi-inflation-report/",
+   "publishDate": "2026-11-09T22:00:15+00:00",
+   "source": "www.investors.com",
+   "summary": "Dow Jones futures were in focus after soaring 1,132 points ahead of the CPI inflation report. Amazon and Tesla rallied, but Nvidia dived.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Bitcoin’s ‘Glory Days Are Over,’ Bloomberg Expert Says as Bulls Push Back",
+   "link": "https://www.benzinga.com/crypto/cryptocurrency/26/11/63073903/bitcoins-glory-days-are-over-bloomberg-expert-says-as-bulls-push-back",
+   "publishDate": "2026-11-09T22:00:06.880000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Mike McGlone says Bitcoin’s “glory days are over,” while Kyle Reidhead sees resilience and an early-stage bull market.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Microvast Reports Third Quarter 2026 Financial Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/09/3399050/0/en/microvast-reports-third-quarter-2026-financial-results.html",
+   "publishDate": "2026-11-09T22:00:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "HOUSTON, Nov. 09, 2026 (GLOBE NEWSWIRE) -- Microvast Holdings, Inc. (NASDAQ:MVST) (“Microvast” or the “Company”), today announced its unaudited consolidated financial results for the quarter ended September 30, 2026 (“Q3 2026”).",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Allied Gold Announces First Gold at Kurmuk Mine",
+   "link": "https://www.globenewswire.com/news-release/2026/11/09/3399056/0/en/allied-gold-announces-first-gold-at-kurmuk-mine.html",
+   "publishDate": "2026-11-09T22:00:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Allied Gold Announces First Gold at Kurmuk Mine",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Apollo Prices Offering of Fixed-Rate Resettable Junior Subordinated Notes",
+   "link": "https://www.globenewswire.com/news-release/2026/11/09/3399052/0/en/apollo-prices-offering-of-fixed-rate-resettable-junior-subordinated-notes.html",
+   "publishDate": "2026-11-09T22:00:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "NEW YORK, Nov. 09, 2026 (GLOBE NEWSWIRE) -- Apollo Global Management, Inc. (NYSE: APO) (the “Issuer” and, together with its consolidated subsidiaries, “Apollo”) today announced that it has priced an offering (the “Offering”) of $600 million aggregate principal amount of its 7.550% Fixed-Rate Resettable Junior Subordinated Notes due 2056 (the “notes”).",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Trump after meeting with Qatari PM says he believes war with Iran is militarily ‘effectively over’",
+   "link": "https://apnews.com/article/iran-us-war-trump-qatar-c38770b168faf5e094e96c1e1e212cff",
+   "publishDate": "2026-11-09T21:58:39+00:00",
+   "source": "apnews.com",
+   "summary": "President Donald Trump says he believes the war in Iran “militarily is effectively over.” He’s suggesting that — at least for now — he’s not prepared to resume the bombardment that has devastated the Islamic Republic and caused reverberations across the global economy.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Axo Metals Corp. Announces $50M Bought Deal Financing of Common Shares",
+   "link": "https://www.globenewswire.com/news-release/2026/11/09/3399045/0/en/axo-metals-corp-announces-50m-bought-deal-financing-of-common-shares.html",
+   "publishDate": "2026-11-09T21:55:38+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "NOT FOR DISTRIBUTION TO UNITED STATES NEWSWIRE SERVICES OR FOR DISSEMINATION IN THE UNITED STATES",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 unexpected reasons why the October jobs report was so strong",
+   "link": "https://www.cnbc.com/2026/11/09/october-jobs-report-hiring-by-sector.html",
+   "publishDate": "2026-11-09T21:52:30+00:00",
+   "source": "www.cnbc.com",
+   "summary": "October's jobs report blew past economist forecasts. Here are three reasons why.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "USA Rare Earth Announces Start of Commercial-Scale Shipments and Sale of Heavy Rare Earth MREC from Serra Verde to US SIIE, LLC",
+   "link": "https://www.globenewswire.com/news-release/2026/11/09/3399038/0/en/usa-rare-earth-announces-start-of-commercial-scale-shipments-and-sale-of-heavy-rare-earth-mrec-from-serra-verde-to-us-siie-llc.html",
+   "publishDate": "2026-11-09T21:47:29+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Commenced commercial-scale shipments of mixed rare earth carbonate (MREC) in October and first sales in November, following successful completion of Stage 1 of its optimization and expansion program; production is ramping toward an initial run rate of ~4,000 tpa TREO, targeted for Q2 2027",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Mesa Labs Announces Second Quarter Fiscal Year 2027 Results and Issues First Full-Year Guidance",
+   "link": "https://www.globenewswire.com/news-release/2026/11/09/3399034/30771/en/mesa-labs-announces-second-quarter-fiscal-year-2027-results-and-issues-first-full-year-guidance.html",
+   "publishDate": "2026-11-09T21:40:09+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "LAKEWOOD, Colo., Nov. 09, 2026 (GLOBE NEWSWIRE) -- Mesa Laboratories, Inc. (NASDAQ:MLAB) (“Mesa” or “the Company”), a global leader in the design and manufacture of critical quality control solutions and life sciences tools, today announced results for its second fiscal quarter (“2Q27”) ended September 30, 2026, and issued full-year guidance for the first time (dollars in thousands, except per-share amounts).",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Ripple veteran says he threw IRS letter in trash",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/ripple-veteran-says-threw-irs-213651893.html",
+   "publishDate": "2026-11-09T21:36:51+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Ripple Labs CTO Emeritus David Schwartz said he threw a letter received from the IRS “right in the trash” because it’s “just a reminder to follow the law.”",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Wall St jumps as oil slide cools inflation worries; Nvidia slumps",
+   "link": "https://www.channelnewsasia.com/world/wall-st-jumps-oil-slide-cools-inflation-worries-nvidia-slumps-6537066",
+   "publishDate": "2026-11-09T21:36:08+00:00",
+   "source": "www.channelnewsasia.com",
+   "summary": "NEW YORK: US stocks rallied on Monday (Nov 9), as a drop in oil prices tempered inflation fears and helped the S&P 500 rebound from its biggest weekly drop since April 2025, and tech shares jumped even as AI heavyweight Nvidia slu",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Stock Indexes Surge as Buyers Return to Chipmakers and AI Stocks",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/stock-indexes-surge-buyers-return-213606509.html",
+   "publishDate": "2026-11-09T21:36:06+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The S&P 500 Index ($SPX ) (SPY ) closed up +2.35% on Monday, the Dow Jones Industrial Average ($DOWI ) (DIA ) closed up +2.15%, and the Nasdaq 100 Index ($IUXX ) (QQQ ) closed up +3.40%. December E-mini S&P futures (ESZ26 ) rose +2.35%, and December E-mini Nasdaq futures...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Nvidia CEO Jensen Huang is likely to keep his job for now, say prediction markets",
+   "link": "https://finance.yahoo.com/markets/options/articles/nvidia-ceo-jensen-huang-likely-213151282.html",
+   "publishDate": "2026-11-09T21:31:51+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "A Polymarket contract on when Huang will resign or be removed as Nvidia CEO has drawn nearly $300,000 in trading volume.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Canada says it is extending tariff relief on some US imports",
+   "link": "https://www.reuters.com/business/canada-says-it-is-extending-tariff-relief-some-us-imports-2026-11-09/",
+   "publishDate": "2026-11-09T21:30:27.143000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Canada will extend ​until June 30, ‌2028 a program that offers relief ​on tariffs ​that Ottawa imposed ⁠on some US ​imports, Finance ​Minister Francois-Philippe Champagne said in a statement ​on Monday.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Bakkt Reports Third Quarter 2026 Results and Sets First-Half 2027 Total Transacting Volume Target of $6 Billion",
+   "link": "https://www.globenewswire.com/news-release/2026/11/09/3399029/0/en/bakkt-reports-third-quarter-2026-results-and-sets-first-half-2027-total-transacting-volume-target-of-6-billion.html",
+   "publishDate": "2026-11-09T21:30:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "ATLANTA, Nov. 09, 2026 (GLOBE NEWSWIRE) -- Bakkt, Inc. (\"Bakkt,\" \"Company,\" \"we\" or \"us\") (NYSE: BKKT) announced its financial and operational results for the quarter and nine months ended September 30, 2026 and provided an update on certain business developments.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Galaxy Gaming Reports Third Quarter 2026 Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/09/3399026/11636/en/galaxy-gaming-reports-third-quarter-2026-results.html",
+   "publishDate": "2026-11-09T21:30:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Record Recurring Revenue",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Steel Dynamics Announces Additional $3.0 Billion Share Repurchase Authorization and Fourth Quarter 2026 Cash Dividend",
+   "link": "https://www.prnewswire.com/news-releases/steel-dynamics-announces-additional-3-0-billion-share-repurchase-authorization-and-fourth-quarter-2026-cash-dividend-302933762.html",
+   "publishDate": "2026-11-09T21:30:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "FORT WAYNE, Ind., Nov. 9, 2026 /PRNewswire/ -- Steel Dynamics, Inc. (NASDAQ/GS: STLD) today announced that the company's board of directors authorized an additional share repurchase program of $3.0 billion of the company's common stock. The authorization is effective immediately and is...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Solstice Advanced Materials Reaches Key Development Milestone for Next-Generation Foam Blowing Agent",
+   "link": "https://www.prnewswire.com/news-releases/solstice-advanced-materials-reaches-key-development-milestone-for-next-generation-foam-blowing-agent-302933736.html",
+   "publishDate": "2026-11-09T21:30:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "Solstice plans to begin sampling with selected global customers in early 2027, demonstrating the strength of its innovation pipeline and increased R&D investment Based on the company's internal evaluation, the developmental candidate is well-positioned because it would not be classified...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Economic Strategist Paul Eckert: The Election Won't Heal the Divide That Matters Most, the One Inside the Middle Class",
+   "link": "https://www.prnewswire.com/news-releases/economic-strategist-paul-eckert-the-election-wont-heal-the-divide-that-matters-most-the-one-inside-the-middle-class-302933741.html",
+   "publishDate": "2026-11-09T21:26:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "In \"Healing Middle-Class Democracy,\" the author says neither side can deliver opportunity until the upper and lower middle class stop treating each other as adversaries. WASHINGTON, Nov. 9, 2026 /PRNewswire/ -- However the results are read, Paul Eckert says the election leaves one problem...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Rhinebeck Bank Appoints Jeff Nowicki as Chief Digital Banking Officer to Advance Digital Banking and Deposit Growth Strategy",
+   "link": "https://www.accessnewswire.com/newsroom/en/banking-and-financial-services/rhinebeck-bank-appoints-jeff-nowicki-as-chief-digital-banking-office-1248944",
+   "publishDate": "2026-11-09T21:25:00+00:00",
+   "source": "www.accessnewswire.com",
+   "summary": "Rhinebeck Bank, the wholly owned subsidiary of Rhinebeck Bancorp, Inc. (NASDAQ:RBKB), today announced the appointment of Jeff Nowicki as Chief Digital Banking Officer. This executive will lead the Bank's efforts to build national digital banking businesses and diversified funding channels that support its long-term growth strategy. Nowicki will lead the design and launch of Rhinebeck Bank's Direct Banking and Partner Banking initiatives, with...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Strong Tail Solar Alliance Launches to Strengthen Local Installers and the Future of Solar Ownership",
+   "link": "https://www.accessnewswire.com/newsroom/en/banking-and-financial-services/strong-tail-solar-alliance-launches-to-strengthen-local-installers-a-1239115",
+   "publishDate": "2026-11-09T21:25:00+00:00",
+   "source": "www.accessnewswire.com",
+   "summary": "A coalition of solar manufacturers, software companies, service providers, and a digital community bank have launched the Strong Tail Solar Alliance, a partnership formed to lower costs and improve access to financing for U.S.-based residential and commercial solar installers. Founding members include Bodhi, Climate First Bank, Scanifly, JA Solar, Damaris Solutions, and Krannich Solar, bringing together every part of an installer's project...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 things to look out for on Tuesday",
+   "link": "https://seekingalpha.com/news/4669296-3-things-to-look-out-for-on-tuesday",
+   "publishDate": "2026-11-09T21:19:58+00:00",
+   "source": "seekingalpha.com",
+   "summary": "U.S. stocks rebound as investors eye earnings, October CPI, and Nvidia developments.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Tokenization platform Securitize reports gains, expands into asset-backed finance",
+   "link": "https://www.cnbc.com/2026/11/09/tokenization-platform-securitize-reports-gains-expands-into-asset-backed-finance.html",
+   "publishDate": "2026-11-09T21:16:53+00:00",
+   "source": "www.cnbc.com",
+   "summary": "Securitize saw growth in tokenization last quarter and announced its expansion into asset-backed finance through the acquisition of River One.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Crescent Capital BDC, Inc. Reports Third Quarter 2026 Earnings Results; Declares a Fourth Quarter Base Dividend of $0.34 Per Share and Announces a $50 Million Share Repurchase Program",
+   "link": "https://www.globenewswire.com/news-release/2026/11/09/3398997/0/en/crescent-capital-bdc-inc-reports-third-quarter-2026-earnings-results-declares-a-fourth-quarter-base-dividend-of-0-34-per-share-and-announces-a-50-million-share-repurchase-program.html",
+   "publishDate": "2026-11-09T21:15:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "LOS ANGELES, Nov. 09, 2026 (GLOBE NEWSWIRE) -- Crescent Capital BDC, Inc. (“Crescent BDC” or “Company”) (NASDAQ: CCAP) today reported net investment income of $0.37 per share and net income of $0.27 per share for the quarter ended September 30, 2026. Net asset value (NAV) per share was $17.72 at September 30, 2026.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Third Coast Bank Appoints Laura Rau as Chief Risk Officer",
+   "link": "https://www.prnewswire.com/news-releases/third-coast-bank-appoints-laura-rau-as-chief-risk-officer-302932990.html",
+   "publishDate": "2026-11-09T21:15:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "Experienced risk and compliance executive brings extensive banking, regulatory and payments expertise to support the Bank's continued growth HOUSTON, Nov. 9, 2026 /PRNewswire/ -- Third Coast Bank (the \"Bank\"), the wholly owned subsidiary of Third Coast Bancshares, Inc. (NYSE & NYSE Texas:...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Lineage, Inc. Reports Third-Quarter 2026 Financial Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/09/3399008/0/en/lineage-inc-reports-third-quarter-2026-financial-results.html",
+   "publishDate": "2026-11-09T21:15:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "NOVI, Mich., Nov. 09, 2026 (GLOBE NEWSWIRE) -- Lineage, Inc. (NASDAQ: LINE) (the \"Company\"), the world’s largest global temperature-controlled warehouse REIT, today announced its financial results for the third quarter of 2026.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Alta Equipment Group Announces Third Quarter 2026 Financial Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/09/3398999/0/en/alta-equipment-group-announces-third-quarter-2026-financial-results.html",
+   "publishDate": "2026-11-09T21:15:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Third Quarter Financial Highlights:",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "NGS Reports Third Quarter 2026 Financial and Operating Results; Increases Quarterly Dividend and Provides Updated Guidance",
+   "link": "https://www.globenewswire.com/news-release/2026/11/09/3398998/0/en/ngs-reports-third-quarter-2026-financial-and-operating-results-increases-quarterly-dividend-and-provides-updated-guidance.html",
+   "publishDate": "2026-11-09T21:15:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "SOUTHLAKE, Texas, Nov. 09, 2026 (GLOBE NEWSWIRE) -- Natural Gas Services Group, Inc. (“NGS” or the “Company”) (NYSE: NGS), a leading provider of natural gas compression equipment, technology, and services to the energy industry, today announced financial results for the three months ended September 30, 2026.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "FreightCar America, Inc. Reports Third Quarter 2026 Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/09/3399012/0/en/freightcar-america-inc-reports-third-quarter-2026-results.html",
+   "publishDate": "2026-11-09T21:15:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "FreightCar America, Inc. Reports Third Quarter 2026 Results",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "U.S. Stocks Climb as Investors Regain Confidence",
+   "link": "https://www.wsj.com/finance/stocks/u-s-stocks-climb-as-investors-regain-confidence-56de5af0",
+   "publishDate": "2026-11-09T21:15:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "Stocks surged as investors regained confidence that the midterm election results will be positive for the economy following a sharp selloff last week.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Casella Waste Systems, Inc. Announces Third Quarter 2026 Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/09/3398992/8693/en/casella-waste-systems-inc-announces-third-quarter-2026-results.html",
+   "publishDate": "2026-11-09T21:10:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "CASELLA WASTE SYSTEMS, INC. ANNOUNCES THIRD QUARTER 2026 RESULTS",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Australian Stock Market Today: ASX Futures Firm On Split Housing Data And Confidence Risks",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/australian-stock-market-today-asx-210818636.html",
+   "publishDate": "2026-11-09T21:08:18+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The Morning Bull - Australian Market Morning Update Tuesday, 10 Nov 2026 Australian equities look set for a mildly positive open, with SPI 200 futures firmer as investors focus on fresh housing construction data. The key story is a split housing pipeline that keeps the broader growth and rates debate alive. Private house approvals fell 5.3% in September, while total dwelling approvals rose 5.1%. That mix signals softer standalone houses but a lift in multi unit activity, which shapes views on...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Democrat Jon Rosenthal joins GOP-led Texas Railroad Commission with ideas, but faces an uphill fight",
+   "link": "https://apnews.com/article/jon-rosenthal-democrat-texas-railroad-commission-090e0e17b45e9927f105c10715006591",
+   "publishDate": "2026-11-09T21:08:17+00:00",
+   "source": "apnews.com",
+   "summary": "",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "NPK International (NPKI) Stock Fair Value Falls After Q3 Miss And 2026 Outlook Cut",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/npk-international-npki-stock-fair-210711559.html",
+   "publishDate": "2026-11-09T21:07:11+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "NPK International’s updated fair value estimate has moved from about $20.33 to about $16.33, and Street price targets now cluster in a tighter range of roughly $15 to $18. Recent analyst commentary links these lower targets to the Q3 shortfall, softer Rental and Product demand, and the reset 2026 outlook. Views are split on whether this marks a manageable reset or a sign of deeper execution risk. As you read on, you will see how these shifting targets, narratives, and risk views may shape...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Ferguson Enterprises Inc (FERG) (Q3 2026) Earnings Call Highlights: Sales Up 9. ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/ferguson-enterprises-inc-ferg-q3-210625075.html",
+   "publishDate": "2026-11-09T21:06:25+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Ferguson Enterprises Inc (FERG) posted 7% organic growth with industrial sales up 55% and nonresidential up 15%, prompting management to lift full-year net sales growth guidance to approximately 7%.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Enphase and Other Solar Stocks Are Up After Democrats Sweep Congress, But I Wouldn’t Chase ENPH Here",
+   "link": "https://finance.yahoo.com/energy/articles/enphase-other-solar-stocks-democrats-210608500.html",
+   "publishDate": "2026-11-09T21:06:08+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Enphase and other solar stocks rose after a Democratic sweep of Congress, with shares gaining on hopes of more supportive clean-energy policy.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Somnigroup International Inc (SGI) (Q3 2026) Earnings Call Highlights: Record Sales and EPS ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/somnigroup-international-inc-sgi-q3-210526400.html",
+   "publishDate": "2026-11-09T21:05:26+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Somnigroup International Inc (SGI) posts record $2.4 billion in net sales and $1.04 adjusted EPS, but cuts full-year guidance as Dreams ERP issues and cautious consumers weigh on results.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Lucid Announces Third Quarter 2026 Results, Reduces Cash Consumption by 30%, Transformation on Track, Liquidity increased by $1.75 billion",
+   "link": "https://www.prnewswire.com/news-releases/lucid-announces-third-quarter-2026-results-reduces-cash-consumption-by-30-transformation-on-track-liquidity-increased-by-1-75-billion-302933812.html",
+   "publishDate": "2026-11-09T21:05:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "Reduced quarterly cash consumption by 30% sequentially; further improvements remain a strategic imperative. Material progress on each of the company's four Must-Win priorities. Transformation advancing with investment in leadership, customer experience, strategic programs, brand revamp...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Digital Turbine Reports Strong Fiscal 2027 Second Quarter Financial Results",
+   "link": "https://www.prnewswire.com/news-releases/digital-turbine-reports-strong-fiscal-2027-second-quarter-financial-results-302933691.html",
+   "publishDate": "2026-11-09T21:05:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "Second Quarter Net Revenue Totaled $178.7 Million, Representing Year-over-Year Growth of 27% Second Quarter GAAP Net Income of $10.3 Million and diluted GAAP EPS of $0.06; Second Quarter Non-GAAP Adjusted Net Income1 of $23.4 Million and Non-GAAP Adjusted EPS1 of $0.18 Second Quarter...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "American Public Education Reports Third Quarter 2026 Financial Results",
+   "link": "https://www.prnewswire.com/news-releases/american-public-education-reports-third-quarter-2026-financial-results-302933838.html",
+   "publishDate": "2026-11-09T21:05:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "~ Third Quarter Revenue, Net Income, EPS and Adjusted EBITDA All Exceed Guidance ~ ~ Raises Full Year 2026 Guidance Across All Key Metrics ~ CHARLES TOWN, W.Va., Nov. 9, 2026 /PRNewswire/ -- American Public Education, Inc. (the \"Company\") (Nasdaq: APEI), a company that transforms lives,...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "RADIANT LOGISTICS ANNOUNCES RESULTS FOR THE FIRST FISCAL QUARTER ENDED SEPTEMBER 30, 2026",
+   "link": "https://www.prnewswire.com/news-releases/radiant-logistics-announces-results-for-the-first-fiscal-quarter-ended-september-30-2026-302933840.html",
+   "publishDate": "2026-11-09T21:05:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "Continued double-digit growth across revenue, profitability and margin; Company positioned for future growth with extended and enhanced $200 million credit facility, and no net debt. RENTON, Wash., Nov. 9, 2026 /PRNewswire/ -- Radiant Logistics, Inc. (NYSE American: RLGT), a...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "HighPeak Energy, Inc. Announces Third Quarter 2026 Financial and Operating Results and Guidance Update",
+   "link": "https://www.globenewswire.com/news-release/2026/11/09/3398938/0/en/highpeak-energy-inc-announces-third-quarter-2026-financial-and-operating-results-and-guidance-update.html",
+   "publishDate": "2026-11-09T21:05:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "FORT WORTH, Texas, Nov. 09, 2026 (GLOBE NEWSWIRE) -- HighPeak Energy, Inc. (“HighPeak” or the “Company”) (NASDAQ: HPK) today announced financial and operating results for the quarter ended September 30, 2026, and updated guidance for the full year 2026.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Report on Financial Results of Third Quarter and Nine-Month period ended September 30, 2026 and Declaration of Dividend on Common Stock",
+   "link": "https://www.globenewswire.com/news-release/2026/11/09/3398931/0/en/report-on-financial-results-of-third-quarter-and-nine-month-period-ended-september-30-2026-and-declaration-of-dividend-on-common-stock.html",
+   "publishDate": "2026-11-09T21:05:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "MONACO, Nov. 09, 2026 (GLOBE NEWSWIRE) -- Safe Bulkers, Inc. (the \"Company\") (NYSE/Euronext Athens: SB), an international provider of marine drybulk transportation services, announced today its unaudited financial results for the three and nine-month periods ended September 30, 2026. The Board of Directors (the \"Board\") of the Company also declared a cash dividend of $0.09 per share of outstanding common stock.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Lantronix Reports Fiscal First-Quarter 2027 Financial Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/09/3398936/0/en/lantronix-reports-fiscal-first-quarter-2027-financial-results.html",
+   "publishDate": "2026-11-09T21:05:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "IRVINE, Calif., Nov. 09, 2026 (GLOBE NEWSWIRE) -- Lantronix Inc. (Nasdaq: LTRX), a global provider of Edge Intelligence and Industrial IoT solutions that power NDAA-compliant unmanned systems, critical infrastructure and resilient enterprise networks, today reported results for the fiscal first quarter ended September 30, 2026.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Greystone Housing Impact Investors Reports Third Quarter 2026 Financial Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/09/3398952/10410/en/greystone-housing-impact-investors-reports-third-quarter-2026-financial-results.html",
+   "publishDate": "2026-11-09T21:05:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "OMAHA, Neb., Nov. 09, 2026 (GLOBE NEWSWIRE) -- On November 9, 2026, Greystone Housing Impact Investors LP (NYSE: GHI) (the “Partnership”) announced financial results for the three months ended September 30, 2026.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Life360 Reports Q3 2026 Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/09/3398950/0/en/life360-reports-q3-2026-results.html",
+   "publishDate": "2026-11-09T21:05:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Highest-ever net Paying Circle additions for a third quarter, and international Monthly Active Users (MAU) crossing over the 50 million mark",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Ethan Allen Reports First Quarter Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/09/3398941/31475/en/ethan-allen-reports-first-quarter-results.html",
+   "publishDate": "2026-11-09T21:05:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Ethan Allen, a leading interior design destination, reported its results for the first quarter ended September 30, 2026",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "The Elmet Group Co. Reports Third Quarter 2026 Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/09/3398939/0/en/the-elmet-group-co-reports-third-quarter-2026-results.html",
+   "publishDate": "2026-11-09T21:05:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Continued demand accelerating in Aerospace, Defense & Government markets",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Valley National Bancorp Announces the Receipt of Required Regulatory Approvals for the Acquisition of Providence Financial Corporation",
+   "link": "https://www.globenewswire.com/news-release/2026/11/09/3398969/0/en/valley-national-bancorp-announces-the-receipt-of-required-regulatory-approvals-for-the-acquisition-of-providence-financial-corporation.html",
+   "publishDate": "2026-11-09T21:05:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "VALLEY NATIONAL BANCORP ANNOUNCES THE RECEIPT OF REQUIRED REGULATORY APPROVALS FOR THE ACQUISITION OF PROVIDENCE FINANCIAL CORPORATION",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Maze Therapeutics Reports Third Quarter 2026 Financial Results and Recent Highlights",
+   "link": "https://www.globenewswire.com/news-release/2026/11/09/3398948/0/en/maze-therapeutics-reports-third-quarter-2026-financial-results-and-recent-highlights.html",
+   "publishDate": "2026-11-09T21:05:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Enrollment completed in Phase 2 HORIZON trial of MZE829; data from all three cohorts expected in early 2027",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Attovia Therapeutics Reports Third Quarter 2026 Financial Results and Provides a Corporate Update",
+   "link": "https://www.globenewswire.com/news-release/2026/11/09/3398949/0/en/attovia-therapeutics-reports-third-quarter-2026-financial-results-and-provides-a-corporate-update.html",
+   "publishDate": "2026-11-09T21:05:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Announced positive topline 12-week Phase 1b results for ATTO-1310 in patients with chronic pruritus (CP) and high-itch atopic dermatitis (AD)",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Anthony Scaramucci Says Bitcoin Should Already Be Trading at $200,000",
+   "link": "https://www.benzinga.com/crypto/cryptocurrency/26/11/63068716/anthony-scaramucci-says-bitcoin-should-already-be-trading-at-200000",
+   "publishDate": "2026-11-09T21:04:05.968000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Anthony Scaramucci says Bitcoin should be at $200,000, citing its four-year cycle, inflation and deficits, with regulation and adoption fueling a 2028",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "A key report for where inflation stood in October comes out Tuesday. Here's what to expect",
+   "link": "https://www.cnbc.com/2026/11/09/october-cpi-report-2026-inflation.html",
+   "publishDate": "2026-11-09T21:03:55+00:00",
+   "source": "www.cnbc.com",
+   "summary": "The CPI headline reading is expected to show an increase of 0.3% while the core is forecast to increase 0.2%.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "KKR earnings analysis: questions answered and next catalysts",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/kkr-earnings-analysis-questions-answered-210215408.html",
+   "publishDate": "2026-11-09T21:02:15+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Investing.com -- KKR & Co LP (KKR) reported Q3 2026 on Nov 9, 2026 (pre-market). Adjusted net income per share was $1.78 against a $1.59 estimate (+11.95%). Revenue was $4.56B against $2.69B expected, though the revenue comparison is distorted by how the firm books performance income. The stock was at $98.65 (+2.25%) as of 3:04 PM EST. That is still -23.46% YTD and well below its 52-week high of $144.84.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Sanmina Reports Fourth Quarter and Fiscal 2026 Financial Results",
+   "link": "https://www.prnewswire.com/news-releases/sanmina-reports-fourth-quarter-and-fiscal-2026-financial-results-302933746.html",
+   "publishDate": "2026-11-09T21:01:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "SAN JOSE, Calif., Nov. 9, 2026 /PRNewswire/ -- Sanmina Corporation (\"Sanmina\" or the \"Company\") (NASDAQ: SANM), a leading integrated manufacturing solutions company, today reported financial results for the fourth quarter ended October 3, 2026 and outlook for its first fiscal quarter...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "EquipmentShare Reports Third Quarter 2026 Results with Accelerated Organic Growth and Margin Expansion",
+   "link": "https://www.globenewswire.com/news-release/2026/11/09/3398913/0/en/equipmentshare-reports-third-quarter-2026-results-with-accelerated-organic-growth-and-margin-expansion.html",
+   "publishDate": "2026-11-09T21:01:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "EquipmentShare Reports Third Quarter Financial Results",
+   "sentiment": null,
+   "confidence": null
+  }
+ ]
+}
