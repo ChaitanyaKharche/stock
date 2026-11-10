@@ -14,7 +14,7 @@ Each call replays one window through backfill.run into
 live_lab_backfill/news_arms/<label>/<arm>/ (label defaults to the year), records the
 window, hash, runtime and the git SHA in RUN.json, and for the options arm writes
 sessions.json with has_0dte per session (14.11: sessions without a 0DTE are excluded from
-every options table; a Mon/Wed/Fri without one, or any such session from 2022-11-01 on,
+every options table; a Mon/Wed/Fri without one, or any such session from 2022-11-14 on,
 halts the run for inspection). Refuses to start during 09:00-16:30 ET on a weekday.
 """
 from __future__ import annotations
@@ -34,7 +34,8 @@ from ..live_lab.walkforward import sessions_between
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT_ROOT = ROOT / "live_lab_backfill" / "news_arms"
-ALWAYS_0DTE_FROM = dt.date(2022, 11, 1)        # SPY 0DTE every weekday from here
+ALWAYS_0DTE_FROM = dt.date(2022, 11, 14)       # SPY Tue/Thu expiries listed from here: the
+                                               # 2022-11 replay found none on 11-01/03/08/10
 MWF = {0, 2, 4}
 
 

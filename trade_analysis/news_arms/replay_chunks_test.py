@@ -15,9 +15,11 @@ def test_refuses_inside_market_hours_on_a_weekday():
 def test_halt_only_where_a_zero_dte_was_expected():
     has = {"2021-03-09": False,   # Tuesday 2021: no 0DTE expected -> fine
            "2021-03-10": False,   # Wednesday 2021: expected -> halt
-           "2022-11-03": False,   # Thursday after 2022-11-01: expected -> halt
+           "2022-11-03": False,   # Thursday before 2022-11-14: no Tue/Thu expiry yet -> fine
+           "2022-11-10": False,   # Thursday 2022-11-10: the last one without -> fine
+           "2022-11-15": False,   # Tuesday after 2022-11-14: expected -> halt
            "2023-06-14": True}
-    assert R.halt_reasons(has) == ["2021-03-10", "2022-11-03"]
+    assert R.halt_reasons(has) == ["2021-03-10", "2022-11-15"]
 
 
 def test_a_year_is_twelve_calendar_months():

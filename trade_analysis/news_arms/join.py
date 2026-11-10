@@ -59,8 +59,17 @@ def chunk_dirs(arm: str, years) -> list[Path]:
 
 def load_replay(arm: str, years, base_dirs=None) -> tuple[dict, list[dict], dict]:
     """-> (sessions: date -> daily dict, trades: list, meta). Raises on a duplicated
-    session or on a month marked FAILED."""
-    sessions, trades, meta = {}, [], {"chunks": [], "hashes": set()}
+    session or on a month marked FAILED.
+
+    Options (14.11): a session with no 0DTE expiry (`sessions.json` written by the replay,
+    has_0dte False) is dropped here, before any table, baseline or sigma sees it, and
+    counted in meta["excluded_no_0dte"] by year and weekday. Before 2022-11-14 SPY had 0DTE
+    on Mon/Wed/Fri only; carrying Tue/Thu as $0 days would shrink sigma and hand GDP_ADV
+    (a Thursday release) an effect by construction. A chunk without sessions.json refuses
+    to join."""
+    sessions, trades, meta = {}, [], {"chunks": [], "hashes": set(),
+                                      "excluded_no_0dte": {"n": 0, "by_year": {}, "by_weekday": {}}}
+    dropped = set()
     for d in (base_dirs if base_dirs is not None else chunk_dirs(arm, years)):
         if (d / "FAILED.json").exists():
             raise RuntimeError(f"{d} is marked FAILED; rerun it before joining")
@@ -68,13 +77,27 @@ def load_replay(arm: str, years, base_dirs=None) -> tuple[dict, list[dict], dict
         rel = str(d.relative_to(ROOT)) if d.is_relative_to(ROOT) else str(d)
         meta["chunks"].append({"dir": rel, **{k: run.get(k) for k in
                                                                     ("start", "end", "repo_sha", "sessions_replayed")}})
+        has_0dte = None
+        if arm == "options":
+            sp = d / "sessions.json"
+            if not sp.exists():
+                raise RuntimeError(f"{d} has no sessions.json (0DTE map); rerun the chunk before joining")
+            has_0dte = json.loads(sp.read_text(encoding="utf-8"))
         for p in sorted((d / "daily").glob("*.json")):
             day = p.stem
-            if day in sessions:
+            if day in sessions or day in dropped:
                 raise RuntimeError(f"session {day} appears in two chunks ({d})")
+            if has_0dte is not None and not has_0dte.get(day, False):
+                dropped.add(day)
+                ex = meta["excluded_no_0dte"]
+                ex["n"] += 1
+                ex["by_year"][day[:4]] = ex["by_year"].get(day[:4], 0) + 1
+                wd = str(dt.date.fromisoformat(day).weekday())
+                ex["by_weekday"][wd] = ex["by_weekday"].get(wd, 0) + 1
+                continue
             sessions[day] = json.loads(p.read_text(encoding="utf-8"))
             meta["hashes"].add(sessions[day].get("config_hash"))
-        trades += _rows(d / "trades.jsonl")
+        trades += [t for t in _rows(d / "trades.jsonl") if t.get("entry_ts", "")[:10] not in dropped]
     meta["hashes"] = sorted(h for h in meta["hashes"] if h)
     return sessions, trades, meta
 
@@ -221,6 +244,7 @@ def main(argv=None) -> int:
     stamp = {"arm": a.arm, "set": a.set, "window": [window[0].isoformat(), window[1].isoformat()],
              "regime_cuts_med20_range_bp": list(cuts), "chunks": meta["chunks"],
              "config_hashes": meta["hashes"], "live_hash": LIVE_HASH[a.arm],
+             "excluded_no_0dte": meta["excluded_no_0dte"],
              "generated": dt.datetime.now().isoformat(timespec="seconds")}
     OUT.mkdir(parents=True, exist_ok=True)
     if a.counts:
