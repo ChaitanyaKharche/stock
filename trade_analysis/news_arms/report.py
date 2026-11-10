@@ -47,25 +47,37 @@ def _pl(c):
 def q1_table(d: dict, single: bool = False) -> str:
     key = "q1_single_category" if single else "q1"
     native = "$/day" if d["arm"] == "shares" else "$/day (ATM)"
-    rows = [f"| category | sessions | trades | effect σ (vs B0) | 95% CI (day-clustered) | {native} | "
-            f"undiluted σ | placebo rank → verdict | overlap | status |",
-            "|---|---|---|---|---|---|---|---|---|---|"]
+    rows = [f"| category | sessions | trades | effect σ (vs B0) | 95% CI (day-clustered) | block-10 CI (post hoc) | {native} | "
+            f"placebo rank → verdict | placebo, condition in pool (sens.) | overlap | stable (§2) | status |",
+            "|---|---|---|---|---|---|---|---|---|---|---|---|"]
     for cat, c in d[key].items():
         conf = c.get("confounded_by_overlap")
         conf_s = "confounded" if conf else ("—" if conf is None else "stable")
+        q = c.get("placebo_pool_includes_condition_sensitivity")
+        qs = f"{q['rank']:.3f} → {q['verdict']}" if q else "—"
+        un = c.get("unstable")
+        un_s = "—" if un is None else ("UNSTABLE" if un else "stable")
         rows.append(f"| {cat} | {c['n_sessions']} | {c['n_trades']} | {_f(c['effect_sigma'])} | {_ci(c['ci95'])} | "
-                    f"{_f(c['effect_native'], 0)} | {_f(c['undiluted_sigma'])} | {_pl(c)} | {conf_s} | {_status(c)} |")
+                    f"{_ci(c.get('ci95_block10_post_hoc'))} | {_f(c['effect_native'], 0)} | {_pl(c)} | {qs} | {conf_s} | "
+                    f"{un_s} | {_status(c)} |")
     return "\n".join(rows)
 
 
 def q3_table(d: dict) -> str:
-    rows = ["| condition | sessions | trades | effect σ | 95% CI | $/day | placebo mean ± sd | placebo rank → verdict | status |",
-            "|---|---|---|---|---|---|---|---|---|"]
+    rows = ["| condition | sessions | trades | effect σ | 95% CI | block-10 CI (post hoc) | $/day | placebo mean ± sd | "
+            "placebo rank → verdict | placebo, condition in pool (sens.) | stable (§2) | status |",
+            "|---|---|---|---|---|---|---|---|---|---|---|---|"]
     for k, c in d["q3"].items():
         p = c.get("placebo")
         pm = f"{p['mean']:+.3f} ± {p['sd']:.3f}" if p else "—"
+        q = c.get("placebo_pool_includes_condition_sensitivity")
+        qs = f"{q['rank']:.3f} → {q['verdict']}" if q else "—"
+        un = c.get("unstable")
+        un_s = "—" if un is None else ("UNSTABLE" if un else "stable")
+        st = ("baseline complement" if k == "no_event" else "sensitivity (not pre-registered)"
+              if k.endswith("sensitivity") else _status(c))
         rows.append(f"| {k} | {c['n_sessions']} | {c['n_trades']} | {_f(c['effect_sigma'])} | {_ci(c['ci95'])} | "
-                    f"{_f(c['effect_native'], 0)} | {pm} | {_pl(c)} | {_status(c) if k != 'no_event' else 'baseline complement'} |")
+                    f"{_ci(c.get('ci95_block10_post_hoc'))} | {_f(c['effect_native'], 0)} | {pm} | {_pl(c)} | {qs} | {un_s} | {st} |")
     return "\n".join(rows)
 
 
@@ -80,10 +92,11 @@ def regime_table(d: dict, cells) -> str:
 
 def year_table(d: dict, cells) -> str:
     years = sorted({y for _, c in cells for y in c["by_year"]})
-    rows = ["| cell | " + " | ".join(f"{y} (n, σ)" for y in years) + " |", "|---|" + "---|" * len(years)]
+    rows = ["Each entry: condition sessions, effect against that YEAR's own B0 (σ); raw means are in the JSON.", "",
+            "| cell | " + " | ".join(f"{y}" for y in years) + " |", "|---|" + "---|" * len(years)]
     for name, c in cells:
         rows.append(f"| {name} | " + " | ".join(
-            (f"{c['by_year'][y]['n']}, {c['by_year'][y]['z_mean']:+.2f}" if y in c["by_year"] else "—")
+            (f"{c['by_year'][y]['n']}, {c['by_year'][y]['effect_vs_stratum_b0']:+.2f}" if y in c["by_year"] else "—")
             for y in years) + " |")
     return "\n".join(rows)
 
@@ -132,6 +145,12 @@ def q5_table(d: dict) -> str:
             continue
         rows.append(f"| {cat} | {v['pre_n']} | {_f(v['pre_mean_usd'], 2)} | {v['post_n']} | {_f(v['post_mean_usd'], 2)} | "
                     f"{v['sessions_excluded_unknown_time']} |")
+    fx = d["q5"]["pre_post"].get("FOMC", {}).get("pre_cutoff_excess")
+    if fx:
+        rows.append("")
+        rows.append(f"Fed days, trades entered before {fx['cutoff']}: {_f(fx['condition_pre_net_per_session'], 0)} $/session on "
+                    f"Fed days vs {_f(fx['all_sessions_pre_net_per_session'], 0)} on all sessions; excess "
+                    f"{_f(fx['excess_usd_per_session'], 0)} $/session.")
     f = d["q5"]["first60"]
     rows.append("")
     rows.append(f"First-60-minute line (entries 09:30–10:30): scheduled_today {f['scheduled_today']['n_sessions']} sessions, "
@@ -165,6 +184,14 @@ def q6_table(q6: dict) -> str:
     return "\n".join(rows)
 
 
+def exclusions_text(d: dict) -> str:
+    e = d["exclusions"]
+    lost = e["lost_regular_sessions"]
+    return (f"Open weekdays in window {e['open_days_in_window']}: replayed {e['replayed']}, early-close half days "
+            f"dropped by rule {len(e['half_days'])}, recorded skips {e['n_recorded_skips']} {e['recorded_skips_by_reason']}, "
+            f"**lost regular sessions {e['n_lost']}**" + (f": {', '.join(lost)}" if lost else "") + ".")
+
+
 def header(d: dict) -> str:
     ex = d["excluded_no_0dte"]
     return (f"**{d['arm']} discovery** {d['window'][0]} → {d['window'][1]}: {d['n_sessions']} sessions, "
@@ -185,8 +212,9 @@ def render() -> str:
         d = json.loads(p.read_text(encoding="utf-8"))
         both[arm] = d
         focus = [(k, d["q1"][k]) for k in ("FOMC", "CPI", "NFP", "PCE", "financial_stress")] + \
-                [(k, d["q3"][k]) for k in ("scheduled", "unscheduled_surprise", "no_event")]
-        parts += [f"## {arm}", "", header(d), "",
+                [(k, d["q3"][k]) for k in ("scheduled", "unscheduled_surprise",
+                                           "unscheduled_surprise_no_release_sensitivity", "no_event")]
+        parts += [f"## {arm}", "", header(d), "", exclusions_text(d), "",
                   f"### Q1 / Q4 — by category vs B0 ({arm})", "", q1_table(d), "",
                   f"### Q1 sensitivity — single-category sessions only ({arm})", "", q1_table(d, single=True), "",
                   f"### Q3 — scheduled vs unscheduled surprise ({arm})", "", q3_table(d), "",

@@ -36,7 +36,7 @@ import hashlib
 import json
 import subprocess
 import sys
-from collections import defaultdict
+from collections import Counter, defaultdict
 from pathlib import Path
 
 import numpy as np
@@ -172,8 +172,28 @@ def bootstrap_effect(z: np.ndarray, mask: np.ndarray, n_boot: int = N_BOOT, seed
     return {"effect": eff, "ci": [lo, hi], "p": p, "undiluted": und}
 
 
+def block_bootstrap_ci(z: np.ndarray, mask: np.ndarray, block: int = 10, n_boot: int = N_BOOT,
+                       seed: int = SEED_BOOT):
+    """NOT pre-registered: a moving-block bootstrap (blocks of `block` consecutive sessions)
+    for the same condition - B0 statistic, added at gate 2 (2026-11-10) because |z| shows
+    lag-1 autocorrelation of about +0.3 (volatility clustering). Sensitivity only."""
+    n = len(z)
+    k = int(mask.sum())
+    if k < MIN_CI_SESSIONS or k == n or n < 2 * block:
+        return [None, None]
+    rng = np.random.default_rng(seed)
+    n_blocks = int(np.ceil(n / block))
+    starts = rng.integers(0, n - block + 1, size=(n_boot, n_blocks))
+    idx = (starts[:, :, None] + np.arange(block)[None, None, :]).reshape(n_boot, -1)[:, :n]
+    zb, mb = z[idx], mask[idx]
+    kb = mb.sum(axis=1)
+    effs = np.where(kb > 0, (zb * mb).sum(axis=1) / np.maximum(kb, 1), np.nan) - zb.mean(axis=1)
+    effs = effs[~np.isnan(effs)]
+    return [float(x) for x in np.percentile(effs, [2.5, 97.5])]
+
+
 def placebo(z: np.ndarray, mask: np.ndarray, year: np.ndarray, weekday: np.ndarray, effect: float,
-            n_draw: int = N_PLACEBO, seed: int = SEED_PLACEBO) -> dict:
+            n_draw: int = N_PLACEBO, seed: int = SEED_PLACEBO, exclude_condition: bool = True) -> dict:
     """13.3 / 14.Q6: n_draw placebo conditions of the same size, matched by year and weekday,
     the real condition's sessions excluded from the pool. Each draw computes the identical
     condition - B0 statistic. Rank is the share of same-sign placebo effects below the real
@@ -191,10 +211,10 @@ def placebo(z: np.ndarray, mask: np.ndarray, year: np.ndarray, weekday: np.ndarr
         k = int(mask[idxs].sum())
         if k == 0:
             continue
-        pool = idxs[~mask[idxs]]
+        pool = idxs[~mask[idxs]] if exclude_condition else idxs
         if len(pool) < k:                                   # thin stratum: same year, any weekday
             same_year = np.array([i for (y, _), ii in strata.items() if y == key[0] for i in ii])
-            pool = same_year[~mask[same_year]]
+            pool = same_year[~mask[same_year]] if exclude_condition else same_year
             fallback += 1
         if len(pool) < k:                                   # still thin: with replacement
             pick = rng.integers(0, len(pool), size=(n_draw, k))
@@ -210,7 +230,7 @@ def placebo(z: np.ndarray, mask: np.ndarray, year: np.ndarray, weekday: np.ndarr
     rank = float((same < real).mean())
     return {"n_draws": n_draw, "mean": float(effs.mean()), "sd": float(effs.std()),
             "p95_same_sign": p95, "p99_same_sign": p99, "rank": rank,
-            "strata": len(strata), "strata_fallback": fallback,
+            "strata": len(strata), "strata_fallback": fallback, "condition_excluded_from_pool": exclude_condition,
             "verdict": "effect" if rank >= 0.95 else "selection / chance"}
 
 
@@ -294,12 +314,16 @@ def cell(arm: str, name: str, rows_all: list[dict], mask: np.ndarray, trades_by_
            "tested": bool(meets and tested_ok and not never and not geo),
            "descriptive_placebo": bool(meets and geo and not never), "never_tested": never,
            "effect_sigma": stat["effect"], "ci95": stat["ci"], "p_boot": stat["p"],
+           "ci95_block10_post_hoc": block_bootstrap_ci(z, mask),
            "undiluted_sigma": stat["undiluted"],
            "effect_native": (stat["effect"] * sigma) if stat["effect"] is not None else None,
            "metrics": metric_block(arm, cond_trades, cond_rows, sigma),
-           "by_year": _by(cond_rows, "year", sigma), "by_regime": _by(cond_rows, "regime", sigma)}
+           "by_year": _by(rows_all, mask, "year", sigma), "by_regime": _by(rows_all, mask, "regime", sigma)}
+    out["unstable"] = _unstable(out)
     if with_placebo and stat["effect"] is not None and n_s >= MIN_CI_SESSIONS:
         out["placebo"] = placebo(z, mask, year, weekday, stat["effect"])
+        out["placebo_pool_includes_condition_sensitivity"] = placebo(
+            z, mask, year, weekday, stat["effect"], exclude_condition=False)
     if direction is not None:
         d = [direction[r["date"]] for r in cond_rows if r["date"] in direction]
         out["day_direction_co_bp_mean"] = float(np.mean(d)) if d else None
@@ -323,12 +347,36 @@ def within_regime(rows_all, mask, z) -> dict:
     return out
 
 
-def _by(rows, key, sigma):
-    g = defaultdict(list)
-    for r in rows:
-        g[str(r.get(key))].append(r["net"])
-    return {k: {"n": len(v), "net_mean": float(np.mean(v)), "z_mean": float(np.mean(v) / sigma)}
-            for k, v in sorted(g.items())}
+def _by(rows_all, mask, key, sigma):
+    """Per stratum (year or regime): the condition's n, raw mean z, and its effect against
+    that stratum's OWN B0 (gate 2: a raw by-year mean read as an effect called 2020 negative
+    for Fed days when it was +0.04 sigma against that year's baseline)."""
+    strat_all, strat_cond = defaultdict(list), defaultdict(list)
+    for r, m in zip(rows_all, mask):
+        strat_all[str(r.get(key))].append(r["net"])
+        if m:
+            strat_cond[str(r.get(key))].append(r["net"])
+    out = {}
+    for k in sorted(strat_cond):
+        c, a = np.array(strat_cond[k]), np.array(strat_all[k])
+        out[k] = {"n": len(c), "net_mean": float(c.mean()), "z_mean": float(c.mean() / sigma),
+                  "effect_vs_stratum_b0": float((c.mean() - a.mean()) / sigma), "n_stratum": len(a)}
+    return out
+
+
+def _unstable(out: dict):
+    """Section 2: a result whose sign flips across regime terciles, or across >= 3 of the
+    years, is reported as unstable whatever the pooled p. Strata with < 5 sessions are
+    ignored."""
+    e = out.get("effect_sigma")
+    if e is None or out["n_sessions"] < MIN_CI_SESSIONS:
+        return None
+    sign = 1 if e >= 0 else -1
+    regimes = [v["effect_vs_stratum_b0"] for v in out["by_regime"].values() if v["n"] >= 5]
+    years = [v["effect_vs_stratum_b0"] for v in out["by_year"].values() if v["n"] >= 5]
+    flips_regime = any((x >= 0) != (sign > 0) for x in regimes)
+    flips_years = sum((x >= 0) != (sign > 0) for x in years) >= 3
+    return bool(flips_regime or flips_years)
 
 
 # ------------------------------------------------------------------ tables
@@ -348,15 +396,18 @@ def q1(arm, rows, trades_by_day, sigma, direction, single_only=False):
 def q3(arm, rows, trades_by_day, sigma, detail, single_only=False):
     universe = [r for r in rows if r["n_categories"] <= 1] if single_only else rows
     sched = np.array([r["scheduled_today"] for r in universe])
-    unsched = np.array([any(e["surprise"] for e in detail.get(r["date"], [])) and not r["scheduled_today"]
-                        for r in universe])
+    surprise = np.array([any(e["surprise"] for e in detail.get(r["date"], [])) for r in universe])
+    unsched_excl = surprise & ~sched
     none = np.array([not r["any_event"] for r in universe])
     out = {"scheduled": cell(arm, "scheduled", universe, sched, trades_by_day, sigma, True, False, False),
-           "unscheduled_surprise": cell(arm, "unscheduled_surprise", universe, unsched, trades_by_day, sigma,
+           "unscheduled_surprise": cell(arm, "unscheduled_surprise", universe, surprise, trades_by_day, sigma,
                                         True, False, True),
+           "unscheduled_surprise_no_release_sensitivity": cell(
+               arm, "unscheduled_surprise_no_release_sensitivity", universe, unsched_excl, trades_by_day,
+               sigma, True, False, True, with_placebo=False),
            "no_event": cell(arm, "no_event", universe, none, trades_by_day, sigma, True, False, False,
                             with_placebo=False)}
-    _apply_bh({k: v for k, v in out.items() if k != "no_event"})
+    _apply_bh({k: v for k, v in out.items() if k in ("scheduled", "unscheduled_surprise")})
     return out
 
 
@@ -387,7 +438,20 @@ def q5(rows, trades_by_day, detail) -> dict:
             for t in trades_by_day.get(r["date"], []):
                 hhmm = t["entry_ts"][11:16]
                 (pre if minute is not None and hhmm < minute else post).append(t["pnl_net"])
+        minutes = {e["minute"] for r in rows for e in detail.get(r["date"], [])
+                   if e["category"] == cat and e["minute"]}
+        excess = None
+        if len(minutes) == 1:
+            cut = next(iter(minutes))
+            per = {r["date"]: sum(t["pnl_net"] for t in trades_by_day.get(r["date"], []) if t["entry_ts"][11:16] < cut)
+                   for r in rows}
+            cond = [per[r["date"]] for r in rows if any(e["category"] == cat for e in detail.get(r["date"], []))]
+            if cond:
+                excess = {"cutoff": cut, "condition_pre_net_per_session": float(np.mean(cond)),
+                          "all_sessions_pre_net_per_session": float(np.mean(list(per.values()))),
+                          "excess_usd_per_session": float(np.mean(cond) - np.mean(list(per.values())))}
         pre_post[cat] = {"pre_n": len(pre), "pre_mean_usd": float(np.mean(pre)) if pre else None,
+                         "pre_cutoff_excess": excess,
                          "pre_total_usd": float(np.sum(pre)) if pre else 0.0,
                          "post_n": len(post), "post_mean_usd": float(np.mean(post)) if post else None,
                          "post_total_usd": float(np.sum(post)) if post else 0.0,
@@ -498,6 +562,34 @@ def confirmatory(rows, sigma_disc) -> dict:
 
 # ------------------------------------------------------------------ run
 
+def exclusions(rows: list[dict], window, chunks: list[dict], no_0dte=()) -> dict:
+    """14.1: every open weekday in the window that is not a replayed session, listed and
+    classified: early-close half days (dropped by MIN_RTH_BARS by design), days a chunk's
+    RUN.json recorded as skipped, and LOST regular sessions, which are a defect until
+    re-replayed (gate 2 found 23 in 2022)."""
+    from ..live_lab.nyse_calendar import early_close, is_closed
+    have = {r["date"] for r in rows}
+    recorded = {s["date"]: s["reason"] for c in chunks for s in (c.get("skipped") or [])}
+    recorded.update({d: "no_0dte" for d in no_0dte})          # 14.11, excluded by rule, counted
+    half, lost, rec = [], [], []
+    d = window[0]
+    while d <= window[1]:
+        iso = d.isoformat()
+        if not is_closed(d) and iso not in have:
+            if early_close(d):
+                half.append(iso)
+            elif iso in recorded:
+                rec.append({"date": iso, "reason": recorded[iso]})
+            else:
+                lost.append(iso)
+        d += dt.timedelta(days=1)
+    return {"open_days_in_window": len(rows) + len(half) + len(lost) + len(rec),
+            "replayed": len(rows), "half_days": half, "n_recorded_skips": len(rec),
+            "recorded_skips_by_reason": dict(Counter(r["reason"] for r in rec)),
+            "recorded_skips": rec if len(rec) <= 40 else rec[:40] + [{"date": "...", "reason": f"{len(rec) - 40} more"}],
+            "lost_regular_sessions": lost, "n_lost": len(lost)}
+
+
 def _sha(p: Path) -> str:
     return hashlib.sha256(p.read_bytes()).hexdigest()[:16]
 
@@ -518,6 +610,7 @@ def run(arm: str, set_name: str) -> dict:
     res = {"arm": arm, "set": set_name, "window": [window[0].isoformat(), window[1].isoformat()],
            "repo_sha": sha, "config_hashes": meta["hashes"], "live_hash": J.LIVE_HASH[arm],
            "chunks": meta["chunks"], "excluded_no_0dte": meta["excluded_no_0dte"],
+           "exclusions": exclusions(rows, window, meta["chunks"], meta["excluded_no_0dte"].get("dates", ())),
            "events_sha": {"scheduled": _sha(J.NI / "events_scheduled.csv"),
                           "geopolitical": _sha(J.NI / "events_geopolitical.csv")},
            "regime_cuts_med20_range_bp": list(cuts), "seeds": {"bootstrap": SEED_BOOT, "placebo": SEED_PLACEBO},
@@ -550,10 +643,18 @@ def _confounded(full: dict, single: dict):
     return bool((a > 0) != (b > 0) or abs(b) < 0.5 * abs(a))
 
 
+GATE2_LINE = "GATE 2 VERDICT: PASS"
+
+
 def holdout_allowed() -> bool:
-    """The holdout is read once, after the discovery report is committed and gate 2 has passed."""
-    p = OUT / "results.md"
-    return p.exists() and "GATE 2: PASS" in p.read_text(encoding="utf-8")
+    """The holdout is read once, after the discovery report is committed and gate 2 has
+    passed. The pass is a whole line in the AUDITOR's file, audit_results.md, never a token
+    inside the report (the first version matched a substring of results.md and was open
+    while the report described the lock, found at gate 2)."""
+    p = OUT / "audit_results.md"
+    if not p.exists():
+        return False
+    return any(line.strip() == GATE2_LINE for line in p.read_text(encoding="utf-8").splitlines())
 
 
 def main(argv=None) -> int:
@@ -574,8 +675,8 @@ def main(argv=None) -> int:
     if not a.arm:
         ap.error("--arm is required")
     if a.set == "holdout" and not holdout_allowed():
-        print("REFUSING: the holdout is read once, after research/news_arms/results.md carries "
-              "'GATE 2: PASS' for the discovery report (preregistration section 2, 11).")
+        print(f"REFUSING: the holdout is read once, after research/news_arms/audit_results.md carries "
+              f"the line '{GATE2_LINE}' for the discovery report (preregistration section 2, 11).")
         return 2
     res = run(a.arm, a.set)
     out = OUT / f"analysis_{a.arm}_{a.set}.json"
@@ -586,8 +687,10 @@ def main(argv=None) -> int:
 
 
 def print_summary(res: dict) -> None:
+    ex = res["exclusions"]
     print(f"{res['arm']} {res['set']}: {res['n_sessions']} sessions, {res['n_trades']} trades, "
-          f"sigma(discovery) ${res['sigma_discovery_usd']:.0f}/day, B0 mean ${res['b0']['net_mean']:+.0f}/day")
+          f"sigma(discovery) ${res['sigma_discovery_usd']:.0f}/day, B0 mean ${res['b0']['net_mean']:+.0f}/day; "
+          f"half days {len(ex['half_days'])}, LOST regular sessions {ex['n_lost']} {ex['lost_regular_sessions'][:30]}")
     print(f"{'cell':<22}{'n':>5}{'trades':>7}  {'effect σ':>9}  {'95% CI':>17}  {'$/day':>8}  placebo rank  status")
     tables = [("Q1", res["q1"]), ("Q3", {k: v for k, v in res["q3"].items() if k != "no_event"})]
     for name, table in tables:
@@ -602,6 +705,8 @@ def print_summary(res: dict) -> None:
                 status += ", BH pass"
             if c.get("confounded_by_overlap"):
                 status += ", confounded by overlap"
+            if c.get("unstable"):
+                status += ", UNSTABLE"
             rank = f"{pl['rank']:.3f} {pl['verdict']}" if pl else "-"
             ci = (f"[{c['ci95'][0]:+.3f}, {c['ci95'][1]:+.3f}]" if c['ci95'][0] is not None
                   else f"(n < {MIN_CI_SESSIONS}, no CI)")

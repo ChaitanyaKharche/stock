@@ -168,11 +168,65 @@ def test_q6_divergence_needs_both_cis_to_exclude_zero_with_opposite_signs():
 
 # ------------------------------------------------------------ holdout guard
 
-def test_holdout_refuses_until_the_discovery_report_carries_gate_2_pass(tmp_path, monkeypatch):
+def test_holdout_lock_is_shut_on_the_committed_files_and_opens_only_on_the_auditors_whole_line(tmp_path, monkeypatch):
+    """Gate 2 (2026-11-10): the first lock matched a substring of results.md and was already
+    open because the report described the lock. The lock reads audit_results.md, whole line."""
+    assert A.holdout_allowed() is False                     # the committed audit says FAIL
     monkeypatch.setattr(A, "OUT", tmp_path)
     assert A.main(["--arm", "shares", "--set", "holdout"]) == 2
-    (tmp_path / "results.md").write_text("## Gate 2\nGATE 2: PASS\n", encoding="utf-8")
+    (tmp_path / "results.md").write_text("GATE 2 VERDICT: PASS\n", encoding="utf-8")
+    assert A.holdout_allowed() is False                     # wrong file
+    (tmp_path / "audit_results.md").write_text("the line 'GATE 2 VERDICT: PASS' would open it\n", encoding="utf-8")
+    assert A.holdout_allowed() is False                     # token inside prose
+    (tmp_path / "audit_results.md").write_text("...\nGATE 2 VERDICT: FAIL\n", encoding="utf-8")
+    assert A.holdout_allowed() is False
+    (tmp_path / "audit_results.md").write_text("...\n  GATE 2 VERDICT: PASS \n", encoding="utf-8")
     assert A.holdout_allowed() is True
+
+
+def test_unstable_flags_sign_flips_across_regimes_or_three_years():
+    base = {"effect_sigma": -0.3, "n_sessions": 40}
+    reg = lambda *e: {k: {"n": 10, "effect_vs_stratum_b0": x} for k, x in zip("lmh", e)}
+    yrs = lambda *e: {str(2018 + i): {"n": 8, "effect_vs_stratum_b0": x} for i, x in enumerate(e)}
+    assert A._unstable({**base, "by_regime": reg(-0.1, -0.2, -0.5), "by_year": yrs(-0.1, -0.2, 0.1, -0.3, 0.2)}) is False
+    assert A._unstable({**base, "by_regime": reg(-0.1, 0.2, -0.5), "by_year": yrs(-0.1, -0.2, -0.3, -0.3, -0.2)}) is True
+    assert A._unstable({**base, "by_regime": reg(-0.1, -0.2, -0.5), "by_year": yrs(0.1, 0.2, 0.1, -0.3, -0.2)}) is True
+    thin = {"n": 3, "effect_vs_stratum_b0": 0.9}
+    assert A._unstable({**base, "by_regime": {"l": thin}, "by_year": yrs(-0.1, -0.2, -0.3, -0.3, -0.2)}) is False
+
+
+def test_exclusions_list_half_days_recorded_skips_and_lost_sessions():
+    rows = [{"date": d} for d in ("2022-11-21", "2022-11-22", "2022-11-23", "2022-11-29", "2022-11-30")]
+    chunks = [{"skipped": [{"date": "2022-11-28", "reason": "half_day"}]}]
+    ex = A.exclusions(rows, (dt.date(2022, 11, 21), dt.date(2022, 11, 30)), chunks)
+    assert ex["half_days"] == ["2022-11-25"]                               # day after Thanksgiving
+    assert ex["recorded_skips"] == [{"date": "2022-11-28", "reason": "half_day"}]
+    assert ex["lost_regular_sessions"] == [] and ex["n_lost"] == 0 and ex["open_days_in_window"] == 7
+    ex2 = A.exclusions(rows[:-1], (dt.date(2022, 11, 21), dt.date(2022, 11, 30)), chunks)
+    assert ex2["lost_regular_sessions"] == ["2022-11-30"] and ex2["open_days_in_window"] == 7
+    ex3 = A.exclusions(rows[:-1], (dt.date(2022, 11, 21), dt.date(2022, 11, 30)), chunks, no_0dte=["2022-11-30"])
+    assert ex3["n_lost"] == 0 and ex3["recorded_skips_by_reason"] == {"half_day": 1, "no_0dte": 1}
+
+
+def test_q3_unscheduled_is_every_surprise_session_with_the_exclusive_variant_beside_it():
+    rows = _rows(60, cats=lambda i: ["CPI", "war_military"] if i == 0 else (["war_military"] if i < 10 else []))
+    detail = {r["date"]: [{"category": "war_military", "minute": None, "kind": "all_post", "surprise": True}]
+              for r in rows if "war_military" in r["categories"]}
+    tb = {}
+    out = A.q3("shares", rows, tb, 100.0, detail)
+    assert out["unscheduled_surprise"]["n_sessions"] == 10
+    assert out["unscheduled_surprise_no_release_sensitivity"]["n_sessions"] == 9
+
+
+def test_block_bootstrap_is_seeded_and_covers_the_effect():
+    rng = np.random.default_rng(0)
+    z = rng.normal(size=300)
+    mask = np.zeros(300, bool); mask[::6] = True
+    z[mask] += 1.0
+    eff = z[mask].mean() - z.mean()
+    lo, hi = A.block_bootstrap_ci(z, mask, block=10, n_boot=400)
+    assert lo < eff < hi and A.block_bootstrap_ci(z, mask, block=10, n_boot=400) == [lo, hi]
+    assert A.block_bootstrap_ci(z, np.zeros(300, bool)) == [None, None]
 
 
 # ------------------------------------------------------------ metric block and overlap flag

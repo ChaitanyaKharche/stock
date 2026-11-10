@@ -68,6 +68,7 @@ from .feed import FeedOutage, _parse_ts
 from .catchup import CatchUp
 from .levels_live import LevelsLoader
 from .walkforward import sessions_between
+from .nyse_calendar import is_closed
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "live_lab_backfill" / "options"
@@ -343,8 +344,19 @@ def _reset_shares(lab) -> None:
     lab.catchup = CatchUp(lab, tag="replay")
 
 
-def run(start: dt.date, end: dt.date, symbols=None, out=None, arm: str = "options") -> list[dict]:
-    """Replay every session in [start, end] through the real runner of `arm`.
+class SessionLost(RuntimeError):
+    """A regular weekday the feed served no bars for, or whose warm-up failed. 2026-11-10:
+    23 regular 2022 sessions passed as "not a session" during a vendor outage; a chunk that
+    loses a session must fail, not count."""
+
+
+def run(start: dt.date, end: dt.date, symbols=None, out=None, arm: str = "options",
+        dates=None, skipped: list | None = None) -> list[dict]:
+    """Replay every session in [start, end] (or exactly `dates`) through the real runner of
+    `arm`. `skipped` (a list the caller owns) receives {"date", "reason"} for every day not
+    replayed: "holiday" (zero bars on a calendar closure), "half_day" (fewer than
+    MIN_RTH_BARS bars). A weekday with zero bars that the NYSE calendar says was open, or a
+    failed warm-up, raises SessionLost.
 
     Each session starts clean -- warmup at 09:07, the six lines at 09:31, every minute from
     09:30 to 16:00 ticked once, flatten, daily summary -- exactly the day a runner that
@@ -377,12 +389,20 @@ def run(start: dt.date, end: dt.date, symbols=None, out=None, arm: str = "option
     real = lab.feed
     _tag_backfill(lab.store)
     summary = []
+    skipped = skipped if skipped is not None else []
+    days = list(dates) if dates else sessions_between(start, end)
     try:
-        for day in sessions_between(start, end):
+        for day in days:
             feed = HistoryFeed(real, clock, day)
             clock.now = dt.datetime.combine(day, dt.time(16, 1))   # only to COUNT the day's bars
-            if len(feed.minute_bars(symbols[0], day)) < MIN_RTH_BARS:
-                print(f"  {day}: not a session, skipped", flush=True)
+            n_bars = len(feed.minute_bars(symbols[0], day))
+            if n_bars < MIN_RTH_BARS:
+                if n_bars == 0 and not is_closed(day):
+                    raise SessionLost(f"{day}: zero bars on a regular weekday; the feed is wrong, "
+                                      f"not the calendar")
+                reason = "holiday" if n_bars == 0 else "half_day"
+                skipped.append({"date": day.isoformat(), "reason": reason, "bars": n_bars})
+                print(f"  {day}: {reason} ({n_bars} bars), skipped", flush=True)
                 continue
             _attach_feed(lab, feed)                  # specs/004
             reset(lab)
@@ -392,8 +412,8 @@ def run(start: dt.date, end: dt.date, symbols=None, out=None, arm: str = "option
                       f"no outages; NOT the prospective record", flush=True)
                 clock.now = dt.datetime.combine(day, WARMUP_AT)
                 if not lab.warmup(day):
-                    print(f"  {day}: warmup failed, skipped", flush=True)
-                    continue
+                    print(f"  {day}: warmup failed", flush=True)
+                    raise SessionLost(f"{day}: warm-up failed on a regular weekday")
                 t = dt.datetime.combine(day, module.RTH_OPEN) + TICK_OFFSET
                 close_at = dt.datetime.combine(day, module.RTH_CLOSE)
                 while t < close_at:

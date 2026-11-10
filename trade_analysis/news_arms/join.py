@@ -68,7 +68,7 @@ def load_replay(arm: str, years, base_dirs=None) -> tuple[dict, list[dict], dict
     (a Thursday release) an effect by construction. A chunk without sessions.json refuses
     to join."""
     sessions, trades, meta = {}, [], {"chunks": [], "hashes": set(),
-                                      "excluded_no_0dte": {"n": 0, "by_year": {}, "by_weekday": {}}}
+                                      "excluded_no_0dte": {"n": 0, "by_year": {}, "by_weekday": {}, "dates": []}}
     dropped = set()
     for d in (base_dirs if base_dirs is not None else chunk_dirs(arm, years)):
         if (d / "FAILED.json").exists():
@@ -76,7 +76,7 @@ def load_replay(arm: str, years, base_dirs=None) -> tuple[dict, list[dict], dict
         run = json.loads((d / "RUN.json").read_text(encoding="utf-8"))
         rel = str(d.relative_to(ROOT)) if d.is_relative_to(ROOT) else str(d)
         meta["chunks"].append({"dir": rel, **{k: run.get(k) for k in
-                                                                    ("start", "end", "repo_sha", "sessions_replayed")}})
+                                                                    ("start", "end", "repo_sha", "sessions_replayed", "skipped", "dates")}})
         has_0dte = None
         if arm == "options":
             sp = d / "sessions.json"
@@ -91,6 +91,7 @@ def load_replay(arm: str, years, base_dirs=None) -> tuple[dict, list[dict], dict
                 dropped.add(day)
                 ex = meta["excluded_no_0dte"]
                 ex["n"] += 1
+                ex["dates"].append(day)
                 ex["by_year"][day[:4]] = ex["by_year"].get(day[:4], 0) + 1
                 wd = str(dt.date.fromisoformat(day).weekday())
                 ex["by_weekday"][wd] = ex["by_weekday"].get(wd, 0) + 1

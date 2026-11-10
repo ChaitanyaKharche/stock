@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import datetime as dt
+import json
 
 from . import replay_chunks as R
 
@@ -49,3 +50,26 @@ def test_a_good_window_writes_run_json_and_clears_failed(tmp_path, monkeypatch):
     meta = R.replay_window("shares", dt.date(2019, 3, 1), dt.date(2019, 3, 31), out, "abc")
     assert meta["sessions_replayed"] == 1 and (out / "RUN.json").exists()
     assert not (out / "FAILED.json").exists()
+
+
+def test_run_json_carries_the_skipped_days_and_an_explicit_date_list(tmp_path, monkeypatch):
+    def fake_run(start, end, out=None, arm=None, dates=None, skipped=None):
+        skipped.append({"date": "2022-11-25", "reason": "half_day", "bars": 210})
+        return [{"date": d.isoformat()} for d in dates]
+    monkeypatch.setattr(R.B, "run", fake_run)
+    out = tmp_path / "fill-a"
+    days = [dt.date(2022, 11, 2), dt.date(2022, 11, 3)]
+    meta = R.replay_window("shares", days[0], days[-1], out, "abc", dates=days)
+    run = json.loads((out / "RUN.json").read_text(encoding="utf-8"))
+    assert run["sessions_replayed"] == 2 and run["dates"] == ["2022-11-02", "2022-11-03"]
+    assert run["skipped"] == [{"date": "2022-11-25", "reason": "half_day", "bars": 210}]
+
+
+def test_a_lost_session_fails_the_chunk(tmp_path, monkeypatch):
+    def boom(*a, **k):
+        raise R.B.SessionLost("2022-07-15: zero bars on a regular weekday")
+    monkeypatch.setattr(R.B, "run", boom)
+    import pytest
+    with pytest.raises(R.B.SessionLost):
+        R.replay_window("shares", dt.date(2022, 7, 1), dt.date(2022, 7, 31), tmp_path / "m", "abc")
+    assert "zero bars" in (tmp_path / "m" / "FAILED.json").read_text(encoding="utf-8")

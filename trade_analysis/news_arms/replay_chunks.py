@@ -72,13 +72,17 @@ def terminal_answering() -> bool:
         return False
 
 
-def replay_window(arm: str, start: dt.date, end: dt.date, out: Path, sha: str) -> dict:
-    """One window into `out`. Writes RUN.json on success, FAILED.json on an exception
-    (and re-raises so the caller stops)."""
+def replay_window(arm: str, start: dt.date, end: dt.date, out: Path, sha: str, dates=None) -> dict:
+    """One window (or an explicit list of `dates`) into `out`. Writes RUN.json on success
+    with every skipped day and its reason, FAILED.json on an exception (and re-raises so
+    the caller stops). A regular weekday the feed cannot serve raises inside B.run
+    (SessionLost) and so fails the chunk: 2026-11-10, 23 such days had passed as holidays."""
     t0 = time.time()
-    print(f"replay {arm} {start} -> {end} into {out} (sha {sha})", flush=True)
+    skipped: list = []
+    print(f"replay {arm} {start} -> {end} into {out} (sha {sha})"
+          + (f" dates={len(dates)}" if dates else ""), flush=True)
     try:
-        summary = B.run(start, end, out=out, arm=arm)
+        summary = B.run(start, end, out=out, arm=arm, dates=dates, skipped=skipped)
     except Exception as exc:                              # noqa: BLE001
         out.mkdir(parents=True, exist_ok=True)
         (out / "FAILED.json").write_text(json.dumps({
@@ -89,6 +93,7 @@ def replay_window(arm: str, start: dt.date, end: dt.date, out: Path, sha: str) -
         raise
     meta = {"arm": arm, "start": start.isoformat(), "end": end.isoformat(), "repo_sha": sha,
             "minutes": round((time.time() - t0) / 60.0, 1), "sessions_replayed": len(summary),
+            "skipped": skipped, "dates": [d.isoformat() for d in dates] if dates else None,
             "started_at": dt.datetime.now().isoformat(timespec="seconds")}
     if arm == "options":
         days = [dt.date.fromisoformat(p.stem) for p in sorted((out / "daily").glob("*.json"))]
@@ -99,6 +104,7 @@ def replay_window(arm: str, start: dt.date, end: dt.date, out: Path, sha: str) -
         meta["halt"] = bad
         if bad:
             print(f"HALT (14.11): {len(bad)} session(s) without a 0DTE where one was expected: {bad[:10]}")
+    out.mkdir(parents=True, exist_ok=True)
     (out / "FAILED.json").unlink(missing_ok=True)
     (out / "RUN.json").write_text(json.dumps(meta, indent=1), encoding="utf-8")
     print(json.dumps(meta, indent=1))
@@ -128,6 +134,9 @@ def main(argv=None) -> int:
                     help="months of a --year run replayed in parallel (the terminal allows 4 "
                          "concurrent requests; 4 is the sensible maximum)")
     ap.add_argument("--month", help="internal: replay one YYYY-MM into <label>/<arm>/<YYYY-MM>")
+    ap.add_argument("--dates", help="fill-in: comma-separated YYYY-MM-DD list replayed into "
+                                    "<label>/<arm>/<chunk>; the join refuses a session present twice")
+    ap.add_argument("--chunk", help="with --dates: the sub-folder name, e.g. fill-2022-a")
     a = ap.parse_args(argv)
     if in_market_hours(now_et()) and not a.force:
         print("REFUSING: inside 09:00-16:30 ET on a weekday; the lab needs the terminal. Rerun after close.")
@@ -137,6 +146,21 @@ def main(argv=None) -> int:
         return 2
     sha = subprocess.run(["git", "rev-parse", "--short", "HEAD"], cwd=ROOT, capture_output=True,
                          text=True).stdout.strip()
+    if a.dates:
+        if not (a.label and a.chunk):
+            print("--dates needs --label <year> and --chunk <name>")
+            return 2
+        days = sorted(dt.date.fromisoformat(x.strip()) for x in a.dates.split(",") if x.strip())
+        out = OUT_ROOT / a.label / a.arm / a.chunk
+        if (out / "RUN.json").exists():
+            print(f"REFUSING: {out} already holds a completed run; use a new --chunk name.")
+            return 2
+        try:
+            meta = replay_window(a.arm, days[0], days[-1], out, sha, dates=days)
+        except Exception:                                 # noqa: BLE001
+            print(f"STOPPED: see {out / 'FAILED.json'}. Rerun with the same --chunk to regenerate it.")
+            return 1
+        return 3 if meta.get("halt") else 0
     if a.month:
         y, m = (int(x) for x in a.month.split("-"))
         m_start, m_end = months(y)[m - 1]

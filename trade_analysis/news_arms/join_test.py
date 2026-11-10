@@ -79,7 +79,8 @@ def test_options_sessions_without_a_0dte_never_become_rows(tmp_path):
     sessions, trades, meta = J.load_replay("options", [2021], base_dirs=[d])
     assert sorted(sessions) == ["2021-01-04", "2021-01-06"]
     assert trades == []                                             # a trade on a dropped day goes too
-    assert meta["excluded_no_0dte"] == {"n": 1, "by_year": {"2021": 1}, "by_weekday": {"1": 1}}
+    assert meta["excluded_no_0dte"] == {"n": 1, "by_year": {"2021": 1}, "by_weekday": {"1": 1},
+                                        "dates": ["2021-01-05"]}
     rows = J.build_join("options", sessions, trades, {}, {}, (dt.date(2021, 1, 1), dt.date(2021, 12, 31)))
     assert [r["date"] for r in rows] == ["2021-01-04", "2021-01-06"]
 
