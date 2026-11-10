@@ -635,3 +635,36 @@ written before the read, with its own decision rule, never as an extension of C2
 C2's result is known. The 2024-06 chunk stalled on one session for about 30 minutes
 (the terminal hanging, the same failure the live lab sees) and then completed; the chunk's
 RUN.json is ordinary.
+
+## 22. Step 6 record: discovery read, gate 2 first pass FAIL, 2026-11-10
+
+Discovery analysed once (`analyze.py`, both arms; `results.md`, `results_tables.md`,
+`analysis_*_discovery.json`). The tested families equal the pre-committed counts by set
+equality (Q7 66 / 20; H3 4 / 2). Gate 2 (`audit_results.md`, statistical auditor, 27 rows)
+reproduced every headline number from the raw replay files and **failed the report** on:
+
+1. **23 regular 2022 shares sessions lost in the replay**, logged "not a session" when the
+   vendor served zero bars during an outage; the chunks exited 0. 2022-05-13, 07-15 → 07-25,
+   08-04 → 08-09, 10-03 → 10-12, 11-01 → 11-03; among them FOMC 2022-11-02 and NFP 2022-08-05
+   and 10-07. The project's bug class (no crash, a confident number). Fixes landed:
+   `backfill.SessionLost` (zero bars on a calendar-open weekday, or a failed warm-up, raises
+   and fails the chunk; `live_lab/nyse_calendar.py` supplies the closures by rule, tested
+   against the feature file), skips recorded in `RUN.json` with a reason, `replay_chunks
+   --dates` fill-in mode, and `analyze.exclusions` listing every open weekday not replayed.
+   The 23 are to be re-replayed into `2022/shares/fill-a` and the analysis rerun.
+2. The holdout lock matched a substring of `results.md` and was open; now a whole line in
+   `audit_results.md`, with a test on the committed files.
+3. The pre-registered placebo pool (13.3, condition excluded) is biased toward "effect";
+   the in-pool rank is reported beside it as a sensitivity. The release-days verdict changes
+   to chance under it; the Fed-day verdict survives.
+4. "The regime, not the shock" (F3) was wrong: within the high regime shock days still lose
+   0.72 σ; the row is unstable (§2) and 2020-driven, not explained away.
+5. By-year columns showed raw means, not effects against the year's baseline (Fed 2020 is
+   +0.18 σ, four of five years negative). Per-trade baseline is −1.6 bp, not −0.16.
+   "$7,000 a year" split into the raw pre-14:00 loss ($8,400) and the Fed excess ($6,300).
+6. Q3 "unscheduled" now follows the text (every surprise session; the release-free variant
+   is a sensitivity). The §2 unstable rule is implemented. A 10-session block bootstrap is
+   reported beside every CI as a post hoc sensitivity.
+
+Nothing in the design changed; the corrections are to the report, the replay's failure
+mode and the lock. Second pass after the fill-in.

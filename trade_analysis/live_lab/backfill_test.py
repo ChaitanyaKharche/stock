@@ -137,3 +137,59 @@ def test_reconcile_bins_every_trade_once_and_the_identity_holds():
     lhs = sum(x["pnl_net"] for x in live) - sum(x["pnl_net"] for x in replay)
     rhs = sum(r[k]["live"] - r[k]["replay"] for k in ("same", "moved", "shifted"))         + r["live_only"]["live"] - r["replay_only"]["replay"]
     assert lhs == pytest.approx(rhs)
+
+
+# ------------------------------------------------------------ lost sessions never pass silently
+
+_ORIG_MINUTE_BARS = B.HistoryFeed.minute_bars
+
+
+def _zero_bar_feed(monkeypatch, bars_by_day):
+    orig = _ORIG_MINUTE_BARS
+
+    def fake(self, symbol, day):
+        if day.isoformat() in bars_by_day:
+            return orig(self, symbol, day)[:bars_by_day[day.isoformat()]]
+        return orig(self, symbol, day)
+    monkeypatch.setattr(B.HistoryFeed, "minute_bars", fake)
+
+
+def test_zero_bars_on_a_regular_weekday_raises_instead_of_skipping(tmp_path, monkeypatch):
+    """2026-11-10: 23 regular 2022 sessions came back empty during a vendor outage and were
+    logged 'not a session'. A regular weekday with no bars is a feed defect, not a holiday."""
+    from trade_analysis.live_lab import shares_runner as SR
+    monkeypatch.setattr(B, "CACHE", tmp_path / "cache")
+    monkeypatch.setattr(SR, "ThetaLiveFeed", lambda *a, **k: type(
+        "F", (_Real,), {"close": lambda self: None, "calls": 0})())
+    _zero_bar_feed(monkeypatch, {DAY.isoformat(): 0})
+    skipped = []
+    import pytest
+    with pytest.raises(B.SessionLost):
+        B.run(DAY, DAY, symbols=("QQQ",), out=tmp_path / "s", arm="shares", skipped=skipped)
+    assert skipped == []
+
+
+def test_holiday_and_half_day_skips_are_recorded_with_their_reason(tmp_path, monkeypatch):
+    from trade_analysis.live_lab import shares_runner as SR
+    monkeypatch.setattr(B, "CACHE", tmp_path / "cache")
+    monkeypatch.setattr(SR, "ThetaLiveFeed", lambda *a, **k: type(
+        "F", (_Real,), {"close": lambda self: None, "calls": 0})())
+    monkeypatch.setattr(B, "is_closed", lambda d: True)        # the calendar says closed
+    _zero_bar_feed(monkeypatch, {DAY.isoformat(): 0})
+    skipped = []
+    assert B.run(DAY, DAY, symbols=("QQQ",), out=tmp_path / "h", arm="shares", skipped=skipped) == []
+    assert skipped == [{"date": DAY.isoformat(), "reason": "holiday", "bars": 0}]
+    monkeypatch.setattr(B, "is_closed", lambda d: False)
+    _zero_bar_feed(monkeypatch, {DAY.isoformat(): 5})
+    skipped = []
+    assert B.run(DAY, DAY, symbols=("QQQ",), out=tmp_path / "hd", arm="shares", skipped=skipped) == []
+    assert skipped[0]["reason"] == "half_day" and skipped[0]["bars"] == 5
+
+
+def test_an_explicit_date_list_replays_exactly_those_days(tmp_path, monkeypatch):
+    from trade_analysis.live_lab import shares_runner as SR
+    monkeypatch.setattr(B, "CACHE", tmp_path / "cache")
+    monkeypatch.setattr(SR, "ThetaLiveFeed", lambda *a, **k: type(
+        "F", (_Real,), {"close": lambda self: None, "calls": 0})())
+    summary = B.run(DAY, DAY, symbols=("QQQ",), out=tmp_path / "d", arm="shares", dates=[DAY])
+    assert [s["date"] for s in summary] == [DAY.isoformat()]
