@@ -211,3 +211,23 @@ def main() -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
+
+
+# ------------------------------------------------------------ session gaps from catch-up events
+
+def test_a_runner_catch_up_counts_as_a_session_gap_even_without_a_supervisor_suspend_row(tmp_path):
+    """2026-11-09: 80 minutes caught up from history, no host_suspend row, ledger said COLLECTED."""
+    import datetime as dt
+    import json
+    from . import autostart as A
+    day = dt.date(2026, 11, 9)
+    (tmp_path / "shares").mkdir()
+    (tmp_path / "events.jsonl").write_text(json.dumps({
+        "kind": "caught_up", "since": "2026-11-09T14:11:00", "until": "2026-11-09T15:30:00"}) + "\n",
+        encoding="utf-8")
+    (tmp_path / "shares" / "events.jsonl").write_text(json.dumps({
+        "kind": "caught_up", "since": "2026-11-09T16:05:00", "until": "2026-11-09T16:20:00"}) + "\n",
+        encoding="utf-8")                                      # after the close: not a session gap
+    gaps = A._session_gaps(day, tmp_path)
+    assert gaps == [(dt.datetime(2026, 11, 9, 14, 11), dt.datetime(2026, 11, 9, 15, 30))]
+    assert A._session_gaps(dt.date(2026, 11, 10), tmp_path) == []

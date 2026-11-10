@@ -51,16 +51,46 @@ def test_join_rows_carry_categories_regime_and_counts(tmp_path):
     assert meta["hashes"] == ["7c6414fc549315f3"]
 
 
-def test_options_rows_count_atm_only(tmp_path):
+def _options_chunk(tmp_path, has_0dte: dict, trades=()):
     d = tmp_path / "o"
     (d / "daily").mkdir(parents=True)
-    (d / "RUN.json").write_text(json.dumps({"start": "2021-01-04", "end": "2021-01-04"}), encoding="utf-8")
-    (d / "daily" / "2021-01-04.json").write_text("{}", encoding="utf-8")
-    (d / "trades.jsonl").write_text("\n".join(json.dumps({"setup_id": "x", "entry_ts": "2021-01-04T10:00:00",
-                                                           "pnl_net": 1.0, "arm": arm}) for arm in ("ATM", "ATM-1", "ATM+1")) + "\n", encoding="utf-8")
+    days = sorted(has_0dte)
+    (d / "RUN.json").write_text(json.dumps({"start": days[0], "end": days[-1]}), encoding="utf-8")
+    for day in days:
+        (d / "daily" / f"{day}.json").write_text("{}", encoding="utf-8")
+    (d / "sessions.json").write_text(json.dumps(has_0dte), encoding="utf-8")
+    (d / "trades.jsonl").write_text("".join(json.dumps(t) + "\n" for t in trades), encoding="utf-8")
+    return d
+
+
+def test_options_rows_count_atm_only(tmp_path):
+    d = _options_chunk(tmp_path, {"2021-01-04": True},
+                       [{"setup_id": "x", "entry_ts": "2021-01-04T10:00:00", "pnl_net": 1.0, "arm": arm}
+                        for arm in ("ATM", "ATM-1", "ATM+1")])
     sessions, trades, _ = J.load_replay("options", [2021], base_dirs=[d])
     rows = J.build_join("options", sessions, trades, {}, {}, (dt.date(2021, 1, 1), dt.date(2021, 12, 31)))
     assert rows[0]["n_trades"] == 1
+
+
+def test_options_sessions_without_a_0dte_never_become_rows(tmp_path):
+    # 14.11: Tue 2021-01-05 had no SPY 0DTE; it must not enter as a $0 day
+    d = _options_chunk(tmp_path, {"2021-01-04": True, "2021-01-05": False, "2021-01-06": True},
+                       [{"setup_id": "x", "entry_ts": "2021-01-05T10:00:00", "pnl_net": 9.0, "arm": "ATM"}])
+    sessions, trades, meta = J.load_replay("options", [2021], base_dirs=[d])
+    assert sorted(sessions) == ["2021-01-04", "2021-01-06"]
+    assert trades == []                                             # a trade on a dropped day goes too
+    assert meta["excluded_no_0dte"] == {"n": 1, "by_year": {"2021": 1}, "by_weekday": {"1": 1}}
+    rows = J.build_join("options", sessions, trades, {}, {}, (dt.date(2021, 1, 1), dt.date(2021, 12, 31)))
+    assert [r["date"] for r in rows] == ["2021-01-04", "2021-01-06"]
+
+
+def test_options_chunk_without_sessions_json_refuses(tmp_path):
+    d = _options_chunk(tmp_path, {"2021-01-04": True})
+    (d / "sessions.json").unlink()
+    with pytest.raises(RuntimeError):
+        J.load_replay("options", [2021], base_dirs=[d])
+    s, _, meta = J.load_replay("shares", [2021], base_dirs=[d])      # shares never needs it
+    assert list(s) == ["2021-01-04"] and meta["excluded_no_0dte"]["n"] == 0
 
 
 def test_window_excludes_sessions_outside_it(tmp_path):

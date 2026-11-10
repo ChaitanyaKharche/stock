@@ -637,11 +637,20 @@ def _arm_dirs(lab_dir) -> dict[str, Path]:
 
 
 def _session_gaps(day: dt.date, lab_dir) -> list:
-    """Host-suspend windows during RTH on `day`, from either arm's outage log."""
-    from .gap_recovery import find_gaps
+    """Windows during RTH on `day` in which the lab was not deciding entries, from either
+    arm: the supervisor's own host_suspend rows AND the runners' `caught_up` events.
+
+    2026-11-09: the host slept 14:11 -> 15:30, both arms replayed ~80 minutes from history
+    with entries frozen, and the ledger still said COLLECTED because the supervisor had
+    written no host_suspend row that day. A runner that had to catch up is a runner that
+    was not running; its own event is evidence enough.
+    """
+    from .gap_recovery import catchup_windows, find_gaps, RTH_CLOSE, RTH_OPEN
+    open_, close = (dt.datetime.combine(day, t) for t in (RTH_OPEN, RTH_CLOSE))
     out = []
     for d in _arm_dirs(lab_dir).values():
         out += find_gaps(d, day)
+        out += [(a, b) for a, b in catchup_windows(d, day) if a < close and b > open_]
     return sorted(set(out))
 
 
@@ -1276,8 +1285,9 @@ def main(argv=None) -> int:
         try:
             if gaps:
                 span = ", ".join(f"{a:%H:%M}-{b:%H:%M}" for a, b in gaps)
-                ledger.record(day, "PARTIAL", f"host suspended during RTH ({span}); exits of "
-                              f"positions open across it are recovered from history",
+                ledger.record(day, "PARTIAL", f"lab not running during RTH ({span}): host suspend "
+                              f"or dead feed, entries frozen; exits of positions open across it "
+                              f"are recovered from history",
                               args.lab_dir, supervisor_rc=rc)
             else:
                 ledger.note_finished(day, args.lab_dir, supervisor_rc=rc)

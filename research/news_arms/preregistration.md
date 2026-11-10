@@ -595,3 +595,28 @@ beside them. The heartbeat print is a replay diagnostic, not an analysis read, b
 read of holdout numbers and is logged here as one. Mitigation for the options holdout (2023):
 run with `--workers 3` and do not paste the console; the exit code and `RUN.json` are
 enough.
+
+## 20. Step 5 record: options discovery replay 2020–2022, 2026-11-08/09
+
+Replayed on the laptop at `13e8f5c`, 36 monthly chunks with 3 workers, every month rc 0
+except **2022-11, rc 3: the 14.11 halt fired**, on 2022-11-01, 11-03, 11-08 and 11-10
+(two Tuesdays, two Thursdays). Inspection: SPY Tuesday and Thursday expiries were listed
+from **2022-11-14**, not 2022-11-01 as `replay_chunks.ALWAYS_0DTE_FROM` assumed; from 11-15
+on every weekday has a chain (`sessions.json`, 2022-12: 21 of 21). The replayed data is
+correct (the runner traded nothing on those four days, as live would have); the constant
+and its test are corrected to 2022-11-14. The halt did what it was written for.
+
+**Pre-P&L counts, options discovery** (`counts_options_discovery.json`, no P&L read):
+752 sessions replayed, **270 excluded for having no 0DTE** (94 / 95 / 81 by year; 132
+Tuesdays, 138 Thursdays, nothing else), **482 kept**, one hash `ccd00ac71f8243e9`, the live
+hash. Of the kept sessions 110 carry a scheduled release, 312 no event of any type, 18
+more than one category. The 14.11 exclusion is applied in `join.load_replay` before any
+table, baseline or σ; a chunk without `sessions.json` refuses to join (tests fail on the
+previous code).
+
+Consequence for the options H2/H3 families, by the pre-declared minimums (≥ 30 sessions
+and ≥ 50 trades): **NFP (36 sessions) and PCE (34) are tested; FOMC (22), CPI (19) and
+GDP_ADV (1) are reported only.** CPI and GDP releases fall mostly on Tuesdays and
+Thursdays, which had no 0DTE before 2022-11-14. m for the options arm: H2 2 of 4, H3 2 of 5,
+Q7 20 setup × category cells. No geopolitical category reaches 30 sessions on the options
+arm; all are reported only, none placebo-tested.
