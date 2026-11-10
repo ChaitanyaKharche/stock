@@ -620,3 +620,18 @@ GDP_ADV (1) are reported only.** CPI and GDP releases fall mostly on Tuesdays an
 Thursdays, which had no 0DTE before 2022-11-14. m for the options arm: H2 2 of 4, H3 2 of 5,
 Q7 20 setup × category cells. No geopolitical category reaches 30 sessions on the options
 arm; all are reported only, none placebo-tested.
+
+## 21. Step 5 record: options holdout replay, and two years outside the design, 2026-11-09
+
+Options 2023 (the pre-registered C2 holdout, §6/13.6) replayed, 12 months rc 0. **Not joined,
+not read.** The same console exposure as §19 happened again: the owner pasted the heartbeat
+output, so the assistant saw about one in five 2023 holdout sessions' daily nets,
+unaggregated, with no event calendar beside them. Logged, not hidden.
+
+Options **2024 and 2025 were also replayed** (12 months each, rc 0). Neither year is in any
+pre-registered table: the options design is discovery 2020–2022 and holdout 2023 only
+(13.6, 14.8). They stay on disk unread. If they are ever used, it is by a dated amendment
+written before the read, with its own decision rule, never as an extension of C2 after
+C2's result is known. The 2024-06 chunk stalled on one session for about 30 minutes
+(the terminal hanging, the same failure the live lab sees) and then completed; the chunk's
+RUN.json is ordinary.
