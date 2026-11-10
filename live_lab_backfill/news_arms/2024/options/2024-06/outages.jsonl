@@ -1,0 +1,6 @@
+{"seq":3643,"ts":"2024-06-21T09:44:02","kind":"feed","detail":"ReadTimeout('timed out')","path":"/option/history/quote","provenance":"BACKFILL"}
+{"seq":3648,"ts":"2024-06-21T09:45:02","kind":"feed","detail":"upstream recovered after 67s and 2 failed call(s)","path":"__recovered__","provenance":"BACKFILL"}
+{"seq":3649,"ts":"2024-06-21T09:45:02","kind":"feed","detail":"ReadTimeout('timed out')","path":"/option/history/quote","provenance":"BACKFILL"}
+{"seq":3690,"ts":"2024-06-21T09:53:02","kind":"feed","detail":"upstream recovered after 1307s and 20 failed call(s)","path":"__recovered__","provenance":"BACKFILL"}
+{"seq":3693,"ts":"2024-06-21T09:54:02","kind":"feed","detail":"ReadTimeout('timed out')","path":"/option/history/quote","provenance":"BACKFILL"}
+{"seq":3714,"ts":"2024-06-21T09:56:02","kind":"feed","detail":"upstream recovered after 453s and 7 failed call(s)","path":"__recovered__","provenance":"BACKFILL"}
