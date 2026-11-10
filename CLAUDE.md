@@ -152,6 +152,16 @@ So:
   Power settings fix in `context_recovery/19` phase 0 / this file's commit history.
 - The live lab machine travels in a car. Network drops and host suspends are expected and
   are guarded, not bugs.
+- **2026-11-09 reads COLLECTED in the ledger but was PARTIAL.** The host slept 14:11–15:30
+  ET, both arms caught up ~80 minutes from history with entries frozen, and no host_suspend
+  row was written, so the label rule saw no gap. The ledger ranks a day by its best state,
+  so the row is not corrected in place; it is corrected here. Fixed for later days in
+  `69a8308` (a runner's `caught_up` event now counts as a gap). The 16:14 commit also
+  terminated both arms with every position open because the terminal hung after the sleep;
+  the 19:01 stranded settle reconstructed them (options +$11,350.55 on 18, shares
+  +$2,874.26 on 40, 13 of them estimated at the 15:55 flatten). Reconstructed, not live.
+  Suspends so far: Nov 2, Nov 5, Nov 9 — three of six sessions. The lid `powercfg` fix
+  (`context_recovery/19`) has still not been run.
 
 ## STILL OPEN
 
