@@ -68,7 +68,7 @@ from .feed import FeedOutage, _parse_ts
 from .catchup import CatchUp
 from .levels_live import LevelsLoader
 from .walkforward import sessions_between
-from .nyse_calendar import is_closed
+from .nyse_calendar import early_close, is_closed
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "live_lab_backfill" / "options"
@@ -355,7 +355,8 @@ def run(start: dt.date, end: dt.date, symbols=None, out=None, arm: str = "option
     """Replay every session in [start, end] (or exactly `dates`) through the real runner of
     `arm`. `skipped` (a list the caller owns) receives {"date", "reason"} for every day not
     replayed: "holiday" (zero bars on a calendar closure), "half_day" (fewer than
-    MIN_RTH_BARS bars). A weekday with zero bars that the NYSE calendar says was open, or a
+    MIN_RTH_BARS bars on a scheduled early close). A weekday with zero bars that the NYSE
+    calendar says was open, a short day the calendar does not list as an early close, or a
     failed warm-up, raises SessionLost.
 
     Each session starts clean -- warmup at 09:07, the six lines at 09:31, every minute from
@@ -400,6 +401,9 @@ def run(start: dt.date, end: dt.date, symbols=None, out=None, arm: str = "option
                 if n_bars == 0 and not is_closed(day):
                     raise SessionLost(f"{day}: zero bars on a regular weekday; the feed is wrong, "
                                       f"not the calendar")
+                if n_bars > 0 and not early_close(day):
+                    raise SessionLost(f"{day}: only {n_bars} bars on a day the calendar says was a "
+                                      f"full session; the feed is wrong, not the calendar")
                 reason = "holiday" if n_bars == 0 else "half_day"
                 skipped.append({"date": day.isoformat(), "reason": reason, "bars": n_bars})
                 print(f"  {day}: {reason} ({n_bars} bars), skipped", flush=True)

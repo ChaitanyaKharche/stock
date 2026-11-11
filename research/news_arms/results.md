@@ -1,8 +1,8 @@
 # news_arms — discovery results (shares 2018–2022, options 2020–2022)
 
 Status: **discovery read 2026-11-10; the 24 lost shares sessions re-replayed and folded in
-2026-11-11. Exploratory. Holdout not read. Gate 2: FAIL on the first pass
-(`audit_results.md`, 27 rows), every item corrected in place; second pass pending.**
+2026-11-11. Exploratory. Holdout not read. Gate 2: FAIL on the first pass (27 rows) and on
+the second (three sentences, corrected in place); third pass pending (`audit_results.md`).**
 Every number here is in `analysis_shares_discovery.json`, `analysis_options_discovery.json`,
 `analysis_q6_discovery.json`; the tables are rendered from those files by
 `trade_analysis/news_arms/report.py` into `results_tables.md` and are not typed by hand.
@@ -16,7 +16,9 @@ holdout replay. All 24 were re-replayed on the laptop on 2026-11-10 into fill-in
 (`2022/shares/fill-a`, `2024/shares/fill-a`), at the same config hash, and the analysis was
 rerun. **Shares discovery now rests on 1,249 of 1,249 regular sessions.** What moved: Fed
 days went from 38 to 39 sessions and from −0.282 σ to −0.299 σ; release days from −0.045 to
-−0.039 σ; one more Q7 cell passes BH; nothing changed sign or status. The replay cannot lose
+−0.039 σ, and their placebo verdict under the pre-registered rule went from "effect" to
+"chance"; one more Q7 cell passes BH; no effect changed sign and no tested/reported status
+changed. The replay cannot lose
 a session silently any more: a weekday with no bars that the NYSE calendar says was open
 raises and fails the chunk (`backfill.SessionLost`, tests fail on the previous code), every
 skip is recorded in `RUN.json` with its reason, and the analysis lists every open weekday
@@ -73,7 +75,8 @@ resampling whole sessions (day-clustered); *placebo rank* is where the real effe
 Both arms lose on an ordinary day. "Worse on news" below means "loses more", never "stops
 winning". 270 options sessions, Tuesdays and Thursdays without a 0DTE expiry before
 2022-11-14, are excluded as pre-registered in 14.11; 39 Tuesdays and Thursdays that did have
-an expiry (quarter ends, and every one from 2022-11-15) are kept. Shares: 10 early-close half
+an expiry are kept: 13 from 2022-11-15 on, 21 next to a weekday market holiday (the
+Mon/Wed/Fri expiry moved), and 5 quarter ends. Shares: 10 early-close half
 days are dropped by rule (listed in the JSON), no other exclusion.
 
 ## Findings, each with its four verdicts (13.9)
@@ -131,8 +134,8 @@ Post hoc (not pre-registered, labelled): within the low-range regime, Fed days a
 - **Effect size:** −0.30 σ, **−$958 a day on 39 days = −$37,400 over five years**, −6.4 bp
   per trade on Fed days.
 - **Replay fidelity:** arm acceptance PASS. Among the per-setup cells inside it (Q7),
-  VWAP_Reclaim (79% one-sided replay) is second by p-value and ORB_5min (72%) seventh of
-  fifteen; the arm-level number does not depend on either.
+  VWAP_Reclaim (79% one-sided replay) is second by p-value and ORB_5min (72%) sixth of the
+  14 tested Fed-day cells; the arm-level number does not depend on either.
 - **Practical usefulness:** information set **(i)**: "a Fed decision is due today" is known
   before the open. Eight sessions a year. A rule "shares arm stands aside before 14:00 on
   Fed days" would have forgone about $8,900 a year of raw morning loss, of which about

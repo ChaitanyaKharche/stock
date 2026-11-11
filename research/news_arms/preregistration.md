@@ -685,3 +685,13 @@ unscheduled 135 → 137, −0.349 → −0.334 σ; NFP 58 → 60, +0.062 → +0.
 still empty. Options unchanged. Exposure: the fill-in console, pasted by the owner, showed
 the 24 recovered sessions' daily nets, one of which (2024-10-01, +$2,592.69) is a holdout
 session; seen unaggregated, logged here.
+
+**23.1 Gate 2 second pass (2026-11-11): FAIL on three sentences only;** every number in
+`results.md` reproduced by the auditor's own loader. Corrected: ORB_5min's rank among Fed-day
+cells, the composition of the 39 kept Tue/Thu options sessions (13 from 2022-11-15, 21 next
+to a weekday holiday, 5 quarter ends), and "nothing changed status" (the release-days placebo
+verdict did change). Two guard gaps the auditor flagged are closed: a day with some bars but
+fewer than `MIN_RTH_BARS` that the calendar does not list as an early close now raises
+`SessionLost` (was filed as a half day), and `holdout_allowed` reads only the LAST verdict
+line of `audit_results.md`; the lock test asserts the lock state equals that line. Third pass
+requested.

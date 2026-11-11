@@ -578,9 +578,9 @@ def exclusions(rows: list[dict], window, chunks: list[dict], no_0dte=()) -> dict
         if not is_closed(d) and iso not in have:
             if early_close(d):
                 half.append(iso)
-            elif iso in recorded:
+            elif iso in recorded and recorded[iso] != "half_day":
                 rec.append({"date": iso, "reason": recorded[iso]})
-            else:
+            else:                                             # a "half_day" skip on a full day is a loss
                 lost.append(iso)
         d += dt.timedelta(days=1)
     return {"open_days_in_window": len(rows) + len(half) + len(lost) + len(rec),
@@ -654,7 +654,8 @@ def holdout_allowed() -> bool:
     p = OUT / "audit_results.md"
     if not p.exists():
         return False
-    return any(line.strip() == GATE2_LINE for line in p.read_text(encoding="utf-8").splitlines())
+    lines = [ln.strip() for ln in p.read_text(encoding="utf-8").splitlines() if ln.strip()]
+    return bool(lines) and lines[-1] == GATE2_LINE            # the LAST verdict line, nothing earlier
 
 
 def main(argv=None) -> int:

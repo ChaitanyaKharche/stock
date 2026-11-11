@@ -1,159 +1,82 @@
-# news_arms — gate 2 audit of the discovery report
+# news_arms — gate 2 audit, second pass
 
-Auditor, 2026-11-10. Audited: `results.md`, `results_tables.md`, `analysis_{shares,options,q6}_discovery.json`,
-`counts_{shares,options}_discovery.json`, `analyze.py`, `analyze_test.py`, `join.py`, `events.py`, raw replay
-chunks under `live_lab_backfill/news_arms/2018–2022/`. Nothing in `results.md` or the code was edited.
+Auditor, 2026-11-11, at commit `50ca53b`. First pass (2026-11-10, 27 rows, FAIL) is recorded in
+`preregistration.md` §22 and in git history of this file. Nothing in `results.md` or the code was
+edited by the auditor.
 
-**In one sentence: gate 2 fails. The holdout lock is already open, and three of the report's explanations are
-contradicted by its own data. The core numbers are correct: every headline effect, CI and dollar figure
-reproduced independently from the raw replay files.**
+**In one sentence: every number in the report now reproduces and every first-pass defect is fixed,
+but three sentences in results.md are still false, so gate 2 fails again. The fix is three text
+edits with no rerun.**
 
-## Verdict table
+All the statistics pass: sessions, σ (one standard deviation of a day's net), B0 (the
+all-sessions average day), every effect, CI (95% interval), placebo rank, block CI, dollar
+conversion and per-year figure I re-derived from the raw replay files with my own loader. What
+fails is wording:
 
 | # | Claim | Verdict | Reason |
 |---|---|---|---|
-| 1 | Holdout guard: "`analyze --set holdout` refuses until this file carries [the gate-2 pass token]" (results.md:207-208) | **FAIL** | `holdout_allowed()` is a substring test (analyze.py:556), and results.md:208 itself contains that literal token. It returns **True today**, so the holdout can be read before any audit. |
-| 2 | F3: "that is the volatility regime, not the shock"; "the regime column already captures this" (results.md:27-32, 128-129) | **FAIL** | Removing each regime's mean leaves −0.362 σ of the −0.379 σ. Within the high regime, shock days are −0.75 σ *against high-regime days*. 2020 carries it, not the regime. |
-| 3 | F1: the placebo centre sits above B0 "because the runners lose less on Mondays and Fridays" (results.md:69-71, 192-194) | **FAIL** | Year×weekday mix explains +0.012 of +0.042 σ (shares) and +0.020 of +0.080 σ (options). The rest is the pool excluding the condition's own losing days within each stratum. |
-| 4 | "Missing shares sessions are half days dropped by rule" (results.md:185) | **FAIL** | 23 regular 2022 sessions are missing because of vendor HTTP 500s at warm-up, not half days. They include FOMC 2022-11-02 and NFP 2022-08-05 and 2022-10-07. No list, no count, chunk rc 0. |
-| 5 | Fed days "same sign in all five years" / "F2 is every year" (results.md:100, 200; by-year column at :85) | **FAIL** | The by-year column is the absolute mean z, not the effect. Against B0, 2020 is **+0.041 σ**, and +0.177 σ against 2020's own mean. 4 of 5 years are negative. |
-| 6 | "−0.16 bp of $10,000 notional" per average trade (results.md:51, 102) | **FAIL** | B0 is −$1.59 per trade, which is **−1.6 bp**. It is off by 10×, so "−6.1 bp vs −0.16 bp" overstates the Fed-day gap 38× instead of 3.8×. |
-| 7 | "stands aside before 14:00 on Fed days … avoided … about $7,000 a year" (results.md:106-108) | **FAIL** | $6,860/yr is the *whole-day excess*. Standing aside before 14:00 removes the raw pre-14:00 net of **−$8,400/yr**, of which the excess over an average day is **−$6,300/yr**. |
-| 8 | Minor misstatements (results.md:55, 52, 151, 152-153, 184) | **FAIL (wording)** | "every Tue/Thu" (26 Tue/Thu before 2022-11-14 were kept: real holiday-shifted and quarter-end expiries); "−$4.8" is −$4.86; "fourteen" setups is 15; ORB_5min is 7th of 14 on Fed days, not "near the top"; "17 shares chunks" is **49**. |
-| 9 | F2 Fed days, shares −0.282 σ [−0.55, −0.01], 38 sessions, BH fail in family of 4, candidate only | **QUESTIONABLE** | Reproduced exactly. Half of it is 2022 (without 2022: −0.156 σ [−0.304, −0.001]). A 10-day block bootstrap moves the upper bound to 0.000. One 2022 FOMC session is missing to the outage. |
-| 10 | All shares discovery numbers (σ, B0, every cell) | **QUESTIONABLE** | Computed on 1,226 of 1,249 regular sessions. The 23 missing ones cluster in Jul–Nov 2022, a high-volatility stretch, so they are not missing at random. Direction of bias unknown. |
-| 11 | Placebo ranks / "selection / chance" verdicts, every table | **QUESTIONABLE** | Implemented as pre-registered (13.3), but excluding the condition's sessions from the pool biases the null *away* from the real effect, which favours "effect". Scheduled flips to chance when the pool includes them (0.965→0.852 shares, 0.9998→0.925 options). FOMC holds (0.961). |
-| 12 | F3 downgrade and its post hoc within-regime split | **QUESTIONABLE** | The post hoc label is adequate. But the pre-registered §2 rule already marks shares shock days **"unstable"**: positive vs B0 in 2018, 2019 and 2021, positive in the low tercile. That label is never applied. financial_stress supplies 16 of the 114 days; without it −0.217 σ. |
-| 13 | §2 "unstable" rule applied to every table | **QUESTIONABLE** | Not implemented anywhere (no code, no output). `by_year`/`by_regime` (analyze.py:326-331) are absolute means, so they cannot detect an effect sign flip. |
-| 14 | "a test asserts none [of the conditioning columns] is a price or P&L field" (results.md:197-198) | **QUESTIONABLE** (as evidence) | analyze_test.py:37-40 checks names in a tuple (analyze.py:58) that no code reads. It would pass on a renamed price column, so it is decoration. The lookahead property itself passes on inspection (row 22). |
-| 15 | Audit trail: `repo_sha` `6e91528` in both analysis JSONs | **QUESTIONABLE** | `analyze.py` does not exist at `6e91528`; the run used uncommitted code. A re-run on HEAD reproduces both JSONs bit-for-bit, so the numbers are unaffected. |
-| 16 | Q3 "unscheduled_surprise" definition | **QUESTIONABLE** | analyze.py:351-352 also drops 21 shares (11 options) surprise sessions that carry a release. This is not in §6 Q3. Small effect (−0.349 σ with them, −0.379 σ without). |
-| 17 | B0 and σ: shares 1,226 sessions / 222,363 trades / σ $3,197 / B0 −$288 (median −$683); options 482 / 9,943 / $1,032 / −$100 (−$214) | **PASS** | Reproduced from the raw daily and trade files by an independent loader. |
-| 18 | F1 calendar-release days: shares −0.045 σ [−0.16, +0.08] = −$143 [−$510, +$250]; options −0.091 [−0.26, +0.09] = −$94 [−$270, +$90]; BH fail; "−0.8 bp per $10,000 trade"; 46 sessions/yr | **PASS** | Reproduced (the CI-based null, not the placebo explanation). |
-| 19 | Implementation = pre-registered statistic (effect def., σ ddof=1, session bootstrap 3,000 / seed 20260828, placebo 5,000 matched by year×weekday with exclusion, rank rule 14.Q6, minimums 30/50, BH q=0.10 per table, Q7 zero-fill with arm σ, shortlist rule) | **PASS** | Read line by line and reproduced numerically. No placebo needed the stratum fallback. Q7 cell PDH_PDL_FailedBreak\|FOMC −0.0562 σ / −$179.5 reproduced. |
-| 20 | Families identical to the pre-committed counts (Q7 66 / 20; H3 4 / 2) | **PASS** | Set equality, not count: Q7 sets equal in both arms, Q1 tested {CPI, FOMC, NFP, PCE} / {NFP, PCE}, descriptive+placebo {trade_tariff} / {}, every cell's (sessions, trades) identical. |
-| 21 | 14.11: 270 no-0DTE sessions excluded before σ, B0 and every table; all Tue/Thu before 2022-11-14 | **PASS** | 270 = 132 Tue + 138 Thu, last 2022-11-10, 94/95/81 by year. My σ reproduces only with them dropped first (join.py:90-100). |
-| 22 | No conditioning on the session's own prices (15.4); regime from trailing-20 prior sessions; cuts = discovery terciles | **PASS** | Conditions come from event files, regime, year and weekday only. `med20_range_bp` = median of the 20 *prior* sessions (0/2,676 mismatches; 1,534 mismatches if today is included). Cuts 111.2118 / 184.4911 reproduced as terciles of 1,249 discovery QQQ days. |
-| 23 | F4 (CPI, NFP, GDP_ADV, PCE both arms), F5 (one BH pass, shortlist empty), F6 (first-60: −$186 [−$577, +$215]; −$88 [−$276, +$109]), F7 (no divergence) | **PASS** | All reproduced. F6 recomputed independently (different seed: [−$585, +$210], [−$276, +$102]). |
-| 24 | Fed-day timing: loss before 14:00, "a morning loss" (Q5, 14.4) | **PASS** | Pre/post follows 14.4 (14:00 boundary, entry-based; no session mixes kinds within a category). Of the −$902 excess, −$831 is pre-14:00 and −$592 is 09:30–10:30. Pre-14:00-entered trades realised −$49.5k before 14:00 and +$7.5k after, so this is not a path-vs-endpoint error. |
-| 25 | "−$34,300 over five years"; −$902; −6.1 bp vs −0.5 bp; 195 vs 180 trades; win/day 29% vs 39%; options stops 41% vs 35%, RoP −5.4% vs −0.2%, twin −7.9 vs +2.1 bp; low-regime Fed −0.21 [−0.41, −0.01]; F3 table cells | **PASS** (transcription) | 902 × 38 = $34,276. All the others match the JSON. The F2 caveats (row 9) still apply. |
-| 26 | Re-runs give identical JSON | **PASS** | Re-ran `run()` for both arms. Identical apart from `generated` / `command` / `repo_sha`. |
-| 27 | No holdout file read | **PASS** (code path) | Discovery chunk lists stop at 2022-12-31. `load()` opens only discovery years. No holdout join or analysis file exists. Reads outside the code path cannot be proven absent; the console exposure in §19/§21 is already logged. |
+| 1 | "ORB_5min (72%) seventh of fifteen" by p-value on Fed days (results.md:134) | **FAIL (wording)** | After the fill-in it is **6th of 14** tested Fed-day cells (order: PDH_PDL_FailedBreak, VWAP_Reclaim, Crabel_Stretch, VWAP_2sigma_Fade, Six_Lines_NoCap, ORB_5min). "Seventh" was my first-pass figure on 38 sessions and went stale. |
+| 2 | "39 Tuesdays and Thursdays that did have an expiry (quarter ends, and every one from 2022-11-15)" (results.md:75-76) | **FAIL (wording)** | 13 are from 2022-11-15 on. Of the 26 before, **21 sit next to a market holiday** (for example 2020-01-21 after MLK Day, 2020-04-09 before Good Friday) and only 5 are month or quarter ends. |
+| 3 | "nothing changed sign or status" after the fill-in (results.md:18-19) | **FAIL (wording)** | The shares release-days placebo verdict changed from "effect" (0.965) to "chance" (0.942), as results.md:94 and §23 themselves say. The summary of what moved must not omit it. |
+| 4 | F2 Fed days, shares: 39 sessions, −0.299 σ [−0.54, −0.03], p 0.030, BH fail (bar 0.025, family of 4), −$958/day, −$37,400 over five years; candidate only | **QUESTIONABLE** | Reproduced exactly. Without 2022: −0.156 σ [−0.304, −0.001]. 2020 is +0.18 σ against its own year. Fails the pre-registered correction. Labelled exploratory, which is correct. |
+| 5 | Placebo ranks, pre-registered pool (13.3) | **QUESTIONABLE** | Reproduced. The design is biased toward "effect". The in-pool sensitivity now sits beside every rank and the text explains the bias correctly (results.md:88-94, 239-241). Quote only together with the in-pool rank. |
+| 6 | F3 geopolitical surprise days, shares −0.334 σ, 137 sessions, unstable, 2020-driven, descriptive | **QUESTIONABLE** | Reproduced. The interpretation is now right. It remains salience-selected, descriptive and unstable by §2. |
+| 7 | The new replay guard (`backfill.SessionLost`) "cannot lose a session silently any more" (results.md:20-23) | **QUESTIONABLE** | Zero bars or a failed warm-up raise. But a regular weekday served with *some* bars below `MIN_RTH_BARS` is filed as a "half_day" skip (backfill.py, `reason = "holiday" if n_bars == 0 else "half_day"`), and `analyze.exclusions` counts a recorded skip as not lost. Latent: no current chunk has a recorded skip, and the calendar check finds 0 gaps. |
+| 8 | Holdout lock shut: whole line in audit_results.md | **PASS** | `holdout_allowed()` returns False and `main --set holdout` returns 2 (run). Tokens inside prose or in results.md do not open it. Two caveats in the detail below, neither blocking. |
+| 9 | Shares 1,249 sessions / 226,678 trades / σ $3,199 / B0 −$286 (median −$682) / −$1.57 = −1.6 bp per trade; options 482 / 9,943 / $1,032 / −$100 / −$4.9 per contract | **PASS** | Independent loader: σ $3,198.66, B0 −$285.57, median −$682.31, −$1.574 per trade; options unchanged. |
+| 10 | Fill-in: 23 discovery sessions back, 0 lost, not double-counted | **PASS** | 1,259 open weekdays − 10 rule half days = 1,249 replayed. `load_replay` raises on a duplicate (tested by passing fill-a twice). 0 duplicate trade keys. 0 original-chunk trades on fill-in dates. Same hash. Runner code unchanged between `c808dbd` and `e750a4c` (only backfill, autostart and calendar files differ). |
+| 11 | NYSE calendar logic | **PASS** | Rule holidays, observed-day rule, Saturday New Year, Juneteenth from 2022, Bush and Carter closures, early closes. Its test checks the rule against every date in the feature file 2018–2025, both directions. |
+| 12 | F1 release days: shares 234, −0.039 σ [−0.15, +0.08], block [−0.14, +0.09], −$123 [−$495, +$257], placebo 0.942 / in-pool 0.815, unstable; options 110, −0.091, −$94, 1.000 / 0.925 | **PASS** | All reproduced. My placebo seed gives 0.938 / 0.821 and 0.999 / 0.920. −0.7 bp per trade and 47 sessions a year check. |
+| 13 | F2 detail: block CI [−0.56, −0.03]; single-category −0.273 (n 34); by year −0.29 / −0.09 / +0.18 / −0.40 / −0.86; 2022-11-02 −$3,248; win/day 28% vs 40%; −6.4 bp vs −0.5 bp (4× average); 195 vs 180 trades; options stops 41 vs 35%, RoP −5.4 vs −0.2%, twin −7.9 vs +2.1 bp; low-regime −0.21 [−0.41, −0.01]; stable by §2 | **PASS** | All reproduced from raw. |
+| 14 | Fed timing: pre-14:00 −$1,145 vs −$272 per session, excess −$874; $8,900 / $6,800 / $7,500 a year; −$7.11 (6,283 trades) vs −$2.87 (1,331); "lost in the morning" | **PASS** | Reproduced: −$8,935, −$6,814, −$7,472 a year. Pre-14:00-entered trades realised −$50.6k before 14:00 and +$6.0k after, so the losses are not booked after the announcement. 09:30–10:30 carries −$646 of the −$958 excess. |
+| 15 | F3 numbers: 137, −0.334 [−0.57, −0.12], block [−0.66, −0.07], −$1,069, 1.000 / 1.000; low +0.11, mid −0.26, high −0.67 [−1.08, −0.26]; without 2020 −0.35 [−0.78, +0.10] (35); by year −0.05 / +0.06 / −0.99 / −0.02 / −0.34; financial_stress 2020 −3.40; release-free variant 115 / 51, −0.381 / −0.106; options row; 37 in-session + 19 unknown break times | **PASS** | All reproduced. |
+| 16 | F4 (NFP +0.100, 60 sessions, and the rest), F5 (66 / 20 cells; BH passes PDH −0.059 σ / −$189 and VWAP +0.049 σ / +$157; shortlist empty), F6 (−$319 vs −$155, −$164 [−$554, +$234]; options −$88), F7 (no divergence) | **PASS** | All reproduced. |
+| 17 | §2 "unstable" rule, by-year and by-regime effects against each stratum's own B0 | **PASS** | `_unstable` and `_by` implement §2 as written. Flags match my hand computation for every cell quoted. |
+| 18 | Tested families equal the pre-committed counts | **PASS** | Set equality on the post-fill-in run: Q7 66 / 20; Q1 {CPI, FOMC, NFP, PCE} / {NFP, PCE}. The counts files predate the fill-in (1,226 sessions); the 23 added sessions changed no cell's tested status. |
+| 19 | No holdout file read by the discovery code path; 2024 fill-a not in discovery | **PASS** | Discovery chunk lists end at 2022 (50 shares, 36 options); the only fill-in listed is `2022/shares/fill-a`. One holdout daily net (2024-10-01) was seen on the console; it is logged in §23 and results.md:259-261. |
+| 20 | No conditioning on the session's own prices (15.4); regime trailing-20, discovery terciles | **PASS** | Join rows (`build_join`) carry no price field, so no condition can read one. Regime re-verified in pass one. |
+| 21 | JSON reproducible at its recorded sha | **PASS** | `repo_sha` `ce78ac4`. Code is identical to HEAD `50ca53b` (only JSON and tables differ). The test suite passes. |
 
-## FAIL detail
+## FAIL detail and the fix
 
-**1. Holdout guard is open.** analyze.py:553-556 returns True if the gate-2 pass token (the words GATE 2, colon, PASS) appears anywhere in
-results.md, and results.md:208 contains it while describing the guard. Verified:
-`python -c "from trade_analysis.news_arms import analyze as A; print(A.holdout_allowed())"` prints `True`.
-The test (analyze_test.py:171-175) runs against an empty `tmp_path`, never the committed file, so it passes
-on the bug. Violates §2, §11 step 6, 14.3. *Fix:* make the guard require a dedicated anchored line (for example
-an anchored whole-line match written only by the auditor, or the verdict line at the end of this file, matched as a whole line), reword results.md:208 so it
-does not contain the token, and add a test asserting `holdout_allowed()` is False on the committed results.md
-at this commit. That test must fail on the current code.
+Three sentence edits in results.md, no rerun needed:
 
-**2. F3 mechanism is wrong.** The JSON's own within-regime split (`q3.unscheduled_surprise.post_hoc_within_regime.high`)
-is −0.750 σ [−1.26, −0.28]: shock days relative to *other high-regime days*. That is the shock, not the regime.
-Independent check: subtracting each regime's mean z (low −0.019, mid −0.031, high −0.228) moves the overall
-shock effect only from −0.379 to −0.362 σ. What does carry it: 2020. Within high, without 2020, the effect is
-−0.307 σ [−0.79, +0.22] (37% of high-regime shock days are 2020), and financial_stress (March 2020) supplies
-16 of 114 sessions. *Fix:* F3 reads "unstable by the pre-registered §2 rule (sign flips in 3 of 5 years and
-across terciles); carried by 2020; not a candidate". Delete "regime, not the shock" and "a shock rule would
-add almost nothing to a regime rule". The verdict "not a candidate" stands, for that reason.
+- **:134**: "ORB_5min (72%) sixth of the fourteen tested Fed-day cells".
+- **:75-76**: "39 Tuesdays and Thursdays that did have an expiry (21 next to a market holiday and 5
+  month or quarter ends before the cut-over, 13 from 2022-11-15)".
+- **:18-19**: add "the shares release-days placebo verdict moved from 'effect' to 'chance'" to the
+  list of what moved, and drop "or status".
 
-**3. F1 placebo explanation is mostly wrong.** Decomposition (my code, matching the JSON's mean ±0.002):
+A third pass need only check these three lines and that no number moved.
 
-| | shares | options |
-|---|---|---|
-| placebo centre as run (pool excludes the condition) | +0.041 | +0.080 |
-| year×weekday mix alone (pool includes the condition) | +0.012 | +0.020 |
-| left over = within-stratum exclusion | +0.029 | +0.060 |
-| rank → verdict, as run | 0.965 → effect | 0.9998 → effect |
-| rank → verdict, pool includes the condition | 0.852 → chance | 0.925 → chance |
+## QUESTIONABLE detail: the caveats to repeat verbatim
 
-Wednesdays look bad mostly *because of* the Fed and CPI days on them: all Wednesdays −0.123 σ, non-release
-Wednesdays −0.062 σ. Removing the release days from the pool leaves the better days to match against. The
-"96th/100th percentile on the losing side" (results.md:68-69) is mostly this artefact. *Fix:* replace the
-explanation with the decomposition above and state that the scheduled placebo verdict is not robust to the
-pool exclusion. The F1 conclusion (CI includes zero, no difference) is unaffected and passes (row 18).
+- **Fed days (row 4):** "Exploratory. It fails the pre-registered multiple-testing correction.
+  Without 2022 the interval barely excludes zero, and 2020 goes the other way. Four of five years
+  are negative." This changes only with a separately pre-registered forward test. There is no Q7
+  shortlist row to carry it into the holdout.
+- **Placebo (row 5):** "The pre-registered placebo favours 'effect' by construction. Read it
+  beside the in-pool rank."
+- **Shock days (row 6):** "Descriptive. Unstable by §2. Mostly 2020. Salience-selected list."
+- **Replay guard (row 7):** the fix is to raise `SessionLost` when `n_bars < MIN_RTH_BARS` and the
+  calendar says the day is neither closed nor an early close. `exclusions` should also count a
+  "half_day" skip on a non-early-close day as lost. This matters for any future replay, not for
+  the current numbers.
 
-**4. 23 sessions missing, misdescribed.** Missing from shares discovery: 2022-05-13; 07-15, 18, 19, 20, 21, 22,
-25; 08-04, 05, 08, 09; 10-03 to 10-12 (8 sessions); 11-01, 02, 03. Each has a `warmup FeedOutage … HTTP 500`
-in `outages.jsonl` and no daily file, and the chunk still exited rc 0. Includes FOMC 2022-11-02, NFP 2022-08-05,
-NFP 2022-10-07, and geopolitical 07-25, 08-08, 10-05, 10-07. The 10 thin half days are the only legitimate
-drops. Violates 14.1 (exclusions counted and listed) and is the project's standard bug class: a silent gap
-with no error. *Fix:* re-replay the 23 sessions and re-run, or, if that is impossible, list them by
-date with the reason in results.md and the JSON, and correct :185.
+## Lock caveats (row 8, not blocking)
 
-**5. "Every year negative" is false.** Effect vs B0 by year: 2018 −0.246, 2019 −0.055, **2020 +0.041**, 2021 −0.372,
-2022 −0.803. The column at results.md:85 (report.py:86, `z_mean`) is the absolute mean z of Fed days that year,
-and every one is negative only because the arm loses on an ordinary day (B0 −0.090). Same issue for the options
-by-year column. *Fix:* render the by-year and by-regime columns as condition − B0 (or condition − that year's
-mean) and restate: "4 of 5 years negative; 2022 is −0.80 σ".
+- `analyze_test.py:174` asserts the lock is shut on the committed files, so it will **fail the
+  moment this file carries a pass line**. Fix: assert that the lock state equals this file's final
+  verdict line.
+- `holdout_allowed()` opens on a pass line *anywhere* in this file, even if a later line says FAIL.
+  Fix: read only the last non-empty line.
 
-**6. −0.16 bp is −1.6 bp.** 222,363 trades, −$288.48 × 1,226 sessions gives −$1.59 per trade on $10,000. The other
-bp figures (−6.1, −0.5, −0.8) are right. *Fix:* correct :51 and :102.
+## Not run
 
-**7. The $7,000 stand-aside figure measures something else.** Per Fed session: pre-14:00 net −$1,105 vs −$275 on
-all sessions. A stand-aside rule forgoes the raw −$1,105 × 38 / 5 ≈ **$8,400/yr**; the Fed-specific excess
-is −$831 × 38 / 5 ≈ **$6,300/yr**. $7,000 is the whole-day excess. *Fix:* quote one of these two, named,
-still as an association (13.2).
-
-**8. Wording.** Correct :55 ("all 270 excluded are Tue/Thu; 26 Tue/Thu before 2022-11-14 had a 0DTE and are
-kept"), :52 (−$4.9), :151 (fifteen), :152-153 (VWAP_Reclaim is 2nd by p on Fed days; ORB_5min is 7th of 14),
-:184 (49 shares chunks).
-
-## QUESTIONABLE detail, with the caveat to repeat verbatim
-
-**9. Fed days (F2).** Correct as reported: −0.282 σ, CI [−0.554, −0.008], p 0.043, BH threshold 0.025 in the
-committed family of 4, single-category −0.254 [−0.52, +0.03] (n 33), sessions are the bootstrap unit (one row
-per session, so day-clustering is real). Labelled exploratory/candidate, which is the right label. Fragility
-measured: drop 2022 → −0.156 σ [−0.304, −0.001]; three 2022 days (01-26, 06-15, 09-21) are each −2.1 to −2.6 σ;
-moving-block bootstrap L = 10 gives [−0.541, 0.000], L = 20 gives [−0.557, +0.022]; one 2022 FOMC session is
-missing (row 4). Options: n = 22, underpowered, and the drop-2022 effect is −0.084 σ.
-*Caveat:* "Exploratory; fails the pre-registered multiple-testing correction; about half of it is 2022, and
-without 2022 the interval barely excludes zero; 4 of 5 years negative, not 5."
-*What would change it:* the holdout. There is no Q7 shortlist row for it, so only a separately pre-registered
-forward test, as results.md already says.
-
-**10. Missing sessions.** *Caveat:* "Shares discovery is 1,226 of 1,249 regular sessions; 23 mid/late-2022
-sessions were lost to a vendor outage and are not in σ, B0 or any cell." *Change:* row 4 fix.
-
-**11. Placebo design.** Excluding the condition's sessions shifts the placebo centre by
-Σ_s (k_s/K)·p_s·(mean_non − mean_cond) in each stratum s, always against the real effect's sign, which
-makes "effect" verdicts easier to reach. Implemented exactly as 13.3 requires, so this is a design limitation, not
-an implementation defect. *Caveat:* "Placebo ranks are anti-conservative by construction; the scheduled
-verdict reverses when the condition's sessions stay in the pool." *Change:* report both pools, by dated
-amendment before the holdout read.
-
-**12–13. Instability rule.** §2: "a result whose sign flips across terciles or across ≥ 3 of the years is
-reported as unstable". Not computed. Applied by hand (effect vs B0): shares shock days are unstable (years +, +, −, +, −;
-terciles low +0.118, mid −0.216, high −0.887); shares scheduled is unstable across terciles (mid +0.170);
-shares FOMC is stable (all terciles negative, one year flips). *Change:* implement the rule on effects and
-print the label.
-
-**14. 15.4 test.** *Change:* derive every mask in `q1`/`q3`/`q5`/`q7` through a function that reads only
-`CONDITIONING` keys and fails on any other key, and show the test fails when a price column is introduced.
-
-**15. repo_sha.** *Change:* refuse to write the JSON from a dirty tree, or record `git diff` hash.
-
-**16. Q3 definition.** *Caveat:* "unscheduled_surprise excludes surprise days that also carry a release (21
-shares, 11 options) and includes financial_stress rows (16 / 12)." *Change:* state it in the table.
-
-## Checks not run, or not runnable
-
-- **Bias direction of the 23 missing sessions:** unknowable without replaying them. Their P&L does not exist.
-- **Whether any holdout file was read outside the code path:** file access times are not reliable on this host.
-  I checked the code path and file inventory only.
-- **Acceptance (§18) re-verification:** out of scope for gate 2 and not recomputed. results.md's ρ 0.932 / 0.953
-  is quoted from §18, not reproduced here.
-- **`levels_unavailable` (102), `tick` (12), `flatten_after_close` (28) outages on kept shares sessions:**
-  counted, not traced to setups. They can thin Six_Lines / PDH_PDL trades on specific days without dropping
-  the session.
-- **Power / MDE for C1, C2:** holdout-only. Not applicable to discovery.
-- **Cross-arm dependence (Q6):** different windows and session sets per arm; no joint resampling exists, so
-  the "difference" column has no CI. Only the pre-registered "both CIs exclude zero, opposite signs" rule was
-  checked (no category qualifies).
-- **Serial dependence:** lag-1 autocorrelation of daily z is −0.03 (shares) and −0.09 (options); |z| lag-1 is +0.31 and
-  +0.14 (volatility clustering). Only the FOMC CI was block-bootstrapped (row 9); other CIs were not.
+- §18 acceptance ρ (results.md:99): quoted, not recomputed. It is outside gate 2.
+- The direction of any bias from the console exposure of one holdout session: it cannot be measured.
+  It is logged.
+- Holdout coverage was checked by daily-file names only, no contents opened: no regular weekday
+  missing in shares 2023-01-03 → 2026-08-27 or options 2023.
 
 GATE 2 VERDICT: FAIL
