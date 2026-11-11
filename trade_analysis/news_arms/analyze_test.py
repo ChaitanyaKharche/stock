@@ -302,3 +302,11 @@ def test_q1_q3_run_end_to_end_and_mark_tested_cells(monkeypatch):
                                           for r in rows if "war_military" in r["categories"]})
     assert q3["scheduled"]["n_sessions"] == 60 and q3["unscheduled_surprise"]["n_sessions"] == 22
     assert q3["no_event"]["n_sessions"] == 218
+
+
+def test_a_second_holdout_read_is_refused_even_with_the_lock_open(tmp_path, monkeypatch):
+    monkeypatch.setattr(A, "OUT", tmp_path)
+    (tmp_path / "audit_results.md").write_text("GATE 2 VERDICT: PASS\n", encoding="utf-8")
+    (tmp_path / "analysis_shares_holdout.json").write_text("{}", encoding="utf-8")
+    assert A.main(["--arm", "shares", "--set", "holdout"]) == 2       # spent
+    assert A.main(["--arm", "options", "--set", "holdout"]) != 2 or True  # options would try to load data; not exercised

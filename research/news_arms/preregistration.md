@@ -741,3 +741,9 @@ binding threshold for C2 is 1.96 × SE = 0.31 σ, and 80% power needs that plus 
 about **0.45 σ**, with 13.6's planned SE of 0.16 as well as the realised 0.161. C1: threshold
 0.25 σ, 80% power at about 0.32 σ, power at a true 0.25 σ about 50%; C2 about 34%. 14.8 and
 15.8 are left as written and corrected here, with the reason.
+
+**24.3 Gate 2 on the holdout section, third pass (2026-11-11): PASS.** `audit_results.md`
+ends with the pass line and covers both the discovery report and the holdout section. The
+study is closed: C1 FAIL (informative null), C2 no verdict (underpowered), no shortlist, no
+forward policy experiment. `analyze --set holdout` now refuses when the holdout JSON exists,
+so the single read cannot be repeated by accident. Results go to the Space as exploratory.

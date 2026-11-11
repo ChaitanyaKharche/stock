@@ -2,7 +2,9 @@
 
 Status: **discovery read 2026-11-10; the 24 lost shares sessions re-replayed and folded in
 2026-11-11. Holdout read once on 2026-11-11 after gate 2: C1 FAIL, C2 underpowered with no verdict
-(13.6), Fed-day candidate did not replicate; holdout section awaits its own gate 2 audit. Gate 2: PASS on the fifth pass, 2026-11-11
+(13.6), Fed-day candidate did not replicate at its discovery size. Gate 2 on the holdout section:
+PASS on the third pass (two wording failures and one power figure, §24.1–24.2). The study is
+closed; the holdout is spent and `analyze` refuses a second read. Gate 2: PASS on the fifth pass, 2026-11-11
 (`audit_results.md`); passes one to four failed on 27 rows, three sentences, one clause and one
 word, each corrected in place and recorded in §22–§23 of the pre-registration.**
 Every number here is in `analysis_shares_discovery.json`, `analysis_options_discovery.json`,

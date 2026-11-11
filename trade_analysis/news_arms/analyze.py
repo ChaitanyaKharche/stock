@@ -675,6 +675,10 @@ def main(argv=None) -> int:
         return 0
     if not a.arm:
         ap.error("--arm is required")
+    if a.set == "holdout" and (OUT / f"analysis_{a.arm}_holdout.json").exists():
+        print(f"REFUSING: the {a.arm} holdout was read once already (analysis_{a.arm}_holdout.json exists); "
+              f"a second read is not a holdout (preregistration section 2).")
+        return 2
     if a.set == "holdout" and not holdout_allowed():
         print(f"REFUSING: the holdout is read once, after research/news_arms/audit_results.md carries "
               f"the line '{GATE2_LINE}' for the discovery report (preregistration section 2, 11).")
