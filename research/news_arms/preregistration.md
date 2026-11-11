@@ -713,3 +713,15 @@ holdout lock is open for the single read. Caveats kept verbatim in the audit: Fe
 exploratory and fail the correction (without 2022, −0.16 σ [−0.30, −0.00]; 2020 the other
 way); the pre-registered placebo leans toward "effect" and is quoted beside the in-pool rank;
 shock days are descriptive, unstable, mostly 2020, from a salience-selected list.
+
+## 24. Step 6 record: holdout read once, 2026-11-11
+
+After `audit_results.md` carried the pass line, `analyze --set holdout` ran once per arm at
+`62d17f3`. Shares 2023-01-03 → 2026-08-27: 908 sessions, 162,374 trades, 0 lost (8 early
+closes). Options 2023: 248 sessions, 5,993 trades, 0 lost. **C1: +0.024 σ [−0.07, +0.11],
+p 0.597, MDE 0.24 σ, FAIL. C2: +0.057 σ [−0.17, +0.31], p 0.654, MDE 0.45 σ, FAIL and
+pre-declared underpowered.** Holm over the two: neither. The discovery Fed-day row
+(−0.299 σ) read −0.055 σ [−0.22, +0.10] on 29 holdout Fed sessions; no forward policy
+experiment is proposed. No Q7 shortlist existed to score; 39 holdout Q7 cells met the
+minimums on shares, none pass BH; options 0. Written to `results.md` (holdout section) and
+`analysis_*_holdout.json`; gate 2 on the holdout section requested.

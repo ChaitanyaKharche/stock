@@ -1,7 +1,8 @@
 # news_arms — discovery results (shares 2018–2022, options 2020–2022)
 
 Status: **discovery read 2026-11-10; the 24 lost shares sessions re-replayed and folded in
-2026-11-11. Exploratory. Holdout not read. Gate 2: PASS on the fifth pass, 2026-11-11
+2026-11-11. Holdout read once on 2026-11-11 after gate 2: C1 FAIL, C2 FAIL (underpowered),
+Fed-day candidate did not replicate; holdout section awaits its own gate 2 audit. Gate 2: PASS on the fifth pass, 2026-11-11
 (`audit_results.md`); passes one to four failed on 27 rows, three sentences, one clause and one
 word, each corrected in place and recorded in §22–§23 of the pre-registration.**
 Every number here is in `analysis_shares_discovery.json`, `analysis_options_discovery.json`,
@@ -266,11 +267,54 @@ arm was wrong-footed on direction *and* paid for convexity. Reported, not used.
   owner's console, including the one holdout day (2024-10-01); that single number was seen
   by the assistant and is logged in §23, unaggregated.
 
+## Holdout, read once on 2026-11-11 (section 7 confirmatory tests)
+
+Shares 2023-01-03 → 2026-08-27: 908 sessions, 162,374 trades, 38 chunks, 0 lost, 8 early
+closes dropped. Options 2023: 248 sessions, 5,993 trades, 0 lost. Both at the live hashes. The
+read happened after gate 2 passed on the discovery report (`audit_results.md`); the lock
+opened on the auditor's line and nothing read these files before. σ is the discovery σ
+(15.5). The holdout's own daily σ, descriptive: shares $2,302, options $862; both arms were
+calmer than in discovery and lost less on an average day (shares −$109, options −$61).
+
+**C1 and C2: no difference on calendar-release days, in either arm.**
+
+| test | arm | scheduled sessions | effect σ | 95% CI | $/day | p (boot) | MDE (80%) | pass rule | Holm (family of 2) |
+|---|---|---|---|---|---|---|---|---|---|
+| C1 | shares | 166 of 908 | **+0.024** | [−0.07, +0.11] | +75 | 0.597 | 0.24 σ | **FAIL** | no |
+| C2 | options | 48 of 248 | +0.057 | [−0.17, +0.31] | +59 | 0.654 | 0.45 σ | FAIL (pre-declared underpowered) | no |
+
+In plain words: on the 166 shares sessions with a scheduled release the arm made $75 a day
+*more* than its average day, with an interval from −$230 to +$360. The study was powered to
+see a 0.24 σ difference on shares, about $770 a day; the observed difference is a tenth of
+that. C2 could only have seen 0.45 σ and saw 0.06. Single-category sensitivity: +0.04 σ and
++0.08 σ. By year on shares: 2023 +0.07, 2024 +0.04, 2025 −0.01, 2026 −0.02. Nothing to Holm.
+
+**The Fed-day candidate did not replicate.** On the 29 holdout Fed sessions the shares arm
+made −$176 a day against its average, interval [−0.22, +0.10] σ, i.e. −$690 to +$310. The
+discovery figure was −$958 a day with an interval that excluded zero. By year: 2023 −0.01,
+2024 −0.08, 2025 +0.02, 2026 −0.21 σ. The pre-14:00 excess fell from −$874 to −$150 a
+session; win rate per day 38% vs 41% on no-event days (discovery: 28% vs 40%). Options: 8 Fed
+sessions, +0.003 σ. The discovery row was exploratory, failed its correction, and was half
+2022; the holdout says it was selection. **No forward policy experiment is proposed.** The
+"stand aside on Fed mornings" rule would have saved about $590 a session on the 29 holdout
+Fed days against about $870 in discovery, within what a $2,300-σ arm does by chance.
+
+**Everything else, exploratory and consistent with chance:** every Q1 category on both arms
+has a CI including zero except financial_stress (shares −0.53 σ on 13 days, options −0.55 σ
+on 6 days; never tested by rule, 2023 banking days). Shock days: shares −0.04 σ [−0.28,
++0.31] on 77 sessions, nothing left of the discovery −0.33 σ; the within-regime split is
+flat. Q7: 39 tested cells on shares, none pass BH; options 0 tested cells. First-60 line:
+nothing. CPI on options, the one discovery line "worth a glance", is −0.28 σ on 12 days with
+a CI across zero.
+
+**Information sets (13.8), final.** (i) Calendar awareness: no difference from baseline on
+release days (C1 FAIL, C2 FAIL/underpowered); the Fed-day loss seen in discovery did not
+hold. (ii) Release information: nothing. (iii) Post-release reaction: never a condition. The
+frozen runners' outcomes are not detectably associated with the news calendar.
+
 ## Next (section 11, step 6)
 
-1. Second gate 2 pass on this report; defects corrected in place.
-2. Holdout read **once**: `analyze --set holdout` for both arms, which refuses until
-   `audit_results.md` carries the pass line. C1 (shares 2023-01-03 → 2026-08-27) and C2
-   (options 2023, pre-declared underpowered, MDE reported) as one Holm family of two; no Q7
-   shortlist to score.
-3. Results published to the Space as exploratory.
+1. Gate 2 audit of the holdout section above; defects corrected in place.
+2. Results published to the Space as exploratory, with the holdout verdicts.
+3. The forward period (live sessions from 2026-11-02) is never read by this study; no
+   forward policy experiment is registered.
