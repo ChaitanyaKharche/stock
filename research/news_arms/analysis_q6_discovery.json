@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-10T13:43:47",
+ "generated": "2026-11-11T01:42:35",
  "q6": {
   "FOMC": {
    "options_effect": -0.28619752227340267,
@@ -7,12 +7,12 @@
     -0.7733380828930726,
     0.2246226962414236
    ],
-   "shares_effect": -0.28216979169816164,
+   "shares_effect": -0.2994611028705206,
    "shares_ci": [
-    -0.5535671055160326,
-    -0.007976471718038034
+    -0.5426589466069841,
+    -0.032506185875954316
    ],
-   "difference": -0.004027730575241029,
+   "difference": 0.013263580597117908,
    "divergence": false,
    "note": "different windows and session sets per arm; sigma is each arm's own"
   },
@@ -22,12 +22,12 @@
     -0.7025528381443653,
     0.05510097426953456
    ],
-   "shares_effect": 0.09226729329002445,
+   "shares_effect": 0.0913238183215138,
    "shares_ci": [
-    -0.1749688645415612,
-    0.40596916962474133
+    -0.1770887756578975,
+    0.3945642039163397
    ],
-   "difference": -0.41904589722108554,
+   "difference": -0.4181024222525749,
    "divergence": false,
    "note": "different windows and session sets per arm; sigma is each arm's own"
   },
@@ -37,12 +37,12 @@
     -0.3887890391066011,
     0.2203804574919495
    ],
-   "shares_effect": 0.06190763572238728,
+   "shares_effect": 0.09962793186349503,
    "shares_ci": [
-    -0.14545173628214056,
-    0.27896691790902467
+    -0.10936430962441683,
+    0.31877866459605164
    ],
-   "difference": -0.16233885681022361,
+   "difference": -0.20005915295133136,
    "divergence": false,
    "note": "different windows and session sets per arm; sigma is each arm's own"
   },
@@ -52,12 +52,12 @@
     null,
     null
    ],
-   "shares_effect": -0.2036414831887398,
+   "shares_effect": -0.20447435216578408,
    "shares_ci": [
-    -0.5855612981807021,
-    0.16589060474701559
+    -0.5806703740846444,
+    0.16395276979639173
    ],
-   "difference": 0.09731214802168914,
+   "difference": 0.0981450169987334,
    "divergence": false,
    "note": "different windows and session sets per arm; sigma is each arm's own"
   },
@@ -67,12 +67,12 @@
     -0.20548487136540886,
     0.5551518194108293
    ],
-   "shares_effect": -0.07641362689169098,
+   "shares_effect": -0.07729405161667666,
    "shares_ci": [
-    -0.33493025220092393,
-    0.20945637263222272
+    -0.33732264109646837,
+    0.22863615697841708
    ],
-   "difference": 0.23946306508361917,
+   "difference": 0.24034348980860484,
    "divergence": false,
    "note": "different windows and session sets per arm; sigma is each arm's own"
   },
@@ -82,12 +82,12 @@
     -1.1080055951101704,
     0.8894588496230273
    ],
-   "shares_effect": -0.11441237855706574,
+   "shares_effect": -0.11527859995340248,
    "shares_ci": [
-    -0.6382916476400705,
-    0.555038733521045
+    -0.6494639143780441,
+    0.5732244452023292
    ],
-   "difference": -0.009242633080289553,
+   "difference": -0.008376411683952811,
    "divergence": false,
    "note": "different windows and session sets per arm; sigma is each arm's own"
   },
@@ -97,12 +97,12 @@
     null,
     null
    ],
-   "shares_effect": 0.07103684840263408,
+   "shares_effect": 0.11730508361038988,
    "shares_ci": [
-    -0.21165661863530788,
-    0.35923756764913145
+    -0.17948088760614989,
+    0.43446882949122884
    ],
-   "difference": 0.2233624724640768,
+   "difference": 0.177094237256321,
    "divergence": false,
    "note": "different windows and session sets per arm; sigma is each arm's own"
   },
@@ -112,12 +112,12 @@
     -0.8604527641256611,
     0.12116763814182195
    ],
-   "shares_effect": -1.2989970984987464,
+   "shares_effect": -1.2994205409786068,
    "shares_ci": [
-    -2.4650094517843724,
-    -0.31014035030788845
+    -2.410838473713044,
+    -0.3340917237263913
    ],
-   "difference": 0.9615546920755382,
+   "difference": 0.9619781345553986,
    "divergence": false,
    "note": "different windows and session sets per arm; sigma is each arm's own"
   },
@@ -127,12 +127,12 @@
     -0.6597576963471368,
     -0.11851523203194146
    ],
-   "shares_effect": -0.4568543222183688,
+   "shares_effect": -0.47316644794370766,
    "shares_ci": [
-    -1.1108990955377185,
-    0.004939115196623008
+    -1.0750023457533753,
+    -0.037076980880696865
    ],
-   "difference": 0.07472074452343491,
+   "difference": 0.09103287024877377,
    "divergence": false,
    "note": "different windows and session sets per arm; sigma is each arm's own"
   },
@@ -142,12 +142,12 @@
     -0.9255939507743295,
     0.49380746860263613
    ],
-   "shares_effect": -0.778717974907948,
+   "shares_effect": -0.7793358894443283,
    "shares_ci": [
-    -1.7307399181744845,
-    0.079360004515262
+    -1.6751835848746233,
+    0.06694346523124037
    ],
-   "difference": 0.5543165657237095,
+   "difference": 0.5549344802600897,
    "divergence": false,
    "note": "different windows and session sets per arm; sigma is each arm's own"
   },
@@ -157,12 +157,12 @@
     -0.46100615463958405,
     0.3257851220740043
    ],
-   "shares_effect": -0.18427213834803263,
+   "shares_effect": -0.18511224727792874,
    "shares_ci": [
-    -0.4182749543282081,
-    0.06133150404467116
+    -0.41642746019265764,
+    0.06809380938941831
    ],
-   "difference": 0.10283258626013034,
+   "difference": 0.10367269519002645,
    "divergence": false,
    "note": "different windows and session sets per arm; sigma is each arm's own"
   },
@@ -172,12 +172,12 @@
     -0.8260197622865109,
     1.8506357111779537
    ],
-   "shares_effect": -0.26959245677782356,
+   "shares_effect": -0.31664920725944723,
    "shares_ci": [
-    -0.7828960188502256,
-    0.27961234620354464
+    -0.7870809654099344,
+    0.18555739746976793
    ],
-   "difference": 0.46531082333168705,
+   "difference": 0.5123675738133107,
    "divergence": false,
    "note": "different windows and session sets per arm; sigma is each arm's own"
   },
@@ -187,12 +187,12 @@
     null,
     null
    ],
-   "shares_effect": 0.8828623084123242,
+   "shares_effect": 0.8816233216089281,
    "shares_ci": [
-    0.2061682297586937,
-    1.5524494617951294
+    0.12473737254348014,
+    1.5766813447515484
    ],
-   "difference": 0.24319773843453585,
+   "difference": 0.24443672523793192,
    "divergence": false,
    "note": "different windows and session sets per arm; sigma is each arm's own"
   }

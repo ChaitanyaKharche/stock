@@ -578,9 +578,9 @@ def exclusions(rows: list[dict], window, chunks: list[dict], no_0dte=()) -> dict
         if not is_closed(d) and iso not in have:
             if early_close(d):
                 half.append(iso)
-            elif iso in recorded:
-                rec.append({"date": iso, "reason": recorded[iso]})
-            else:
+            elif iso in recorded and recorded[iso] == "no_0dte":
+                rec.append({"date": iso, "reason": recorded[iso]})   # 14.11, by rule
+            else:                                             # any other skip of an open full day is a loss
                 lost.append(iso)
         d += dt.timedelta(days=1)
     return {"open_days_in_window": len(rows) + len(half) + len(lost) + len(rec),
@@ -654,7 +654,8 @@ def holdout_allowed() -> bool:
     p = OUT / "audit_results.md"
     if not p.exists():
         return False
-    return any(line.strip() == GATE2_LINE for line in p.read_text(encoding="utf-8").splitlines())
+    lines = [ln.strip() for ln in p.read_text(encoding="utf-8").splitlines() if ln.strip()]
+    return bool(lines) and lines[-1] == GATE2_LINE            # the LAST verdict line, nothing earlier
 
 
 def main(argv=None) -> int:
@@ -674,6 +675,10 @@ def main(argv=None) -> int:
         return 0
     if not a.arm:
         ap.error("--arm is required")
+    if a.set == "holdout" and (OUT / f"analysis_{a.arm}_holdout.json").exists():
+        print(f"REFUSING: the {a.arm} holdout was read once already (analysis_{a.arm}_holdout.json exists); "
+              f"a second read is not a holdout (preregistration section 2).")
+        return 2
     if a.set == "holdout" and not holdout_allowed():
         print(f"REFUSING: the holdout is read once, after research/news_arms/audit_results.md carries "
               f"the line '{GATE2_LINE}' for the discovery report (preregistration section 2, 11).")

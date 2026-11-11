@@ -180,10 +180,15 @@ def test_holiday_and_half_day_skips_are_recorded_with_their_reason(tmp_path, mon
     assert B.run(DAY, DAY, symbols=("QQQ",), out=tmp_path / "h", arm="shares", skipped=skipped) == []
     assert skipped == [{"date": DAY.isoformat(), "reason": "holiday", "bars": 0}]
     monkeypatch.setattr(B, "is_closed", lambda d: False)
+    monkeypatch.setattr(B, "early_close", lambda d: True)      # a scheduled 13:00 close
     _zero_bar_feed(monkeypatch, {DAY.isoformat(): 5})
     skipped = []
     assert B.run(DAY, DAY, symbols=("QQQ",), out=tmp_path / "hd", arm="shares", skipped=skipped) == []
     assert skipped[0]["reason"] == "half_day" and skipped[0]["bars"] == 5
+    monkeypatch.setattr(B, "early_close", lambda d: False)     # gate 2 pass 2: a short regular day is lost
+    import pytest
+    with pytest.raises(B.SessionLost):
+        B.run(DAY, DAY, symbols=("QQQ",), out=tmp_path / "short", arm="shares", skipped=[])
 
 
 def test_an_explicit_date_list_replays_exactly_those_days(tmp_path, monkeypatch):

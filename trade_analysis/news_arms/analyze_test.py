@@ -171,7 +171,9 @@ def test_q6_divergence_needs_both_cis_to_exclude_zero_with_opposite_signs():
 def test_holdout_lock_is_shut_on_the_committed_files_and_opens_only_on_the_auditors_whole_line(tmp_path, monkeypatch):
     """Gate 2 (2026-11-10): the first lock matched a substring of results.md and was already
     open because the report described the lock. The lock reads audit_results.md, whole line."""
-    assert A.holdout_allowed() is False                     # the committed audit says FAIL
+    audit = (A.OUT / "audit_results.md").read_text(encoding="utf-8").strip().splitlines()[-1].strip()
+    assert audit in ("GATE 2 VERDICT: PASS", "GATE 2 VERDICT: FAIL")
+    assert A.holdout_allowed() is (audit == "GATE 2 VERDICT: PASS")   # lock state == the auditor's last line
     monkeypatch.setattr(A, "OUT", tmp_path)
     assert A.main(["--arm", "shares", "--set", "holdout"]) == 2
     (tmp_path / "results.md").write_text("GATE 2 VERDICT: PASS\n", encoding="utf-8")
@@ -182,6 +184,8 @@ def test_holdout_lock_is_shut_on_the_committed_files_and_opens_only_on_the_audit
     assert A.holdout_allowed() is False
     (tmp_path / "audit_results.md").write_text("...\n  GATE 2 VERDICT: PASS \n", encoding="utf-8")
     assert A.holdout_allowed() is True
+    (tmp_path / "audit_results.md").write_text("GATE 2 VERDICT: PASS\nlater: GATE 2 VERDICT: FAIL\n", encoding="utf-8")
+    assert A.holdout_allowed() is False                     # only the last line counts
 
 
 def test_unstable_flags_sign_flips_across_regimes_or_three_years():
@@ -197,15 +201,19 @@ def test_unstable_flags_sign_flips_across_regimes_or_three_years():
 
 def test_exclusions_list_half_days_recorded_skips_and_lost_sessions():
     rows = [{"date": d} for d in ("2022-11-21", "2022-11-22", "2022-11-23", "2022-11-29", "2022-11-30")]
-    chunks = [{"skipped": [{"date": "2022-11-28", "reason": "half_day"}]}]
+    chunks = [{"skipped": [{"date": "2022-11-28", "reason": "half_day"}]}]   # Nov 28 was a full day
     ex = A.exclusions(rows, (dt.date(2022, 11, 21), dt.date(2022, 11, 30)), chunks)
     assert ex["half_days"] == ["2022-11-25"]                               # day after Thanksgiving
-    assert ex["recorded_skips"] == [{"date": "2022-11-28", "reason": "half_day"}]
-    assert ex["lost_regular_sessions"] == [] and ex["n_lost"] == 0 and ex["open_days_in_window"] == 7
+    assert ex["lost_regular_sessions"] == ["2022-11-28"] and ex["n_lost"] == 1   # a short full day is lost
+    chunks = [{"skipped": [{"date": "2022-11-28", "reason": "holiday"}]}]   # "holiday" on an open day: lost too
+    ex = A.exclusions(rows, (dt.date(2022, 11, 21), dt.date(2022, 11, 30)), chunks)
+    assert ex["lost_regular_sessions"] == ["2022-11-28"] and ex["open_days_in_window"] == 7
+    ex = A.exclusions(rows, (dt.date(2022, 11, 21), dt.date(2022, 11, 30)), [], no_0dte=["2022-11-28"])
+    assert ex["recorded_skips"] == [{"date": "2022-11-28", "reason": "no_0dte"}] and ex["n_lost"] == 0
     ex2 = A.exclusions(rows[:-1], (dt.date(2022, 11, 21), dt.date(2022, 11, 30)), chunks)
-    assert ex2["lost_regular_sessions"] == ["2022-11-30"] and ex2["open_days_in_window"] == 7
+    assert ex2["lost_regular_sessions"] == ["2022-11-28", "2022-11-30"] and ex2["open_days_in_window"] == 7
     ex3 = A.exclusions(rows[:-1], (dt.date(2022, 11, 21), dt.date(2022, 11, 30)), chunks, no_0dte=["2022-11-30"])
-    assert ex3["n_lost"] == 0 and ex3["recorded_skips_by_reason"] == {"half_day": 1, "no_0dte": 1}
+    assert ex3["lost_regular_sessions"] == ["2022-11-28"] and ex3["recorded_skips_by_reason"] == {"no_0dte": 1}
 
 
 def test_q3_unscheduled_is_every_surprise_session_with_the_exclusive_variant_beside_it():
@@ -294,3 +302,10 @@ def test_q1_q3_run_end_to_end_and_mark_tested_cells(monkeypatch):
                                           for r in rows if "war_military" in r["categories"]})
     assert q3["scheduled"]["n_sessions"] == 60 and q3["unscheduled_surprise"]["n_sessions"] == 22
     assert q3["no_event"]["n_sessions"] == 218
+
+
+def test_a_second_holdout_read_is_refused_even_with_the_lock_open(tmp_path, monkeypatch):
+    monkeypatch.setattr(A, "OUT", tmp_path)
+    (tmp_path / "audit_results.md").write_text("GATE 2 VERDICT: PASS\n", encoding="utf-8")
+    (tmp_path / "analysis_shares_holdout.json").write_text("{}", encoding="utf-8")
+    assert A.main(["--arm", "shares", "--set", "holdout"]) == 2       # spent, even though the lock is open

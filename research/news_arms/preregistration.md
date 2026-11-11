@@ -668,3 +668,82 @@ reproduced every headline number from the raw replay files and **failed the repo
 
 Nothing in the design changed; the corrections are to the report, the replay's failure
 mode and the lock. Second pass after the fill-in.
+
+## 23. Step 6 record: the 24 lost sessions re-replayed, 2026-11-10/11
+
+Fill-in chunks `2022/shares/fill-a` (23 sessions, 23.7 min) and `2024/shares/fill-a`
+(2024-10-01) replayed on the laptop at `e750a4c`, hash `7c6414fc549315f3`, `skipped: []`,
+pushed as `87e1736`. `analyze.exclusions` now reports 0 lost regular sessions for both arms
+(shares 1,249 of 1,249 open weekdays less 10 early closes; options 482 kept, 270 no-0DTE,
+4 half days). The analysis was rerun; the tested families are unchanged and still equal the
+pre-committed counts by set equality. What moved on shares: sessions 1,226 → 1,249, trades
+222,363 → 226,678, σ $3,197 → $3,199, B0 −$288 → −$286; FOMC 38 → 39 sessions,
+−0.282 → −0.299 σ, p 0.043 → 0.030 (still BH fail at 0.025); scheduled 231 → 234,
+−0.045 → −0.039 σ, placebo rank 0.965 → 0.942 (now chance under the pre-registered rule);
+unscheduled 135 → 137, −0.349 → −0.334 σ; NFP 58 → 60, +0.062 → +0.100 σ; Q7 BH passes
+1 → 2 (VWAP_Reclaim on Fed days joins PDH_PDL_FailedBreak), both far below 0.25 σ; shortlist
+still empty. Options unchanged. Exposure: the fill-in console, pasted by the owner, showed
+the 24 recovered sessions' daily nets, one of which (2024-10-01, +$2,592.69) is a holdout
+session; seen unaggregated, logged here.
+
+**23.1 Gate 2 second pass (2026-11-11): FAIL on three sentences only;** every number in
+`results.md` reproduced by the auditor's own loader. Corrected: ORB_5min's rank among Fed-day
+cells, the composition of the 39 kept Tue/Thu options sessions (13 from 2022-11-15, 21 next
+to a weekday holiday, 5 quarter ends), and "nothing changed status" (the release-days placebo
+verdict did change). Two guard gaps the auditor flagged are closed: a day with some bars but
+fewer than `MIN_RTH_BARS` that the calendar does not list as an early close now raises
+`SessionLost` (was filed as a half day), and `holdout_allowed` reads only the LAST verdict
+line of `audit_results.md`; the lock test asserts the lock state equals that line. Third pass
+requested.
+
+**23.2 Gate 2 third pass (2026-11-11): FAIL on one clause;** three Q7 setup cells within
+±0.005 σ of zero changed sign with the fill-in (Crabel_Stretch and ORB_5min on jobs days,
+PDH_PDL_Breakout on Fed days; every p > 0.8), so "no effect changed sign" was false and now
+reads "no Q1 or Q3 effect changed sign". `exclusions()` now counts any recorded skip of an
+open full day other than the 14.11 no-0DTE rule as a loss. The auditor's PASS draft briefly
+opened the lock before the flips were found; nothing read the holdout in that window.
+
+**23.3 Gate 2 fourth pass (2026-11-11): FAIL on one word.** "three Q7 setup cells" became
+"three tested Q7 setup cells"; four untested cells within ±0.002 σ of zero (two of them
+with no trades at all) also changed sign with the fill-in and are now named. Everything
+else in scope passed; the auditor compared every cell of every table in both arms.
+
+**23.4 Gate 2 fifth pass (2026-11-11): PASS.** `audit_results.md` ends with the pass line; the
+holdout lock is open for the single read. Caveats kept verbatim in the audit: Fed days are
+exploratory and fail the correction (without 2022, −0.16 σ [−0.30, −0.00]; 2020 the other
+way); the pre-registered placebo leans toward "effect" and is quoted beside the in-pool rank;
+shock days are descriptive, unstable, mostly 2020, from a salience-selected list.
+
+## 24. Step 6 record: holdout read once, 2026-11-11
+
+After `audit_results.md` carried the pass line, `analyze --set holdout` ran once per arm at
+`62d17f3`. Shares 2023-01-03 → 2026-08-27: 908 sessions, 162,374 trades, 0 lost (8 early
+closes). Options 2023: 248 sessions, 5,993 trades, 0 lost. **C1: +0.024 σ [−0.07, +0.11],
+p 0.597, MDE 0.24 σ, FAIL. C2: +0.057 σ [−0.17, +0.31], p 0.654, MDE 0.45 σ, FAIL and
+pre-declared underpowered.** Holm over the two: neither. The discovery Fed-day row
+(−0.299 σ) read −0.055 σ [−0.22, +0.10] on 29 holdout Fed sessions; no forward policy
+experiment is proposed. No Q7 shortlist existed to score; 39 holdout Q7 cells met the
+minimums on shares, none pass BH; options 0. Written to `results.md` (holdout section) and
+`analysis_*_holdout.json`; gate 2 on the holdout section requested.
+
+**24.1 Gate 2 on the holdout section, first pass (2026-11-11): FAIL on two statements;**
+every holdout number reproduced. Corrected: C2 is "underpowered, no verdict (13.6)", never
+PASS/FAIL (report.py and three places in results.md); the holdout shock-day within-regime
+split is not flat (low +0.15, mid −0.31 [−0.49, −0.13], high +0.57 σ) and is now stated as
+post hoc. Also added per the auditor: the 14.8/15.8 power figures beside C1/C2, the own-σ
+effects (14.Q5), the 29-session Fed row marked reported-only, "selection" softened to what the
+interval can say, and a pointer to the console exposures (§19, §21, §23).
+
+**24.2 Gate 2 on the holdout section, second pass (2026-11-11): FAIL on one number, found
+to be an arithmetic error in 14.8.** 14.8 and 15.8 say 80% power for C2 needs "about
+0.36 σ". Under the pass rule (CI excludes zero and the estimate is at least 0.25 σ) the
+binding threshold for C2 is 1.96 × SE = 0.31 σ, and 80% power needs that plus 0.84 × SE,
+about **0.45 σ**, with 13.6's planned SE of 0.16 as well as the realised 0.161. C1: threshold
+0.25 σ, 80% power at about 0.32 σ, power at a true 0.25 σ about 50%; C2 about 34%. 14.8 and
+15.8 are left as written and corrected here, with the reason.
+
+**24.3 Gate 2 on the holdout section, third pass (2026-11-11): PASS.** `audit_results.md`
+ends with the pass line and covers both the discovery report and the holdout section. The
+study is closed: C1 FAIL (informative null), C2 no verdict (underpowered), no shortlist, no
+forward policy experiment. `analyze --set holdout` now refuses when the holdout JSON exists,
+so the single read cannot be repeated by accident. Results go to the Space as exploratory.
