@@ -2,7 +2,7 @@
 
 ## shares
 
-**shares discovery** 2018-01-02 → 2022-12-30: 1249 sessions, 226,678 trades, hash ['7c6414fc549315f3'], code `87e1736`, σ(discovery) = $3,199/day, B0 = $-286/day (median $-682), excluded no-0DTE sessions 0. Regime cuts 111.2 / 184.5 bp. Seeds {'bootstrap': 20260828, 'placebo': 20260828}, bootstrap 3000, placebo 5000.
+**shares discovery** 2018-01-02 → 2022-12-30: 1249 sessions, 226,678 trades, hash ['7c6414fc549315f3'], code `ce78ac4`, σ(discovery) = $3,199/day, B0 = $-286/day (median $-682), excluded no-0DTE sessions 0. Regime cuts 111.2 / 184.5 bp. Seeds {'bootstrap': 20260828, 'placebo': 20260828}, bootstrap 3000, placebo 5000.
 
 Open weekdays in window 1259: replayed 1249, early-close half days dropped by rule 10, recorded skips 0 {}, **lost regular sessions 0**.
 
@@ -154,7 +154,7 @@ Tested cells m = 66; BH q=0.10 passes: 2; of those with |effect| ≥ 0.25 σ: 0;
 
 ## options
 
-**options discovery** 2020-01-02 → 2022-12-30: 482 sessions, 9,943 trades, hash ['ccd00ac71f8243e9'], code `87e1736`, σ(discovery) = $1,032/day, B0 = $-100/day (median $-214), excluded no-0DTE sessions 270. Regime cuts 111.2 / 184.5 bp. Seeds {'bootstrap': 20260828, 'placebo': 20260828}, bootstrap 3000, placebo 5000.
+**options discovery** 2020-01-02 → 2022-12-30: 482 sessions, 9,943 trades, hash ['ccd00ac71f8243e9'], code `ce78ac4`, σ(discovery) = $1,032/day, B0 = $-100/day (median $-214), excluded no-0DTE sessions 270. Regime cuts 111.2 / 184.5 bp. Seeds {'bootstrap': 20260828, 'placebo': 20260828}, bootstrap 3000, placebo 5000.
 
 Open weekdays in window 756: replayed 482, early-close half days dropped by rule 4, recorded skips 270 {'no_0dte': 270}, **lost regular sessions 0**.
 

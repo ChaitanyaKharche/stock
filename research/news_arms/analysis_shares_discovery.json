@@ -5,7 +5,7 @@
   "2018-01-02",
   "2022-12-30"
  ],
- "repo_sha": "87e1736",
+ "repo_sha": "ce78ac4",
  "config_hashes": [
   "7c6414fc549315f3"
  ],
@@ -528,7 +528,7 @@
  "n_boot": 3000,
  "n_placebo": 5000,
  "command": "/home/user/stock/trade_analysis/news_arms/analyze.py --arm shares --set discovery",
- "generated": "2026-11-11T01:21:07",
+ "generated": "2026-11-11T01:26:08",
  "n_sessions": 1249,
  "n_trades": 226678,
  "sigma_discovery_usd": 3198.655686210979,
