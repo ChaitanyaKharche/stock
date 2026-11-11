@@ -237,8 +237,10 @@ def render() -> str:
                   f"### C{'1' if arm == 'shares' else '2'} — scheduled_today minus B0, discovery σ ({arm})", "",
                   f"n scheduled {c['n_scheduled']}, other {c['n_other']}; effect {_f(c['effect_sigma'])} σ, 95% CI {_ci(c['ci95'])}, "
                   f"p (boot) {c['p_boot']:.3f}; approx SE {c['se_approx']:.3f} σ, MDE at 80% power {c['mde_80pct']:.2f} σ; "
-                  f"pass rule (CI excludes 0 and |effect| ≥ 0.25 σ): **{'PASS' if c['pass_rule'] else 'FAIL'}**; "
-                  f"observed exceeds MDE: {c['observed_exceeds_mde']}. Single-category sensitivity: "
+                  + (f"pass rule (CI excludes 0 and |effect| ≥ 0.25 σ): **{'PASS' if c['pass_rule'] else 'FAIL'}**; "
+                     if arm == "shares" or c["observed_exceeds_mde"] else
+                     "verdict: **underpowered, no verdict (13.6)**; ")
+                  + f"observed exceeds MDE: {c['observed_exceeds_mde']}. Single-category sensitivity: "
                   f"{_f(c['single_category_sensitivity']['effect'])} σ {_ci(c['single_category_sensitivity']['ci'])}.", "",
                   f"### Q1 — by category vs B0 ({arm} holdout, exploratory)", "", q1_table(d), "",
                   f"### Q3 ({arm} holdout)", "", q3_table(d), "",

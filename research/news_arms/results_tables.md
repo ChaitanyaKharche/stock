@@ -392,7 +392,7 @@ Open weekdays in window 250: replayed 248, early-close half days dropped by rule
 
 ### C2 — scheduled_today minus B0, discovery σ (options)
 
-n scheduled 48, other 200; effect +0.057 σ, 95% CI [-0.17, +0.31], p (boot) 0.654; approx SE 0.161 σ, MDE at 80% power 0.45 σ; pass rule (CI excludes 0 and |effect| ≥ 0.25 σ): **FAIL**; observed exceeds MDE: False. Single-category sensitivity: +0.084 σ [-0.15, +0.36].
+n scheduled 48, other 200; effect +0.057 σ, 95% CI [-0.17, +0.31], p (boot) 0.654; approx SE 0.161 σ, MDE at 80% power 0.45 σ; verdict: **underpowered, no verdict (13.6)**; observed exceeds MDE: False. Single-category sensitivity: +0.084 σ [-0.15, +0.36].
 
 ### Q1 — by category vs B0 (options holdout, exploratory)
 

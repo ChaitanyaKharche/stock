@@ -725,3 +725,11 @@ pre-declared underpowered.** Holm over the two: neither. The discovery Fed-day r
 experiment is proposed. No Q7 shortlist existed to score; 39 holdout Q7 cells met the
 minimums on shares, none pass BH; options 0. Written to `results.md` (holdout section) and
 `analysis_*_holdout.json`; gate 2 on the holdout section requested.
+
+**24.1 Gate 2 on the holdout section, first pass (2026-11-11): FAIL on two statements;**
+every holdout number reproduced. Corrected: C2 is "underpowered, no verdict (13.6)", never
+PASS/FAIL (report.py and three places in results.md); the holdout shock-day within-regime
+split is not flat (low +0.15, mid −0.31 [−0.49, −0.13], high +0.57 σ) and is now stated as
+post hoc. Also added per the auditor: the 14.8/15.8 power figures beside C1/C2, the own-σ
+effects (14.Q5), the 29-session Fed row marked reported-only, "selection" softened to what the
+interval can say, and a pointer to the console exposures (§19, §21, §23).
