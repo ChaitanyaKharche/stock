@@ -2,68 +2,68 @@
 
 ## shares
 
-**shares discovery** 2018-01-02 → 2022-12-30: 1226 sessions, 222,363 trades, hash ['7c6414fc549315f3'], code `748943e`, σ(discovery) = $3,197/day, B0 = $-288/day (median $-683), excluded no-0DTE sessions 0. Regime cuts 111.2 / 184.5 bp. Seeds {'bootstrap': 20260828, 'placebo': 20260828}, bootstrap 3000, placebo 5000.
+**shares discovery** 2018-01-02 → 2022-12-30: 1249 sessions, 226,678 trades, hash ['7c6414fc549315f3'], code `87e1736`, σ(discovery) = $3,199/day, B0 = $-286/day (median $-682), excluded no-0DTE sessions 0. Regime cuts 111.2 / 184.5 bp. Seeds {'bootstrap': 20260828, 'placebo': 20260828}, bootstrap 3000, placebo 5000.
 
-Open weekdays in window 1259: replayed 1226, early-close half days dropped by rule 10, recorded skips 0 {}, **lost regular sessions 23**: 2022-05-13, 2022-07-15, 2022-07-18, 2022-07-19, 2022-07-20, 2022-07-21, 2022-07-22, 2022-07-25, 2022-08-04, 2022-08-05, 2022-08-08, 2022-08-09, 2022-10-03, 2022-10-04, 2022-10-05, 2022-10-06, 2022-10-07, 2022-10-10, 2022-10-11, 2022-10-12, 2022-11-01, 2022-11-02, 2022-11-03.
+Open weekdays in window 1259: replayed 1249, early-close half days dropped by rule 10, recorded skips 0 {}, **lost regular sessions 0**.
 
 ### Q1 / Q4 — by category vs B0 (shares)
 
 | category | sessions | trades | effect σ (vs B0) | 95% CI (day-clustered) | block-10 CI (post hoc) | $/day | placebo rank → verdict | placebo, condition in pool (sens.) | overlap | stable (§2) | status |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| FOMC | 38 | 7406 | -0.282 | [-0.55, -0.01] | [-0.54, +0.00] | -902 | 0.983 → effect | 0.960 → effect | stable | stable | tested, BH fail |
-| CPI | 60 | 11168 | +0.092 | [-0.17, +0.41] | [-0.18, +0.41] | +295 | 0.832 → selection / chance | 0.810 → selection / chance | stable | UNSTABLE | tested, BH fail |
-| NFP | 58 | 10421 | +0.062 | [-0.15, +0.28] | [-0.14, +0.27] | +198 | 0.594 → selection / chance | 0.575 → selection / chance | stable | UNSTABLE | tested, BH fail |
-| GDP_ADV | 20 | 3747 | -0.204 | [-0.59, +0.17] | [-0.58, +0.16] | -651 | 0.859 → selection / chance | 0.836 → selection / chance | stable | UNSTABLE | reported only |
-| PCE | 59 | 10784 | -0.076 | [-0.33, +0.21] | [-0.32, +0.21] | -244 | 0.839 → selection / chance | 0.817 → selection / chance | stable | stable | tested, BH fail |
-| war_military | 19 | 3513 | -0.114 | [-0.64, +0.56] | [-0.62, +0.40] | -366 | 0.724 → selection / chance | 0.706 → selection / chance | stable | stable | reported only |
-| trade_tariff | 40 | 7345 | +0.071 | [-0.21, +0.36] | [-0.20, +0.32] | +227 | 0.647 → selection / chance | 0.605 → selection / chance | stable | UNSTABLE | descriptive + placebo |
-| financial_stress | 17 | 3231 | -1.299 | [-2.47, -0.31] | [-2.63, -0.23] | -4153 | 1.000 → effect | 1.000 → effect | stable | stable | never tested |
-| us_fiscal | 18 | 3262 | -0.457 | [-1.11, +0.00] | [-1.13, +0.04] | -1461 | 0.971 → effect | 0.969 → effect | stable | stable | reported only |
-| pandemic_health | 16 | 2813 | -0.779 | [-1.73, +0.08] | [-1.78, +0.23] | -2490 | 0.985 → effect | 0.975 → effect | stable | stable | reported only |
-| political_shock | 29 | 5291 | -0.184 | [-0.42, +0.06] | [-0.43, +0.06] | -589 | 0.842 → selection / chance | 0.848 → selection / chance | stable | stable | reported only |
-| energy_shock | 19 | 3564 | -0.270 | [-0.78, +0.28] | [-0.69, +0.14] | -862 | 0.885 → selection / chance | 0.877 → selection / chance | stable | UNSTABLE | reported only |
-| cyber_infrastructure | 5 | 958 | +0.883 | [+0.21, +1.55] | [+0.06, +1.54] | +2823 | 0.973 → effect | 0.972 → effect | — | stable | reported only |
+| FOMC | 39 | 7614 | -0.299 | [-0.54, -0.03] | [-0.56, -0.03] | -958 | 0.985 → effect | 0.961 → effect | stable | stable | tested, BH fail |
+| CPI | 60 | 11168 | +0.091 | [-0.18, +0.39] | [-0.17, +0.40] | +292 | 0.835 → selection / chance | 0.819 → selection / chance | stable | UNSTABLE | tested, BH fail |
+| NFP | 60 | 10792 | +0.100 | [-0.11, +0.32] | [-0.10, +0.32] | +319 | 0.701 → selection / chance | 0.667 → selection / chance | confounded | stable | tested, BH fail |
+| GDP_ADV | 20 | 3747 | -0.204 | [-0.58, +0.16] | [-0.59, +0.17] | -654 | 0.843 → selection / chance | 0.818 → selection / chance | stable | UNSTABLE | reported only |
+| PCE | 59 | 10784 | -0.077 | [-0.34, +0.23] | [-0.31, +0.22] | -247 | 0.853 → selection / chance | 0.815 → selection / chance | stable | stable | tested, BH fail |
+| war_military | 19 | 3513 | -0.115 | [-0.65, +0.57] | [-0.65, +0.40] | -369 | 0.745 → selection / chance | 0.722 → selection / chance | stable | stable | reported only |
+| trade_tariff | 41 | 7543 | +0.117 | [-0.18, +0.43] | [-0.15, +0.38] | +375 | 0.774 → selection / chance | 0.726 → selection / chance | stable | UNSTABLE | descriptive + placebo |
+| financial_stress | 17 | 3231 | -1.299 | [-2.41, -0.33] | [-2.60, -0.23] | -4156 | 1.000 → effect | 1.000 → effect | stable | stable | never tested |
+| us_fiscal | 19 | 3452 | -0.473 | [-1.08, -0.04] | [-1.12, -0.00] | -1513 | 0.975 → effect | 0.970 → effect | stable | stable | reported only |
+| pandemic_health | 16 | 2813 | -0.779 | [-1.68, +0.07] | [-1.77, +0.21] | -2493 | 0.986 → effect | 0.976 → effect | stable | stable | reported only |
+| political_shock | 29 | 5291 | -0.185 | [-0.42, +0.07] | [-0.44, +0.07] | -592 | 0.849 → selection / chance | 0.845 → selection / chance | stable | stable | reported only |
+| energy_shock | 21 | 3906 | -0.317 | [-0.79, +0.19] | [-0.70, +0.06] | -1013 | 0.928 → selection / chance | 0.906 → selection / chance | stable | UNSTABLE | reported only |
+| cyber_infrastructure | 5 | 958 | +0.882 | [+0.12, +1.58] | [+0.12, +1.54] | +2820 | 0.973 → effect | 0.972 → effect | — | stable | reported only |
 
 ### Q1 sensitivity — single-category sessions only (shares)
 
 | category | sessions | trades | effect σ (vs B0) | 95% CI (day-clustered) | block-10 CI (post hoc) | $/day | placebo rank → verdict | placebo, condition in pool (sens.) | overlap | stable (§2) | status |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| FOMC | 33 | 6406 | -0.254 | [-0.52, +0.03] | [-0.52, +0.04] | -813 | 0.967 → effect | 0.941 → selection / chance | — | stable | tested, BH fail |
-| CPI | 51 | 9438 | +0.092 | [-0.20, +0.45] | [-0.21, +0.46] | +294 | 0.781 → selection / chance | 0.778 → selection / chance | — | UNSTABLE | tested, BH fail |
-| NFP | 50 | 8861 | +0.039 | [-0.20, +0.26] | [-0.18, +0.28] | +125 | 0.477 → selection / chance | 0.479 → selection / chance | — | UNSTABLE | tested, BH fail |
-| GDP_ADV | 15 | 2789 | -0.190 | [-0.70, +0.28] | [-0.71, +0.30] | -607 | 0.818 → selection / chance | 0.789 → selection / chance | — | UNSTABLE | reported only |
-| PCE | 51 | 9378 | -0.048 | [-0.31, +0.24] | [-0.29, +0.26] | -155 | 0.785 → selection / chance | 0.772 → selection / chance | — | UNSTABLE | tested, BH fail |
-| war_military | 15 | 2766 | -0.065 | [-0.59, +0.76] | [-0.51, +0.51] | -209 | 0.647 → selection / chance | 0.617 → selection / chance | — | UNSTABLE | reported only |
-| trade_tariff | 28 | 5068 | +0.140 | [-0.19, +0.52] | [-0.19, +0.48] | +447 | 0.788 → selection / chance | 0.742 → selection / chance | — | UNSTABLE | reported only |
-| financial_stress | 16 | 3040 | -1.373 | [-2.56, -0.33] | [-2.77, -0.22] | -4390 | 1.000 → effect | 1.000 → effect | — | stable | never tested |
-| us_fiscal | 13 | 2402 | -0.466 | [-1.32, +0.12] | [-1.30, +0.11] | -1489 | 0.955 → effect | 0.954 → effect | — | stable | reported only |
-| pandemic_health | 10 | 1713 | -1.535 | [-2.71, -0.62] | [-2.66, -0.43] | -4907 | 0.999 → effect | 0.998 → effect | — | stable | reported only |
-| political_shock | 22 | 4031 | -0.125 | [-0.42, +0.19] | [-0.42, +0.20] | -398 | 0.717 → selection / chance | 0.706 → selection / chance | — | stable | reported only |
-| energy_shock | 16 | 2932 | -0.392 | [-0.96, +0.25] | [-0.86, +0.02] | -1254 | 0.952 → effect | 0.939 → selection / chance | — | UNSTABLE | reported only |
-| cyber_infrastructure | 3 | 563 | +0.898 | no CI (n < 5) | no CI (n < 5) | +2872 | — | — | — | — | reported only |
+| FOMC | 34 | 6614 | -0.273 | [-0.54, +0.01] | [-0.54, +0.01] | -874 | 0.973 → effect | 0.951 → effect | — | stable | tested, BH fail |
+| CPI | 51 | 9438 | +0.093 | [-0.22, +0.44] | [-0.21, +0.43] | +297 | 0.799 → selection / chance | 0.783 → selection / chance | — | UNSTABLE | tested, BH fail |
+| NFP | 51 | 9034 | +0.048 | [-0.19, +0.28] | [-0.17, +0.29] | +152 | 0.491 → selection / chance | 0.499 → selection / chance | — | UNSTABLE | tested, BH fail |
+| GDP_ADV | 15 | 2789 | -0.189 | [-0.70, +0.29] | [-0.67, +0.29] | -604 | 0.806 → selection / chance | 0.791 → selection / chance | — | UNSTABLE | reported only |
+| PCE | 51 | 9378 | -0.048 | [-0.31, +0.25] | [-0.30, +0.25] | -152 | 0.777 → selection / chance | 0.764 → selection / chance | — | UNSTABLE | tested, BH fail |
+| war_military | 15 | 2766 | -0.064 | [-0.57, +0.69] | [-0.51, +0.49] | -206 | 0.642 → selection / chance | 0.639 → selection / chance | — | UNSTABLE | reported only |
+| trade_tariff | 28 | 5068 | +0.141 | [-0.20, +0.50] | [-0.18, +0.47] | +449 | 0.788 → selection / chance | 0.742 → selection / chance | — | UNSTABLE | reported only |
+| financial_stress | 16 | 3040 | -1.372 | [-2.63, -0.35] | [-2.75, -0.23] | -4388 | 1.000 → effect | 1.000 → effect | — | stable | never tested |
+| us_fiscal | 14 | 2592 | -0.485 | [-1.31, +0.04] | [-1.30, +0.06] | -1552 | 0.964 → effect | 0.959 → effect | — | stable | reported only |
+| pandemic_health | 10 | 1713 | -1.533 | [-2.60, -0.60] | [-2.61, -0.39] | -4905 | 0.999 → effect | 0.999 → effect | — | stable | reported only |
+| political_shock | 22 | 4031 | -0.124 | [-0.41, +0.19] | [-0.42, +0.21] | -396 | 0.693 → selection / chance | 0.679 → selection / chance | — | stable | reported only |
+| energy_shock | 18 | 3274 | -0.432 | [-0.96, +0.15] | [-0.84, -0.05] | -1381 | 0.971 → effect | 0.960 → effect | — | UNSTABLE | reported only |
+| cyber_infrastructure | 3 | 563 | +0.899 | no CI (n < 5) | no CI (n < 5) | +2874 | — | — | — | — | reported only |
 
 ### Q3 — scheduled vs unscheduled surprise (shares)
 
 | condition | sessions | trades | effect σ | 95% CI | block-10 CI (post hoc) | $/day | placebo mean ± sd | placebo rank → verdict | placebo, condition in pool (sens.) | stable (§2) | status |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| scheduled | 231 | 42748 | -0.045 | [-0.16, +0.08] | [-0.14, +0.07] | -143 | +0.042 ± 0.047 | 0.965 → effect | 0.854 → selection / chance | UNSTABLE | tested, BH fail |
-| unscheduled_surprise | 135 | 24903 | -0.349 | [-0.58, -0.13] | [-0.67, -0.09] | -1117 | +0.061 ± 0.074 | 1.000 → effect | 1.000 → effect | UNSTABLE | descriptive + placebo |
-| unscheduled_surprise_no_release_sensitivity | 114 | 20882 | -0.379 | [-0.64, -0.13] | [-0.75, -0.06] | -1211 | — | — | — | UNSTABLE | sensitivity (not pre-registered) |
-| no_event | 866 | 156023 | +0.064 | [+0.02, +0.10] | [+0.02, +0.11] | +204 | — | — | — | stable | baseline complement |
+| scheduled | 234 | 43327 | -0.039 | [-0.15, +0.08] | [-0.14, +0.09] | -123 | +0.035 ± 0.046 | 0.942 → selection / chance | 0.815 → selection / chance | UNSTABLE | tested, BH fail |
+| unscheduled_surprise | 137 | 25260 | -0.334 | [-0.57, -0.12] | [-0.66, -0.07] | -1069 | +0.060 ± 0.072 | 1.000 → effect | 1.000 → effect | UNSTABLE | descriptive + placebo |
+| unscheduled_surprise_no_release_sensitivity | 115 | 21041 | -0.381 | [-0.65, -0.14] | [-0.77, -0.06] | -1218 | — | — | — | UNSTABLE | sensitivity (not pre-registered) |
+| no_event | 883 | 159227 | +0.064 | [+0.03, +0.11] | [+0.02, +0.11] | +204 | — | — | — | stable | baseline complement |
 
 ### Q2 — metric block, selected cells (shares)
 
 | cell | win_rate_trade | win_rate_day | expectancy_usd | trades_per_session | avg_winner_usd | avg_loser_usd | max_drawdown_usd | expectancy_bp |
 |---|---|---|---|---|---|---|---|---|
-| FOMC | 36.1% | 28.9% | -6 | 194.9 | +47 | -36 | -45,247 | -6.11 bp |
+| FOMC | 36.1% | 28.2% | -6 | 195.2 | +47 | -37 | -48,494 | -6.37 bp |
 | CPI | 39.7% | 38.3% | +0 | 186.1 | +55 | -36 | -43,469 | +0.04 bp |
-| NFP | 42.3% | 43.1% | -1 | 179.7 | +49 | -37 | -23,060 | -0.50 bp |
+| NFP | 42.8% | 45.0% | +0 | 179.9 | +49 | -37 | -17,401 | +0.18 bp |
 | PCE | 38.5% | 32.2% | -3 | 182.8 | +54 | -39 | -45,831 | -2.92 bp |
 | financial_stress | 36.2% | 17.6% | -23 | 190.1 | +62 | -72 | -77,811 | -23.37 bp |
-| scheduled | 39.5% | 36.8% | -2 | 185.1 | +51 | -38 | -141,773 | -2.33 bp |
-| unscheduled_surprise | 38.9% | 28.9% | -8 | 184.5 | +54 | -48 | -203,723 | -7.62 bp |
-| unscheduled_surprise_no_release_sensitivity | 38.9% | 28.9% | -8 | 183.2 | +54 | -49 | -184,501 | -8.18 bp |
-| no_event | 40.6% | 39.3% | -0 | 180.2 | +49 | -34 | -139,600 | -0.47 bp |
+| scheduled | 39.7% | 37.2% | -2 | 185.2 | +51 | -38 | -141,773 | -2.21 bp |
+| unscheduled_surprise | 39.1% | 29.2% | -7 | 184.4 | +54 | -48 | -199,602 | -7.35 bp |
+| unscheduled_surprise_no_release_sensitivity | 38.8% | 28.7% | -8 | 183.0 | +54 | -48 | -186,509 | -8.22 bp |
+| no_event | 40.6% | 39.6% | -0 | 180.3 | +49 | -35 | -139,600 | -0.45 bp |
 
 ### By year, selected cells (shares)
 
@@ -71,90 +71,90 @@ Each entry: condition sessions, effect against that YEAR's own B0 (σ); raw mean
 
 | cell | 2018 | 2019 | 2020 | 2021 | 2022 |
 |---|---|---|---|---|---|
-| FOMC | 8, -0.29 | 8, -0.09 | 7, +0.18 | 8, -0.40 | 7, -0.84 |
-| CPI | 12, +0.07 | 12, -0.12 | 12, +0.16 | 12, -0.04 | 12, +0.39 |
-| NFP | 12, +0.34 | 12, +0.19 | 12, +0.12 | 12, +0.11 | 10, -0.56 |
+| FOMC | 8, -0.29 | 8, -0.09 | 7, +0.18 | 8, -0.40 | 8, -0.86 |
+| CPI | 12, +0.07 | 12, -0.12 | 12, +0.15 | 12, -0.04 | 12, +0.39 |
+| NFP | 12, +0.34 | 12, +0.19 | 12, +0.12 | 12, +0.11 | 12, -0.27 |
 | PCE | 12, -0.18 | 11, -0.23 | 12, +0.09 | 12, -0.25 | 12, +0.16 |
 | financial_stress | — | 1, -0.26 | 5, -3.40 | 4, -0.26 | 7, -0.50 |
-| scheduled | 48, -0.00 | 45, -0.06 | 45, +0.12 | 48, -0.11 | 45, -0.18 |
-| unscheduled_surprise | 23, -0.05 | 31, +0.06 | 35, -0.99 | 18, -0.02 | 28, -0.42 |
-| unscheduled_surprise_no_release_sensitivity | 17, -0.03 | 29, +0.05 | 27, -1.31 | 17, -0.01 | 24, -0.34 |
-| no_event | 179, +0.00 | 172, +0.02 | 176, +0.17 | 182, +0.03 | 157, +0.10 |
+| scheduled | 48, -0.00 | 45, -0.06 | 45, +0.12 | 48, -0.11 | 48, -0.14 |
+| unscheduled_surprise | 23, -0.05 | 31, +0.06 | 35, -0.99 | 18, -0.02 | 30, -0.34 |
+| unscheduled_surprise_no_release_sensitivity | 17, -0.03 | 29, +0.05 | 27, -1.31 | 17, -0.01 | 25, -0.35 |
+| no_event | 179, +0.00 | 172, +0.02 | 176, +0.17 | 182, +0.03 | 174, +0.10 |
 
 ### Post hoc, NOT pre-registered — within trailing-range regime (shares)
 
 | cell | regime | sessions in regime | condition sessions | effect σ vs regime B0 | 95% CI |
 |---|---|---|---|---|---|
 | FOMC | low | 416 | 16 | -0.211 | [-0.41, -0.01] |
-| FOMC | mid | 416 | 10 | -0.314 | [-0.69, +0.06] |
-| FOMC | high | 394 | 12 | -0.357 | [-1.12, +0.44] |
+| FOMC | mid | 416 | 10 | -0.313 | [-0.69, +0.06] |
+| FOMC | high | 417 | 13 | -0.400 | [-1.07, +0.35] |
 | CPI | low | 416 | 19 | -0.229 | [-0.45, -0.01] |
 | CPI | mid | 416 | 19 | +0.340 | [-0.06, +0.79] |
-| CPI | high | 394 | 22 | +0.181 | [-0.39, +0.87] |
+| CPI | high | 417 | 22 | +0.171 | [-0.39, +0.88] |
 | NFP | low | 416 | 21 | +0.010 | [-0.20, +0.23] |
-| NFP | mid | 416 | 18 | +0.320 | [-0.10, +0.76] |
-| NFP | high | 394 | 19 | -0.122 | [-0.55, +0.31] |
+| NFP | mid | 416 | 18 | +0.319 | [-0.10, +0.76] |
+| NFP | high | 417 | 21 | +0.009 | [-0.45, +0.46] |
 | PCE | low | 416 | 21 | -0.011 | [-0.29, +0.38] |
 | PCE | mid | 416 | 18 | -0.092 | [-0.60, +0.53] |
-| PCE | high | 394 | 20 | -0.122 | [-0.63, +0.40] |
+| PCE | high | 417 | 20 | -0.132 | [-0.63, +0.38] |
 | financial_stress | low | 416 | 3 | -0.093 | no CI (n < 5) |
-| financial_stress | mid | 416 | 3 | -2.468 | no CI (n < 5) |
-| financial_stress | high | 394 | 11 | -1.207 | [-2.69, -0.04] |
+| financial_stress | mid | 416 | 3 | -2.467 | no CI (n < 5) |
+| financial_stress | high | 417 | 11 | -1.217 | [-2.65, -0.03] |
 | scheduled | low | 416 | 84 | -0.090 | [-0.20, +0.03] |
 | scheduled | mid | 416 | 69 | +0.111 | [-0.10, +0.34] |
-| scheduled | high | 394 | 78 | -0.125 | [-0.37, +0.13] |
+| scheduled | high | 417 | 81 | -0.107 | [-0.34, +0.15] |
 | unscheduled_surprise | low | 416 | 41 | +0.105 | [-0.12, +0.37] |
-| unscheduled_surprise | mid | 416 | 40 | -0.264 | [-0.67, +0.10] |
-| unscheduled_surprise | high | 394 | 54 | -0.718 | [-1.13, -0.33] |
+| unscheduled_surprise | mid | 416 | 40 | -0.264 | [-0.67, +0.09] |
+| unscheduled_surprise | high | 417 | 56 | -0.671 | [-1.08, -0.26] |
 | unscheduled_surprise_no_release_sensitivity | low | 416 | 37 | +0.047 | [-0.17, +0.28] |
 | unscheduled_surprise_no_release_sensitivity | mid | 416 | 31 | -0.275 | [-0.79, +0.16] |
-| unscheduled_surprise_no_release_sensitivity | high | 394 | 46 | -0.750 | [-1.26, -0.28] |
+| unscheduled_surprise_no_release_sensitivity | high | 417 | 47 | -0.753 | [-1.24, -0.29] |
 | no_event | low | 416 | 288 | +0.026 | [-0.02, +0.07] |
 | no_event | mid | 416 | 311 | +0.009 | [-0.05, +0.07] |
-| no_event | high | 394 | 267 | +0.161 | [+0.07, +0.26] |
+| no_event | high | 417 | 284 | +0.155 | [+0.06, +0.25] |
 
 ### Q5 — pre / post, descriptive (shares)
 
 | category | pre trades | pre $/trade | post trades | post $/trade | sessions excluded (unknown time) |
 |---|---|---|---|---|---|
-| FOMC | 6113 | -6.87 | 1293 | -2.51 | 0 |
+| FOMC | 6283 | -7.11 | 1331 | -2.87 | 0 |
 | CPI | 0 | — | 11168 | +0.04 | 0 |
-| NFP | 0 | — | 10421 | -0.50 | 0 |
+| NFP | 0 | — | 10792 | +0.18 | 0 |
 | GDP_ADV | 0 | — | 3747 | -5.02 | 0 |
 | PCE | 256 | -9.59 | 10528 | -2.75 | 0 |
 | war_military | 629 | -1.38 | 2482 | -3.55 | 2 |
-| trade_tariff | 1248 | -6.64 | 6097 | +0.96 | 0 |
+| trade_tariff | 1248 | -6.64 | 6295 | +1.90 | 0 |
 | financial_stress | 76 | -133.99 | 2752 | -18.89 | 2 |
-| us_fiscal | 768 | -13.64 | 2307 | -9.98 | 1 |
+| us_fiscal | 768 | -13.64 | 2497 | -10.30 | 1 |
 | pandemic_health | 926 | -9.59 | 1380 | -19.92 | 3 |
 | political_shock | 685 | -2.07 | 3901 | -3.56 | 4 |
-| energy_shock | 1037 | -13.64 | 1572 | -7.18 | 5 |
+| energy_shock | 1037 | -13.64 | 1914 | -8.72 | 5 |
 | cyber_infrastructure | 164 | +22.86 | 407 | +2.70 | 2 |
 
-Fed days, trades entered before 14:00: -1105 $/session on Fed days vs -275 on all sessions; excess -831 $/session.
+Fed days, trades entered before 14:00: -1145 $/session on Fed days vs -272 on all sessions; excess -874 $/session.
 
-First-60-minute line (entries 09:30–10:30): scheduled_today 231 sessions, mean -336 $/session; non-release 995 sessions, -150; difference -186 [-576.52, +215.20].
+First-60-minute line (entries 09:30–10:30): scheduled_today 234 sessions, mean -319 $/session; non-release 1015 sessions, -155; difference -164 [-553.58, +233.85].
 
 ### Q7 — setup × category, ten smallest p (shares)
 
-Tested cells m = 66; BH q=0.10 passes: 1; of those with |effect| ≥ 0.25 σ: 0; shortlist: empty.
+Tested cells m = 66; BH q=0.10 passes: 2; of those with |effect| ≥ 0.25 σ: 0; shortlist: empty.
 
 | setup | category | sessions | setup trades | effect σ (arm σ) | 95% CI | p (boot) | BH | placebo rank | one-sided rate | fidelity |
 |---|---|---|---|---|---|---|---|---|---|---|
-| PDH_PDL_FailedBreak | FOMC | 38 | 426 | -0.056 | [-0.09, -0.02] | 0.0003 | pass | 0.991 | — | ok |
-| VWAP_Reclaim | FOMC | 38 | 824 | +0.047 | [+0.02, +0.08] | 0.0033 | fail | 1.000 | 79% | LOW |
-| Six_Lines | trade_tariff | 40 | 516 | +0.020 | [+0.01, +0.04] | 0.0067 | fail | 0.995 | 25% | ok |
-| Crabel_Stretch | FOMC | 38 | 523 | -0.084 | [-0.15, -0.02] | 0.0073 | fail | 0.992 | 0% | ok |
-| VWAP_2sigma_Fade | FOMC | 38 | 52 | +0.009 | [+0.00, +0.02] | 0.0253 | fail | 1.000 | — | ok |
-| Six_Lines_NoCap | FOMC | 38 | 549 | -0.039 | [-0.08, +0.01] | 0.0800 | fail | 0.964 | — | ok |
-| IntradayMomentumBoundary | FOMC | 38 | 750 | -0.034 | [-0.07, +0.01] | 0.0827 | fail | 0.979 | 19% | ok |
-| EMA_9_20_Pullback | NFP | 58 | 158 | +0.008 | [-0.00, +0.02] | 0.0867 | fail | 0.999 | — | ok |
-| ORB_5min | FOMC | 38 | 496 | -0.040 | [-0.09, +0.01] | 0.0880 | fail | 0.922 | 72% | LOW |
-| Gap_Fade | FOMC | 38 | 138 | -0.015 | [-0.04, +0.00] | 0.0887 | fail | 0.752 | 8% | ok |
+| PDH_PDL_FailedBreak | FOMC | 39 | 442 | -0.059 | [-0.10, -0.03] | 0.0003 | pass | 0.994 | — | ok |
+| VWAP_Reclaim | FOMC | 39 | 852 | +0.049 | [+0.02, +0.08] | 0.0020 | pass | 1.000 | 79% | LOW |
+| Six_Lines | trade_tariff | 41 | 531 | +0.020 | [+0.01, +0.03] | 0.0080 | fail | 0.995 | 25% | ok |
+| Crabel_Stretch | FOMC | 39 | 535 | -0.084 | [-0.14, -0.02] | 0.0087 | fail | 0.993 | 0% | ok |
+| VWAP_2sigma_Fade | FOMC | 39 | 52 | +0.009 | [+0.00, +0.02] | 0.0293 | fail | 1.000 | — | ok |
+| Six_Lines_NoCap | FOMC | 39 | 564 | -0.045 | [-0.08, -0.00] | 0.0427 | fail | 0.978 | — | ok |
+| ORB_5min | FOMC | 39 | 510 | -0.048 | [-0.09, +0.00] | 0.0607 | fail | 0.947 | 72% | LOW |
+| TTM_Squeeze | NFP | 60 | 846 | +0.017 | [-0.00, +0.04] | 0.0680 | fail | 0.998 | — | ok |
+| Gap_Fade | FOMC | 39 | 141 | -0.016 | [-0.04, +0.00] | 0.0700 | fail | 0.786 | 8% | ok |
+| ORB_15min | FOMC | 39 | 497 | -0.027 | [-0.06, +0.00] | 0.0753 | fail | 0.787 | — | ok |
 
 ## options
 
-**options discovery** 2020-01-02 → 2022-12-30: 482 sessions, 9,943 trades, hash ['ccd00ac71f8243e9'], code `748943e`, σ(discovery) = $1,032/day, B0 = $-100/day (median $-214), excluded no-0DTE sessions 270. Regime cuts 111.2 / 184.5 bp. Seeds {'bootstrap': 20260828, 'placebo': 20260828}, bootstrap 3000, placebo 5000.
+**options discovery** 2020-01-02 → 2022-12-30: 482 sessions, 9,943 trades, hash ['ccd00ac71f8243e9'], code `87e1736`, σ(discovery) = $1,032/day, B0 = $-100/day (median $-214), excluded no-0DTE sessions 270. Regime cuts 111.2 / 184.5 bp. Seeds {'bootstrap': 20260828, 'placebo': 20260828}, bootstrap 3000, placebo 5000.
 
 Open weekdays in window 756: replayed 482, early-close half days dropped by rule 4, recorded skips 270 {'no_0dte': 270}, **lost regular sessions 0**.
 
@@ -319,16 +319,16 @@ Tested cells m = 20; BH q=0.10 passes: 0; of those with |effect| ≥ 0.25 σ: 0;
 
 | category | options effect σ | options CI | shares effect σ | shares CI | options − shares | divergence |
 |---|---|---|---|---|---|---|
-| FOMC | -0.286 | [-0.77, +0.22] | -0.282 | [-0.55, -0.01] | -0.004 | no |
-| CPI | -0.327 | [-0.70, +0.06] | +0.092 | [-0.17, +0.41] | -0.419 | no |
-| NFP | -0.100 | [-0.39, +0.22] | +0.062 | [-0.15, +0.28] | -0.162 | no |
-| GDP_ADV | -0.106 | no CI (n < 5) | -0.204 | [-0.59, +0.17] | +0.097 | no |
-| PCE | +0.163 | [-0.21, +0.56] | -0.076 | [-0.33, +0.21] | +0.239 | no |
-| war_military | -0.124 | [-1.11, +0.89] | -0.114 | [-0.64, +0.56] | -0.009 | no |
-| trade_tariff | +0.294 | no CI (n < 5) | +0.071 | [-0.21, +0.36] | +0.223 | no |
-| financial_stress | -0.337 | [-0.86, +0.12] | -1.299 | [-2.47, -0.31] | +0.962 | no |
-| us_fiscal | -0.382 | [-0.66, -0.12] | -0.457 | [-1.11, +0.00] | +0.075 | no |
-| pandemic_health | -0.224 | [-0.93, +0.49] | -0.779 | [-1.73, +0.08] | +0.554 | no |
-| political_shock | -0.081 | [-0.46, +0.33] | -0.184 | [-0.42, +0.06] | +0.103 | no |
-| energy_shock | +0.196 | [-0.83, +1.85] | -0.270 | [-0.78, +0.28] | +0.465 | no |
-| cyber_infrastructure | +1.126 | no CI (n < 5) | +0.883 | [+0.21, +1.55] | +0.243 | no |
+| FOMC | -0.286 | [-0.77, +0.22] | -0.299 | [-0.54, -0.03] | +0.013 | no |
+| CPI | -0.327 | [-0.70, +0.06] | +0.091 | [-0.18, +0.39] | -0.418 | no |
+| NFP | -0.100 | [-0.39, +0.22] | +0.100 | [-0.11, +0.32] | -0.200 | no |
+| GDP_ADV | -0.106 | no CI (n < 5) | -0.204 | [-0.58, +0.16] | +0.098 | no |
+| PCE | +0.163 | [-0.21, +0.56] | -0.077 | [-0.34, +0.23] | +0.240 | no |
+| war_military | -0.124 | [-1.11, +0.89] | -0.115 | [-0.65, +0.57] | -0.008 | no |
+| trade_tariff | +0.294 | no CI (n < 5) | +0.117 | [-0.18, +0.43] | +0.177 | no |
+| financial_stress | -0.337 | [-0.86, +0.12] | -1.299 | [-2.41, -0.33] | +0.962 | no |
+| us_fiscal | -0.382 | [-0.66, -0.12] | -0.473 | [-1.08, -0.04] | +0.091 | no |
+| pandemic_health | -0.224 | [-0.93, +0.49] | -0.779 | [-1.68, +0.07] | +0.555 | no |
+| political_shock | -0.081 | [-0.46, +0.33] | -0.185 | [-0.42, +0.07] | +0.104 | no |
+| energy_shock | +0.196 | [-0.83, +1.85] | -0.317 | [-0.79, +0.19] | +0.512 | no |
+| cyber_infrastructure | +1.126 | no CI (n < 5) | +0.882 | [+0.12, +1.58] | +0.244 | no |

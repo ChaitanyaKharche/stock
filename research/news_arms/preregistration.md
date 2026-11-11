@@ -668,3 +668,20 @@ reproduced every headline number from the raw replay files and **failed the repo
 
 Nothing in the design changed; the corrections are to the report, the replay's failure
 mode and the lock. Second pass after the fill-in.
+
+## 23. Step 6 record: the 24 lost sessions re-replayed, 2026-11-10/11
+
+Fill-in chunks `2022/shares/fill-a` (23 sessions, 23.7 min) and `2024/shares/fill-a`
+(2024-10-01) replayed on the laptop at `e750a4c`, hash `7c6414fc549315f3`, `skipped: []`,
+pushed as `87e1736`. `analyze.exclusions` now reports 0 lost regular sessions for both arms
+(shares 1,249 of 1,249 open weekdays less 10 early closes; options 482 kept, 270 no-0DTE,
+4 half days). The analysis was rerun; the tested families are unchanged and still equal the
+pre-committed counts by set equality. What moved on shares: sessions 1,226 → 1,249, trades
+222,363 → 226,678, σ $3,197 → $3,199, B0 −$288 → −$286; FOMC 38 → 39 sessions,
+−0.282 → −0.299 σ, p 0.043 → 0.030 (still BH fail at 0.025); scheduled 231 → 234,
+−0.045 → −0.039 σ, placebo rank 0.965 → 0.942 (now chance under the pre-registered rule);
+unscheduled 135 → 137, −0.349 → −0.334 σ; NFP 58 → 60, +0.062 → +0.100 σ; Q7 BH passes
+1 → 2 (VWAP_Reclaim on Fed days joins PDH_PDL_FailedBreak), both far below 0.25 σ; shortlist
+still empty. Options unchanged. Exposure: the fill-in console, pasted by the owner, showed
+the 24 recovered sessions' daily nets, one of which (2024-10-01, +$2,592.69) is a holdout
+session; seen unaggregated, logged here.
