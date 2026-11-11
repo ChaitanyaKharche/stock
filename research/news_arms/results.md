@@ -296,8 +296,9 @@ discovery figure was −$958 a day with an interval that excluded zero. By year:
 session; win rate per day 38% vs 41% on no-event days (discovery: 28% vs 40%). Options: 8 Fed
 sessions, +0.003 σ. The discovery row was exploratory, failed its correction, and was half
 2022; the holdout says it was selection. **No forward policy experiment is proposed.** The
-"stand aside on Fed mornings" rule would have saved about $590 a session on the 29 holdout
-Fed days against about $870 in discovery, within what a $2,300-σ arm does by chance.
+"stand aside on Fed mornings" rule would have saved about $250 a session of raw morning
+loss on the 29 holdout Fed days, of which about $150 is Fed-specific excess, against $1,145
+and $874 in discovery; a $2,300-σ arm does that by chance.
 
 **Everything else, exploratory and consistent with chance:** every Q1 category on both arms
 has a CI including zero except financial_stress (shares −0.53 σ on 13 days, options −0.55 σ
