@@ -733,3 +733,11 @@ split is not flat (low +0.15, mid −0.31 [−0.49, −0.13], high +0.57 σ) and
 post hoc. Also added per the auditor: the 14.8/15.8 power figures beside C1/C2, the own-σ
 effects (14.Q5), the 29-session Fed row marked reported-only, "selection" softened to what the
 interval can say, and a pointer to the console exposures (§19, §21, §23).
+
+**24.2 Gate 2 on the holdout section, second pass (2026-11-11): FAIL on one number, found
+to be an arithmetic error in 14.8.** 14.8 and 15.8 say 80% power for C2 needs "about
+0.36 σ". Under the pass rule (CI excludes zero and the estimate is at least 0.25 σ) the
+binding threshold for C2 is 1.96 × SE = 0.31 σ, and 80% power needs that plus 0.84 × SE,
+about **0.45 σ**, with 13.6's planned SE of 0.16 as well as the realised 0.161. C1: threshold
+0.25 σ, 80% power at about 0.32 σ, power at a true 0.25 σ about 50%; C2 about 34%. 14.8 and
+15.8 are left as written and corrected here, with the reason.

@@ -291,8 +291,10 @@ In plain words: on the 166 shares sessions with a scheduled release the arm made
 see a 0.24 σ difference on shares, about $770 a day; the observed difference is a tenth of
 that, and the C1 interval excludes ±0.25 σ on both sides, so this null is informative, not
 merely underpowered. C2 could only have seen 0.45 σ and saw 0.06; per 13.6 it is reported,
-never as PASS/FAIL. Power as pre-registered (14.8, 15.8): about 50% at a true 0.25 σ for C1,
-80% at about 0.31 σ (C1) and 0.36 σ (C2). In the holdout's own σ (14.Q5, descriptive): C1
+never as PASS/FAIL. Power under the pass rule, recomputed from the realised SEs (13.6): at
+a true 0.25 σ about 50% (C1) and 34% (C2); 80% power at about 0.32 σ (C1) and 0.45 σ (C2).
+The pre-registered 0.36 σ for C2 (14.8) was an arithmetic error: with 13.6's own SE of 0.16
+the figure is 0.45 σ (recorded in §24.2). In the holdout's own σ (14.Q5, descriptive): C1
 +0.033 σ, C2 +0.069 σ. Single-category sensitivity: +0.04 σ and +0.08 σ. By year on
 shares: 2023 +0.07, 2024 +0.04, 2025 −0.01, 2026 −0.02. Nothing to Holm.
 
