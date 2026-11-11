@@ -1,9 +1,9 @@
 # news_arms — discovery results (shares 2018–2022, options 2020–2022)
 
 Status: **discovery read 2026-11-10; the 24 lost shares sessions re-replayed and folded in
-2026-11-11. Exploratory. Holdout not read. Gate 2: FAIL on the first pass (27 rows), the
-second (three sentences), the third (one clause) and the fourth (one word), each corrected in
-place; fifth pass pending (`audit_results.md`).**
+2026-11-11. Exploratory. Holdout not read. Gate 2: PASS on the fifth pass, 2026-11-11
+(`audit_results.md`); passes one to four failed on 27 rows, three sentences, one clause and one
+word, each corrected in place and recorded in §22–§23 of the pre-registration.**
 Every number here is in `analysis_shares_discovery.json`, `analysis_options_discovery.json`,
 `analysis_q6_discovery.json`; the tables are rendered from those files by
 `trade_analysis/news_arms/report.py` into `results_tables.md` and are not typed by hand.

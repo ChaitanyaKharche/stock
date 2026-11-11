@@ -707,3 +707,9 @@ opened the lock before the flips were found; nothing read the holdout in that wi
 "three tested Q7 setup cells"; four untested cells within ±0.002 σ of zero (two of them
 with no trades at all) also changed sign with the fill-in and are now named. Everything
 else in scope passed; the auditor compared every cell of every table in both arms.
+
+**23.4 Gate 2 fifth pass (2026-11-11): PASS.** `audit_results.md` ends with the pass line; the
+holdout lock is open for the single read. Caveats kept verbatim in the audit: Fed days are
+exploratory and fail the correction (without 2022, −0.16 σ [−0.30, −0.00]; 2020 the other
+way); the pre-registered placebo leans toward "effect" and is quoted beside the in-pool rank;
+shock days are descriptive, unstable, mostly 2020, from a salience-selected list.

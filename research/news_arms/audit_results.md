@@ -1,34 +1,37 @@
-# news_arms — gate 2 audit, fourth pass
+# news_arms — gate 2 audit, fifth pass
 
-Auditor, 2026-11-11, at commit `59a61d0`. Earlier passes are recorded in `preregistration.md` §22,
-§23.1, §23.2 and in the git history of this file. The auditor edited neither `results.md` nor the code.
+Auditor, 2026-11-11, at commit `2f04abc`. Earlier passes are recorded in `preregistration.md` §22,
+§23.1, §23.2, §23.3 and in the git history of this file. The auditor edited neither `results.md`
+nor the code.
 
-**In one sentence: one word is missing, and the error is mine. The corrected clause copies the fix
-text I wrote in pass three, "three Q7 setup cells … changed sign". I had checked only the *tested*
-Q7 cells. Four untested cells also changed sign, so the count is wrong as written. Everything else
-passes.** The fix is to insert the word "tested". No rerun is needed. I have now compared every cell
-of every table, so this is the last wording item.
+**In one sentence: nothing failing remains, so gate 2 passes, and the holdout may be read once.**
+The last false clause is corrected. Every number in results.md was reproduced from the raw replay
+files on the second pass, and no code, JSON or table has changed since. The three findings below
+must carry their caveats wherever they are quoted.
 
 ## Verdict table
 
 | # | Claim | Verdict | Reason |
 |---|---|---|---|
-| 0 | results.md:21-23: "three Q7 setup cells within ±0.005 σ of zero did [change sign] … every p > 0.8" | **FAIL (wording)** | The three named are exactly the *tested* cells that flipped. Four untested cells flipped too: EMA_9_20_Pullback on energy_shock days (+0.0009 → −0.0017 σ, p 0.97 → 0.87, 21 sessions) and ThreeBarPlay on NFP, pandemic_health and cyber_infrastructure days (about ±0.00002 σ; two of those cells hold 0 trades, so the sign is just minus the setup's own B0). As an exhaustive count, "three" is false. |
-| 1 | Same sentence: "no Q1 or Q3 effect changed sign … and no tested/reported status changed"; release-days placebo verdict "effect" → "chance"; "one more Q7 cell passes BH" | **PASS** | Checked pre-fill-in JSON at `f739806` (same corrected code, 1,226 sessions) against HEAD (1,249), and also `e2da37b` against HEAD. No sign change in any cell of q1, q1_single_category, q3 or q3_single_category, either arm. No change to tested / descriptive / never_tested / BH flags there. Q7 tested set unchanged. BH passes {PDH_PDL_FailedBreak\|FOMC} → {+ VWAP_Reclaim\|FOMC}. Every named p > 0.8 holds (0.882, 0.828, 0.987). |
-| 2 | `exclusions()`: any recorded skip of an open full day other than `no_0dte` is lost | **PASS** | analyze.py:581-584. The updated test fails on the `78c27b7` analyze.py (scratch copy) and passes at HEAD. |
-| 3 | No regression | **PASS** | Fresh rerun on HEAD equals the committed JSON apart from timestamp, command and sha. 0 lost in both arms (options 270 `no_0dte` recorded). Families set-equal to the counts (Q7 66 / 20; Q1 4 / 2). `pytest trade_analysis/news_arms trade_analysis/live_lab` all pass. Committed JSON changed only `repo_sha` and `generated`. |
-| 4 | Lock | **PASS** | Last-line rule unchanged since pass three. Shut on this file. |
-| 5 | §23.2 | **PASS** | Records the third pass accurately, including that my PASS draft briefly opened the lock. |
-| 6 | Everything else in results.md | **PASS** (carried) | Passes two and three; nothing numeric moved. |
-| 7 | Fed days (F2) | **QUESTIONABLE** | Caveat below. |
-| 8 | Pre-registered placebo ranks | **QUESTIONABLE** | Caveat below. |
-| 9 | Shock days (F3) | **QUESTIONABLE** | Caveat below. |
+| 1 | Fed days, shares (F2): 39 sessions, −0.299 σ [−0.54, −0.03], −$958/day, p 0.030, fails BH (bar 0.025, family of 4); candidate for a forward experiment only | **QUESTIONABLE** | Reproduced exactly. Fragile: half of it is 2022, 2020 goes the other way, and it fails the pre-registered correction. Quote with the caveat below. |
+| 2 | Placebo ranks under the pre-registered pool (13.3) | **QUESTIONABLE** | The pool design leans toward "effect". The in-pool rank sits beside every cell; quote both. |
+| 3 | Geopolitical shock days, shares (F3): 137 sessions, −0.334 σ | **QUESTIONABLE** | Descriptive by design, unstable by §2, mostly 2020, salience-selected list. |
+| 4 | results.md:21-24, what moved with the fill-in: no Q1 or Q3 effect changed sign; three *tested* Q7 cells flipped within ±0.005 σ of zero (Crabel_Stretch and ORB_5min on jobs days, PDH_PDL_Breakout on Fed days, every p > 0.8); four untested Q7 cells flipped within ±0.002 σ; no tested/reported status changed | **PASS** | Matches my full comparison of `f739806` (1,226 sessions) against HEAD (1,249): every cell of q1, q1_single_category, q3, q3_single_category and q7, both arms. Exactly 3 tested flips (p 0.88, 0.83, 0.99) and exactly 4 untested ones, the largest EMA_9_20_Pullback\|energy_shock at +0.0009 → −0.0017 σ. Options: no flips. |
+| 5 | §23.3 records the fourth pass | **PASS** | Accurate, including "two of them with no trades at all" (ThreeBarPlay on pandemic_health and cyber_infrastructure days, 0 trades each). |
+| 6 | No regression since pass four | **PASS** | `git diff 59a61d0 2f04abc` touches only results.md, preregistration.md and this file. Code, analysis JSON and results_tables.md are unchanged. `pytest trade_analysis/news_arms trade_analysis/live_lab` all pass. No holdout analysis or join file exists. |
+| 7 | Every other claim in results.md | **PASS** (carried) | Reproduced from raw on pass two. The fixes from passes three and four were verified then, and nothing numeric has changed since. |
 
-## FAIL detail and the fix
+## What was established across the five passes, in brief
 
-results.md:21: change "three Q7 setup cells within ±0.005 σ of zero did" to **"three tested Q7 setup
-cells within ±0.005 σ of zero did"**. Optionally add "(four untested cells, all within ±0.002 σ, also
-flipped)". Either makes the sentence true. A fifth pass need only check that word.
+- **Baselines:** shares 1,249 of 1,249 regular sessions, 226,678 trades, σ $3,199, B0 −$286/day
+  (−1.6 bp per average trade). Options 482 sessions after the 270 no-0DTE exclusions, σ $1,032,
+  B0 −$100/day.
+- **Release days as a whole:** no difference from an ordinary day (shares −0.039 σ, CI includes
+  zero; options −0.091 σ, CI includes zero).
+- **Per setup (Q7):** no cell reaches the pre-registered quarter-sigma bar; the shortlist is empty.
+- **Integrity:** the tested families equal the pre-committed counts by set equality. Regime uses
+  prior sessions only. No conditioning variable comes from the session's own prices.
+- **Lock:** it reads only the last non-empty line of this file, and its test asserts that.
 
 ## Caveats to repeat verbatim with the findings (not blocking)
 
@@ -43,13 +46,17 @@ flipped)". Either makes the sentence true. A fifth pass need only check that wor
 
 ## Notes (not blocking)
 
-- **Holdout exposure:** one holdout daily net (2024-10-01) was seen on the console. It is logged in §23.
-- **Lock window:** the lock was open for minutes during pass three while my PASS draft stood.
-  §23.2 says nothing read the holdout. I can confirm that no `analysis_*_holdout.json` or holdout
-  join file exists.
+- **Holdout exposure:** one holdout daily net (2024-10-01, +$2,592.69) was seen on the console during
+  the fill-in. It is logged in §23. The 2023 options and 2023–2026 shares heartbeat exposures are
+  logged in §19 and §21. None was aggregated.
+- **Lock window:** the lock was open for minutes during pass three while my mistaken PASS draft
+  stood. §23.2 records that nothing read the holdout then; no holdout output file exists.
+- **What this PASS means:** the report now says only what its data shows. It does not make the
+  three QUESTIONABLE findings any stronger than their caveats.
 
 ## Not run
 
-- §18 acceptance ρ: quoted, not recomputed. It is outside gate 2.
+- §18 live-vs-replay acceptance (Spearman ρ 0.932 shares, 0.953 options): quoted, not recomputed.
+  It is outside gate 2.
 
-GATE 2 VERDICT: FAIL
+GATE 2 VERDICT: PASS
