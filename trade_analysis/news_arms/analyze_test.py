@@ -308,5 +308,4 @@ def test_a_second_holdout_read_is_refused_even_with_the_lock_open(tmp_path, monk
     monkeypatch.setattr(A, "OUT", tmp_path)
     (tmp_path / "audit_results.md").write_text("GATE 2 VERDICT: PASS\n", encoding="utf-8")
     (tmp_path / "analysis_shares_holdout.json").write_text("{}", encoding="utf-8")
-    assert A.main(["--arm", "shares", "--set", "holdout"]) == 2       # spent
-    assert A.main(["--arm", "options", "--set", "holdout"]) != 2 or True  # options would try to load data; not exercised
+    assert A.main(["--arm", "shares", "--set", "holdout"]) == 2       # spent, even though the lock is open
