@@ -124,3 +124,5 @@
 {"date": "2026-11-09", "outcome": "COLLECTED", "reason": "", "attempts": 2, "is_session": true, "recorded_at_et": "2026-11-09T16:14:03", "utc_offset_hours": null, "supervisor_rc": 0}
 {"date": "2026-11-10", "outcome": "OPENED", "reason": "", "attempts": 1, "is_session": true, "recorded_at_et": "2026-11-10T09:07:20", "utc_offset_hours": null, "started_et": "09:07:20", "late_start": false, "arms": ["options", "shares"]}
 {"date": "2026-11-10", "outcome": "COLLECTED", "reason": "", "attempts": 2, "is_session": true, "recorded_at_et": "2026-11-10T16:00:14", "utc_offset_hours": null, "supervisor_rc": 0}
+{"date": "2026-11-11", "outcome": "OPENED", "reason": "", "attempts": 1, "is_session": true, "recorded_at_et": "2026-11-11T09:06:52", "utc_offset_hours": null, "started_et": "09:06:52", "late_start": false, "arms": ["options", "shares"]}
+{"date": "2026-11-11", "outcome": "COLLECTED", "reason": "", "attempts": 2, "is_session": true, "recorded_at_et": "2026-11-11T16:00:18", "utc_offset_hours": null, "supervisor_rc": 0}

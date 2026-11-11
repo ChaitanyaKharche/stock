@@ -1,0 +1,911 @@
+{
+ "session": "2026-11-11",
+ "fetched_at_et": "2026-11-11T09:00:19",
+ "query": "(Fed OR \"Federal Reserve\" OR inflation OR CPI OR jobs OR tariff OR tariffs OR war OR Treasury OR shutdown) AND (stocks OR markets OR economy)",
+ "window_from": "2026-11-10T16:00:00",
+ "window_to": "2026-11-11T09:00:19.840512",
+ "page_size": 100,
+ "n": 100,
+ "articles": [
+  {
+   "title": "Progressives Lose California Wealth Tax Battle—but Aren’t Conceding the War",
+   "link": "https://www.wsj.com/politics/progressives-lose-california-wealth-tax-battlebut-arent-conceding-the-war-e5d01fbc",
+   "publishDate": "2026-11-11T02:00:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "Opponents declare victory over Proposition 40, yet progressives argue that national momentum remains on their side.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "An American Furniture Maker Tried to Bring Jobs Back Home. It Didn’t Work.",
+   "link": "https://www.wsj.com/business/furniture-maker-us-tariffs-jobs-vietnam-345d77fe",
+   "publishDate": "2026-11-11T02:00:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "The Krinskys tried to stay ahead of changing U.S. trade policies by moving manufacturing back from Vietnam, but the numbers didn’t pencil out.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Jumbo Fed rate-hike warning sends shock waves after inflation surprise",
+   "link": "https://finance.yahoo.com/economy/policy/articles/jumbo-fed-rate-hike-warning-015453314.html",
+   "publishDate": "2026-11-11T01:54:53+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Fed officials signal a more aggressive approach to interest rates amid hotter October CPI inflation.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Bitcoin, Ethereum, XRP, Dogecoin Drop as Investors Weigh Rate Hike Odds: Analyst Explains Why ‘Horrific’ BTC Chart Is Routine in a Bull Market",
+   "link": "https://www.benzinga.com/crypto/cryptocurrency/26/11/63129630/bitcoin-ethereum-xrp-dogecoin-crypto-cpi-inflation",
+   "publishDate": "2026-11-11T01:47:04.848000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Leading cryptocurrencies fell further on Tuesday, November 10, as investors weighed hotter-than-expected consumer prices and the rising odds of an interest-rate hike.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "India garment makers rethink reliance on US after tariff shock",
+   "link": "https://www.reuters.com/world/india/india-garment-makers-rethink-reliance-on-us-after-tariff-shock-2026-11-11/",
+   "publishDate": "2026-11-11T01:33:49.269000+00:00",
+   "source": "www.reuters.com",
+   "summary": "At Orient Craft’s factory in Ranchi, hundreds of women stitch dresses, shirts and children's clothing for British retailers ​Next and Marks & Spencer .",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "US and China should stay clear-eyed on AI cooperation and competition, Bessent says",
+   "link": "https://www.reuters.com/world/china/us-china-should-stay-clear-eyed-ai-cooperation-competition-bessent-says-2026-11-11/",
+   "publishDate": "2026-11-11T01:25:19.662000+00:00",
+   "source": "www.reuters.com",
+   "summary": "The United States and China ​should harbor no illusions about their differences on artificial intelligence as they navigate cooperation to mitigate the technology's risks while competing ‌for AI supremacy, US Treasury Secretary Scott Bessent said on Tuesday.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "CoreWeave, Rigetti Computing, ServiceNow, Costco and Nvidia: Why These 5 Stocks Are on Investors' Radars Today",
+   "link": "https://www.benzinga.com/markets/equities/26/11/63129526/coreweave-rigetti-computing-servicenow-costco-and-nvidia-why-these-5-stocks-are-on-investors-radars-today",
+   "publishDate": "2026-11-11T01:19:15.079000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Major U.S. indices closed lower on Tuesday, with the Dow Jones Industrial Average falling 0.30% to 52,231.89.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Thule (OM:THULE) Stock Could Be 43% Undervalued As Bikepacking Push Expands",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/thule-om-thule-stock-could-011534446.html",
+   "publishDate": "2026-11-11T01:15:34+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Thule Group has enjoyed a sharp rebound in recent weeks, which sits awkwardly alongside a much weaker five year share price record. With the stock now around SEK 219, the question for you is whether the current price can be explained by the cash the business is expected to generate over time. The share price has fallen 49.4% over the past 5 years, which puts the focus squarely on whether long term cash flows still justify committing fresh capital. The acquisition of New Zealand bikepacking...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Top 3 Canadian Growth Stocks To Watch In November 2026",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/top-3-canadian-growth-stocks-011301781.html",
+   "publishDate": "2026-11-11T01:13:01+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Hotter than expected US inflation has pushed bond yields higher and pulled attention back to interest rate risk. For Canadian growth-focused stocks with solid balance sheets, that shift can create a window. Investors often seek companies that can grow earnings even as borrowing costs stay elevated. This article highlights three Canadian businesses from a high growth potential screen that combines earnings momentum with financial health. The three stocks highlighted here offer a compelling...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "U.S. stock futures tick higher after Wall St slips on hot CPI, Nvidia losses",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/u-stock-futures-tick-higher-011241932.html",
+   "publishDate": "2026-11-11T01:12:41+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Investing.com-- U.S. stock futures edged higher on Tuesday evening after Wall Street ended modestly lower, as hotter-than-expected inflation data reinforced expectations of another Federal Reserve rate hike, while weakness in Nvidia weighed on technology shares.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 Canadian Nuclear Stocks To Own In November 2026",
+   "link": "https://finance.yahoo.com/energy/articles/3-canadian-nuclear-stocks-own-011234187.html",
+   "publishDate": "2026-11-11T01:12:34+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "With interest rates in focus as the US Federal Reserve signals more tightening to tackle inflation, attention is swinging back to power sources that can run reliably without relying on volatile fuel markets. Canadian nuclear energy stocks sit right in this conversation, because steady electricity demand does not pause for rate debates. This article highlights three Canadian nuclear related stocks from our screener that investors are watching closely now. The three stocks highlighted here...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "d'Amico International Shipping SA (DMCOF) (Q3 2026) Earnings Call Highlights: Net Cash Position ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/damico-international-shipping-sa-dmcof-010855173.html",
+   "publishDate": "2026-11-11T01:08:55+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "d'Amico International Shipping SA (DMCOF) reported a Q3 2026 net profit of $27.8 million, achieved a net cash position of $56.6 million, and expects a blended daily TCE of $35,500 for 84% of Q4 days.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Camlin Fine Sciences Ltd (BOM:532834) (Q2 2027) Earnings Call Highlights: ?250 Crore Rights ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/camlin-fine-sciences-ltd-bom-010741629.html",
+   "publishDate": "2026-11-11T01:07:41+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Camlin Fine Sciences Ltd (BOM:532834) expects a Q4 FY27 turnaround on promoter-backed funding and strong US and European vanillin demand, even as Q2 margins slump and FY27 guidance slips.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Dorel Industries Inc (DIIBF) (Q3 2026) Earnings Call Highlights: Juvenile Segment Profit ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/dorel-industries-inc-diibf-q3-010726872.html",
+   "publishDate": "2026-11-11T01:07:26+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Dorel Industries Inc (DIIBF) narrowed its net loss sharply on strong Juvenile earnings and a long-awaited Home segment profit, though U.S. market pressure and costly bridge financing persist.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Arvind Fashions Ltd (BOM:542484) (Q2 2027) Earnings Call Highlights: Record Revenue, 67 Bps ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/arvind-fashions-ltd-bom-542484-010718004.html",
+   "publishDate": "2026-11-11T01:07:18+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Arvind Fashions Ltd (BOM:542484) posted its highest-ever quarterly revenue and EBITDA, with D2C channels now at 53% of sales and debt reduction plans funded by strong H2 free cash flow.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Ampco-Pittsburgh Corp (AP) (Q3 2026) Earnings Call Highlights: Debt Reduction Surpasses Targets ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/ampco-pittsburgh-corp-ap-q3-010623047.html",
+   "publishDate": "2026-11-11T01:06:23+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Ampco-Pittsburgh Corp (AP) posted $111.7 million in Q3 net sales, cut net debt by $19.5 million, and lifted backlog to $379.5 million on record Air & Liquid Systems results.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Jerash Holdings (US) Inc (JRSH) (Q2 2027) Earnings Call Highlights: Revenue Jumps 19. ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/jerash-holdings-us-inc-jrsh-010516760.html",
+   "publishDate": "2026-11-11T01:05:16+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Jerash Holdings (US) Inc (JRSH) posted $50.3 million in fiscal Q2 2027 revenue with gross margin up 320 basis points to 18.2%, while guiding Q3 margins lower on logistics costs and worker onboarding.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "NexGen Energy Ltd (NXE) (Q3 2026) Earnings Call Highlights: Rook I on Track as Uranium Market ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/nexgen-energy-ltd-nxe-q3-010439781.html",
+   "publishDate": "2026-11-11T01:04:39+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "NexGen Energy Ltd (NXE) is fully funded through Q3 2027 with C$822 million in cash, advances Rook I construction on schedule and budget, and targets a PCE resource estimate by Q3 2027.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Fed Forced to Confront Case for Bigger and Faster Rate Rises",
+   "link": "https://www.wsj.com/economy/central-banking/fed-forced-to-confront-case-for-bigger-and-faster-rate-rises-ac181706",
+   "publishDate": "2026-11-11T01:00:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "A third straight month of firm underlying inflation reopens the question of how far and how fast the central bank must go.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Middle East Oil Flows Far from Normal Despite Signs of Oversupply",
+   "link": "https://finance.yahoo.com/energy/articles/middle-east-oil-flows-far-010000433.html",
+   "publishDate": "2026-11-11T01:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Depleted global inventories and disrupted fuel exports threaten a sustained recovery, with industry leaders warning that rebuilding oil stocks could take up to two years.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Dollar gains traction as Fed speakers warn of risks from inflation",
+   "link": "https://finance.yahoo.com/markets/currencies/articles/dollar-gains-traction-fed-speakers-005619960.html",
+   "publishDate": "2026-11-11T00:56:19+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "By Gregor Stuart Hunter SINGAPORE, Nov 11 (Reuters) - The dollar held gains near a two-week high in early Asian trade on Wednesday as a hotter-than-expected inflation report and hawkish comments from",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Dollar gains traction as Fed speakers warn of risks from inflation",
+   "link": "https://www.reuters.com/world/asia-pacific/dollar-gains-traction-fed-speakers-warn-risks-inflation-2026-11-11/",
+   "publishDate": "2026-11-11T00:54:50.925000+00:00",
+   "source": "www.reuters.com",
+   "summary": "The dollar held gains near a two-week high in early Asian trade on Wednesday as a hotter-than-expected inflation report and hawkish comments ​from Federal Reserve officials fuelled bets the central bank will raise rates next ‌month.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Brazil plans measures for 2027 fiscal savings, source says",
+   "link": "https://www.reuters.com/world/americas/brazil-plans-measures-2027-fiscal-savings-source-says-2026-11-11/",
+   "publishDate": "2026-11-11T00:45:43.913000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Brazil will unveil in the next few days measures to achieve a fiscal adjustment equivalent to 0.5% of gross domestic ​product in 2027, a government source said on Tuesday.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Brazil plans measures for 2027 fiscal savings, source says",
+   "link": "https://finance.yahoo.com/economy/policy/articles/brazil-plans-measures-2027-fiscal-004536975.html",
+   "publishDate": "2026-11-11T00:45:36+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "SAO PAULO, Nov 10 (Reuters) - Brazil will unveil in the next few days measures to achieve a fiscal adjustment equivalent to 0.5% of gross domestic product in 2027, a government source said on Tuesday.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Wednesday's big stock stories: What’s likely to move the market in the next trading session",
+   "link": "https://www.cnbc.com/2026/11/10/wednesdays-big-stock-stories-whats-likely-to-move-the-market.html",
+   "publishDate": "2026-11-11T00:18:00+00:00",
+   "source": "www.cnbc.com",
+   "summary": "Stocks dropped Tuesday as Nvidia fell again and hot inflation revived traders' rate-hike fears. Tune in to CNBC Wednesday for CoreWeave CEO Michael Intrator.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 Large Cap Financial Stocks Retail Investors May Revisit If Rates Stay Higher",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/3-large-cap-financial-stocks-001659376.html",
+   "publishDate": "2026-11-11T00:16:59+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Markets are once again hanging on every Fed comment, and Christopher Waller’s latest remarks on a possible December rate hike have reset expectations for how tough policy could get. That kind of shift can quickly reshuffle winners and laggards, which matters if you are trying to position ahead of any repricing. This article walks through three large U.S. financial stocks exposed to this rate story, showing where tighter policy might help or hurt. The three stocks below are just a starter...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "UK inflation to overshoot Bank of England target for next 4 years, NIESR forecasts",
+   "link": "https://www.reuters.com/world/uk/uk-inflation-overshoot-bank-england-target-next-4-years-niesr-forecasts-2026-11-11/",
+   "publishDate": "2026-11-11T00:06:08.701000+00:00",
+   "source": "www.reuters.com",
+   "summary": "The Bank of England will not succeed in returning inflation to target before 2030, driven by second-round effects on wages caused by the ​Iran war, according to forecasts from a leading academic think-tank which ‌also nudged up its outlook for growth.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "UK inflation to overshoot Bank of England target for next 4 years, NIESR forecasts",
+   "link": "https://finance.yahoo.com/news/uk-inflation-overshoot-bank-england-000600751.html",
+   "publishDate": "2026-11-11T00:06:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "LONDON, Nov 11 (Reuters) - The Bank of England will not succeed in returning inflation to target before 2030, driven by second-round effects on wages caused by the Iran war, according to forecasts",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Bank of England’s inflation response ‘risks higher interest rates for longer’",
+   "link": "https://www.yahoo.com/news/articles/bank-england-inflation-response-risks-000123939.html",
+   "publishDate": "2026-11-11T00:01:23+00:00",
+   "source": "www.yahoo.com",
+   "summary": "Thinktank Niesr says timid rate rise last week likely to make inflation more persistent feature of UK economy",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Bank of England’s inflation response ‘risks higher interest rates for longer’",
+   "link": "https://www.theguardian.com/business/2026/nov/11/bank-of-england-inflation-response-risks-higher-interest-rates-for-longer",
+   "publishDate": "2026-11-11T00:01:23+00:00",
+   "source": "www.theguardian.com",
+   "summary": "Thinktank Niesr says timid rate rise last week likely to make inflation more persistent feature of UK economyThe Bank of England is risking higher interest rates for longer after a hesitant response to rising inflation, according to leading thinktank.In a searing critique of the central bank’s tactics, the National Institute of Economic and Social Research (Niesr) said a timid increase in interest rates last week was likely to mean inflation staying above the Bank’s 2% target until at least 2030. Continue reading...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Morgan Stanley shares a definitive oil price verdict for 2027",
+   "link": "https://finance.yahoo.com/energy/articles/morgan-stanley-shares-definitive-oil-000000436.html",
+   "publishDate": "2026-11-11T00:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Morgan Stanley just made a market call that most investors haven’t focused on yet.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "South Sudan Courts Oil Investors as Sudan’s Warring Forces Take Their Share",
+   "link": "https://finance.yahoo.com/energy/articles/south-sudan-courts-oil-investors-000000551.html",
+   "publishDate": "2026-11-11T00:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "South Sudan is courting fresh capital for 14 exploration blocks and a production increase from roughly 170,000 barrels per day to 230,000, which investors would find impossible to control once those barrels left the country.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Fed's Paulson calls for gradual rate hikes amid ongoing high inflation",
+   "link": "https://www.reuters.com/business/feds-paulson-calls-gradual-rate-hikes-amid-ongoing-high-inflation-2026-11-10/",
+   "publishDate": "2026-11-10T23:33:49.602000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Federal Reserve Bank of Philadelphia President Anna Paulson said ​on Tuesday the central bank has more interest rate increases ahead as it moves to lower ‌the elevated levels of inflation.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Fed's Paulson calls for gradual rate hikes amid ongoing high inflation",
+   "link": "https://finance.yahoo.com/economy/policy/articles/feds-paulson-calls-gradual-rate-233331651.html",
+   "publishDate": "2026-11-10T23:33:31+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "By Michael S.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Deere (DE) Will Close Two Iowa Plants And Shift Some Production To Brazil",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/deere-close-two-iowa-plants-232125654.html",
+   "publishDate": "2026-11-10T23:21:25+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Deere (NYSE:DE) plans to close two manufacturing plants in Iowa as part of a broader rework of its production footprint. The machinery producer intends to shift some of the affected output to other US facilities and move additional work to Brazil. Management has framed the multi year restructuring as an effort to better align manufacturing capacity with current demand patterns. These Deere factory closures and Brazil shifts are important, but investors also need to weigh other business and...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 US Bank Stocks Linked To Higher Cash Yields After Hot Inflation",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/3-us-bank-stocks-linked-231956890.html",
+   "publishDate": "2026-11-10T23:19:56+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Inflation just surprised on the hot side again and the bond market has quickly priced in a higher chance of tougher Fed action, which puts cash-like yields and short-term rates back in the spotlight. That shift creates fresh pressure for some stocks and potential relief for others as investors rethink where idle cash works hardest. This article walks through three US-listed financial stocks linked to retail and brokerage cash, and how this inflation print could shape their near-term risk and...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "The Musk Midterms Trade: SPCX Flat, TSLA Drops 5% but DOGE Plunges 7%",
+   "link": "https://www.benzinga.com/crypto/cryptocurrency/26/11/63128576/the-musk-midterms-trade-spcx-flat-tsla-drops-5-but-doge-plunges-7",
+   "publishDate": "2026-11-10T23:10:07.986000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Dogecoin falls 7% since the midterms, trailing SpaceX and Tesla as Musk-linked stocks rebound while crypto lacks a catalyst.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Inflation Rate Flirts With 4% as Prices Keep Climbing",
+   "link": "https://finance.yahoo.com/economy/policy/articles/inflation-rate-flirts-4-prices-230441332.html",
+   "publishDate": "2026-11-10T23:04:41+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "In a sign that inflation remains a serious problem for the U.S. economy, consumer prices rose more quickly than expected in October, according to data released Tuesday by the Bureau of Labor Statistics. The consumer price index increased 0.4% from September to October, exceeding analyst expectations of a 0.3% rise. No annual inflation number was released, due to the lack of data from October 2025, when the federal government was shut down during a funding dispute, but estimates by various analys",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Fossil Group Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/63128504/fossil-group-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-10T23:03:56.585000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Fossil Group (NASDAQ:FOSL) reported third-quarter financial results on Tuesday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by Benzinga APIs.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Latest Oil Market News and Analysis for Nov. 11",
+   "link": "https://www.bloomberg.com/news/articles/2026-11-10/latest-oil-market-news-and-analysis-for-nov-11",
+   "publishDate": "2026-11-10T23:01:04+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "Oil edged higher after a two-day decline, as traders weighed the outlook for an end to the US-Iran war.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "NanoXplore Q1 2027 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/63128360/nanoxplore-q1-2027-earnings-call-transcript",
+   "publishDate": "2026-11-10T22:57:23.427000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "NanoXplore (TSX:GRA) reported first-quarter financial results on Tuesday. The transcript from the company’s first-quarter earnings call has been provided below.This transcript is brought to you by Benzinga APIs. For",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "5 Best AI-Powered Financial Stocks to Buy According to Analysts",
+   "link": "https://finance.yahoo.com/technology/ai/articles/5-best-ai-powered-financial-225218465.html",
+   "publishDate": "2026-11-10T22:52:18+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Banks and lenders have spent years promising that artificial intelligence will cut costs and speed up decisions. This autumn, the people who supervise them started asking a harder question: what happens when the software starts acting on its own? Reuters reported in an exclusive that the Federal Reserve, the Office of the Comptroller of the […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Sky Harbour Group Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/63128257/sky-harbour-group-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-10T22:50:58.260000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Sky Harbour Group (AMEX:SKYH) reported third-quarter financial results on Tuesday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by Benzinga",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Resideo Technologies Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/63128223/resideo-technologies-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-10T22:49:36.619000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Resideo Technologies (NYSE:REZI) reported third-quarter financial results on Tuesday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by Benzinga",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "B&G Foods Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/63127991/bg-foods-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-10T22:43:16.504000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "B&G Foods (NYSE:BGS) reported third-quarter financial results on Tuesday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by Benzinga APIs. For",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Why Morgan Stanley Downgraded PDD Holdings (PDD)",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/why-morgan-stanley-downgraded-pdd-223358866.html",
+   "publishDate": "2026-11-10T22:33:58+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published a list of the 10 Stocks Analysts Just Downgraded and PDD Holdings (NASDAQ:PDD) ranked 8th on this list. Wall Street has had a rough start to November. The Nasdaq Composite fell 5.52% on November 5, its steepest one-day drop in 19 months, and slid into a correction, more than 10% below its […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Asian Stocks, Bonds to Drop as Fed Hike Bets Mount: Markets Wrap",
+   "link": "https://www.bloomberg.com/news/articles/2026-11-10/stock-market-today-dow-s-p-live-updates",
+   "publishDate": "2026-11-10T22:32:05+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "Asian stocks and bonds were poised to fall after hotter-than-expected US inflation drove losses on Wall Street and fueled bets that the Federal Reserve may hike interest rates more aggressively to tame prices.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "CCL Industries Announces 2026 Third Quarter Results",
+   "link": "https://www.accessnewswire.com/newsroom/en/paper-and-packaging/ccl-industries-announces-2026-third-quarter-results-1249489",
+   "publishDate": "2026-11-10T22:30:00+00:00",
+   "source": "www.accessnewswire.com",
+   "summary": "CCL Industries Inc. (TSX:CCL.A)(TSX:CCL.B) (\"the Company\"), a world leader in specialty label, security and packaging solutions for global corporations, government institutions, small businesses and consumers, today reported 2026 third quarter results. Sales for the third quarter of 2026 increased 12.9% to $2,219.9 million, compared to $1,965.9 million for the third quarter of 2025, with organic growth of 6.9%, acquisition-related growth of 3.9%...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Astronics Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/63127595/astronics-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-10T22:29:54.080000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Astronics (NASDAQ:ATRO) reported third-quarter financial results on Tuesday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by Benzinga APIs. For",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "U.K. Police Arrested a U.S. Army Soldier on Allegations of Spying for Russia",
+   "link": "https://www.wsj.com/world/uk/u-k-police-arrested-a-u-s-army-soldier-on-allegations-of-spying-for-russia-f87c5257",
+   "publishDate": "2026-11-10T22:29:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "Plus, Wall Street is worried about interest rates again, and Anthropic’s founders are about to be worth billions.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Grove Collaborative Hldgs Q3 2026 Earnings Call Transcript",
+   "link": "https://www.benzinga.com/news/26/11/63127511/grove-collaborative-hldgs-q3-2026-earnings-call-transcript",
+   "publishDate": "2026-11-10T22:27:53.463000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Grove Collaborative Hldgs (NYSE:GROV) reported third-quarter financial results on Tuesday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Ethereum ended CoreWeave's mining days. Earnings test its AI bet",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/ethereum-ended-coreweaves-mining-days-222525827.html",
+   "publishDate": "2026-11-10T22:25:25+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Wall Street is bracing for a major post-earnings stock swing.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "DraftKings (DKNG) Management Called the Quarter “A Pivotal Moment.” Here’s Why Three Firms Downgraded It.",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/draftkings-dkng-management-called-quarter-222332663.html",
+   "publishDate": "2026-11-10T22:23:32+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published a list of the 10 Stocks Analysts Just Downgraded and DraftKings (NASDAQ:DKNG) ranked 9th on this list. Wall Street has had a rough start to November. The Nasdaq Composite fell 5.52% on November 5, its steepest one-day drop in 19 months, and slid into a correction, more than 10% below its October […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Pan American Silver (PAAS) Had a Better Silver Quarter. Why Did TD Cowen Cut It?",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/pan-american-silver-paas-had-222329371.html",
+   "publishDate": "2026-11-10T22:23:29+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published a list of the 10 Stocks Analysts Just Downgraded and Pan American Silver (NYSE:PAAS) ranked 7th on this list. Wall Street has had a rough start to November. The Nasdaq Composite fell 5.52% on November 5, its steepest one-day drop in 19 months, and slid into a correction, more than 10% below […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Zillow’s CEO Sees “Durability.” Here’s Why KeyBanc’s Sergio Segura Still Downgraded Zillow (ZG)",
+   "link": "https://finance.yahoo.com/real-estate/articles/zillow-ceo-sees-durability-why-222312637.html",
+   "publishDate": "2026-11-10T22:23:12+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published a list of the 10 Stocks Analysts Just Downgraded and Zillow Group (NASDAQ:ZG) ranked 6th on this list. Wall Street has had a rough start to November. The Nasdaq Composite fell 5.52% on November 5, its steepest one-day drop in 19 months, and slid into a correction, more than 10% below its […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Why Did Aletheia Downgrade Nvidia (NVDA)?",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/why-did-aletheia-downgrade-nvidia-222303350.html",
+   "publishDate": "2026-11-10T22:23:03+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published a list of the 10 Stocks Analysts Just Downgraded and Nvidia (NASDAQ:NVDA) ranked 10th on this list. Wall Street has had a rough start to November. The Nasdaq Composite fell 5.52% on November 5, its steepest one-day drop in 19 months, and slid into a correction, more than 10% below its October […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "5 Stocks Analysts Just Downgraded",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/5-stocks-analysts-just-downgraded-222254595.html",
+   "publishDate": "2026-11-10T22:22:54+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Wall Street has had a rough start to November. The Nasdaq Composite fell 5.52% on November 5, its steepest one-day drop in 19 months, and slid into a correction, more than 10% below its October 6 record close. The semiconductor index lost more than 12% that day, and about $3 trillion in value was erased […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Citi’s Marc Van’t Sant Upgraded Rollins (ROL). Here’s the Problem Bulls Say Can Be Fixed",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/citi-marc-van-t-sant-222245757.html",
+   "publishDate": "2026-11-10T22:22:45+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published a list of the 10 Stocks Analysts Just Upgraded and Rollins (NYSE:ROL) ranked 10th on this list. Wall Street spent last Thursday reminding investors how quickly a favorite theme can turn. Worries that Democratic midterm wins could bring tighter rules for artificial intelligence and data centers sent technology stocks sharply lower. The […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Redburn Says Its Cautious Airbnb (ABNB) Stance Was “Wrong Over The Past Year.” Here’s What Changed",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/redburn-says-cautious-airbnb-abnb-222237944.html",
+   "publishDate": "2026-11-10T22:22:37+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published a list of the 10 Stocks Analysts Just Upgraded and Airbnb (NASDAQ:ABNB) ranked 9th on this list. Wall Street spent last Thursday reminding investors how quickly a favorite theme can turn. Worries that Democratic midterm wins could bring tighter rules for artificial intelligence and data centers sent technology stocks sharply lower. The […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Sanofi (SNY) Is Planning for a Patent Loss, Here’s Where Bulls Still See Opportunity",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/sanofi-sny-planning-patent-loss-222228191.html",
+   "publishDate": "2026-11-10T22:22:28+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published a list of the 10 Stocks Analysts Just Upgraded and Sanofi (NASDAQ:SNY) ranked 8th on this list. Wall Street spent last Thursday reminding investors how quickly a favorite theme can turn. Worries that Democratic midterm wins could bring tighter rules for artificial intelligence and data centers sent technology stocks sharply lower. The […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Here’s What TD Cowen Sees in South Bow (SOBO) After Its Sharp Pullback",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/td-cowen-sees-south-bow-222210315.html",
+   "publishDate": "2026-11-10T22:22:10+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published a list of the 10 Stocks Analysts Just Upgraded and South Bow (NYSE:SOBO) ranked 7th on this list. Wall Street spent last Thursday reminding investors how quickly a favorite theme can turn. Worries that Democratic midterm wins could bring tighter rules for artificial intelligence and data centers sent technology stocks sharply lower. […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Why JPMorgan Says SAP (SAP) Is “No Longer Priced For AI Disruption”",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/why-jpmorgan-says-sap-sap-222205895.html",
+   "publishDate": "2026-11-10T22:22:05+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published a list of the 10 Stocks Analysts Just Upgraded and SAP (NYSE:SAP) ranked 6th on this list. Wall Street spent last Thursday reminding investors how quickly a favorite theme can turn. Worries that Democratic midterm wins could bring tighter rules for artificial intelligence and data centers sent technology stocks sharply lower. The […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "5 Stocks Analysts Just Upgraded",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/5-stocks-analysts-just-upgraded-222146322.html",
+   "publishDate": "2026-11-10T22:21:46+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Wall Street spent last Thursday reminding investors how quickly a favorite theme can turn. Worries that Democratic midterm wins could bring tighter rules for artificial intelligence and data centers sent technology stocks sharply lower. The damage spread well beyond the group that was under the microscope. The Nasdaq Composite fell 5.52%, its biggest one-day drop […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Crypto Market Today, Nov. 10: Bitcoin Slides Below $74,000 as Hot Inflation Data Sends Crypto Markets Tumbling",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/crypto-market-today-nov-10-222002961.html",
+   "publishDate": "2026-11-10T22:20:02+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Crypto markets extended losses as hotter-than-expected inflation hit Wall Street, raising fresh concerns about interest rates and the outlook for risk assets.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Why this top Wall Street strategist isn't bullish on the S&P 500 for 2027",
+   "link": "https://finance.yahoo.com/markets/article/why-this-top-wall-street-strategist-isnt-bullish-on-the-sp-500-for-2027-221528517.html",
+   "publishDate": "2026-11-10T22:15:28+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The S&P 500 could be a tough one to rally around in 2027.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Bond yields surge most in 19 months as traders brace for Fed rate hikes",
+   "link": "https://finance.yahoo.com/economy/policy/articles/bond-yields-surge-most-19-221447570.html",
+   "publishDate": "2026-11-10T22:14:47+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "US Treasuries slumped, pushing yields sharply higher, after hotter-than-expected inflation data and comments from a key Federal Reserve official fueled bets that the central bank would need to deliver more aggressive interest rate hikes to cool inflation.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "British Penny Stocks To Watch In November 2026",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/british-penny-stocks-watch-november-221406464.html",
+   "publishDate": "2026-11-10T22:14:06+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "US inflation ran hotter than expected last month and Federal Reserve officials have flagged the possibility of further rate hikes. Higher borrowing costs tend to hit weaker balance sheets first, which is why financially solid UK penny stocks can look interesting right now. This article highlights three low-priced shares from a quality focused screener that filters for stronger financial health so you can hunt for opportunity without only chasing hype. The three stocks highlighted here offer a...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 Regional Bank Stocks Built For A Stronger US Dollar",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/3-regional-bank-stocks-built-221325299.html",
+   "publishDate": "2026-11-10T22:13:25+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Sticky October inflation, rising Treasury yields and a stronger US dollar have pushed investors back to the drawing board, forcing a fresh look at which stocks are most exposed to these shifts. Some businesses with mainly domestic operations may feel less pressure from currency moves while still facing higher discount rates. This article spotlights three U.S. Dollar Beneficiaries from our screener that appear positioned to respond in different ways to this new backdrop. The three stocks...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Stifel CEO on Anthropic, Integrating AI and Fed Policy",
+   "link": "https://www.bloomberg.com/news/videos/2026-11-10/stifel-ceo-on-anthropic-integrating-ai-and-fed-policy-video",
+   "publishDate": "2026-11-10T22:08:48+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "Stifel CEO and Chairman Ron Kruszewski discusses the firm’s new partnership with Anthropic, announced at Stifel’s 2026 Blueprint Conference in Las Vegas. The tools are intended to help advisers organize work, improve productivity and communicate with clients, not replace human judgment. Speaking on \"Bloomberg The Close,\" Kruszewski also comments on Federal Reserve monetary policy and the state of the market. (Source: Bloomberg)",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Western Sydney International Airport Opens After Bechtel-Led Delivery Program Completes Major Construction Works Seven Months Early",
+   "link": "https://www.prnewswire.com/news-releases/western-sydney-international-airport-opens-after-bechtel-led-delivery-program-completes-major-construction-works-seven-months-early-302935630.html",
+   "publishDate": "2026-11-10T22:05:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "Australia's first major greenfield international airport in more than 50 years delivered ahead of schedule: a role model for future infrastructure delivery in Australia SYDNEY, Nov. 10, 2026 /PRNewswire/ -- Western Sydney International (Nancy-Bird Walton) Airport (WSI) opened to...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Upexi Reports Fiscal First Quarter 2027 Financial Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/10/3400310/0/en/upexi-reports-fiscal-first-quarter-2027-financial-results.html",
+   "publishDate": "2026-11-10T22:04:25+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Earnings per Diluted Share Totaled $0.68 for the Quarter",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Bitcoin 'Needs Buyers to Come Back' After CPI Data Triggers Slide to $73,000",
+   "link": "https://www.benzinga.com/crypto/cryptocurrency/26/11/63126549/bitcoin-needs-buyers-to-come-back-after-cpi-data-triggers-slide-to-73000",
+   "publishDate": "2026-11-10T22:02:06.960000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Bitcoin missed Monday’s rally as rate fears and ETF outflows weighed, but SharpLink’s CEO says returning buyers could revive momentum.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "TRADING DAY US rate outlook trumps everything",
+   "link": "https://www.reuters.com/commentary/reuters-open-interest/global-markets-trading-day-graphic-2026-11-10/",
+   "publishDate": "2026-11-10T22:00:26.654000+00:00",
+   "source": "www.reuters.com",
+   "summary": "US stocks bucked the global trend and fell on Tuesday, after another bout of surprisingly hot US inflation sparked a surge in bond yields and stoked expectations that interest rates might rise more quickly than envisaged.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Financial Results for the Third Quarter of 2026",
+   "link": "https://www.globenewswire.com/news-release/2026/11/10/3400299/0/en/financial-results-for-the-third-quarter-of-2026.html",
+   "publishDate": "2026-11-10T22:00:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "NOT FOR DISTRIBUTION TO U.S. NEWSWIRE SERVICES OR FOR DISSEMINATION IN THE UNITED STATES",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Tree Island Steel Announces Third Quarter 2026 Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/10/3400306/0/en/tree-island-steel-announces-third-quarter-2026-results.html",
+   "publishDate": "2026-11-10T22:00:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "VANCOUVER, British Columbia, Nov. 10, 2026 (GLOBE NEWSWIRE) -- Tree Island Steel (“Tree Island” or the “Company”) (TSX: TSL) announced today its financial results for the three and nine months ended September 30, 2026.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Bread Financial Provides Performance Update for October 2026",
+   "link": "https://www.globenewswire.com/news-release/2026/11/10/3400297/0/en/bread-financial-provides-performance-update-for-october-2026.html",
+   "publishDate": "2026-11-10T22:00:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "COLUMBUS, Ohio, Nov. 10, 2026 (GLOBE NEWSWIRE) -- Bread Financial Holdings, Inc. (NYSE: BFH), a tech-forward financial services company that provides simple, personalized payment, lending, and saving solutions to millions of U.S. consumers, provided a performance update. The following tables present the Company’s Net principal loss rate and Delinquency rate for the periods indicated:",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Matador Technologies Files Quarterly ATM Program Report Detailing $0.6 Million in Gross Proceeds and $2.5 Million Raised Since Program Inception",
+   "link": "https://www.globenewswire.com/news-release/2026/11/10/3400295/0/en/matador-technologies-files-quarterly-atm-program-report-detailing-0-6-million-in-gross-proceeds-and-2-5-million-raised-since-program-inception.html",
+   "publishDate": "2026-11-10T22:00:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Summary: Matador generated approximately $0.6 million in gross proceeds under its ATM Program in the quarter ended October 31, 2026, bringing total gross proceeds since the program launched in February 2026 to approximately $2.5 million. Proceeds raised during the quarter were used primarily to fund the Company's operating expenses and general working capital.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "China EV Makers See Yuan Rally Erode Profit as Exports Grow",
+   "link": "https://www.bloomberg.com/news/articles/2026-11-10/china-ev-makers-see-yuan-rally-erode-profit-as-exports-grow",
+   "publishDate": "2026-11-10T22:00:00+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "China’s electric-vehicle makers are pushing into overseas markets to escape a domestic price war, only to see a rallying yuan eat into earnings.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "US stocks fall on hot inflation report as Nvidia tumbles again",
+   "link": "https://www.channelnewsasia.com/world/stocks-wall-street-inflation-nvidia-anthropic-6540751",
+   "publishDate": "2026-11-10T21:54:38+00:00",
+   "source": "www.channelnewsasia.com",
+   "summary": "NEW YORK: Wall Street stocks retreated Tuesday (Nov 10), with scandal-hit Nvidia notably tumbling again, while the dollar gained after a hot US inflation report boosted expectations of Federal",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Envista Announces Pricing of $430 Million of Senior Notes",
+   "link": "https://www.prnewswire.com/news-releases/envista-announces-pricing-of-430-million-of-senior-notes-302935616.html",
+   "publishDate": "2026-11-10T21:50:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "BREA, Calif., Nov. 10, 2026 /PRNewswire/ -- Envista Holdings Corporation (NYSE: NVST) (\"Envista\") today announced that it has priced an offering (the \"Offering\") of $430 million in aggregate principal amount of its 6.250% Senior Notes due 2033 (the \"Notes\") at the issue price of 99.482%...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Stocks making big moves after hours: CRWV, STUB, LAND",
+   "link": "https://seekingalpha.com/news/4670242-stocks-making-big-moves-after-hours-crwv-stub-land",
+   "publishDate": "2026-11-10T21:43:43+00:00",
+   "source": "seekingalpha.com",
+   "summary": "U.S. stocks fall as October inflation cools less than expected; CoreWeave beats Q3 revenue and GAAP EPS estimates and lifts 2026 capex to $39B.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Fed's Bowman says inflation is broadening: 'There's more work to do' on rates",
+   "link": "https://finance.yahoo.com/economy/policy/article/feds-bowman-says-inflation-is-broadening-theres-more-work-to-do-on-rates-214312310.html",
+   "publishDate": "2026-11-10T21:43:12+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "\"Inflation pressures have persisted for longer than I had hoped,\" she said.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Stocks fall as the 10-year Treasury yield nears 5% mark",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/stocks-fall-10-treasury-yield-214200312.html",
+   "publishDate": "2026-11-10T21:42:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "“I don’t think they should be raising another 25 basis points,” one portfolio manager said about the Federal Reserve’s benchmark interest rate.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Orchid Island Capital Announces November 2026 Monthly Dividend and October 31, 2026 RMBS Portfolio Characteristics",
+   "link": "https://www.globenewswire.com/news-release/2026/11/10/3400278/24811/en/orchid-island-capital-announces-november-2026-monthly-dividend-and-october-31-2026-rmbs-portfolio-characteristics.html",
+   "publishDate": "2026-11-10T21:40:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "VERO BEACH, Fla., Nov. 10, 2026 (GLOBE NEWSWIRE) -- Orchid Island Capital, Inc. (the “Company”) (NYSE: ORC) announced today that the Board of Directors of the Company declared a monthly cash dividend for the month of November 2026. The dividend of $0.10 per share will be paid December 31, 2026 to holders of record of the Company’s common stock on November 30, 2026, with an ex-dividend date of November 30, 2026. The Company plans on announcing its next common stock dividend on December 8, 2026.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Stocks Settle Lower on Fed Rate Hike Fears",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/stocks-settle-lower-fed-rate-213915772.html",
+   "publishDate": "2026-11-10T21:39:15+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The S&P 500 Index ($SPX ) (SPY ) closed down -0.38% on Tuesday, the Dow Jones Industrial Average ($DOWI ) (DIA ) closed down -0.30%, and the Nasdaq 100 Index ($IUXX ) (QQQ ) closed down -0.60%. December E-mini S&P futures (ESZ26 ) fell -0.38%, and December E-mini Nasdaq futures...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Why the Data Center Backlash Could Fall Flat: Increased Costs “a Trade That These Hyperscalers Are Still Going to Want to Make”",
+   "link": "https://finance.yahoo.com/technology/articles/why-data-center-backlash-could-213817261.html",
+   "publishDate": "2026-11-10T21:38:17+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Key TakeawaysTexas governor-elect Gina Hinojosa plans to make newly permitted data centers pay taxes, avoid raising consumer power prices and use union labor. Gene Munster puts soft costs at about 15% of a data center’s bill, so a 30% jump in them raises the total only about 5%.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Binance’s bStocks leads $4.8B tokenized stock market with 31% share",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/binance-bstocks-leads-4-8b-213343246.html",
+   "publishDate": "2026-11-10T21:33:43+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Binance’s bStocks reaches $1.5 billion in assets, the largest of any tokenized stock product, as the market hits a new high.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Fed's Bowman Warns About Potential Impact of AI Bets Not Panning Out",
+   "link": "https://www.bloomberg.com/news/videos/2026-11-10/fed-s-bowman-warns-about-market-downturn-from-ai-bets-video",
+   "publishDate": "2026-11-10T21:31:13+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "Federal Reserve Governor Michelle Bowman says she sees a number of risks to economic activity from financial markets, including a sharp downturn in stock prices if returns on investments in AI fall short of expectations. She speaks at a Council on Foreign Relations event in Washington. (Source: Bloomberg)",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Want Extra Cash for the Holidays? 12 Companies Hiring Seasonal Workers",
+   "link": "https://finance.yahoo.com/small-business/articles/looking-seasonal-hiring-holidays-2026-133127137.html",
+   "publishDate": "2026-11-10T21:30:57+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The impending holiday shopping rush means many of us are making gift lists and trying to set aside as much money as possible. For workers, it also means thousands of opportunities for permanent and seasonal positions. Seasonal jobs can lead to a full-time career, but they can also simply be a smarter way to cover… This was originally published on The Penny Hoarder, a personal finance website that empowers millions of readers nationwide to make smart decisions with their money through actionable",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Traders Who Rushed to Safety of Bonds Get Rattled in Reversal",
+   "link": "https://www.bloomberg.com/news/articles/2026-11-10/traders-who-rushed-to-safety-of-bonds-get-rattled-in-reversal",
+   "publishDate": "2026-11-10T21:30:31+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "A recent influx of bullish positioning across the US bond market just got smacked, as comments from a pair of Federal Reserve officials and fresh evidence of sticky inflation increased the odds of interest-rate hikes, sending Treasuries into a tailspin.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Traders Who Rushed to Safety of Bonds Get Rattled in Reversal",
+   "link": "https://finance.yahoo.com/markets/options/articles/traders-rushed-safety-bonds-rattled-213031572.html",
+   "publishDate": "2026-11-10T21:30:31+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "A recent influx of bullish positioning across the US bond market just got smacked, as comments from a pair of Federal Reserve officials and fresh evidence of sticky inflation increased the odds of interest-rate hikes, sending Treasuries into a tailspin.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "The Eastern Company Reports Third Quarter 2026 Results",
+   "link": "https://www.accessnewswire.com/newsroom/en/industrial-and-manufacturing/the-eastern-company-reports-third-quarter-2026-results-1249491",
+   "publishDate": "2026-11-10T21:30:00+00:00",
+   "source": "www.accessnewswire.com",
+   "summary": "The Eastern Company (\"Eastern\" or the \"Company\") (NASDAQ:EML), an industrial holding company with a portfolio of businesses serving commercial transportation, logistics, aerospace, defense, and other industrial markets, today announced its results of operations for the third fiscal quarter of 2026 ended October 3, 2026. \"The third quarter showed what Eastern can deliver when the benefits of our restructuring initiatives implemented over the past...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Big Sky Industrial Inc. Reports Third Quarter 2026 Results and Highlights Phase 1 Construction Progress at Big Sky Carbon Hub",
+   "link": "https://www.globenewswire.com/news-release/2026/11/10/3400263/10245/en/big-sky-industrial-inc-reports-third-quarter-2026-results-and-highlights-phase-1-construction-progress-at-big-sky-carbon-hub.html",
+   "publishDate": "2026-11-10T21:30:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "HOUSTON, Nov. 10, 2026 (GLOBE NEWSWIRE) -- Big Sky Industrial Inc. (NASDAQ: BSIN) (“Big Sky Industrial” or the “Company”), an integrated industrial gas, energy, and carbon management company, today reported financial and operating results for the three and nine months ended September 30, 2026, while highlighting construction and development progress during the quarter at the Company’s Big Sky Carbon Hub, its flagship project in Montana.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Stran & Company Reports 32% Increase in Third Quarter 2026 Gross Profit as Gross Margin Expands to 33.3%",
+   "link": "https://www.globenewswire.com/news-release/2026/11/10/3400262/0/en/stran-company-reports-32-increase-in-third-quarter-2026-gross-profit-as-gross-margin-expands-to-33-3.html",
+   "publishDate": "2026-11-10T21:30:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Nine-Month Net Income of $1.1 Million, an Improvement of $2.1 Million Over the Prior-Year Period",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Tron Inc. Reports Strong Third Quarter 2026 Financial Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/10/3400264/0/en/tron-inc-reports-strong-third-quarter-2026-financial-results.html",
+   "publishDate": "2026-11-10T21:30:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Company reports $39.4 million in net income for the nine months ended September 30, 2026, representing 203% year-over-year growth",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "AVAX One Announces Elimination of All Convertible Debt and Additional Share Repurchases",
+   "link": "https://www.globenewswire.com/news-release/2026/11/10/3400261/0/en/avax-one-announces-elimination-of-all-convertible-debt-and-additional-share-repurchases.html",
+   "publishDate": "2026-11-10T21:30:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Debt Reduction Further Strengthens Balance Sheet and Financial Flexibility",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "How the stock market has performed after Veterans Day over the past decade",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/stock-market-performed-veterans-day-212900229.html",
+   "publishDate": "2026-11-10T21:29:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The stock market is open Wednesday on Veterans Day, but not the bond market",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 things to look out for on Wednesday",
+   "link": "https://seekingalpha.com/news/4670178-3-things-to-look-out-for-on-wednesday",
+   "publishDate": "2026-11-10T21:26:25+00:00",
+   "source": "seekingalpha.com",
+   "summary": "U.S. stocks fall as October inflation eases less than expected; traders price 90.5% odds of a 25-basis-point Fed rate hike.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "CoreWeave Reports Q3 Double Beat, Raises Guidance: 'This Was a Breakout Quarter'",
+   "link": "https://www.benzinga.com/markets/earnings/26/11/63123969/coreweave-reports-q3-double-beat-raises-guidance-this-was-a-breakout-quarter",
+   "publishDate": "2026-11-10T21:23:15.973000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "CoreWeave Inc (NASDAQ:CRWV) reports financial results for the third quarter after the closing bell on Tuesday.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "U.S. Stocks Slip on Inflation, AI Worries",
+   "link": "https://www.wsj.com/finance/stocks/u-s-stocks-slip-on-inflation-ai-worries-feb790bc",
+   "publishDate": "2026-11-10T21:21:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "U.S. stocks fell after hotter-than-expected inflation data and a more modest valuation for one of the leading artificial-intelligence players.",
+   "sentiment": null,
+   "confidence": null
+  }
+ ]
+}

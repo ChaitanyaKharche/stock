@@ -13790,3 +13790,7 @@
 {"seq":517816,"ts":"2026-11-10T09:36:03.611694","kind":"stale_quote","detail":"XLV age=5.0s"}
 {"seq":527186,"ts":"2026-11-10T13:37:07.273999","kind":"degraded_bar","detail":"1m gap before 13:36","symbol":"XLF"}
 {"seq":532719,"ts":"2026-11-10T15:11:03.190728","kind":"degraded_bar","detail":"1m gap before 15:10","symbol":"DIA"}
+{"seq":541540,"ts":"2026-11-11T12:32:06.410278","kind":"stale_quote","detail":"WMT age=5.2s"}
+{"seq":543066,"ts":"2026-11-11T13:04:06.631980","kind":"stale_quote","detail":"XLF age=5.8s"}
+{"seq":545154,"ts":"2026-11-11T13:44:08.587300","kind":"stale_quote","detail":"XLE age=7.9s"}
+{"seq":549724,"ts":"2026-11-11T15:04:07.887960","kind":"stale_quote","detail":"WMT age=5.1s"}
