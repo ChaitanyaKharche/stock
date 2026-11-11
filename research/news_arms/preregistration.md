@@ -695,3 +695,10 @@ fewer than `MIN_RTH_BARS` that the calendar does not list as an early close now 
 `SessionLost` (was filed as a half day), and `holdout_allowed` reads only the LAST verdict
 line of `audit_results.md`; the lock test asserts the lock state equals that line. Third pass
 requested.
+
+**23.2 Gate 2 third pass (2026-11-11): FAIL on one clause;** three Q7 setup cells within
+±0.005 σ of zero changed sign with the fill-in (Crabel_Stretch and ORB_5min on jobs days,
+PDH_PDL_Breakout on Fed days; every p > 0.8), so "no effect changed sign" was false and now
+reads "no Q1 or Q3 effect changed sign". `exclusions()` now counts any recorded skip of an
+open full day other than the 14.11 no-0DTE rule as a loss. The auditor's PASS draft briefly
+opened the lock before the flips were found; nothing read the holdout in that window.

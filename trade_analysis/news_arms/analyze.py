@@ -578,9 +578,9 @@ def exclusions(rows: list[dict], window, chunks: list[dict], no_0dte=()) -> dict
         if not is_closed(d) and iso not in have:
             if early_close(d):
                 half.append(iso)
-            elif iso in recorded and recorded[iso] != "half_day":
-                rec.append({"date": iso, "reason": recorded[iso]})
-            else:                                             # a "half_day" skip on a full day is a loss
+            elif iso in recorded and recorded[iso] == "no_0dte":
+                rec.append({"date": iso, "reason": recorded[iso]})   # 14.11, by rule
+            else:                                             # any other skip of an open full day is a loss
                 lost.append(iso)
         d += dt.timedelta(days=1)
     return {"open_days_in_window": len(rows) + len(half) + len(lost) + len(rec),

@@ -205,14 +205,15 @@ def test_exclusions_list_half_days_recorded_skips_and_lost_sessions():
     ex = A.exclusions(rows, (dt.date(2022, 11, 21), dt.date(2022, 11, 30)), chunks)
     assert ex["half_days"] == ["2022-11-25"]                               # day after Thanksgiving
     assert ex["lost_regular_sessions"] == ["2022-11-28"] and ex["n_lost"] == 1   # a short full day is lost
-    chunks = [{"skipped": [{"date": "2022-11-28", "reason": "holiday"}]}]
+    chunks = [{"skipped": [{"date": "2022-11-28", "reason": "holiday"}]}]   # "holiday" on an open day: lost too
     ex = A.exclusions(rows, (dt.date(2022, 11, 21), dt.date(2022, 11, 30)), chunks)
-    assert ex["recorded_skips"] == [{"date": "2022-11-28", "reason": "holiday"}]
-    assert ex["lost_regular_sessions"] == [] and ex["n_lost"] == 0 and ex["open_days_in_window"] == 7
+    assert ex["lost_regular_sessions"] == ["2022-11-28"] and ex["open_days_in_window"] == 7
+    ex = A.exclusions(rows, (dt.date(2022, 11, 21), dt.date(2022, 11, 30)), [], no_0dte=["2022-11-28"])
+    assert ex["recorded_skips"] == [{"date": "2022-11-28", "reason": "no_0dte"}] and ex["n_lost"] == 0
     ex2 = A.exclusions(rows[:-1], (dt.date(2022, 11, 21), dt.date(2022, 11, 30)), chunks)
     assert ex2["lost_regular_sessions"] == ["2022-11-30"] and ex2["open_days_in_window"] == 7
     ex3 = A.exclusions(rows[:-1], (dt.date(2022, 11, 21), dt.date(2022, 11, 30)), chunks, no_0dte=["2022-11-30"])
-    assert ex3["n_lost"] == 0 and ex3["recorded_skips_by_reason"] == {"holiday": 1, "no_0dte": 1}
+    assert ex3["n_lost"] == 1 and ex3["recorded_skips_by_reason"] == {"no_0dte": 1}
 
 
 def test_q3_unscheduled_is_every_surprise_session_with_the_exclusive_variant_beside_it():
