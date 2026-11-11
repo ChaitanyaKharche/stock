@@ -2,8 +2,8 @@
 
 Status: **discovery read 2026-11-10; the 24 lost shares sessions re-replayed and folded in
 2026-11-11. Exploratory. Holdout not read. Gate 2: FAIL on the first pass (27 rows), the
-second (three sentences) and the third (one clause), each corrected in place; fourth pass
-pending (`audit_results.md`).**
+second (three sentences), the third (one clause) and the fourth (one word), each corrected in
+place; fifth pass pending (`audit_results.md`).**
 Every number here is in `analysis_shares_discovery.json`, `analysis_options_discovery.json`,
 `analysis_q6_discovery.json`; the tables are rendered from those files by
 `trade_analysis/news_arms/report.py` into `results_tables.md` and are not typed by hand.
@@ -18,9 +18,10 @@ holdout replay. All 24 were re-replayed on the laptop on 2026-11-10 into fill-in
 rerun. **Shares discovery now rests on 1,249 of 1,249 regular sessions.** What moved: Fed
 days went from 38 to 39 sessions and from −0.282 σ to −0.299 σ; release days from −0.045 to
 −0.039 σ, and their placebo verdict under the pre-registered rule went from "effect" to
-"chance"; one more Q7 cell passes BH; no Q1 or Q3 effect changed sign (three Q7 setup cells
-within ±0.005 σ of zero did: Crabel_Stretch and ORB_5min on jobs days, PDH_PDL_Breakout on
-Fed days, every p > 0.8) and no tested/reported status changed. The replay cannot lose
+"chance"; one more Q7 cell passes BH; no Q1 or Q3 effect changed sign (three tested Q7 setup
+cells within ±0.005 σ of zero did: Crabel_Stretch and ORB_5min on jobs days, PDH_PDL_Breakout
+on Fed days, every p > 0.8; four untested Q7 cells within ±0.002 σ also flipped) and no
+tested/reported status changed. The replay cannot lose
 a session silently any more: a weekday with no bars that the NYSE calendar says was open
 raises and fails the chunk (`backfill.SessionLost`, tests fail on the previous code), every
 skip is recorded in `RUN.json` with its reason, and the analysis lists every open weekday

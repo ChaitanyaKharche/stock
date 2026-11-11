@@ -702,3 +702,8 @@ PDH_PDL_Breakout on Fed days; every p > 0.8), so "no effect changed sign" was fa
 reads "no Q1 or Q3 effect changed sign". `exclusions()` now counts any recorded skip of an
 open full day other than the 14.11 no-0DTE rule as a loss. The auditor's PASS draft briefly
 opened the lock before the flips were found; nothing read the holdout in that window.
+
+**23.3 Gate 2 fourth pass (2026-11-11): FAIL on one word.** "three Q7 setup cells" became
+"three tested Q7 setup cells"; four untested cells within ±0.002 σ of zero (two of them
+with no trades at all) also changed sign with the fill-in and are now named. Everything
+else in scope passed; the auditor compared every cell of every table in both arms.
