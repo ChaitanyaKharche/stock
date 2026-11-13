@@ -14000,3 +14000,9 @@
 {"seq":566175,"ts":"2026-11-12T15:52:16.976781","kind":"tick","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: io exception')\")"}
 {"seq":566176,"ts":"2026-11-12T15:52:29.023407","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: io exception')\")"}
 {"seq":566177,"ts":"2026-11-12T15:52:47.922138","kind":"feed","detail":"upstream recovered after 143s and 70 failed call(s)","path":"__recovered__"}
+{"seq":571705,"ts":"2026-11-13T12:25:04.673484","kind":"degraded_bar","detail":"1m gap before 12:24","symbol":"XLI"}
+{"seq":571771,"ts":"2026-11-13T12:26:07.573827","kind":"stale_quote","detail":"XLF age=5.0s"}
+{"seq":572549,"ts":"2026-11-13T12:47:06.487949","kind":"stale_quote","detail":"WMT age=6.3s"}
+{"seq":574065,"ts":"2026-11-13T13:30:04.943465","kind":"degraded_bar","detail":"1m gap before 13:29","symbol":"DIA"}
+{"seq":577842,"ts":"2026-11-13T15:06:07.894363","kind":"stale_quote","detail":"XLF age=6.4s"}
+{"seq":578169,"ts":"2026-11-13T15:14:12.978693","kind":"stale_quote","detail":"WMT age=8.1s"}
