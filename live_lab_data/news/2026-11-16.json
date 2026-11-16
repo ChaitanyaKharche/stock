@@ -1,0 +1,911 @@
+{
+ "session": "2026-11-16",
+ "fetched_at_et": "2026-11-16T07:30:19",
+ "query": "(Fed OR \"Federal Reserve\" OR inflation OR CPI OR jobs OR tariff OR tariffs OR war OR Treasury OR shutdown) AND (stocks OR markets OR economy)",
+ "window_from": "2026-11-13T16:00:00",
+ "window_to": "2026-11-16T07:30:19.775763",
+ "page_size": 100,
+ "n": 100,
+ "articles": [
+  {
+   "title": "What a Tiny Chorus of the ‘Bring Back Jensen’ Tech Bros Gets Wrong",
+   "link": "https://finance.yahoo.com/technology/articles/tiny-chorus-bring-back-jensen-003000523.html",
+   "publishDate": "2026-11-16T00:30:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Nvidia's board did not fold to a woke mob. It woke up to a national security problem it had been negligent on – with devastating consequences.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Japan’s Economy Contracts Amid Inflation Squeeze",
+   "link": "https://www.wsj.com/economy/japan-economy-contracts-for-first-time-in-four-quarters-468f74f5",
+   "publishDate": "2026-11-16T00:30:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "Japan’s economy contracted for the first time in four quarters in the July-September period, as energy-driven inflation weighed on consumer sentiment.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Greatland Resources And 2 Australian Undervalued Stocks To Watch",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/greatland-resources-2-australian-undervalued-002008295.html",
+   "publishDate": "2026-11-16T00:20:08+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The new credit crunch, with lenders favouring only the strongest borrowers, puts cash flow under a spotlight for Australian companies. Reliable cash coming in the door matters more when refinancing gets tougher and more expensive. That is where stocks priced below what their cash flows suggest they are worth can attract patient investors. This article profiles three such Australian opportunities from our cash flow valuation screen. The three stocks highlighted below are just a sample from the...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Etsy vs. Five Below: Which Growth Stock Is the Better Buy?",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/etsy-vs-five-below-growth-002002013.html",
+   "publishDate": "2026-11-16T00:20:02+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Etsy and Five Below take very different routes to growth, and the gap in their recent numbers may tip the scales for long-term investors.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Russia's mega-rich are already imagining a post-Putin future",
+   "link": "https://www.bbc.co.uk/news/articles/c60733mxm0x0o",
+   "publishDate": "2026-11-16T00:13:14+00:00",
+   "source": "www.bbc.co.uk",
+   "summary": "Some Russian tycoons are pining after a return to a 1990s system of oligarchy, when businessmen enjoyed power",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Japan's economy unexpectedly shrinks in July-September as consumption falters",
+   "link": "https://www.reuters.com/business/japans-economy-unexpectedly-shrinks-july-september-consumption-falters-2026-11-16/",
+   "publishDate": "2026-11-16T00:13:02.745000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Japan's economy contracted by an annualised 0.1% in the July-September quarter, government data showed on ​Monday, reflecting weak consumer spending as households grappled with elevated living costs.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Japan's economy unexpectedly shrinks in July-September as consumption falters",
+   "link": "https://www.channelnewsasia.com/business/japans-economy-unexpectedly-shrinks-in-july-september-consumption-falters-6553696",
+   "publishDate": "2026-11-16T00:12:53+00:00",
+   "source": "www.channelnewsasia.com",
+   "summary": "TOKYO, Nov 16 : Japan's economy contracted by an annualised 0.1 per cent in the July-September quarter, government data showed on Monday, reflecting weak consumer spending as households grappled with elevated living costs.The first contraction in four quarters underscores the uneven nature of Japan's economic",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Japan's economy unexpectedly shrinks in July-September as consumption falters",
+   "link": "https://finance.yahoo.com/economy/articles/japans-economy-unexpectedly-shrinks-july-001253478.html",
+   "publishDate": "2026-11-16T00:12:53+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "By Makiko Yamazaki and Satoshi Sugiyama TOKYO, Nov 16 (Reuters) - Japan's economy contracted by an annualised 0.1% in the July-September quarter, government data showed on Monday, reflecting weak",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Japan's economy unexpectedly shrinks as inflation squeezes households",
+   "link": "https://www.channelnewsasia.com/business/japans-economy-unexpectedly-shrinks-inflation-squeezes-households-6553696",
+   "publishDate": "2026-11-16T00:12:53+00:00",
+   "source": "www.channelnewsasia.com",
+   "summary": "TOKYO, Nov 16 : Japan's economy unexpectedly contracted an annualised 0.1 per cent in the July-September quarter, government data showed on Monday, reflecting weak consumer spending as households grappled with higher living costs.The first contraction in four quarters underscores the uneven nature of Japan's",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Japan's economy unexpectedly shrinks as inflation squeezes households",
+   "link": "https://www.channelnewsasia.com/east-asia/japan-economy-shrinks-inflation-households-living-costs-6553696",
+   "publishDate": "2026-11-16T00:12:00+00:00",
+   "source": "www.channelnewsasia.com",
+   "summary": "The first contraction in four quarters underscores the uneven nature of Japan's economic recovery, with households remaining vulnerable to persistent inflation despite rising wages.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Japan's economy unexpectedly shrinks as inflation squeezes households",
+   "link": "https://www.channelnewsasia.com/business/japan-economy-shrinks-inflation-households-living-costs-6553696",
+   "publishDate": "2026-11-16T00:12:00+00:00",
+   "source": "www.channelnewsasia.com",
+   "summary": "The first contraction in four quarters underscores the uneven nature of Japan's economic recovery, with households remaining vulnerable to persistent inflation despite rising wages.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "UK property asking prices fall more than usual in November, Rightmove says",
+   "link": "https://www.reuters.com/world/uk/uk-property-asking-prices-fall-more-than-usual-november-rightmove-says-2026-11-16/",
+   "publishDate": "2026-11-16T00:09:18.063000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Asking prices for British homes marketed in the four weeks to November 7 fell by more than usual for the ​time of year as high mortgage interest costs, caused by ‌the Iran war, squeezed prospective buyers, property website Rightmove said on Monday.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Oil Prices Slip as Market Weighs Supply Surplus Forecasts Against Fresh Mideast Attacks",
+   "link": "https://www.wsj.com/finance/commodities-futures/oil-edges-lower-as-supply-surplus-prospects-offset-mideast-tensions-9105d9bf",
+   "publishDate": "2026-11-16T00:07:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "Oil prices turned lower amid expectations of a growing global supply surplus despite renewed attacks in the Middle East.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Zambia’s copper boom attracts billions in investment, but who benefits?",
+   "link": "https://www.aljazeera.com/news/2026/11/16/zambias-copper-boom-attracts-billions-in-investment-but-who-benefits",
+   "publishDate": "2026-11-16T00:04:28+00:00",
+   "source": "www.aljazeera.com",
+   "summary": "Workers' rights, environmental concerns and local businesses remain at the centre of the debate.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Japan's economy unexpectedly contracts for the first time in a year as third-quarter GDP shrinks 0.1%",
+   "link": "https://www.cnbc.com/2026/11/16/japan-q3-gdp-energy-oil-prices.html",
+   "publishDate": "2026-11-15T23:57:19+00:00",
+   "source": "www.cnbc.com",
+   "summary": "Energy subsidies for households had reportedly expired in September, exposing the economy to the higher energy prices brought about by the Iran war.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Americans fear the worst after Pentagon doomsday prepping, ‘Black October’ cyberattacks, stock crash, spy scandal, Microsoft outage, and airport chaos",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/americans-fear-worst-pentagon-doomsday-232109128.html",
+   "publishDate": "2026-11-15T23:21:09+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The past month has seemed like one battle after another, and it's taking a toll on Americans who are starting to feel like everything is breaking at once.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "How to Invest Like a Cockroach in the Stock Market’s AI Era",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/invest-cockroach-stock-market-ai-231502647.html",
+   "publishDate": "2026-11-15T23:15:02+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Adapt, survive, and thrive with this battle-tested ETF strategy that shape-shifts to any environment with ease – here’s how.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "US blue wave reshapes Asia's winners and losers: Manishi Raychaudhuri",
+   "link": "https://www.reuters.com/commentary/reuters-open-interest/us-blue-wave-reshapes-asias-winners-losers-manishi-raychaudhuri-2026-11-15/",
+   "publishDate": "2026-11-15T23:00:31.795000+00:00",
+   "source": "www.reuters.com",
+   "summary": "A resounding Democratic takeover of Capitol Hill did more than rattle Asian chipmakers. It set off a macro realignment of foreign policy, energy, and trade that could create new winners and losers across Asian markets.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Berkshire’s record high exposes hidden trap in S&P 500 401(k) plans",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/berkshire-record-high-exposes-hidden-224700298.html",
+   "publishDate": "2026-11-15T22:47:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "A familiar fund can hold an unfamiliar risk.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Escorts Kubota Shares Slid Even Though Sales Rose",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/escorts-kubota-shares-slid-even-220701287.html",
+   "publishDate": "2026-11-15T22:07:01+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Escorts Kubota’s latest quarterly filing on 2 November 2026 showed a mix of signals, with revenue at ₹32,434.1 million in Q2 2027 and net income at ₹2,502.3 million, alongside a clear drop in net margin compared with Q2 2026. Investors who held Escorts Kubota over the past year are down 31.3%, including dividends. If you were weighing an entry a year ago, how should this margin squeeze change what you focus on now? A Narrative on Simply Wall St is one investor's written case for a company,...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Is bad news for Jensen Huang also bad news for the AI industry?",
+   "link": "https://finance.yahoo.com/technology/ai/articles/bad-news-jensen-huang-bad-215635461.html",
+   "publishDate": "2026-11-15T21:56:35+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "\"Jensen is Nvidia, right? And so much of this economy is riding on Nvidia.\"",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Crypto Market Loses $750 Billion in Value as ETF Demand Fades and Liquidations Surge",
+   "link": "https://www.benzinga.com/crypto/26/11/63277708/crypto-market-loses-750-billion-in-value-as-etf-demand-fades-and-liquidations-surge",
+   "publishDate": "2026-11-15T21:45:06.983000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "The crypto market has suffered a $750 billion value in the past few days because of the fading ETF demand as liquidations jump",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Top 3 Indian Founder Led Stocks With Revenue Growth Over 18%",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/top-3-indian-founder-led-211025795.html",
+   "publishDate": "2026-11-15T21:10:25+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "India’s inflation has breached the Reserve Bank of India’s 6% ceiling, and higher borrowing costs are putting pressure on heavily indebted firms. In this kind of credit squeeze, leaders with serious skin in the game often treat every rupee of capital like their own. That mindset can appeal to investors looking for resilience. This article breaks down three founder-led Indian stocks from our screener that fit that description. The three stocks highlighted here offer a compelling starting point...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 Canadian AI Stocks With Up To 206% Revenue Growth",
+   "link": "https://finance.yahoo.com/technology/ai/articles/3-canadian-ai-stocks-206-211021870.html",
+   "publishDate": "2026-11-15T21:10:21+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Global investors are watching inflation data closely, because every rate decision can shift the cost of capital for high growth ideas. If borrowing stays expensive for longer, smaller artificial intelligence players that do more with less funding can look especially interesting. This article walks through three Canadian AI focused small caps from our screener that could benefit if money continues to favour leaner, more focused growth stories. The three stocks below are just a taste of what...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 UK North Sea Oil Stocks Facing The Rosebank Policy Test",
+   "link": "https://finance.yahoo.com/energy/articles/3-uk-north-sea-oil-211014929.html",
+   "publishDate": "2026-11-15T21:10:14+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Political fault lines around the Rosebank oilfield have turned the UK North Sea into a live policy experiment, where every briefing and backbench revolt can shift the outlook for future cash flows. That uncertainty cuts both ways. Some stocks could see projects delayed, while others may benefit if jobs, tax receipts and energy security win the argument. This article profiles three UK listed producers most directly exposed to that debate. The three stocks below are only a sample of the UK...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Goldman Sachs’ calm 2027 forecast comes with a catch",
+   "link": "https://finance.yahoo.com/economy/articles/goldman-sachs-calm-2027-forecast-201300377.html",
+   "publishDate": "2026-11-15T20:13:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Goldman Sachs sees steady growth and cooler prices ahead, but its economists warn the real test may land where many Americans keep their savings.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Higher Rates Are Testing Philip Morris Stock and Other Dividend Defensives",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/higher-rates-testing-philip-morris-200720052.html",
+   "publishDate": "2026-11-15T20:07:20+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Fed officials are again talking tough on inflation, and markets are taking them at their word. Higher for longer rates can punish richly priced growth stories, yet often leave more defensive, dividend-paying value stocks coming under fresh scrutiny from investors hunting for resilience and income. This article examines what that shift may mean and walks through three stocks exposed to this latest Fed rhetoric from our higher-rate-focused screener. The stocks highlighted below are only a small...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Nvidia Earnings Without Jensen Huang Could Trigger $341 Billion Stock Swing As Options Traders Brace For Volatility",
+   "link": "https://www.benzinga.com/markets/options/26/11/63277522/nvidia-earnings-without-jensen-huang-could-trigger-341-billion-stock-swing-as-options-traders-brace-for-volatility",
+   "publishDate": "2026-11-15T20:00:30.941000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Nvidia, Palo Alto Networks, Disney and major retailers headline next week’s earnings watchlist, with options markets signaling the biggest expected stock moves.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Roughed-Up Bond Traders Look to Fedspeak, Minutes for Next Move",
+   "link": "https://www.bloomberg.com/news/articles/2026-11-15/roughed-up-bond-traders-look-to-fedspeak-minutes-for-next-move",
+   "publishDate": "2026-11-15T20:00:00+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "Bond traders fresh off a bruising week will look to a slew of Federal Reserve speeches and the central bank’s most recent meeting minutes for clues on interest rates after the market ramped up expectations for an extended cycle of hikes.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "The $130 Billion Oil Boom Fueled by the Iran War",
+   "link": "https://finance.yahoo.com/energy/articles/130-billion-oil-boom-fueled-200000667.html",
+   "publishDate": "2026-11-15T20:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "U.S. oil companies earned more than $130 billion in profits over six months as the Iran war disrupted global energy supplies and pushed up fuel prices.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Prediction: When Will Bitcoin Get Back to Its All-Time High?",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/prediction-bitcoin-back-time-high-193318780.html",
+   "publishDate": "2026-11-15T19:33:18+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Bitcoin sits nearly half below its October peak, sellers keep pressing, and ETF money keeps flowing out. Three past crashes offer very different recovery clocks, and only one of them matches today's Fed pressure.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "AARP delivers sobering verdict on Social Security, payroll taxes",
+   "link": "https://finance.yahoo.com/economy/policy/articles/aarp-delivers-sobering-verdict-social-193300020.html",
+   "publishDate": "2026-11-15T19:33:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Demographics aren’t the only reason the funding gap is growing.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Kansas City Fed’s Schmid says central bank has work to do on inflation",
+   "link": "https://finance.yahoo.com/economy/policy/articles/kansas-city-fed-schmid-says-192814280.html",
+   "publishDate": "2026-11-15T19:28:14+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Investing.com -- The Federal Reserve has the tools and responsibility to address inflation that is running too hot, Kansas City Federal Reserve President Jeff Schmid said on Sunday.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Fed 'has some work to do on inflation,' KC Fed chief says",
+   "link": "https://www.reuters.com/world/us/fed-has-some-work-do-inflation-kc-fed-chief-says-2026-11-15/",
+   "publishDate": "2026-11-15T18:42:52.346000+00:00",
+   "source": "www.reuters.com",
+   "summary": "The US Federal Reserve has the tools and responsibility to deal with price pressures that are \"running too hot,\" and the central bank \"has some work to do on inflation,\" ​Kansas City Federal Reserve President Jeff Schmid said on Sunday.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Fed 'has some work to do on inflation,' KC Fed chief says",
+   "link": "https://finance.yahoo.com/economy/policy/articles/fed-inflation-kc-fed-chief-184238934.html",
+   "publishDate": "2026-11-15T18:42:38+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Nov 15 (Reuters) - The US Federal Reserve has the tools and responsibility to deal with price pressures that are \"running too hot,\" and the central bank \"has some work to do on inflation,\" Kansas City",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "SpaceX caught Starship from orbit with ‘robot chopsticks’ in a world 1st — but lost its booster in the Gulf of Mexico",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/spacex-caught-starship-orbit-robot-180500736.html",
+   "publishDate": "2026-11-15T18:05:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Elon Musk’s company caught its returning Starship in the arms of its Mechazilla launch tower on Nov. 14, but the Super Heavy booster never made it back.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Why Verizon Traded Nerdy Pitchmen for Hollywood Heartthrobs",
+   "link": "https://www.wsj.com/business/media/why-verizon-traded-nerdy-pitchmen-for-hollywood-heartthrobs-7d249af1",
+   "publishDate": "2026-11-15T18:00:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "Marketing chief Leslie Berland’s viral social-first campaigns give the telecom company buzz, but can draw critics.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Bessent questions did Nvidia \"goose\" earnings with suspect China chip sales",
+   "link": "https://finance.yahoo.com/technology/ai/articles/bessent-questions-did-nvidia-goose-172921569.html",
+   "publishDate": "2026-11-15T17:29:21+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Treasury Secretary Scott Bessent on Sunday questioned whether Nvidia's earnings might have been inflated by inappropriate sales to China and urged the company to hire an outsider as CEO.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Michael Saylor’s Strategy Just Lost Its MSCI Index Spot as Bitcoin Plunges. Is MSTR Stock a Sell?",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/michael-saylor-strategy-just-lost-172850606.html",
+   "publishDate": "2026-11-15T17:28:50+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Strategy (NASDAQ:MSTR) trades at $111.62. Michael Saylor’s bitcoin vehicle is under pressure from two sides at once: an index provider is dropping it, and the coin it holds keeps falling. Strategy pairs a legacy MicroStrategy analytics software business with the largest corporate treasury of Bitcoin (CRYPTO:BTC). It held 848,517 BTC at its last quarterly report. […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "What I know and respect about Colette Kress, the person now leading Nvidia",
+   "link": "https://www.cnbc.com/investingclub/2026/11/15/jim-cramer-nvidia-colette-kress-jensen-huang.html",
+   "publishDate": "2026-11-15T17:14:17+00:00",
+   "source": "www.cnbc.com",
+   "summary": "Colette Kress is the steady hand that Nvidia needs in charge during this turbulent time.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Dave Portnoy says his ex can spend $500K of his money on a wedding to another man — and he wouldn't blink",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/dave-portnoy-says-ex-spend-170000192.html",
+   "publishDate": "2026-11-15T17:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Barstool Sports founder Dave Portnoy said in 2025 his estranged wife can tap his money anytime. Here's what that setup could mean for the rest of us.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "MacKenzie Scott gave Jeff Bezos 75% of their Amazon shares, Blue Origin, and the Washington Post in 2019 divorce",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/mackenzie-scott-gave-jeff-bezos-163000988.html",
+   "publishDate": "2026-11-15T16:30:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "MacKenzie Scott is still a very rich woman after her divorce with Bezos. But the numbers don’t add up in her favor.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 Top Founder Stocks With Earnings Growth Up To 58%",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/3-top-founder-stocks-earnings-160855528.html",
+   "publishDate": "2026-11-15T16:08:55+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "When US lawmakers move to tighten AI chip export rules to China after the Nvidia scandal, it shines a harsh light on how much value can rest on a single leader’s decisions. That is exactly where founder led businesses can look different. You are backing people who built the company and typically have more skin in the game. This article profiles three such stocks from our screener. The three stocks highlighted here offer a compelling starting point if you want exposure to founder led...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Why Is Oracle (ORCL) Expanding Its Health Data Network With Federal Agencies?",
+   "link": "https://finance.yahoo.com/healthcare/articles/why-oracle-orcl-expanding-health-160716472.html",
+   "publishDate": "2026-11-15T16:07:16+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Oracle (NYSE: ORCL) said the U.S. Department of Veterans Affairs and Department of War joined the Oracle Health Information Network. The Oracle Health Information Network is a federally designated Qualified Health Information Network that supports nationwide health data exchange. This move is intended to give clinicians across federal and community settings broader, secure access to patient health information. The decision by the VA and Department of War to plug into Oracle's health data...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Anti-Houthi forces retreat in Yemen as Iran strikes Bahrain",
+   "link": "https://www.reuters.com/world/middle-east/anti-houthi-forces-retreat-yemen-iran-strikes-bahrain-2026-11-15/",
+   "publishDate": "2026-11-15T15:56:34.142000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Iran and its allies ramped up pressure on the US and allied Gulf states on two fronts on Sunday, with Saudi-backed forces retreating in their battle against the Iran-aligned Houthis in Yemen and Iran itself firing drones at US ​bases in Bahrain.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "SocGen's Albert Edwards warns liquidity squeeze, inflation threaten AI stock rally",
+   "link": "https://seekingalpha.com/news/4672790-socgens-albert-edwards-warns-liquidity-squeeze-inflation-threaten-ai-stock-rally",
+   "publishDate": "2026-11-15T15:56:17+00:00",
+   "source": "seekingalpha.com",
+   "summary": "The bear case for AI stocks: tightening liquidity and fading earnings upgrades could pressure shares as inflation revives risk of Fed hikes above 200 basis...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Goldman Sachs reset S&P 500 price target for 2027",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/goldman-sachs-reset-p-500-153700617.html",
+   "publishDate": "2026-11-15T15:37:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Goldman Sachs has a number in mind for the S&P 500 next year, and the bank thinks the recent selloff is part of the reason it gets there.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 big things we're watching in the stock market in the week ahead",
+   "link": "https://www.cnbc.com/investingclub/2026/11/15/3-big-things-were-watching-in-the-stock-market-in-the-week-ahead.html",
+   "publishDate": "2026-11-15T15:26:20+00:00",
+   "source": "www.cnbc.com",
+   "summary": "Nvidia and Anthropic will share the spotlight in a pivotal week for the AI trade.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 Indian Consumer Staples Stocks With Pricing Power When Inflation Stays High",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/3-indian-consumer-staples-stocks-151232798.html",
+   "publishDate": "2026-11-15T15:12:32+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Inflation is no longer an abstract headline when airfare jumps 43% and food stays expensive; it hits monthly budgets and portfolios at the same time. That pressure can punish some stocks yet reward businesses that sell everyday essentials and can still nudge prices higher without losing shoppers. This article breaks down three such Indian Inflation Beneficiaries from our screener and explains how the current backdrop may matter for each one. The three stocks covered next are only a small...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Coursera (COUR) Stock Fair Value Moves Lower After Softer Guidance And Udemy Questions",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/coursera-cour-stock-fair-value-151140254.html",
+   "publishDate": "2026-11-15T15:11:40+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Coursera is in focus after fresh valuation work cut the assessed fair value from US$7.94 to US$5.88, resetting the price level some analysts use in their models. These changes line up with recent research that balances solid Q3 execution against softer Q4 guidance, a lower 2027 revenue framework, and new questions tied to the Udemy integration. As you read on, you will see how this evolving analyst narrative around Coursera might shape the way you track the stock from here. Analyst Price...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Jim Cramer has a warning for Nvidia stock investors after CEO exit",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-warning-nvidia-stock-150700343.html",
+   "publishDate": "2026-11-15T15:07:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The hard part comes after the handoff.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "FBI raids and a recycling firm: how a promising US mayor wound up at the center of a bribery scandal",
+   "link": "https://www.theguardian.com/us-news/2026/nov/15/oakland-mayor-bribery-scandal-recycling",
+   "publishDate": "2026-11-15T15:00:16+00:00",
+   "source": "www.theguardian.com",
+   "summary": "As Oakland residents watch ex-mayor Sheng Thao stand trial, the scandal has come to symbolise wider frustrationsTwo years ago, residents of Oakland, California, woke up to a shocking scene: their mayor’s home was being raided by the FBI. Agents were seen carrying dozens of boxes from the hilltop home of Sheng Thao, the city’s 38-year-old leader, as part of an investigation constituents would later learn alleged her participation in a pay-to-play scheme with the city’s recycling contractor.It was a stunning moment for Thao, who was elected to lead the Bay Area city in 2022 and was once seen as a promising young mayor in a city that has long grappled with economic inequality and a reputation for violent crime. Her story of growing up in a refugee family and overcoming domestic violence and homelessness to become the first person of Hmong descent to run a major US city resonated with readers confronting questions about equity and representation that came to the fore during the Covid19 pandemic, and made her the subject of glowing media profiles. Continue reading...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Nvidia earnings collide with Fed's biggest AI challenge under Warsh",
+   "link": "https://finance.yahoo.com/technology/ai/articles/nvidia-earnings-collide-feds-biggest-140300280.html",
+   "publishDate": "2026-11-15T14:03:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Fed AI task force takes on potential impact on U.S. economy including inflation, jobs.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Bitcoin ETFs Lose $2.1 Billion in November as Outflow Streak Hits Seven Days",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-etfs-lose-2-1-140102292.html",
+   "publishDate": "2026-11-15T14:01:02+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Spot Bitcoin ETFs shed $185.4 million on Friday, their seventh straight day of outflows, pushing November losses to about $2.1 billion as Bitcoin fell toward $64,000.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Putin's war machine tied to troubling recruitment of young women as new deals emerge",
+   "link": "https://www.foxnews.com/world/putins-war-machine-tied-troubling-recruitment-young-women-new-deals-emerge",
+   "publishDate": "2026-11-15T14:00:46+00:00",
+   "source": "www.foxnews.com",
+   "summary": "Two African governments signed deals with Russia's Alabuga drone factory zone as a Ukrainian probe alleges deceptive recruitment of young African women.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "How much gold should you have in your portfolio? Experts weigh in",
+   "link": "https://finance.yahoo.com/markets/commodities/articles/much-gold-portfolio-experts-weigh-134525928.html",
+   "publishDate": "2026-11-15T13:45:25+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Experts commonly recommend 5% to 10% in precious metals, but your ideal gold allocation depends on your goals, timeline and risk tolerance.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Al Jazeera English marks 20 years: Stories that shaped the journey",
+   "link": "https://www.aljazeera.com/news/2026/11/15/al-jazeera-english-marks-20-years-stories-that-shaped-the-journey",
+   "publishDate": "2026-11-15T13:30:51+00:00",
+   "source": "www.aljazeera.com",
+   "summary": "Here are some of the crucial events Al Jazeera English has covered over the past two decades.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Jensen Huang leaves Nvidia with a $132 billion stake — here's when he can sell and why investors may not know when he does: Chart of the Day",
+   "link": "https://finance.yahoo.com/markets/article/jensen-huang-leaves-nvidia-with-a-132-billion-stake--heres-when-he-can-sell-and-why-investors-may-not-know-when-he-does-chart-of-the-day-130732443.html",
+   "publishDate": "2026-11-15T13:07:32+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Most of Huang's Nvidia shares are tied up with his wife, but the rules on who sees him sell are about to loosen.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "More people are ‘relying on mom and dad’ for their retirement plan — banking on an inheritance that may never come",
+   "link": "https://finance.yahoo.com/small-business/articles/more-people-relying-mom-dad-130000565.html",
+   "publishDate": "2026-11-15T13:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Adult children’s assumptions about an inheritance may not match their parents’ plans for that money — but they can take control of their own savings and investments.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Planned Obsolescence: Financial Advice for Workers at Risk of AI Replacement",
+   "link": "https://finance.yahoo.com/technology/ai/articles/planned-obsolescence-financial-advice-workers-130000391.html",
+   "publishDate": "2026-11-15T13:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Tech-industry clients are those worried most about AI-related layoffs, advisors say. Some are saving up — or even thinking of moving to Mexico.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Siege on Hebron’s Beit Ula industrial zone threatens Palestinian economy",
+   "link": "https://www.aljazeera.com/economy/2026/11/15/siege-on-hebrons-beit-ula-industrial-zone-threatens-palestinian-economy",
+   "publishDate": "2026-11-15T12:02:45+00:00",
+   "source": "www.aljazeera.com",
+   "summary": "Israel takes measures to crush Palestinian business in the occupied West Bank.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Cocrystal Pharma Provides Business Update and Reports Third Quarter 2026 Financial Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/15/3403093/0/en/cocrystal-pharma-provides-business-update-and-reports-third-quarter-2026-financial-results.html",
+   "publishDate": "2026-11-15T12:00:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "BOTHELL, Wash., Nov. 15, 2026 (GLOBE NEWSWIRE) -- Cocrystal Pharma, Inc. (Nasdaq: COCP) (“Cocrystal” or the “Company”) provides updates on its antiviral product pipeline and business activities and reports financial results for the three and nine months ended September 30, 2026.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Average job search hits 24.8 weeks in 2026, and 27% of workers take even longer to land a new role",
+   "link": "https://finance.yahoo.com/economy/articles/average-job-search-hits-24-120000546.html",
+   "publishDate": "2026-11-15T12:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Whether you don’t have an emergency fund at all or you’re thinking about growing yours, the basic strategy is the same.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Firms need to get onside if Labour’s youth employment push is to have a chance of working | Richard Partington",
+   "link": "https://www.theguardian.com/business/2026/nov/15/firms-labour-youth-employment-push",
+   "publishDate": "2026-11-15T11:52:03+00:00",
+   "source": "www.theguardian.com",
+   "summary": "Alan Milburn’s report will call for benefit cuts but lack of entry-level job opportunities is also driving crisis‘I’m scared about my future’: young people on the stress and desperation of jobseekingA generation is being sold short. Almost a million young people are not in education, employment or training (Neet). Austerity and the Covid pandemic cast a lengthy shadow, AI is upending the jobs market, and the cost of living is soaring – all under the microscope of the social media age.This week Alan Milburn’s landmark report on young people and work will bring Britain to a fork in the road: either continue on this path of state and market failure or sharply change direction. Continue reading...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Homebuyers are cringing at a 7% interest rate, and their parents can’t relate. Why it’s so hard to afford a home now",
+   "link": "https://finance.yahoo.com/real-estate/articles/homebuyers-cringing-7-interest-rate-113000440.html",
+   "publishDate": "2026-11-15T11:30:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Yes, mortgage rates are relatively high, but so are total home costs",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 Growth Stocks With Revenue Growth Over 18%",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/3-growth-stocks-revenue-growth-111038229.html",
+   "publishDate": "2026-11-15T11:10:38+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The latest US inflation data shows producer prices rising 6.5%, keeping pressure on interest rates and making borrowing more expensive. In that kind of world, investors often pay closer attention to fast expanding businesses where insiders own a big slice of the shares. This article highlights three such companies from a growth and insider backed screener, helping you focus on firms where management has meaningful skin in the game. The three stocks highlighted here offer a compelling starting...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Battle for young male voters intensifies after US midterm rebuke of Republicans",
+   "link": "https://www.reuters.com/world/us/battle-young-male-voters-intensifies-after-us-midterm-rebuke-republicans-2026-11-15/",
+   "publishDate": "2026-11-15T11:05:24.030000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Barely a week after the midterm elections, Democrats are debating how to turn newfound support among young men into a lasting coalition, while Republicans are trying to understand why the group abandoned them so decisively.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Ferrari went electric. Will Bugatti be next?",
+   "link": "https://abcnews.com/Business/bugattis-new-us-ceo-talks-manuals-electric-hypercars/story?id=138011164",
+   "publishDate": "2026-11-15T11:00:37+00:00",
+   "source": "abcnews.com",
+   "summary": "Bugatti recently celebrated 20 years in the U.S.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Should you buy Nvidia stock right now?",
+   "link": "https://finance.yahoo.com/markets/stocks/article/should-you-buy-nvidia-stock-right-now-110000910.html",
+   "publishDate": "2026-11-15T11:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Some guideposts to watch from Nvidia before hitting the buy button on its bruised stock.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Nvidia's first post-Jensen earnings and Anthropic's IPO: What to watch this week",
+   "link": "https://finance.yahoo.com/markets/article/nvidias-first-post-jensen-earnings-and-anthropics-ipo-what-to-watch-this-week-110000732.html",
+   "publishDate": "2026-11-15T11:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Anthropic's IPO and continued fallout at Nvidia will lead the news cycle on Wall Street this week.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "The Individual Investors Who Are Hot on Anthropic’s IPO But Cool on AI",
+   "link": "https://www.wsj.com/finance/stocks/the-individual-investors-who-are-hot-on-anthropics-ipo-but-cool-on-ai-461f89b4",
+   "publishDate": "2026-11-15T10:30:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "Artificial intelligent’s future makes it hard for some to sit out the trillion-dollar offering, but it’s complicated. “Feels almost like the last chopper out of Saigon,” says one.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Nvidia had no succession plan when Jensen Huang quit. Former Fortune 500 CEOs call it ‘preposterous’",
+   "link": "https://finance.yahoo.com/technology/articles/nvidia-had-no-succession-plan-100000756.html",
+   "publishDate": "2026-11-15T10:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Jensen Huang had 60 direct reports and no clear heir. Ex-CEOs weigh in on how that could have been allowed to happen.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Drone attacks on power stations plunge Sudan’s cities into darkness",
+   "link": "https://www.aljazeera.com/features/2026/11/15/drone-strikes-on-power-stations-plunges-sudans-cities-into-darkness",
+   "publishDate": "2026-11-15T09:59:37+00:00",
+   "source": "www.aljazeera.com",
+   "summary": "Sudan's power stations are being targeted in waves of drone attacks, resulting in power outages.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Patty Murray Says Democrats Must Go Beyond Reversing GOP Health Care Cuts, Calls for Universal Coverage: 'Death by a Thousand Cuts'",
+   "link": "https://www.benzinga.com/news/politics/26/11/63276720/patty-murray-says-democrats-must-go-beyond-reversing-gop-health-care-cuts-calls-for-universal-coverage-death-by-a-thousand-cuts",
+   "publishDate": "2026-11-15T09:40:06.479000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Murray urged Democrats to pursue universal coverage and a robust public option, while reversing Medicaid cuts and restoring ACA subsidies.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Meet the Sweetgreen managers who could make $200,000 training the chain’s next generation of restaurateurs",
+   "link": "https://finance.yahoo.com/small-business/articles/meet-sweetgreen-managers-could-200-093500875.html",
+   "publishDate": "2026-11-15T09:35:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Sweetgreen’s CEO says the American dream is “under attack.” His answer is a pay plan that rewards managers for helping others achieve that goal.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Peter Brandt Says Bitcoin's All-Time High May Never Be Topped In His Lifetime If Bearish Chart Pattern Holds",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/peter-brandt-says-bitcoins-time-093425940.html",
+   "publishDate": "2026-11-15T09:34:25+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Investors pulled about over $2 billion from BTC funds over the two weeks, marking a big liquidation event.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "ECB cannot replace sound fiscal policy, presidential contender Knot warns",
+   "link": "https://finance.yahoo.com/economy/policy/articles/ecb-cannot-replace-sound-fiscal-092654739.html",
+   "publishDate": "2026-11-15T09:26:54+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Investing.com -- The European Central Bank cannot substitute responsible government spending and debt management with interventions in sovereign bond markets, former Dutch central bank governor Klaas Knot warned as he competes to become the institution’s next president.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 Key Events in the Coming Week That Could Move AI Stocks and Crypto",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/3-key-events-coming-week-091229277.html",
+   "publishDate": "2026-11-15T09:12:29+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Nvidia earnings, Fed minutes and Anthropic’s IPO land within 48 hours, testing the AI selloff in stocks and crypto.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Brown Forman And 2 Other Dividend Stocks To Watch",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/brown-forman-2-other-dividend-091139557.html",
+   "publishDate": "2026-11-15T09:11:39+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "US wholesale inflation running at 6.5% puts steady income back in the spotlight. When prices rise at the producer level, dependable cash payouts can feel more valuable than ever. Reliable dividend payers that already offer yields above 3% and keep those payouts well covered and growing can help anchor a portfolio. This article highlights three such high income stocks from our screen and why each one deserves a closer look. The three stocks highlighted here offer a compelling starting point if...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "India pulled 500m people out of poverty. Many of them still barely survive",
+   "link": "https://www.aljazeera.com/features/2026/11/15/india-pulled-500m-people-out-of-poverty-since-2011-why-doesnt-it-feel-so",
+   "publishDate": "2026-11-15T08:49:47+00:00",
+   "source": "www.aljazeera.com",
+   "summary": "World Bank says India pulled a record number of citizens out of poverty, but millions of them still live on the edge.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 US Brokerage Stocks Earning More From Higher Rates",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/3-us-brokerage-stocks-earning-081316451.html",
+   "publishDate": "2026-11-15T08:13:16+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Inflation is rumbling upstream again, with October’s Producer Price Index jumping 6.5% and core costs up 5%, and that kind of pricing tension can quietly reshuffle winners and losers in a portfolio. Higher short-term rates and more expensive funding do not just hit borrowers; they can also reshape what cash-heavy platforms earn on idle client balances. This article reviews three U.S. Short Duration Cash & Brokerage Platforms Benefiting From Higher Rates screener stocks that appear closely...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "ASEAN summit: Who’s attending and what’s at stake?",
+   "link": "https://www.aljazeera.com/news/2026/11/15/asean-summit-whos-attending-and-whats-at-stake",
+   "publishDate": "2026-11-15T07:11:24+00:00",
+   "source": "www.aljazeera.com",
+   "summary": "Energy disruptions as a result of the US-Israel war on Iran is a key issue for the import-dependent bloc.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 Consumer Staples Stocks Investors Are Watching As Producer Inflation Heats Up",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/3-consumer-staples-stocks-investors-071030603.html",
+   "publishDate": "2026-11-15T07:10:30+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Producer prices are heating up again, and that raises a blunt question for your portfolio. If costs keep climbing faster than consumer inflation and the Federal Reserve stays tough on policy, some businesses may see their profits squeezed while others hold the line. This article explains what the latest PPI surprise could mean for investors and highlights three large-cap consumer staples stocks exposed to this inflation story. The three stocks covered next are just a sample set. The full...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Top 3 Australian Founder Led Stocks With Earnings Growth Over 13% To Watch",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/top-3-australian-founder-led-070928188.html",
+   "publishDate": "2026-11-15T07:09:28+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "US producer price inflation running at 6.5% keeps pressure on central banks and raises the bar for executives who only rent the corner office. Investors hunting for Australian businesses where founders still own a big slice of the equity are really backing leaders whose wealth moves with every policy decision. This article highlights three founder led stocks from our screener that align personal stakes with shareholder outcomes. The few stocks covered below are only a starting sample from...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Sansan And 2 Other Japanese Founder Led Stocks To Own",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/sansan-2-other-japanese-founder-070843417.html",
+   "publishDate": "2026-11-15T07:08:43+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "US inflation remains above target and Federal Reserve officials keep pointing to price pressures as the main guide for future rate moves. That kind of backdrop often rewards investors who back Japanese founders with real skin in the game and clear, long term focus, rather than hired managers chasing quarterly bonuses. This article picks out three founder driven Japanese stocks from our screener that illustrate that mindset in action. The three stocks highlighted here offer a compelling...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "GBank Financial Holdings (GBFH) Stock Sees Fair Value Cut As Analysts Split On Growth",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/gbank-financial-holdings-gbfh-stock-070840656.html",
+   "publishDate": "2026-11-15T07:08:40+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "GBank Financial Holdings has seen its internal fair value estimate cut from US$25 to US$20, a 20% reduction in the price target that resets expectations for the stock. This shift lines up with recent Street research that highlights a tug of war between enthusiasm for the gaming opportunity and a more cautious read on the renewed focus on core banking. In the sections ahead, you will see how these moving pieces are shaping the evolving analyst narrative around GBank Financial Holdings and what...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "'Is this a cyberattack?' Grounded flights, a Microsoft outage and AI chaos fuel cybersecurity fears",
+   "link": "https://www.france24.com/en/technology/20261115-is-this-a-cyberattack-grounded-flights-a-microsoft-outage-and-ai-chaos-fuel-cybersecurity-fears",
+   "publishDate": "2026-11-15T07:04:31+00:00",
+   "source": "www.france24.com",
+   "summary": "A series of unsettling disruptions, from tech stock turbulence and Microsoft outages to a nationwide grounding of flights, has left millions wondering whether the world’s increasingly interconnected technology systems are beginning to unravel.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "‘I’m scared about my future’: young people on the stress and desperation of jobseeking",
+   "link": "https://www.theguardian.com/business/2026/nov/15/young-people-stress-seeking-a-job-mental-physical-health",
+   "publishDate": "2026-11-15T07:00:07+00:00",
+   "source": "www.theguardian.com",
+   "summary": "In the second in our series, four young Britons reveal how the search has taken a toll on their mental and physical health‘The social contract is broken’: young people on feeling shut out of careersGuardian to follow lives of eight young people in their search for jobs“I had to quit and move back in with my parents because I had developed ME/chronic fatigue syndrome. I am now housebound and cannot look after myself. Although I cannot prove it, I strongly believe that prolonged period of high stress played a big part in the decline of my health.” Continue reading...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Pope Leo helps Argentines embrace Francis, the pontiff who once divided them",
+   "link": "https://abcnews.com/International/wireStory/pope-leo-helps-argentines-embrace-francis-pontiff-divided-138153510",
+   "publishDate": "2026-11-15T06:29:38+00:00",
+   "source": "abcnews.com",
+   "summary": "Millions of Argentines have turned out to see Pope Leo XIV — and the words that moved them most often belonged to his predecessor, and their compatriot, Francis",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Southeast Asian leaders open annual summit with major conflicts and their impact topping the agenda",
+   "link": "https://abcnews.com/International/wireStory/southeast-asian-leaders-open-annual-summit-major-conflicts-138153824",
+   "publishDate": "2026-11-15T06:29:29+00:00",
+   "source": "abcnews.com",
+   "summary": "Southeast Asian leaders have opened their annual summit in the Philippine capital Manila for three days of talks",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Could everything be broken? Grounded jets, Microsoft outage, AI chaos make some wonder",
+   "link": "https://abcnews.com/US/wireStory/broken-grounded-jets-microsoft-outage-ai-chaos-make-138153827",
+   "publishDate": "2026-11-15T06:29:27+00:00",
+   "source": "abcnews.com",
+   "summary": "After the Silicon Valley chaos spurred by reports of an AI billionaire's affair with a suspected Chinese spy and the Microsoft outage that upended millions of workers' days, Friday's air travel ground stop across the U.S. had many people feeling that s...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Arthur Hayes Says Fed Rate Hikes Will Prompt Wealthy Investors To Buy More Bitcoin, Real Estate, Watches And Wine",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/arthur-hayes-says-fed-rate-061538129.html",
+   "publishDate": "2026-11-15T06:15:38+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "According to Hayes, a quarter-point hike would cost holders $17 billion more in interest a year.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 US Bank Stocks Worth Watching As Higher Interest Rates Reshape Earnings",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/3-us-bank-stocks-worth-060823204.html",
+   "publishDate": "2026-11-15T06:08:23+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Hot jobs data, stubborn inflation and a jump in Treasury yields have suddenly put interest rates back in the driver’s seat for US markets. Higher borrowing costs are pressuring many growth stories, yet they can open the door for certain banks and insurers that earn more on loans and investment portfolios. In this article you will see three stocks exposed to this rate shock and why their stories now demand a closer look. The three stocks below are just a starting sample, and the full screen...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Tempus AI And 2 More AI Healthcare Stocks",
+   "link": "https://finance.yahoo.com/healthcare/articles/tempus-ai-2-more-ai-060802815.html",
+   "publishDate": "2026-11-15T06:08:02+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Inflation worries are back on the front page, with US wholesale prices rising 6.5% year on year in October and feeding fresh debate about how long higher rates could stick around. Expensive capital and rising costs can be tough for many sectors. They also focus attention on businesses using artificial intelligence in healthcare to lift accuracy and cut waste. This article walks through three AI driven healthcare stocks from our screener that reflect that theme. The three stocks below are just...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Gymshark in trademark battle that threatens future of small fitness business",
+   "link": "https://www.theguardian.com/law/2026/nov/15/gymshark-trademark-battle-the-conditioning-club-gloucestershire",
+   "publishDate": "2026-11-15T06:00:07+00:00",
+   "source": "www.theguardian.com",
+   "summary": "Exclusive: British sportswear firm is seeking to obtain rights to The Conditioning Club, which is also the name of a Gloucestershire gymGymshark, the £1bn British sportswear firm started in a family garage, is locked in a trademark battle that threatens the future of a small fitness business.Ben Francis, the university dropout who started sewing his own gym clothes in his parents’ garage and is now estimated to be worth £800m, is trying to add The Conditioning Club to his Gymshark stable of trademarks. Continue reading...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "‘Jensen Huang lost his mind’: how AI’s smartest man fell for the world’s oldest trick",
+   "link": "https://www.theguardian.com/technology/2026/nov/14/jensen-huang-affair-nvidia-nightmare",
+   "publishDate": "2026-11-15T06:00:06+00:00",
+   "source": "www.theguardian.com",
+   "summary": "Jensen Huang’s affair with a suspected spy is Silicon Valley’s worst nightmare come trueThe resignation this week of Nvidia’s founder and CEO Jensen Huang is one of the most astonishing corporate scandals in memory, featuring allegations of international espionage and extramarital affairs involving one of the world’s most powerful men. As investigations mount into what went wrong at the $4tn chip company, the saga may also become a milestone in the decades-long history of spies infiltrating the US tech industry.Huang admitted to being unfaithful to his wife of 41 years in a letter to employees this past weekend, following a report from the New York Times that the tech mogul had a close relationship with a woman US officials suspect of spying for China’s government. Huang resigned on Thursday after 33 years as CEO amid reports of two additional affairs with Nvidia employees, causing the world’s most valuable chip company’s stock to plummet. Continue reading...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Could Budapest be the next digital nomad hotspot?",
+   "link": "https://www.cnbc.com/2026/11/15/budapest-europes-next-digital-nomad-hotspot.html",
+   "publishDate": "2026-11-15T06:00:01+00:00",
+   "source": "www.cnbc.com",
+   "summary": "With its mix of sights, cafés and culture, Hungary's capital Budapest has become popular with those embracing the \"work from anywhere\" trend.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "The world is facing a new credit crunch",
+   "link": "https://finance.yahoo.com/news/world-facing-credit-crunch-060000228.html",
+   "publishDate": "2026-11-15T06:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "High above the streets of Los Angeles, residents of the Beaudry can gaze across the Hollywood skyline, take a dip in a heated saltwater pool, practise their swing on a golf simulator and even send their dog to the spa.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "The world is facing a new credit crunch",
+   "link": "https://finance.yahoo.com/economy/policy/articles/world-facing-credit-crunch-060000019.html",
+   "publishDate": "2026-11-15T06:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "High above the streets of Los Angeles, residents of the Beaudry can gaze across the Hollywood skyline, take a dip in a heated saltwater pool, practise their swing on a golf simulator and even send their dog to the spa.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Nvidia earnings — along with the baggage — top next week's markets",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/nvidia-earnings-along-baggage-top-053700154.html",
+   "publishDate": "2026-11-15T05:37:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The chip giant’s results should awe, but the question is if investors can forget CEO Huang’s departure.",
+   "sentiment": null,
+   "confidence": null
+  }
+ ]
+}

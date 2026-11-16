@@ -14006,3 +14006,4 @@
 {"seq":574065,"ts":"2026-11-13T13:30:04.943465","kind":"degraded_bar","detail":"1m gap before 13:29","symbol":"DIA"}
 {"seq":577842,"ts":"2026-11-13T15:06:07.894363","kind":"stale_quote","detail":"XLF age=6.4s"}
 {"seq":578169,"ts":"2026-11-13T15:14:12.978693","kind":"stale_quote","detail":"WMT age=8.1s"}
+{"seq":583512,"ts":"2026-11-16T12:04:08.886198","kind":"degraded_bar","detail":"1m gap before 12:03","symbol":"XLI"}
