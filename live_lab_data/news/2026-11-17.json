@@ -1,0 +1,911 @@
+{
+ "session": "2026-11-17",
+ "fetched_at_et": "2026-11-17T07:30:20",
+ "query": "(Fed OR \"Federal Reserve\" OR inflation OR CPI OR jobs OR tariff OR tariffs OR war OR Treasury OR shutdown) AND (stocks OR markets OR economy)",
+ "window_from": "2026-11-16T16:00:00",
+ "window_to": "2026-11-17T07:30:20.522743",
+ "page_size": 100,
+ "n": 100,
+ "articles": [
+  {
+   "title": "UK seeks closer ties with EU after Brexit fail",
+   "link": "https://www.aljazeera.com/news/2026/11/17/uk-seeks-closer-ties-with-eu-after-brexit-fail",
+   "publishDate": "2026-11-17T00:30:21+00:00",
+   "source": "www.aljazeera.com",
+   "summary": "Prime Minister Andy Burnham says UK lost more than it gained after its divorce from the bloc.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 Indian Founder Led Stocks To Watch In November 2026",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/3-indian-founder-led-stocks-002214399.html",
+   "publishDate": "2026-11-17T00:22:14+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "India’s wholesale inflation recently reached 12.29% in October, with fuel and power costs a key driver, so pricing power and disciplined capital allocation matter more than ever. Founder led Indian businesses often show that mix because the person who built the company still feels every rupee. This article highlights three stocks where founders remain deeply involved and explains why that ownership mindset could appeal to long term investors. The three stocks highlighted here offer a...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 Indian Growth Stocks To Watch In November 2026",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/3-indian-growth-stocks-watch-002212464.html",
+   "publishDate": "2026-11-17T00:22:12+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "India’s wholesale inflation recently hit 12.29%, driven by higher fuel and power costs, which puts rising prices back on every investor’s radar. In that kind of backdrop, fast growing Indian businesses where insiders own a meaningful stake can look especially interesting. This article walks through three such stocks from our screener and highlights why their growth profiles and insider alignment may appeal to long term investors looking for conviction ideas. The three stocks highlighted here...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Victoria's Secret (VSXY) Could Be 6% Overvalued On Raised Full Year Guidance",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/victorias-secret-vsxy-could-6-002136652.html",
+   "publishDate": "2026-11-17T00:21:36+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Victoria's Secret (VSXY) has investors reassessing the story after strong second quarter results, raised full year guidance, and a valuation driven downgrade from a major bank that still pointed to solid brand momentum. Those results arrive after a major run in Victoria's Secret, with the share price up 90.87% year to date and recent gains strong enough that the stock was downgraded on valuation grounds, even as brand momentum and reduced discounting continue to shape the story for longer...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Euro Expected to Stage Modest Recovery in BofA Survey",
+   "link": "https://www.wsj.com/finance/currencies/asian-currencies-consolidate-but-may-be-weighed-by-risk-off-sentiment-61059d88",
+   "publishDate": "2026-11-17T00:18:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "The euro was flat against the dollar and investors expect the euro to recover marginally to $1.12 by the end of 2027, according to Bank of America’s global fund manager survey.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "The young people caught up in Britain's Neets crisis",
+   "link": "https://www.bbc.co.uk/news/articles/cj75pkgrv151o",
+   "publishDate": "2026-11-17T00:06:34+00:00",
+   "source": "www.bbc.co.uk",
+   "summary": "BBC News speaks to four of the million young people aged 16 to 24 who are not in work, education or training.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Aged 16-24 and looking for work? Use our look-up to find out which areas have the most jobs",
+   "link": "https://www.bbc.co.uk/news/articles/cw3djdjk5d7ko",
+   "publishDate": "2026-11-17T00:00:03+00:00",
+   "source": "www.bbc.co.uk",
+   "summary": "How many jobs are there where you live and in which sectors are you most likely to find an opening?",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Airlines Face Fuel Crisis as Price Hedges Expire",
+   "link": "https://finance.yahoo.com/energy/articles/airlines-face-fuel-crisis-price-000000246.html",
+   "publishDate": "2026-11-17T00:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Jet fuel near $150 a barrel and expiring hedges are pushing airlines toward a hard winter, and United's CEO is warning of a reckoning.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Hive Digital CEO says its five-year-old Nvidia GPUs still produce cash flow",
+   "link": "https://finance.yahoo.com/technology/ai/articles/hive-digital-ceo-says-five-235149315.html",
+   "publishDate": "2026-11-16T23:51:49+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Hive CEO Aydin Kilic says Nvidia chips bought in 2021 still generate cash, challenging Wall Street’s view that GPUs lose all value.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "What US banks, fintechs can learn from Ueno Bank collapse",
+   "link": "https://finance.yahoo.com/small-business/articles/us-banks-fintechs-learn-ueno-233021450.html",
+   "publishDate": "2026-11-16T23:30:21+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The national crisis triggered by the shutdown of Paraguay’s largest digital bank carries lessons for other fintechs looking to become banks, experts say.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 US AI Infrastructure Stocks Retail Investors Are Watching After Fed AI Warning",
+   "link": "https://finance.yahoo.com/technology/ai/articles/3-us-ai-infrastructure-stocks-232207723.html",
+   "publishDate": "2026-11-16T23:22:07+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Artificial intelligence just moved from tech headline to macro story, with Fed Chair Warsh openly treating “super intelligence” as a force that could reshape productivity, jobs, and even future policy decisions. That kind of attention can quickly reprice expectations, which matters if you own anything tied to cloud or AI platforms or are thinking about it. This article walks through 3 US large cap stocks exposed to that AI narrative and explains why the news may matter for each one. The three...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "China resumes storing crude oil, giving it fuel export options",
+   "link": "https://www.reuters.com/commentary/reuters-open-interest/china-resumes-storing-crude-oil-giving-it-fuel-export-options-2026-11-16/",
+   "publishDate": "2026-11-16T23:20:04.219000+00:00",
+   "source": "www.reuters.com",
+   "summary": "China resumed stockpiling crude oil in October for the first time since July as imports recovered and refining processing rates remained soft.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "China is hosting the world's leaders in Shenzhen's AI wonderland. Here's what they won't see",
+   "link": "https://www.bbc.co.uk/news/articles/cm3eg3v9jkk8o",
+   "publishDate": "2026-11-16T23:07:20+00:00",
+   "source": "www.bbc.co.uk",
+   "summary": "Drive away from Shenzhen's tech-flecked skyline and you will run into the challenges confronting Xi's China.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Your $300,000 in XLY Holds $125,585 in Amazon and Tesla Alone",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/300-000-xly-holds-125-230319019.html",
+   "publishDate": "2026-11-16T23:03:19+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "A fund named for everyday American spending looks diversified until you open its holdings filing. Two familiar companies quietly steer the whole ride, and you may already own them twice without realizing it.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Latest Oil Market News and Analysis for Nov. 17",
+   "link": "https://www.bloomberg.com/news/articles/2026-11-16/latest-oil-market-news-and-analysis-for-nov-17",
+   "publishDate": "2026-11-16T23:02:55+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "Oil fell on signs supplies are outpacing demand, and as Vice President JD Vance signaled the US wants to avoid a prolonged war in Iran.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Bank Hapoalim BM (BKHPF) (Q3 2026) Earnings Call Highlights: Strong Profit, Robust Credit ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/bank-hapoalim-bm-bkhpf-q3-230055293.html",
+   "publishDate": "2026-11-16T23:00:55+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Bank Hapoalim BM (BKHPF) posted ILS2.4 billion in quarterly net profit with 14% ROE, 10% year-to-date credit growth, and a 50% payout ratio despite NIM compression.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Outdoor Holding Co (POWW) Q2 2027 Earnings Call Highlights: Fifth Straight Quarter of Revenue ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/outdoor-holding-co-poww-q2-230050562.html",
+   "publishDate": "2026-11-16T23:00:50+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Outdoor Holding Co (POWW) posted 14.6% revenue growth and a 64% jump in net income, with transaction volume climbing 16% to 23% after the midterm elections despite a cautious consumer backdrop.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "EU agrees to resurrect cooperation deal with Syria",
+   "link": "https://www.aljazeera.com/news/2026/11/16/eu-agrees-to-resurrect-cooperation-deal-with-syria",
+   "publishDate": "2026-11-16T23:00:36+00:00",
+   "source": "www.aljazeera.com",
+   "summary": "Decision aims to bolster bloc's ties with Damascus following the collapse of Assad's government in December 2024.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Huang’s ‘trillion-dollar dinners’ with Taiwan chip bosses were Nvidia’s secret weapon. Now he’s out. Can he be replaced?",
+   "link": "https://finance.yahoo.com/technology/articles/huang-trillion-dollar-dinners-taiwan-230000506.html",
+   "publishDate": "2026-11-16T23:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "“With a new CEO, those relationships won’t be as close as they were with Jensen Huang.\"",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Uganda Pushes First Oil to Mid-2027 as Iran War Holds Up Equipment",
+   "link": "https://finance.yahoo.com/energy/articles/uganda-pushes-first-oil-mid-230000000.html",
+   "publishDate": "2026-11-16T23:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Uganda's first oil and exports slip to mid-2027 as the Iran war delays pipeline gear, costing it a positive S&P outlook and budget revenue.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Tennessee mom billed $1.48M for her daughter’s autism therapy — about $10,000 for every 3-hour session, invoices show",
+   "link": "https://finance.yahoo.com/healthcare/articles/tennessee-mom-billed-1-48m-224500414.html",
+   "publishDate": "2026-11-16T22:45:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Proper healthcare insurance documentation is no luxury for families; it’s a necessity.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "This Isn’t a Crypto Crash. Fed Hike Bets Are Hitting Everything",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/isn-t-crypto-crash-fed-224146944.html",
+   "publishDate": "2026-11-16T22:41:46+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Bitcoin, stocks and gold all fell as Fed hike bets grew, showing the crypto crash is part of a wider rates shock.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Hammack Says Fed Interventions Should Be Temporary, Targeted",
+   "link": "https://www.bloomberg.com/news/articles/2026-11-16/hammack-says-fed-interventions-should-be-temporary-targeted",
+   "publishDate": "2026-11-16T22:41:11+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "Federal Reserve Bank of Cleveland President Beth Hammack said central bank interventions in financial markets should be temporary and targeted, signaling support for a colleague’s proposal to put asset purchases into a separate portfolio when they’re used to provide markets with emergency liquidity.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Pat Buchanan Was a Foretaste",
+   "link": "https://www.wsj.com/opinion/pat-buchanan-was-a-foretaste-d7509c3d",
+   "publishDate": "2026-11-16T22:39:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "He favored tariffs and tight immigration a quarter-century before Trump ran.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Why the Ukraine War Is Working for Putin",
+   "link": "https://www.wsj.com/opinion/why-the-ukraine-war-is-working-for-putin-2e4c949d",
+   "publishDate": "2026-11-16T22:38:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "The conflict has solidified his hold over Russia while dividing Europe.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "UK needs 'complete system reset' to tackle youth joblessness, government report says",
+   "link": "https://www.reuters.com/world/uk/uk-needs-complete-system-reset-tackle-youth-joblessness-government-report-says-2026-11-16/",
+   "publishDate": "2026-11-16T22:33:15.457000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Britain needs a \"complete system reset\" of welfare benefits and employment support for young people to lower its rate of youth inactivity from one of the highest in Europe, according to a major report which will be published in full on Tuesday.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Avidian Gold Announces Results of Annual General and Special Meeting and Officer Resignation",
+   "link": "https://www.accessnewswire.com/newsroom/en/metals-and-mining/avidian-gold-announces-results-of-annual-general-and-special-meeting-and-officer-1252209",
+   "publishDate": "2026-11-16T22:30:00+00:00",
+   "source": "www.accessnewswire.com",
+   "summary": "Avidian Gold Corp. (\"Avidian\" or the \"Corporation\") (TSXV:AVG) is pleased to announce that all of the resolutions considered at the Corporation's annual general and special meeting of shareholders held on November 13, 2026 (the \"Meeting\") were approved by the Corporation's shareholders. At the Meeting, the Corporation's shareholders approved the following resolutions: electing James Polson, Dino Titaro, Steve Roebuck, Rick Winters, and...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Binance founder breaks silence on Bitcoin crash",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/binance-founder-breaks-silence-bitcoin-223000641.html",
+   "publishDate": "2026-11-16T22:30:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Changpeng Zhao points to ETF outflows, AI-related capital shifts, security concerns and inflation as possible reasons behind Bitcoin’s latest slide.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Expion Energy Reports Third Quarter 2026 Financial and Operational Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/16/3404205/0/en/expion-energy-reports-third-quarter-2026-financial-and-operational-results.html",
+   "publishDate": "2026-11-16T22:27:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Expion Energy Reports Third Quarter 2026 Financial and Operational Results",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Market positioning risks ahead of Nvidia earnings",
+   "link": "https://finance.yahoo.com/markets/options/articles/market-positioning-risks-ahead-nvidia-222619248.html",
+   "publishDate": "2026-11-16T22:26:19+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Investing.com -- Volatility jumped as the tech retreat spread to financials. The S&P 500 (US500) closed at 7,417.12 (-1.91%), and the S&P 500 VIX (VIX) closed at 22.88 (+18.55%), as of 3:59 PM EST and 4:14 PM EST on Nov 16. Bloomberg notes the VVIX, which measures volatility of the VIX itself, rose to about 110. The PHLX Semiconductor (SOX) index fell 5.28% to 9,610.7.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "‘I’m Not a SanDisk Fan. I’m a Micron Fan’: Jim Cramer Picks Sides. Why MU Stock Looks Safer Than SNDK Stock.",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/m-not-sandisk-fan-m-222527730.html",
+   "publishDate": "2026-11-16T22:25:27+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Cramer prefers Micron, with its balance sheet and broader AI exposure make MU stock the safer pick.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Skeena Gold & Silver Reports Q3 2026 Financial Results; Announces Management Appointment",
+   "link": "https://www.globenewswire.com/news-release/2026/11/16/3404204/0/en/skeena-gold-silver-reports-q3-2026-financial-results-announces-management-appointment.html",
+   "publishDate": "2026-11-16T22:23:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "VANCOUVER, British Columbia, Nov. 16, 2026 (GLOBE NEWSWIRE) -- Skeena Resources Limited (TSX: SKE, NYSE: SKE) (“Skeena Gold & Silver”, “Skeena” or the “Company”) reports interim financial results for the quarter ended September 30, 2026. The interim financial statements and management’s discussion and analysis (“MD&A”) are available on Skeena’s website, on SEDAR+ at www.sedarplus.ca and on EDGAR at www.sec.gov.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Berkshire Hathaway raised its stake in Delta in the third quarter. It also trimmed a key bank holding",
+   "link": "https://www.cnbc.com/2026/11/16/berkshire-hathaway-raised-its-stake-in-delta-air-in-the-third-quarter.html",
+   "publishDate": "2026-11-16T22:22:52+00:00",
+   "source": "www.cnbc.com",
+   "summary": "Berkshire Hathaway added to several stock positions in the third quarter while trimming others, including Bank of America.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Luvu Brands (OTCQB: LUVU) Reports First Quarter Fiscal 2027 Results: 10% Net Sales Growth, Wholesale Sales Up 12%",
+   "link": "https://www.accessnewswire.com/newsroom/en/consumer-and-retail-products/luvu-brands-otcqb-luvu-reports-first-quarter-fiscal-2027-results-10-ne-1252179",
+   "publishDate": "2026-11-16T22:22:00+00:00",
+   "source": "www.accessnewswire.com",
+   "summary": "Luvu Brands, Inc. (OTCQB:LUVU), a U.S.-based designer and manufacturer of consumer lifestyle, wellness, and comfort products, today announced financial results for its first fiscal quarter ended September 30, 2026. Net sales increased 10% to $6.78 million, reflecting continued growth in the Company's Wholesale and Direct channels. Gross profit decreased 10.1% to $1.78 million as higher freight and manufacturing labor costs reduced gross margin,...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 Founder Led Stocks To Watch With Up To 83% Revenue Growth",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/3-founder-led-stocks-watch-221041644.html",
+   "publishDate": "2026-11-16T22:10:41+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Central banks are again talking tough on inflation. Former Federal Reserve Vice Chairman Donald Kohn has stressed that keeping rates on hold for too long could carry a higher economic cost than raising them. When borrowing stays expensive and money is no longer easy, management skill and discipline matter more. That is where founder led businesses can shine. This article breaks down three stocks from that group that may be worth a closer look. The three stocks highlighted here offer a...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 Japanese Growth Stocks With At Least 18% Earnings Growth",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/3-japanese-growth-stocks-least-221021927.html",
+   "publishDate": "2026-11-16T22:10:21+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Central banks are again talking tough on inflation, and former Federal Reserve Vice Chairman Donald Kohn has warned that keeping rates on hold for too long could carry a higher cost than raising them. That kind of backdrop often rewards businesses that can grow earnings through different economic conditions. This article looks at three Japanese growth stocks from a quality focused screener that investors are watching closely. The three stocks highlighted here offer a compelling starting point...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "TruGolf Reports Top Third Quarter Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/16/3404195/0/en/trugolf-reports-top-third-quarter-results.html",
+   "publishDate": "2026-11-16T22:10:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Third Quarter Revenue Up 29.4% Year-over-Year to $5.3 Million",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Lumentum (LITE) Got a Takeover Offer. What Does It Mean for Holders? (",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/lumentum-lite-got-takeover-offer-220406453.html",
+   "publishDate": "2026-11-16T22:04:06+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Lumentum (NASDAQ:LITE) took the 10th spot on our latest list, 11 Unstoppable Stocks to Buy According to Analysts. AI stocks had a brutal week. Last Thursday, the S&P 500 fell 4.4%, its biggest one-day drop since the April 2025 tariff shock. The Dow Jones Industrial Average lost more than 1,800 points, and the Nasdaq Composite […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Tower Semiconductor (TSEM) Expects Profit to Outrun Sales. What’s Behind It?",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/tower-semiconductor-tsem-expects-profit-220347110.html",
+   "publishDate": "2026-11-16T22:03:47+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just shared our list of 11 Unstoppable Stocks to Buy According to Analysts, and Tower Semiconductor (NASDAQ:TSEM) is 9th on it. AI stocks had a brutal week. Last Thursday, the S&P 500 fell 4.4%, its biggest one-day drop since the April 2025 tariff shock. The Dow Jones Industrial Average lost more than 1,800 points, […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Ciena (CIEN) Raised Its Forecast After a Record Quarter. What Drove It?",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/ciena-cien-raised-forecast-record-220327219.html",
+   "publishDate": "2026-11-16T22:03:27+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Ciena (NYSE:CIEN) came in 8th on the list of 11 Unstoppable Stocks to Buy According to Analysts that we just published. AI stocks had a brutal week. Last Thursday, the S&P 500 fell 4.4%, its biggest one-day drop since the April 2025 tariff shock. The Dow Jones Industrial Average lost more than 1,800 points, and […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "DigitalOcean (DOCN) Is Growing Faster Than It Has in a Decade. How?",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/digitalocean-docn-growing-faster-decade-220310037.html",
+   "publishDate": "2026-11-16T22:03:10+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "DigitalOcean (NYSE:DOCN) ranks 7th on our newly published list of 11 Unstoppable Stocks to Buy According to Analysts. AI stocks had a brutal week. Last Thursday, the S&P 500 fell 4.4%, its biggest one-day drop since the April 2025 tariff shock. The Dow Jones Industrial Average lost more than 1,800 points, and the Nasdaq Composite […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Morgan Stanley resets S&P 500 target for 2027 as tech stocks slide",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/morgan-stanley-resets-p-500-220300784.html",
+   "publishDate": "2026-11-16T22:03:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The next leg may look very different.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Semtech (SMTC) Is Among Stocks Analysts See Big Upside In. Why?",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/semtech-smtc-among-stocks-analysts-220253352.html",
+   "publishDate": "2026-11-16T22:02:53+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published the list of 11 Unstoppable Stocks to Buy According to Analysts and Semtech (NASDAQ:SMTC) ranks 6th on this list. AI stocks had a brutal week. Last Thursday, the S&P 500 fell 4.4%, its biggest one-day drop since the April 2025 tariff shock. The Dow Jones Industrial Average lost more than 1,800 points, […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "5 Unstoppable Stocks to Buy According to Analysts",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/5-unstoppable-stocks-buy-according-220213130.html",
+   "publishDate": "2026-11-16T22:02:13+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "AI stocks had a brutal week. Last Thursday, the S&P 500 fell 4.4%, its biggest one-day drop since the April 2025 tariff shock. The Dow Jones Industrial Average lost more than 1,800 points, and the Nasdaq Composite tumbled 5.5%. The slide erased the market’s gain from the day before, its best in three months. Stock […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "TRADING DAY AI jitters slam Wall Street",
+   "link": "https://www.reuters.com/commentary/reuters-open-interest/global-markets-trading-day-graphic-2026-11-16/",
+   "publishDate": "2026-11-16T22:00:28.446000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Stocks tumbled on Monday, as Jensen Huang's resignation as Nvidia CEO continued to reverberate and weighed on the outlook for Anthropic's initial public offering later this week. Falling oil prices and bond yields failed to support Wall Street, while the dollar rose again to a fresh 19-month high.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "PowerBank Announces First Quarter Results",
+   "link": "https://www.prnewswire.com/news-releases/powerbank-announces-first-quarter-results-302940952.html",
+   "publishDate": "2026-11-16T22:00:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "IPP Production Delivers 47% Gross Margin; Working Capital Grows to $5.8 Million TORONTO, Nov. 16, 2026 /PRNewswire/ -- PowerBank Corporation (NASDAQ: PBK) (Cboe CA: PBK) (FSE: 103) (\"PowerBank\" or the \"Company\"), a vertically integrated independent North American energy company, reports...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Super League Reports Year-Over-Year Gross Revenue Growth in Third Quarter 2026 in Anticipation of Metaplanet Transaction Closing",
+   "link": "https://www.globenewswire.com/news-release/2026/11/16/3404190/0/en/super-league-reports-year-over-year-gross-revenue-growth-in-third-quarter-2026-in-anticipation-of-metaplanet-transaction-closing.html",
+   "publishDate": "2026-11-16T22:00:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Chairman and CEO Matt Edelman issues letter to stockholders on the pending Metaplanet transaction, third quarter progress and momentum entering Q4 and 2027 Chairman and CEO Matt Edelman issues letter to stockholders on the pending Metaplanet transaction, third quarter progress and momentum entering Q4 and 2027",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Tens of thousands of Americans could see their 2.75% mortgage rate more than double — payments could jump $1,066/month",
+   "link": "https://finance.yahoo.com/real-estate/articles/tens-thousands-americans-could-see-220000212.html",
+   "publishDate": "2026-11-16T22:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "If you bought a home during the pandemic rush for more space, you may be in for a rude awakening.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "SNL joked Jensen Huang ‘had a midlife crisis so bad you might lose your house in his divorce’ — could this be true?",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/snl-joked-jensen-huang-had-220000197.html",
+   "publishDate": "2026-11-16T22:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Saturday Night Live didn't pull any punches with the Jensen Huang controversy.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Panther Minerals Enters U.S. Uranium with Option on the Past-Producing Mesa Top Property in New Mexico's Grants Uranium District",
+   "link": "https://www.accessnewswire.com/newsroom/en/metals-and-mining/panther-minerals-enters-u.s.-uranium-with-option-on-the-past-producing-mesa-top-p-1252174",
+   "publishDate": "2026-11-16T21:55:00+00:00",
+   "source": "www.accessnewswire.com",
+   "summary": "Panther Minerals Inc. (\"Panther\" or the \"Company\") (CSE:PURR)(OTCQB:GLIOF)(FWB:2BC) is pleased to announce that it has entered into an arm's length option agreement dated November 16, 2026 (the \"Agreement\") with Live Energy Minerals Corp. (\"LIVE\") and its wholly-owned subsidiary, Lithium Valley Holdings Corp. (together, the \"Optionor\"), under which Panther may acquire a 100% interest in the Mesa Top uranium property (the \"Property\"). The...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Trump’s accounts traded up to $97.5 million in Nvidia as Huang gained White House access",
+   "link": "https://www.cnbc.com/2026/11/16/trump-nvidia-stock-trades-jensen-huang.html",
+   "publishDate": "2026-11-16T21:52:33+00:00",
+   "source": "www.cnbc.com",
+   "summary": "Trump’s accounts sold up to $1 million in Nvidia stock five days after he was briefed on Jensen Huang’s relationship with a suspected Chinese spy.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Wall Street ends sharply lower on AI jitters ahead of Nvidia results, Anthropic IPO",
+   "link": "https://www.channelnewsasia.com/world/wall-street-ends-sharply-lower-ai-jitters-ahead-nvidia-results-anthropic-ipo-6556786",
+   "publishDate": "2026-11-16T21:49:27+00:00",
+   "source": "www.channelnewsasia.com",
+   "summary": "NEW YORK: A broad selloff dragged US stocks lower on Monday (Nov 16) as fallout from Jensen Huang's resignation as Nvidia CEO soured enthusiasm for AI stocks",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Marc Andreessen says government regulation will save jobs from AI — at the cost of economic growth",
+   "link": "https://finance.yahoo.com/economy/policy/article/marc-andreessen-says-government-regulation-will-save-jobs-from-ai--at-the-cost-of-economic-growth-214918442.html",
+   "publishDate": "2026-11-16T21:49:18+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The venture capitalist says job losses in government-regulated sectors will be insulated from major job losses, but those regulations will limit economic and productivity growth.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "How major US stock indexes fared Monday 11/16/2026",
+   "link": "https://finance.yahoo.com/markets/world-indices/articles/major-us-stock-indexes-fared-214911876.html",
+   "publishDate": "2026-11-16T21:49:11+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Nvidia led another sell-off in technology stocks and helped drag the U. The weakness for tech stocks pulled the Nasdaq composite down 2.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "UK leader Andy Burnham says Brexit hasn’t worked ahead of a reset summit with the EU",
+   "link": "https://apnews.com/article/andy-burnham-lord-mayor-banquet-speech-brexit-073f83b31ac8372ab7835e06a830261b",
+   "publishDate": "2026-11-16T21:46:34+00:00",
+   "source": "apnews.com",
+   "summary": "",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "QUANTUM X AND EVEREST CLOUD PARTNER TO BRING QUANTUM AND AI COMPUTE TO SIX SOUTH ASIAN MARKETS",
+   "link": "https://www.prnewswire.com/news-releases/quantum-x-and-everest-cloud-partner-to-bring-quantum-and-ai-compute-to-six-south-asian-markets-302941069.html",
+   "publishDate": "2026-11-16T21:46:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "Channel partnership MOU gives EntangleX a route to banks, telecom operators, universities and data centers in Nepal, India, Bangladesh, Bhutan, Sri Lanka and the Maldives, backed by a growing operating revenue base LOCUST VALLEY, N.Y., Nov. 16, 2026 /PRNewswire/ -- Quantum X, Inc. (OTC:...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Robert Pattinson Is the New 007. That’s Bad News for Skydance Stock and Good News for the Film Industry.",
+   "link": "https://finance.yahoo.com/media-advertising/articles/robert-pattinson-007-bad-news-214331396.html",
+   "publishDate": "2026-11-16T21:43:31+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "After years of speculation, Amazon has chosen Robert Pattinson as its next James Bond. Amazon MGM Studios announced the casting on Monday, making Pattinson the seventh 007 and the first since Amazon took over the franchise.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Houthi rebel advance in Yemen may further destabilise global economy",
+   "link": "https://www.bbc.co.uk/news/articles/cmy97qperq9eo",
+   "publishDate": "2026-11-16T21:40:07+00:00",
+   "source": "www.bbc.co.uk",
+   "summary": "The Iran-backed Houthis are gaining ground and their advance could have dangerous consequences, writes the BBC's security correspondent.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Evolution Metals & Technologies Corp. Reports Third Quarter 2026 Financial Results and Provides Corporate Update",
+   "link": "https://www.globenewswire.com/news-release/2026/11/16/3404172/0/en/evolution-metals-technologies-corp-reports-third-quarter-2026-financial-results-and-provides-corporate-update.html",
+   "publishDate": "2026-11-16T21:38:06+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "All 57 containers of additional ULVAC sintered magnet production equipment delivered to Pohang facility, ahead of the January 1, 2027 DFARS deadline, with commissioning under way to support planned expansion toward targeted 10,000 metric tons of annual rare earth magnet production capacity and targeted 14,000 metric tons of annual strip alloy mid-stream magnet material production capacity",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "AI Stocks Resume Their Slide",
+   "link": "https://www.wsj.com/finance/stocks/ai-stocks-resume-their-slide-1094403c",
+   "publishDate": "2026-11-16T21:38:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "Plus, the Fed weighs AI jobs scenarios and Tyson improves its beef outlook",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Family-owned Iowa bank steals a page from its forerunner",
+   "link": "https://finance.yahoo.com/small-business/articles/family-owned-iowa-bank-steals-213638268.html",
+   "publishDate": "2026-11-16T21:36:38+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Capra Bank's focus on commercial cards echoes the strategy of Heartland Financial, the company Capra CEO Lynn Fuller's grandfather founded in the early 1980s.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Stock Indexes Settle Sharply Lower on Big Tech Drubbing",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/stock-indexes-settle-sharply-lower-213616523.html",
+   "publishDate": "2026-11-16T21:36:16+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The S&P 500 Index ($SPX ) (SPY ) closed down -1.92% on Monday, the Dow Jones Industrial Average ($DOWI ) (DIA ) closed down -1.41%, and the Nasdaq 100 Index ($IUXX ) (QQQ ) closed down -2.67%. December E-mini S&P futures (ESZ26 ) fell -1.91%, and December E-mini Nasdaq futures...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Top Chamber of Commerce official says the midterms weren’t just about prices: They were about 20 years of 2% growth",
+   "link": "https://finance.yahoo.com/economy/policy/articles/top-chamber-commerce-official-says-213241558.html",
+   "publishDate": "2026-11-16T21:32:41+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Neil Bradley warned Washington against “the easy button” of rate caps and price controls. His growth math holds up; his fix is another matter.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Hydrofarm Announces Third Quarter 2026 Results and Subsequent Elimination of Term Loan",
+   "link": "https://www.globenewswire.com/news-release/2026/11/16/3404168/0/en/hydrofarm-announces-third-quarter-2026-results-and-subsequent-elimination-of-term-loan.html",
+   "publishDate": "2026-11-16T21:32:06+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Hydrofarm Announces Third Quarter 2026 Results and Subsequent Satisfaction of Term Loan",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "U.S. Stocks Extend Slide on Nvidia, China Fears",
+   "link": "https://www.wsj.com/finance/stocks/u-s-stocks-extend-slide-on-nvidia-china-fears-ea169587",
+   "publishDate": "2026-11-16T21:31:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "U.S. stocks fell sharply, with the S&P 500 suffering its third straight decline and its sharpest since Nvidia’s CEO resigned last week.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "CPI Aerostructures Reports Third Quarter and Nine Month 2026 Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/16/3404165/0/en/cpi-aerostructures-reports-third-quarter-and-nine-month-2026-results.html",
+   "publishDate": "2026-11-16T21:30:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Third Quarter 2026 vs. Third Quarter 2025",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Toppoint Holdings Inc. Reports Third Quarter 2026 Financial Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/16/3404162/0/en/toppoint-holdings-inc-reports-third-quarter-2026-financial-results.html",
+   "publishDate": "2026-11-16T21:30:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Nine-Month Revenue of $13.3 Million, Up 8.1%; Third Quarter Revenue of $4.5 Million; Trading in Common Stock Currently Halted",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Miami-Dade Home Sales Continue to Outpace Last Year",
+   "link": "https://www.prnewswire.com/news-releases/miami-dade-home-sales-continue-to-outpace-last-year-302940989.html",
+   "publishDate": "2026-11-16T21:20:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "MIAMI, Nov. 16, 2026 /PRNewswire/ -- Miami-Dade County's housing market continues to build on last year's activity, with sales of single-family homes and condominiums both posting gains through October, according to October 2026 statistics released today by MIAMI REALTORS® + RWorld. Total...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Greenlane Reports Third Quarter 2026 Financial Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/16/3404150/0/en/greenlane-reports-third-quarter-2026-financial-results.html",
+   "publishDate": "2026-11-16T21:20:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Greenlane Holdings, Inc. (Nasdaq: GNLN) reports its financial results for the third quarter ended September 30, 2026.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Con Edison Announces Common Share Offering with a Forward Component",
+   "link": "https://www.prnewswire.com/news-releases/con-edison-announces-common-share-offering-with-a-forward-component-302941041.html",
+   "publishDate": "2026-11-16T21:18:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "NEW YORK, Nov. 16, 2026 /PRNewswire/ -- Consolidated Edison, Inc. (Con Edison) (NYSE: ED) today announced the public offering of 6,000,000 of its common shares. In connection with the forward sale agreement described below, the forward counterparty (as defined below) has agreed to borrow...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Aena (BME:AENA) Stock May Be Fully Priced For Earnings Expectations",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/aena-bme-aena-stock-may-211720514.html",
+   "publishDate": "2026-11-16T21:17:20+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Aena S.M.E has delivered a powerful recovery story on the market, and that kind of share price strength naturally raises a question about whether its current valuation is adequately supported by its earnings. With the stock now well above levels from several years ago, the key issue for investors is how much of the underlying profit story is already reflected in the price. Over the past 5 years, Aena S.M.E has returned 144.8%, which puts real pressure on the current earnings base to justify...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Top 3 Growth Stocks To Watch In November 2026",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/top-3-growth-stocks-watch-211558743.html",
+   "publishDate": "2026-11-16T21:15:58+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Higher US inflation has kept Treasury yields elevated, which has made some risk assets less appealing and pushed investors to be more selective. That backdrop puts extra focus on companies that analysts expect to grow earnings strongly while still keeping their finances in reasonable shape. This article walks through three such high growth candidates from the US market and explains why each one could deserve a closer look now. The three stocks highlighted here offer a compelling starting...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Dave Files Application to Establish Dave Bank, N.A.",
+   "link": "https://www.globenewswire.com/news-release/2026/11/16/3404145/0/en/dave-files-application-to-establish-dave-bank-n-a.html",
+   "publishDate": "2026-11-16T21:15:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Proposed full-service national bank charter would allow Dave to offer deposit and credit products directly to members",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 Australian Hidden Gem Stocks For November 2026",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/3-australian-hidden-gem-stocks-211332567.html",
+   "publishDate": "2026-11-16T21:13:32+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Artificial intelligence is suddenly under a harsher spotlight, with Nvidia’s leadership scandal and fresh scrutiny of advanced chips feeding a broad tech sell-off in Asia. When headline favourites are wobbling, smaller Australian companies with solid balance sheets and disciplined execution often get ignored. That neglect can create attractive entry points. This article highlights three high quality local under the radar stocks drawn from a strict quality screener. The three stocks below are...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Third US aircraft carrier brings thousands more troops to Middle East",
+   "link": "https://www.theguardian.com/us-news/2026/nov/16/aircraft-middle-east-trump-military",
+   "publishDate": "2026-11-16T21:13:02+00:00",
+   "source": "www.theguardian.com",
+   "summary": "The US president oscillates between strike threats on Iran and insisting the war ‘militarily is effectively over’A third US aircraft carrier has arrived in the Middle East, US Central Command said in a social media post on Monday, making a dramatic show of military might as Donald Trump keeps his options open for next steps in the Iran war.The USS Theodore Roosevelt brings thousands of additional troops to the Middle East as Trump has oscillated between threatening additional large-scale strikes on Iran and insisting that the more than 8-month-old war “militarily is effectively over”. Continue reading...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Voltus Acquires Stem’s Athena Platform to Enable Battery Partners to Extract More Value from their Assets",
+   "link": "https://www.globenewswire.com/news-release/2026/11/16/3404135/0/en/voltus-acquires-stem-s-athena-platform-to-enable-battery-partners-to-extract-more-value-from-their-assets.html",
+   "publishDate": "2026-11-16T21:10:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Acquisition bolsters Voltus’s battery capabilities from siting to market integration and optimization Acquisition bolsters Voltus’s battery capabilities from siting to market integration and optimization",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Nasdaq Falls 626 Points to Start Nvidia-Anthropic Week: Stock Market Today",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/nasdaq-falls-626-points-start-210942321.html",
+   "publishDate": "2026-11-16T21:09:42+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "It's no exaggeration to say this is the biggest week of the year for the stock market, and the beginning of it was inauspicious, at best.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "The Xi-Trump summit has high stakes for toy stocks",
+   "link": "https://seekingalpha.com/news/4673269-the-xi-trump-summit-has-high-stakes-for-toy-stocks",
+   "publishDate": "2026-11-16T21:07:29+00:00",
+   "source": "seekingalpha.com",
+   "summary": "Analyst sees Hasbro, Mattel and JAKKS Pacific as trade-summit plays: progress could ease tariff pressure for $9.8B of toys before the Jan.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Getty Images Reports Third Quarter 2026 Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/16/3404130/0/en/getty-images-reports-third-quarter-2026-results.html",
+   "publishDate": "2026-11-16T21:07:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "NEW YORK, Nov. 16, 2026 (GLOBE NEWSWIRE) -- Getty Images Holdings, Inc. (“Getty Images” or the “Company”) (OTCPK: GETYQ), the preeminent source of visual content and coverage, today reported financial results for the third quarter ended September 30, 2026.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Flyte Aviation Reports Record Third Quarter 2026 Aviation Revenue Increasing 145% Sequentially",
+   "link": "https://www.prnewswire.com/news-releases/flyte-aviation-reports-record-third-quarter-2026-aviation-revenue-increasing-145-sequentially-302941012.html",
+   "publishDate": "2026-11-16T21:05:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "Flight Hours Surge 129% Sequentially; Flyte Fleet Fulfills More Than 99% of Customer Flights Three Additional Jets Expected to Begin Revenue Service in Q4, Expanding Fleet Capacity to Meet Growing Demand AI-Powered Operations, Digital Booking and International Expansion Position Flyte for...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Zeo Energy Reports Over 10% Revenue Growth and $1.3 Million Net Income in Third Quarter 2026",
+   "link": "https://www.globenewswire.com/news-release/2026/11/16/3404095/0/en/zeo-energy-reports-over-10-revenue-growth-and-1-3-million-net-income-in-third-quarter-2026.html",
+   "publishDate": "2026-11-16T21:05:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Quarterly revenue increased 63% sequentially from second quarter 2026 to $26.4 million",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Connect Biopharma Reports Third Quarter 2026 Financial Results and Provides Business Update",
+   "link": "https://www.globenewswire.com/news-release/2026/11/16/3404101/0/en/connect-biopharma-reports-third-quarter-2026-financial-results-and-provides-business-update.html",
+   "publishDate": "2026-11-16T21:05:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "– Reported positive preliminary topline data from global Phase 2 Seabreeze STAT studies evaluating rademikibart as an adjunct treatment for acute exacerbations of asthma and chronic obstructive pulmonary disease (COPD) –",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "GoPro Announces Third Quarter Results",
+   "link": "https://www.prnewswire.com/news-releases/gopro-announces-third-quarter-results-302941004.html",
+   "publishDate": "2026-11-16T21:05:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "Revenue of $96 million Subscription and Service Revenue of $27 million Proposed Merger with Starman Optical on Track SAN MATEO, Calif., Nov. 16, 2026 /PRNewswire/ -- GoPro, Inc. (Nasdaq: GPRO) announced financial results for its third quarter ended September 30, 2026. In light of the...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "BranchOut Food Reports Third Quarter 2026 Financial Results, Reaffirms Record Fourth Quarter Outlook and Targets 2027 Revenue of More Than $30 Million",
+   "link": "https://www.globenewswire.com/news-release/2026/11/16/3404105/0/en/branchout-food-reports-third-quarter-2026-financial-results-reaffirms-record-fourth-quarter-outlook-and-targets-2027-revenue-of-more-than-30-million.html",
+   "publishDate": "2026-11-16T21:05:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "BEND, Ore., Nov. 16, 2026 (GLOBE NEWSWIRE) -- BranchOut Food Inc. (Nasdaq: BOF) (\"BranchOut\" or the \"Company\"), a food technology company producing fruit, vegetable, and dairy-based snacks and ingredients through its REV dehydration technology, today reported financial results for the third quarter ended September 30, 2026.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Powell Industries Announces Fourth Quarter and Full Year Fiscal 2026 Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/16/3404107/0/en/powell-industries-announces-fourth-quarter-and-full-year-fiscal-2026-results.html",
+   "publishDate": "2026-11-16T21:05:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "HOUSTON, Nov. 16, 2026 (GLOBE NEWSWIRE) -- Powell Industries, Inc. (NASDAQ: POWL) (“Powell” or the “Company”), a leading supplier of custom-engineered solutions for the management, control and distribution of electrical energy, today announced results for the fourth quarter and full year Fiscal 2026 ended September 30, 2026. All comparisons are to the comparable period of Fiscal 2025, unless otherwise noted. Fourth Quarter Key Highlights:",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "LeonaBio Reports Third Quarter 2026 Financial Results and Provides Business Update",
+   "link": "https://www.globenewswire.com/news-release/2026/11/16/3404108/0/en/leonabio-reports-third-quarter-2026-financial-results-and-provides-business-update.html",
+   "publishDate": "2026-11-16T21:05:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "On Track to Complete Enrollment of Phase 3 ELAINE-3 Clinical Trial of Lasofoxifene in ER-positive (ER+), HER2-negative, ESR1-mutated Metastatic Breast Cancer in 4Q 2026 with Topline Data Expected in 2H 2027 On Track to Complete Enrollment of Phase 3 ELAINE-3 Clinical Trial of Lasofoxifene in ER-positive (ER+), HER2-negative, ESR1-mutated Metastatic Breast Cancer in 4Q 2026 with Topline Data Expected in 2H 2027",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Workhorse Group Reports Third Quarter 2026 Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/16/3404115/0/en/workhorse-group-reports-third-quarter-2026-results.html",
+   "publishDate": "2026-11-16T21:05:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "DETROIT, Nov. 16, 2026 (GLOBE NEWSWIRE) -- Workhorse Group Inc. (NASDAQ: WKHS) (\"Workhorse\" or the \"Company\"), an American Industrial Technology company, today reported financial results for the third quarter ended September 30, 2026 and provided a business update.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "CTO Realty Growth Declares Dividends for the Fourth Quarter 2026",
+   "link": "https://www.globenewswire.com/news-release/2026/11/16/3404098/0/en/cto-realty-growth-declares-dividends-for-the-fourth-quarter-2026.html",
+   "publishDate": "2026-11-16T21:05:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "WINTER PARK, Fla., Nov. 16, 2026 (GLOBE NEWSWIRE) -- CTO Realty Growth, Inc. (NYSE: CTO) (the “Company” or “CTO”) announced today that its Board of Directors has authorized, and the Company has declared, a quarterly cash dividend of $0.38 per share of common stock for the fourth quarter of 2026 (the “Common Stock Cash Dividend”). The Common Stock Cash Dividend represents an annualized yield of approximately 7.5% based on the closing price of the Company’s common stock on November 13, 2026.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Alpine Income Property Trust Declares Dividends for the Fourth Quarter 2026",
+   "link": "https://www.globenewswire.com/news-release/2026/11/16/3404094/0/en/alpine-income-property-trust-declares-dividends-for-the-fourth-quarter-2026.html",
+   "publishDate": "2026-11-16T21:05:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "WINTER PARK, Fla., Nov. 16, 2026 (GLOBE NEWSWIRE) -- Alpine Income Property Trust, Inc. (NYSE: PINE) (the “Company”) announced today that its Board of Directors has authorized, and the Company has declared, a quarterly cash dividend of $0.32 per share of common stock for the fourth quarter of 2026 (the “Common Stock Cash Dividend”). The Common Stock Cash Dividend represents an annualized yield of approximately 7.6% based on the closing price of the Company’s common stock on November 13, 2026.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Virtuix Holdings Inc (VTIX) (Q2 2027) Earnings Call Highlights: OmniOne Revenue Doubles as ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/virtuix-holdings-inc-vtix-q2-210125633.html",
+   "publishDate": "2026-11-16T21:01:25+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Virtuix Holdings Inc (VTIX) posted 105% OmniOne revenue growth and a proposed STS International acquisition, even as widening losses and shrinking cash underscore its path-to-profitability challenge.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Toyo Co Ltd (TOYO) Q3 2026 Earnings Call Highlights: Revenue Jumps 57% as Texas Expansion ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/toyo-co-ltd-toyo-q3-210122225.html",
+   "publishDate": "2026-11-16T21:01:22+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Toyo Co Ltd (TOYO) posted strong top-line growth and secured $240 million in U.S. supply agreements, though margin pressure and trade uncertainties cloud the outlook.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Tech Stocks Wipe Out $960 Billion as Washington Shuts China's AI Chip Back Door in 5 Countries",
+   "link": "https://www.benzinga.com/markets/equities/26/11/63320949/tech-stocks-960-billion-china-ai-chips-remote-access-rule",
+   "publishDate": "2026-11-16T20:52:48.281000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Nvidia and chip stocks fall as a new US rule requires licenses for AI chips in Singapore, Malaysia, Thailand, Indonesia and Brazil. SMH drops 4.7%.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Warsh says Fed examining whether AI will boost or jolt US economy",
+   "link": "https://finance.yahoo.com/economy/policy/articles/warsh-says-fed-examining-whether-204627897.html",
+   "publishDate": "2026-11-16T20:46:27+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "“Will adversaries race to deploy SI, intending to do harm to our economy?” Federal Reserve Chairman Kevin Warsh asked, referring to “super intelligence,’ a synonym for AI.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Fed’s Hammack backs gradual rate hikes, flags risk of bigger moves - Bloomberg TV",
+   "link": "https://finance.yahoo.com/economy/policy/articles/fed-hammack-backs-gradual-rate-204232082.html",
+   "publishDate": "2026-11-16T20:42:32+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Investing.com -- Federal Reserve Bank of Cleveland President Beth Hammack reiterated her preference for gradual, consecutive interest rate increases to contain broadening inflationary pressures across the U.S. economy. Speaking in an interview on Bloomberg Television, Hammack emphasized that restoring policy restriction in measured steps remains her favored path toward returning inflation to the central bank's 2% target.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Tom Lee Blames Nvidia and Anthropic IPO for Ethereum Plunge as Bitmine Buys the Dip",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/tom-lee-blames-nvidia-anthropic-203603583.html",
+   "publishDate": "2026-11-16T20:36:03+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The firm’s stash fell to $11.8 billion from $14.3 billion a week earlier as ETH slid 28% in two weeks, a “waterfall” drop chairman Tom Lee blames on Nvidia fallout and cash-raising ahead of Anthropic’s IPO.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Dollar Supported by Weak Stocks and Fed Tightening Prospects",
+   "link": "https://finance.yahoo.com/markets/currencies/articles/dollar-supported-weak-stocks-fed-203449029.html",
+   "publishDate": "2026-11-16T20:34:49+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The dollar index (DXY00 ) climbed to a fresh 1.5-year high on Monday, finishing up +0.13%. The dollar rose Monday amid a stock slump, which boosted demand for dollar liquidity. The dollar also has carryover support from last Friday, when several Fed members expressed their support for additional Fed tightening....",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Bitcoin’s 14% crash spooks crypto investors into extreme fear",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-14-crash-spooks-crypto-203000528.html",
+   "publishDate": "2026-11-16T20:30:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Crypto sentiment hits extreme fear after Bitcoin’s sharp slide, with some traders pointing at Anthropic’s upcoming IPO.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Replace, Don’t Repair, the Air-Traffic Control System",
+   "link": "https://www.wsj.com/opinion/replace-dont-repair-the-air-traffic-control-system-b25c6d8d",
+   "publishDate": "2026-11-16T20:29:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "Congress should start from scratch and allow one year to design a new state-of-the-art system.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Applied Optoelectronics Stock Sinks Amid AI Outlook Fears",
+   "link": "https://www.benzinga.com/trading-ideas/movers/26/11/63319155/applied-optoelectronics-stock-sinks-amid-ai-outlook-fears",
+   "publishDate": "2026-11-16T20:28:11.037000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Applied Optoelectronics is plunging Monday as AI funding concerns, Nvidia uncertainty and Fed rate-hike fears weigh on fiber-optic stocks.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Tenax Aerospace Merger with Air Industries Creates Unique Bet on Defense-Tech Boom",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/tenax-aerospace-merger-air-industries-202724134.html",
+   "publishDate": "2026-11-16T20:27:24+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Tenax Aerospace to go public through a reverse merger with Air Industries Group (NYSE American: AIRI) Air Industries shareholders are scheduled to vote Nov. 18 on proposals needed to complete […]",
+   "sentiment": null,
+   "confidence": null
+  }
+ ]
+}
