@@ -1,0 +1,911 @@
+{
+ "session": "2026-11-18",
+ "fetched_at_et": "2026-11-18T07:30:19",
+ "query": "(Fed OR \"Federal Reserve\" OR inflation OR CPI OR jobs OR tariff OR tariffs OR war OR Treasury OR shutdown) AND (stocks OR markets OR economy)",
+ "window_from": "2026-11-17T16:00:00",
+ "window_to": "2026-11-18T07:30:19.483602",
+ "page_size": 100,
+ "n": 100,
+ "articles": [
+  {
+   "title": "Billionaire Paul Tudor Jones doubles stake in BlackRock's Bitcoin ETF",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/billionaire-paul-tudor-jones-doubles-002450666.html",
+   "publishDate": "2026-11-18T00:24:50+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Billionaire Paul Tudor Jones’ fund boosted stake in IBIT by 98% in Q3.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Gilt Yields Fall After U.K. Services Inflation Undershoots BOE Forecast",
+   "link": "https://www.wsj.com/finance/jgbs-edge-lower-ahead-of-20-year-auction-91707090",
+   "publishDate": "2026-11-18T00:24:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "Yields on U.K. government bonds declined after U.K. data showed services inflation came in below the Bank of England’s forecast.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "How Investors Are Reacting To RTX (RTX) Third Rocket Test Success",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/investors-reacting-rtx-rtx-third-002310669.html",
+   "publishDate": "2026-11-18T00:23:10+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "RTX, through its Raytheon segment, recently completed a third successful flight test of the DeepStrike JR3 rocket for the U.S. Army's Joint Reduced Range Rocket program, showcasing rapid multi round firing, reusable launch pod containers and visible training mark capability at Yuma Proving Ground. The DeepStrike JR3 effort highlights how RTX is leaning on a broad mix of traditional and non traditional suppliers, as well as government facilities, to support cost efficient production of a 24...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Micron Technology (MU) Keeps DRAM Price Fixing Lawsuit Alive After Judge Rejection",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/micron-technology-mu-keeps-dram-001843894.html",
+   "publishDate": "2026-11-18T00:18:43+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Micron Technology (NasdaqGS:MU), Samsung, and SK Hynix failed to convince a U.S. judge to dismiss a DRAM price fixing class action. The ruling keeps alive allegations that the chipmakers coordinated DRAM production cuts and product shifts to support higher prices. The lawsuit covers buyers of DRAM memory chips in the U.S. and claims harm from allegedly inflated prices across multiple years. This refusal to dismiss the alleged DRAM price fixing case is an important factor to weigh alongside...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 Regional Bank Stocks For Higher Rates In The US",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/3-regional-bank-stocks-higher-001755941.html",
+   "publishDate": "2026-11-18T00:17:55+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "When a Federal Reserve official talks about “soon” rate hikes and a higher path for borrowing costs through 2027, the ripple effects can reshape which stocks quietly gain an edge. Rising real yields can reward some balance sheets while putting others under strain, so sitting on the sidelines can mean missing that shift. This article breaks down three large-cap U.S. financial stocks exposed to this rate story and explains how the same macro shock can create very different setups for...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "TOYO (TOYO) Q3 Results Reveal A Sharp Margin Squeeze",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/toyo-toyo-q3-results-reveal-001700651.html",
+   "publishDate": "2026-11-18T00:17:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "TOYO just slipped 0.5% to about US$4.21, a muted reaction for a solar manufacturer that reported a sharp profit squeeze in its Q3 2026 release. Net income for the quarter came in at US$4.3 million on US$129.0 million of sales, far below the much stronger earnings earlier in the year even as nine month revenue and profit remain solid. Short term traders see a tired chart. Long term holders are weighing a business that still posts healthy year to date margins while absorbing a hit to quarterly...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Costco (COST) Stock Fair Value Edges Higher As AI Rollout Expands And Lawsuits Emerge",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/costco-cost-stock-fair-value-001518698.html",
+   "publishDate": "2026-11-18T00:15:18+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The analyst fair value estimate for Costco Wholesale has shifted from US$1,057.94 to US$1,080.76, giving readers an updated anchor for thinking about the stock. That change sits against a backdrop of Costco Wholesale expanding its use of AI across pharmacy and fuel operations and facing proposed class action lawsuits over how tariff related refunds were handled for members. As you read on, you will see how these moving pieces feed into the evolving analyst narrative and what to watch...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Wednesday's big stock stories: What’s likely to move the market in the next trading session",
+   "link": "https://www.cnbc.com/2026/11/17/wednesdays-big-stock-stories-whats-likely-to-move-the-market.html",
+   "publishDate": "2026-11-18T00:09:24+00:00",
+   "source": "www.cnbc.com",
+   "summary": "The S&P 500 extended its losing run to four sessions on Tuesday, as the broad market index posted its lowest closing level since late July.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Jim Cramer Warns the Anthropic IPO Windfall Is Going to the Super Rich. Here’s the Backlash He Sees Coming",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-warns-anthropic-ipo-000732494.html",
+   "publishDate": "2026-11-18T00:07:32+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "By the time Anthropic rings the opening bell, the biggest gains may already be spoken for. Jim Cramer sees a political reckoning forming, and the tax ideas he fears could reach well beyond the insiders who cashed in.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Japan exports in October surge 20.5%, beating estimates on robust chip shipments",
+   "link": "https://www.cnbc.com/2026/11/18/japan-exports-october-imports-chips.html",
+   "publishDate": "2026-11-18T00:06:25+00:00",
+   "source": "www.cnbc.com",
+   "summary": "Semiconductor shipments spiked almost 50% year on year.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Stripe backer Atomico calls for Europe to own its success stories",
+   "link": "https://finance.yahoo.com/technology/articles/stripe-backer-atomico-calls-europe-000100087.html",
+   "publishDate": "2026-11-18T00:01:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Europe is home to many of the world's fastest growing companies of all time, veteran VC firm Atomico highlighted in its latest annual State of European Tech report.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Europe’s LNG Scramble Sends Shockwaves Through Asian Gas Markets",
+   "link": "https://finance.yahoo.com/energy/articles/europe-lng-scramble-sends-shockwaves-000000213.html",
+   "publishDate": "2026-11-18T00:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Europe’s depleted gas inventories and disrupted Qatari LNG supplies are intensifying competition for cargoes, driving up global prices and threatening winter energy security.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Contained U.K. Inflationary Pressures Could Support Growth, Sterling",
+   "link": "https://www.wsj.com/finance/currencies/asian-currencies-consolidate-but-may-be-weighed-by-risk-off-sentiment-d2acd03c",
+   "publishDate": "2026-11-17T23:55:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "The dollar was weaker against the dollar. MUFG said contained inflationary pressures that allow the BOE to hike only modestly could help provide further support for growth for the pound.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Five takeaways from Trump’s Asia tour: cabinet feuds, Rubio love and a Kim Jong Un curveball",
+   "link": "https://www.reuters.com/world/us/five-takeaways-trumps-asia-tour-cabinet-feuds-rubio-love-kim-jong-un-curveball-2026-11-17/",
+   "publishDate": "2026-11-17T23:49:04.523000+00:00",
+   "source": "www.reuters.com",
+   "summary": "US President Donald Trump is in Asia this week for talks with foreign leaders in Manila, followed by a visit to China to meet President Xi Jinping, Russian President Vladimir Putin and possibly the elusive North Korean leader Kim Jong Un.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Nvidia is abandoning China after Jensen Huang’s ouster",
+   "link": "https://finance.yahoo.com/technology/ai/articles/nvidia-abandoning-china-jensen-huang-233748229.html",
+   "publishDate": "2026-11-17T23:37:48+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Nvidia's interim CEO says the company is done selling chips to China. How much will that cost?",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "5 Best IT Services Stocks to Buy Now",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/5-best-services-stocks-buy-232236928.html",
+   "publishDate": "2026-11-17T23:22:36+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "For much of 2026, IT services was among the least favored segments of the market. In mid-2026, Wall Street went bearish on some of the traditional names amid fears of advanced data analysis solutions and generative AI coding carrying the potential to curtail billable hours that corporate clients pay for. The broader sentiment took a […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "What Grupo México Shareholders Got Right",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/grupo-m-xico-shareholders-got-231718862.html",
+   "publishDate": "2026-11-17T23:17:18+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "If Grupo México. de sat on your watchlist instead of in your portfolio, the past year may feel like a missed call. For Grupo México. de shareholders, the return over the past year was 46.8%, including dividends. That result lands against a backdrop where bullish and bearish analysts were already split on whether copper expansion, margin gains and a rich P/E were realistic. If electrification driven copper demand was the key bet, what clues were on record before that thesis seemed to work? A...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Bank Leumi Le-Israel BM (BLMIF) (Q3 2026) Earnings Call Highlights: Record Israeli Bank Profit ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/bank-leumi-le-israel-bm-230041867.html",
+   "publishDate": "2026-11-17T23:00:41+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Bank Leumi Le-Israel BM (BLMIF) posted its highest-ever quarterly net income, a 16.9% ROE and a 26% cost-to-income ratio, while loan growth of 12.7% year-to-date outpaced its annual target.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Abits Group Signs Letter of Intent to Acquire Boston Solar, Advancing Vertically Integrated AI Infrastructure Strategy",
+   "link": "https://www.accessnewswire.com/newsroom/en/metals-and-mining/abits-group-signs-letter-of-intent-to-acquire-boston-solar-advancing-vertically-i-1253224",
+   "publishDate": "2026-11-17T23:00:00+00:00",
+   "source": "www.accessnewswire.com",
+   "summary": "Abits Group Inc. (Nasdaq:ABTS) (\"Abits\" or the \"Company\"), a U.S.-focused digital infrastructure company, today announced that it has signed a nonbinding letter of intent to acquire 100% of The Boston Solar Company LLC (\"Boston Solar\"), an established solar energy company. The proposed acquisition would advance Abits' strategy to vertically integrate its energy and digital infrastructure operations by adding solar engineering and installation...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "John Malkovich says Bernie Madoff took ‘pretty much everything I’d ever made.’ Victims got back 75 cents on the dollar",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/john-malkovich-says-bernie-madoff-230000777.html",
+   "publishDate": "2026-11-17T23:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Malkovich said he eventually accepted what had happened and stopped dwelling on the money he’d lost.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "The InterGroup Corporation Reports First Quarter Fiscal 2027 Results; Pedestrian Bridge Removed and Hotel Reopened Following City-Mandated Closure",
+   "link": "https://www.globenewswire.com/news-release/2026/11/17/3405303/0/en/the-intergroup-corporation-reports-first-quarter-fiscal-2027-results-pedestrian-bridge-removed-and-hotel-reopened-following-city-mandated-closure.html",
+   "publishDate": "2026-11-17T22:58:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Los Angeles, California, Nov. 17, 2026 (GLOBE NEWSWIRE) -- The InterGroup Corporation (NASDAQ: INTG) (the “Company” or “InterGroup”) announced results for the three months ended September 30, 2026, the first quarter of fiscal 2027. InterGroup reports three business segments: Hotel Operations through its approximately 75.9%-owned subsidiary Portsmouth Square, Inc. (“Portsmouth”), Real Estate Operations and Investment Transactions. The period included the City-mandated closure of Portsmouth’s Hilton San Francisco Financial District hotel (the “Hotel”) in connection with the removal of the pedestrian bridge to Portsmouth Square park.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Portsmouth Square, Inc. Reports First Quarter Fiscal 2027 Results; Pedestrian Bridge Removal Complete and Hotel Reopened After City-Mandated Closure",
+   "link": "https://www.globenewswire.com/news-release/2026/11/17/3405302/0/en/portsmouth-square-inc-reports-first-quarter-fiscal-2027-results-pedestrian-bridge-removal-complete-and-hotel-reopened-after-city-mandated-closure.html",
+   "publishDate": "2026-11-17T22:53:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Los Angeles, California, Nov. 17, 2026 (GLOBE NEWSWIRE) -- Portsmouth Square, Inc. (the “Company” or “Portsmouth”) announced financial results for the three months ended September 30, 2026, the first quarter of fiscal 2027. Portsmouth operates in two reportable segments: Hotel Operations and Investment Transactions. The quarter was affected by a ten-day City-mandated shutdown of its Hilton San Francisco Financial District hotel (the “Hotel”) for removal of the pedestrian bridge connecting the Hotel to Portsmouth Square park. The Hotel reopened on August 10, 2026.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Bill Ackman’s $14 billion bet beyond the Magnificent 7",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/bill-ackman-14-billion-bet-223300029.html",
+   "publishDate": "2026-11-17T22:33:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Pershing Square cut back on Microsoft and Meta. Its fresh money went to exchanges, eye care and streaming instead.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Vitalist Reports Second Quarter 2027 Financial Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/17/3405247/0/en/vitalist-reports-second-quarter-2027-financial-results.html",
+   "publishDate": "2026-11-17T22:15:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Vitalist Reports Second Quarter 2027 Financial Results",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Top 3 Australian Penny Stocks To Watch In November 2026",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/top-3-australian-penny-stocks-221138460.html",
+   "publishDate": "2026-11-17T22:11:38+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "AI is forcing central banks to rethink how productivity, employment, and inflation might behave, and that kind of reset can shine a light on smaller, overlooked Australian companies. When big investors argue over interest rates and policy, early stage businesses with healthier finances can sometimes be mispriced. This piece walks through three financially solid penny stocks that screen for resilience first, then potential, so you can decide whether they deserve a spot on your watchlist. The...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Arista Networks And 2 Other High Growth Stocks To Watch",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/arista-networks-2-other-high-220937929.html",
+   "publishDate": "2026-11-17T22:09:37+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The Fed is openly wrestling with what artificial intelligence might do to productivity, jobs and inflation, which puts fast growing, financially solid companies in the spotlight. If AI and automation reshape costs and demand, businesses that can grow earnings while keeping their balance sheets healthy become harder to ignore. This article walks through three such high potential stocks from our screen so you can decide which, if any, deserve a closer look. The three stocks highlighted here...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Earnings Beat Might Change The Bull Case For Disney Stock (DIS)",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/earnings-beat-might-change-bull-220808498.html",
+   "publishDate": "2026-11-17T22:08:08+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Walt Disney reported past fiscal Q4 and full year 2026 results with US$25.95b in quarterly sales, US$2.61b in quarterly net income, full year revenue of US$102.34b and full year net income of US$9.90b. The Board also decided to raise the annual dividend to US$2.00 per share, 33% above the US$1.50 paid for fiscal 2026. The combination of stronger quarterly earnings, a higher dividend and a planned US$3b annual cost saving program through job cuts and efficiencies signals that Disney is trying...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Trading Day: AI trade unwind continues, but Nvidia beats",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/trading-day-ai-trade-unwind-220340221.html",
+   "publishDate": "2026-11-17T22:03:40+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "By Jamie McGeever ORLANDO, Florida, Nov 17 (Reuters) - The AI trade unwind continued on Tuesday, pushing global stocks lower ahead of Nvidia's quarterly earnings and as investors prepared for",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Goodfellow Inc. Renews Its Normal Course Issuer Bid",
+   "link": "https://www.globenewswire.com/news-release/2026/11/17/3405233/0/en/goodfellow-inc-renews-its-normal-course-issuer-bid.html",
+   "publishDate": "2026-11-17T22:01:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "DELSON, Quebec, Nov. 17, 2026 (GLOBE NEWSWIRE) -- Goodfellow Inc. (TSX: GDL) (“Goodfellow” or the “Company”), announced today that the Toronto Stock Exchange (the “TSX”) has approved the notice filed by the Company to renew its normal course issuer bid (“NCIB”) with respect to its common shares (the “Shares”).",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "TRADING DAY AI trade unwind continues, but Nvidia beats",
+   "link": "https://www.reuters.com/commentary/reuters-open-interest/global-markets-trading-day-graphic-2026-11-17/",
+   "publishDate": "2026-11-17T22:00:26.041000+00:00",
+   "source": "www.reuters.com",
+   "summary": "The AI trade unwind continued on Tuesday, pushing global stocks lower ahead of Nvidia's quarterly earnings and as investors prepared for Anthropic's stock market launch later in the week, while solid US retail sales and hawkish comments from Fed officials kept alive expectations that interest rates are headed higher.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Have you been able to find a seasonal job?",
+   "link": "https://finance.yahoo.com/economy/articles/able-seasonal-job-215813387.html",
+   "publishDate": "2026-11-17T21:58:13+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The hiring season for holiday jobs is already well underway, and the early reads on this year’s hiring activity seem fairly positive.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Western Star films 49X logger in Daimler vocational push",
+   "link": "https://finance.yahoo.com/technology/articles/western-star-films-49x-logger-215704431.html",
+   "publishDate": "2026-11-17T21:57:04+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Western Star’s new video series features Tessmer Trucking’s 49X, part of a push that retired the 57X tractor and leans the brand into vocational work. The post Western Star films 49X logger in Daimler vocational push appeared first on FreightWaves.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "VIEW Nvidia earnings beat estimates; attention turns to call",
+   "link": "https://www.reuters.com/business/view-nvidia-earnings-beat-estimates-attention-turns-call-2026-11-17/",
+   "publishDate": "2026-11-17T21:54:59.929000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Nvidia shares rose after the company unveiled solid quarterly results and projections for next quarter on Tuesday, in its first major event since the resignation of Jensen Huang as CEO.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Caribbean nations fear economic impact of shuttering citizenship program after EU threats",
+   "link": "https://www.theguardian.com/world/2026/nov/17/st-kitts-nevis-citizenship-investment",
+   "publishDate": "2026-11-17T21:49:29+00:00",
+   "source": "www.theguardian.com",
+   "summary": "St Kitts and Nevis to wind down citizenship-by-investment program after EU warns of end to visa-free accessThe decision by St Kitts and Nevis to end a lucrative programme offering citizenship to wealthy foreigners in exchange for investment threatens its economy and ability to support people in need, the premier of the island of Nevis has warned.On Friday, Terrance Drew, the prime minister of the twin-island Caribbean nation, announced he would wind down the citizenship-by-investment (CBI) programme, after the European Union threatened to end visa-free access for St Kitts and Nevis. Continue reading...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Slower Retail Sales Drag on Market",
+   "link": "https://www.wsj.com/finance/stocks/slower-retail-sales-drag-on-market-fd1db66a",
+   "publishDate": "2026-11-17T21:49:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "Plus, the SEC probes Nvidia and Disney is cutting costs",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "How major US stock indexes fared Tuesday 11/17/2026",
+   "link": "https://finance.yahoo.com/markets/world-indices/articles/major-us-stock-indexes-fared-214025410.html",
+   "publishDate": "2026-11-17T21:40:25+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "stock market shook again as Nvidia and other jittery AI stocks led widespread losses on Wall Street. The S&P 500 sank 1% Tuesday after swinging between nearly no change and a loss of 1.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Stock Indexes Finish Lower as Tech Stocks Retreat",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/stock-indexes-finish-lower-tech-213229912.html",
+   "publishDate": "2026-11-17T21:32:29+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The S&P 500 Index ($SPX ) (SPY ) closed down -1.03% on Tuesday, the Dow Jones Industrial Average ($DOWI ) (DIA ) closed down -1.64%, and the Nasdaq 100 Index ($IUXX ) (QQQ ) closed down -0.72%. December E-mini S&P futures (ESZ26 ) fell -1.07%, and December E-mini Nasdaq futures...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "InspireMD to Host KOL Webinar on Carotid Artery Disease Management and the Clinical Benefits of InspireMD’s CGuard Prime Carotid Stent Platform",
+   "link": "https://www.globenewswire.com/news-release/2026/11/17/3405204/0/en/inspiremd-to-host-kol-webinar-on-carotid-artery-disease-management-and-the-clinical-benefits-of-inspiremd-s-cguard-prime-carotid-stent-platform.html",
+   "publishDate": "2026-11-17T21:30:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Participating KOLs include six leading physician experts representing vascular surgery, interventional cardiology, vascular medicine, and neurosurgery",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "What to Know About Crypto Under a Democratic Congress",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/know-crypto-under-democratic-congress-212921860.html",
+   "publishDate": "2026-11-17T21:29:21+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Paradigm's Justin Slaughter expects a harder two years for crypto, but no return to 2023.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Could Bitcoin’s Market Value Reach $3 Trillion by 2030?",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/could-bitcoin-market-value-reach-212839546.html",
+   "publishDate": "2026-11-17T21:28:39+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Bitcoin has shed billions in a single month while ETF money heads for the exits. Two specific signals through mid-2027 could decide whether a $3 trillion valuation stays a fantasy or becomes the conservative bet.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Nvidia Reports Faster Growth, Says Jensen Huang Won’t Return as CEO",
+   "link": "https://www.wsj.com/tech/ai/nvidia-nvda-3q-2027-earnings-report-stock-6e642303",
+   "publishDate": "2026-11-17T21:27:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "In her first earnings call as interim CEO, Colette Kress faced questions over the chipmaker’s future without its longtime leader.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "‘Zero transparency’: Inside Trump’s plans for Venezuela’s oil money",
+   "link": "https://www.aljazeera.com/news/2026/11/17/zero-transparency-inside-trumps-plans-for-venezuelas-oil-money",
+   "publishDate": "2026-11-17T21:26:42+00:00",
+   "source": "www.aljazeera.com",
+   "summary": "Democrats say they plan to investigate Trump's dealings with Venezuela after winning control of Congress.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "A $5 Billion Reason Why Nike Stock Is in Focus Today",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/5-billion-reason-why-nike-212244305.html",
+   "publishDate": "2026-11-17T21:22:44+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Nike stock extends gains as management introduces Full Strike Ahead strategy. Here’s why that doesn’t warrant buying NKE shares today.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "U.S. Stocks Fall as AI Doubts Fester",
+   "link": "https://www.wsj.com/finance/stocks/u-s-stocks-fall-as-ai-doubts-fester-a0979bdb",
+   "publishDate": "2026-11-17T21:21:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "U.S. stocks finished lower as doubts about the sustainability of the artificial-intelligence boom festered ahead of Nvidia earnings and Anthropic’s market debut.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Micron Stock Is Down 41%, but the $35 Billion Buyback Could Change the Game. Here's How.",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/micron-stock-down-41-35-212041888.html",
+   "publishDate": "2026-11-17T21:20:41+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Micron’s guidance hasn’t budged, $68B in net cash is waiting and a record $35B repurchase can start Dec. 9. Here’s why the 41% slide may be overdone.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "American Airlines Group (AAL) Following Travel Shutdown Is The Stock A Bargain Or Fairly Valued",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/american-airlines-group-aal-following-211820686.html",
+   "publishDate": "2026-11-17T21:18:20+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Travel shutdown puts American Airlines Group (AAL) back in focus A nationwide air travel shutdown tied to a failed router installation has put American Airlines Group (AAL) in the spotlight, as investors weigh operational risk alongside the role of federal funding in modernizing air traffic systems. American Airlines Group has been volatile around this disruption, with the share price at US$13.24 after a 1-month share price return of 11.45%, while the year-to-date share price return is down...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Calvin B. Taylor Bankshares, Inc. Reports 2026 Third Quarter and Year-to-date Financial Results",
+   "link": "https://www.accessnewswire.com/newsroom/en/banking-and-financial-services/calvin-b.-taylor-bankshares-inc.-reports-2026-third-quarter-and-year-1251894",
+   "publishDate": "2026-11-17T21:15:00+00:00",
+   "source": "www.accessnewswire.com",
+   "summary": "Calvin B. Taylor Bankshares, Inc. (the \"Company\") (OTCQX:TYCB), the holding company of Calvin B. Taylor Bank (the \"Bank\"), today reported net income for the third quarter 2026 (\"3Q26\") of $4.3 million, or $1.62 per share compared to net income of $3.7 million, or $1.40 per share for the second quarter of 2026 (\"2Q26\"), and net income of $4.2 million, or $1.53 per share for the third quarter of 2025 (\"3Q25\"). Net income for the first nine months...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Vishay Intertechnology Declares Quarterly Dividend",
+   "link": "https://www.globenewswire.com/news-release/2026/11/17/3405193/0/en/vishay-intertechnology-declares-quarterly-dividend.html",
+   "publishDate": "2026-11-17T21:15:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "MALVERN, Pa., Nov. 17, 2026 (GLOBE NEWSWIRE) -- Vishay Intertechnology, Inc. (NYSE:VSH), one of the world's largest manufacturers of discrete semiconductors and passive components, announced today that the Company’s Board of Directors declared a dividend of $0.10 per share of common stock and Class B common stock, to be paid December 15, 2026 to stockholders of record as of the close of business December 2, 2026. Future dividends will be subject to Board approval.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Abits Group Signs Letter of Intent to Acquire Boston Solar, Advancing Vertically Integrated AI Infrastructure Strategy",
+   "link": "https://www.accessnewswire.com/newsroom/en/blockchain-and-cryptocurrency/abits-group-signs-letter-of-intent-to-acquire-boston-solar-advancing-1253175",
+   "publishDate": "2026-11-17T21:10:00+00:00",
+   "source": "www.accessnewswire.com",
+   "summary": "Abits Group Inc. (Nasdaq:ABTS) (\"Abits\" or the \"Company\"), a U.S.-focused digital infrastructure company, today announced that it has signed a nonbinding letter of intent to acquire 100% of The Boston Solar Company LLC (\"Boston Solar\"), an established solar energy company. The proposed acquisition would advance Abits' strategy to vertically integrate its energy and digital infrastructure operations by adding solar engineering and installation...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "NXP Semiconductors Announces Pricing of Inaugural EUR-Denominated Senior Unsecured Notes Offering",
+   "link": "https://www.globenewswire.com/news-release/2026/11/17/3405189/0/en/nxp-semiconductors-announces-pricing-of-inaugural-eur-denominated-senior-unsecured-notes-offering.html",
+   "publishDate": "2026-11-17T21:10:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "EINDHOVEN, The Netherlands, Nov. 17, 2026 (GLOBE NEWSWIRE) -- NXP Semiconductors N.V. (NASDAQ:NXPI) (together with its subsidiaries, “NXP”) announced today the pricing of an inaugural EUR offering by its subsidiaries NXP B.V., NXP Funding LLC and NXP USA, Inc. (together, the “Issuers”) of €500,000,000 aggregate principal amount of 4.625% senior unsecured notes due 2034 (the “2034 Notes”) and €500,000,000 aggregate principal amount of 4.875% senior unsecured notes due 2037 (the “2037 Notes” and, collectively with the 2034 Notes, the “Notes”).",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Abits Group Signs Letter of Intent to Acquire Boston Solar, Advancing Vertically Integrated AI Infrastructure Strategy",
+   "link": "https://www.accessnewswire.com/newsroom/en/metals-and-mining/abits-group-signs-letter-of-intent-to-acquire-boston-solar-advancing-vertically-i-1253175",
+   "publishDate": "2026-11-17T21:10:00+00:00",
+   "source": "www.accessnewswire.com",
+   "summary": "Abits Group Inc. (Nasdaq:ABTS) (\"Abits\" or the \"Company\"), a U.S.-focused digital infrastructure company, today announced that it has signed a nonbinding letter of intent to acquire 100% of The Boston Solar Company LLC (\"Boston Solar\"), an established solar energy company. The proposed acquisition would advance Abits' strategy to vertically integrate its energy and digital infrastructure operations by adding solar engineering and installation...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Akebia Therapeutic’s Vafseo® (vadadustat) Granted Additional Patent",
+   "link": "https://www.globenewswire.com/news-release/2026/11/17/3405183/37519/en/akebia-therapeutic-s-vafseo-vadadustat-granted-additional-patent.html",
+   "publishDate": "2026-11-17T21:05:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "New patent with term until 2043 further strengthens patent portfolio",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Star Equity Holdings, Inc. Declares Cash Dividend of $0.25 Per Share of 10% Series A Cumulative Perpetual Preferred Stock",
+   "link": "https://www.globenewswire.com/news-release/2026/11/17/3405176/11704/en/star-equity-holdings-inc-declares-cash-dividend-of-0-25-per-share-of-10-series-a-cumulative-perpetual-preferred-stock.html",
+   "publishDate": "2026-11-17T21:05:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "OLD GREENWICH, Conn., Nov. 17, 2026 (GLOBE NEWSWIRE) -- Star Equity Holdings, Inc. (Nasdaq: STRR and STRRP) (\"Star\" or the \"Company\"), a diversified holding company, announced today announced today that its Board of Directors (the “Board”) declared a cash dividend to holders of the Company’s 10% Series A Cumulative Perpetual Preferred Stock of $0.25 per share. The record date for this dividend is December 1, 2026, and the payment date is December 10, 2026.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "AtlasClear Adds Tenth Correspondent to a Clearing Platform That Grew Revenue 27% Year over Year",
+   "link": "https://www.globenewswire.com/news-release/2026/11/17/3405182/0/en/atlasclear-adds-tenth-correspondent-to-a-clearing-platform-that-grew-revenue-27-year-over-year.html",
+   "publishDate": "2026-11-17T21:05:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "AtlasClear Holdings adds its tenth correspondent clearing agreement as fiscal Q1 revenue rises 27% to $5.4 million",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Griffon Corp (GFF) (Q4 2026) Earnings Call Highlights: Strong Cash Flow and Strategic ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/griffon-corp-gff-q4-2026-210129895.html",
+   "publishDate": "2026-11-17T21:01:29+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Griffon Corp (GFF) delivered $1.5 billion in full-year revenue and $267 million in free cash flow while reducing leverage to 2.0x and raising its dividend 14%.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "The Home Depot Inc (HD) (Q3 2026) Earnings Call Highlights: Sales Up 4.9% to $43. ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/home-depot-inc-hd-q3-210118237.html",
+   "publishDate": "2026-11-17T21:01:18+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The Home Depot Inc (HD) posts its highest comp growth in four years despite a frozen housing market, though gross margin pressure and a lowered SRS outlook temper the otherwise strong quarter.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Spire Inc (SR) (Q4 2026) Earnings Call Highlights: 20% EPS Growth, Raised Dividend, and ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/spire-inc-sr-q4-2026-210109582.html",
+   "publishDate": "2026-11-17T21:01:09+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Spire Inc (SR) delivered fiscal 2026 adjusted EPS of $4.02, up 20%, and set fiscal 2027 guidance of $5.05--$5.25 while outlining a $11.8 billion capital plan and 6--8% long-term EPS growth target.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "ASTA Energy Solutions AG (XASTF) (Q3 2026) Earnings Call Highlights: Adjusted EBITDA Surges 39% ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/asta-energy-solutions-ag-xastf-210107333.html",
+   "publishDate": "2026-11-17T21:01:07+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "ASTA Energy Solutions AG (XASTF) posted 23% net sales growth and signed its first US long-term agreement, while flagging higher working capital and CapEx at the top of its range.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "The Fed Games Out How AI Could Reshape Work and the Economy",
+   "link": "https://www.bloomberg.com/news/newsletters/2026-11-17/the-fed-games-out-how-ai-could-reshape-work-and-the-economy",
+   "publishDate": "2026-11-17T20:59:53+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "Staffers are looking at scenarios from boom to bust.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "NY Fed's Williams sees no need for a 'dramatic' rate move",
+   "link": "https://seekingalpha.com/news/4673886-ny-feds-williams-sees-no-need-for-a-dramatic-rate-move",
+   "publishDate": "2026-11-17T20:58:58+00:00",
+   "source": "seekingalpha.com",
+   "summary": "John Williams says inflation still needs work toward 2%, but current conditions don't call for a dramatic rate hike; AI may keep pressure persistent.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "SEC Is Probing Nvidia Amid Departure of CEO Jensen Huang",
+   "link": "https://www.wsj.com/business/sec-is-probing-nvidia-amid-departure-of-ceo-jensen-huang-ee7643f8",
+   "publishDate": "2026-11-17T20:56:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "Regulator’s civil probe looks at whether company violated investor disclosure laws.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Economic optimism plunges to lowest level since Great Recession: Gallup",
+   "link": "https://finance.yahoo.com/economy/articles/economic-optimism-plunges-lowest-level-205439003.html",
+   "publishDate": "2026-11-17T20:54:39+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The public perception of the economy has “become increasingly detached from GDP since 2022, following the spike in inflation and the slowdown in wage growth,” Gallup said.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "UPenn's Amy Wax asks appeals court to revive bias lawsuit against university",
+   "link": "https://www.reuters.com/legal/government/upenns-amy-wax-asks-appeals-court-revive-bias-lawsuit-against-university-2026-11-17/",
+   "publishDate": "2026-11-17T20:54:37.246000+00:00",
+   "source": "www.reuters.com",
+   "summary": "A US appeals court panel grappled for an hour Tuesday with University of Pennsylvania law professor Amy Wax's bid to reinstate her discrimination and retaliation lawsuit, which alleges the university wrongfully sanctioned her for protected speech.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "New York Fed's Williams rules out jumbo rate hike for December",
+   "link": "https://finance.yahoo.com/economy/policy/article/new-york-feds-williams-rules-out-jumbo-rate-hike-for-december-205144565.html",
+   "publishDate": "2026-11-17T20:51:44+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "\"I don't think the situation calls for dramatic action,\" Williams said Tuesday.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Bitcoin Sank Ahead of SpaceX's IPO. Now It's Falling Before Anthropic's — But for a Different Reason",
+   "link": "https://www.benzinga.com/crypto/cryptocurrency/26/11/63369577/bitcoin-anthropic-ipo-spacex-selloff-nvidia",
+   "publishDate": "2026-11-17T20:51:36.852000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Bitcoin is down 23% ahead of Anthropic's IPO, as before SpaceX. This time AI is leading the selloff, and IBIT outflows keep building.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "JD.com earnings analysis: questions answered and next catalysts",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/jd-com-earnings-analysis-questions-205122566.html",
+   "publishDate": "2026-11-17T20:51:22+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Investing.com -- JD.com Inc Adr (JD) reported Q3 2026 on Nov 17, 2026. Revenue and adjusted EPS roughly matched consensus, but the shares fell anyway. The stock traded at $25.63 (-6.95%) as of Nov 17, 3:18 PM EST, near its 52-week low of $24.51.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Amer Sports earnings analysis: questions answered and next catalysts",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/amer-sports-earnings-analysis-questions-205052927.html",
+   "publishDate": "2026-11-17T20:50:52+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Investing.com -- Amer Sports Inc (AS) reported Q3 FY2026 on Nov 17, 2026. Adjusted EPS was $0.42 against a $0.27 estimate, a 55.6% surprise. Revenue grew 24% to $2.17B. The stock traded at $30.35 (+4.30%) as of Nov 17, 3:18 PM EST. That is well below its 52-week high of $42.76, and the stock is still down 19.4% YTD.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Worried About Nvidia? 3 Artificial Intelligence (AI) Stocks That May Be Safer Buys Right Now",
+   "link": "https://finance.yahoo.com/technology/ai/articles/worried-nvidia-3-artificial-intelligence-205002726.html",
+   "publishDate": "2026-11-17T20:50:02+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "These stocks have tremendous growth potential due to AI, modest valuations, and have less risk than Nvidia these days.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Cautious trader dumps millions ahead of Nov. 18 FOMC minutes release",
+   "link": "https://finance.yahoo.com/economy/policy/articles/cautious-trader-dumps-millions-ahead-205000335.html",
+   "publishDate": "2026-11-17T20:50:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The FOMC minutes from the October meeting will be released on Nov. 18.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Morgan Stanley sends strong signal on where stocks are headed",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/morgan-stanley-sends-strong-signal-204700821.html",
+   "publishDate": "2026-11-17T20:47:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Morgan Stanley just flipped its entire playbook, and the reasoning behind it may surprise you.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Bitcoin Investors Are Capitulating—That’s Historically Been a Bottom Signal",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-investors-capitulating-historically-bottom-203603436.html",
+   "publishDate": "2026-11-17T20:36:03+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Glassnode says Bitcoin’s realized losses have reached levels seen only near the 2018, 2020, 2022 and early 2023 lows, as buyers defend the $62,000 to $66,000 range.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Dollar Slips as T-Note Yields Decline",
+   "link": "https://finance.yahoo.com/markets/currencies/articles/dollar-slips-t-note-yields-203508634.html",
+   "publishDate": "2026-11-17T20:35:08+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The dollar index (DXY00 ) fell from a 1.5-year high on Tuesday and finished down -0.04%. Tuesday’s decline in T-note yields weakened the dollar’s interest rate differentials and prompted some long liquidation in the dollar. Also, the unexpected decline in the US Nov NAHB housing market index to a 14-year...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "A generational flight from tech to defensive stocks is underway. How we’re capitalizing",
+   "link": "https://www.cnbc.com/investingclub/2026/11/17/a-generational-flight-from-tech-to-defensive-stocks-is-underway-how-were-capitalizing.html",
+   "publishDate": "2026-11-17T20:31:27+00:00",
+   "source": "www.cnbc.com",
+   "summary": "Jim Cramer has pushed the message that its important for investors to balance their portfolios.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "BNY and Microsoft complete first AI agent-negotiated Treasury trade",
+   "link": "https://finance.yahoo.com/technology/ai/articles/bny-microsoft-complete-first-ai-201911277.html",
+   "publishDate": "2026-11-17T20:19:11+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Investing.com -- Bank of New York (BNY) and Microsoft Corp (MSFT) had AI agents negotiate a US Treasury trade. They bill it as the first of its kind. Electronic trading and machine-to-machine messaging are old news. What is new is software that deliberates and finds middle ground on price, a role that used to belong to human brokers.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "5 Highest Short Interest Large-Cap Tech Stocks Right Now",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/5-highest-short-interest-large-201542518.html",
+   "publishDate": "2026-11-17T20:15:42+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Technology stocks are facing a new test of investor conviction as hedge funds pull back from the artificial intelligence trade. Bloomberg reported on November 9 that hedge funds sold global technology stocks at one of the fastest weekly rates on record, citing Goldman Sachs prime brokerage data through November 6. Technology was the most heavily net-sold […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Pro Medicus And 2 Other Australian Founder Led Stocks",
+   "link": "https://finance.yahoo.com/healthcare/articles/pro-medicus-2-other-australian-201237505.html",
+   "publishDate": "2026-11-17T20:12:37+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "When the Federal Reserve chairman publicly questions how artificial intelligence could reshape productivity, jobs, and inflation, it shines a spotlight on the people running listed businesses, not just their products. Australian investors watching that AI debate unfold may want leaders who are deeply tied to their company’s destiny. This article walks through three founder driven stocks from our local universe that show what that kind of commitment can look like. The three stocks highlighted...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "China, Canada expand tariff relief after Carney-Xi meeting",
+   "link": "https://www.aljazeera.com/economy/2026/11/17/china-canada-expand-tariff-relief-after-carney-xi-meeting",
+   "publishDate": "2026-11-17T20:11:41+00:00",
+   "source": "www.aljazeera.com",
+   "summary": "China offers tariff cuts on Canadian pork and seafood, as Canada extends exemptions for Chinese steel and aluminium.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 AI Hardware Stocks Investors Are Watching As Trade Rules Shift",
+   "link": "https://finance.yahoo.com/technology/ai/articles/3-ai-hardware-stocks-investors-201132699.html",
+   "publishDate": "2026-11-17T20:11:32+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Global trade rules are being redrawn in real time, with fresh tariffs colliding with policies that grease the wheels of cross border commerce, and AI hardware sits right in the middle of that tug of war. For investors, that creates real risk of being on the wrong side of the winners and losers list. This article walks through three globally exposed exporters from our AI hardware screener that appear to be positioned as net beneficiaries of these shifting trade currents. The three stocks...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Dividend Raise Might Change The Case For Investing In Ally Financial Stock (ALLY)",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/dividend-raise-might-change-case-201047280.html",
+   "publishDate": "2026-11-17T20:10:47+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Ally Financial recently saw analysts cut current year earnings estimates by about 4% over the past 60 days while the company lifted its quarterly dividend to US$0.35 from US$0.30, marking the first increase since early 2022. The higher payout suggests confidence in Ally Financial's capital position and digital funding model, even as a softer job market could test auto loan performance and credit costs. We will now explore how Ally Financial's higher dividend, set against weaker earnings...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Fed's Williams still favors tighter monetary policy, but says now is not the time for 'dramatic action'",
+   "link": "https://www.reuters.com/business/feds-williams-still-favors-tighter-monetary-policy-says-now-is-not-time-dramatic-2026-11-17/",
+   "publishDate": "2026-11-17T20:08:44.323000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Federal Reserve Bank of New York President John Williams said on Tuesday the US central bank will ​likely need to raise rates again to lean against high inflation but he ‌pushed back against the idea the Fed needs to shift to a more aggressive path of action.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Fed's Williams still favors tighter monetary policy, but says now is not the time for 'dramatic action'",
+   "link": "https://finance.yahoo.com/economy/policy/articles/feds-williams-still-favors-tighter-200832914.html",
+   "publishDate": "2026-11-17T20:08:32+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "By Michael S.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Top Fed official: AI boom could fuel more rate hikes in 2027",
+   "link": "https://finance.yahoo.com/economy/policy/articles/top-fed-official-ai-boom-200652730.html",
+   "publishDate": "2026-11-17T20:06:52+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "New York Fed President John Williams told Axios on Tuesday that the AI boom could push the Federal Reserve to raise interest rates further next year.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Bank capital rules inch closer to finalization",
+   "link": "https://finance.yahoo.com/economy/policy/articles/bank-capital-rules-inch-closer-200632484.html",
+   "publishDate": "2026-11-17T20:06:32+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The Federal Deposit Insurance Corp. submitted revised bank capital rules to the Office of Information and Regulatory Affairs for review, the final step before publication in the Federal Register.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Will Soybeans Continue to Follow Oil and Oil Product Prices?",
+   "link": "https://finance.yahoo.com/markets/commodities/articles/soybeans-continue-oil-oil-product-200003282.html",
+   "publishDate": "2026-11-17T20:00:03+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Soybean futures for January 2027 delivery were mostly traded in the teens through September 2026 before falling below $13 per bushel on October 14. Nearby soybean futures have trended lower since the September 11, 2026, high. Crude oil and distillate product prices have moved lower since late October.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Memo to Nvidia interim CEO Colette Kress: Remind the world why you've been Jensen Huang's CFO for 13-plus years",
+   "link": "https://finance.yahoo.com/markets/stocks/article/memo-to-nvidia-interim-ceo-colette-kress-remind-the-world-why-youve-been-jensen-huangs-cfo-for-13-plus-years-200000740.html",
+   "publishDate": "2026-11-17T20:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Colette Kress is up to the interim Nvidia CEO task.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Walmart vs. Target Stock: 1 Is Worth 14x the Other. Here’s Which Stock to Buy Before Earnings.",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/walmart-vs-target-stock-1-195401033.html",
+   "publishDate": "2026-11-17T19:54:01+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Walmart is the stronger business, but Target's turnaround and cheaper valuation make it the better buy.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "As string of tech outages raises alarm, Trump says everything is 'fine'",
+   "link": "https://www.channelnewsasia.com/business/string-tech-outages-raises-alarm-trump-says-everything-fine-6560281",
+   "publishDate": "2026-11-17T19:41:31+00:00",
+   "source": "www.channelnewsasia.com",
+   "summary": "WASHINGTON, Nov 17 : Technology outages that shut down email for many US companies and grounded thousands of flights over the past few days extended to the US National Security Agency on Tuesday, as President Donald Trump's administration scrambled to tamp down concerns about a broader problem.The NSA said i",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Van Hollen’s bid to replace Schumer as leader is putting pressure on Democrats to take sides",
+   "link": "https://apnews.com/article/senate-democrats-van-hollen-schumer-5cc345ebec174e39debd10ded01a32b0",
+   "publishDate": "2026-11-17T19:39:06+00:00",
+   "source": "apnews.com",
+   "summary": "",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Jensen Huang Would Be ‘Honored’ to Have His Old Job at Nvidia Back",
+   "link": "https://finance.yahoo.com/technology/ai/articles/jensen-huang-honored-old-job-193852067.html",
+   "publishDate": "2026-11-17T19:38:52+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Less than a week after stepping down in disgrace as CEO of Nvidia, Huang on Tuesday said he’d be willing to come back to the chipmaker.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Nvidia's insurance protects board but not company coffers from litigation",
+   "link": "https://www.reuters.com/business/nvidias-insurance-protects-board-not-company-coffers-litigation-2026-11-17/",
+   "publishDate": "2026-11-17T19:36:05.453000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Nvidia has insurance to protect its leadership from securities lawsuits but not the ​company itself, which means it may have to dip into cash reserves if litigation over the abrupt departure of Jensen Huang as CEO prevails.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Jensen Huang breaks his silence. Read his full statement here",
+   "link": "https://finance.yahoo.com/technology/ai/articles/jensen-huang-breaks-silence-read-192738220.html",
+   "publishDate": "2026-11-17T19:27:38+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Jensen Huang was unseated last week from the top job at Nvidia, a company that is a linchpin in the booming artificial intelligence sector. Huang broke his silence Tuesday.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Lower French Production Boosts Sugar Prices",
+   "link": "https://finance.yahoo.com/markets/commodities/articles/lower-french-production-boosts-sugar-192343909.html",
+   "publishDate": "2026-11-17T19:23:43+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "March NY world sugar #11 (SBH27 ) closed up +0.07 (+0.39%) on Tuesday, and March London ICE white sugar #5 (SWH2 7) closed up +0.50 (+0.10%). Sugar prices erased early losses on Tuesday and settled higher as short covering emerged amid global supply concerns after France, the EU's largest sugar...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Can Bitcoin Rally Into December? History Says Probably Not, Analyst Warns",
+   "link": "https://www.benzinga.com/crypto/cryptocurrency/26/11/63364003/can-bitcoin-rally-into-december-history-says-probably-not-analyst-warns",
+   "publishDate": "2026-11-17T19:22:05.958000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Bitcoin may face 4–8 more weeks of weakness toward $54,000; analyst sees altcoin season around 2028 unless a crisis prompts monetary easing.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "McCormick Explores Why Live Supplier Pricing Matters for Electrical Estimating",
+   "link": "https://www.accessnewswire.com/newsroom/en/computers-technology-and-internet/mccormick-explores-why-live-supplier-pricing-matters-for-electric-1250709",
+   "publishDate": "2026-11-17T19:15:00+00:00",
+   "source": "www.accessnewswire.com",
+   "summary": "McCormick Systems, leading provider of MEP takeoff and estimating software and part of the Foundation Software business portfolio, has published a new article on how live supplier pricing keeps electrical bids aligned with current material costs. Electrical material prices can move faster than price books are updated. For example, switchgear priced today could cost 5% to 10% more by the time an owner signs off three weeks later, which is enough...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Smucker (SJM) Stock Could Be Overvalued As Earnings Face A 40% Rally",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/smucker-sjm-stock-could-overvalued-191455727.html",
+   "publishDate": "2026-11-17T19:14:55+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "J. M. Smucker has delivered a strong share price run this year, and that kind of move naturally puts its earnings under the microscope. With the stock now pricing in a much richer story than it did at the start of the year, investors are asking whether the current level is supported by what the business actually earns. The stock is up 40.3% year to date, which raises the question of how much of that gain can be explained by the company’s earnings power rather than shifting sentiment. The...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "US LNG feedgas slips as Sabine Pass demand drops, Freeport remains constrained",
+   "link": "https://www.reuters.com/business/energy/us-lng-feedgas-slips-sabine-pass-demand-drops-freeport-remains-constrained-2026-11-17/",
+   "publishDate": "2026-11-17T19:13:59.695000+00:00",
+   "source": "www.reuters.com",
+   "summary": "US natural gas flows to LNG export plants fell on Tuesday to ​about 19.2 billion cubic feet per day ‌from 19.5 bcfd the previous day, as feedgas deliveries to Cheniere Energy's Sabine Pass facility in Louisiana dropped ​sharply, according to preliminary data from financial ​firm LSEG.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Top 3 Dividend Stocks To Watch In November 2026",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/top-3-dividend-stocks-watch-191338452.html",
+   "publishDate": "2026-11-17T19:13:38+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "With the US 10 year Treasury yield holding above 5%, cash and bonds are throwing off more income than many investors have seen in years. That raises the bar for every dividend portfolio. Income that simply looks high is no longer enough. You now need payouts that are well covered and consistently growing. This article walks through three higher yielding dividend stocks that fit that brief. The three stocks highlighted here offer a compelling starting point if you want exposure to higher...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "There's 'no difference' between buying Anthropic's IPO and Amazon's IPO: Kevin O'Leary",
+   "link": "https://finance.yahoo.com/markets/stocks/article/theres-no-difference-between-buying-anthropics-ipo-and-amazons-ipo-kevin-oleary-190707549.html",
+   "publishDate": "2026-11-17T19:07:07+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "\"Shark Tank\" star Kevin O'Leary weighs in on Anthropic's IPO.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Anthropic forges ahead with its IPO even as AI fears mount and markets wobble",
+   "link": "https://abcnews.com/Business/wireStory/anthropic-forges-ahead-ipo-ai-fears-mount-markets-138221925",
+   "publishDate": "2026-11-17T19:04:38+00:00",
+   "source": "abcnews.com",
+   "summary": "Anthropic is preparing to sell stock to the public in a shaky moment for artificial intelligence companies",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "BofA warns new Fed rate-hike cycle packs a very nasty twist",
+   "link": "https://finance.yahoo.com/economy/policy/articles/bofa-warns-fed-rate-hike-190300946.html",
+   "publishDate": "2026-11-17T19:03:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Inflationary price pressures from AI, energy shocks expected to quicken pace of interest-rate increases.",
+   "sentiment": null,
+   "confidence": null
+  }
+ ]
+}
