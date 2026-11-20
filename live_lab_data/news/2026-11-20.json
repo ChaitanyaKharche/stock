@@ -1,0 +1,911 @@
+{
+ "session": "2026-11-20",
+ "fetched_at_et": "2026-11-20T07:30:18",
+ "query": "(Fed OR \"Federal Reserve\" OR inflation OR CPI OR jobs OR tariff OR tariffs OR war OR Treasury OR shutdown) AND (stocks OR markets OR economy)",
+ "window_from": "2026-11-19T16:00:00",
+ "window_to": "2026-11-20T07:30:18.831572",
+ "page_size": 100,
+ "n": 100,
+ "articles": [
+  {
+   "title": "Friday's big stock stories: What’s likely to move the market in the next trading session",
+   "link": "https://www.cnbc.com/2026/11/19/fridays-big-stock-stories-whats-likely-to-move-the-market.html",
+   "publishDate": "2026-11-20T00:26:53+00:00",
+   "source": "www.cnbc.com",
+   "summary": "The Nasdaq Composite lost more than 2% as Anthropic's debut failed to revive the AI trade. Tune in to CNBC Friday for Treasury Secretary Scott Bessent.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Top 3 Lithium Stocks To Watch In November 2026",
+   "link": "https://finance.yahoo.com/markets/commodities/articles/top-3-lithium-stocks-watch-001641312.html",
+   "publishDate": "2026-11-20T00:16:41+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "AI data centers are hungry for power, chips and the minerals that sit quietly in the supply chain. With the Chicago Fed flagging AI related building as a source of inflation pressure, attention shifts to the raw materials that anchor this build out, including lithium. If you believe critical resources can benefit from this spending wave, this article walks through three lithium focused miners and processors from our screener that may be worth a closer look. The three lithium ideas below are...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Fired NCUA board members continue long-shot legal fight",
+   "link": "https://finance.yahoo.com/economy/policy/articles/fired-ncua-board-members-continue-001638075.html",
+   "publishDate": "2026-11-20T00:16:38+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Two former board members of the National Credit Union Administration, still battling their termination by President Trump, are widely considered unlikely to win their case. Industry advocates say that would be bad for credit unions.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Dollar Falls Modestly as AI Stock Selloff Weighs",
+   "link": "https://www.wsj.com/finance/currencies/asian-currencies-consolidate-but-may-be-weighed-by-risk-off-sentiment-38aa30b7",
+   "publishDate": "2026-11-20T00:13:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "The dollar edged lower after Anthropic’s record-breaking IPO failed to halt selling in U.S. AI-related stocks overnight.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Guyana Oil Boom Rekindles Frontier Drilling Appetite",
+   "link": "https://finance.yahoo.com/energy/articles/guyana-oil-boom-rekindles-frontier-000000725.html",
+   "publishDate": "2026-11-20T00:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Exxon’s success is reigniting Big Oil’s appetite for high-risk frontier exploration, demonstrating the potential rewards of long-term investment in new oil discoveries.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "GTA 6 lives up to its 99 score, but Take-Two stock stays stuck",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/gta-6-lives-99-score-235722971.html",
+   "publishDate": "2026-11-19T23:57:22+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Take-Two’s new Rockstar game hides surprises in every corner. Investors, though, have a major question.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Gold Set for Worst Week Since March on Hawkish Fed, AI Selloff",
+   "link": "https://www.bloomberg.com/news/articles/2026-11-19/gold-set-for-worst-week-since-march-on-hawkish-fed-ai-selloff",
+   "publishDate": "2026-11-19T23:56:03+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "Gold fell and was heading for the biggest weekly decline since March, as a hawkish Federal Reserve signaled more interest-rate cuts and a selloff in AI stocks pushed investors to sell the metal to cover losses.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Gold Set for Worst Week Since March on Hawkish Fed, AI Selloff",
+   "link": "https://finance.yahoo.com/markets/commodities/articles/gold-set-worst-week-since-235603457.html",
+   "publishDate": "2026-11-19T23:56:03+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Gold fell and was heading for the biggest weekly decline since March, as a hawkish Federal Reserve signaled more interest-rate cuts and a selloff in AI stocks pushed investors to sell the metal to cover losses.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Japan Consumer Inflation Reinforces Rate-Hike Expectations",
+   "link": "https://www.wsj.com/economy/japan-consumer-inflation-accelerates-amid-rate-hike-views-15cf7577",
+   "publishDate": "2026-11-19T23:52:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "Consumer prices excluding fresh food climbed 2.2% in October from a year earlier, reinforcing expectations for another interest-rate increase by the central bank.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Japan's core inflation accelerates in October, cementing rate hike expectations",
+   "link": "https://www.channelnewsasia.com/business/japans-core-inflation-accelerates-in-october-cementing-rate-hike-expectations-6567561",
+   "publishDate": "2026-11-19T23:44:44+00:00",
+   "source": "www.channelnewsasia.com",
+   "summary": "TOKYO, Nov 20 : Japan's core consumer prices rose 2.2 per cent in October from a year earlier, data showed on Friday, accelerating slightly from September in a sign of broadening price pressure that cements the case for a near-term interest rate hike by the central bank.The data will be among factors the BOJ",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Japan's core inflation accelerates in October, cementing rate hike expectations",
+   "link": "https://www.reuters.com/business/japans-core-inflation-accelerates-october-cementing-rate-hike-expectations-2026-11-19/",
+   "publishDate": "2026-11-19T23:43:46.529000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Japan's core consumer prices rose 2.2% in October ​from a year earlier, data showed on ​Friday, accelerating slightly from September in a ⁠sign of broadening price pressure that cements the ​case for a near-term interest rate hike by ​the central bank.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Fed's Paulson says understanding, not guidance, drives effective communication",
+   "link": "https://www.reuters.com/business/feds-paulson-says-understanding-not-guidance-drives-effective-communication-2026-11-19/",
+   "publishDate": "2026-11-19T23:41:14.567000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Federal Reserve Bank of Philadelphia President Anna Paulson said ​on Thursday central bank communications work better when officials and the public understand one another, ‌rather than when Fed officials provide explicit comments about what they think lies ahead.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Fed's Paulson says understanding, not guidance, drives effective communication",
+   "link": "https://finance.yahoo.com/economy/policy/articles/feds-paulson-says-understanding-not-234105073.html",
+   "publishDate": "2026-11-19T23:41:05+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "NEW YORK, Nov 19 (Reuters) - Federal Reserve Bank of Philadelphia President Anna Paulson said on Thursday central bank communications work better when officials and the public understand ‌one another, rather than when Fed officials provide explicit comments about what they think lies ‌ahead. For the Fed, “understanding matters more than the specific ways we communicate,” Paulson said in the text of a speech to be delivered ​before a gathering held by the Money Marketeers of New York University.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "AI fueling \"disturbingly high\" inflation, Chicago Fed president says",
+   "link": "https://finance.yahoo.com/economy/policy/articles/ai-fueling-disturbingly-high-inflation-234006173.html",
+   "publishDate": "2026-11-19T23:40:06+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "A boom in data center construction across the U.S. and broader investment in AI are contributing to hot inflation, according to Chicago Fed President Austan Goolsbee.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Fed’s Paulson Says Clear Communication Can Guide Rates",
+   "link": "https://www.bloomberg.com/news/articles/2026-11-19/fed-s-paulson-says-clear-communication-can-guide-rates",
+   "publishDate": "2026-11-19T23:40:00+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "Federal Reserve Bank of Philadelphia President Anna Paulson highlighted the importance of clarity in policymakers’ communications on the economy and, at times, their expectations for rates.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Record profits but record outflows: 'Sell Korea' trade stalks Seoul market",
+   "link": "https://www.reuters.com/world/asia-pacific/record-profits-record-outflows-sell-korea-trade-stalks-seoul-market-2026-11-19/",
+   "publishDate": "2026-11-19T23:37:36.520000+00:00",
+   "source": "www.reuters.com",
+   "summary": "South Korea's biggest companies are posting record AI-driven profits and the stock market is among ​the world's cheapest, yet foreign investors keep heading for the exits — and with buybacks winding down, few buyers are left to step in.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Japan reports cooler-than-expected core inflation in October of 2.2% — but highest this year so far",
+   "link": "https://www.cnbc.com/2026/11/20/japan-inflation-cpi-october.html",
+   "publishDate": "2026-11-19T23:36:10+00:00",
+   "source": "www.cnbc.com",
+   "summary": "The core inflation figure — which strips out prices of food — was lower than the 2.3% expected by Reuters-polled economists.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Department-store chain closing half its locations after 188 years in business",
+   "link": "https://finance.yahoo.com/small-business/articles/department-store-chain-closing-half-233300151.html",
+   "publishDate": "2026-11-19T23:33:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "David Jones is exiting a market as financial troubles force a major retreat, leaving its future uncertain.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Jared Kushner's Affinity Partners held $32M in defense contractor Arxis while he negotiated wars abroad",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/jared-kushners-affinity-partners-held-233000100.html",
+   "publishDate": "2026-11-19T23:30:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The president’s son-in-law calls reports of other possible conflicts ‘deeply misleading.’",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Michael Burry Shops the Sell-Off with Bets on JD, BYD, Sprouts and More",
+   "link": "https://www.benzinga.com/trading-ideas/long-ideas/26/11/63462637/michael-burry-shops-the-sell-off-with-bets-on-jd-byd-sprouts-and-more",
+   "publishDate": "2026-11-19T23:21:36.381000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Michael Burry reveals seven new buys during the market sell-off, adding exposure to Sprouts, Chinese stocks, Ero Copper and Adobe.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Cathie Wood sells $85 million of tumbling semiconductor stock",
+   "link": "https://finance.yahoo.com/technology/articles/cathie-wood-sells-85-million-231700215.html",
+   "publishDate": "2026-11-19T23:17:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Here are Cathie Wood’s latest moves.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Medline (MDLN) Stock Gets Fair Value Bump After Analysts Lift Targets",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/medline-mdln-stock-gets-fair-231510088.html",
+   "publishDate": "2026-11-19T23:15:10+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Medline's updated analyst narrative now revolves around price targets that sit in a tighter range between about $44 and $49, anchored by an internal fair value estimate of roughly $45.61. Recent commentary links these targets to refreshed views on how comfortably Medline might meet current expectations, with some analysts highlighting support for the mid 40s, while others flag less room for error. As you read on, you will see how to track these shifting targets and what they might mean for...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Gaming and Leisure Properties Announces Pricing of $600,000,000 of 6.250% Senior Notes Due 2031",
+   "link": "https://www.globenewswire.com/news-release/2026/11/19/3407200/29133/en/gaming-and-leisure-properties-announces-pricing-of-600-000-000-of-6-250-senior-notes-due-2031.html",
+   "publishDate": "2026-11-19T23:12:51+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "WYOMISSING, Pa., Nov. 19, 2026 (GLOBE NEWSWIRE) -- Gaming and Leisure Properties, Inc. (“GLPI”) (NASDAQ: GLPI) today announced the pricing of a public offering of $600,000,000 aggregate principal amount of senior notes due 2031 (the “Notes”), to be issued by its operating partnership, GLP Capital, L.P. (the “Operating Partnership”), and GLP Financing II, Inc., a wholly-owned subsidiary of the Operating Partnership (together with the Operating Partnership, the “Issuers”). The Notes priced at 99.486% of par value, with a coupon of 6.250%, and will mature on December 15, 2031. The Notes will be senior unsecured obligations of the Issuers, guaranteed by GLPI.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Jeff Bezos says 2 policies drive up housing costs, and it's 'not hard to figure out'",
+   "link": "https://finance.yahoo.com/real-estate/articles/jeff-bezos-says-2-policies-230700861.html",
+   "publishDate": "2026-11-19T23:07:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The Amazon founder says the causes of sky-high home prices are simpler than politicians make them sound.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Magnera Corp (MAGN) (Q4 2026) Earnings Call Highlights: Strong Free Cash Flow and Debt ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/magnera-corp-magn-q4-2026-230110873.html",
+   "publishDate": "2026-11-19T23:01:10+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Magnera Corp (MAGN) delivered 8% quarterly EBITDA growth and $115 million in fiscal 2026 free cash flow while navigating softer volumes and a $106 million impairment charge.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Williams-Sonoma Inc (WSM) Q3 2026 Earnings Call Highlights: Broad-Based Comps, Margin Expansion ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/williams-sonoma-inc-wsm-q3-230055951.html",
+   "publishDate": "2026-11-19T23:00:55+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Williams-Sonoma Inc (WSM) posted 5.8% revenue growth with every brand and channel positive, as operating margin rose 40 basis points and EPS climbed 12% despite diesel and supply chain headwinds.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Jewett-Cameron Reports Fiscal 2026 Operational and Financial Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/19/3407192/0/en/jewett-cameron-reports-fiscal-2026-operational-and-financial-results.html",
+   "publishDate": "2026-11-19T23:00:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "NORTH PLAINS, Ore., Nov. 19, 2026 (GLOBE NEWSWIRE) -- Jewett-Cameron Trading Company Ltd. (the \"Company\"; Nasdaq: JCTC), a company committed to innovative products that enrich outdoor spaces, today announced operational and financial results for its fiscal year 2026 ended August 31, 2026.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Grand Theft Auto VI outplays Nvidia and SpaceX",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/grand-theft-auto-vi-outplays-230000641.html",
+   "publishDate": "2026-11-19T23:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Rockstar’s long-awaited blockbuster sends a tokenized stock past Wall Street’s favorite chipmaker, and the game itself is drawing near-perfect reviews.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Hormuz Oil Exports Could Decline amid Inbound Tanker Shortage",
+   "link": "https://finance.yahoo.com/energy/articles/hormuz-oil-exports-could-decline-230000563.html",
+   "publishDate": "2026-11-19T23:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The increased flows of oil from the Strait of Hormuz, mostly thanks to ship-to-ship (STS) transfers in the Gulf of Oman, are tying up supertankers for weeks waiting for the transfers outside the Strait",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "U.S. Treasury yields slip on safe-haven bid, 10-year posts four-day losing streak",
+   "link": "https://finance.yahoo.com/economy/policy/articles/u-treasury-yields-slip-safe-225927497.html",
+   "publishDate": "2026-11-19T22:59:27+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Investing.com -- U.S. Treasury yields fell on Thursday as traders snapped up bonds, with longer-end maturities posting a four-day losing streak. Market participants have flocked to the safety of government debt amid an ongoing rout in the artificial intelligence trade on Wall Street.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "The Tech Panic and Government Credibility",
+   "link": "https://www.wsj.com/opinion/tech-outages-panic-political-leaders-donald-trump-jd-vance-c356b10d",
+   "publishDate": "2026-11-19T22:59:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "An Administration that runs on bluster has a hard time reassuring the public.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Cattle Rally Higher on Thursday, as Cash Remains Slow",
+   "link": "https://finance.yahoo.com/markets/commodities/articles/cattle-rally-higher-thursday-cash-225300160.html",
+   "publishDate": "2026-11-19T22:53:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Live cattle futures posted gains of $1.95 to 3.30 across the board on Thursday. Cash trade has been limited to light $215 sales in the north so far this week. The Thursday Fed Cattle Exchange auction saw no sales or bids on the 2,092 head offered. Feeder cattle futures were...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Gold extends losses below $3,700, pressured by rate-hike bets",
+   "link": "https://seekingalpha.com/news/4674964-gold-extends-losses-below-3700-pressured-by-rate-hike-bets",
+   "publishDate": "2026-11-19T22:45:23+00:00",
+   "source": "seekingalpha.com",
+   "summary": "Gold futures fell to fresh 14-month lows as the market's overwhelming consensus anticipates a rate hike at the Federal Reserve's December meeting to combat stubborn inflation.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Crypto Market Today, Nov. 19: Bitcoin Approaches $60,000 as ETF Outflows Surpass $2.5 Billion in 2026",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/crypto-market-today-nov-19-224502799.html",
+   "publishDate": "2026-11-19T22:45:02+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Investors are continuing to reduce their exposure to digital assets as the cryptocurrency bear market drags on.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Anthropic was supposed to save the AI trade. What went wrong?",
+   "link": "https://www.cnbc.com/2026/11/19/anthropic-ipo-ai-stocks-selloff.html",
+   "publishDate": "2026-11-19T22:41:43+00:00",
+   "source": "www.cnbc.com",
+   "summary": "Technology stocks tanked despite one of the most hotly anticipated tech IPOs in years. Here's why Anthropic couldn't revive AI animal spirits.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Binance to issue refunds following Anthropic IPO",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/binance-issue-refunds-following-anthropic-223735304.html",
+   "publishDate": "2026-11-19T22:37:35+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The AI giant’s record-breaking IPO saw shares open 34% above the offering price.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Jefferies Has Wall Street’s Highest Target on Eli Lilly (LLY). Why?",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/jefferies-wall-street-highest-target-223346007.html",
+   "publishDate": "2026-11-19T22:33:46+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published a list of the Morgan Stanley’s Vintage Values 2027: 10 Stocks Analysts See Climbing Further and Eli Lilly (NYSE:LLY) ranked 10th on this list. Bloomberg reported on November 13, 2026, that one bank’s strategists expect the S&P 500 to reach 8,700 within 12 months. They also see earnings growth slowing to 11% […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Two Deals and a Higher Target: UBS’s Call on McKesson (MCK)",
+   "link": "https://finance.yahoo.com/healthcare/articles/two-deals-higher-target-ubs-223331229.html",
+   "publishDate": "2026-11-19T22:33:31+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published a list of the Morgan Stanley’s Vintage Values 2027: 10 Stocks Analysts See Climbing Further and McKesson (NYSE:MCK) ranked 9th on this list. Bloomberg reported on November 13, 2026, that one bank’s strategists expect the S&P 500 to reach 8,700 within 12 months. They also see earnings growth slowing to 11% in […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "What Morgan Stanley Saw Before Raising Its Visa (V) Target",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/morgan-stanley-saw-raising-visa-223317532.html",
+   "publishDate": "2026-11-19T22:33:17+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published a list of the Morgan Stanley’s Vintage Values 2027: 10 Stocks Analysts See Climbing Further and Visa (NYSE:V) ranked 8th on this list. Bloomberg reported on November 13, 2026, that one bank’s strategists expect the S&P 500 to reach 8,700 within 12 months. They also see earnings growth slowing to 11% in […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Rothschild & Co Redburn Downgraded TransUnion (TRU) but Raised Its Target",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/rothschild-co-redburn-downgraded-transunion-223303390.html",
+   "publishDate": "2026-11-19T22:33:03+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published a list of the Morgan Stanley’s Vintage Values 2027: 10 Stocks Analysts See Climbing Further and TransUnion (NYSE:TRU) ranked 7th on this list. Bloomberg reported on November 13, 2026, that one bank’s strategists expect the S&P 500 to reach 8,700 within 12 months. They also see earnings growth slowing to 11% in […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Jim Cramer reveals top retirement stock with eyes on cheaper beef",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-reveals-top-retirement-223300483.html",
+   "publishDate": "2026-11-19T22:33:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The better bargain wasn’t the obvious one.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Liberty Formula One (FWONK): One of the Stocks Analysts See Climbing Further",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/liberty-formula-one-fwonk-one-223252998.html",
+   "publishDate": "2026-11-19T22:32:52+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published a list of the Morgan Stanley’s Vintage Values 2027: 10 Stocks Analysts See Climbing Further and Liberty Formula One (NASDAQ:FWONK) ranked 6th on this list. Bloomberg reported on November 13, 2026, that one bank’s strategists expect the S&P 500 to reach 8,700 within 12 months. They also see earnings growth slowing to […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Morgan Stanley’s Vintage Values 2027: 5 Stocks Analysts See Climbing Further",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/morgan-stanley-vintage-values-2027-223235273.html",
+   "publishDate": "2026-11-19T22:32:35+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Bloomberg reported on November 13, 2026, that one bank’s strategists expect the S&P 500 to reach 8,700 within 12 months. They also see earnings growth slowing to 11% in 2027 from 36% in 2026. That gap matters because slower profit growth changes what investors reward. According to the report, buyers are willing to pay up […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "The Inner Circle acknowledges Lieda A. Shadwick, as a Pinnacle Professional of The Year",
+   "link": "https://www.prnewswire.com/news-releases/the-inner-circle-acknowledges-lieda-a-shadwick-as-a-pinnacle-professional-of-the-year-302946116.html",
+   "publishDate": "2026-11-19T22:31:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "ST. LOUIS, Nov. 19, 2026 /PRNewswire/ -- Prominently featured in The Inner Circle, Lieda A. Shadwick is recognized as Educator of the Year 2026 for her outstanding contributions to educational leadership and marketing education. Ms. Shadwick has devoted her career to preparing students...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Kentucky KFC workers arrived for Saturday shifts to find their store shut down — with a hiring sign still on the door",
+   "link": "https://finance.yahoo.com/small-business/articles/kentucky-kfc-workers-arrived-saturday-223000406.html",
+   "publishDate": "2026-11-19T22:30:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The closures appear to be part of a broader attempt by franchisee Tasty Chick’n LLC to break leases on more than 70 locations across the U.S.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Ripple CEO sees crypto rebound, draws Anthropic IPO-SpaceX parallel",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/ripple-ceo-sees-crypto-rebound-223000788.html",
+   "publishDate": "2026-11-19T22:30:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Brad Garlinghouse says investors dumped Bitcoin and XRP to chase Anthropic shares, just as they did before SpaceX went public.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "U.S. Treasury yields slip on safe-haven bid, 10-year posts four-day losing streak",
+   "link": "https://www.investing.com/news/stock-market-news/us-treasury-yields-slip-on-safehaven-bid-10year-posts-fourday-losing-streak-5040235",
+   "publishDate": "2026-11-19T22:29:27+00:00",
+   "source": "www.investing.com",
+   "summary": "- U.S. Treasury yields fell on Thursday as traders snapped up bonds, with longer-end maturities posting a four-day losing streak. Market participants have flocked to the safety of government debt amid an ongoing rout in the artificial intelligence trade on Wall Street. The benchmark U.S.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "A 27-year-old emptied his Roth IRA and moved $12,000 to Robinhood for a shot at Anthropic's record IPO",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/27-old-emptied-roth-ira-221500468.html",
+   "publishDate": "2026-11-19T22:15:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Retail investors are expected to pour $250 million into Anthropic stock on day one, double the SpaceX debut.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Anthropic Stock Slips as Apple Aims to Develop AI Agent",
+   "link": "https://www.benzinga.com/trading-ideas/movers/26/11/63461769/anthropic-stock-slips-as-apple-aims-to-develop-ai-agent",
+   "publishDate": "2026-11-19T22:13:26.932000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Anthropic shares are moving lower in Thursday's after-hours session following reports that Apple is working on its own AI agent.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Anthropic’s stock surges in its debut — and the rest of the market dives anyway",
+   "link": "https://www.marketwatch.com/story/anthropics-stock-surges-in-its-debut-and-the-rest-of-the-market-dives-anyway-19671218",
+   "publishDate": "2026-11-19T22:12:00+00:00",
+   "source": "www.marketwatch.com",
+   "summary": "All four major U.S. stock indexes are now on pace for their worst week since President Trump’s “liberation day” tariffs of April 2025",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "GOP Effort to Pass $350 Billion In Extra Military Spending Stalls In Lame Duck",
+   "link": "https://www.wsj.com/politics/policy/gop-effort-to-pass-350-billion-in-extra-military-spending-stalls-in-lame-duck-d8b14835",
+   "publishDate": "2026-11-19T22:06:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "The Pentagon wants the hefty spending package in addition to its $1.1T base budget but hasn’t been able to shore up support among lawmakers.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Apple developing AI agent that could operate apps and browse the web - Bloomberg",
+   "link": "https://www.investing.com/news/stock-market-news/apple-developing-ai-agent-that-could-operate-apps-and-browse-the-web--bloomberg-5040175",
+   "publishDate": "2026-11-19T22:04:29+00:00",
+   "source": "www.investing.com",
+   "summary": "- Apple is developing an autonomous artificial intelligence assistant designed to carry out tasks on users’ behalf, according to a Bloomberg News report, signaling a push into the increasingly competitive market for AI agents.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "TRADING DAY World's biggest IPO? Pfft",
+   "link": "https://www.reuters.com/commentary/reuters-open-interest/global-markets-trading-day-graphic-2026-11-19/",
+   "publishDate": "2026-11-19T22:00:30.259000+00:00",
+   "source": "www.reuters.com",
+   "summary": "US stocks slumped 2% on Thursday, with the S&P 500 and Nasdaq making fresh seven-month lows, as investors shrugged off the euphoria of Claude maker Anthropic's record-breaking market debut and focused instead on growing concerns over the longer-term outlook for the AI trade.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "5 Energy Stocks to Benefit from Anthropic’s $1.5 Trillion Debut",
+   "link": "https://finance.yahoo.com/energy/articles/5-energy-stocks-benefit-anthropic-220000406.html",
+   "publishDate": "2026-11-19T22:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Anthropic priced its IPO at $83 and raised $81.3 billion. Five energy stocks, from Caterpillar to Hut 8, sell into its gas generator and grid power needs.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "US signed off on sales of nearly 900,000 AI chips to China in six months",
+   "link": "https://www.aljazeera.com/economy/2026/11/19/us-signed-off-on-sales-of-nearly-900000-ai-chips-to-china-in-six-months",
+   "publishDate": "2026-11-19T21:58:27+00:00",
+   "source": "www.aljazeera.com",
+   "summary": "US House committee releases chip export data amid scrutiny of former Nvidia CEO's alleged links to a Chinese spy.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "SEC's Daly sees no chance of launching 3x, 5x single-stock leveraged ETFs",
+   "link": "https://www.reuters.com/legal/government/secs-daly-sees-no-chance-launching-3x-5x-single-stock-leveraged-etfs-2026-11-19/",
+   "publishDate": "2026-11-19T21:55:09.800000+00:00",
+   "source": "www.reuters.com",
+   "summary": "The US Securities and Exchange Commission is unlikely to approve exchange-traded funds that offer leverage of three to five ​times the exposure to the daily performance of individual stocks, according ‌to Brian Daly, director of the agency's division of investment management.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "SEC's Daly sees no chance of launching 3x, 5x single-stock leveraged ETFs",
+   "link": "https://finance.yahoo.com/news/secs-daly-sees-no-chance-215500926.html",
+   "publishDate": "2026-11-19T21:55:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "By Suzanne McGee NEW YORK, Nov 19 (Reuters) - The US Securities and Exchange Commission is unlikely to approve exchange-traded funds that offer leverage of three to five times the exposure to the",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "The Crypto Bear Market Could Be Back. Here’s What I’m Doing About It.",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/crypto-bear-market-could-back-215302270.html",
+   "publishDate": "2026-11-19T21:53:02+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "With Bitcoin's spectacular breakdown over the last weeks, a lot of questions about the crypto market's short-term prospects are being raised.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Gap cuts full-year outlook, brings in Vuori, Fabletics exec to run Athleta",
+   "link": "https://seekingalpha.com/news/4674889-gap-cuts-full-year-outlook-brings-in-vuori-fabletics-exec-to-run-athleta",
+   "publishDate": "2026-11-19T21:51:42+00:00",
+   "source": "seekingalpha.com",
+   "summary": "Gap earnings show $0.86 GAAP EPS, up 39% with tariff refunds, as the retailer cuts full-year adjusted EPS guidance to $2.29-$2.34, below $2.40 consensus.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Two Big Debuts Fail To Boost Stocks",
+   "link": "https://www.wsj.com/finance/stocks/two-big-debuts-fail-to-boost-stocks-b68b79b1",
+   "publishDate": "2026-11-19T21:43:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "Plus, cyber fears hit financials and Williams-Sonoma gets cooked",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "12 Influencer-Touted ETFs That Have Fallen Out of Favor: Don't Discount the Risks of Acting on Social Media Investing Advice",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/12-influencer-touted-etfs-fallen-213711613.html",
+   "publishDate": "2026-11-19T21:37:11+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Social media influencers tout investments at a blistering pace, but many beginning investors may be unaware of the underlying downside risk until it's too late.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Anthropic achieves $2tn valuation as shares soar",
+   "link": "https://finance.yahoo.com/news/anthropic-achieves-2tn-valuation-shares-213456309.html",
+   "publishDate": "2026-11-19T21:34:56+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Anthropic has surged to a $2tn (£1.5tn) valuation as the Claude-maker defied a tech sell-off with a record-breaking float.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Anthropic achieves $2tn valuation as shares soar",
+   "link": "https://finance.yahoo.com/technology/ai/articles/anthropic-achieves-2tn-valuation-shares-213456888.html",
+   "publishDate": "2026-11-19T21:34:56+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Anthropic has surged to a $2tn (£1.5tn) valuation as the Claude-maker defied a tech sell-off with a record-breaking float.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Wall Street ends sharply lower as Anthropic's debut fails to revive AI fervor",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/wall-street-ends-sharply-lower-213427908.html",
+   "publishDate": "2026-11-19T21:34:27+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "By Stephen Culp and Ragini Mathur NEW YORK, Nov 19 (Reuters) - US stocks slumped on Thursday, after Anthropic's super-sized IPO failed to revitalize faded enthusiasm over artificial intelligence, as",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Stock Indices Plunge Amid Broad Market Weakness",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/stock-indices-plunge-amid-broad-213331073.html",
+   "publishDate": "2026-11-19T21:33:31+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The S&P 500 Index ($SPX ) (SPY ) closed down -2.02% on Thursday, the Dow Jones Industrial Average ($DOWI ) (DIA ) closed down -2.19%, and the Nasdaq 100 Index ($IUXX ) (QQQ ) closed down -2.21%. December E-mini S&P futures (ESZ26 ) fell -2.03%, and December E-mini Nasdaq futures...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Gap shares rise after third quarter earnings beat estimates",
+   "link": "https://www.investing.com/news/earnings/gap-shares-rise-after-third-quarter-earnings-beat-estimates-5040050",
+   "publishDate": "2026-11-19T21:26:01+00:00",
+   "source": "www.investing.com",
+   "summary": "- Gap Inc. shares traded about 4% higher in after-hours trading on Thursday following the release of third quarter financial results that exceeded profit expectations. The apparel retailer reported earnings per share of $0.82 for the quarter, beating analyst estimates of $0.78.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "The Case for Capitulation in the Corn Market",
+   "link": "https://finance.yahoo.com/markets/commodities/articles/case-capitulation-corn-market-212352940.html",
+   "publishDate": "2026-11-19T21:23:52+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Forced liquidation in commodities if weakness in the stock market continues could complicate the situation for ags.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Trump China trip: Iran and Ukraine not in 'peace declaration' and more takeaways",
+   "link": "https://abcnews.com/Politics/trump-china-trip-iran-ukraine-peace-declaration-takeaways/story?id=138292154",
+   "publishDate": "2026-11-19T21:22:53+00:00",
+   "source": "abcnews.com",
+   "summary": "Trump, Xi and Putin don't have much to say after their historic meeting.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Wabash Announces Quarterly Dividend",
+   "link": "https://www.globenewswire.com/news-release/2026/11/19/3407139/10640/en/wabash-announces-quarterly-dividend.html",
+   "publishDate": "2026-11-19T21:22:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "FAYETTE, Ind., Nov. 19, 2026 (GLOBE NEWSWIRE) -- Wabash (NYSE: WNC) today announced that its board of directors declared a regular quarterly dividend of $0.08 per share of the company’s common stock, payable on January 28, 2027, to stockholders of record on January 7, 2027.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Social Security has less than 6 years before a 22% cut. A Senate chairman’s fix is to borrow $190 trillion and call it the ‘Stop Scaring Seniors Act’",
+   "link": "https://finance.yahoo.com/economy/policy/articles/social-security-less-6-years-211541948.html",
+   "publishDate": "2026-11-19T21:15:41+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "A nonpartisan watchdog called Ron Johnson’s proposal a “cynical pander that ducks all the real decisions.”",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Gap names new Athleta CEO, lowers full-year guidance",
+   "link": "https://www.cnbc.com/2026/11/19/gap-gap-q3-2026-earnings.html",
+   "publishDate": "2026-11-19T21:15:38+00:00",
+   "source": "www.cnbc.com",
+   "summary": "Gap on Thursday announced Ashley Kechter as the new CEO of Athleta. The retailer also reported mixed fiscal third-quarter earnings.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Australian Stock Market Today: ASX Futures Slide On Jobs Weakness And Inflation Uncertainty",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/australian-stock-market-today-asx-211505214.html",
+   "publishDate": "2026-11-19T21:15:05+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The Morning Bull - Australian Market Morning Update Friday, 20 Nov 2026 Australian shares are set to open weaker, with sentiment driven mainly by the labour market shock rather than offshore swings. Softer SPI futures point to a market that is reassessing growth, inflation and the interest rate path all at once. The unemployment rate lifted to 4.9% in October, above expectations of 4.7%, while total employment dropped by 43,500 and participation eased to 66.6%. That combination suggests...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Webull Reports Third Quarter 2026 Financial Results",
+   "link": "https://www.prnewswire.com/news-releases/webull-reports-third-quarter-2026-financial-results-302946152.html",
+   "publishDate": "2026-11-19T21:15:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "Webull reports another strong quarter of growth, marked by record trading volumes and customer assets. Webull continues to invest behind strategic priorities, including enhanced offerings for its active traders, international expansion, and building out its institutional business. ST....",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Post Holdings Reports Results for the Fourth Quarter and Fiscal Year 2026",
+   "link": "https://www.prnewswire.com/news-releases/post-holdings-reports-results-for-the-fourth-quarter-and-fiscal-year-2026-302946066.html",
+   "publishDate": "2026-11-19T21:15:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "ST. LOUIS, Nov. 19, 2026 /PRNewswire/ -- Post Holdings, Inc. (NYSE: POST), a consumer packaged goods holding company, today reported results for the fourth fiscal quarter and fiscal year ended September 30, 2026. Highlights: Fourth quarter net sales of $2.0 billion; operating profit of...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Gap Inc. Reports Third Quarter Fiscal 2026 Results",
+   "link": "https://www.prnewswire.com/news-releases/gap-inc-reports-third-quarter-fiscal-2026-results-302946045.html",
+   "publishDate": "2026-11-19T21:15:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "Net sales up 2% versus last year; comparable sales flat Exceeded operating margin expectations Earnings per share up over 30% versus last year Provides updated outlook for full year Company separately announces Ashley Kechter as Athleta's next President and CEO SAN FRANCISCO, Nov. 19,...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "ESCO Reports Fourth Quarter and Fiscal 2026 Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/19/3407132/0/en/esco-reports-fourth-quarter-and-fiscal-2026-results.html",
+   "publishDate": "2026-11-19T21:15:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "- Q4 Sales increase 9% to $384 Million - Q4 Entered Orders increase 22% to $392 Million - Q4 GAAP EPS from Continuing Operations increases 14% to $1.97 - Q4 Adjusted EPS from Continuing Operations increases 15% to $2.67 - FY 2026 Sales increase 21% to $1.3 Billion - FY 2026 Entered Orders increase 11% to $1.7 Billion - FY 2026 GAAP EPS from Continuing Operations increases 25% to $5.63 - FY 2026 Adjusted EPS from Continuing Operations increases 40% to $8.42 - - Q4 Sales increase 9% to $384 Million - Q4 Entered Orders increase 22% to $392 Million - Q4 GAAP EPS from Continuing Operations increases 14% to $1.97 - Q4 Adjusted EPS from Continuing Operations increases 15% to $2.67 - FY 2026 Sales increase 21% to $1.3 Billion - FY 2026 Entered Orders increase 11% to $1.7 Billion - FY 2026 GAAP EPS from Continuing Operations increases 25% to $5.63 - FY 2026 Adjusted EPS from Continuing Operations increases 40% to $8.42 -",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Stifel Reports October 2026 Operating Data",
+   "link": "https://www.globenewswire.com/news-release/2026/11/19/3407128/0/en/stifel-reports-october-2026-operating-data.html",
+   "publishDate": "2026-11-19T21:15:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "ST. LOUIS, Nov. 19, 2026 (GLOBE NEWSWIRE) -- Stifel Financial Corp. (NYSE: SF) today reported selected operating results for October 31, 2026, to provide timely information to investors on certain key performance metrics. Due to the limited nature of this data, a consistent correlation to earnings should not be assumed.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Ross Stores tumbles on weak fourth quarter earnings outlook",
+   "link": "https://www.investing.com/news/earnings/ross-stores-tumbles-on-weak-fourth-quarter-earnings-outlook-5039949",
+   "publishDate": "2026-11-19T21:11:32+00:00",
+   "source": "www.investing.com",
+   "summary": "- Ross Stores Inc (NASDAQ:ROST) shares fell 8.6% in after-hours trading Thursday after the off-price retailer issued fourth quarter earnings guidance below Wall Street expectations, despite beating estimates for the third quarter.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Casella Waste Systems, Inc. Announces Board Leadership Transition",
+   "link": "https://www.globenewswire.com/news-release/2026/11/19/3407121/8693/en/casella-waste-systems-inc-announces-board-leadership-transition.html",
+   "publishDate": "2026-11-19T21:10:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "CASELLA WASTE SYSTEMS, INC. ANNOUNCES BOARD LEADERSHIP TRANSITION WASTE INDUSTRY LEADER MICHAEL L. BATTLES NAMED AS LEAD INDEPENDENT DIRECTOR",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 things to look out for on Friday",
+   "link": "https://seekingalpha.com/news/4674886-3-things-to-look-out-for-on-friday",
+   "publishDate": "2026-11-19T21:09:40+00:00",
+   "source": "seekingalpha.com",
+   "summary": "U.S. stocks fall 2.02%-2.25% as Anthropic IPO shares open at $111.50; Friday brings earnings, the Michigan survey and Fed speeches.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "JBS completes $150M joint venture for protein production in Oman",
+   "link": "https://www.investing.com/news/assorted/jbs-completes-150m-joint-venture-for-protein-production-in-oman-432SI-5039921",
+   "publishDate": "2026-11-19T21:09:04+00:00",
+   "source": "www.investing.com",
+   "summary": "JBS N.V. (JBS) has completed a transaction establishing a multiprotein production platform in Oman, the company announced in a press release. Following a $150 million investment, JBS holds an 80% stake in a newly formed food holding company, with Oman Food Capital (OFC) retaining the remaining 20%.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "LPL Financial Reports Monthly Activity for October 2026",
+   "link": "https://www.globenewswire.com/news-release/2026/11/19/3407114/29579/en/lpl-financial-reports-monthly-activity-for-october-2026.html",
+   "publishDate": "2026-11-19T21:05:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "SAN DIEGO, Nov. 19, 2026 (GLOBE NEWSWIRE) -- LPL Financial Holdings Inc. (Nasdaq: LPLA) (the “Company”) today released its monthly activity report for October 2026.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Beacon Financial Corporation Announces Leadership Appointments",
+   "link": "https://www.globenewswire.com/news-release/2026/11/19/3407115/0/en/beacon-financial-corporation-announces-leadership-appointments.html",
+   "publishDate": "2026-11-19T21:05:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Please see attached 8K and Press Release . Please reference the 8K and Press Release of J. Eagan.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Can Bitcoin Reach Standard Chartered’s $500,000 Target by 2030?",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-reach-standard-chartered-500-210325550.html",
+   "publishDate": "2026-11-19T21:03:25+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Wall Street's boldest Bitcoin forecast just collided with a brutal November slide, shrinking ETF demand, and a Fed that refuses to blink. Can the bank's long-range call survive the pressure, or is the first checkpoint already slipping away?",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Stanley Druckenmiller dumps entire $120M Alphabet stake to buy gold mining stock",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/stanley-druckenmiller-dumps-entire-120m-210300614.html",
+   "publishDate": "2026-11-19T21:03:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Duquesne Family Office held 336,300 shares of Alphabet, valued at $120.2 million, on June 30 as indicated in its Q2 13F filing. By Sept. 30, it held none.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Synopsys vs Cadence: value and quality compared",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/synopsys-vs-cadence-value-quality-210130165.html",
+   "publishDate": "2026-11-19T21:01:30+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Investing.com -- Synopsys and Cadence have near-identical market caps, but they are priced differently. Synopsys Inc (SNPS) has the stronger forward growth and the cheaper forward multiple. Cadence Design Systems Inc (CDNS) has the cleaner balance sheet and returns on capital. On the numbers below, Synopsys looks like the better value, though Cadence has the better underlying quality.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Ross Stores Reports Strong Third Quarter Sales and Earnings Results",
+   "link": "https://www.prnewswire.com/news-releases/ross-stores-reports-strong-third-quarter-sales-and-earnings-results-302946112.html",
+   "publishDate": "2026-11-19T21:01:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "Updates Fourth Quarter and Fiscal 2026 Outlook DUBLIN, Calif., Nov. 19, 2026 /PRNewswire/ -- Ross Stores, Inc. (Nasdaq: ROST) today reported financial results for the 13‑week quarter ended October 31, 2026. Highlights: Total sales for the third quarter of fiscal 2026 increased a robust...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Kamada Updates on Withholding Tax Procedures on Previously Announced Cash Dividend to Shareholders",
+   "link": "https://www.globenewswire.com/news-release/2026/11/19/3407101/0/en/kamada-updates-on-withholding-tax-procedures-on-previously-announced-cash-dividend-to-shareholders.html",
+   "publishDate": "2026-11-19T21:01:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "REHOVOT, Israel and HOBOKEN, N.J., Nov. 19, 2026 (GLOBE NEWSWIRE) -- Kamada Ltd. (the “Company”) (NASDAQ: KMDA; TASE: KMDA.TA), a global biopharmaceutical company with a portfolio of marketed products indicated for rare and serious conditions and a leader in the specialty plasma-derived field, announced today that it has obtained an extension of the previously granted tax ruling (the “Ruling”) from the Israel Tax Authority (the “ITA”) with respect to the cash dividend of $0.14 (approximately NIS 0.45) per share on the Company’s ordinary shares (totaling approximately $8.0 million) announced on November 9, 2026 (the “Dividend”), expected to be paid on December 9, 2026 (the “Payment Date”), to shareholders of record at the close of business on November 19, 2026 (the “Record Date”).",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Walmart Inc (WMT) (Q3 2027) Earnings Call Highlights: Raised Guidance, 23% US E-Commerce Growth ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/walmart-inc-wmt-q3-2027-210048614.html",
+   "publishDate": "2026-11-19T21:00:48+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Walmart Inc (WMT) beats sales guidance with 4.4% constant-currency growth, lifts full-year outlook, and leans into advertising, marketplace and fast delivery to outpace rising costs.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Wall Street ends sharply lower as Anthropic's debut fails to revive AI fervor",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/wall-street-ends-sharply-lower-210028386.html",
+   "publishDate": "2026-11-19T21:00:28+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "By Stephen Culp and Ragini Mathur NEW YORK, Nov 19 (Reuters) - US stocks slumped on Thursday, after Anthropic's super-sized IPO failed to revitalize faded enthusiasm over artificial intelligence, as",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "PDD earnings analysis: questions answered and next catalysts",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/pdd-earnings-analysis-questions-answered-210021782.html",
+   "publishDate": "2026-11-19T21:00:21+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Investing.com -- PDD Holdings (PDD) reported Q3 FY2026 on Nov 19, 2026. Profit beat and revenue missed, and the market responded positively to the profit result.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Birchcliff Energy Ltd. Receives TSX Approval for Renewal of Normal Course Issuer Bid",
+   "link": "https://www.globenewswire.com/news-release/2026/11/19/3407097/0/en/birchcliff-energy-ltd-receives-tsx-approval-for-renewal-of-normal-course-issuer-bid.html",
+   "publishDate": "2026-11-19T21:00:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "CALGARY, Alberta, Nov. 19, 2026 (GLOBE NEWSWIRE) -- Birchcliff Energy Ltd. (“Birchcliff” or the “Corporation”) (TSX: BIR) is pleased to announce that the Toronto Stock Exchange (the “TSX”) has accepted the Corporation’s notice of intention to make a normal course issuer bid (the “NCIB”).",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "The top cryptocurrency is down 13% in a week. Is it really over?",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/top-cryptocurrency-down-13-week-210000592.html",
+   "publishDate": "2026-11-19T21:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "A 13% weekly plunge and billions in ETF outflows have investors questioning whether the bull run has been running out of steam.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Fed's Barr worried regulatory changes may increase financial sector risks",
+   "link": "https://finance.yahoo.com/economy/policy/articles/feds-barr-worried-regulation-changes-195352604.html",
+   "publishDate": "2026-11-19T20:56:27+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "By Michael S.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Economic outlook dims on weak consumer expectations: Conference Board",
+   "link": "https://finance.yahoo.com/economy/articles/economic-outlook-dims-weak-consumer-205501408.html",
+   "publishDate": "2026-11-19T20:55:01+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Economic growth so far this year has primarily hinged on the level of spending on artificial intelligence, according to Apollo Global Management Chief Economist Torsten Slok.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "New Legislation Would Triple Federal Contracting Goal for Women-Owned Small Businesses",
+   "link": "https://www.prnewswire.com/news-releases/new-legislation-would-triple-federal-contracting-goal-for-women-owned-small-businesses-302946150.html",
+   "publishDate": "2026-11-19T20:55:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "American Small Business League and Don't Cheat Women Project applaud bill to expand opportunities for women entrepreneurs SAN FRANCISCO, Nov. 19, 2026 /PRNewswire/ -- The Women's Economic Fairness and Small Business Contracting Act, legislation introduced today by Senator Adam Schiff,...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Plunging oil refining margins signal inflation relief for central banks",
+   "link": "https://seekingalpha.com/news/4674879-plunging-oil-refining-margins-signal-inflation-relief-for-central-banks",
+   "publishDate": "2026-11-19T20:54:21+00:00",
+   "source": "seekingalpha.com",
+   "summary": "Oil refining margins fall toward pre-war levels as 3-2-1 spreads drop to $25-$40 a barrel from $60-$75, signaling cooling inflation.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "US dealmaking growth to slow in 2027: EY",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/us-dealmaking-growth-slow-2027-204411710.html",
+   "publishDate": "2026-11-19T20:44:11+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "After a three-year boom, deal activity is expected to moderate as buyers become more selective amid higher borrowing costs and policy uncertainty.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Nvidia Up 8.9% After a Strong Anthropic IPO? That’s What Tilt’s New Investing Tool Modeled",
+   "link": "https://www.benzinga.com/markets/prediction-markets/26/11/63457684/anthropic-ipo-nvidia",
+   "publishDate": "2026-11-19T20:44:06.634000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Tilt modeled Anthropic’s IPO lifting Nvidia 8.9% over 20 days while Apple fell 2.3%.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Oil-market shock keeps costs high for US small businesses even as crude pulls back",
+   "link": "https://finance.yahoo.com/small-business/articles/oil-market-shock-keeps-costs-203805531.html",
+   "publishDate": "2026-11-19T20:38:05+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Investing.com -- The Bank of America Institute report shows costs staying high even though crude has pulled back. Crude Oil WTI (CL) was at $82.76 and Brent Oil (LCO) at $92.15 as of Nov 19, 3:06 PM EST. WTI is down about 16% over one month and 23% over six months. It is still up roughly 44% year to date and 39% over one year. The 52-week high for WTI was $117.63. Small-business costs therefore reflect a year-long climb, not just today’s price.",
+   "sentiment": null,
+   "confidence": null
+  }
+ ]
+}

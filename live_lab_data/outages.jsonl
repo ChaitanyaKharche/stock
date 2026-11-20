@@ -5133,3 +5133,766 @@
 {"seq":20975,"ts":"2026-11-12T15:54:44.587171","kind":"tick","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
 {"seq":20976,"ts":"2026-11-12T15:54:56.618152","kind":"tick","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
 {"seq":20977,"ts":"2026-11-12T15:55:05.478821","kind":"feed","detail":"upstream recovered after 33s and 3 failed call(s)","path":"__recovered__"}
+{"seq":23003,"ts":"2026-11-19T10:33:52.188574","kind":"stale_quote","detail":"QQQ age=7.0s"}
+{"seq":23004,"ts":"2026-11-19T10:33:52.281417","kind":"stale_quote","detail":"SPY age=7.1s"}
+{"seq":23005,"ts":"2026-11-19T10:33:57.368666","kind":"stale_quote","detail":"QQQ age=12.1s"}
+{"seq":23006,"ts":"2026-11-19T10:33:57.448188","kind":"stale_quote","detail":"SPY age=12.2s"}
+{"seq":23035,"ts":"2026-11-19T10:39:23.070111","kind":"stale_quote","detail":"QQQ age=5.9s"}
+{"seq":23036,"ts":"2026-11-19T10:39:23.159468","kind":"stale_quote","detail":"SPY age=6.0s"}
+{"seq":23142,"ts":"2026-11-19T11:08:53.416893","kind":"stale_quote","detail":"QQQ age=7.3s"}
+{"seq":23143,"ts":"2026-11-19T11:08:53.497300","kind":"stale_quote","detail":"SPY age=7.1s"}
+{"seq":23144,"ts":"2026-11-19T11:10:03.697121","kind":"stale_quote","detail":"QQQ age=6.3s"}
+{"seq":23147,"ts":"2026-11-19T11:10:04.089429","kind":"stale_quote","detail":"SPY age=6.7s"}
+{"seq":23150,"ts":"2026-11-19T11:10:09.177783","kind":"stale_quote","detail":"QQQ age=10.4s"}
+{"seq":23151,"ts":"2026-11-19T11:10:09.260165","kind":"stale_quote","detail":"SPY age=10.5s"}
+{"seq":23152,"ts":"2026-11-19T11:10:19.688491","kind":"stale_quote","detail":"QQQ age=6.8s"}
+{"seq":23153,"ts":"2026-11-19T11:10:19.779106","kind":"stale_quote","detail":"SPY age=6.9s"}
+{"seq":23279,"ts":"2026-11-19T14:00:50.902444","kind":"feed","detail":"HTTPError('HTTP 503: io exception')","path":"/stock/history/ohlc"}
+{"seq":23280,"ts":"2026-11-19T14:00:50.909204","kind":"tick","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: io exception')\")"}
+{"seq":23281,"ts":"2026-11-19T14:01:02.945212","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":23282,"ts":"2026-11-19T14:01:02.958181","kind":"tick","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23283,"ts":"2026-11-19T14:01:15.012967","kind":"feed","detail":"HTTPError('HTTP 503: io exception')","path":"/stock/history/ohlc"}
+{"seq":23284,"ts":"2026-11-19T14:01:15.016047","kind":"tick","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: io exception')\")"}
+{"seq":23285,"ts":"2026-11-19T14:01:27.048969","kind":"tick","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: io exception')\")"}
+{"seq":23286,"ts":"2026-11-19T14:01:39.192275","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: io exception')\")"}
+{"seq":23287,"ts":"2026-11-19T14:02:01.247131","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/history/ohlc"}
+{"seq":23288,"ts":"2026-11-19T14:02:01.260052","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23289,"ts":"2026-11-19T14:02:23.303315","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23290,"ts":"2026-11-19T14:02:45.349304","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23291,"ts":"2026-11-19T14:03:07.382240","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23292,"ts":"2026-11-19T14:03:29.415726","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23293,"ts":"2026-11-19T14:03:51.471361","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23294,"ts":"2026-11-19T14:04:13.532987","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23295,"ts":"2026-11-19T14:04:35.598207","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23296,"ts":"2026-11-19T14:04:57.660071","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23297,"ts":"2026-11-19T14:05:19.706546","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23298,"ts":"2026-11-19T14:05:41.751593","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23299,"ts":"2026-11-19T14:06:03.792191","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23300,"ts":"2026-11-19T14:06:25.851891","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23301,"ts":"2026-11-19T14:06:47.924875","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23302,"ts":"2026-11-19T14:07:09.989115","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23303,"ts":"2026-11-19T14:07:32.044883","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23304,"ts":"2026-11-19T14:07:54.079808","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23305,"ts":"2026-11-19T14:08:16.145678","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23306,"ts":"2026-11-19T14:08:38.207417","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23307,"ts":"2026-11-19T14:09:00.276493","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23308,"ts":"2026-11-19T14:09:22.308997","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23309,"ts":"2026-11-19T14:09:44.366636","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23310,"ts":"2026-11-19T14:10:06.414823","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23311,"ts":"2026-11-19T14:10:28.446799","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23312,"ts":"2026-11-19T14:10:50.486927","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23313,"ts":"2026-11-19T14:11:12.536489","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23314,"ts":"2026-11-19T14:11:34.580368","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23315,"ts":"2026-11-19T14:11:56.617518","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23316,"ts":"2026-11-19T14:12:18.667924","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23317,"ts":"2026-11-19T14:12:40.716875","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23318,"ts":"2026-11-19T14:13:02.752643","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23319,"ts":"2026-11-19T14:13:24.785216","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23320,"ts":"2026-11-19T14:13:46.821547","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23321,"ts":"2026-11-19T14:14:08.855500","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23322,"ts":"2026-11-19T14:14:30.912309","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23323,"ts":"2026-11-19T14:14:52.972548","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23324,"ts":"2026-11-19T14:15:15.021235","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23325,"ts":"2026-11-19T14:15:37.079995","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23326,"ts":"2026-11-19T14:15:59.119252","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23327,"ts":"2026-11-19T14:16:21.189371","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23328,"ts":"2026-11-19T14:16:43.244895","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23329,"ts":"2026-11-19T14:17:05.287782","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23330,"ts":"2026-11-19T14:17:27.335771","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23331,"ts":"2026-11-19T14:17:49.364927","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23332,"ts":"2026-11-19T14:18:11.414675","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23333,"ts":"2026-11-19T14:18:33.449236","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23334,"ts":"2026-11-19T14:18:55.493397","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23335,"ts":"2026-11-19T14:19:17.561280","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23336,"ts":"2026-11-19T14:19:39.595550","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23337,"ts":"2026-11-19T14:20:01.634615","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23338,"ts":"2026-11-19T14:20:23.670640","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23339,"ts":"2026-11-19T14:20:45.731434","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23340,"ts":"2026-11-19T14:21:07.785213","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23341,"ts":"2026-11-19T14:21:29.826730","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23342,"ts":"2026-11-19T14:21:51.883794","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23343,"ts":"2026-11-19T14:22:13.926549","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23344,"ts":"2026-11-19T14:22:35.961822","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23345,"ts":"2026-11-19T14:22:58.011476","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23346,"ts":"2026-11-19T14:23:20.044443","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23347,"ts":"2026-11-19T14:23:42.085846","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23348,"ts":"2026-11-19T14:24:04.127523","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23349,"ts":"2026-11-19T14:24:26.172195","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23350,"ts":"2026-11-19T14:24:48.226139","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23351,"ts":"2026-11-19T14:25:10.255606","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23352,"ts":"2026-11-19T14:25:32.316275","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23353,"ts":"2026-11-19T14:25:54.374106","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23354,"ts":"2026-11-19T14:26:16.415215","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23355,"ts":"2026-11-19T14:26:38.455687","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23356,"ts":"2026-11-19T14:27:00.511132","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23357,"ts":"2026-11-19T14:27:22.537657","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23358,"ts":"2026-11-19T14:27:44.590552","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23359,"ts":"2026-11-19T14:28:06.631761","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23360,"ts":"2026-11-19T14:28:28.654864","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23361,"ts":"2026-11-19T14:28:50.713231","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23362,"ts":"2026-11-19T14:29:12.746960","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23363,"ts":"2026-11-19T14:29:34.778803","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23364,"ts":"2026-11-19T14:29:56.832328","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23365,"ts":"2026-11-19T14:30:18.893724","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23366,"ts":"2026-11-19T14:30:40.928745","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23367,"ts":"2026-11-19T14:31:02.991697","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23368,"ts":"2026-11-19T14:31:25.042421","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23369,"ts":"2026-11-19T14:31:47.105450","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23370,"ts":"2026-11-19T14:32:09.171562","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23371,"ts":"2026-11-19T14:32:31.227625","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23372,"ts":"2026-11-19T14:32:53.277885","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23373,"ts":"2026-11-19T14:33:15.328159","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23374,"ts":"2026-11-19T14:33:37.366249","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23375,"ts":"2026-11-19T14:33:59.402004","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23376,"ts":"2026-11-19T14:34:21.462592","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23377,"ts":"2026-11-19T14:34:43.519383","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23378,"ts":"2026-11-19T14:35:05.566117","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23379,"ts":"2026-11-19T14:35:27.630148","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23380,"ts":"2026-11-19T14:35:49.694369","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23381,"ts":"2026-11-19T14:36:11.739222","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23382,"ts":"2026-11-19T14:36:33.777676","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23383,"ts":"2026-11-19T14:36:55.812187","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23384,"ts":"2026-11-19T14:37:17.859091","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23385,"ts":"2026-11-19T14:37:39.921999","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23386,"ts":"2026-11-19T14:38:01.976925","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23387,"ts":"2026-11-19T14:38:24.044630","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23388,"ts":"2026-11-19T14:38:46.089909","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23389,"ts":"2026-11-19T14:39:08.153843","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23390,"ts":"2026-11-19T14:39:30.208558","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23391,"ts":"2026-11-19T14:39:52.268348","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23392,"ts":"2026-11-19T14:40:14.308932","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23393,"ts":"2026-11-19T14:40:36.351840","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23394,"ts":"2026-11-19T14:40:58.401645","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23395,"ts":"2026-11-19T14:41:20.466564","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23396,"ts":"2026-11-19T14:41:42.529163","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23397,"ts":"2026-11-19T14:42:04.571826","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23398,"ts":"2026-11-19T14:42:26.617128","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23399,"ts":"2026-11-19T14:42:48.658992","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23400,"ts":"2026-11-19T14:43:10.691340","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23401,"ts":"2026-11-19T14:43:32.739536","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23402,"ts":"2026-11-19T14:43:54.768119","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23403,"ts":"2026-11-19T14:44:16.831221","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23404,"ts":"2026-11-19T14:44:38.863607","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23405,"ts":"2026-11-19T14:45:00.923423","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23406,"ts":"2026-11-19T14:45:22.970489","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23407,"ts":"2026-11-19T14:45:45.040194","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23408,"ts":"2026-11-19T14:46:07.097601","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23409,"ts":"2026-11-19T14:46:29.150985","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23410,"ts":"2026-11-19T14:46:51.194950","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23411,"ts":"2026-11-19T14:47:13.244467","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23412,"ts":"2026-11-19T14:47:35.295090","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23413,"ts":"2026-11-19T14:47:57.344135","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23414,"ts":"2026-11-19T14:48:19.403323","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23415,"ts":"2026-11-19T14:48:41.450929","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23416,"ts":"2026-11-19T14:49:03.509388","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23417,"ts":"2026-11-19T14:49:25.565584","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23418,"ts":"2026-11-19T14:49:47.610598","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23419,"ts":"2026-11-19T14:50:09.657883","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23420,"ts":"2026-11-19T14:50:31.722595","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23421,"ts":"2026-11-19T14:50:53.760947","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23422,"ts":"2026-11-19T14:51:15.822990","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23423,"ts":"2026-11-19T14:51:37.887733","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23424,"ts":"2026-11-19T14:51:59.934324","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23425,"ts":"2026-11-19T14:52:21.972371","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23426,"ts":"2026-11-19T14:52:44.036469","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23427,"ts":"2026-11-19T14:53:06.086120","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23428,"ts":"2026-11-19T14:53:28.126810","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23429,"ts":"2026-11-19T14:53:50.164811","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23430,"ts":"2026-11-19T14:54:12.218533","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23431,"ts":"2026-11-19T14:54:34.283197","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23432,"ts":"2026-11-19T14:54:56.324776","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23433,"ts":"2026-11-19T14:55:18.376454","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23434,"ts":"2026-11-19T14:55:40.451353","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23435,"ts":"2026-11-19T14:56:02.522141","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23436,"ts":"2026-11-19T14:56:24.569129","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23437,"ts":"2026-11-19T14:56:46.657693","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23438,"ts":"2026-11-19T14:57:08.724134","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23439,"ts":"2026-11-19T14:57:30.770457","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23440,"ts":"2026-11-19T14:57:52.846553","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23441,"ts":"2026-11-19T14:58:14.905717","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":23328,"ts":"2026-11-20T09:48:02.546279","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM wanted stop, no bid"}
+{"seq":23329,"ts":"2026-11-20T09:48:02.548365","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM-1 wanted stop, no bid"}
+{"seq":23330,"ts":"2026-11-20T09:48:02.550387","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM+1 wanted stop, no bid"}
+{"seq":23335,"ts":"2026-11-20T09:48:08.575510","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM wanted stop, no bid"}
+{"seq":23336,"ts":"2026-11-20T09:48:08.577507","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM-1 wanted stop, no bid"}
+{"seq":23337,"ts":"2026-11-20T09:48:08.577507","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM+1 wanted stop, no bid"}
+{"seq":23338,"ts":"2026-11-20T09:48:14.062613","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM wanted stop, no bid"}
+{"seq":23339,"ts":"2026-11-20T09:48:14.065531","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM-1 wanted stop, no bid"}
+{"seq":23340,"ts":"2026-11-20T09:48:14.066530","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM+1 wanted stop, no bid"}
+{"seq":23341,"ts":"2026-11-20T09:48:19.458998","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM wanted stop, no bid"}
+{"seq":23342,"ts":"2026-11-20T09:48:19.459984","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM-1 wanted stop, no bid"}
+{"seq":23343,"ts":"2026-11-20T09:48:19.460984","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM+1 wanted stop, no bid"}
+{"seq":23344,"ts":"2026-11-20T09:48:24.792041","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM wanted stop, no bid"}
+{"seq":23345,"ts":"2026-11-20T09:48:24.794120","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM-1 wanted stop, no bid"}
+{"seq":23346,"ts":"2026-11-20T09:48:24.795003","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM+1 wanted stop, no bid"}
+{"seq":23347,"ts":"2026-11-20T09:48:30.467843","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM wanted stop, no bid"}
+{"seq":23348,"ts":"2026-11-20T09:48:30.469839","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM-1 wanted stop, no bid"}
+{"seq":23349,"ts":"2026-11-20T09:48:30.470956","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM+1 wanted stop, no bid"}
+{"seq":23350,"ts":"2026-11-20T09:48:35.841336","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM wanted stop, no bid"}
+{"seq":23351,"ts":"2026-11-20T09:48:35.842334","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM-1 wanted stop, no bid"}
+{"seq":23352,"ts":"2026-11-20T09:48:35.843336","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM+1 wanted stop, no bid"}
+{"seq":23353,"ts":"2026-11-20T09:48:41.221051","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM wanted stop, no bid"}
+{"seq":23354,"ts":"2026-11-20T09:48:41.224097","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM-1 wanted stop, no bid"}
+{"seq":23355,"ts":"2026-11-20T09:48:41.225061","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM+1 wanted stop, no bid"}
+{"seq":23356,"ts":"2026-11-20T09:48:46.556122","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM wanted stop, no bid"}
+{"seq":23357,"ts":"2026-11-20T09:48:46.557043","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM-1 wanted stop, no bid"}
+{"seq":23358,"ts":"2026-11-20T09:48:46.558128","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM+1 wanted stop, no bid"}
+{"seq":23359,"ts":"2026-11-20T09:48:51.892011","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM wanted stop, no bid"}
+{"seq":23360,"ts":"2026-11-20T09:48:51.893011","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM-1 wanted stop, no bid"}
+{"seq":23361,"ts":"2026-11-20T09:48:51.894010","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM+1 wanted stop, no bid"}
+{"seq":23362,"ts":"2026-11-20T09:48:57.262193","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM wanted stop, no bid"}
+{"seq":23363,"ts":"2026-11-20T09:48:57.265224","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM-1 wanted stop, no bid"}
+{"seq":23365,"ts":"2026-11-20T09:49:02.685586","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM wanted stop, no bid"}
+{"seq":23366,"ts":"2026-11-20T09:49:02.687556","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM-1 wanted stop, no bid"}
+{"seq":23372,"ts":"2026-11-20T09:49:08.100375","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM wanted stop, no bid"}
+{"seq":23373,"ts":"2026-11-20T09:49:08.101369","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM-1 wanted stop, no bid"}
+{"seq":23374,"ts":"2026-11-20T09:49:13.430543","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM wanted stop, no bid"}
+{"seq":23375,"ts":"2026-11-20T09:49:13.433539","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM-1 wanted stop, no bid"}
+{"seq":23376,"ts":"2026-11-20T09:49:18.794170","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM wanted stop, no bid"}
+{"seq":23377,"ts":"2026-11-20T09:49:18.796169","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM-1 wanted stop, no bid"}
+{"seq":23378,"ts":"2026-11-20T09:49:24.138271","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM wanted stop, no bid"}
+{"seq":23379,"ts":"2026-11-20T09:49:24.141269","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM-1 wanted stop, no bid"}
+{"seq":23380,"ts":"2026-11-20T09:49:29.473815","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM wanted stop, no bid"}
+{"seq":23381,"ts":"2026-11-20T09:49:29.475819","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM-1 wanted stop, no bid"}
+{"seq":23382,"ts":"2026-11-20T09:49:34.833050","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM wanted stop, no bid"}
+{"seq":23383,"ts":"2026-11-20T09:49:34.835987","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM-1 wanted stop, no bid"}
+{"seq":23384,"ts":"2026-11-20T09:49:40.195046","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM wanted stop, no bid"}
+{"seq":23385,"ts":"2026-11-20T09:49:40.197008","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM-1 wanted stop, no bid"}
+{"seq":23386,"ts":"2026-11-20T09:49:45.536486","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM wanted stop, no bid"}
+{"seq":23387,"ts":"2026-11-20T09:49:45.539555","kind":"exit_no_quote","detail":"VWAP_Reclaim ATM-1 wanted stop, no bid"}
+{"seq":23398,"ts":"2026-11-20T09:56:05.847771","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23399,"ts":"2026-11-20T09:56:05.848775","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23400,"ts":"2026-11-20T09:56:05.849771","kind":"exit_no_quote","detail":"ORB_5min ATM wanted stop, no bid"}
+{"seq":23401,"ts":"2026-11-20T09:56:05.850769","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23402,"ts":"2026-11-20T09:56:05.851782","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23409,"ts":"2026-11-20T09:56:12.217446","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23410,"ts":"2026-11-20T09:56:12.220451","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23411,"ts":"2026-11-20T09:56:12.222450","kind":"exit_no_quote","detail":"ORB_5min ATM wanted stop, no bid"}
+{"seq":23412,"ts":"2026-11-20T09:56:12.224455","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23413,"ts":"2026-11-20T09:56:12.225468","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23414,"ts":"2026-11-20T09:56:17.788733","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23415,"ts":"2026-11-20T09:56:17.791738","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23416,"ts":"2026-11-20T09:56:17.791738","kind":"exit_no_quote","detail":"ORB_5min ATM wanted stop, no bid"}
+{"seq":23417,"ts":"2026-11-20T09:56:17.792735","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23418,"ts":"2026-11-20T09:56:17.794066","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23419,"ts":"2026-11-20T09:56:23.177605","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23420,"ts":"2026-11-20T09:56:23.178601","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23421,"ts":"2026-11-20T09:56:23.179601","kind":"exit_no_quote","detail":"ORB_5min ATM wanted stop, no bid"}
+{"seq":23422,"ts":"2026-11-20T09:56:23.180593","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23423,"ts":"2026-11-20T09:56:23.181495","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23424,"ts":"2026-11-20T09:56:28.577133","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23425,"ts":"2026-11-20T09:56:28.579126","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23426,"ts":"2026-11-20T09:56:28.580126","kind":"exit_no_quote","detail":"ORB_5min ATM wanted stop, no bid"}
+{"seq":23427,"ts":"2026-11-20T09:56:28.581133","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23428,"ts":"2026-11-20T09:56:28.582134","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23429,"ts":"2026-11-20T09:56:33.967867","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23430,"ts":"2026-11-20T09:56:33.968867","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23431,"ts":"2026-11-20T09:56:33.969866","kind":"exit_no_quote","detail":"ORB_5min ATM wanted stop, no bid"}
+{"seq":23432,"ts":"2026-11-20T09:56:33.971244","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23433,"ts":"2026-11-20T09:56:33.972251","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23434,"ts":"2026-11-20T09:56:39.715575","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23435,"ts":"2026-11-20T09:56:39.717565","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23436,"ts":"2026-11-20T09:56:39.717565","kind":"exit_no_quote","detail":"ORB_5min ATM wanted stop, no bid"}
+{"seq":23437,"ts":"2026-11-20T09:56:39.718563","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23438,"ts":"2026-11-20T09:56:39.719570","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23439,"ts":"2026-11-20T09:56:45.216119","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23440,"ts":"2026-11-20T09:56:45.218136","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23442,"ts":"2026-11-20T09:56:45.220118","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23443,"ts":"2026-11-20T09:56:45.221391","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23444,"ts":"2026-11-20T09:56:50.650540","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23445,"ts":"2026-11-20T09:56:50.651540","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23446,"ts":"2026-11-20T09:56:50.652540","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23447,"ts":"2026-11-20T09:56:50.653539","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23448,"ts":"2026-11-20T09:56:56.013891","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23449,"ts":"2026-11-20T09:56:56.014904","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23450,"ts":"2026-11-20T09:56:56.015837","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23451,"ts":"2026-11-20T09:56:56.016895","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23452,"ts":"2026-11-20T09:57:01.374987","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23453,"ts":"2026-11-20T09:57:01.375993","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23454,"ts":"2026-11-20T09:57:01.376982","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23455,"ts":"2026-11-20T09:57:01.377996","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23456,"ts":"2026-11-20T09:57:07.304896","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23457,"ts":"2026-11-20T09:57:07.307898","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23458,"ts":"2026-11-20T09:57:07.308896","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23459,"ts":"2026-11-20T09:57:07.309897","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23464,"ts":"2026-11-20T09:57:13.024039","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23465,"ts":"2026-11-20T09:57:13.026234","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23466,"ts":"2026-11-20T09:57:13.027039","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23467,"ts":"2026-11-20T09:57:13.028038","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23468,"ts":"2026-11-20T09:57:18.598954","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23469,"ts":"2026-11-20T09:57:18.600950","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23470,"ts":"2026-11-20T09:57:18.601873","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23471,"ts":"2026-11-20T09:57:18.602947","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23472,"ts":"2026-11-20T09:57:23.963489","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23473,"ts":"2026-11-20T09:57:23.965525","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23474,"ts":"2026-11-20T09:57:23.966493","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23475,"ts":"2026-11-20T09:57:23.966493","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23476,"ts":"2026-11-20T09:57:29.316099","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23477,"ts":"2026-11-20T09:57:29.318099","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23478,"ts":"2026-11-20T09:57:29.319133","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23479,"ts":"2026-11-20T09:57:29.320138","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23480,"ts":"2026-11-20T09:57:34.780422","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23481,"ts":"2026-11-20T09:57:34.782420","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23482,"ts":"2026-11-20T09:57:34.783421","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23483,"ts":"2026-11-20T09:57:34.784421","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23484,"ts":"2026-11-20T09:57:40.145336","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23485,"ts":"2026-11-20T09:57:40.147335","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23486,"ts":"2026-11-20T09:57:40.148336","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23487,"ts":"2026-11-20T09:57:40.149372","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23488,"ts":"2026-11-20T09:57:45.495264","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23489,"ts":"2026-11-20T09:57:45.497420","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23490,"ts":"2026-11-20T09:57:45.498264","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23491,"ts":"2026-11-20T09:57:45.499264","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23492,"ts":"2026-11-20T09:57:50.864140","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23493,"ts":"2026-11-20T09:57:50.866271","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23494,"ts":"2026-11-20T09:57:50.867217","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23495,"ts":"2026-11-20T09:57:50.869188","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23496,"ts":"2026-11-20T09:57:56.268603","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23497,"ts":"2026-11-20T09:57:56.270601","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23498,"ts":"2026-11-20T09:57:56.271710","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23499,"ts":"2026-11-20T09:57:56.272688","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23500,"ts":"2026-11-20T09:58:02.028715","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23501,"ts":"2026-11-20T09:58:02.030709","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23502,"ts":"2026-11-20T09:58:02.031720","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23503,"ts":"2026-11-20T09:58:02.031720","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23504,"ts":"2026-11-20T09:58:07.805495","kind":"exit_no_quote","detail":"Crabel_Stretch ATM wanted stop, no bid"}
+{"seq":23505,"ts":"2026-11-20T09:58:07.807503","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23506,"ts":"2026-11-20T09:58:07.808994","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23507,"ts":"2026-11-20T09:58:07.808994","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23508,"ts":"2026-11-20T09:58:07.810487","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23509,"ts":"2026-11-20T09:58:07.811502","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23510,"ts":"2026-11-20T09:58:07.811502","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23517,"ts":"2026-11-20T09:58:13.398222","kind":"exit_no_quote","detail":"Crabel_Stretch ATM wanted stop, no bid"}
+{"seq":23518,"ts":"2026-11-20T09:58:13.399218","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23519,"ts":"2026-11-20T09:58:13.400214","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23520,"ts":"2026-11-20T09:58:13.401215","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23521,"ts":"2026-11-20T09:58:13.402421","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23522,"ts":"2026-11-20T09:58:13.403214","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23523,"ts":"2026-11-20T09:58:13.404209","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23525,"ts":"2026-11-20T09:58:18.847030","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23526,"ts":"2026-11-20T09:58:18.848029","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23527,"ts":"2026-11-20T09:58:18.849029","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23528,"ts":"2026-11-20T09:58:18.850030","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23529,"ts":"2026-11-20T09:58:18.851030","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23530,"ts":"2026-11-20T09:58:18.852029","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23531,"ts":"2026-11-20T09:58:24.290071","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23532,"ts":"2026-11-20T09:58:24.291077","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23533,"ts":"2026-11-20T09:58:24.292068","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23534,"ts":"2026-11-20T09:58:24.293076","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23535,"ts":"2026-11-20T09:58:24.294075","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23536,"ts":"2026-11-20T09:58:24.294075","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23537,"ts":"2026-11-20T09:58:29.731687","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23538,"ts":"2026-11-20T09:58:29.732640","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23539,"ts":"2026-11-20T09:58:29.733619","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23540,"ts":"2026-11-20T09:58:29.734670","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23541,"ts":"2026-11-20T09:58:29.735673","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23542,"ts":"2026-11-20T09:58:29.736609","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23543,"ts":"2026-11-20T09:58:35.286832","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23544,"ts":"2026-11-20T09:58:35.289831","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23545,"ts":"2026-11-20T09:58:35.290831","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23546,"ts":"2026-11-20T09:58:35.291845","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23547,"ts":"2026-11-20T09:58:35.291845","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23548,"ts":"2026-11-20T09:58:35.292831","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23549,"ts":"2026-11-20T09:58:40.751124","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23550,"ts":"2026-11-20T09:58:40.753123","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23551,"ts":"2026-11-20T09:58:40.753123","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23552,"ts":"2026-11-20T09:58:40.754124","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23553,"ts":"2026-11-20T09:58:40.755123","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23554,"ts":"2026-11-20T09:58:40.756123","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23555,"ts":"2026-11-20T09:58:46.129817","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23556,"ts":"2026-11-20T09:58:46.130734","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23557,"ts":"2026-11-20T09:58:46.132811","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23558,"ts":"2026-11-20T09:58:46.133821","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23559,"ts":"2026-11-20T09:58:46.133821","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23560,"ts":"2026-11-20T09:58:46.134734","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23561,"ts":"2026-11-20T09:58:51.490790","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23562,"ts":"2026-11-20T09:58:51.492753","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23563,"ts":"2026-11-20T09:58:51.493707","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23564,"ts":"2026-11-20T09:58:51.494707","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23565,"ts":"2026-11-20T09:58:51.495706","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23566,"ts":"2026-11-20T09:58:51.496706","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23567,"ts":"2026-11-20T09:58:56.967037","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23568,"ts":"2026-11-20T09:58:56.968038","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23569,"ts":"2026-11-20T09:58:56.986029","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23570,"ts":"2026-11-20T09:58:56.987058","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23571,"ts":"2026-11-20T09:58:56.988031","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23572,"ts":"2026-11-20T09:58:56.988031","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23573,"ts":"2026-11-20T09:59:03.308462","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23574,"ts":"2026-11-20T09:59:03.310463","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23575,"ts":"2026-11-20T09:59:03.311462","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23576,"ts":"2026-11-20T09:59:03.312656","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23577,"ts":"2026-11-20T09:59:03.312656","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23578,"ts":"2026-11-20T09:59:03.313680","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23583,"ts":"2026-11-20T09:59:09.311831","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23584,"ts":"2026-11-20T09:59:09.312831","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23585,"ts":"2026-11-20T09:59:09.313831","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23586,"ts":"2026-11-20T09:59:09.314877","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23587,"ts":"2026-11-20T09:59:09.315831","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23588,"ts":"2026-11-20T09:59:09.315831","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23589,"ts":"2026-11-20T09:59:15.186829","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23590,"ts":"2026-11-20T09:59:15.189829","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23591,"ts":"2026-11-20T09:59:15.190828","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23592,"ts":"2026-11-20T09:59:15.191827","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23593,"ts":"2026-11-20T09:59:15.192828","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23594,"ts":"2026-11-20T09:59:15.192828","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23595,"ts":"2026-11-20T09:59:20.597266","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23596,"ts":"2026-11-20T09:59:20.599272","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23597,"ts":"2026-11-20T09:59:20.600265","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23598,"ts":"2026-11-20T09:59:20.601265","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23599,"ts":"2026-11-20T09:59:20.602273","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23600,"ts":"2026-11-20T09:59:20.602273","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23601,"ts":"2026-11-20T09:59:26.010528","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23602,"ts":"2026-11-20T09:59:26.012559","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23603,"ts":"2026-11-20T09:59:26.013483","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23604,"ts":"2026-11-20T09:59:26.013483","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23605,"ts":"2026-11-20T09:59:26.015482","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23606,"ts":"2026-11-20T09:59:26.015482","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23607,"ts":"2026-11-20T09:59:31.580629","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23608,"ts":"2026-11-20T09:59:31.581630","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23609,"ts":"2026-11-20T09:59:31.582629","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23610,"ts":"2026-11-20T09:59:31.583630","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23611,"ts":"2026-11-20T09:59:31.584629","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23612,"ts":"2026-11-20T09:59:31.585629","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23613,"ts":"2026-11-20T09:59:37.185400","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23614,"ts":"2026-11-20T09:59:37.186390","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23615,"ts":"2026-11-20T09:59:37.188383","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23616,"ts":"2026-11-20T09:59:37.188383","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23617,"ts":"2026-11-20T09:59:37.189391","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23618,"ts":"2026-11-20T09:59:37.190385","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23619,"ts":"2026-11-20T09:59:42.551708","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23620,"ts":"2026-11-20T09:59:42.554652","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23621,"ts":"2026-11-20T09:59:42.554652","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23622,"ts":"2026-11-20T09:59:42.556655","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23623,"ts":"2026-11-20T09:59:42.557653","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23624,"ts":"2026-11-20T09:59:42.558655","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23625,"ts":"2026-11-20T09:59:48.075244","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23626,"ts":"2026-11-20T09:59:48.077237","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23627,"ts":"2026-11-20T09:59:48.078237","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23628,"ts":"2026-11-20T09:59:48.079236","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23629,"ts":"2026-11-20T09:59:48.080237","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23630,"ts":"2026-11-20T09:59:48.081237","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23631,"ts":"2026-11-20T09:59:53.606511","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23632,"ts":"2026-11-20T09:59:53.608608","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23633,"ts":"2026-11-20T09:59:53.610519","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23634,"ts":"2026-11-20T09:59:53.611574","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23635,"ts":"2026-11-20T09:59:53.612581","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23636,"ts":"2026-11-20T09:59:53.613590","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23637,"ts":"2026-11-20T09:59:59.251947","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23638,"ts":"2026-11-20T09:59:59.254033","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23639,"ts":"2026-11-20T09:59:59.254948","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23640,"ts":"2026-11-20T09:59:59.255948","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23641,"ts":"2026-11-20T09:59:59.256948","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23642,"ts":"2026-11-20T09:59:59.257947","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23643,"ts":"2026-11-20T10:00:05.307973","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23644,"ts":"2026-11-20T10:00:05.310965","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23645,"ts":"2026-11-20T10:00:05.311965","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23646,"ts":"2026-11-20T10:00:05.312965","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23647,"ts":"2026-11-20T10:00:05.312965","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23648,"ts":"2026-11-20T10:00:05.313964","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23658,"ts":"2026-11-20T10:00:12.381069","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23659,"ts":"2026-11-20T10:00:12.382140","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23660,"ts":"2026-11-20T10:00:12.383100","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23661,"ts":"2026-11-20T10:00:12.384090","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23662,"ts":"2026-11-20T10:00:12.384996","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23663,"ts":"2026-11-20T10:00:12.386009","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23664,"ts":"2026-11-20T10:00:17.740673","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23665,"ts":"2026-11-20T10:00:17.742691","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23666,"ts":"2026-11-20T10:00:17.743673","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23667,"ts":"2026-11-20T10:00:17.744675","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23668,"ts":"2026-11-20T10:00:17.745675","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23669,"ts":"2026-11-20T10:00:17.746674","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23670,"ts":"2026-11-20T10:00:23.112019","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23671,"ts":"2026-11-20T10:00:23.114957","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23672,"ts":"2026-11-20T10:00:23.116014","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23673,"ts":"2026-11-20T10:00:23.116977","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23674,"ts":"2026-11-20T10:00:23.117942","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23675,"ts":"2026-11-20T10:00:23.118939","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23676,"ts":"2026-11-20T10:00:28.474595","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23677,"ts":"2026-11-20T10:00:28.476660","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23678,"ts":"2026-11-20T10:00:28.478587","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23679,"ts":"2026-11-20T10:00:28.478587","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23680,"ts":"2026-11-20T10:00:28.479632","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23681,"ts":"2026-11-20T10:00:28.480582","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23682,"ts":"2026-11-20T10:00:34.038442","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23683,"ts":"2026-11-20T10:00:34.039433","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23684,"ts":"2026-11-20T10:00:34.040439","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23685,"ts":"2026-11-20T10:00:34.042436","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23686,"ts":"2026-11-20T10:00:34.042436","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23687,"ts":"2026-11-20T10:00:34.044441","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23688,"ts":"2026-11-20T10:00:39.550052","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23689,"ts":"2026-11-20T10:00:39.552971","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23690,"ts":"2026-11-20T10:00:39.554078","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23691,"ts":"2026-11-20T10:00:39.554971","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23692,"ts":"2026-11-20T10:00:39.554971","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23693,"ts":"2026-11-20T10:00:39.556025","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23694,"ts":"2026-11-20T10:00:45.014725","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23695,"ts":"2026-11-20T10:00:45.016717","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23696,"ts":"2026-11-20T10:00:45.017719","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23697,"ts":"2026-11-20T10:00:45.019725","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23698,"ts":"2026-11-20T10:00:45.019725","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23699,"ts":"2026-11-20T10:00:45.021724","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23700,"ts":"2026-11-20T10:00:50.471954","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23701,"ts":"2026-11-20T10:00:50.474871","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23702,"ts":"2026-11-20T10:00:50.474871","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23703,"ts":"2026-11-20T10:00:50.475960","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23704,"ts":"2026-11-20T10:00:50.476870","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23705,"ts":"2026-11-20T10:00:50.477931","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23706,"ts":"2026-11-20T10:00:55.902028","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23707,"ts":"2026-11-20T10:00:55.903042","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23708,"ts":"2026-11-20T10:00:55.905106","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23709,"ts":"2026-11-20T10:00:55.906034","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23710,"ts":"2026-11-20T10:00:55.908105","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23711,"ts":"2026-11-20T10:00:55.909116","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23712,"ts":"2026-11-20T10:01:01.333315","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23713,"ts":"2026-11-20T10:01:01.335319","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23714,"ts":"2026-11-20T10:01:01.336238","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23715,"ts":"2026-11-20T10:01:01.337238","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23716,"ts":"2026-11-20T10:01:01.338336","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23717,"ts":"2026-11-20T10:01:01.339238","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23718,"ts":"2026-11-20T10:01:06.768113","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23719,"ts":"2026-11-20T10:01:06.769112","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23720,"ts":"2026-11-20T10:01:06.770113","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23721,"ts":"2026-11-20T10:01:06.771112","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23722,"ts":"2026-11-20T10:01:06.771112","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23723,"ts":"2026-11-20T10:01:06.772113","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23729,"ts":"2026-11-20T10:01:12.350670","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23730,"ts":"2026-11-20T10:01:12.353671","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23731,"ts":"2026-11-20T10:01:12.353671","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23732,"ts":"2026-11-20T10:01:12.354669","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23733,"ts":"2026-11-20T10:01:12.355678","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23734,"ts":"2026-11-20T10:01:12.356678","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23735,"ts":"2026-11-20T10:01:18.065318","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23736,"ts":"2026-11-20T10:01:18.066316","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23737,"ts":"2026-11-20T10:01:18.067316","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23738,"ts":"2026-11-20T10:01:18.068316","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23739,"ts":"2026-11-20T10:01:18.069316","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23740,"ts":"2026-11-20T10:01:18.070329","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23741,"ts":"2026-11-20T10:01:23.501391","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23742,"ts":"2026-11-20T10:01:23.502392","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23743,"ts":"2026-11-20T10:01:23.503795","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23744,"ts":"2026-11-20T10:01:23.503795","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23745,"ts":"2026-11-20T10:01:23.504800","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23746,"ts":"2026-11-20T10:01:23.505800","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23747,"ts":"2026-11-20T10:01:28.887305","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23748,"ts":"2026-11-20T10:01:28.889222","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23749,"ts":"2026-11-20T10:01:28.890221","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23750,"ts":"2026-11-20T10:01:28.891322","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23751,"ts":"2026-11-20T10:01:28.893312","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23752,"ts":"2026-11-20T10:01:28.893312","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23753,"ts":"2026-11-20T10:01:34.281091","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23754,"ts":"2026-11-20T10:01:34.283090","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23755,"ts":"2026-11-20T10:01:34.284085","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23756,"ts":"2026-11-20T10:01:34.285104","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23757,"ts":"2026-11-20T10:01:34.286093","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23758,"ts":"2026-11-20T10:01:34.287084","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23759,"ts":"2026-11-20T10:01:39.627372","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23760,"ts":"2026-11-20T10:01:39.628376","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23761,"ts":"2026-11-20T10:01:39.629373","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23762,"ts":"2026-11-20T10:01:39.630368","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23763,"ts":"2026-11-20T10:01:39.631383","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23764,"ts":"2026-11-20T10:01:39.632377","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23765,"ts":"2026-11-20T10:01:45.402334","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23766,"ts":"2026-11-20T10:01:45.403334","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23767,"ts":"2026-11-20T10:01:45.404328","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23768,"ts":"2026-11-20T10:01:45.405327","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23769,"ts":"2026-11-20T10:01:45.431334","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23770,"ts":"2026-11-20T10:01:45.448225","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23771,"ts":"2026-11-20T10:01:50.984398","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23772,"ts":"2026-11-20T10:01:50.986430","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23773,"ts":"2026-11-20T10:01:50.988350","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23774,"ts":"2026-11-20T10:01:50.989351","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23775,"ts":"2026-11-20T10:01:50.990467","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23776,"ts":"2026-11-20T10:01:50.991349","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23777,"ts":"2026-11-20T10:01:56.428249","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23778,"ts":"2026-11-20T10:01:56.429740","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23779,"ts":"2026-11-20T10:01:56.430736","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23780,"ts":"2026-11-20T10:01:56.431757","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23781,"ts":"2026-11-20T10:01:56.432740","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23782,"ts":"2026-11-20T10:01:56.433736","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23783,"ts":"2026-11-20T10:02:02.307346","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23784,"ts":"2026-11-20T10:02:02.308347","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23785,"ts":"2026-11-20T10:02:02.310348","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23786,"ts":"2026-11-20T10:02:02.310348","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23787,"ts":"2026-11-20T10:02:02.311348","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23788,"ts":"2026-11-20T10:02:02.313474","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23794,"ts":"2026-11-20T10:02:08.260573","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23795,"ts":"2026-11-20T10:02:08.262596","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23796,"ts":"2026-11-20T10:02:08.263867","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23797,"ts":"2026-11-20T10:02:08.264875","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23798,"ts":"2026-11-20T10:02:08.265888","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23799,"ts":"2026-11-20T10:02:08.265888","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23800,"ts":"2026-11-20T10:02:13.693283","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23801,"ts":"2026-11-20T10:02:13.695385","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23802,"ts":"2026-11-20T10:02:13.696282","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23803,"ts":"2026-11-20T10:02:13.698385","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23804,"ts":"2026-11-20T10:02:13.699283","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23805,"ts":"2026-11-20T10:02:13.700288","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23806,"ts":"2026-11-20T10:02:19.398639","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23807,"ts":"2026-11-20T10:02:19.399639","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23808,"ts":"2026-11-20T10:02:19.401641","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23809,"ts":"2026-11-20T10:02:19.402641","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23810,"ts":"2026-11-20T10:02:19.403638","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23811,"ts":"2026-11-20T10:02:19.404638","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23812,"ts":"2026-11-20T10:02:24.913745","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23813,"ts":"2026-11-20T10:02:24.916741","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23814,"ts":"2026-11-20T10:02:24.917742","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23815,"ts":"2026-11-20T10:02:24.918769","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23816,"ts":"2026-11-20T10:02:24.919812","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23817,"ts":"2026-11-20T10:02:24.920747","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23818,"ts":"2026-11-20T10:02:30.296014","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23819,"ts":"2026-11-20T10:02:30.298015","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23820,"ts":"2026-11-20T10:02:30.299014","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23821,"ts":"2026-11-20T10:02:30.300014","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23822,"ts":"2026-11-20T10:02:30.301043","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23823,"ts":"2026-11-20T10:02:30.302048","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23824,"ts":"2026-11-20T10:02:35.655169","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23825,"ts":"2026-11-20T10:02:35.657273","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23826,"ts":"2026-11-20T10:02:35.658190","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23827,"ts":"2026-11-20T10:02:35.659185","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23828,"ts":"2026-11-20T10:02:35.661222","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23829,"ts":"2026-11-20T10:02:35.662199","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23830,"ts":"2026-11-20T10:02:41.009110","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23831,"ts":"2026-11-20T10:02:41.012134","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23832,"ts":"2026-11-20T10:02:41.013115","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23833,"ts":"2026-11-20T10:02:41.014111","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23834,"ts":"2026-11-20T10:02:41.015111","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23835,"ts":"2026-11-20T10:02:41.015111","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23836,"ts":"2026-11-20T10:02:46.358043","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23837,"ts":"2026-11-20T10:02:46.359979","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23838,"ts":"2026-11-20T10:02:46.360948","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23839,"ts":"2026-11-20T10:02:46.363055","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23840,"ts":"2026-11-20T10:02:46.363999","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23841,"ts":"2026-11-20T10:02:46.363999","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23842,"ts":"2026-11-20T10:02:51.693860","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23843,"ts":"2026-11-20T10:02:51.694873","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23844,"ts":"2026-11-20T10:02:51.695858","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23845,"ts":"2026-11-20T10:02:51.696883","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23846,"ts":"2026-11-20T10:02:51.697918","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23847,"ts":"2026-11-20T10:02:51.697918","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23848,"ts":"2026-11-20T10:02:57.036027","kind":"exit_no_quote","detail":"Crabel_Stretch ATM-1 wanted stop, no bid"}
+{"seq":23849,"ts":"2026-11-20T10:02:57.038023","kind":"exit_no_quote","detail":"Crabel_Stretch ATM+1 wanted stop, no bid"}
+{"seq":23850,"ts":"2026-11-20T10:02:57.039107","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23851,"ts":"2026-11-20T10:02:57.039107","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23852,"ts":"2026-11-20T10:02:57.040104","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23853,"ts":"2026-11-20T10:02:57.041074","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23854,"ts":"2026-11-20T10:03:02.401399","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23855,"ts":"2026-11-20T10:03:02.402431","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23856,"ts":"2026-11-20T10:03:02.403403","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23857,"ts":"2026-11-20T10:03:02.404319","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23861,"ts":"2026-11-20T10:03:07.741661","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23862,"ts":"2026-11-20T10:03:07.766540","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23863,"ts":"2026-11-20T10:03:07.768559","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23864,"ts":"2026-11-20T10:03:07.769527","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23865,"ts":"2026-11-20T10:03:13.116974","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23866,"ts":"2026-11-20T10:03:13.118894","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23867,"ts":"2026-11-20T10:03:13.119983","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23868,"ts":"2026-11-20T10:03:13.120967","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23869,"ts":"2026-11-20T10:03:18.451313","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":23870,"ts":"2026-11-20T10:03:18.453307","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23871,"ts":"2026-11-20T10:03:18.454308","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23872,"ts":"2026-11-20T10:03:18.455308","kind":"exit_no_quote","detail":"ORB_5min ATM+1 wanted stop, no bid"}
+{"seq":23874,"ts":"2026-11-20T10:03:23.849957","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23875,"ts":"2026-11-20T10:03:23.850869","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23877,"ts":"2026-11-20T10:03:29.389652","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23878,"ts":"2026-11-20T10:03:29.390652","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23879,"ts":"2026-11-20T10:03:34.976589","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23880,"ts":"2026-11-20T10:03:34.978597","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23881,"ts":"2026-11-20T10:03:40.314152","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23882,"ts":"2026-11-20T10:03:40.316155","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23883,"ts":"2026-11-20T10:03:45.783039","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23884,"ts":"2026-11-20T10:03:45.785035","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23885,"ts":"2026-11-20T10:03:51.130217","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23886,"ts":"2026-11-20T10:03:51.133185","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23887,"ts":"2026-11-20T10:03:56.620333","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23888,"ts":"2026-11-20T10:03:56.622396","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23889,"ts":"2026-11-20T10:04:02.556890","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23890,"ts":"2026-11-20T10:04:02.558884","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23896,"ts":"2026-11-20T10:04:08.355439","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23897,"ts":"2026-11-20T10:04:08.357454","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23898,"ts":"2026-11-20T10:04:13.684102","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23899,"ts":"2026-11-20T10:04:13.686100","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23900,"ts":"2026-11-20T10:04:19.016891","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23901,"ts":"2026-11-20T10:04:19.018896","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23902,"ts":"2026-11-20T10:04:24.493626","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23903,"ts":"2026-11-20T10:04:24.495711","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23904,"ts":"2026-11-20T10:04:29.824274","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23905,"ts":"2026-11-20T10:04:29.827188","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23906,"ts":"2026-11-20T10:04:35.164167","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23907,"ts":"2026-11-20T10:04:35.166167","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23908,"ts":"2026-11-20T10:04:40.548063","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23909,"ts":"2026-11-20T10:04:40.551062","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23910,"ts":"2026-11-20T10:04:45.926977","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23911,"ts":"2026-11-20T10:04:45.927976","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23912,"ts":"2026-11-20T10:04:51.283992","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23913,"ts":"2026-11-20T10:04:51.286997","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23914,"ts":"2026-11-20T10:04:56.690191","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23915,"ts":"2026-11-20T10:04:56.692280","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23916,"ts":"2026-11-20T10:05:02.510539","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23917,"ts":"2026-11-20T10:05:02.511671","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23923,"ts":"2026-11-20T10:05:07.981202","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23924,"ts":"2026-11-20T10:05:07.983294","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23925,"ts":"2026-11-20T10:05:13.385607","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23926,"ts":"2026-11-20T10:05:13.388604","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23927,"ts":"2026-11-20T10:05:18.833978","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23928,"ts":"2026-11-20T10:05:18.835970","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23929,"ts":"2026-11-20T10:05:24.284594","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23930,"ts":"2026-11-20T10:05:24.286683","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23931,"ts":"2026-11-20T10:05:29.625027","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23932,"ts":"2026-11-20T10:05:29.626054","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23933,"ts":"2026-11-20T10:05:34.951020","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23934,"ts":"2026-11-20T10:05:34.952014","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23935,"ts":"2026-11-20T10:05:40.317214","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM-1 wanted stop, no bid"}
+{"seq":23936,"ts":"2026-11-20T10:05:40.319214","kind":"exit_no_quote","detail":"ORB_5min ATM-1 wanted stop, no bid"}
+{"seq":23982,"ts":"2026-11-20T10:19:05.661081","kind":"exit_no_quote","detail":"Gap_Fade ATM+1 wanted stop, no bid"}
+{"seq":24239,"ts":"2026-11-20T14:20:27.031436","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/snapshot/quote"}
+{"seq":24240,"ts":"2026-11-20T14:20:27.034432","kind":"tick","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24241,"ts":"2026-11-20T14:20:39.072182","kind":"tick","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24242,"ts":"2026-11-20T14:20:51.101303","kind":"tick","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24243,"ts":"2026-11-20T14:21:03.146999","kind":"tick","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24244,"ts":"2026-11-20T14:21:15.201635","kind":"tick","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24245,"ts":"2026-11-20T14:21:27.224207","kind":"tick","detail":"UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24246,"ts":"2026-11-20T14:21:39.301916","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24247,"ts":"2026-11-20T14:22:01.334014","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24248,"ts":"2026-11-20T14:22:23.395927","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24249,"ts":"2026-11-20T14:22:45.427311","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24250,"ts":"2026-11-20T14:23:07.461471","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24251,"ts":"2026-11-20T14:23:29.494371","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24252,"ts":"2026-11-20T14:23:51.536658","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24253,"ts":"2026-11-20T14:24:13.557544","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24254,"ts":"2026-11-20T14:24:35.612657","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24255,"ts":"2026-11-20T14:24:57.642207","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24256,"ts":"2026-11-20T14:25:19.689669","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24257,"ts":"2026-11-20T14:25:41.722057","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24258,"ts":"2026-11-20T14:26:03.765380","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24259,"ts":"2026-11-20T14:26:25.815362","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24260,"ts":"2026-11-20T14:26:47.888771","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24261,"ts":"2026-11-20T14:27:09.938255","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24262,"ts":"2026-11-20T14:27:31.980743","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24263,"ts":"2026-11-20T14:27:54.029978","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24264,"ts":"2026-11-20T14:28:16.078690","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24265,"ts":"2026-11-20T14:28:38.141462","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24266,"ts":"2026-11-20T14:29:00.193400","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24267,"ts":"2026-11-20T14:29:22.242702","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24268,"ts":"2026-11-20T14:29:44.293489","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24269,"ts":"2026-11-20T14:30:06.361001","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24270,"ts":"2026-11-20T14:30:28.422815","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24271,"ts":"2026-11-20T14:30:50.482812","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24272,"ts":"2026-11-20T14:31:12.511600","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24273,"ts":"2026-11-20T14:31:34.571870","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24274,"ts":"2026-11-20T14:31:56.632846","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24275,"ts":"2026-11-20T14:32:18.685721","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24276,"ts":"2026-11-20T14:32:40.735642","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24277,"ts":"2026-11-20T14:33:02.787555","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24278,"ts":"2026-11-20T14:33:24.851332","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24279,"ts":"2026-11-20T14:33:46.898737","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24280,"ts":"2026-11-20T14:34:08.952700","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24281,"ts":"2026-11-20T14:34:31.012205","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24282,"ts":"2026-11-20T14:34:53.072643","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24283,"ts":"2026-11-20T14:35:15.119279","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24284,"ts":"2026-11-20T14:35:37.174629","kind":"catch_up_blocked","detail":"history unreachable, staying frozen: UpstreamUnreachable(\"/stock/history/ohlc failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24285,"ts":"2026-11-20T14:35:56.922728","kind":"feed","detail":"upstream recovered after 930s and 45 failed call(s)","path":"__recovered__"}
+{"seq":24287,"ts":"2026-11-20T14:36:42.719909","kind":"feed","detail":"HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')","path":"/stock/snapshot/quote"}
+{"seq":24288,"ts":"2026-11-20T14:36:42.721986","kind":"tick","detail":"UpstreamUnreachable(\"/stock/snapshot/quote failed after 4 attempts: HTTPError('HTTP 503: Unable to resolve host mdds-01.thetadata.us')\")"}
+{"seq":24289,"ts":"2026-11-20T14:36:49.160549","kind":"feed","detail":"upstream recovered after 6s and 1 failed call(s)","path":"__recovered__"}
+{"seq":24316,"ts":"2026-11-20T15:55:08.452454","kind":"exit_no_quote","detail":"Six_Lines ATM wanted target, no bid"}
+{"seq":24319,"ts":"2026-11-20T15:55:08.463541","kind":"exit_no_quote","detail":"Six_Lines_NoCap ATM wanted eod, no bid"}

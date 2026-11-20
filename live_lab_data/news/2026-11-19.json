@@ -1,0 +1,911 @@
+{
+ "session": "2026-11-19",
+ "fetched_at_et": "2026-11-19T07:30:19",
+ "query": "(Fed OR \"Federal Reserve\" OR inflation OR CPI OR jobs OR tariff OR tariffs OR war OR Treasury OR shutdown) AND (stocks OR markets OR economy)",
+ "window_from": "2026-11-18T16:00:00",
+ "window_to": "2026-11-19T07:30:19.001776",
+ "page_size": 100,
+ "n": 100,
+ "articles": [
+  {
+   "title": "Gold Pressured by Rate-Hike Bets, Broader Commodities Retreat",
+   "link": "https://www.wsj.com/finance/commodities-futures/gold-catches-breath-but-stays-at-over-one-year-lows-b3d16f60",
+   "publishDate": "2026-11-19T00:29:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "Gold prices continued to slip, with New York futures down 0.1% to $3,737.20.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Microsoft CEO Satya Nadella calls Outlook outage a 'perfect storm.' Here's what went wrong",
+   "link": "https://www.cnbc.com/2026/11/18/microsoft-put-the-ai-threat-to-software-behind-it-then-came-the-outage.html",
+   "publishDate": "2026-11-19T00:18:28+00:00",
+   "source": "www.cnbc.com",
+   "summary": "Microsoft shares have dropped nearly 9% since closing at a record high on Nov. 4.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Dollar Stays Near 19-Month High, Treasury Yields Rise",
+   "link": "https://www.wsj.com/finance/currencies/asian-currencies-consolidate-but-face-drag-from-fed-rate-bets-50c20e86",
+   "publishDate": "2026-11-19T00:17:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "The DXY dollar index fell, but held near a 19-month high as expectations of further Fed tightening continued to support the currency.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Inside India newsletter: Foreign flows helped the market recover. Now it faces the inflation test",
+   "link": "https://www.cnbc.com/2026/11/19/india-inflation-foreign-investor-nifty50.html",
+   "publishDate": "2026-11-19T00:01:23+00:00",
+   "source": "www.cnbc.com",
+   "summary": "India’s inflation, which has been on the rise for 12 straight months, is becoming a risk to growth and to the reversal of foreign inflows.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Morgan Stanley Says These 4 Companies Will Spend $1.6 Trillion on AI Infrastructure in 2027",
+   "link": "https://finance.yahoo.com/technology/ai/articles/morgan-stanley-says-4-companies-234321356.html",
+   "publishDate": "2026-11-18T23:43:21+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Morgan Stanley still expects eight major companies to spend approximately $1.6 trillion on AI infrastructure in 2027. In its November 8 report, Buy the Drop: AI Investment Opportunities Post the US Midterms, the bank puts their combined capital expenditure at $1.641 trillion in 2027 and $1.760 trillion in 2028. The report maintains the aggregate spending […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "$1.6 Billion Loss: Billionaire Bill Ackman Says He Was ‘A Little Bit Surprised’ by Berkshire’s $10 Billion Alphabet Bet, ‘They Got It at a 6% Discount, But So What?’",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/1-6-billion-loss-billionaire-234252128.html",
+   "publishDate": "2026-11-18T23:42:52+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Greg Abel's $10 billion Alphabet position isn't turning out as the company likely hoped, as it now sits $1.6 billion underwater.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Crypto asset manager's stock jumps 13% after full Ethereum sale",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/crypto-asset-managers-stock-jumps-234015714.html",
+   "publishDate": "2026-11-18T23:40:15+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "This company raised $19.3 million by selling Ethereum and part of its Solana holdings to support a $40 million share buyback.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "5 Best Drone Stocks to Buy According to Wall Street Analysts",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/5-best-drone-stocks-buy-233432579.html",
+   "publishDate": "2026-11-18T23:34:32+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "This article looks at the 5 Best Drone Stocks to Buy According to Wall Street Analysts. You can see the expanded list of the 10 Best Drone Stocks to Buy According to Wall Street Analysts here. Modern warfare is rapidly evolving with AI-powered drones becoming a prominent feature of conflicts. This has forced governments to […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Computacenter And 2 Other British Owner Operator Stocks To Own",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/computacenter-2-other-british-owner-232026259.html",
+   "publishDate": "2026-11-18T23:20:26+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Rising UK inflation, driven by energy bills and higher duties, is putting pressure on household budgets while also keeping interest rates elevated. In that kind of climate, founder led British businesses can look especially interesting because leaders with large personal stakes often focus on durability rather than quick wins. This article walks through three founder driven stocks from our screen that could help you think about long term wealth building. The three stocks highlighted here...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Morgan Stanley sees Caterpillar rental gains, stays cautious",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/morgan-stanley-sees-caterpillar-rental-231700732.html",
+   "publishDate": "2026-11-18T23:17:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "An expanding small-equipment business is attracting new customers, but Morgan Stanley sees bigger forces driving CAT stock.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Buffett’s Berkshire cuts BofA stake, adds to America's most-awarded airline",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/buffett-berkshire-cuts-bofa-stake-230700310.html",
+   "publishDate": "2026-11-18T23:07:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Berkshire added 7.1 million Delta shares during the third quarter of 2026.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Bain Pushes Back LNG Glut Outlook to 2030 as War Tightens Market",
+   "link": "https://www.bloomberg.com/news/articles/2026-11-18/bain-pushes-back-lng-glut-outlook-to-2030-as-war-tightens-market",
+   "publishDate": "2026-11-18T23:02:30+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "A looming global glut of liquefied natural gas has been pushed back by more than a year as the conflict in the Middle East disrupts supplies and delays projects, according to Bain & Co., extending a period of tightness that’s delivering higher profits for traders.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "What is happening with the Scottish government's bonds?",
+   "link": "https://www.bbc.co.uk/news/articles/cmwy8pgj2z8vo",
+   "publishDate": "2026-11-18T23:01:09+00:00",
+   "source": "www.bbc.co.uk",
+   "summary": "MSPs have heard both the pros and cons of the government's plan to launch its first ever bond to the market?",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "J&J Snack Foods Corp (JJSF) (Q4 2026) Earnings Call Highlights: Margin Expansion and Brand ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/j-j-snack-foods-corp-230054048.html",
+   "publishDate": "2026-11-18T23:00:54+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "J&J Snack Foods Corp (JJSF) grew gross margin 200 basis points and posted double-digit retail sales gains, but higher freight costs and Food Service softness weighed on adjusted earnings.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "C3is Inc (CISS) (Q3 2026) Earnings Call Highlights: Revenue Soars 249% as Fleet Expansion ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/c3is-inc-ciss-q3-2026-230045978.html",
+   "publishDate": "2026-11-18T23:00:45+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "C3is Inc (CISS) posted explosive top-line growth and a debt-free balance sheet in Q3 2026, though dry-docking costs weighed on quarterly profitability.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "For Putin, sharing a spotlight with Trump and Xi boosts his profile on the global stage",
+   "link": "https://apnews.com/article/russia-putin-trump-xi-apec-china-ukraine-6d85b5f8b96c1f8b7b12db605070e79e",
+   "publishDate": "2026-11-18T23:00:06+00:00",
+   "source": "apnews.com",
+   "summary": "",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Moody’s Says U.S. Economy Grew More Than Expected",
+   "link": "https://www.wsj.com/economy/moodys-says-u-s-economy-grew-more-than-expected-416c91a5",
+   "publishDate": "2026-11-18T22:50:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "The agency said it expects full-year growth of 2.3% this year, before slowing next year and in 2028 due to higher interest rates, elevated energy prices and normalization of the AI investment cycle.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Fitch upgrades Costa Rica to ’BB+’ with stable outlook on strong reserves",
+   "link": "https://www.investing.com/news/world-news/fitch-upgrades-costa-rica-to-bb-with-stable-outlook-on-strong-reserves-5037303",
+   "publishDate": "2026-11-18T22:47:40+00:00",
+   "source": "www.investing.com",
+   "summary": "- Fitch Ratings upgraded Costa Rica’s Long-Term Issuer Default Ratings (IDRs) to 'BB+' from 'BB' on Wednesday, positioning the Central American nation one notch below investment grade with a Stable Outlook.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Crypto Market Today, Nov. 18: Bitcoin's 12% Weekly Plunge Has Triggered a Rare Signal With a Surprising History",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/crypto-market-today-nov-18-224502946.html",
+   "publishDate": "2026-11-18T22:45:02+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "As liquidity continues to evaporate from cryptocurrency markets, Bitcoin is testing a long-term technical benchmark that has historically helped investors identify periods of extreme market weakness.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Loblaw November Food Inflation Report",
+   "link": "https://www.globenewswire.com/news-release/2026/11/18/3406219/0/en/loblaw-november-food-inflation-report.html",
+   "publishDate": "2026-11-18T22:44:14+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "TORONTO, Nov. 18, 2026 (GLOBE NEWSWIRE) -- Today, Loblaw released the latest edition of its Food Inflation Report, following Statistics Canada's release of October CPI data on Monday.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "US military returns to 2 aircraft carriers in the Middle East",
+   "link": "https://abcnews.com/US/wireStory/us-military-returns-2-aircraft-carriers-middle-east-138263316",
+   "publishDate": "2026-11-18T22:40:19+00:00",
+   "source": "abcnews.com",
+   "summary": "The U.S. military has gone back to having two aircraft carriers supporting Iran war operations after the USS George Washington departed the Middle East",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Dan Ives’ Top 10 AI Revolution Stock Picks: Inside The IVES ETF",
+   "link": "https://finance.yahoo.com/technology/ai/articles/dan-ives-top-10-ai-223943794.html",
+   "publishDate": "2026-11-18T22:39:43+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Dan Ives, who now works at Yorkville Ives & Co., called the November 5 technology rout a “golden buying opportunity” in a note reported by CNBC on November 6. He wrote that the Democratic midterm win could move the peak in Big Tech capital spending growth to 2027 from 2028 or 2029, but that the […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Brazil Senate approves fiscal package as government seeks to calm markets",
+   "link": "https://www.reuters.com/world/americas/brazil-senate-approves-fiscal-package-government-seeks-calm-markets-2026-11-18/",
+   "publishDate": "2026-11-18T22:34:46.346000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Brazil's Senate approved on Wednesday a a fiscal package that the government sees as essential to meet its fiscal targets and investors view as only a first step toward addressing the country's worsening debt ​outlook.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Brazil Senate approves fiscal package as government seeks to calm markets",
+   "link": "https://finance.yahoo.com/economy/policy/articles/brazil-senate-approves-fiscal-package-223323842.html",
+   "publishDate": "2026-11-18T22:33:23+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "By Marcela Ayres BRASILIA, Nov 18 (Reuters) - Brazil's Senate approved on Wednesday a a fiscal package that the government sees as essential to meet its fiscal targets and investors view as only a",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Home Depot hands the CEO job to its numbers man as shares dip",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/home-depot-hands-ceo-job-223300230.html",
+   "publishDate": "2026-11-18T22:33:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Home Depot’s next leader knows its books better than anyone. Investors want to know if that is enough to keep an early sales recovery going.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Anthropic prices its IPO at $83 per share, valuing the artificial intelligence giant at 1.5 trillion",
+   "link": "https://apnews.com/article/anthropic-ipo-pricing-70b660ddf900d90bbf484ecdf1fb441c",
+   "publishDate": "2026-11-18T22:32:07+00:00",
+   "source": "apnews.com",
+   "summary": "",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Anthropic prices its IPO at $83 per share, valuing the artificial intelligence giant at 1.5 trillion",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/anthropic-prices-ipo-83-per-222443646.html",
+   "publishDate": "2026-11-18T22:24:43+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "(AP) — Anthropic priced its initial public offering at $83 per share on Wednesday, according to multiple reports, an amount above the expected price range that values the artificial intelligence giant at $1.The San Francisco-based maker of the Claude AI tool is set to make its debut Thursday on Wall Street.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Food Processor Recovers $1.5M+ From Surplus MRO Inventory as Companies Reassess the Cost of Dead Stock, NRI Industrial Sales Analysis Finds",
+   "link": "https://www.accessnewswire.com/newsroom/en/business-and-professional-services/food-processor-recovers-1.5m-from-surplus-mro-inventory-as-compa-1253814",
+   "publishDate": "2026-11-18T22:20:00+00:00",
+   "source": "www.accessnewswire.com",
+   "summary": "NRI Industrial Sales has released an analysis of its published surplus-recovery case studies, led by a food processing company that recovered more than $1.5 million from surplus maintenance, repair, and operations (MRO) inventory. The result is one project outcome published in NRI's case-study library. It isn't a benchmark for other companies or industries.   The analysis places the result alongside independent inventory-cost research from APQC,...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 US Stocks Investors May Watch as Mega Cap IPO Fees Rise",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/3-us-stocks-investors-may-221725613.html",
+   "publishDate": "2026-11-18T22:17:25+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "A blockbuster Anthropic IPO targeting a $1.4t valuation and up to $64.3b in fresh capital is about to test how much investors still love big-ticket AI stories, and it could ripple far beyond one ticker. Every major listing reshapes index weights, trading volumes, and ETF flows, creating winners and wallflowers. This piece zeroes in on three US exchange and market-infrastructure stocks that are most directly tied to that shift. The stocks covered next are just a sample at the top of this...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "US military returns to 2 aircraft carriers in the Middle East",
+   "link": "https://apnews.com/article/iran-war-aircraft-carrier-uss-george-washington-f72d5aa085500412989183e606bfadfd",
+   "publishDate": "2026-11-18T22:14:17+00:00",
+   "source": "apnews.com",
+   "summary": "",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Bloomberg Businessweek Daily Podcast: Fed Sees More Hikes",
+   "link": "https://www.bloomberg.com/news/videos/2026-11-18/businessweek-daily-podcast-fed-sees-more-hikes-video",
+   "publishDate": "2026-11-18T22:13:04+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "The people, companies and trends shaping the global economy. Watch Carol and Tim LIVE every day on YouTube: http://bit.ly/3vTiACF\n\nNearly all Federal Reserve officials agreed in October they would likely have to raise interest rates “in the months ahead” to return inflation to their 2% target in a timely manner. Fed officials last month left interest rates unchanged and reiterated their commitment to containing inflation, but without offering a clear signal on whether they might raise rates at their next meeting in December. Bloomberg’s Mike McKee breaks down the minutes from last months meeting as they roll in.\n\nOn today’s episode:\n\nMike McKee, Bloomberg News International Economics & Policy Correspondent\nLaura Ullrich, Director of Economic Research at Indeed\nEd Ludlow, Bloomberg Tech Host\nDeena Shanker, Bloomberg Businessweek Writer (Source: Bloomberg)",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Amazon Widens Its Fuel Surcharge to Bulk Inventory Services",
+   "link": "https://finance.yahoo.com/economy/policy/articles/amazon-widens-fuel-surcharge-bulk-221019413.html",
+   "publishDate": "2026-11-18T22:10:19+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Amazon will apply a 3.5 percent fuel and logistics surcharge to other transportation fees starting Feb. 1, adding to a major fee reset in January.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Bank of Japan to raise interest rates in December and again by end-March, economists say: Reuters poll",
+   "link": "https://finance.yahoo.com/economy/policy/articles/bank-japan-raise-interest-rates-221008650.html",
+   "publishDate": "2026-11-18T22:10:08+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "By Satoshi Sugiyama TOKYO, Nov 19 (Reuters) - The Bank of Japan will raise interest rates for the third time this year at its December meeting and follow up with another by end-March, according to a",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Cattle Bounce Back on Wednesday",
+   "link": "https://finance.yahoo.com/markets/commodities/articles/cattle-bounce-back-wednesday-220940040.html",
+   "publishDate": "2026-11-18T22:09:40+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Live cattle futures closed with gains of $1.00 to $1.62 across the board on Wednesday. Cash trade has yet to get kicked off this week. The Wednesday Fed Cattle Exchange auction saw no sales or bids on the 2,092 head offered. Feeder cattle futures posted gains of $1.42 to $3.50...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "The Downside Risk in Stocks Is Still High, According to My 'Short List'",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/downside-risk-stocks-still-high-220451594.html",
+   "publishDate": "2026-11-18T22:04:51+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Assuming that carnage in high-beta stocks stays neatly contained during a market transition is one of the most dangerous mistakes investors make.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "TRADING DAY Markets mixed in a Nvidia, Anthropic, minutes swirl",
+   "link": "https://www.reuters.com/commentary/reuters-open-interest/global-markets-trading-day-graphic-2026-11-18/",
+   "publishDate": "2026-11-18T22:02:06.678000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Wall Street was mixed on Wednesday as investors digested Nvidia's earnings and awaited Anthropic's IPO pricing, while the positive impact on stocks and bonds from another decline in oil prices was limited by hawkish comments from Fed officials and minutes of the central bank's last policy meeting.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "CRM Stock Layoffs: What to Know as Salesforce Reportedly Begins More Job Cuts",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/crm-stock-layoffs-know-salesforce-220129514.html",
+   "publishDate": "2026-11-18T22:01:29+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Salesforce has reportedly started a fresh round of layoffs. Here’s what the news really means for CRM shares.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Monster Report Finds More Than Half of Workers Are Microshifting During the Workday",
+   "link": "https://www.prnewswire.com/news-releases/monster-report-finds-more-than-half-of-workers-are-microshifting-during-the-workday-302944414.html",
+   "publishDate": "2026-11-18T22:00:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "78% Say It Improves Productivity, Yet More Than Half of Microshifters Have Done It Without Their Manager Knowing GUAYNABO, Puerto Rico, Nov. 18, 2026 /PRNewswire/ -- The traditional workday may be evolving faster than workplace policies. According to Monster's® Microshifting Report, more...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "China Burns Less Oil and Coal as the Iran War Reshapes Its Energy Mix",
+   "link": "https://finance.yahoo.com/energy/articles/china-burns-less-oil-coal-220000903.html",
+   "publishDate": "2026-11-18T22:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "China's CO2 emissions fell 3.1% in Q3, the biggest drop since Covid, as the Iran war cuts oil use and speeds the clean energy shift.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "‘70% chance’ we’re already in an AI bubble: The economist who said ‘not yet’ in January now sees all four horsemen of the bubble apocalypse",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/70-chance-already-ai-bubble-220000565.html",
+   "publishDate": "2026-11-18T22:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "\"A lot has changed this year,\" Acadian's Owen Lamont told Fortune. One big tell is what the \"smart money\" is doing—getting out of stocks.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Commentary: Earth has surpassed global warming targets - what now?",
+   "link": "https://www.channelnewsasia.com/commentary/15degc-target-un-climate-summit-cop31-6562066",
+   "publishDate": "2026-11-18T21:59:00+00:00",
+   "source": "www.channelnewsasia.com",
+   "summary": "The first COP climate conference in the age of 1.5°C overshoot raises sobering questions for the climate movement, says Pilita Clark for the Financial Times.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Stocks slide despite bumper Nvidia profits, Anthropic IPO",
+   "link": "https://www.channelnewsasia.com/world/stocks-slide-despite-bumper-nvidia-profits-anthropic-ipo-6563861",
+   "publishDate": "2026-11-18T21:58:34+00:00",
+   "source": "www.channelnewsasia.com",
+   "summary": "NEW YORK: Investors on Wednesday (Nov 18) were absorbing a blockbuster earnings report from chip titan Nvidia and getting set for the long-awaited IPO from AI giant Anthropic, though stocks fell across the board as uncertainty continues to stalk the industry.The technology sector faces questions over whether",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Fed’s Kashkari says interest rates can impact tech investment",
+   "link": "https://www.investing.com/news/economy-news/feds-kashkari-says-interest-rates-can-impact-tech-investment-5037179",
+   "publishDate": "2026-11-18T21:53:17+00:00",
+   "source": "www.investing.com",
+   "summary": "- Federal Reserve Bank of Minneapolis President Neel Kashkari said Wednesday that he remains confident interest rates can influence investment levels in the technology sector.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "What StoneX Took From Its Boston Roadshow With Stagwell (STGW)",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/stonex-took-boston-roadshow-stagwell-214959678.html",
+   "publishDate": "2026-11-18T21:49:59+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published a list of the 10 Stocks Analysts Upgraded On Monday and Stagwell (NASDAQ:STGW) ranked 8th on this list. A broad selloff dragged US stocks lower on November 16, as Reuters reported that the exit of the founder of the world’s most closely watched AI chipmaker as chief executive had soured enthusiasm for […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "UBS Dropped Its Sell on Telefonica Brasil (VIV), Here’s Why.",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/ubs-dropped-sell-telefonica-brasil-214416188.html",
+   "publishDate": "2026-11-18T21:44:16+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published a list of the 10 Stocks Analysts Upgraded On Monday and Telefonica Brasil (NYSE:VIV) ranked 6th on this list. A broad selloff dragged US stocks lower on November 16, as Reuters reported that the exit of the founder of the world’s most closely watched AI chipmaker as chief executive had soured enthusiasm […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "5 Stocks Analysts Upgraded On Monday",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/5-stocks-analysts-upgraded-monday-214321122.html",
+   "publishDate": "2026-11-18T21:43:21+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "A broad selloff dragged US stocks lower on November 16, as Reuters reported that the exit of the founder of the world’s most closely watched AI chipmaker as chief executive had soured enthusiasm for AI shares. The chipmaker’s shares had just logged their longest weekly losing streak since October 2012, and a Reuters columnist wrote […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 Reasons to Buy Bitcoin Before 2027 and 2 Reasons to Wait",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/3-reasons-buy-bitcoin-2027-214306609.html",
+   "publishDate": "2026-11-18T21:43:06+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Bitcoin sits roughly halfway down from its October peak, fear is gripping the market, and the biggest corporate holder keeps buying anyway. Two looming pressures could still make patience the smarter play.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Tech Stocks Boosted by Cybersecurity Rally",
+   "link": "https://www.wsj.com/finance/stocks/tech-stocks-boosted-by-cybersecurity-rally-5f9ff803",
+   "publishDate": "2026-11-18T21:40:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "Plus, Nvidia slips after earnings and a Fed governor pushes for an aggressive hike",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Stocks Settle Mostly Lower as Nvidia Weakness Pressures Chipmakers",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/stocks-settle-mostly-lower-nvidia-213621504.html",
+   "publishDate": "2026-11-18T21:36:21+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The S&P 500 Index ($SPX ) (SPY ) closed down -0.23% on Wednesday, the Dow Jones Industrial Average ($DOWI ) (DIA ) closed down -1.11%, and the Nasdaq 100 Index ($IUXX ) (QQQ ) closed up +0.42%. December E-mini S&P futures (ESZ26 ) fell -0.21%, and December E-mini Nasdaq futures...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Tom Lee: Bitcoin, Ethereum, Solana Are ‘Still at the Beginning’",
+   "link": "https://www.benzinga.com/crypto/cryptocurrency/26/11/63414304/tom-lee-bitcoin-ethereum-solana-are-still-at-the-beginning",
+   "publishDate": "2026-11-18T21:30:08.662000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Bitcoin, Ethereum and Solana remain largely untouched by institutions as Tom Lee says Wall Street is finally catching on.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Magnera Reports Fourth Quarter and Fiscal Year Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/18/3406184/0/en/magnera-reports-fourth-quarter-and-fiscal-year-results.html",
+   "publishDate": "2026-11-18T21:30:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "CHARLOTTE, N.C., Nov. 18, 2026 (GLOBE NEWSWIRE) -- Fourth Quarter Highlights",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Xos Enters Energy Generation with the Xos Solar System, Bringing Grid-Independent Power to Any Site in Days",
+   "link": "https://www.globenewswire.com/news-release/2026/11/18/3406181/0/en/xos-enters-energy-generation-with-the-xos-solar-system-bringing-grid-independent-power-to-any-site-in-days.html",
+   "publishDate": "2026-11-18T21:30:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Xos Enters Energy Generation with the Xos Solar System, Bringing Grid-Independent Power to Any Site in Days",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "InspireMD Announces First U.S. Commercial TCAR Procedures Using the FDA-Approved CGuard® Prime TransCarotid Stent System",
+   "link": "https://www.globenewswire.com/news-release/2026/11/18/3406185/0/en/inspiremd-announces-first-u-s-commercial-tcar-procedures-using-the-fda-approved-cguard-prime-transcarotid-stent-system.html",
+   "publishDate": "2026-11-18T21:30:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "- First commercial cases mark return of the CGuard Prime platform to the U.S. market -",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Can Anthropic's record breaking IPO stop the AI bubble bursting?",
+   "link": "https://www.bbc.co.uk/news/articles/cj4gnpzll020o",
+   "publishDate": "2026-11-18T21:28:08+00:00",
+   "source": "www.bbc.co.uk",
+   "summary": "Anthropic's hotly anticipated IPO is expected to put it in the top 10 most valuable US companies, but the future is uncertain.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "U.S. Stocks Mixed, Nvidia Down Again Ahead of Anthropic IPO",
+   "link": "https://www.wsj.com/finance/stocks/u-s-stocks-mixed-nvidia-falls-ahead-of-anthropic-ipo-c7de4692",
+   "publishDate": "2026-11-18T21:28:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "U.S. stocks ended mixed ahead of Anthropic’s IPO as Nvidia’s efforts to draw to a close to questions around exit of its former leader Jensen Huang failed to stabilize its stock or quell fears about its “neocloud” customers.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "How major US stock indexes fared Wednesday 11/18/2026",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/major-us-stock-indexes-fared-212009825.html",
+   "publishDate": "2026-11-18T21:20:09+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Wall Street zigzagged as Nvidia and other AI stocks kept swinging on uncertainty about how much strength is left in the AI boom.2% Wednesday after flipping between gains and losses.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "What banks have at stake as Anthropic goes public",
+   "link": "https://finance.yahoo.com/technology/ai/articles/banks-stake-anthropic-goes-public-211912812.html",
+   "publishDate": "2026-11-18T21:19:12+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "As many as 20 banks are underwriting the artificial intelligence company's listing, which will raise money for a firm that a lot of banks use to fuel tech development.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "INTC Stock Layoffs: What to Know as Intel Reportedly Conducts Another Round of Job Cuts",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/intc-stock-layoffs-know-intel-211823030.html",
+   "publishDate": "2026-11-18T21:18:23+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Intel has reportedly started a fresh wave of layoffs. Does that warrant buying or selling INTC shares? Let’s find out!",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Modexus Solutions Outlines Next Phase of Growth and Introduces New Long-Term Financial Targets at 2026 Investor Day",
+   "link": "https://www.prnewswire.com/news-releases/modexus-solutions-outlines-next-phase-of-growth-and-introduces-new-long-term-financial-targets-at-2026-investor-day-302943173.html",
+   "publishDate": "2026-11-18T21:15:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "Targets 40–55% three-year revenue compound annual growth rate (CAGR) for the total company and adjusted EBITDA margin of 19–21% in fiscal 2029 RACINE, Wis., Nov. 18, 2026 /PRNewswire/ -- Modexus Solutions (NYSE: MOD), a diversified global leader in thermal management technology and...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "StoneX Group Inc. Reports Fiscal 2026 Fourth Quarter Financial Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/18/3406176/11961/en/stonex-group-inc-reports-fiscal-2026-fourth-quarter-financial-results.html",
+   "publishDate": "2026-11-18T21:15:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Record Fiscal Year Results, with Net Income of $525.4 million, up 72%",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Interparfums, Inc. Announces Full Year 2027 Guidance",
+   "link": "https://www.globenewswire.com/news-release/2026/11/18/3406170/7735/en/interparfums-inc-announces-full-year-2027-guidance.html",
+   "publishDate": "2026-11-18T21:15:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "NEW YORK, Nov. 18, 2026 (GLOBE NEWSWIRE) -- Interparfums, Inc. (NASDAQ GS: IPAR) (“Interparfums” or the “Company”) today announced initial guidance for its fiscal year ending December 31, 2027. In evaluating the annual comparison, management noted that full year 2026 estimated results will include the effect of a one-time gain of $17.9 million, or $0.35 per diluted share, related to IEEPA tariff refunds. The Company’s 2027 guidance does not assume a comparable benefit.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Drägerwerk (XTRA:DRW3) Stock May Still Be A Bargain On Earnings",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/dr-gerwerk-xtra-drw3-stock-211316198.html",
+   "publishDate": "2026-11-18T21:13:16+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Drägerwerk KGaA has logged a strong share price run in recent years, and that kind of climb naturally raises a blunt question for investors who care about earnings. Is the current valuation still grounded in what the business is generating today, or has the enthusiasm moved ahead of the profit profile? Over the past 3 years the stock has returned 148.5%, which puts real weight on the issue of whether the recent price fully reflects the underlying earnings power. For a manufacturer that...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 Regional Bank Stocks Investors Are Watching as Higher Rates Reshape Profits",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/3-regional-bank-stocks-investors-211130407.html",
+   "publishDate": "2026-11-18T21:11:30+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Rising rate talk is back in focus as Fed Governor Waller pushes for either a jumbo 50 bps hike or a clear path of smaller moves, and that kind of clarity can quickly reshape which U.S. financial stocks look better or more exposed. If short term borrowing costs keep climbing, profit pools and risks shift. This piece unpacks that story and spotlights three screener picks closely tied to the latest Fed debate. The three stocks profiled below are just a sample. The full screen surfaced 18 more...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "RED ROBIN GOURMET BURGERS, INC. REPORTS THIRD QUARTER OF FISCAL 2026 RESULTS",
+   "link": "https://www.prnewswire.com/news-releases/red-robin-gourmet-burgers-inc-reports-third-quarter-of-fiscal-2026-results-302944312.html",
+   "publishDate": "2026-11-18T21:05:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "ENGLEWOOD, Colo., Nov. 18, 2026 /PRNewswire/ -- Red Robin Gourmet Burgers, Inc. (NASDAQ: RRGB) (\"Red Robin\" or the \"Company\"), a casual dining restaurant chain serving an innovative selection of high-quality gourmet burgers in a family-friendly atmosphere, today reported financial results...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Everpure Announces Third Quarter Fiscal 2027 Financial Results",
+   "link": "https://www.prnewswire.com/news-releases/everpure-announces-third-quarter-fiscal-2027-financial-results-302944321.html",
+   "publishDate": "2026-11-18T21:05:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "Total revenue growth of 51% year-over-year Increased FY27 revenue and operating income guidance SANTA CLARA, Calif., Nov. 18, 2026 /PRNewswire/ -- Everpure (NYSE: P), the company revolutionizing storage and data management, today announced financial results for its third quarter fiscal...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Fed policymakers concerned about financial system risks, minutes show",
+   "link": "https://www.reuters.com/legal/transactional/fed-policymakers-concerned-about-financial-system-risks-minutes-show-2026-11-18/",
+   "publishDate": "2026-11-18T21:01:45.054000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Financial stability risks tied to aggressive artificial intelligence investment and elevated asset prices are on the US central bank's radar, the minutes from the Federal Reserve's policy meeting ​last month showed on Wednesday.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "La-Z-Boy Inc (LZB) Q2 2027 Earnings Call Highlights: Retail Sales Surge 11% Amid Margin ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/la-z-boy-inc-lzb-210145704.html",
+   "publishDate": "2026-11-18T21:01:45+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "La-Z-Boy Inc (LZB) posted 4% consolidated sales growth and a 12% dividend hike, but adjusted operating margin fell to 5% as strategic investments and soft October trends weigh on near-term guidance.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Lowe's Companies Inc (LOW) (Q3 2026) Earnings Call Highlights: Sales Up 9.3% to $22. ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/lowes-companies-inc-low-q3-210137526.html",
+   "publishDate": "2026-11-18T21:01:37+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Lowe's Companies Inc (LOW) posted its sixth straight quarter of positive comparable sales, but gross margin fell 124 basis points and full-year operating margin guidance was trimmed to 11.5%.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "BellRing Brands Inc (BRBR) (Q4 2026) Earnings Call Highlights: Sales Beat, Margin Reset, and a ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/bellring-brands-inc-brbr-q4-210125115.html",
+   "publishDate": "2026-11-18T21:01:25+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "BellRing Brands Inc (BRBR) posted 7% Q4 net sales growth and outlined a FY2027 reset featuring low double-digit shake pricing, a $100 million cost-savings program, and a delayed long-term outlook.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "IM Cannabis Announces Intention to Complete 3:1 Share Consolidation to Support Nasdaq Minimum Bid Price Compliance",
+   "link": "https://www.prnewswire.com/news-releases/im-cannabis-announces-intention-to-complete-31-share-consolidation-to-support-nasdaq-minimum-bid-price-compliance-302944222.html",
+   "publishDate": "2026-11-18T21:01:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "VANCOUVER and GLIL YAM, Israel, Nov. 18, 2026 /PRNewswire/ -- IM Cannabis Corp. (\"IMC\" or the \"Company\") (Nasdaq: IMCC), a medical cannabis company with operations in Israel, announces that the board of directors of the Company (the \"Board\") has approved a consolidation of its issued and...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "TrustCo Declares Quarterly Dividend on the Heels of Strong Quarterly Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/18/3406148/16143/en/trustco-declares-quarterly-dividend-on-the-heels-of-strong-quarterly-results.html",
+   "publishDate": "2026-11-18T21:00:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "GLENVILLE, N.Y., Nov. 18, 2026 (GLOBE NEWSWIRE) -- The Board of Directors of TrustCo Bank Corp NY (TrustCo, Nasdaq: TRST) on November 17, 2026 declared a quarterly cash dividend of $0.40 per share, or $1.60 per share on an annualized basis. The dividend will be payable on January 4, 2027 to shareholders of record at the close of business on December 4, 2026.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Pure Cycle Announces Record Financial Results For the Year Ended August 31, 2026",
+   "link": "https://www.globenewswire.com/news-release/2026/11/18/3406145/10772/en/pure-cycle-announces-record-financial-results-for-the-year-ended-august-31-2026.html",
+   "publishDate": "2026-11-18T21:00:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "DENVER, Nov. 18, 2026 (GLOBE NEWSWIRE) -- Pure Cycle Corporation (NASDAQ Capital Market: PCYO) (“Pure Cycle”, the “Company”, “we”, “us” or “our”) announced its financial results for the year ended August 31, 2026. Total revenue for the year ended August 31, 2026 grew 37% to a record $35.7 million, with growth in each of our three business segments. Lot sales revenue increased 45% on accelerated development activity at Sky Ranch, water and wastewater segment revenue increased 30% on higher water sales to oil and gas operators, and single-family rental revenue increased 73% as we placed 36 additional rental homes in service. Operating income increased 75% to $13.4 million, which more than offset a $4.7 million decrease in oil and gas royalty income. Pure Cycle reported $14.2 million of net income, or $0.59 per fully diluted common share, each a 9% increase from 2025, marking our ninth consecutive profitable fiscal year and twenty-ninth consecutive fiscal quarter with positive net income. Our diversified water and land platform was on full display this year, as steady, annual-cadence lot deliveries to our national homebuilder partners were complemented by a sharp increase in water sales to oil and gas operators.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Woodward Reports Record Sales & Earnings for Fiscal Year 2026",
+   "link": "https://www.globenewswire.com/news-release/2026/11/18/3406149/32326/en/woodward-reports-record-sales-earnings-for-fiscal-year-2026.html",
+   "publishDate": "2026-11-18T21:00:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "FORT COLLINS, Colo., Nov. 18, 2026 (GLOBE NEWSWIRE) -- Woodward, Inc. (NASDAQ:WWD) today reported financial results for its fiscal year 2026 and fourth quarter ended September 30, 2026.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Fed policymakers concerned about financial system risks, minutes show",
+   "link": "https://finance.yahoo.com/economy/policy/articles/fed-policymakers-concerned-financial-system-205845626.html",
+   "publishDate": "2026-11-18T20:58:45+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "NEW YORK, Nov 18 (Reuters) - Financial stability risks tied to aggressive artificial intelligence investment and elevated asset prices are on the US central bank's radar, the minutes from the Federal Reserve's policy meeting last month showed on Wednesday. The concern was raised as part ‌of a broad review of financial risks by Fed policymakers and central bank staff at the October 27-28 policy meeting.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Fed minutes: Higher interest rates needed in December as inflation worries mount",
+   "link": "https://abcnews.com/US/wireStory/fed-minutes-higher-interest-rates-needed-december-inflation-138258781",
+   "publishDate": "2026-11-18T20:54:29+00:00",
+   "source": "abcnews.com",
+   "summary": "Nearly all Federal Reserve officials expect the central bank will lift its key interest rate by a quarter point in December, minutes from a meeting last month showed, while some supported a hike in October and two floated the possibility of a half-poin...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Doomsday Shopping Lifts Costco and Walmart as Preppers Buy Emergency Supplies",
+   "link": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/11/63412145/doomsday-shopping-lifts-costco-and-walmart-as-preppers-buy-emergency-supplies",
+   "publishDate": "2026-11-18T20:52:03.677000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Tech outages fuel emergency stockpiling, boosting Costco sales as officials urge households to maintain 72-hour supplies.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Feds back $4B project to connect eastern and western electricity grids",
+   "link": "https://apnews.com/article/eastern-western-electric-grids-connection-6e0ae359ba44ecff9aa54e7bb0bfb20f",
+   "publishDate": "2026-11-18T20:51:16+00:00",
+   "source": "apnews.com",
+   "summary": "",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Anthropic IPO to mint thousands of millionaires",
+   "link": "https://www.reuters.com/business/world-at-work/anthropic-ipo-mint-thousands-of-millionaires-2026-11-18/",
+   "publishDate": "2026-11-18T20:48:21.910000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Anthropic's initial public offering is poised to create thousands of paper millionaires among current and former employees, in what could rank among the largest employee wealth windfalls in Silicon Valley history.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Anthropic IPO to mint thousands of millionaires",
+   "link": "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-mint-thousands-millionaires-204334685.html",
+   "publishDate": "2026-11-18T20:43:34+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "By Sabrina Valle NEW YORK, Nov 18 (Reuters) - Anthropic's initial public offering is poised to create thousands of paper millionaires among current and former employees, in what could rank among the",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Nvidia's shift in financing tone may spell trouble for Coreweave, other neoclouds",
+   "link": "https://www.cnbc.com/2026/11/18/nvidia-neocloud-financing.html",
+   "publishDate": "2026-11-18T20:43:23+00:00",
+   "source": "www.cnbc.com",
+   "summary": "Coreweave, other neoclouds are under pressure as investors anticipate tighter financing from Nvidia.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Dan Ives’ Top 5 AI Revolution Stock Picks",
+   "link": "https://finance.yahoo.com/technology/ai/articles/dan-ives-top-5-ai-204111527.html",
+   "publishDate": "2026-11-18T20:41:11+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Dan Ives, who now works at Yorkville Ives & Co., called the November 5 technology rout a “golden buying opportunity” in a note reported by CNBC on November 6. He wrote that the Democratic midterm win could move the peak in Big Tech capital spending growth to 2027 from 2028 or 2029, but that the […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Bitcoin bottom in? Analyst spots key $63K support",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-bottom-analyst-spots-key-204000775.html",
+   "publishDate": "2026-11-18T20:40:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Crypto analyst Ali Charts says 1.22 million BTC changed hands near current levels, but whale selling has not let up.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Mid-market firms’ optimism grows despite economic uncertainty",
+   "link": "https://finance.yahoo.com/economy/policy/articles/mid-market-firms-optimism-grows-203633308.html",
+   "publishDate": "2026-11-18T20:36:33+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Encouraged by stronger financial performance, companies are planning to ramp up investments — particularly in AI, a Capital One executive said.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Dollar Moves Higher on Hawkish Fed Signals",
+   "link": "https://finance.yahoo.com/markets/currencies/articles/dollar-moves-higher-hawkish-fed-203626848.html",
+   "publishDate": "2026-11-18T20:36:26+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The dollar index (DXY00 ) climbed to a 19-month high on Wednesday and finished up +0.36%. Hawkish Fed comments on Wednesday supported the dollar after Fed Governor Christopher Waller said inflation is moving in the wrong direction and the Fed should consider a 50 bp rate hike at the December...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "China watchdog warns Trump faces ‘2-on-1’ showdown with Xi, Putin as Taiwan risks mount",
+   "link": "https://www.foxnews.com/world/china-watchdog-warns-trump-faces-2-on-1-showdown-xi-putin-taiwan-risks-mount",
+   "publishDate": "2026-11-18T20:33:16+00:00",
+   "source": "www.foxnews.com",
+   "summary": "President Donald Trump faces a \"two versus one\" dynamic with Xi Jinping and Vladimir Putin, who arrive as a team eyeing Taiwan and Ukraine gains.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "New Zealand central bank chief says inflation still elevated, recovery uneven",
+   "link": "https://finance.yahoo.com/economy/policy/articles/zealand-central-bank-chief-says-203230497.html",
+   "publishDate": "2026-11-18T20:32:30+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "By Lucy Craymer and Sneha Kumar Nov 19 (Reuters) - Inflation remains above its 2% midpoint as costly fuel and a weaker currency kept pressure on prices, while an uneven recovery limited businesses'",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Don't Miss This Generational Investing Opportunity Because You're Too Addicted to Stocks",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/dont-miss-generational-investing-opportunity-202708547.html",
+   "publishDate": "2026-11-18T20:27:08+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Quietly and without fanfare, fixed income has entered a genuine golden age. Bond yields are looking attractive while stocks continue to wobble.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Old National Promotes Former Bremer Executive Brent Iserman to Twin Cities Regional President",
+   "link": "https://www.globenewswire.com/news-release/2026/11/18/3406134/5764/en/old-national-promotes-former-bremer-executive-brent-iserman-to-twin-cities-regional-president.html",
+   "publishDate": "2026-11-18T20:17:09+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Old National Bank announced the promotion of Brent Iserman to Executive Vice President, Twin Cities Regional President.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Fed Minutes: 'Almost All' Officials See More Hikes, and AI Debt Is Now on the Radar",
+   "link": "https://www.benzinga.com/markets/economic-data/26/11/63409950/fed-minutes-almost-all-officials-more-hikes-ai-debt",
+   "publishDate": "2026-11-18T20:12:41.495000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Fed minutes show almost all officials expect more rate hikes and flag AI debt as a growing risk, while TLT rose and Treasury yields eased Wednesday.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Super Micro Computer (SMCI) Ships PCIe Gen 6 Servers, Is It 57% Below Fair Value?",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/super-micro-computer-smci-ships-201020693.html",
+   "publishDate": "2026-11-18T20:10:20+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Super Micro Computer (SMCI) has begun shipping new AMD EPYC based all flash storage servers that support the PCIe Gen 6 standard. These products target AI scale data, analytics and high throughput storage workloads. For investors watching Super Micro Computer, the recent launch of PCIe Gen 6 storage arrives during a tough stretch in the share price. The stock is down about 34% on the 90 day share price return and roughly 25% on the 30 day share price return as legal questions and sector...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 UK Energy Stocks Retail Investors Are Finding For Inflation Linked Cash Flow",
+   "link": "https://finance.yahoo.com/energy/articles/3-uk-energy-stocks-retail-201007293.html",
+   "publishDate": "2026-11-18T20:10:07+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "UK inflation at 3.6% and growing rate hike expectations have pushed energy back into the spotlight, with higher fuel and gas costs rippling through almost every bill you pay. That pressure can hurt some businesses, yet support others that sit closer to the flow of energy cash. This article highlights three UK energy producers and energy infrastructure stocks from the screener that appear particularly exposed to this theme and explains why that might matter for your portfolio. The three stocks...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Waller's Rate-Hike Warning Puts 3 TIPS ETFs' Inflation Protection to the Test",
+   "link": "https://www.benzinga.com/etfs/specialty-etfs/26/11/63409365/wallers-rate-hike-warning-puts-3-tips-etfs-inflation-protection-to-the-test",
+   "publishDate": "2026-11-18T20:00:10.866000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Waller’s 50-basis-point rate hike warning puts TIPS ETFs in focus as investors weigh inflation protection against rising real yields.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Bessent Wants an Outside CEO. Brad Gerstner Says Nvidia Should Wait on Jensen Huang",
+   "link": "https://www.benzinga.com/markets/prediction-markets/26/11/63409363/nvidia-ceo-search",
+   "publishDate": "2026-11-18T20:00:07.730000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Bessent wants Nvidia to hire outside. Brad Gerstner says the board should wait and keep Jensen Huang in play.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Iraq's Border Shutdown With Iran Threatens a Much Bigger Economic Crisis",
+   "link": "https://finance.yahoo.com/economy/articles/iraqs-border-shutdown-iran-threatens-200000189.html",
+   "publishDate": "2026-11-18T20:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Iraq faces a delicate balancing act, seeking tighter border security and reduced Iranian influence without sacrificing economic sovereignty or deterring foreign investors.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Fed minutes: Officials favored holding rates steady in October, but they see hikes ahead",
+   "link": "https://finance.yahoo.com/economy/policy/article/fed-minutes-officials-favored-holding-rates-steady-in-october-but-they-see-hikes-ahead-195719301.html",
+   "publishDate": "2026-11-18T19:57:19+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Almost all members of the Federal Reserve favored raising interest rates in the future, even as they decided to hold rates steady in October, according to minutes from the central bank's last policy meeting released Wednesday.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "'Sending a message': Nvidia signals more cautious stance on China after Huang's departure",
+   "link": "https://finance.yahoo.com/technology/article/sending-a-message-nvidia-signals-more-cautious-stance-on-china-after-huangs-departure-194945165.html",
+   "publishDate": "2026-11-18T19:49:45+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Nvidia's decision to halt Hopper chip sales to China may signal a more cautious shift on US-China relations from the leading chipmaker.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Supreme Court spurns Custodia’s master-account fight",
+   "link": "https://finance.yahoo.com/economy/policy/articles/supreme-court-spurns-custodia-master-194834214.html",
+   "publishDate": "2026-11-18T19:48:34+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The high court denied the Wyoming digital lender’s petition to access Federal Reserve rails, leaving intact a barrier to entry in the payment system.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Squeezed by rising costs, Gen Z is still buying wellness and lip gloss",
+   "link": "https://finance.yahoo.com/small-business/articles/squeezed-rising-costs-gen-z-194538551.html",
+   "publishDate": "2026-11-18T19:45:38+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Pacsun, Ulta, and Upstart executives said young consumers are spending with more intention as high prices and thin credit histories squeeze them.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Why Anthropic's hot IPO is bringing out sellers — plus, a silver lining of the down market",
+   "link": "https://www.cnbc.com/investingclub/2026/11/18/why-anthropics-hot-ipo-is-bringing-out-sellers-plus-a-down-market-silver-lining.html",
+   "publishDate": "2026-11-18T19:43:29+00:00",
+   "source": "www.cnbc.com",
+   "summary": "Every weekday, the Investing Club releases the Homestretch; an actionable afternoon update just in time for the last hour of trading.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Fed Minutes Leave Door Open to Larger December Rate Hike",
+   "link": "https://www.bloomberg.com/news/videos/2026-11-18/fed-minutes-leave-door-open-to-larger-december-rate-hike-video",
+   "publishDate": "2026-11-18T19:43:20+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "Minutes of the Federal Open Market Committee’s Oct. 27-28 meeting show nearly all Federal Reserve officials agreed they would likely have to raise interest rates “in the months ahead” to return inflation to their 2% target in a timely manner. Michael McKee reports. (Source: Bloomberg)",
+   "sentiment": null,
+   "confidence": null
+  }
+ ]
+}
