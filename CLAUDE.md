@@ -163,6 +163,38 @@ So:
   +$2,874.26 on 40, 13 of them estimated at the 15:55 flatten). Reconstructed, not live.
   Suspends so far: Nov 2, Nov 5, Nov 9 — three of six sessions. The lid `powercfg` fix
   (`context_recovery/19`) has still not been run.
+- **Session gaps: owner's call, 2026-11-14. Do not raise the lid fix again.** He carries the
+  laptop to work; the gaps are the commute and the wifi switch. The guards handle it and the
+  day is marked PARTIAL. Not a priority for him.
+- **Week of 2026-11-16, checked 2026-11-20 after a missed ThetaData payment: no lapse in the
+  record.** The lapse signature from September (09-08 → 09-11) is the options arm silently
+  writing **zero trades with no outage rows**. This week the options arm traded every day
+  (30, 34, 18, 29, 28 ATM trades), quote ages on flagged rows were 6–12 s, and no
+  permission or subscription error appears. What did go wrong, all network or market:
+  - **11-19 INTERRUPTED at 14:00 ET**: `Unable to resolve host mdds-01.thetadata.us` (the
+    terminal's upstream, i.e. the laptop's network), frozen to 14:58, no end recorded. The
+    16:31 settle rebuilt 3 options and 38 shares positions from history (**+$232.76 and
+    +$3,795.99**, same-rule agreement 78/84 and 152/153). QQQ fell about 4% that session.
+  - **11-20 PARTIAL**, network out 14:19–14:35. Another 4% down day: options ATM +$3,461,
+    shares +$6,293.
+  - **11-20 off-ladder option fills: 7 of 28 signals** bought a strike more than 1.5 points
+    from the price or with a neighbour arm more than two strikes away (QQQ 09:35–10:00, e.g.
+    a 635 call as "ATM" with QQQ at 642.49; SPY 14:15 and 15:40), ATM net of those −$964, and
+    **536 `exit_no_quote` rows**: QQQ put stops that could not be priced for 8–17 minutes.
+    `feed.chain_quotes` drops rows with a non-positive or crossed market and
+    `options.select_arms` takes the nearest surviving strike with no distance limit. One
+    other case in 54 sessions, 11-05, also a 4% day. Cause not established; the raw chain is
+    not stored. Each fill row carries `strike_distance_pct`, so these can be flagged at
+    analysis. **Adding a distance cap is a behaviour change to the frozen test and needs a
+    dated amendment; not done.**
+  - Daily summary files are missing for 11-06, 11-09 and 11-19 in both arms (trades are all
+    in `trades.jsonl`). `backfill_daily --apply` on the laptop rebuilds them, flagged.
+- **Per-setup baseline, descriptive, not audited** (`research/setup_baseline_results.md`,
+  2026-11-20): over the 2018–2022 shares replay no setup with real volume is positive; on
+  options 2020–2022 only IntradayMomentumBoundary is (+$8.6 a session, all from 2022);
+  picking first-half winners earns +$0 (shares) and +$18 (options) a session afterwards.
+  Live totals rest on 11-05, 11-09 and 11-20: without the two largest days options is −$75
+  and shares −$194 a session. The holdout has never been read per setup.
 
 ## STILL OPEN
 

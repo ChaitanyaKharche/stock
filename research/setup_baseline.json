@@ -1,0 +1,765 @@
+{
+ "generated": "2026-11-20T22:26:52",
+ "repo_sha": "f440cf5",
+ "status": "descriptive; not pre-registered; not audited; holdout not opened",
+ "discovery": {
+  "shares": {
+   "window": [
+    "2018-01-02",
+    "2022-12-30"
+   ],
+   "sessions": 1249,
+   "trades": 226678,
+   "config_hashes": [
+    "7c6414fc549315f3"
+   ],
+   "book_per_session": -285.57,
+   "per_setup": {
+    "ThreeBarPlay": {
+     "trades": 342,
+     "total": 69.23,
+     "per_trade": 0.2,
+     "per_session": 0.06,
+     "win_rate": 0.3977,
+     "by_year": {
+      "2018": -233.58,
+      "2019": -436.12,
+      "2020": 212.61,
+      "2021": -287.43,
+      "2022": 813.74
+     }
+    },
+    "VWAP_2sigma_Fade": {
+     "trades": 288,
+     "total": -522.2,
+     "per_trade": -1.81,
+     "per_session": -0.42,
+     "win_rate": 0.5486,
+     "by_year": {
+      "2018": -795.15,
+      "2019": -35.38,
+      "2020": -487.51,
+      "2021": -3.19,
+      "2022": 799.03
+     }
+    },
+    "Crabel_Stretch": {
+     "trades": 17407,
+     "total": -13137.27,
+     "per_trade": -0.75,
+     "per_session": -10.52,
+     "win_rate": 0.4305,
+     "by_year": {
+      "2018": 12974.37,
+      "2019": -6023.84,
+      "2020": -15173.98,
+      "2021": -6641.73,
+      "2022": 1727.92
+     }
+    },
+    "IntradayMomentumBoundary": {
+     "trades": 21828,
+     "total": -13471.52,
+     "per_trade": -0.62,
+     "per_session": -10.79,
+     "win_rate": 0.2317,
+     "by_year": {
+      "2018": 6738.47,
+      "2019": -8687.29,
+      "2020": -14980.17,
+      "2021": -3007.12,
+      "2022": 6464.59
+     }
+    },
+    "EMA_9_20_Pullback": {
+     "trades": 3633,
+     "total": -16701.72,
+     "per_trade": -4.6,
+     "per_session": -13.37,
+     "win_rate": 0.3094,
+     "by_year": {
+      "2018": -1311.11,
+      "2019": -1700.73,
+      "2020": -3806.07,
+      "2021": -4445.5,
+      "2022": -5438.31
+     }
+    },
+    "Gap_Fade": {
+     "trades": 6003,
+     "total": -17256.42,
+     "per_trade": -2.87,
+     "per_session": -13.82,
+     "win_rate": 0.4596,
+     "by_year": {
+      "2018": 1838.78,
+      "2019": -466.5,
+      "2020": -15085.47,
+      "2021": -5915.34,
+      "2022": 2372.11
+     }
+    },
+    "PDH_PDL_Breakout": {
+     "trades": 15405,
+     "total": -19255.04,
+     "per_trade": -1.25,
+     "per_session": -15.42,
+     "win_rate": 0.3652,
+     "by_year": {
+      "2018": 884.17,
+      "2019": -266.8,
+      "2020": -18171.42,
+      "2021": 3134.55,
+      "2022": -4835.54
+     }
+    },
+    "TTM_Squeeze": {
+     "trades": 18136,
+     "total": -19374.65,
+     "per_trade": -1.07,
+     "per_session": -15.51,
+     "win_rate": 0.4281,
+     "by_year": {
+      "2018": -5611.5,
+      "2019": -6816.92,
+      "2020": -3853.06,
+      "2021": -4202.46,
+      "2022": 1109.29
+     }
+    },
+    "Six_Lines_NoCap": {
+     "trades": 17154,
+     "total": -24126.52,
+     "per_trade": -1.41,
+     "per_session": -19.32,
+     "win_rate": 0.2729,
+     "by_year": {
+      "2018": -51.53,
+      "2019": -1427.81,
+      "2020": -15993.53,
+      "2021": -8272.12,
+      "2022": 1618.47
+     }
+    },
+    "ORB_15min": {
+     "trades": 16352,
+     "total": -24622.18,
+     "per_trade": -1.51,
+     "per_session": -19.71,
+     "win_rate": 0.3682,
+     "by_year": {
+      "2018": -6809.86,
+      "2019": 43.54,
+      "2020": -11228.26,
+      "2021": 1941.09,
+      "2022": -8568.7
+     }
+    },
+    "ORB_5min": {
+     "trades": 17010,
+     "total": -26337.66,
+     "per_trade": -1.55,
+     "per_session": -21.09,
+     "win_rate": 0.4454,
+     "by_year": {
+      "2018": -4547.24,
+      "2019": 5033.88,
+      "2020": -23951.88,
+      "2021": 1714.28,
+      "2022": -4586.71
+     }
+    },
+    "PDH_PDL_FailedBreak": {
+     "trades": 12074,
+     "total": -28042.34,
+     "per_trade": -2.32,
+     "per_session": -22.45,
+     "win_rate": 0.3955,
+     "by_year": {
+      "2018": -4220.43,
+      "2019": -1225.09,
+      "2020": -1786.55,
+      "2021": -5101.62,
+      "2022": -15708.65
+     }
+    },
+    "Six_Lines": {
+     "trades": 17154,
+     "total": -37357.13,
+     "per_trade": -2.18,
+     "per_session": -29.91,
+     "win_rate": 0.5929,
+     "by_year": {
+      "2018": -4287.83,
+      "2019": -4671.42,
+      "2020": -15658.7,
+      "2021": -7848.84,
+      "2022": -4890.35
+     }
+    },
+    "VWAP_Reclaim": {
+     "trades": 23941,
+     "total": -51689.57,
+     "per_trade": -2.16,
+     "per_session": -41.38,
+     "win_rate": 0.4081,
+     "by_year": {
+      "2018": -14187.47,
+      "2019": -6709.89,
+      "2020": -18992.95,
+      "2021": -5027.46,
+      "2022": -6771.81
+     }
+    },
+    "MOMO_CHASE": {
+     "trades": 39951,
+     "total": -64856.3,
+     "per_trade": -1.62,
+     "per_session": -51.93,
+     "win_rate": 0.4542,
+     "by_year": {
+      "2018": -16749.39,
+      "2019": -11485.84,
+      "2020": -22700.27,
+      "2021": -9969.11,
+      "2022": -3951.69
+     }
+    }
+   },
+   "split": {
+    "split": "2020-12-31",
+    "first_sessions": 748,
+    "second_sessions": 501,
+    "chosen": [],
+    "chosen_first_per_session": 0.0,
+    "chosen_second_per_session": 0.0,
+    "chosen_second_each": {},
+    "book_second_per_session": -187.18
+   }
+  },
+  "options": {
+   "window": [
+    "2020-01-03",
+    "2022-12-30"
+   ],
+   "sessions": 482,
+   "trades": 9943,
+   "config_hashes": [
+    "ccd00ac71f8243e9"
+   ],
+   "book_per_session": -100.29,
+   "per_setup": {
+    "IntradayMomentumBoundary": {
+     "trades": 885,
+     "total": 4119.49,
+     "per_trade": 4.65,
+     "per_session": 8.55,
+     "win_rate": 0.2203,
+     "by_year": {
+      "2020": -715.89,
+      "2021": 273.67,
+      "2022": 4561.71
+     }
+    },
+    "VWAP_2sigma_Fade": {
+     "trades": 19,
+     "total": 533.46,
+     "per_trade": 28.08,
+     "per_session": 1.11,
+     "win_rate": 0.6316,
+     "by_year": {
+      "2020": 45.76,
+      "2021": 56.6,
+      "2022": 431.11
+     }
+    },
+    "ThreeBarPlay": {
+     "trades": 15,
+     "total": -345.21,
+     "per_trade": -23.01,
+     "per_session": -0.72,
+     "win_rate": 0.2667,
+     "by_year": {
+      "2020": -120.48,
+      "2021": -190.48,
+      "2022": -34.24
+     }
+    },
+    "PDH_PDL_Breakout": {
+     "trades": 681,
+     "total": -422.02,
+     "per_trade": -0.62,
+     "per_session": -0.88,
+     "win_rate": 0.3554,
+     "by_year": {
+      "2020": -1613.74,
+      "2021": 1605.74,
+      "2022": -414.03
+     }
+    },
+    "TTM_Squeeze": {
+     "trades": 917,
+     "total": -1204.09,
+     "per_trade": -1.31,
+     "per_session": -2.5,
+     "win_rate": 0.4166,
+     "by_year": {
+      "2020": -204.12,
+      "2021": -841.13,
+      "2022": -158.85
+     }
+    },
+    "EMA_9_20_Pullback": {
+     "trades": 180,
+     "total": -1605.54,
+     "per_trade": -8.92,
+     "per_session": -3.33,
+     "win_rate": 0.25,
+     "by_year": {
+      "2020": -340.15,
+      "2021": -1005.41,
+      "2022": -259.98
+     }
+    },
+    "Six_Lines": {
+     "trades": 745,
+     "total": -2047.2,
+     "per_trade": -2.75,
+     "per_session": -4.25,
+     "win_rate": 0.5557,
+     "by_year": {
+      "2020": -187.95,
+      "2021": -488.68,
+      "2022": -1370.56
+     }
+    },
+    "Crabel_Stretch": {
+     "trades": 711,
+     "total": -3296.45,
+     "per_trade": -4.64,
+     "per_session": -6.84,
+     "win_rate": 0.3361,
+     "by_year": {
+      "2020": -4170.57,
+      "2021": -794.6,
+      "2022": 1668.73
+     }
+    },
+    "MOMO_CHASE": {
+     "trades": 1796,
+     "total": -3543.12,
+     "per_trade": -1.97,
+     "per_session": -7.35,
+     "win_rate": 0.4232,
+     "by_year": {
+      "2020": -683.6,
+      "2021": -1503.81,
+      "2022": -1355.7
+     }
+    },
+    "Gap_Fade": {
+     "trades": 265,
+     "total": -4441.41,
+     "per_trade": -16.76,
+     "per_session": -9.21,
+     "win_rate": 0.3509,
+     "by_year": {
+      "2020": -2358.79,
+      "2021": -1555.69,
+      "2022": -526.94
+     }
+    },
+    "VWAP_Reclaim": {
+     "trades": 972,
+     "total": -5875.54,
+     "per_trade": -6.04,
+     "per_session": -12.19,
+     "win_rate": 0.3858,
+     "by_year": {
+      "2020": -3297.47,
+      "2021": -1497.48,
+      "2022": -1080.58
+     }
+    },
+    "Six_Lines_NoCap": {
+     "trades": 745,
+     "total": -6432.2,
+     "per_trade": -8.63,
+     "per_session": -13.34,
+     "win_rate": 0.2215,
+     "by_year": {
+      "2020": -912.95,
+      "2021": -257.68,
+      "2022": -5261.56
+     }
+    },
+    "ORB_15min": {
+     "trades": 772,
+     "total": -7395.38,
+     "per_trade": -9.58,
+     "per_session": -15.34,
+     "win_rate": 0.3277,
+     "by_year": {
+      "2020": -1955.35,
+      "2021": -576.85,
+      "2022": -4863.18
+     }
+    },
+    "ORB_5min": {
+     "trades": 712,
+     "total": -7719.53,
+     "per_trade": -10.84,
+     "per_session": -16.02,
+     "win_rate": 0.3778,
+     "by_year": {
+      "2020": -3126.3,
+      "2021": 305.44,
+      "2022": -4898.66
+     }
+    },
+    "PDH_PDL_FailedBreak": {
+     "trades": 528,
+     "total": -8665.66,
+     "per_trade": -16.41,
+     "per_session": -17.98,
+     "win_rate": 0.3049,
+     "by_year": {
+      "2020": -2594.62,
+      "2021": -1172.82,
+      "2022": -4898.23
+     }
+    }
+   },
+   "split": {
+    "split": "2021-06-30",
+    "first_sessions": 234,
+    "second_sessions": 248,
+    "chosen": [
+     "IntradayMomentumBoundary",
+     "VWAP_2sigma_Fade"
+    ],
+    "chosen_first_per_session": 0.83,
+    "chosen_second_per_session": 17.98,
+    "chosen_second_each": {
+     "IntradayMomentumBoundary": 4018.35,
+     "VWAP_2sigma_Fade": 439.79
+    },
+    "book_second_per_session": -92.23
+   }
+  }
+ },
+ "live": {
+  "options": {
+   "sessions": 54,
+   "first": "2026-08-28",
+   "last": "2026-11-20",
+   "trades": 1183,
+   "total": 20667.42,
+   "mean_per_session": 382.73,
+   "median_session": -274.82,
+   "days_at_or_above_target": 16,
+   "days_at_or_below_minus_target": 25,
+   "target": 500.0,
+   "top_days": [
+    {
+     "date": "2026-11-05",
+     "net": 17149.06
+    },
+    {
+     "date": "2026-11-09",
+     "net": 7430.63
+    },
+    {
+     "date": "2026-11-20",
+     "net": 3460.74
+    }
+   ],
+   "without_top": {
+    "1": {
+     "total": 3518.36,
+     "per_session": 66.38
+    },
+    "2": {
+     "total": -3912.27,
+     "per_session": -75.24
+    },
+    "3": {
+     "total": -7373.0,
+     "per_session": -144.57
+    }
+   },
+   "per_setup": {
+    "Crabel_Stretch": {
+     "trades": 103,
+     "total": 5609.68,
+     "total_without_top_days": -993.0,
+     "per_trade": 54.46,
+     "win_rate": 0.3301
+    },
+    "Six_Lines_NoCap": {
+     "trades": 65,
+     "total": 4782.75,
+     "total_without_top_days": -605.93,
+     "per_trade": 73.58,
+     "win_rate": 0.2462
+    },
+    "IntradayMomentumBoundary": {
+     "trades": 160,
+     "total": 4491.07,
+     "total_without_top_days": 1811.48,
+     "per_trade": 28.07,
+     "win_rate": 0.1938
+    },
+    "ORB_15min": {
+     "trades": 100,
+     "total": 4219.92,
+     "total_without_top_days": 1462.24,
+     "per_trade": 42.2,
+     "win_rate": 0.43
+    },
+    "ORB_5min": {
+     "trades": 72,
+     "total": 2486.18,
+     "total_without_top_days": -762.49,
+     "per_trade": 34.53,
+     "win_rate": 0.4167
+    },
+    "VWAP_Reclaim": {
+     "trades": 108,
+     "total": 825.27,
+     "total_without_top_days": -29.48,
+     "per_trade": 7.64,
+     "win_rate": 0.4444
+    },
+    "TTM_Squeeze": {
+     "trades": 86,
+     "total": 419.05,
+     "total_without_top_days": -69.79,
+     "per_trade": 4.87,
+     "win_rate": 0.4419
+    },
+    "Six_Lines": {
+     "trades": 65,
+     "total": 377.75,
+     "total_without_top_days": -74.93,
+     "per_trade": 5.81,
+     "win_rate": 0.5077
+    },
+    "MOMO_CHASE": {
+     "trades": 220,
+     "total": 291.22,
+     "total_without_top_days": -136.21,
+     "per_trade": 1.32,
+     "win_rate": 0.4136
+    },
+    "EMA_9_20_Pullback": {
+     "trades": 15,
+     "total": 197.79,
+     "total_without_top_days": 197.79,
+     "per_trade": 13.19,
+     "win_rate": 0.4
+    },
+    "PDH_PDL_Breakout": {
+     "trades": 94,
+     "total": 64.41,
+     "total_without_top_days": -1614.27,
+     "per_trade": 0.69,
+     "win_rate": 0.2979
+    },
+    "VWAP_2sigma_Fade": {
+     "trades": 4,
+     "total": -20.32,
+     "total_without_top_days": -20.32,
+     "per_trade": -5.08,
+     "win_rate": 0.0
+    },
+    "ThreeBarPlay": {
+     "trades": 1,
+     "total": -119.08,
+     "total_without_top_days": -119.08,
+     "per_trade": -119.08,
+     "win_rate": 0.0
+    },
+    "Gap_Fade": {
+     "trades": 33,
+     "total": -1137.67,
+     "total_without_top_days": -1137.67,
+     "per_trade": -34.47,
+     "win_rate": 0.2727
+    },
+    "PDH_PDL_FailedBreak": {
+     "trades": 57,
+     "total": -1820.6,
+     "total_without_top_days": -1820.6,
+     "per_trade": -31.94,
+     "win_rate": 0.2281
+    }
+   },
+   "excluded_for_per_setup": [
+    "2026-11-05",
+    "2026-11-09"
+   ],
+   "reconstructed_trades": 25,
+   "off_ladder": {
+    "signals": 1183,
+    "off_ladder": 8,
+    "by_day": {
+     "2026-11-05": 1,
+     "2026-11-20": 7
+    }
+   }
+  },
+  "shares": {
+   "sessions": 56,
+   "first": "2026-09-01",
+   "last": "2026-11-20",
+   "trades": 8561,
+   "total": 10584.46,
+   "mean_per_session": 189.01,
+   "median_session": 3.74,
+   "days_at_or_above_target": 17,
+   "days_at_or_below_minus_target": 23,
+   "target": 500.0,
+   "top_days": [
+    {
+     "date": "2026-11-05",
+     "net": 14742.68
+    },
+    {
+     "date": "2026-11-20",
+     "net": 6293.47
+    },
+    {
+     "date": "2026-11-09",
+     "net": 4380.38
+    }
+   ],
+   "without_top": {
+    "1": {
+     "total": -4158.22,
+     "per_session": -75.6
+    },
+    "2": {
+     "total": -10451.69,
+     "per_session": -193.55
+    },
+    "3": {
+     "total": -14832.07,
+     "per_session": -279.85
+    }
+   },
+   "per_setup": {
+    "Six_Lines_NoCap": {
+     "trades": 476,
+     "total": 5066.32,
+     "total_without_top_days": 155.96,
+     "per_trade": 10.64,
+     "win_rate": 0.3361
+    },
+    "IntradayMomentumBoundary": {
+     "trades": 853,
+     "total": 4321.82,
+     "total_without_top_days": -507.37,
+     "per_trade": 5.07,
+     "win_rate": 0.2614
+    },
+    "Crabel_Stretch": {
+     "trades": 752,
+     "total": 4293.61,
+     "total_without_top_days": 175.01,
+     "per_trade": 5.71,
+     "win_rate": 0.4362
+    },
+    "ORB_15min": {
+     "trades": 665,
+     "total": 2194.12,
+     "total_without_top_days": 395.87,
+     "per_trade": 3.3,
+     "win_rate": 0.3759
+    },
+    "ORB_5min": {
+     "trades": 709,
+     "total": 1245.89,
+     "total_without_top_days": -479.75,
+     "per_trade": 1.76,
+     "win_rate": 0.4401
+    },
+    "Gap_Fade": {
+     "trades": 307,
+     "total": 1101.01,
+     "total_without_top_days": 935.34,
+     "per_trade": 3.59,
+     "win_rate": 0.4658
+    },
+    "VWAP_2sigma_Fade": {
+     "trades": 11,
+     "total": -52.34,
+     "total_without_top_days": -52.34,
+     "per_trade": -4.76,
+     "win_rate": 0.6364
+    },
+    "ThreeBarPlay": {
+     "trades": 9,
+     "total": -53.71,
+     "total_without_top_days": -53.71,
+     "per_trade": -5.97,
+     "win_rate": 0.2222
+    },
+    "Six_Lines": {
+     "trades": 476,
+     "total": -116.05,
+     "total_without_top_days": -437.03,
+     "per_trade": -0.24,
+     "win_rate": 0.5819
+    },
+    "TTM_Squeeze": {
+     "trades": 640,
+     "total": -282.77,
+     "total_without_top_days": -480.79,
+     "per_trade": -0.44,
+     "win_rate": 0.4234
+    },
+    "PDH_PDL_Breakout": {
+     "trades": 666,
+     "total": -386.72,
+     "total_without_top_days": -1043.56,
+     "per_trade": -0.58,
+     "win_rate": 0.3829
+    },
+    "EMA_9_20_Pullback": {
+     "trades": 143,
+     "total": -912.34,
+     "total_without_top_days": -1072.26,
+     "per_trade": -6.38,
+     "win_rate": 0.3217
+    },
+    "MOMO_CHASE": {
+     "trades": 1484,
+     "total": -1801.11,
+     "total_without_top_days": -3083.09,
+     "per_trade": -1.21,
+     "win_rate": 0.4582
+    },
+    "VWAP_Reclaim": {
+     "trades": 910,
+     "total": -1811.72,
+     "total_without_top_days": -2167.62,
+     "per_trade": -1.99,
+     "win_rate": 0.4187
+    },
+    "PDH_PDL_FailedBreak": {
+     "trades": 460,
+     "total": -2221.55,
+     "total_without_top_days": -2736.35,
+     "per_trade": -4.83,
+     "win_rate": 0.3913
+    }
+   },
+   "excluded_for_per_setup": [
+    "2026-11-05",
+    "2026-11-20"
+   ],
+   "reconstructed_trades": 274
+  }
+ }
+}
