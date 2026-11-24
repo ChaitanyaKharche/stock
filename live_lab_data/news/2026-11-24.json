@@ -1,0 +1,911 @@
+{
+ "session": "2026-11-24",
+ "fetched_at_et": "2026-11-24T07:30:17",
+ "query": "(Fed OR \"Federal Reserve\" OR inflation OR CPI OR jobs OR tariff OR tariffs OR war OR Treasury OR shutdown) AND (stocks OR markets OR economy)",
+ "window_from": "2026-11-23T16:00:00",
+ "window_to": "2026-11-24T07:30:17.625466",
+ "page_size": 100,
+ "n": 100,
+ "articles": [
+  {
+   "title": "Bitcoin Loses Ground to Nvidia as Huang’s Return Sparks 30% Rally",
+   "link": "https://www.benzinga.com/crypto/cryptocurrency/26/11/63567315/bitcoin-loses-ground-to-nvidia-as-huangs-return-sparks-30-rally",
+   "publishDate": "2026-11-24T00:30:07.691000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Nvidia jumps 30% as Jensen Huang returns as CEO, pushing Bitcoin further behind in the BTC-to-NVDA performance race",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Singapore raises 2026 growth forecast after 6.1% Q3 expansion",
+   "link": "https://finance.yahoo.com/economy/articles/singapore-raises-2026-growth-forecast-002609789.html",
+   "publishDate": "2026-11-24T00:26:09+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "SINGAPORE, Nov 24 (Reuters) - Singapore upgraded its 2026 economic growth forecast to around 6.0% on Tuesday after posting third-quarter expansion of 6.1% from a year earlier, government data showed.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 Asset Manager Stocks Facing A Big Test From Higher Bond Yields",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/3-asset-manager-stocks-facing-001946914.html",
+   "publishDate": "2026-11-24T00:19:46+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Bond yields sitting in the 4.5% to 5.25% range on the 10 year U.S. Treasury are forcing every asset manager to rethink how capital is priced, and that ripple effect matters for you far beyond the bond market. Income focused firms can be pressured or rewarded as borrowing stays expensive and AI driven funding needs compete for cash. This article highlights 3 stocks from our Global Listed Bond and Income Focused Asset Managers screener that appear particularly sensitive to these forces. It is...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "U.S. stock futures steady after Nvidia-led Wall Street rally",
+   "link": "https://www.investing.com/news/stock-market-news/us-stock-futures-steady-after-nvidialed-wall-street-rally-5046750",
+   "publishDate": "2026-11-24T00:18:36+00:00",
+   "source": "www.investing.com",
+   "summary": "- U.S. stock futures were little changed on Monday evening following a powerful rally on Wall Street driven by Nvidia's decision to reinstate founder Jensen Huang as chief executive.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "What Sartorius Doubters Got Wrong",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/sartorius-doubters-got-wrong-001427383.html",
+   "publishDate": "2026-11-24T00:14:27+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Sartorius spent much of the past few years under pressure, with analysts split between a bullish view on cell and gene therapy demand and bearish worries about tariffs, regulation, and high P/E multiples. Holding Sartorius over the past year would have returned 27.3%, including dividends. If you had faced that disagreement back in November 2025, what could you realistically have seen that might justify taking, or passing on, that risk? This theme extends beyond Sartorius. See which of 10 top...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Singapore raises 2026 growth forecast after 6.1% Q3 expansion",
+   "link": "https://www.reuters.com/markets/asia/singapore-third-quarter-gdp-grows-61-2026-11-24/",
+   "publishDate": "2026-11-24T00:06:02.969000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Singapore upgraded its 2026 economic growth forecast to around 6.0% on Tuesday after posting third-quarter expansion of ​6.1% from a year earlier, government data showed.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Bill Ackman uses SpaceX to expose the Fed’s ‘golden’ inflation rule",
+   "link": "https://finance.yahoo.com/economy/policy/articles/bill-ackman-uses-spacex-expose-000000013.html",
+   "publishDate": "2026-11-24T00:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "One interest rate hints at deeper market trouble.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "NATO warns Putin could strike before European army responds, points to US as military model",
+   "link": "https://www.foxnews.com/world/nato-warns-putin-could-strike-european-army-responds-points-us-military-model",
+   "publishDate": "2026-11-23T23:37:35+00:00",
+   "source": "www.foxnews.com",
+   "summary": "NATO Secretary-General Mark Rutte warned Russia's war machine runs at full speed and could threaten Europe long after the war in Ukraine ends.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Tariffs Strike Again: 343 Companies Report $28.5 Billion in Trump Tariff Refunds. Retail Beats Need a Second Look",
+   "link": "https://finance.yahoo.com/economy/policy/articles/tariffs-strike-again-343-companies-233642439.html",
+   "publishDate": "2026-11-23T23:36:42+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Key Takeaways343 public companies have reported $28. 5 billion in tariff refunds received or expected, including $2.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Netflix Cuts About 1,000 Jobs and Its Content Chief. YouTube Already Has Twice Its TV Share",
+   "link": "https://finance.yahoo.com/media-advertising/articles/netflix-cuts-1-000-jobs-233146304.html",
+   "publishDate": "2026-11-23T23:31:46+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Key TakeawaysNetflix fired its chief content officer and about 1,000 employees in October as its growth slows. YouTube took 15.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Mamdani says wealthy donors killed California’s billionaire tax — but Americans aren't done forcing the rich to pay up",
+   "link": "https://finance.yahoo.com/economy/policy/articles/mamdani-says-wealthy-donors-killed-233000332.html",
+   "publishDate": "2026-11-23T23:30:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "\"There were other ballot referendums that took place across the country calling for what is essentially the same thing.\"",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "'Big Short' investor spots major flaw in crypto’s investment thesis",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/big-short-investor-spots-major-233000556.html",
+   "publishDate": "2026-11-23T23:30:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The investor who saw 2008 coming says crypto keeps failing the one test its own believers set for it.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Lululemon Athletica (LULU) Could Be 25% Undervalued Following Communications Chief Hire",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/lululemon-athletica-lulu-could-25-232135928.html",
+   "publishDate": "2026-11-23T23:21:35+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "lululemon athletica (LULU) has added Paula Conhain as Chief Communications Officer, a fresh hire that plugs directly into the senior team and the brand’s response to recent market headwinds. That appointment lands at a tricky moment for lululemon athletica, with the 1-month share price return of 5.68% offering a brief rebound while the year-to-date share price is down 50.37% and the 1-year total shareholder return has declined 38.33%. This points to momentum that is still fading despite fresh...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Scott Galloway Calls Anthropic the AI Selloff's 'Big Winner,' but Prediction Traders See Trouble Ahead",
+   "link": "https://www.benzinga.com/markets/prediction-markets/26/11/63566532/anthropic-galloway-traders",
+   "publishDate": "2026-11-23T23:15:57.201000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Scott Galloway calls Anthropic AI’s big winner, while Polymarket gives it a 70% chance of falling below its IPO price.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Jim Cramer sees more upside for Nvidia stock with Jensen Huang back as CEO",
+   "link": "https://www.cnbc.com/2026/11/23/jim-cramer-nvidia-jensen-huang-ceo-return.html",
+   "publishDate": "2026-11-23T23:14:34+00:00",
+   "source": "www.cnbc.com",
+   "summary": "CNBC's Jim Cramer said Jensen Huang's return as Nvidia CEO could help revive the chipmaker's battered stock.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Huang's return at Nvidia puts spotlight on chipmaker's board",
+   "link": "https://finance.yahoo.com/technology/articles/huangs-return-nvidia-puts-spotlight-231032467.html",
+   "publishDate": "2026-11-23T23:10:32+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Nvidia directors' decision to rehire Jensen Huang shows a \"lack of courage,\" according to one prominent governance expert.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Kiyosaki Buys More BTC, ETH as He Warns of a Crash ‘Much Bigger Than 2008’",
+   "link": "https://www.benzinga.com/crypto/cryptocurrency/26/11/63566349/kiyosaki-buys-more-btc-eth-as-he-warns-of-a-crash-much-bigger-than-2008",
+   "publishDate": "2026-11-23T23:06:07.592000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Robert Kiyosaki buys more Bitcoin and Ethereum as he warns the current crash could become ‘much bigger than 2008’",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "What Nvidia’s Jensen Huang’s return means for Washington and Wall Street?",
+   "link": "https://www.aljazeera.com/economy/2026/11/23/what-nvidias-jensen-huangs-return-means-for-washington-and-wall-street",
+   "publishDate": "2026-11-23T23:06:03+00:00",
+   "source": "www.aljazeera.com",
+   "summary": "Trump claims credit for Huang's return, raising concerns over federal government meddling in corporate board decisions.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Australia's Pauline Hanson faces biggest test as debt and anger align in state vote",
+   "link": "https://www.reuters.com/world/asia-pacific/australias-pauline-hanson-faces-biggest-test-debt-anger-align-state-vote-2026-11-23/",
+   "publishDate": "2026-11-23T23:04:41.065000+00:00",
+   "source": "www.reuters.com",
+   "summary": "In a gold-rush era hotel in the Macedon Ranges north of Melbourne, classic car mechanic Joe Aprile says high taxes, rising costs and other economic pressures on the ​auto sector threaten to sink his family business.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Why Donald Trump believed he needed to get Jensen Huang back on top at AI behemoth Nvidia",
+   "link": "https://apnews.com/article/trump-huang-nvidia-china-spies-affairs-e5ab261b27bf80d1562a345923bf6a59",
+   "publishDate": "2026-11-23T23:04:24+00:00",
+   "source": "apnews.com",
+   "summary": "President Donald Trump has intervened to reinstate Jensen Huang as CEO of Nvidia, following his recent ouster.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Latest Oil Market News and Analysis for Nov. 24",
+   "link": "https://www.bloomberg.com/news/articles/2026-11-23/latest-oil-market-news-and-analysis-for-nov-24",
+   "publishDate": "2026-11-23T23:04:12+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "Oil steadied after sliding almost 4% in the previous session on cautious optimism over efforts to end the US-Iran war.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "CNBC's The China Connection newsletter: AI race spreads from robots to smartphones",
+   "link": "https://www.cnbc.com/2026/11/23/cnbcs-the-china-connection-newsletter-ai-race-spreads-to-smartphones.html",
+   "publishDate": "2026-11-23T23:00:01+00:00",
+   "source": "www.cnbc.com",
+   "summary": "More powerful artificial intelligence models are raising expectations for more powerful on-device chips that can run on devices from robots to smartphones.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Nvidia and Trump’s State Capitalism",
+   "link": "https://www.wsj.com/opinion/nvidia-jensen-huang-donald-trump-130e644c",
+   "publishDate": "2026-11-23T23:00:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "Restoring Jensen Huang as CEO will have major national security and political costs.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Crypto traders saw Anthropic's 34% debut pop coming",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/crypto-traders-saw-anthropics-34-224715513.html",
+   "publishDate": "2026-11-23T22:47:15+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Weeks before bankers priced Anthropic’s IPO, a 24/7 crypto market was already trading the shares much higher. The debut showed how close it got.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Jensen Huang back at Nvidia after staff reported humiliating threats, insults — 'thinks he can get away with anything'",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/jensen-huang-back-nvidia-staff-223000688.html",
+   "publishDate": "2026-11-23T22:30:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Huang’s return won Wall Street’s approval. But allegations of workplace abuse raise questions about the cost of his comeback.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "How Good Was Monday’s Stock Rally? Here’s Where It Ranks in History",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/good-monday-stock-rally-where-222630862.html",
+   "publishDate": "2026-11-23T22:26:30+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Stocks had their best day since April 2025 after Nvidia rehired Jensen Huang. Here’s where Monday ranks in market history.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Peterson: Expect a Lot of Damage From Keeping Huang",
+   "link": "https://www.bloomberg.com/news/videos/2026-11-23/peterson-expect-a-lot-of-damage-from-keeping-huang-video",
+   "publishDate": "2026-11-23T22:26:10+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "Randall Peterson, a Professor of Organizational Behavior and Founding Director of the London Business School Leadership Institute, discusses why markets have reacted so strongly both to the upside today and to the downside over the preceding weeks. He says comparable CEO-related market moves are difficult to find, even citing Steve Jobs’s return to Apple as a less immediate example. He speaks with Romaine Bostick on \"The Close.\" (Source: Bloomberg)",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Top 3 Australian Penny Stocks To Watch In November 2026",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/top-3-australian-penny-stocks-221058521.html",
+   "publishDate": "2026-11-23T22:10:58+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Australian penny shares with stronger balance sheets are getting fresh attention as global tech investment gathers momentum again, helped by rising early stage funding and job creation across Europe. Investors looking beyond the recent market swings are hunting for lower priced entries into companies that still keep an eye on financial health. This article walks through three financially resilient Australian penny stocks from our screener that aim to fit that brief. The three stocks...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Tuya Reports Third Quarter 2026 Unaudited Financial Results and Declaration of Cash Dividend",
+   "link": "https://www.prnewswire.com/news-releases/tuya-reports-third-quarter-2026-unaudited-financial-results-and-declaration-of-cash-dividend-302948326.html",
+   "publishDate": "2026-11-23T22:10:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "SANTA CLARA, Calif., Nov. 23, 2026 /PRNewswire/ -- Tuya Inc. (\"Tuya\" or the \"Company\") (NYSE: TUYA; HKEX: 2391), a global leading AI cloud platform service provider, today announced its unaudited financial results for the third quarter ended September 30, 2026 and the declaration of a...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 U.S. Financial Stocks That Could Benefit If Interest Rates Stay Higher",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/3-u-financial-stocks-could-220837857.html",
+   "publishDate": "2026-11-23T22:08:37+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "A sharp selloff in major indexes, fresh questions around the AI boom and a potential Fed rate hike have pushed investors to rethink where risk really sits. While high-growth tech grabs the headlines, rate-sensitive areas can quietly reshape portfolios when borrowing costs move. This article explains how that backdrop connects to 3 U.S. financial stocks exposed to these trends and why they may warrant closer attention at this time. The three stocks discussed below are simply a curated sample,...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "What Jensen Huang’s return means for Nvidia’s Colette Kress",
+   "link": "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-returns-colette-kress-cfo.html",
+   "publishDate": "2026-11-23T22:07:02+00:00",
+   "source": "www.cnbc.com",
+   "summary": "Kress steered the company through billions in AI financing deals and during Huang's sudden departure. Now she's back to full-time CFO.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "TEREX ANNOUNCES DEFINITIVE AGREEMENT TO SELL ITS AERIALS SEGMENT TO LINAMAR",
+   "link": "https://www.prnewswire.com/news-releases/terex-announces-definitive-agreement-to-sell-its-aerials-segment-to-linamar-302948654.html",
+   "publishDate": "2026-11-23T22:05:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "Terex to sell its Aerials segment, including the Genie® brand, to Linamar for approximately $1.4 billion in cash Marks the latest step in Terex's transformation from cyclical end markets to resilient essential services markets, with lower capital intensity and more predictable earnings...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Elon Musk’s 2027 warning stokes stock market crash fears",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/elon-musk-2027-warning-stokes-220300103.html",
+   "publishDate": "2026-11-23T22:03:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Wall Street is missing a looming threat.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "TRADING DAY Market euphoria as Huang returns to Nvidia",
+   "link": "https://www.reuters.com/commentary/reuters-open-interest/global-markets-trading-day-graphic-2026-11-23/",
+   "publishDate": "2026-11-23T22:00:40.744000+00:00",
+   "source": "www.reuters.com",
+   "summary": "US stocks roared back on Monday, as the stunning return of Jensen Huang to Nvidia triggered a sizzling rally in tech and AI companies — Nvidia shares rose more than 30%. The euphoria lifted the dollar to its highest level since March last year, but bonds were much more muted, with the benchmark 10-year Treasury yield rising barely a single basis point.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Handy Heater Reviews and Complaints: One Cold Room. No Floor Space. A Heater That Plugs Straight Into the Wall",
+   "link": "https://www.accessnewswire.com/newsroom/en/consumer-and-retail-products/handy-heater-reviews-and-complaints-one-cold-room.-no-floor-space.-a-h-1256018",
+   "publishDate": "2026-11-23T22:00:00+00:00",
+   "source": "www.accessnewswire.com",
+   "summary": "PAID ADVERTISEMENT | AFFILIATE DISCLOSURE This article is paid advertising content. Compensation may be received when qualifying purchases are made through commercial links associated with this article. Product descriptions are based on information published by the brand and identified public sources. No hands-on testing of Handy Heater was conducted for this article. Brand performance and safety claims have not been independently verified....",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Eric Trump-backed robotics startup told all workers their health insurance is gone — ‘extremely unfortunate’ situation",
+   "link": "https://finance.yahoo.com/healthcare/articles/eric-trump-backed-robotics-startup-220000278.html",
+   "publishDate": "2026-11-23T22:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "This news comes after CEO Sankaet Pathak reportedly borrowed $4.6 million from the company to buy a home in 2025.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "5 Energy Stocks That Can Shrug Off a December Fed Rate Hike",
+   "link": "https://finance.yahoo.com/energy/articles/5-energy-stocks-shrug-off-220000268.html",
+   "publishDate": "2026-11-23T22:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Five energy stocks with strong balance sheets, from Exxon to Kinder Morgan, that could hold up if the Fed hikes again in December and CPI runs hot.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Best Buy Q3 earnings preview: What Wall Street expects from new CEO Jason Bonfig amid crucial holiday season",
+   "link": "https://finance.yahoo.com/markets/article/best-buy-q3-earnings-preview-what-wall-street-expects-from-new-ceo-jason-bonfig-amid-crucial-holiday-season-215838221.html",
+   "publishDate": "2026-11-23T21:58:38+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Best Buy's new CEO stepped into the role in late October. He faces his first earnings test on Tuesday.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "How Risky Is Snap Stock Now?",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/risky-snap-stock-now-215436376.html",
+   "publishDate": "2026-11-23T21:54:36+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Bill Ackman says Federal Reserve is 'about to make another mistake'",
+   "link": "https://www.foxbusiness.com/economy/bill-ackman-says-federal-reserve-about-make-another-mistake",
+   "publishDate": "2026-11-23T21:47:52+00:00",
+   "source": "www.foxbusiness.com",
+   "summary": "Bill Ackman says the Federal Reserve would risk a recession if it hikes rates at its December meeting, arguing the 2% inflation target is misguided.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Simon Property Group Sells $1.0 Billion of Senior Notes",
+   "link": "https://www.prnewswire.com/news-releases/simon-property-group-sells-1-0-billion-of-senior-notes-302948691.html",
+   "publishDate": "2026-11-23T21:47:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "INDIANAPOLIS, Nov. 23, 2026 /PRNewswire/ -- Simon®, a real estate investment trust engaged in the ownership of premier shopping, dining, entertainment and mixed-use destinations, announced today that its majority-owned operating partnership subsidiary, Simon Property Group, L.P. (the...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Wall Street jumps back as Jensen Huang returns as Nvidia CEO",
+   "link": "https://www.channelnewsasia.com/world/nvidia-wall-street-us-stocks-huang-ceo-shares-6576061",
+   "publishDate": "2026-11-23T21:46:43+00:00",
+   "source": "www.channelnewsasia.com",
+   "summary": "Nvidia shares surged by as much as 36.6 per cent after the company's board reinstated Jensen Huang as CEO.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Compass Diversified Underscores Actions to Drive Long-Term Value Creation and Responds to ADW Capital Announcement",
+   "link": "https://www.globenewswire.com/news-release/2026/11/23/3408917/0/en/compass-diversified-underscores-actions-to-drive-long-term-value-creation-and-responds-to-adw-capital-announcement.html",
+   "publishDate": "2026-11-23T21:42:35+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "WESTPORT, Conn., Nov. 23, 2026 (GLOBE NEWSWIRE) -- Compass Diversified (NYSE: CODI) (“CODI” or the “Company”), an owner of leading middle market businesses, today issued the following statement in response to comments from ADW Capital Management, LLC (“ADW”):",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Fannie Mae’s retention bonuses tell lenders who’ll stay in charge",
+   "link": "https://finance.yahoo.com/real-estate/articles/fannie-mae-retention-bonuses-tell-213152436.html",
+   "publishDate": "2026-11-23T21:31:52+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "A government-sponsored enterprise that many lenders sell mortgages to may reward some c-suite members who’ve stayed amid other departures and cuts.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "THOR INDUSTRIES ANNOUNCES DATE FOR ITS FISCAL 2027 FIRST QUARTER EARNINGS RELEASE",
+   "link": "https://www.prnewswire.com/news-releases/thor-industries-announces-date-for-its-fiscal-2027-first-quarter-earnings-release-302948614.html",
+   "publishDate": "2026-11-23T21:30:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "ELKHART, Ind., Nov. 23, 2026 /PRNewswire/ -- THOR Industries, Inc. (NYSE: THO) today announced that the date for its fiscal 2027 first quarter earnings release will be on Tuesday, December 8, 2026, before the market opens. Upon the release of THOR's fiscal 2027 first quarter earnings, the...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "WEBCO INDUSTRIES, INC. REPORTS FISCAL 2027 FIRST QUARTER RESULTS",
+   "link": "https://www.prnewswire.com/news-releases/webco-industries-inc-reports-fiscal-2027-first-quarter-results-302948604.html",
+   "publishDate": "2026-11-23T21:30:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "SAND SPRINGS, Okla., Nov. 23, 2026 /PRNewswire/ -- Webco Industries, Inc. (OTC: WEBC) today reported results for our first quarter of fiscal year 2027, which ended on October 31, 2026. For our first quarter of fiscal year 2027, we had a net income of $5.5 million, or $8.11 per diluted...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Stocks Rebound Sharply as Nvidia Reinstates CEO Huang",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/stocks-rebound-sharply-nvidia-reinstates-212850586.html",
+   "publishDate": "2026-11-23T21:28:50+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The S&P 500 Index ($SPX ) (SPY ) on Monday rose by +4.84%, the Dow Jones Industrial Average ($DOWI ) (DIA ) rose +3.01%, and the Nasdaq 100 Index ($IUXX ) (QQQ ) rose +6.91%. December E-mini S&P futures (ESZ26 ) rose +4.74%, and December E-mini Nasdaq futures (NQZ26 )...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Grayscale picks 11 winners of AI's power crunch",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/grayscale-picks-11-winners-ais-212800842.html",
+   "publishDate": "2026-11-23T21:28:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Here’s why the digital asset manager thinks Bitcoin miners already own the AI boom’s scarcest resource.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Trump has a personal stake in Nvidia's future",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/trump-personal-stake-nvidias-future-212654824.html",
+   "publishDate": "2026-11-23T21:26:54+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "President Donald Trump has a personal stake in the future of Nvidia, the company whose embattled CEO regained his job with Trump's help.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Fed's Williams: Fed must be forward-looking to bring inflation down",
+   "link": "https://finance.yahoo.com/economy/policy/article/feds-williams-fed-must-be-forward-looking-to-bring-inflation-down-212531171.html",
+   "publishDate": "2026-11-23T21:25:31+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Williams noted that it's the Fed's job to make sure that higher energy prices, tariffs, and price increases from AI do not lead to broader or persistent inflation.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Agilent beats estimates, surges on strong guidance",
+   "link": "https://www.investing.com/news/earnings/agilent-beats-estimates-surges-on-strong-guidance-5046437",
+   "publishDate": "2026-11-23T21:21:51+00:00",
+   "source": "www.investing.com",
+   "summary": "- Agilent Technologies Inc (NYSE:A) reported fourth-quarter results that exceeded analyst expectations and issued fiscal 2027 guidance above consensus, sending shares up over 7% in after-hours trading Monday.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "10 Cheapest Stocks Billionaire Druckenmiller is Betting on",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/10-cheapest-stocks-billionaire-druckenmiller-212130981.html",
+   "publishDate": "2026-11-23T21:21:30+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "There’s been a flurry of 13F filings from the billionaire set over the past week, and Wall Street is abuzz as a result. Everyone’s looking at the latest billionaire stock picks and adjusting their own portfolios accordingly. But even these investors are trying to figure out where the market is headed. In an interview with […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "5 Cheapest Stocks Billionaire Druckenmiller is Betting on",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/5-cheapest-stocks-billionaire-druckenmiller-212047402.html",
+   "publishDate": "2026-11-23T21:20:47+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "There’s been a flurry of 13F filings from the billionaire set over the past week, and Wall Street is abuzz as a result. Everyone’s looking at the latest billionaire stock picks and adjusting their own portfolios accordingly. But even these investors are trying to figure out where the market is headed. In an interview with […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "ServiceNow stock: catalysts, technicals, and outlook after the selloff",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/servicenow-stock-catalysts-technicals-outlook-212029012.html",
+   "publishDate": "2026-11-23T21:20:29+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Investing.com -- ServiceNow Inc (NOW) trades at $92.19, up 5.23% on Nov 23 as of 3:48 PM EST. It is down about 43% over 1 month and 46% over 1 year, and it sits near the $81.24 52-week low (market cap about $95B). The damage came from one event. After the Oct 28 Q3 report, the stock posted its worst single-day drop on record, about 27–31% depending on the source. The headline numbers were fine: revenue was $4.11B, up 20.5%. The trigger was a Q4 cRPO guide of 18.5% against roughly 19.5–19.8% expe",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "How data center backlash could put banks’ AI bets under pressure",
+   "link": "https://finance.yahoo.com/technology/ai/articles/data-center-backlash-could-put-211900253.html",
+   "publishDate": "2026-11-23T21:19:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Local opposition to data-center construction is creating uncertainty for banks financing the buildout, while lawmakers are weighing new disclosure requirements for AI-related investments.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Wall Street stocks soar as Jensen Huang returns to Nvidia",
+   "link": "https://finance.yahoo.com/news/wall-street-stocks-soar-jensen-211807890.html",
+   "publishDate": "2026-11-23T21:18:07+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "US tech stocks staged a dramatic recovery on Monday after Nvidia’s shock decision to reinstate Jensen Huang.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Wall Street stocks soar as Jensen Huang returns to Nvidia",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/wall-street-stocks-soar-jensen-211807442.html",
+   "publishDate": "2026-11-23T21:18:07+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "US tech stocks staged a dramatic recovery on Monday after Nvidia’s shock decision to reinstate Jensen Huang.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Emerging Growth Research Releases Q2:FY27 Quarterly Update on Virtuix Holdings",
+   "link": "https://www.accessnewswire.com/newsroom/en/computers-technology-and-internet/emerging-growth-research-releases-q2-fy27-quarterly-update-on-vir-1255979",
+   "publishDate": "2026-11-23T21:15:00+00:00",
+   "source": "www.accessnewswire.com",
+   "summary": "Emerging Growth Research today announced the release of its Fiscal Q2:27 Quarterly Update Report on Virtuix Holdings Inc. (Nasdaq:VTIX). The Quarterly Update highlights Virtuix's continued revenue momentum, with Fiscal Q2:27 revenue increasing 21% year-over-year to $1.2 million, exceeding expectations. Omni One revenue increased 105% year-over-year, supported by the Company's new partnership with Meta, which began in June 2026. The report also...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Alta Equipment Group Agrees to Acquire Jackson Group Peterbilt in Proposed Transformative Deal",
+   "link": "https://www.globenewswire.com/news-release/2026/11/23/3408900/0/en/alta-equipment-group-agrees-to-acquire-jackson-group-peterbilt-in-proposed-transformative-deal.html",
+   "publishDate": "2026-11-23T21:15:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Proposed acquisition expected to create scaled dealership platform for essential equipment that powers the industrial economyWould add commercial truck vertical with premier Peterbilt dealership platform with 34 locations in the western U.S.Expected to enhance earnings quality and cash generation and support continued deleveraging",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "California Water Service Group Finalizes Sale of $125 Million of Senior Unsecured Notes and California Water Service Company Finalizes Sale of $150 Million of First Mortgage Bonds",
+   "link": "https://www.globenewswire.com/news-release/2026/11/23/3408895/0/en/california-water-service-group-finalizes-sale-of-125-million-of-senior-unsecured-notes-and-california-water-service-company-finalizes-sale-of-150-million-of-first-mortgage-bonds.html",
+   "publishDate": "2026-11-23T21:15:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "SAN JOSE, Calif., Nov. 23, 2026 (GLOBE NEWSWIRE) -- California Water Service Group (Group, NYSE: CWT), which is set to be renamed Watermark Utilities as of November 30, 2026, today announced the finalization of its sale of $125,000,000 in aggregate principal amount of Senior Unsecured Notes (the Notes) by Group and $150,000,000 in aggregate principal amount of First Mortgage Bonds (the Bonds) by California Water Service Company (Cal Water), a wholly owned subsidiary of Group, in private placement transactions.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Nvidia Chief’s Return Lifts Many Boats",
+   "link": "https://www.wsj.com/finance/stocks/nvidia-chiefs-return-lifts-many-boats-3b515f16",
+   "publishDate": "2026-11-23T21:12:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "Plus, credit markets aren’t so bullish about Jensen Huang’s reinstatement, and Anthropic’s impending bond-market challenge.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Fury in Congress over Huang’s reinstatement as lawmakers move forward with hearings",
+   "link": "https://apnews.com/article/nvidia-jensen-huang-48a005a1415549e69ec69400024aa797",
+   "publishDate": "2026-11-23T21:09:05+00:00",
+   "source": "apnews.com",
+   "summary": "",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "ScottsMiracle-Gro to Participate in December 2026 Investor Conferences",
+   "link": "https://www.globenewswire.com/news-release/2026/11/23/3408890/33079/en/scottsmiracle-gro-to-participate-in-december-2026-investor-conferences.html",
+   "publishDate": "2026-11-23T21:07:41+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "MARYSVILLE, Ohio, Nov. 23, 2026 (GLOBE NEWSWIRE) -- The Scotts Miracle-Gro Company (NYSE: SMG), home to North America’s leading consumer lawn and garden brands, announced today that executives and senior leadership will participate in several investor conferences in December 2026:",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Fed has 'work to do' to lower inflation, Williams says",
+   "link": "https://www.reuters.com/business/fed-has-work-do-lower-inflation-williams-says-2026-11-23/",
+   "publishDate": "2026-11-23T21:06:19.092000+00:00",
+   "source": "www.reuters.com",
+   "summary": "New York Federal ​Reserve President John Williams said on Monday that persistently high inflation continues to point the ‌US central bank toward tighter monetary policy.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Fed has 'work to do' to lower inflation, Williams says",
+   "link": "https://finance.yahoo.com/economy/policy/articles/fed-lower-inflation-williams-says-210546185.html",
+   "publishDate": "2026-11-23T21:05:46+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "NEW YORK, Nov 23 (Reuters) - New York Federal Reserve President John Williams said on Monday that persistently high inflation continues to point the US central bank toward tighter ‌monetary policy. \"We must take actions over time that will ensure that we get inflation back to ‌our 2% goal in a timely manner and on a sustained basis,\" Williams said in remarks prepared for delivery to an event at ​the University of Mount Saint Vincent in New York City.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "HireQuest Announces Extension of Existing $20 Million Share Repurchase Program",
+   "link": "https://www.prnewswire.com/news-releases/hirequest-announces-extension-of-existing-20-million-share-repurchase-program-302948648.html",
+   "publishDate": "2026-11-23T21:05:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "GOOSE CREEK, S.C., Nov. 23, 2026 /PRNewswire/ -- HireQuest, Inc. (NASDAQ: HQI) (\"HireQuest\" or the \"Company\"), a global franchisor of on-demand staffing and executive search services, today announced that its Board of Directors has approved an extension of its existing share repurchase...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Fluence Energy, Inc. Reports 2026 Financial Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/23/3408886/0/en/fluence-energy-inc-reports-2026-financial-results.html",
+   "publishDate": "2026-11-23T21:05:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "New Executive Leadership Team Working to Accelerate Transformation",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Zoom Communications Reports Financial Results for the Third Quarter of Fiscal Year 2027",
+   "link": "https://www.globenewswire.com/news-release/2026/11/23/3408888/0/en/zoom-communications-reports-financial-results-for-the-third-quarter-of-fiscal-year-2027.html",
+   "publishDate": "2026-11-23T21:05:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "SAN JOSE, Calif., Nov. 23, 2026 (GLOBE NEWSWIRE) -- Zoom Communications, Inc. (NASDAQ: ZM) today announced financial results for the third fiscal quarter ended October 31, 2026.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Inventiva Reports Unaudited 2026 Third Quarter Financial Results¹",
+   "link": "https://www.globenewswire.com/news-release/2026/11/23/3408877/0/en/inventiva-reports-unaudited-2026-third-quarter-financial-results.html",
+   "publishDate": "2026-11-23T21:05:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Daix (France), New York (New York, United States), November 23, 2026 – Inventiva (Euronext Paris and NASDAQ: IVA) (“Inventiva” or the “Company”), a clinical-stage biopharmaceutical company focused on the development of an oral therapy for the treatment of metabolic dysfunction-associated steatohepatitis (“MASH”), today reported its cash position and revenues as of September 30, 2026.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Fed's John Williams indicates higher interest rates likely 'over time' to address inflation",
+   "link": "https://www.cnbc.com/2026/11/23/john-williams-fed-inflation-rate-hikes.html",
+   "publishDate": "2026-11-23T21:02:17+00:00",
+   "source": "www.cnbc.com",
+   "summary": "The influential central banker expressed confidence that inflation will get closer to the Fed's 2% target in 2027.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "US drug prices leave patients facing impossible choices",
+   "link": "https://www.aljazeera.com/news/2026/11/23/us-drug-prices-leave-patients-facing-impossible-choices",
+   "publishDate": "2026-11-23T21:02:00+00:00",
+   "source": "www.aljazeera.com",
+   "summary": "Despite having jobs and health insurance, some of the US's sickest patients have trouble affording medicines they need.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Symbotic Reports Fourth Quarter and Fiscal Year 2026 Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/23/3408866/0/en/symbotic-reports-fourth-quarter-and-fiscal-year-2026-results.html",
+   "publishDate": "2026-11-23T21:01:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "WILMINGTON, Mass., Nov. 23, 2026 (GLOBE NEWSWIRE) -- Symbotic Inc. (Nasdaq: SYM), a leader in A.I.-enabled robotics technology for the supply chain, announced financial results for its fourth quarter and fiscal year 2026, which ended on September 26, 2026. Symbotic reported revenue of $778 million, up 26% year-over-year, net income of $55 million, and adjusted EBITDA1 of $114 million for the fourth quarter of fiscal year 2026.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Freightos Ltd (CRGO) (Q3 2026) Earnings Call Highlights: Record Booking Value and Narrowing ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/freightos-ltd-crgo-q3-2026-210043719.html",
+   "publishDate": "2026-11-23T21:00:43+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Freightos Ltd (CRGO) posted a record $437 million in gross booking value and cut its adjusted EBITDA loss by 52% year over year, while guiding Q4 to near breakeven despite soft solutions revenue.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Fidelity steps in where JPMorgan retreated",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/fidelity-steps-where-jpmorgan-retreated-205655188.html",
+   "publishDate": "2026-11-23T20:56:55+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Fidelity Investments enters a territory that JPMorgan has withdrawn from.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "‘The Mistake Has Been Corrected’: What Elon Musk, Bill Ackman and 7 Other Heavyweights Said About Jensen Huang’s Comeback",
+   "link": "https://www.benzinga.com/markets/tech/26/11/63561735/the-mistake-has-been-corrected-what-elon-musk-bill-ackman-and-7-other-heavyweights-said-about-jensen-huangs-comeback",
+   "publishDate": "2026-11-23T20:48:33.526000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Nvidia reinstates Jensen Huang as CEO, sending shares up 37%; leaders celebrate, while Michael Burry condemns the board's reversal.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Business activity cools due to inflation but persists above trend: S&P",
+   "link": "https://finance.yahoo.com/economy/articles/business-activity-cools-due-inflation-204650019.html",
+   "publishDate": "2026-11-23T20:46:50+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "“Both consumer spending and business investment are likely to slow, with data center activity at risk after the midterms,” Yardeni Research President Ed Yardeni said.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "EXCLUSIVE JD Vance's ties to prized Venezuelan oil contract under investigation by US Senate panel",
+   "link": "https://www.reuters.com/business/energy/exclusive-jd-vances-ties-prized-venezuelan-oil-contract-under-investigation-by-2026-11-23/",
+   "publishDate": "2026-11-23T20:36:35.940000+00:00",
+   "source": "www.reuters.com",
+   "summary": "A US Senate committee is investigating whether US Vice President JD Vance ​played a role in the awarding of a lucrative Venezuelan oil deal to commodities giant Vitol, according to a letter reviewed by ‌Reuters.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Canadian bond yields mostly lower with focus on stock market",
+   "link": "https://www.investing.com/news/stock-market-news/canadian-bond-yields-mostly-lower-with-focus-on-stock-market-5046318",
+   "publishDate": "2026-11-23T20:26:43+00:00",
+   "source": "www.investing.com",
+   "summary": "- Canadian yields largely eased on Monday, especially in longer-term maturities, as traders picked up government bonds. However, the moves were small as the spotlight was largely on a massive rally in the Canadian stock market.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Congress shreds Nvidia's 'outrageous' decision to bring back Huang: 'Failure of character'",
+   "link": "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-congress-trump.html",
+   "publishDate": "2026-11-23T20:22:49+00:00",
+   "source": "www.cnbc.com",
+   "summary": "Congress members of both parties are sharply questioning President Donald Trump's conclusion that Jensen Huang poses no national security risk leading Nvidia.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Coastal Carolina Regional Airport Celebrates Opening of New Corporate Aerospace Area",
+   "link": "https://www.accessnewswire.com/newsroom/en/transportation/coastal-carolina-regional-airport-celebrates-opening-of-new-corporate-aerospace-area-1255939",
+   "publishDate": "2026-11-23T20:21:00+00:00",
+   "source": "www.accessnewswire.com",
+   "summary": "Coastal Carolina Regional Airport (EWN), FMR Aeronautical Properties, and Craven County celebrated the opening of the airport's new corporate aerospace development area on Friday, November 20, with a ribbon cutting ceremony at 10:00 AM. Over 100community and business leaders, along with state and local partners attended. The new area expands opportunities for aerospace and defense businesses in Eastern North Carolina. It also strengthens the...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Who owns the table this Thanksgiving? Homeownership by generation, explained",
+   "link": "https://finance.yahoo.com/real-estate/articles/owns-table-thanksgiving-homeownership-generation-201722853.html",
+   "publishDate": "2026-11-23T20:17:22+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "From Gen Z to boomers, see who's leading homeownership and how agents can best work with buyers and sellers in each generation.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "What Held Up While Bitcoin Fell",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/held-while-bitcoin-fell-201531346.html",
+   "publishDate": "2026-11-23T20:15:31+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Five of crypto's most watched tokens beat BTC during the selloff. Four of them make money, and three are AI plays.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Exclusive-JD Vance's ties to prized Venezuelan oil contract under investigation by US Senate panel",
+   "link": "https://finance.yahoo.com/news/exclusive-jd-vances-ties-prized-201448073.html",
+   "publishDate": "2026-11-23T20:14:48+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "By Tim McLaughlin Nov 23 (Reuters) - A US Senate committee is investigating whether US Vice President JD Vance played a role in the awarding of a lucrative Venezuelan oil deal to commodities giant",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Moody’s affirms Medline at Ba1, sees post-IPO deleveraging driving upgrade path",
+   "link": "https://www.investing.com/news/stock-market-news/moodys-affirms-medline-at-ba1-sees-postipo-deleveraging-driving-upgrade-path-5046307",
+   "publishDate": "2026-11-23T20:10:16+00:00",
+   "source": "www.investing.com",
+   "summary": "- Moody's Ratings revised its outlook on Medline Inc (NASDAQ:MDLN) to positive from stable on Monday, signaling potential for a credit upgrade over the next 12 to 18 months.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Block Stock And 2 AI Payments Shares Riding The Fraud Prevention Boom",
+   "link": "https://finance.yahoo.com/technology/ai/articles/block-stock-2-ai-payments-200730744.html",
+   "publishDate": "2026-11-23T20:07:30+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "AI is starting to make payment decisions on your behalf, and that shift is quietly rewriting who carries fraud risk, who pays for compliance, and who controls the digital checkout. That tug of war between banks, Big Tech, and specialist payment rails is creating fresh winners. This article walks through three stocks exposed to that AI payments story and explains why some investors are watching them closely right now. The three stocks in this article are just a starter set, and the full...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Bond market flattening and Wednesday’s PCE test for rate-hike pricing",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/bond-market-flattening-wednesday-pce-200337155.html",
+   "publishDate": "2026-11-23T20:03:37+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Investing.com -- Is the stock rally hiding lingering risk-off sentiment, as the bond market’s move suggests, and could Wednesday’s PCE reignite jumbo-hike talk? What the Curve Shows Yields as of Nov 23, 2:29–2:31 PM EST: Maturity Yield Day change vs.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Schouw & Co. share buy-back programme, week 47 2026",
+   "link": "https://www.globenewswire.com/news-release/2026/11/23/3408848/0/en/schouw-co-share-buy-back-programme-week-47-2026.html",
+   "publishDate": "2026-11-23T20:00:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "On 10 November 2026, Schouw & Co. initiated a share buy-back programme as outlined in Company Announcement no. 70 of 9 November 2026. Under the programme, Schouw & Co. will acquire shares for up to DKK 75 million during the period 10 November to 31 December 2026.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Sugar Prices Rebound Higher",
+   "link": "https://finance.yahoo.com/markets/commodities/articles/sugar-prices-rebound-higher-195938014.html",
+   "publishDate": "2026-11-23T19:59:38+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "March NY world sugar #11 (SBH27 ) closed up +0.58 (+3.41%) on Monday, and March London ICE white sugar #5 (SWH27 ) closed up +14.50 (+2.97%). Sugar prices rebounded higher on Monday on some short-covering after the recent sharp sell-off. NY sugar last Friday posted a new 3.5-month low. Sugar...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Why Nvidia Needed Jensen Huang Back—And What His Return Really Changes",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/why-nvidia-needed-jensen-huang-195721312.html",
+   "publishDate": "2026-11-23T19:57:21+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Huang's 11-day absence exposed the importance of his customer ties, influence in Washington and hold on Silicon Valley. The stock is soaring, but the comeback brings risks of its own.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Dollar index technical outlook: rally extended but overbought signals flash caution",
+   "link": "https://finance.yahoo.com/markets/currencies/articles/dollar-index-technical-outlook-rally-195613985.html",
+   "publishDate": "2026-11-23T19:56:13+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Investing.com -- Goldman Sachs sees the dollar supported near term by a hawkish Fed, but the technical picture shows overbought conditions that could slow the next leg higher.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Strategy Is Still Down 45% in a Month: Can MSTR Stock Revisit $150 as Bitcoin Holds $60,000?",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/strategy-still-down-45-month-195404991.html",
+   "publishDate": "2026-11-23T19:54:04+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Strategy is spending far more on propping up its preferred stock than on buying Bitcoin, and it is paying for it by selling common shares. What does that quiet shift in priorities say about Michael Saylor's next move?",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Nvidia surge: What investors should do with the stock and the AI trade now",
+   "link": "https://www.cnbc.com/2026/11/23/nvidia-stock-jensen-huang-ai-trade.html",
+   "publishDate": "2026-11-23T19:52:21+00:00",
+   "source": "www.cnbc.com",
+   "summary": "The market is loving the return of Jensen Huang, but investors and lawmakers have their guards up.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "India’s rupee carry trade: RBI support holds but risks are building",
+   "link": "https://finance.yahoo.com/markets/currencies/articles/india-rupee-carry-trade-rbi-195157748.html",
+   "publishDate": "2026-11-23T19:51:57+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Investing.com -- The rupee has recovered about 4% from its weakest level of the past year (96.965). It is still about 4.6% weaker than its strongest level (88.979), and it is down roughly 3.5% year to date. The 3-month USD/INR drop of 2.78% is consistent with most of the carry gain coming from currency appreciation, which amounts to about four-fifths since the end of September.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Veteran strategist warns why gold’s brutal sell-off may not be over",
+   "link": "https://finance.yahoo.com/markets/commodities/articles/veteran-strategist-warns-why-gold-194700072.html",
+   "publishDate": "2026-11-23T19:47:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Gold’s rebound leaves one important question unanswered.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Citadel’s 2018 analogy for U.S. markets: what fits and what differs in 2026",
+   "link": "https://finance.yahoo.com/economy/policy/articles/citadel-2018-analogy-u-markets-194655335.html",
+   "publishDate": "2026-11-23T19:46:55+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Investing.com -- Citadel’s Frank Flight argues that a resilient US economy is masking a weaker forward growth outlook, as in late 2018. Both periods share a rising dollar, sinking cyclical stocks, and a Fed that stays tight.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Nvidia gains nearly $1T as Trump says nobody could 'revive the stock like it's being revived'",
+   "link": "https://finance.yahoo.com/markets/article/nvidia-gains-nearly-1t-as-trump-says-nobody-could-revive-the-stock-like-its-being-revived-194634496.html",
+   "publishDate": "2026-11-23T19:46:34+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "A week after the worst week any company has ever had, Nvidia is having the best day.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "US imposes sanctions on dozens linked to Iran's shadow banking networks",
+   "link": "https://www.reuters.com/business/finance/us-imposes-sanctions-dozens-linked-irans-shadow-banking-networks-2026-11-23/",
+   "publishDate": "2026-11-23T19:38:33.977000+00:00",
+   "source": "www.reuters.com",
+   "summary": "The Trump administration has issued new Iran-related sanctions targeting dozens of people and entities, the Treasury Department said on Monday, stepping ​up its effort to isolate Iran from the global economy ‌and disrupt its shadow banking networks.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Nvidia’s Jensen Huang is getting his CEO job back, but history shows companies perform better when corporate boards take executive misbehavior seriously",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/nvidia-jensen-huang-getting-ceo-193215012.html",
+   "publishDate": "2026-11-23T19:32:15+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Board members are becoming more aware of the personal job consequences that stem from their performance and entanglement in misconduct.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Eric Trump-Backed American Bitcoin Stock Surges 18% After Securing $150M Bitcoin-Backed Loan",
+   "link": "https://www.benzinga.com/crypto/cryptocurrency/26/11/63556378/eric-trump-backed-american-bitcoin-stock-surges-18-after-securing-150m-bitcoin-backed-loan",
+   "publishDate": "2026-11-23T19:30:08.374000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "American Bitcoin secures $150M FalconX credit using BTC collateral, funding growth without dilution but risking collateral calls if Bitcoin falls.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Incompetent or pragmatic? Nvidia board’s rehiring of Jensen Huang splits corporate governance experts",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/incompetent-pragmatic-nvidia-board-rehiring-192246547.html",
+   "publishDate": "2026-11-23T19:22:46+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The board must now put in place a succession plan, experts say, even as the decision to rehire Huang leaves “unanswered questions.”",
+   "sentiment": null,
+   "confidence": null
+  }
+ ]
+}
