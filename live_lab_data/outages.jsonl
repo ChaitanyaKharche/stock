@@ -5897,3 +5897,4 @@
 {"seq":24316,"ts":"2026-11-20T15:55:08.452454","kind":"exit_no_quote","detail":"Six_Lines ATM wanted target, no bid"}
 {"seq":24319,"ts":"2026-11-20T15:55:08.463541","kind":"exit_no_quote","detail":"Six_Lines_NoCap ATM wanted eod, no bid"}
 {"seq":24347,"ts":"2026-11-23T09:35:08.209288","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
+{"seq":25526,"ts":"2026-11-25T15:55:02.567952","kind":"exit_no_quote","detail":"PDH_PDL_FailedBreak ATM-1 wanted eod, no bid"}

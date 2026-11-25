@@ -1,0 +1,911 @@
+{
+ "session": "2026-11-25",
+ "fetched_at_et": "2026-11-25T07:30:17",
+ "query": "(Fed OR \"Federal Reserve\" OR inflation OR CPI OR jobs OR tariff OR tariffs OR war OR Treasury OR shutdown) AND (stocks OR markets OR economy)",
+ "window_from": "2026-11-24T16:00:00",
+ "window_to": "2026-11-25T07:30:17.398332",
+ "page_size": 100,
+ "n": 100,
+ "articles": [
+  {
+   "title": "This Bank Stock Just Raised Its Dividend by Just 1.3%",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/bank-stock-just-raised-dividend-003002363.html",
+   "publishDate": "2026-11-25T00:30:02+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "United Bancorp raised its quarterly dividend by just 1.3% to $0.20 per share, its fourth increase of the year.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "General Mills (GIS) Unveils New Trix And Restructuring, Is The Stock Fully Priced?",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/general-mills-gis-unveils-trix-002703630.html",
+   "publishDate": "2026-11-25T00:27:03+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "General Mills (GIS) is back in focus after its board reaffirmed a quarterly dividend of $0.61 per share, along with product and organizational changes aimed at responding to shifting consumer preferences. Recent trading has been mixed for General Mills, with a 1-day share price return of 1.48% at US$35.59 and a 7-day share price return of 2.62%. However, the 90-day share price return is down 11.2% and the year-to-date share price return has fallen 22.16%, while the 1-year total shareholder...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Gold Falls Close to $3,500 a Troy Ounce as Market Awaits Inflation Data",
+   "link": "https://www.wsj.com/finance/commodities-futures/gold-edges-lower-with-u-s-inflation-data-in-focus-17f37be3",
+   "publishDate": "2026-11-25T00:24:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "Gold prices fell amid broader market anxiety over potential U.S. tariff plans and expectations of higher interest rates.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "European Stock Indexes Mostly Higher as Industrials, Luxuries Gain",
+   "link": "https://www.wsj.com/finance/stocks/nikkei-falls-2-8-dragged-by-chip-related-stocks-79ef7a34",
+   "publishDate": "2026-11-25T00:21:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "Energy-intensive stocks rose as oil prices fell, though tech stocks extended losses as the bounce following Jensen Huang’s reinstatement as Nvidia CEO continued to fade.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Metro Bank (LSE:MTRO) Stock Looks Fully Valued After Its Big Run",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/metro-bank-lse-mtro-stock-001631684.html",
+   "publishDate": "2026-11-25T00:16:31+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Metro Bank Holdings has delivered a powerful share price run over the past few years, which puts a spotlight on what investors are paying for its earnings today. With the stock now under formal sale talks, the key issue is whether the current market price fairly reflects the profits the bank is generating. Over the past 3 years the share price has gained about 330.4%, which puts a lot of weight on whether that climb lines up with the bank's earnings power. The ongoing formal sale process and...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Wednesday's big stock stories: What’s likely to move the market in the next trading session",
+   "link": "https://www.cnbc.com/2026/11/24/wednesday-big-stock-stories-whats-likely-to-move-the-market.html",
+   "publishDate": "2026-11-25T00:12:45+00:00",
+   "source": "www.cnbc.com",
+   "summary": "The S&P 500 and the Nasdaq Composite slid on Tuesday as Nvidia unwound some of its gains from the previous session.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Households Ages 45 to 54 Have the Highest Median Income. How Do You Compare?",
+   "link": "https://finance.yahoo.com/markets/articles/households-ages-45-54-highest-001214701.html",
+   "publishDate": "2026-11-25T00:12:14+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "See how your household income stacks up in the latest Fed survey, how education and homeownership factor in, and why net worth is a more important metric.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Jim Cramer sizes up six retail stocks after earnings — and names his two favorites",
+   "link": "https://www.cnbc.com/2026/11/24/jim-cramer-retail-stocks-earnings.html",
+   "publishDate": "2026-11-25T00:04:08+00:00",
+   "source": "www.cnbc.com",
+   "summary": "Here's where Jim Cramer stands on six retailers that rallied after reporting earnings Tuesday, and his two favorites.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Households braced for soaring energy bills with new price cap to be announced",
+   "link": "https://www.bbc.co.uk/news/articles/cm20qnq33e90o",
+   "publishDate": "2026-11-25T00:03:37+00:00",
+   "source": "www.bbc.co.uk",
+   "summary": "Domestic gas prices will rise significantly in January under regulator Ofgem's new price cap.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Australia's financial conditions are clearly restrictive, RBA's Jacobs says",
+   "link": "https://www.reuters.com/world/asia-pacific/australias-financial-conditions-are-clearly-restrictive-rbas-jacobs-says-2026-11-25/",
+   "publishDate": "2026-11-25T00:00:57.556000+00:00",
+   "source": "www.reuters.com",
+   "summary": "A senior Australian central banker said on Wednesday that financial conditions were \"clearly\" restrictive after five ​rate rises this year, but low credit ‌spreads and strong business lending made it harder to judge how tight they are.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Australia's financial conditions are clearly restrictive, RBA's Jacobs says",
+   "link": "https://finance.yahoo.com/economy/policy/articles/australias-financial-conditions-clearly-restrictive-000029509.html",
+   "publishDate": "2026-11-25T00:00:29+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "SYDNEY, Nov 25 (Reuters) - A senior Australian central banker said on Wednesday that financial conditions were \"clearly\" restrictive after five rate rises this year, but low credit spreads and strong",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "TJ Maxx CEO reveals the best time to shop this holiday season",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/tj-maxx-ceo-reveals-best-000000431.html",
+   "publishDate": "2026-11-25T00:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "TJX Companies (TJX) CEO Ernie Herrman says “markets are flooded” with closeouts.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "US Readies Tariff Hike on China, EU Goods",
+   "link": "https://www.bloomberg.com/news/videos/2026-11-24/us-readies-tariff-hike-on-china-eu-goods-video-mwvca1k8",
+   "publishDate": "2026-11-24T23:41:59+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "The US is set to announce plans to raise tariffs on goods from China, the European Union and more than a dozen other economies, according to people familiar with the matter. Bloomberg’s Derek Wallbank has the latest. (Source: Bloomberg)",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Morgan Stanley sends a strong signal on where stocks are headed",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/morgan-stanley-sends-strong-signal-230700537.html",
+   "publishDate": "2026-11-24T23:07:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Morgan Stanley has picked a side in the 2027 race.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Nvidia Board Lacked the ‘Guts’ to Tell Trump No: Steve Eisman Smells a ‘Whiff of Corruption’",
+   "link": "https://www.benzinga.com/markets/tech/26/11/63612406/nvidia-board-lacked-the-guts-to-tell-trump-no",
+   "publishDate": "2026-11-24T23:05:29.612000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Steve Eisman called Jensen Huang’s Nvidia reinstatement corrupt, citing Trump pressure and major governance concerns.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "HII Awarded Largest International Unmanned Systems Contract in Company History by UK Ministry of Defence",
+   "link": "https://www.globenewswire.com/news-release/2026/11/24/3409941/14858/en/hii-awarded-largest-international-unmanned-systems-contract-in-company-history-by-uk-ministry-of-defence.html",
+   "publishDate": "2026-11-24T23:05:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "BRISTOL, United Kingdom, Nov. 24, 2026 (GLOBE NEWSWIRE) -- HII (NYSE: HII), America's largest military shipbuilder and global leader in autonomous seapower, has been awarded a £142 million (approximately $186 million) contract by the United Kingdom’s National Armaments Director Group (NADG) to deliver REMUS 620 unmanned underwater vehicles (UUVs), ancillary equipment and support services for the Royal Navy's Mine-Hunting Capability (MHC) program.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Make It a Merry Grinchmas with Festive Holiday Décor",
+   "link": "https://www.prnewswire.com/news-releases/make-it-a-merry-grinchmas-with-festive-holiday-decor-302949946.html",
+   "publishDate": "2026-11-24T23:05:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "Deck the Halls with Delightful Grinch Inflatables, Blow Molds and Lighting DALLAS, Nov. 24, 2026 /PRNewswire/ -- Decorations featuring the Grinch, Max, and Cindy-Lou Who are ready to take their place in Christmas displays all season long. Available at Walmart, this Grinchmas collection...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "In Response to the Turmoil at Nvidia, Bitcoin Drops Below $70,000. Is This a Buy-the-Dip Opportunity?",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/response-turmoil-nvidia-bitcoin-drops-230102285.html",
+   "publishDate": "2026-11-24T23:01:02+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Bitcoin's mediocre response to Jensen Huang returning to Nvidia is a bit concerning for the coin's potential buyers.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Younger People Indicating Higher Spending This Holiday Season: The Conference Board’s Dana Peterson",
+   "link": "https://www.bloomberg.com/news/videos/2026-11-24/the-conference-board-s-peterson-on-nov-consumer-data-video",
+   "publishDate": "2026-11-24T23:00:16+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "Dana Peterson says consumers reported stronger views of current conditions and improved expectations for business activity, jobs and income. The survey ran from Nov. 1–17, overlapping with the midterm elections: optimism rose notably among Democrats and independents, while Republicans remained the most optimistic but became somewhat less so. Respondents also saw jobs as more plentiful and easier to find, a view Peterson said fits a labor market marked by limited hiring and firing. She speaks with Romaine Bostick on \"The Close.\" (Source: Bloomberg)",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Washington Is Buying Its Way Out of China's Tungsten Grip",
+   "link": "https://finance.yahoo.com/energy/articles/washington-buying-way-chinas-tungsten-230000164.html",
+   "publishDate": "2026-11-24T23:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The U.S. has committed up to $2.45 billion to secure non-Chinese tungsten supplies, ahead of a January 1 Pentagon ban on tungsten sourced from China, Russia, Iran and North Korea.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Vornado Realty Trust to Sell 49% Interest in 90 Park Avenue",
+   "link": "https://www.globenewswire.com/news-release/2026/11/24/3409927/0/en/vornado-realty-trust-to-sell-49-interest-in-90-park-avenue.html",
+   "publishDate": "2026-11-24T22:53:41+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "NEW YORK, Nov. 24, 2026 (GLOBE NEWSWIRE) -- Vornado Realty Trust (NYSE:VNO) announced today that it has agreed to sell a 49% interest in 90 Park Avenue at a valuation of $722.5 million ($755 per square foot).",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Like ‘family businesses’: Inside the Nvidia board that ousted and rehired Jensen Huang",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/family-businesses-inside-nvidia-board-225202784.html",
+   "publishDate": "2026-11-24T22:52:02+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Nvidia CEO Jensen Huang gushed last year that support from longtime board members Tench Coxe, Mark Stevens and Harvey Jones was crucial to helping him navigate three decades of running the company.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Suze Orman warns retirees against one costly stock market mistake",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/suze-orman-warns-retirees-against-223300587.html",
+   "publishDate": "2026-11-24T22:33:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "This timing trap leaves little room for error.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Jensen Huang Apologized to Nvidia Staff in Company Meeting",
+   "link": "https://www.wsj.com/business/jensen-huang-apologized-to-nvidia-staff-in-company-meeting-c798dfba",
+   "publishDate": "2026-11-24T22:32:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "Plus, the Pentagon is in talks with GM and Ford to mass produce military drones, and the U.S. is preparing to raise tariffs on China and dozens of other countries.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Defensive Assets Are Springing to Life: Emily Roland",
+   "link": "https://www.bloomberg.com/news/videos/2026-11-24/defensive-assets-are-springing-to-life-emily-roland-video",
+   "publishDate": "2026-11-24T22:28:53+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "Emily Roland, Co-Chief Investment Strategist at Manulife John Hancock Investments, argues that the Federal Reserve is central to the outlook for equities as momentum in the AI trade slows and markets need a stronger macro cycle to advance. She says investors need a Fed “put,” not only support from Trump-related policy, and describes the Fed as a key market problem. She speaks with Romaine Bostick on \"The Close.\" (Source: Bloomberg)",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Is Nvidia Trump’s Waterloo?",
+   "link": "https://www.wsj.com/opinion/is-nvidia-trumps-waterloo-22a0d3c2",
+   "publishDate": "2026-11-24T22:23:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "Jensen Huang’s return momentarily props up the AI ecosystem but settles nothing.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Pepkor Holdings Ltd (PPKRF) (Q4 2026) Earnings Call Highlights: Revenue Tops ZAR 100 Billion as ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/pepkor-holdings-ltd-ppkrf-q4-222039738.html",
+   "publishDate": "2026-11-24T22:20:39+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Pepkor Holdings Ltd (PPKRF) delivered 11.9% revenue growth to nearly ZAR 106 billion and 88% cash conversion, though softer like-for-like sales and Ackermans' decline tempered the results.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 Banking Stocks With Strong Net Interest Margin Support",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/3-banking-stocks-strong-net-221917332.html",
+   "publishDate": "2026-11-24T22:19:17+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "When a top rating agency like Fitch calls global sovereign risk “neutral” while warning about heavier debt loads and higher-for-longer interest rates, the spotlight shifts to the banks that sit closest to government bond markets. That mix of resilience and strain can reshape how capital flows. This article walks through three large global banking stocks whose businesses are closely exposed to that news backdrop and explains why their profiles may matter for your portfolio decisions. The three...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "How Much Bitcoin Could Elon Musk Control if Tesla and SpaceX Merge?",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/much-bitcoin-could-elon-musk-221239907.html",
+   "publishDate": "2026-11-24T22:12:39+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Tesla and SpaceX have both formed special committees to weigh a merger, and both sit on Bitcoin bought at very different times. Combine the stashes and a single board could hold a decision that rattles a market already under pressure.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Michael Saylor gets the regulator's nod he wanted, just not at full price",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/michael-saylor-gets-regulators-nod-221018338.html",
+   "publishDate": "2026-11-24T22:10:18+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Michael Saylor has spent years calling Bitcoin “digital capital.” On Tuesday, he got to point at a U.S. regulator.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Stubborn Inflation Could Pose a Bigger Threat to Markets Than AI Worries",
+   "link": "https://www.barrons.com/articles/stubborn-inflation-could-pose-a-bigger-threat-to-markets-than-ai-worries-40ca18e9",
+   "publishDate": "2026-11-24T22:05:00+00:00",
+   "source": "www.barrons.com",
+   "summary": "Elevated inflation and the higher interest rates needed to contain it could pose a broad threat to corporate earnings and stock valuations.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Nvidia Can 'Spark' Bitcoin Rally in 2027, Expert Claims. The Fed May Disagree.",
+   "link": "https://www.benzinga.com/crypto/cryptocurrency/26/11/63611546/nvidia-can-spark-bitcoin-rally-in-2027-expert-claims-the-fed-may-disagree",
+   "publishDate": "2026-11-24T22:04:06.270000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Bitcoin may recover as Huang returns, while ETF inflows, institutional demand, regulation and Fed policy support gains into 2027.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "TRADING DAY Nvidia bounce fades",
+   "link": "https://www.reuters.com/commentary/reuters-open-interest/global-markets-trading-day-graphic-2026-11-24/",
+   "publishDate": "2026-11-24T22:00:28.682000+00:00",
+   "source": "www.reuters.com",
+   "summary": "The relief rally around Nvidia CEO Jensen Huang's shock return fizzled out on Tuesday, with tech stocks stumbling as investors took a more sober view of the AI outlook, although most sectors on Wall Street rose. The dollar eased back and Treasuries held ​steady, as investors turned their attention to US GDP and inflation figures on Wednesday.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Elon Musk Says Making 'Epic Burgers' at In-N-Out Is Harder Than Wiring His AI Data Centers",
+   "link": "https://www.benzinga.com/news/26/11/63611396/elon-musk-says-making-epic-burgers-at-in-n-out-is-harder-than-wiring-his-ai-data-centers",
+   "publishDate": "2026-11-24T22:00:07.628000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Elon Musk says former Starbucks baristas, Target stockers and In-N-Out workers can become top SpaceX AI data center technicians with days of training.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Why Trump's Flagship Lithium Project Now Costs 31% More Than Planned",
+   "link": "https://finance.yahoo.com/energy/articles/why-trumps-flagship-lithium-project-220000173.html",
+   "publishDate": "2026-11-24T22:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Thacker Pass costs jumped 31%, and Lithium Americas' CEO blames labor shortages, tariffs and immigration limits, a snag for Trump's minerals push.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Commentary: Jensen Huang should never have been too big to fail at Nvidia",
+   "link": "https://www.channelnewsasia.com/commentary/jensen-huang-returns-nvidia-ceo-donald-trump-6577756",
+   "publishDate": "2026-11-24T21:59:00+00:00",
+   "source": "www.channelnewsasia.com",
+   "summary": "Nvidia may be too big to fail. Jensen Huang shouldn’t have been, says Dave Lee for Bloomberg Opinion.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "US Readies Tariff Hike on China, EU Goods",
+   "link": "https://www.bloomberg.com/news/videos/2026-11-24/us-readies-tariff-hike-on-china-eu-goods-video",
+   "publishDate": "2026-11-24T21:58:15+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "The US is set to announce as soon as Tuesday plans to raise tariffs on goods from China, the European Union and more than a dozen other economies, according to people familiar with the matter. Alicia Diaz reports. (Source: Bloomberg)",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Is Jensen Huang the AI 'spirit animal' who will save the stock market?",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/jensen-huang-ai-spirit-animal-215328449.html",
+   "publishDate": "2026-11-24T21:53:28+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Nvidia optimists say Jensen Huang's return will lift the stock market from its doldrums. Pessimists say his ouster was the right move all along.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "5 Dirt-Cheap Stocks Positioned to Soar in 2027",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/5-dirt-cheap-stocks-positioned-215028978.html",
+   "publishDate": "2026-11-24T21:50:28+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The market is getting cheaper faster than earnings are falling. That gap is where 2027’s winners are usually found. By November 20, the S&P 500 had slipped about 11.6% from its 52-week high, and chip stocks took the hardest hit, with the PHLX Semiconductor Index down roughly 36% from its own peak. Yet the profits […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Great British Bake Off winner crowned after high-stakes final",
+   "link": "https://www.bbc.co.uk/news/articles/cm894exd27j2o",
+   "publishDate": "2026-11-24T21:40:58+00:00",
+   "source": "www.bbc.co.uk",
+   "summary": "Judge Nigella Lawson describes the three finalists as \"sensational\" bakers.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "United Microelectronics (UMC) – A Chipmaker with a Bargain Entry that Investors Wrote Off Too Soon?",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/united-microelectronics-umc-chipmaker-bargain-214044565.html",
+   "publishDate": "2026-11-24T21:40:44+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "United Microelectronics Corporation (NYSE:UMC) opens our list of the 10 Dirt-Cheap Stocks Positioned to Soar in 2027 at number 10. By November 20, the S&P 500 had slipped about 11.6% from its 52-week high, and chip stocks took the hardest hit, with the PHLX Semiconductor Index down roughly 36% from its own peak. Yet the […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "The Economist credits video for subscription, revenue surge",
+   "link": "https://finance.yahoo.com/media-advertising/articles/economist-credits-video-subscription-revenue-213839492.html",
+   "publishDate": "2026-11-24T21:38:39+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The Economist Group is experiencing a subscription bump even as Google search traffic declines, thanks in large part to its investment in video, CEO Luke Bradley-Jones told Axios.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "India’s Largest Private Lender Is Lagging – HDFC (HDB) Made into Our 2027 Bargain List",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/india-largest-private-lender-lagging-213822712.html",
+   "publishDate": "2026-11-24T21:38:22+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published our list of the 10 Dirt-Cheap Stocks Positioned to Soar in 2027, and HDFC Bank Limited (NYSE:HDB) holds the 9th spot. By November 20, the S&P 500 had slipped about 11.6% from its 52-week high, and chip stocks took the hardest hit, with the PHLX Semiconductor Index down roughly 36% from its […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Brookfield (BN) Trades at 11x Earnings. Here’s What Keeps the Discount in Place",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/brookfield-bn-trades-11x-earnings-213702627.html",
+   "publishDate": "2026-11-24T21:37:02+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Brookfield Corporation (NYSE:BN) lands at number 8 on our list of the 10 Dirt-Cheap Stocks Positioned to Soar in 2027. By November 20, the S&P 500 had slipped about 11.6% from its 52-week high, and chip stocks took the hardest hit, with the PHLX Semiconductor Index down roughly 36% from its own peak. Yet the […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Stocks Settle Mostly Lower on a Rout in Chipmakers and AI Stocks",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/stocks-settle-mostly-lower-rout-213404833.html",
+   "publishDate": "2026-11-24T21:34:04+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The S&P 500 Index ($SPX ) (SPY ) closed down by -0.50% on Tuesday, the Dow Jones Industrial Average ($DOWI ) (DIA ) closed up +0.85%, and the Nasdaq 100 Index ($IUXX ) (QQQ ) closed down -1.99%. December E-mini S&P futures (ESZ26 ) fell -0.52%, and December E-mini Nasdaq...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Why PNC’s president is getting a one-time equity award",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/why-pnc-president-getting-one-213017996.html",
+   "publishDate": "2026-11-24T21:30:17+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Mark Wiedman, who is widely viewed as a likely successor to PNC’s longtime CEO Bill Demchak, has been granted a performance-based equity award of $20 million. He was also appointed to the board.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Bond Traders Rush to Hedge Risk of Fed Hikes Stalling Economy",
+   "link": "https://www.bloomberg.com/news/articles/2026-11-24/bond-traders-rush-to-hedge-risk-of-fed-hikes-stalling-economy",
+   "publishDate": "2026-11-24T21:30:00+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "Bond traders are racing to hedge the risk that the Federal Reserve’s interest-rate hikes and the stock market’s slide will significantly slow the US economy, forcing the central bank to shift back to easing monetary policy as soon as late next year.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Bowhead Specialty Holdings, Inc. (BOW) Received a $34 Cash Offer: What Investors Need to Know",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/bowhead-specialty-holdings-inc-bow-212706403.html",
+   "publishDate": "2026-11-24T21:27:06+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Riverwater Partners, an investment management company, released its Q3 2026 investor letter, titled “Micro Opportunities Strategy”. A copy of the letter can be downloaded here. The Strategy outperformed the broader micro-cap market in the third quarter of 2026, declining less than its benchmark amid a sharp reversal in investor enthusiasm for artificial intelligence and data-center-related […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Coastal Financial Corporation (CCB) Lost a Hedge Fund’s Confidence: Why Riverwater Exited the Stock",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/coastal-financial-corporation-ccb-lost-212441202.html",
+   "publishDate": "2026-11-24T21:24:41+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Riverwater Partners, an investment management company, released its Q3 2026 investor letter, titled “Micro Opportunities Strategy”. A copy of the letter can be downloaded here. The Strategy outperformed the broader micro-cap market in the third quarter of 2026, declining less than its benchmark amid a sharp reversal in investor enthusiasm for artificial intelligence and data-center-related […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "5 High-Conviction Stocks Billionaire Philippe Laffont Is Betting On for 2027",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/5-high-conviction-stocks-billionaire-212307906.html",
+   "publishDate": "2026-11-24T21:23:07+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Coatue Management’s November 16 regulatory filing puts billionaire Philippe Laffont’s positioning back in focus as investors look toward 2027. Its ten largest disclosed stock holdings represented 55.9% of a $54.5 billion reported portfolio at September 30, with chipmakers and equipment suppliers carrying much of the exposure. In its May 6 public-markets update, Coatue highlighted the […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Tecnoglass Inc. (TGLS) Is Facing Margin Pressure: Why Riverwater Partners Sold Its Shares",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/tecnoglass-inc-tgls-facing-margin-211927232.html",
+   "publishDate": "2026-11-24T21:19:27+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Riverwater Partners, an investment management company, released its Q3 2026 investor letter, titled “Micro Opportunities Strategy”. A copy of the letter can be downloaded here. The Strategy outperformed the broader micro-cap market in the third quarter of 2026, declining less than its benchmark amid a sharp reversal in investor enthusiasm for artificial intelligence and data-center-related […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Billionaire Philippe Laffont’s 10 High-Conviction Stock Bets for 2027",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/billionaire-philippe-laffont-10-high-211840920.html",
+   "publishDate": "2026-11-24T21:18:40+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Coatue Management’s November 16 regulatory filing puts billionaire Philippe Laffont’s positioning back in focus as investors look toward 2027. Its ten largest disclosed stock holdings represented 55.9% of a $54.5 billion reported portfolio at September 30, with chipmakers and equipment suppliers carrying much of the exposure. In its May 6 public-markets update, Coatue highlighted the […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Mayville Engineering Company, Inc. (MEC) Is Facing Margin and Cash Flow Challenges: Why Riverwater Exited",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/mayville-engineering-company-inc-mec-211508445.html",
+   "publishDate": "2026-11-24T21:15:08+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Riverwater Partners, an investment management company, released its Q3 2026 investor letter, titled “Micro Opportunities Strategy”. A copy of the letter can be downloaded here. The Strategy outperformed the broader micro-cap market in the third quarter of 2026, declining less than its benchmark amid a sharp reversal in investor enthusiasm for artificial intelligence and data-center-related […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "HP Inc. Reports Fiscal 2026 Full Year and Fourth Quarter Results; Announces Dividend Increase",
+   "link": "https://www.globenewswire.com/news-release/2026/11/24/3409888/0/en/hp-inc-reports-fiscal-2026-full-year-and-fourth-quarter-results-announces-dividend-increase.html",
+   "publishDate": "2026-11-24T21:15:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "PALO ALTO, Calif., Nov. 24, 2026 (GLOBE NEWSWIRE) -- HP (NYSE: HPQ)",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Uniti Group Inc. to Present at the BofA Securities 2026 Leveraged Finance Conference",
+   "link": "https://www.globenewswire.com/news-release/2026/11/24/3409886/35697/en/uniti-group-inc-to-present-at-the-bofa-securities-2026-leveraged-finance-conference.html",
+   "publishDate": "2026-11-24T21:15:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "LITTLE ROCK, Ark., Nov. 24, 2026 (GLOBE NEWSWIRE) -- Uniti Group Inc. (“Uniti”) (Nasdaq: UNIT) announced today that its Chief Financial Officer & Treasurer, Paul Bullington, is scheduled to present at the BofA Securities 2026 Leveraged Finance Conference. The presentation is scheduled for 4:50 PM EST on December 1, 2026, in Boca Raton, FL.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Miller Industries, Inc. (MLR) Is Recovering From an Inventory Downturn: Could Earnings Rebound Drive Its Stock Higher?",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/miller-industries-inc-mlr-recovering-211015377.html",
+   "publishDate": "2026-11-24T21:10:15+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Riverwater Partners, an investment management company, released its Q3 2026 investor letter, titled “Micro Opportunities Strategy”. A copy of the letter can be downloaded here. The Strategy outperformed the broader micro-cap market in the third quarter of 2026, declining less than its benchmark amid a sharp reversal in investor enthusiasm for artificial intelligence and data-center-related […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "American Vanguard Corporation (AVD) Is Taking Longer to Turn Around: Why Riverwater Sold the Stock",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/american-vanguard-corporation-avd-taking-210627154.html",
+   "publishDate": "2026-11-24T21:06:27+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Riverwater Partners, an investment management company, released its Q3 2026 investor letter, titled “Micro Opportunities Strategy”. A copy of the letter can be downloaded here. The Strategy outperformed the broader micro-cap market in the third quarter of 2026, declining less than its benchmark amid a sharp reversal in investor enthusiasm for artificial intelligence and data-center-related […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Ellomay Capital Reports Results for the Three and Nine Months Ended September 30, 2026",
+   "link": "https://www.globenewswire.com/news-release/2026/11/24/3409874/0/en/ellomay-capital-reports-results-for-the-three-and-nine-months-ended-september-30-2026.html",
+   "publishDate": "2026-11-24T21:05:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "TEL-AVIV, Israel, Nov. 24, 2026 (GLOBE NEWSWIRE) -- Ellomay Capital Ltd. (NYSE American; TASE: ELLO) (“Ellomay” or the “Company”), a renewable energy and power generator and developer of renewable energy and power projects in Europe, Israel and the USA, today reported its unaudited interim consolidated financial results for the three and nine month periods ended September 30, 2026.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "URBN Reports Record Q3 Sales and Profits",
+   "link": "https://www.globenewswire.com/news-release/2026/11/24/3409873/4732/en/urbn-reports-record-q3-sales-and-profits.html",
+   "publishDate": "2026-11-24T21:05:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "PHILADELPHIA, Nov. 24, 2026 (GLOBE NEWSWIRE) -- Urban Outfitters, Inc. (NASDAQ:URBN), a leading lifestyle products and services company which operates a portfolio of global consumer brands including the Anthropologie, Free People, FP Movement, Urban Outfitters and Nuuly brands, today announced net income of $134.1 million and earnings per diluted share of $1.54 for the three months ended October 31, 2026. For the nine months ended October 31, 2026, net income was $490.4 million and earnings per diluted share were $5.61.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Ambarella, Inc. Announces Third Quarter Fiscal Year 2027 Financial Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/24/3409869/23306/en/ambarella-inc-announces-third-quarter-fiscal-year-2027-financial-results.html",
+   "publishDate": "2026-11-24T21:05:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "SANTA CLARA, Calif., Nov. 24, 2026 (GLOBE NEWSWIRE) -- Ambarella, Inc. (NASDAQ: AMBA), an edge AI semiconductor company, today announced third quarter fiscal 2027 financial results for the period ended October 31, 2026.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Workday Announces Fiscal 2027 Third Quarter Financial Results",
+   "link": "https://www.prnewswire.com/news-releases/workday-announces-fiscal-2027-third-quarter-financial-results-302949793.html",
+   "publishDate": "2026-11-24T21:01:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "Fiscal Third Quarter Total Revenues of $2.705 Billion, Up 11.2% Year-Over-Year Subscription Revenues of $2.532 Billion, Up 12.8% Year-Over-Year PLEASANTON, Calif., Nov. 24, 2026 /PRNewswire/ -- Workday, Inc. (NASDAQ: WDAY), the trusted agentic platform for HR, finance, and IT, today...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "IRadimed Corporation (IRMD) Is Entering a Multi-Year Replacement Cycle: Could Its Next-Generation Pump Fuel Growth?",
+   "link": "https://finance.yahoo.com/healthcare/articles/iradimed-corporation-irmd-entering-multi-210038946.html",
+   "publishDate": "2026-11-24T21:00:38+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Riverwater Partners, an investment management company, released its Q3 2026 investor letter, titled “Micro Opportunities Strategy”. A copy of the letter can be downloaded here. The Strategy outperformed the broader micro-cap market in the third quarter of 2026, declining less than its benchmark amid a sharp reversal in investor enthusiasm for artificial intelligence and data-center-related […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "IBC Advanced Alloys Returns to Profitability as First-Quarter Sales Surge 83%",
+   "link": "https://www.accessnewswire.com/newsroom/en/metals-and-mining/ibc-advanced-alloys-returns-to-profitability-as-first-quarter-sales-surge-83-1256735",
+   "publishDate": "2026-11-24T21:00:00+00:00",
+   "source": "www.accessnewswire.com",
+   "summary": "IBC Advanced Alloys Corp. (\"IBC\" or the \"Company\") (TSXV:IB)(OTCQB:IAALF) announces its financial results for the first quarter of fiscal year 2027, the three months ended September 30, 2026.  Sustained demand for the Company's copper-based products from customers in the naval defense and electronics industries drove first-quarter revenue to $7.6 million, an 82.8% increase over the comparable prior-year period, when sales were held back by...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "AUTODESK, INC. ANNOUNCES FISCAL 2027 THIRD QUARTER RESULTS",
+   "link": "https://www.prnewswire.com/news-releases/autodesk-inc-announces-fiscal-2027-third-quarter-results-302949762.html",
+   "publishDate": "2026-11-24T21:00:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "Third quarter revenue grew 17 percent year over year as reported, 14 percent on a constant currency basis, to $2.16 billion SAN FRANCISCO, Nov. 24, 2026 /PRNewswire/ -- Autodesk, Inc. (NASDAQ: ADSK) today reported financial results for the third quarter of fiscal 2027, ended October 31,...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Bank of Korea Seen Resuming Rate Hikes as AI Boom Stokes Growth",
+   "link": "https://www.bloomberg.com/news/articles/2026-11-24/bank-of-korea-seen-resuming-rate-hikes-as-ai-boom-stokes-growth",
+   "publishDate": "2026-11-24T21:00:00+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "The Bank of Korea is expected to resume raising interest rates this week as a semiconductor boom drives stronger-than-anticipated growth and keeps inflation elevated, even as weak domestic demand and a recent stock-market rout cloud the outlook.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "$35 trillion walks into a room. What does it mean for your money?",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/35-trillion-walks-room-does-210000217.html",
+   "publishDate": "2026-11-24T21:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Tokenization could bring Wall Street funds to crypto-native investors, while AI and private-market products reshape how Americans invest.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Soybean futures rise on meal demand, wheat slips on crop data",
+   "link": "https://www.investing.com/news/commodities-news/soybean-futures-rise-on-meal-demand-wheat-slips-on-crop-data-93CH-5048986",
+   "publishDate": "2026-11-24T20:58:57+00:00",
+   "source": "www.investing.com",
+   "summary": "- Chicago soybean futures moved higher Tuesday, supported by strong soybean meal demand that outweighed pressure from accelerating planting activity in Brazil. Wheat futures slipped as U.S.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Heartland Express, Inc. (HTLD) Fell Amid Rising Diesel Prices: Could the Trucking Stock Recover?",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/heartland-express-inc-htld-fell-205545507.html",
+   "publishDate": "2026-11-24T20:55:45+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Riverwater Partners, an investment management company, released its Q3 2026 investor letter, titled “Micro Opportunities Strategy”. A copy of the letter can be downloaded here. The Strategy outperformed the broader micro-cap market in the third quarter of 2026, declining less than its benchmark amid a sharp reversal in investor enthusiasm for artificial intelligence and data-center-related […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Is HPE One of the Morgan Stanley’s 8 Best Semiconductor and Server Stocks to Buy for 2027?",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/hpe-one-morgan-stanley-8-205519024.html",
+   "publishDate": "2026-11-24T20:55:19+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published our list of Morgan Stanley’s 8 Best Semiconductor and Server Stocks to Buy for 2027, and Hewlett Packard Enterprise Company (NYSE:HPE) ranked eighth. The semiconductor industry’s investment cycle has advanced: The Semiconductor Industry Association’s November 3 release put global third-quarter sales at $517.7 billion, up 24.1% from the preceding quarter. September sales […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Synopsys’ $1 Billion-Plus Silicon Deal Offers a Different Route Into AI Spending",
+   "link": "https://finance.yahoo.com/technology/ai/articles/synopsys-1-billion-plus-silicon-205416700.html",
+   "publishDate": "2026-11-24T20:54:16+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published our list of Morgan Stanley’s 8 Best Semiconductor and Server Stocks to Buy for 2027, and Synopsys, Inc. (NASDAQ:SNPS) ranked seventh. The semiconductor industry’s investment cycle has advanced: The Semiconductor Industry Association’s November 3 release put global third-quarter sales at $517.7 billion, up 24.1% from the preceding quarter. September sales reached $172.6 […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Argentina expected to suffer technical recession in blow to Milei",
+   "link": "https://www.ft.com/content/7ad64c80-64d2-4516-9400-1fbad546b0fe",
+   "publishDate": "2026-11-24T20:54:16+00:00",
+   "source": "www.ft.com",
+   "summary": "President’s crusade against inflation weighs down economy as he prepares to mount re-election bid next year",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Is AMD Among the Morgan Stanley’s Best Semiconductor and Server Stocks to Buy for 2027?",
+   "link": "https://finance.yahoo.com/technology/articles/amd-among-morgan-stanley-best-205409840.html",
+   "publishDate": "2026-11-24T20:54:09+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published our list of Morgan Stanley’s 8 Best Semiconductor and Server Stocks to Buy for 2027, and Advanced Micro Devices, Inc. (NASDAQ:AMD) ranked fifth. The semiconductor industry’s investment cycle has advanced: The Semiconductor Industry Association’s November 3 release put global third-quarter sales at $517.7 billion, up 24.1% from the preceding quarter. September sales […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Douglas Dynamics, Inc. (PLOW) Fell More Than 20%: Could Its Snowplow Business Recover From the Selloff?",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/douglas-dynamics-inc-plow-fell-205404386.html",
+   "publishDate": "2026-11-24T20:54:04+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Riverwater Partners, an investment management company, released its Q3 2026 investor letter, titled “Micro Opportunities Strategy”. A copy of the letter can be downloaded here. The Strategy outperformed the broader micro-cap market in the third quarter of 2026, declining less than its benchmark amid a sharp reversal in investor enthusiasm for artificial intelligence and data-center-related […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Cadence Builds an $8.2 Billion Backlog, but Its Margins Tell Another Story",
+   "link": "https://finance.yahoo.com/technology/ai/articles/cadence-builds-8-2-billion-205301134.html",
+   "publishDate": "2026-11-24T20:53:01+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published our list of Morgan Stanley’s 8 Best Semiconductor and Server Stocks to Buy for 2027, and Cadence Design Systems, Inc. (NASDAQ:CDNS) ranked sixth. The semiconductor industry’s investment cycle has advanced: The Semiconductor Industry Association’s November 3 release put global third-quarter sales at $517.7 billion, up 24.1% from the preceding quarter. September sales […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Morgan Stanley’s 4 Best Semiconductor and Server Stocks to Buy for 2027",
+   "link": "https://finance.yahoo.com/technology/articles/morgan-stanley-4-best-semiconductor-205040524.html",
+   "publishDate": "2026-11-24T20:50:40+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The semiconductor industry’s investment cycle has advanced: The Semiconductor Industry Association’s November 3 release put global third-quarter sales at $517.7 billion, up 24.1% from the preceding quarter. September sales reached $172.6 billion, jumping 146.8% from a year earlier. World Semiconductor Trade Statistics compiles the monthly data as three-month moving averages; these totals cover the semiconductor […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Consumer sentiment surges following midterm elections: Conference Board",
+   "link": "https://finance.yahoo.com/economy/articles/consumer-sentiment-surges-following-midterm-204927775.html",
+   "publishDate": "2026-11-24T20:49:27+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "“There’s optimism in the air heading into the holiday season,” Navy Federal Credit Union Chief Economist Heather Long said.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Is Circle One of the Best Bitcoin and Blockchain Stocks to Buy As Per Wall Street Analysts?",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/circle-one-best-bitcoin-blockchain-204521190.html",
+   "publishDate": "2026-11-24T20:45:21+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published our list of the 10 Best Bitcoin and Blockchain Stocks to Buy According to Wall Street Analysts, and Circle Internet Group (NYSE:CRCL) ranked tenth. Bitcoin and blockchain stocks cover several types of businesses. The SEC’s crypto-investment guide distinguishes mining, exchanges, staking, blockchain technology, and digital-asset treasuries. It also explains that shareholders own […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "AnaptysBio, Inc. (ANAB) Is Turning Into a Royalty Business: Could Jemperli Unlock Significant Value?",
+   "link": "https://finance.yahoo.com/healthcare/articles/anaptysbio-inc-anab-turning-royalty-204457704.html",
+   "publishDate": "2026-11-24T20:44:57+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Riverwater Partners, an investment management company, released its Q3 2026 investor letter, titled “Micro Opportunities Strategy”. A copy of the letter can be downloaded here. The Strategy outperformed the broader micro-cap market in the third quarter of 2026, declining less than its benchmark amid a sharp reversal in investor enthusiasm for artificial intelligence and data-center-related […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Securitize’s Average Tokenized Assets Grew 39%. Can It Close the Profit Gap?",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/securitize-average-tokenized-assets-grew-204405054.html",
+   "publishDate": "2026-11-24T20:44:05+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published our list of the 10 Best Bitcoin and Blockchain Stocks to Buy According to Wall Street Analysts, and Securitize Corp. (NYSE:SECZ) ranked ninth. Bitcoin and blockchain stocks cover several types of businesses. The SEC’s crypto-investment guide distinguishes mining, exchanges, staking, blockchain technology, and digital-asset treasuries. It also explains that shareholders own an […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Even After Big Gains, Insiders Are Loading Up on These 5 Stocks",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/even-big-gains-insiders-loading-204333113.html",
+   "publishDate": "2026-11-24T20:43:33+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Purchasing a stock following a sharp decline is easy to justify. However, buying it after a bullish run makes it harder. For that reason, insider purchases that occur after rallies deserve a closer inspection. It is also important to understand the underlying motivations behind insider buying and selling. Insiders can have several reasons for selling […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Bullish Looks to Equiniti for Its Next Move Into Tokenized Securities",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/bullish-looks-equiniti-next-move-204245446.html",
+   "publishDate": "2026-11-24T20:42:45+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published our list of the 10 Best Bitcoin and Blockchain Stocks to Buy According to Wall Street Analysts, and Bullish (NYSE:BLSH) ranked eighth. Bitcoin and blockchain stocks cover several types of businesses. The SEC’s crypto-investment guide distinguishes mining, exchanges, staking, blockchain technology, and digital-asset treasuries. It also explains that shareholders own an interest […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Investors Should Keep an Eye on Algonquin Power & Utilities (AQN) Following the Midterms",
+   "link": "https://finance.yahoo.com/energy/articles/investors-keep-eye-algonquin-power-204117478.html",
+   "publishDate": "2026-11-24T20:41:17+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published a list of Top 10 Canadian Stocks Set to Benefit from the US Midterms, and Algonquin Power & Utilities Corp. (NYSE:AQN) ranked 10th on this list. The ongoing trade escalation and tariffs from the U.S. administration are amongst the most critical risk factors that have weighed heavily on Canadian businesses. Since March 2025, […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Gemini’s Card Revenue Rose 82%. Can It Offset the Trading Slump?",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/gemini-card-revenue-rose-82-204103047.html",
+   "publishDate": "2026-11-24T20:41:03+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published our list of the 10 Best Bitcoin and Blockchain Stocks to Buy According to Wall Street Analysts, and Gemini Space Station, Inc. (NASDAQ:GEMI) ranked seventh. Bitcoin and blockchain stocks cover several types of businesses. The SEC’s crypto-investment guide distinguishes mining, exchanges, staking, blockchain technology, and digital-asset treasuries. It also explains that shareholders […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Is Figure Technology Solutions Among the Best Bitcoin and Blockchain Stocks to Buy According to Wall Street Analysts?",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/figure-technology-solutions-among-best-203932786.html",
+   "publishDate": "2026-11-24T20:39:32+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published our list of the 10 Best Bitcoin and Blockchain Stocks to Buy According to Wall Street Analysts, and Figure Technology Solutions, Inc. (NASDAQ:FIGR) ranked sixth. Bitcoin and blockchain stocks cover several types of businesses. The SEC’s crypto-investment guide distinguishes mining, exchanges, staking, blockchain technology, and digital-asset treasuries. It also explains that shareholders […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Is TC Energy (TRP) One of The Names Likely to Benefit From Midterm Outcome?",
+   "link": "https://finance.yahoo.com/energy/articles/tc-energy-trp-one-names-203927892.html",
+   "publishDate": "2026-11-24T20:39:27+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published a list of Top 10 Canadian Stocks Set to Benefit from the US Midterms, and TC Energy Corp. (NYSE:TRP) ranked 9th on this list. The ongoing trade escalation and tariffs from the U.S. administration are amongst the most critical risk factors that have weighed heavily on Canadian businesses. Since March 2025, when […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Midterms Lead to an Encouraging Sentiment Around The Descartes Systems Group (DSGX)",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/midterms-lead-encouraging-sentiment-around-203820548.html",
+   "publishDate": "2026-11-24T20:38:20+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published a list of Top 10 Canadian Stocks Set to Benefit from the US Midterms, and The Descartes Systems Group Inc. (NASDAQ:DSGX) ranked 8th on this list. The ongoing trade escalation and tariffs from the U.S. administration are amongst the most critical risk factors that have weighed heavily on Canadian businesses. Since March 2025, […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "What Makes Enbridge (ENB) Attractive Following the US Midterms?",
+   "link": "https://finance.yahoo.com/energy/articles/makes-enbridge-enb-attractive-following-203720343.html",
+   "publishDate": "2026-11-24T20:37:20+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published a list of Top 10 Canadian Stocks Set to Benefit from the US Midterms, and Enbridge Inc. (NYSE:ENB) ranked 7th on this list. The ongoing trade escalation and tariffs from the U.S. administration are amongst the most critical risk factors that have weighed heavily on Canadian businesses. Since March 2025, when the […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "5 Best Bitcoin and Blockchain Stocks to Buy According to Wall Street Analysts",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/5-best-bitcoin-blockchain-stocks-203656697.html",
+   "publishDate": "2026-11-24T20:36:56+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Bitcoin and blockchain stocks cover several types of businesses. The SEC’s crypto-investment guide distinguishes mining, exchanges, staking, blockchain technology, and digital-asset treasuries. It also explains that shareholders own an interest in the company rather than direct ownership of its crypto assets. Also read: 11 Best Bitcoin and Blockchain Stocks to Invest in. The market faced […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Dollar Falls With T-Note Yields",
+   "link": "https://finance.yahoo.com/markets/currencies/articles/dollar-falls-t-note-yields-203457901.html",
+   "publishDate": "2026-11-24T20:34:57+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The dollar index (DXY00 ) fell by -0.48% on Tuesday. The dollar was undercut Tuesday by falling T-note yields, after the 10-year T-note yield dropped to a 2-week low of 4.88%. Renewed trade tensions also weighed on the dollar after the Wall Street Journal reported that the US will soon...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Here Is How Magna International (MGA) Is Positioned to Capitalize on US Midterms",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/magna-international-mga-positioned-capitalize-203455800.html",
+   "publishDate": "2026-11-24T20:34:55+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published a list of Top 10 Canadian Stocks Set to Benefit from the US Midterms, and Magna International Inc. (NYSE:MGA) ranked 6th on this list. The ongoing trade escalation and tariffs from the U.S. administration are amongst the most critical risk factors that have weighed heavily on Canadian businesses. Since March 2025, when […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Top 5 Canadian Stocks Set to Benefit from the US Midterms",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/top-5-canadian-stocks-set-203327098.html",
+   "publishDate": "2026-11-24T20:33:27+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The ongoing trade escalation and tariffs from the U.S. administration are amongst the most critical risk factors that have weighed heavily on Canadian businesses. Since March 2025, when the U.S. duties became effective alongside Canada’s own retaliatory measures, companies have come under significant financial pressure. Also check our list of Top 10 Stocks that Have […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Why Pfizer (PFE) Stock Is Up 4.2% Today: Health Care Sector Rally",
+   "link": "https://finance.yahoo.com/healthcare/articles/why-pfizer-pfe-stock-4-203040700.html",
+   "publishDate": "2026-11-24T20:30:40+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "On Tuesday, Nov. 24, Pfizer shares rose 4.2% along with health care stocks, while the S&P 500 fell 0.9%, as of 3:30 p.m. ET.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Nvidia's Biggest Southeast Asian Buyer Just Got Blacklisted — Washington's First Entity List Move In Over A Year",
+   "link": "https://www.benzinga.com/markets/large-cap/26/11/63605668/megaspeed-entity-list-nvidia-blacklist-southeast-asia",
+   "publishDate": "2026-11-24T20:30:08.120000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Megaspeed, a major Nvidia buyer, joins the Entity List in Commerce's first addition in over a year, as SMH slides and Southeast Asia's AI hub is tested.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Oman Cables Industry Saog (MUS:OCAI) (H1 2026) Earnings Call Highlights: Revenue Climbs to ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/oman-cables-industry-saog-mus-202525301.html",
+   "publishDate": "2026-11-24T20:25:25+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Oman Cables Industry Saog (MUS:OCAI) posted higher H1 2026 revenue, EBITDA and net profit, backed by full metal-price hedging and a new medium-voltage plant due in Q4 2027.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Engro Fertilizers Ltd (KAR:EFERT) (Q2 2026) Earnings Call Highlights: Inventory Overhang ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/engro-fertilizers-ltd-kar-efert-202456947.html",
+   "publishDate": "2026-11-24T20:24:56+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Engro Fertilizers Ltd (KAR:EFERT) defends its high-cost inventory strategy and dividend policy, expecting market share to normalize by December 2026 as urea demand picks up.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Strive Inc (ASST) Q2 2026 Earnings Call Highlights: $15 Billion Cash Pile, $7 Billion Tax Bill ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/strive-inc-asst-q2-2026-202444976.html",
+   "publishDate": "2026-11-24T20:24:44+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Strive Inc (ASST) weighed a $5 billion buyback and 261.8 million SpaceX shares against Hughes' Chapter 11 filing, a $5-7 billion tax liability and a Boost Mobile turnaround still in progress.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Once Upon a Farm PBC (OFRM) Q2 2026 Earnings Call Highlights: Net Sales Surge 42% as Baby and ...",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/once-upon-farm-pbc-ofrm-202431574.html",
+   "publishDate": "2026-11-24T20:24:31+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Once Upon a Farm PBC (OFRM) raised full-year net sales guidance to $327-$335 million despite gross margin pressure from trade spend and product mix.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Net Worth of Single Adults Without Kids—Here’s How You Compare",
+   "link": "https://finance.yahoo.com/economy/articles/net-worth-single-adults-without-202000398.html",
+   "publishDate": "2026-11-24T20:20:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Single adults under 55 without kids had a median net worth of $25,380 in 2025, 35% below the 2007 peak, new Fed data show.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Wendy's \"pricing scheme\" inflated menu prices, lawsuit alleges",
+   "link": "https://finance.yahoo.com/small-business/articles/wendys-pricing-scheme-inflated-menu-201943904.html",
+   "publishDate": "2026-11-24T20:19:43+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "In a proposed class action, a California resident alleges that Wendy's conspired with its franchisees to set and raise menu prices.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "FS Bancorp, Inc. Authorizes Share Repurchase Program",
+   "link": "https://www.globenewswire.com/news-release/2026/11/24/3409842/24095/en/fs-bancorp-inc-authorizes-share-repurchase-program.html",
+   "publishDate": "2026-11-24T20:15:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "MOUNTLAKE TERRACE, Wash., Nov. 24, 2026 (GLOBE NEWSWIRE) -- FS Bancorp, Inc. (NASDAQ: FSBW) (“Company”), the holding company for 1st Security Bank of Washington (“Bank”) announced that its Board of Directors has authorized a share repurchase program of up to $15.0 million in shares of the Company’s outstanding common stock in the open market, in privately negotiated transactions from time to time over a 12-month period until November 24, 2027, at such prices as may be determined by the Company’s management. The repurchase program will commence no sooner than the second trading day after the public announcement of this repurchase program. In addition, the previously announced repurchase plan, that was announced on August 24, 2026, has approximately $5,000 remaining that is authorized for repurchase.",
+   "sentiment": null,
+   "confidence": null
+  }
+ ]
+}
