@@ -151,3 +151,6 @@
 {"date": "2026-11-24", "outcome": "COLLECTED", "reason": "", "attempts": 2, "is_session": true, "recorded_at_et": "2026-11-24T16:00:15", "utc_offset_hours": null, "supervisor_rc": 0}
 {"date": "2026-11-25", "outcome": "OPENED", "reason": "", "attempts": 1, "is_session": true, "recorded_at_et": "2026-11-25T09:06:59", "utc_offset_hours": null, "started_et": "09:06:59", "late_start": false, "arms": ["options", "shares"]}
 {"date": "2026-11-25", "outcome": "COLLECTED", "reason": "", "attempts": 2, "is_session": true, "recorded_at_et": "2026-11-25T16:00:18", "utc_offset_hours": null, "supervisor_rc": 0}
+{"date": "2026-11-26", "outcome": "NOT_A_SESSION", "reason": "market holiday or weekend", "attempts": 1, "is_session": false, "recorded_at_et": "2026-11-26T07:30:17", "utc_offset_hours": null}
+{"date": "2026-11-26", "outcome": "OPENED", "reason": "", "attempts": 2, "is_session": false, "recorded_at_et": "2026-11-26T09:06:56", "utc_offset_hours": null, "started_et": "09:06:56", "late_start": false, "arms": ["options", "shares"]}
+{"date": "2026-11-26", "outcome": "ABORTED", "reason": "feed is DELAYED; prices would be stale", "attempts": 3, "is_session": false, "recorded_at_et": "2026-11-26T09:34:10", "utc_offset_hours": null}

@@ -5898,3 +5898,39 @@
 {"seq":24319,"ts":"2026-11-20T15:55:08.463541","kind":"exit_no_quote","detail":"Six_Lines_NoCap ATM wanted eod, no bid"}
 {"seq":24347,"ts":"2026-11-23T09:35:08.209288","kind":"exit_no_quote","detail":"PDH_PDL_Breakout ATM wanted stop, no bid"}
 {"seq":25526,"ts":"2026-11-25T15:55:02.567952","kind":"exit_no_quote","detail":"PDH_PDL_FailedBreak ATM-1 wanted eod, no bid"}
+{"seq":25539,"ts":"2026-11-26T09:30:02.713100","kind":"stale_quote","detail":"QQQ age=48602.7s"}
+{"seq":25540,"ts":"2026-11-26T09:30:03.015782","kind":"stale_quote","detail":"SPY age=48603.0s"}
+{"seq":25541,"ts":"2026-11-26T09:30:18.128590","kind":"stale_quote","detail":"QQQ age=48618.1s"}
+{"seq":25542,"ts":"2026-11-26T09:30:18.209188","kind":"stale_quote","detail":"SPY age=48618.2s"}
+{"seq":25543,"ts":"2026-11-26T09:30:33.304799","kind":"stale_quote","detail":"QQQ age=48633.3s"}
+{"seq":25544,"ts":"2026-11-26T09:30:33.383798","kind":"stale_quote","detail":"SPY age=48633.4s"}
+{"seq":25545,"ts":"2026-11-26T09:30:48.493987","kind":"stale_quote","detail":"QQQ age=48648.5s"}
+{"seq":25546,"ts":"2026-11-26T09:30:48.570970","kind":"stale_quote","detail":"SPY age=48648.6s"}
+{"seq":25547,"ts":"2026-11-26T09:31:03.684659","kind":"levels_unavailable","detail":"cannot build the six lines (0 premarket bars) -- Six_Lines will not trade QQQ today","symbol":"QQQ"}
+{"seq":25548,"ts":"2026-11-26T09:31:03.849415","kind":"stale_quote","detail":"QQQ age=48663.8s"}
+{"seq":25549,"ts":"2026-11-26T09:31:04.078863","kind":"levels_unavailable","detail":"cannot build the six lines (0 premarket bars) -- Six_Lines will not trade SPY today","symbol":"SPY"}
+{"seq":25550,"ts":"2026-11-26T09:31:04.233749","kind":"stale_quote","detail":"SPY age=48664.2s"}
+{"seq":25551,"ts":"2026-11-26T09:31:19.677475","kind":"stale_quote","detail":"QQQ age=48679.7s"}
+{"seq":25552,"ts":"2026-11-26T09:31:19.833122","kind":"stale_quote","detail":"SPY age=48679.8s"}
+{"seq":25553,"ts":"2026-11-26T09:31:35.012515","kind":"stale_quote","detail":"QQQ age=48695.0s"}
+{"seq":25554,"ts":"2026-11-26T09:31:35.172510","kind":"stale_quote","detail":"SPY age=48695.2s"}
+{"seq":25555,"ts":"2026-11-26T09:31:50.346979","kind":"stale_quote","detail":"QQQ age=48710.3s"}
+{"seq":25556,"ts":"2026-11-26T09:31:50.504280","kind":"stale_quote","detail":"SPY age=48710.5s"}
+{"seq":25557,"ts":"2026-11-26T09:32:05.730435","kind":"stale_quote","detail":"QQQ age=48725.7s"}
+{"seq":25558,"ts":"2026-11-26T09:32:05.889411","kind":"stale_quote","detail":"SPY age=48725.9s"}
+{"seq":25559,"ts":"2026-11-26T09:32:21.069013","kind":"stale_quote","detail":"QQQ age=48741.1s"}
+{"seq":25560,"ts":"2026-11-26T09:32:21.223550","kind":"stale_quote","detail":"SPY age=48741.2s"}
+{"seq":25561,"ts":"2026-11-26T09:32:36.440735","kind":"stale_quote","detail":"QQQ age=48756.4s"}
+{"seq":25562,"ts":"2026-11-26T09:32:36.600742","kind":"stale_quote","detail":"SPY age=48756.6s"}
+{"seq":25563,"ts":"2026-11-26T09:32:52.096994","kind":"stale_quote","detail":"QQQ age=48772.1s"}
+{"seq":25564,"ts":"2026-11-26T09:32:52.362447","kind":"stale_quote","detail":"SPY age=48772.4s"}
+{"seq":25565,"ts":"2026-11-26T09:33:07.549011","kind":"stale_quote","detail":"QQQ age=48787.5s"}
+{"seq":25566,"ts":"2026-11-26T09:33:07.873429","kind":"stale_quote","detail":"SPY age=48787.9s"}
+{"seq":25567,"ts":"2026-11-26T09:33:23.055617","kind":"stale_quote","detail":"QQQ age=48803.1s"}
+{"seq":25568,"ts":"2026-11-26T09:33:23.330619","kind":"stale_quote","detail":"SPY age=48803.3s"}
+{"seq":25569,"ts":"2026-11-26T09:33:38.633366","kind":"stale_quote","detail":"QQQ age=48818.6s"}
+{"seq":25570,"ts":"2026-11-26T09:33:38.886902","kind":"stale_quote","detail":"SPY age=48818.9s"}
+{"seq":25571,"ts":"2026-11-26T09:33:54.080003","kind":"stale_quote","detail":"QQQ age=48834.1s"}
+{"seq":25572,"ts":"2026-11-26T09:33:54.250581","kind":"stale_quote","detail":"SPY age=48834.3s"}
+{"seq":25573,"ts":"2026-11-26T09:34:09.411725","kind":"stale_quote","detail":"QQQ age=48849.4s"}
+{"seq":25574,"ts":"2026-11-26T09:34:09.567507","kind":"stale_quote","detail":"SPY age=48849.6s"}

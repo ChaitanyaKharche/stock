@@ -1,0 +1,911 @@
+{
+ "session": "2026-11-26",
+ "fetched_at_et": "2026-11-26T07:30:19",
+ "query": "(Fed OR \"Federal Reserve\" OR inflation OR CPI OR jobs OR tariff OR tariffs OR war OR Treasury OR shutdown) AND (stocks OR markets OR economy)",
+ "window_from": "2026-11-25T16:00:00",
+ "window_to": "2026-11-26T07:30:19.574666",
+ "page_size": 100,
+ "n": 100,
+ "articles": [
+  {
+   "title": "Gold Rises But U.S. Inflation Data Fuels Rate-Hike Expectations",
+   "link": "https://www.wsj.com/finance/commodities-futures/gold-edges-lower-amid-rate-hike-bets-1d4057c0",
+   "publishDate": "2026-11-26T00:24:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "Gold prices rose following Wednesday’s slump, but remained on track for a weekly loss after the latest U.S. inflation data reinforced expectations for further interest-rate hikes.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "European Indexes Open Sharply Higher After U.S. Recovery",
+   "link": "https://www.wsj.com/finance/stocks/nikkei-rises-1-3-led-by-chip-metals-stocks-3b7004c9",
+   "publishDate": "2026-11-26T00:19:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "European stock indexes opened with strong gains after a late equity rally in the U.S. session.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "U.S. stock futures steady after whipsaw session on Wall St",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/u-stock-futures-steady-whipsaw-001343016.html",
+   "publishDate": "2026-11-26T00:13:43+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Investing.com-- U.S. stock index futures steadied in aftermarket trade on Wednesday with technology stocks remaining skittish after a slowing artificial intelligence trade and strong inflation drove wild swings on Wall Street.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Inside India newsletter: Roaring economy, foreign investors’ return and now record auto sales",
+   "link": "https://www.cnbc.com/2026/11/26/india-auto-slaes-economy-suzuki-hyundai-toyota.html",
+   "publishDate": "2026-11-26T00:12:16+00:00",
+   "source": "www.cnbc.com",
+   "summary": "Automakers in India are poised to sell over 30 million vehicles in the financial year ending March 2027.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Black Friday? No thanks, some brands say",
+   "link": "https://www.reuters.com/business/retail-consumer/black-friday-no-thanks-some-brands-say-2026-11-26/",
+   "publishDate": "2026-11-26T00:02:07.321000+00:00",
+   "source": "www.reuters.com",
+   "summary": "While most brands are dangling deep Black Friday discounts to entice shoppers, some are opting out. These holdouts want to protect profits, make a point about sustainability, or simply stand out and try to connect with a growing number of consumers wary of ​permanent promotions.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Guitar wars - the transatlantic battle over the Stratocaster",
+   "link": "https://www.bbc.co.uk/news/articles/cqd01l9x8k48o",
+   "publishDate": "2026-11-26T00:01:37+00:00",
+   "source": "www.bbc.co.uk",
+   "summary": "US company Fender is in dispute with a German firm that makes generic versions of its key model.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Asia-Pacific markets set for subdued open as investors weigh fresh U.S. tariffs",
+   "link": "https://www.cnbc.com/2026/11/26/stock-markets-today-.html",
+   "publishDate": "2026-11-25T23:48:51+00:00",
+   "source": "www.cnbc.com",
+   "summary": "Asia-Pacific markets were set to open higher Thursday, after Wall Street staged a dramatic recovery from session lows overnight.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Holtz-Eakin: 50bps Hike Would Send ‘Important Message’",
+   "link": "https://www.bloomberg.com/news/videos/2026-11-25/holtz-eakin-50bps-hike-would-send-important-message-video",
+   "publishDate": "2026-11-25T23:44:52+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "American Action Forum President Douglas Holtz-Eakin says a half-point Federal Reserve rate hike would send an important message that policymakers are serious about returning inflation to target. The former Congressional Budget Office director says, however, tariffs and market volatility could ultimately lead the Fed to opt for a quarter-point move instead. He speaks with Joe Mathieu on Bloomberg’s \"Balance of Power.\" (Source: Bloomberg)",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "U.S. stock futures steady after whipsaw session on Wall St",
+   "link": "https://www.investing.com/news/stock-market-news/us-stock-futures-steady-after-whipsaw-session-on-wall-st-5051753",
+   "publishDate": "2026-11-25T23:43:43+00:00",
+   "source": "www.investing.com",
+   "summary": "- U.S. stock index futures steadied in aftermarket trade on Wednesday with technology stocks remaining skittish after a slowing artificial intelligence trade and strong inflation drove wild swings on Wall Street.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Forced to Take an RMD by Year’s End? Here Are Smart, Safe Places to Stash the Money",
+   "link": "https://finance.yahoo.com/markets/currencies/articles/forced-rmd-end-smart-safe-234217781.html",
+   "publishDate": "2026-11-25T23:42:17+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Savings rates are attractive today, and some could climb even higher in the months ahead.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "New Trump tariffs would likely increase sugar prices in the US",
+   "link": "https://www.reuters.com/business/new-trump-tariffs-would-likely-increase-sugar-prices-us-2026-11-25/",
+   "publishDate": "2026-11-25T23:41:23.673000+00:00",
+   "source": "www.reuters.com",
+   "summary": "The new proposed tariffs by the Trump administration would likely increase sugar prices for food industries and the general public in the United States, analysts ​and industry groups said on Wednesday.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "For Trump, doubling down on tariffs is about power, not popularity",
+   "link": "https://www.reuters.com/world/us/trump-doubling-down-tariffs-is-about-power-not-popularity-2026-11-25/",
+   "publishDate": "2026-11-25T23:31:51.658000+00:00",
+   "source": "www.reuters.com",
+   "summary": "In midterm elections three weeks ago, US voters punished Republicans over an economy and inflation that many said were made worse by tariffs. President Donald Trump is doubling down on them anyway.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Analysis-For Trump, doubling down on tariffs is about power, not popularity",
+   "link": "https://finance.yahoo.com/economy/policy/articles/analysis-trump-doubling-down-tariffs-233129660.html",
+   "publishDate": "2026-11-25T23:31:29+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "By Trevor Hunnicutt and Andrea Shalal PALM BEACH, Florida, Nov 25 (Reuters) - In midterm elections three weeks ago, US voters punished Republicans over an economy and inflation that many said were",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Fisher & Paykel Healthcare Corp Ltd (FSPKF) (Q2 2027) Earnings Call Highlights: Profit ...",
+   "link": "https://finance.yahoo.com/healthcare/articles/fisher-paykel-healthcare-corp-ltd-232048646.html",
+   "publishDate": "2026-11-25T23:20:48+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Fisher & Paykel Healthcare Corp Ltd (FSPKF) posted strong first-half growth with margins expanding sharply, lifted guidance, and a 37% dividend increase despite tariff and inflation headwinds.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "What Should Investors Make Of Kroger (KR) Cutting 3,000 Jobs And Expanding In India?",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/investors-kroger-kr-cutting-3-232031548.html",
+   "publishDate": "2026-11-25T23:20:31+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Kroger (NYSE:KR) announced plans to cut about 3,000 US corporate roles while expanding operations in India. The retailer is opening a new Capability Center in Bangalore to support technology, analytics and back-office functions. Management framed the US reductions and Indian expansion as part of a broader push toward more technology-led operations. The combination of US corporate layoffs and the new Bangalore Capability Center is an important shift to weigh against the rest of our review. We...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Dell Technologies (DELL) Q3 Earnings Showcase AI Strength Without Stock Heat",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/dell-technologies-dell-q3-earnings-231732006.html",
+   "publishDate": "2026-11-25T23:17:32+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Dell Technologies walked into this Q3 2027 print with a bruised chart, down sharply over the past one and three months, yet the stock barely budged today, up about 0.6%. That muted move sits awkwardly against a quarter where infrastructure revenue reached US$54.9b and non GAAP earnings per share hit US$9.45, both tied directly to heavy spending on artificial intelligence servers and storage. For you as an investor, the key question is whether the modest price reaction reflects cool judgment...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Why MP Materials (MP) Is Back In The Spotlight",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/why-mp-materials-mp-back-231728381.html",
+   "publishDate": "2026-11-25T23:17:28+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "MP Materials (MP) drew fresh attention after executives bought millions of dollars of company shares following a return to quarterly profitability and an easing backdrop in U.S. China trade relations. For context, MP Materials’ share price has fallen around 40% over the past three months and is down roughly 36% year to date. The 1 year total shareholder return has declined about 41%, while the 3 year total shareholder return remains strongly positive at about 120%. Scan other rare earth...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "HPE stock plunges after record quarter as a hidden catch emerges",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/hpe-stock-plunges-record-quarter-231700097.html",
+   "publishDate": "2026-11-25T23:17:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Wall Street dumped HPE over a single line from its finance chief. That line says a lot about who really profits from the server buildout.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "What R R Kabel Holders Bought Into",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/r-r-kabel-holders-bought-231614896.html",
+   "publishDate": "2026-11-25T23:16:14+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "If you only glanced at R R Kabel’s steady quarterly numbers, nothing about the business looked wild or dramatic. Holding R R Kabel from the start of the year would have returned 23.3%, including dividends. That is a solid outcome for a period where investors were told both upbeat and cautious stories about capacity expansion, commodity risk and export tariffs. If you faced that mix of optimism and warning back in January, what exactly pointed toward this kind of result? Narratives are how...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "How Investors Are Reacting To Magna International (TSX:MG) Strong Q3 Results",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/investors-reacting-magna-international-tsx-231534158.html",
+   "publishDate": "2026-11-25T23:15:34+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Magna International reported Q3 2026 adjusted EBIT of US$683 million, up 11%, alongside a 38% rise in adjusted EPS, a 4% sales decline, and approval of a new share repurchase program, while also entering early Pentagon talks about contributing components for military drones. The combination of margin-focused execution in Q3 and potential defense-related component supply gives Magna International a fresh angle on capital efficiency and revenue diversification beyond core auto programs. This...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Vivakor Announces 1-for-15 Reverse Stock Split",
+   "link": "https://www.globenewswire.com/news-release/2026/11/25/3410630/0/en/vivakor-announces-1-for-15-reverse-stock-split.html",
+   "publishDate": "2026-11-25T23:08:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Dallas, TX, Nov. 25, 2026 (GLOBE NEWSWIRE) -- November 25, 2026 – Vivakor, Inc. (Nasdaq: VIVK) (“Vivakor” or the “Company”), an integrated provider of energy transportation, storage, reuse, and remediation services, today announced a 1-for-15 reverse stock split of its issued and outstanding common stock (the “Reverse Stock Split”). The Reverse Stock Split is expected to become effective at the opening of trading on the Nasdaq Capital Market on December 1, 2026 under the existing ticker symbol “VIVK.”",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Oil Traders Ignore Growing Threat to Persian Gulf Supply",
+   "link": "https://finance.yahoo.com/energy/articles/oil-traders-ignore-growing-threat-230000449.html",
+   "publishDate": "2026-11-25T23:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Persistent Middle East tensions threaten to undermine the oil glut narrative, potentially triggering a sharp price rebound if supply disruptions worsen.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "5 Best Healthcare Stocks To Buy for 2027",
+   "link": "https://finance.yahoo.com/healthcare/articles/5-best-healthcare-stocks-buy-224526274.html",
+   "publishDate": "2026-11-25T22:45:26+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The healthcare sector is emerging as an attractive investment opportunity heading into 2027, supported by rising demand for medical services, pharmaceutical innovation, and advances in biotechnology. Growing investment in treatments for chronic diseases, oncology, obesity, and other complex medical conditions is also creating opportunities. Healthcare stocks have delivered solid gains in 2026. The S&P 500 […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Gemini Files Registration Statement for Gemini Premium Yield Notes",
+   "link": "https://www.globenewswire.com/news-release/2026/11/25/3410618/0/en/gemini-files-registration-statement-for-gemini-premium-yield-notes.html",
+   "publishDate": "2026-11-25T22:37:17+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "Eligible U.S. individuals will be able to invest directly in the Gemini Premium Yield Notes through the Gemini platform, providing liquidity to support customer margin trading activity while creating a new yield-generating opportunity for eligible participants Eligible U.S. individuals will be able to invest directly in the Gemini Premium Yield Notes through the Gemini platform, providing liquidity to support customer margin trading activity while creating a new yield-generating opportunity for eligible participants",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Micron's CEO pay rose 28%. His security bill rose way faster",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/microns-ceo-pay-rose-28-223300418.html",
+   "publishDate": "2026-11-25T22:33:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Micron’s proxy filing explains the jump in a single phrase, and it says a lot about the risks facing today’s best-paid executives.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Crypto’s Big Problem? ‘We Built Too Much Infrastructure,’ Says VanEck Manager",
+   "link": "https://www.benzinga.com/crypto/cryptocurrency/26/11/63658452/cryptos-big-problem-we-built-too-much-infrastructure-says-vaneck-manager",
+   "publishDate": "2026-11-25T22:30:07.919000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "VanEck’s Pranav Kande says crypto built too much block space and needs a breakout use case to draw money back from AI stocks",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Nanalysis Announces Third Quarter 2026 Results",
+   "link": "https://www.prnewswire.com/news-releases/nanalysis-announces-third-quarter-2026-results-302950481.html",
+   "publishDate": "2026-11-25T22:30:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "Reports Revenue of $10.6 Million, Net income of $0.4 Million and Adjusted EBITDA of $1.8 Million CALGARY, AB, Nov. 25, 2026 /PRNewswire/ -- Nanalysis Scientific Corp. (\"the Company\", TSXV: NSCI, FRA: 1N1), a leader in portable NMR spectrometers and imaging technology for government,...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Cattle Retreat Heading into Turkey Day",
+   "link": "https://finance.yahoo.com/markets/commodities/articles/cattle-retreat-heading-turkey-day-222642870.html",
+   "publishDate": "2026-11-25T22:26:42+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Live Cattle futures posted losses of $1.87 to $2.85 across the board on Wednesday. Cash trade has seen very light trade at $355 dressed in the north this week, compared to sales of $340-345 last week, as a few live sales were picked up at $220-223. The Wednesday morning Fed...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Soybeans Rally into the Holiday",
+   "link": "https://finance.yahoo.com/markets/commodities/articles/soybeans-rally-holiday-222640792.html",
+   "publishDate": "2026-11-25T22:26:40+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Soybeans closed the pre-Thanksgiving trade session with contracts steady to a dime higher on Wednesday. The cmdtyView national average Cash Bean price was up 11 cents at $11.87 3/4. Soymeal futures were 60 cents to $8.60 higher, with Soy Oil futures down 12 to 5 points higher. The market will...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "US airlines face higher costs from proposed Embraer duty",
+   "link": "https://www.reuters.com/business/aerospace-defense/us-airlines-face-higher-costs-proposed-embraer-duty-2026-11-25/",
+   "publishDate": "2026-11-25T22:22:43.258000+00:00",
+   "source": "www.reuters.com",
+   "summary": "A proposed 10% ​US duty on finished Embraer aircraft from Brazil would raise costs for US airlines that have no US-made ‌alternatives, analysts and executives said on Wednesday, as the Trump administration uses the jet market as trade leverage.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "US airlines face higher costs from proposed Embraer duty",
+   "link": "https://finance.yahoo.com/economy/policy/articles/us-airlines-face-higher-costs-222235730.html",
+   "publishDate": "2026-11-25T22:22:35+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Nov 25 (Reuters) - A proposed 10% US duty on finished Embraer aircraft from Brazil would raise costs for US airlines that have no US-made alternatives, analysts and executives said on ‌Wednesday, as the Trump administration uses the jet market as trade leverage. Aerospace, a major export sector for the ‌United States, has largely escaped US President Donald Trump’s tariffs that have hit other industries like autos, steel and aluminum.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Stocks Pare AI-Driven Losses as Dip Buyers Emerge",
+   "link": "https://www.bloomberg.com/news/videos/2026-11-25/stocks-pare-ai-driven-losses-as-dip-buyers-emerge-video",
+   "publishDate": "2026-11-25T22:21:45+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "Wild swings lashed Wall Street again, with dip buyers fading a stock selloff that had briefly sent the Nasdaq 100 to the brink of a bear market. The tech-heavy gauge fell 1%, trimming most of plunge that was driven by worries over the outlook for the artificial-intelligence trade. Eric Weiner, Bloomberg News Senior Equities Editor, says that reining in inflation and ultimately that's going to be what the fed is going to be focusing on. And the market's attention is going to increasingly turn to that. (Source: Bloomberg)",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Beige Book confirms hot US economy and signs of wage pressure building",
+   "link": "https://www.ft.com/content/fb4f6707-274e-4f93-bcfb-7cce28d4a4ea",
+   "publishDate": "2026-11-25T22:17:53+00:00",
+   "source": "www.ft.com",
+   "summary": "The report will help cement the coming December Federal Reserve interest rate rise",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "New US tariffs: 'Trump lashing out really indiscriminately', expert says",
+   "link": "https://www.france24.com/en/tv-shows/a-propos/20261125-new-us-tariffs-trump-lashing-out-really-indiscriminately-expert-says",
+   "publishDate": "2026-11-25T22:13:28+00:00",
+   "source": "www.france24.com",
+   "summary": "The United States on Wednesday unveiled proposed tariffs on 14 economies including the European Union and China, after a months-long probe into alleged excess production. Speaking with FRANCE 24's Sharon Gaffney, Dean Baker, Senior Economist at the Centre for Economic and Policy Research, says that \"there has to be some mechanism for better coordinating China's involvement in the world trade system and ideally the US, the EU, Canada would have a common front, some clear ground rules that we could agree to, that China could agree to, to be mutually beneficial. It's not a step in that direction, we have President Trump lashing out really indiscriminately. It's very hard to see his approach being very productive\".",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "New US tariffs: 'Trump lashing out really indiscriminately', expert says",
+   "link": "https://www.france24.com/en/new-us-tariffs-trump-lashing-out-really-indiscriminately-expert-says",
+   "publishDate": "2026-11-25T22:11:57+00:00",
+   "source": "www.france24.com",
+   "summary": "The United States on Wednesday unveiled proposed tariffs on 14 economies including the European Union and China, after a months-long probe into alleged excess production. Speaking with FRANCE 24's Sharon Gaffney, Dean Baker, Senior Economist at the Centre for Economic and Policy Research, says that \"there has to be some mechanism for better coordinating China's involvement in the world trade system and ideally the US, the EU, Canada would have a common front, some clear ground rules that we could agree to, that China could agree to, to be mutually beneficial. It's not a step in that direction, we have President Trump lashing out really indiscriminately. It's very hard to see his approach being very productive\".",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Asian Stocks Set for Gains After Late US Rebound: Markets Wrap",
+   "link": "https://www.bloomberg.com/news/articles/2026-11-25/stock-market-today-dow-s-p-live-updates",
+   "publishDate": "2026-11-25T22:10:42+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "Asian stocks looked poised for modest gains after a late Wall Street recovery pulled the Nasdaq 100 from the brink of a bear market, while lingering concerns over the sustainability of the artificial intelligence trade lifted Treasuries.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "What Clarus Buyers Were Betting On",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/clarus-buyers-were-betting-221042896.html",
+   "publishDate": "2026-11-25T22:10:42+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "If you had only skimmed Clarus headlines about tariff risk, weak direct-to-consumer sales, and legal investigations at the start of 2026, you might not have expected much from the shares. Holding Clarus from the start of the year would have returned 43.8%, including dividends. If you had faced that choice on 1 January with only the mixed analyst narratives on record, what should have mattered more: the margin worries or the international expansion story? The easy part of this move is behind...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 Canadian Growth Stocks With Earnings Growth Up To 84%",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/3-canadian-growth-stocks-earnings-221004004.html",
+   "publishDate": "2026-11-25T22:10:04+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Fresh US tariff plans aimed at major manufacturing hubs are pushing investors to rethink where future growth might come from. For Canadian growth stocks with high insider ownership, this kind of trade friction can shift attention toward businesses that rely more on their own execution than on global policy swings. This article highlights 3 such companies from our screener and explains why their profile may appeal to growth focused investors today. The three stocks highlighted here offer a...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "How major US stock indexes fared Wednesday 11/25/2026",
+   "link": "https://abcnews.com/Business/wireStory/major-us-stock-indexes-fared-wednesday-11252026-138453529",
+   "publishDate": "2026-11-25T22:03:13+00:00",
+   "source": "abcnews.com",
+   "summary": "Stocks on Wall Street recovered most of their steep early losses as a pullback in AI stocks eased",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "The economy is hot, but stocks are not.",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/economy-hot-stocks-not-220309002.html",
+   "publishDate": "2026-11-25T22:03:09+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The economy is hot, but stocks are not.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Vance says Jensen Huang won't need a pardon as scrutiny of Nvidia scandal builds in Washington",
+   "link": "https://abcnews.com/US/wireStory/vance-jensen-huang-pardon-scrutiny-nvidia-scandal-builds-138454307",
+   "publishDate": "2026-11-25T22:03:02+00:00",
+   "source": "abcnews.com",
+   "summary": "Vice President JD Vance is downplaying the possibility that Nvidia CEO Jensen Huang could need a pardon from President Donald Trump",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "FinVolution Group Reports Third Quarter 2026 Unaudited Financial Results",
+   "link": "https://www.globenewswire.com/news-release/2026/11/25/3410606/0/en/finvolution-group-reports-third-quarter-2026-unaudited-financial-results.html",
+   "publishDate": "2026-11-25T22:00:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "SHANGHAI, Nov. 25, 2026 (GLOBE NEWSWIRE) -- FinVolution Group (“FinVolution” or the “Company”) (NYSE: FINV), a leading fintech platform across China and overseas markets, today announced its unaudited financial results for the third quarter ended September 30, 2026.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "BlackRock® Canada Announces Estimated 2026 Annual Reinvested Capital Gains Distributions for the iShares® ETFs",
+   "link": "https://www.globenewswire.com/news-release/2026/11/25/3410604/0/en/blackrock-canada-announces-estimated-2026-annual-reinvested-capital-gains-distributions-for-the-ishares-etfs.html",
+   "publishDate": "2026-11-25T22:00:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "TORONTO, Nov. 25, 2026 (GLOBE NEWSWIRE) -- BlackRock Asset Management Canada Limited (“BlackRock Canada”), an indirect, wholly-owned subsidiary of BlackRock, Inc. (NYSE: BLK), today announced the estimated 2026 annual reinvested capital gains distributions for the iShares ETFs listed on the TSX or Cboe Canada. Please note that these are estimated capital gains amounts only, as of October 30, 2026. As these are estimated amounts, the final capital gains distributions may change by the Funds' December 15, 2026 or December 31, 2026, in the case of iShares Premium Money Market ETF (“CMR”), tax year-ends.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "SpaceX is now on the clock to launch 1,000,000 satellites — 60x what exists in space today. Amazon calls it impossible",
+   "link": "https://finance.yahoo.com/technology/ai/articles/spacex-now-clock-launch-1-220000396.html",
+   "publishDate": "2026-11-25T22:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The FCC chair had a pointed message for Amazon and other doubters, but the new license comes with hard deadlines that start in 2033.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Liesman: Why Greenspan could bet on productivity — and Warsh needs to hike",
+   "link": "https://www.cnbc.com/2026/11/25/kevin-warsh-greenspan-fed-rates-ai-inflation.html",
+   "publishDate": "2026-11-25T21:56:43+00:00",
+   "source": "www.cnbc.com",
+   "summary": "Alan Greenspan famously held the line on interest rates because he believed in the productivity promise of the internet boom. Why can't Kevin Warsh do the same?",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Palo Alto Networks Stock Slides After the Close: What's Happening?",
+   "link": "https://www.benzinga.com/trading-ideas/movers/26/11/63657926/palo-alto-networks-stock-slides-after-the-close-whats-happening",
+   "publishDate": "2026-11-25T21:55:27.479000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Palo Alto Networks Inc (NASDAQ:PANW) shares are trading lower in Wednesday's after-hours session following reports that the company is accused of alleged accounting fraud by a former executive.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Vance says Jensen Huang won’t need a pardon as scrutiny of Nvidia scandal builds in Washington",
+   "link": "https://apnews.com/article/vance-trump-pardon-nvidia-huang-congress-a8d3d781f182317cbff28863d56add5d",
+   "publishDate": "2026-11-25T21:40:08+00:00",
+   "source": "apnews.com",
+   "summary": "",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Stock Indices Finish Off Their Lows as Dip Buyers Step In",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/stock-indices-finish-off-lows-213508370.html",
+   "publishDate": "2026-11-25T21:35:08+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The S&P 500 Index ($SPX ) (SPY ) closed down by -0.25% on Wednesday, the Dow Jones Industrial Average ($DOWI ) (DIA ) closed up +0.33%, and the Nasdaq 100 Index ($IUXX ) (QQQ ) closed down -0.64%. December E-mini S&P futures (ESZ26 ) fell -0.27%, and December E-mini Nasdaq...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Macy’s postpones 100th Thanksgiving Day Parade to Saturday due to storm, NBC says",
+   "link": "https://www.investing.com/news/economy-news/macys-postpones-100th-thanksgiving-day-parade-to-saturday-due-to-storm-nbc-says-5051531",
+   "publishDate": "2026-11-25T21:32:33+00:00",
+   "source": "www.investing.com",
+   "summary": "- Macy’s Inc (NYSE:M) has postponed its Thanksgiving Day Parade to Saturday for the first time in the event’s history as an approaching East Coast storm threatens New York City with damaging winds, according to reporting from NBC.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "U.S. Stocks Mixed as Nvidia, AI Rout Continues",
+   "link": "https://www.wsj.com/finance/stocks/u-s-stocks-mixed-as-nvidia-ai-rout-continues-35d59863",
+   "publishDate": "2026-11-25T21:31:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "U.S. stocks finished mixed as the tech sector gave back more of the gains garnered in the wake of Jensen Huang’s reinstatement as Nvidia CEO.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "American AI Apocalypse Review: How Much of Your 401(k) Is Tied to AI Stocks?",
+   "link": "https://www.accessnewswire.com/newsroom/en/banking-and-financial-services/american-ai-apocalypse-review-how-much-of-your-401k-is-tied-to-ai-st-1261151",
+   "publishDate": "2026-11-25T21:30:00+00:00",
+   "source": "www.accessnewswire.com",
+   "summary": "Paid Advertisement and Affiliate Disclosure: This article is paid promotional content concerning the American AI Apocalypse presentation and Safe Money Report subscription from Weiss Ratings, LLC. Affiliate compensation may be received by the third-party content provider when qualifying purchases are made through designated links in this article. This commercial relationship is separate from the platform distributing the advertisement. The...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "USCB Financial Holdings, Inc. Announces Securities Portfolio Repositioning",
+   "link": "https://www.globenewswire.com/news-release/2026/11/25/3410590/0/en/uscb-financial-holdings-inc-announces-securities-portfolio-repositioning.html",
+   "publishDate": "2026-11-25T21:30:00+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "MIAMI, Nov. 25, 2026 (GLOBE NEWSWIRE) -- USCB Financial Holdings, Inc. (the “Company”) (NASDAQ: USCB), the holding company for U.S. Century Bank (the “Bank”), announced today that it sold approximately $22.4 million of available-for-sale (“AFS”) securities as part of a targeted balance sheet repositioning designed to improve recurring earnings, drive earnings per share (“EPS”) growth, and further strengthen profitability.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Nasdaq 100 Bounces Off Tech-Driven Lows",
+   "link": "https://www.bloomberg.com/news/videos/2026-11-25/bloomberg-businessweek-daily-11-25-2026-video",
+   "publishDate": "2026-11-25T21:28:22+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "The Nasdaq 100 Index trimmed losses that had briefly tipped the gauge into bear-market territory and the S&P erased most of an earlier large decline, with dip buyers emerging even as doubts remained about the outlook for artificial intelligence. The Russia/Ukraine War is testing NATO’s plan for military action. Plus, Trump is targeting China, EU with new tariffs citing overcapacity. All on the latest episode of “Bloomberg Businessweek Daily.” (Source: Bloomberg)",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "5 Must-Buy Penny Stocks for 2027",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/5-must-buy-penny-stocks-212712560.html",
+   "publishDate": "2026-11-25T21:27:12+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Why Are Investors Looking Beyond the Market Leaders? Penny stocks are entering 2027 against a backdrop that makes low prices tempting and financial resilience essential. According to Reuters, the S&P 500 had fallen 11.6% from its October peak by November 20, as doubts over AI spending and expectations of further interest rate increases unsettled investors. […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Lumen (LUMN) Has Over $13.5 Billion in Connectivity Deals. Why Is It Still Below $5?",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/lumen-lumn-over-13-5-212514028.html",
+   "publishDate": "2026-11-25T21:25:14+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Lumen Technologies, Inc. (NASDAQ:LUMN) earned the seventh spot on our recently published list of the 10 Must-Buy Penny Stocks for 2027, attracting investments from 42 hedge funds. Why Are Investors Looking Beyond the Market Leaders? Penny stocks are entering 2027 against a backdrop that makes low prices tempting and financial resilience essential. According to Reuters, […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Bitdeer (BTDR) Has a $2.9 Billion AI Cloud Backlog. Can It Afford the Expansion?",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/bitdeer-btdr-2-9-billion-212424820.html",
+   "publishDate": "2026-11-25T21:24:24+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Our recently published list of the 10 Must-Buy Penny Stocks for 2027 featured Bitdeer Technologies Group (NASDAQ:BTDR) in ninth place, backed by ownership from 41 hedge funds. Why Are Investors Looking Beyond the Market Leaders? Penny stocks are entering 2027 against a backdrop that makes low prices tempting and financial resilience essential. According to Reuters, […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Stocks Finish Lower After Wild Session",
+   "link": "https://www.wsj.com/finance/stocks/stocks-finish-lower-after-wild-session-df50cdeb",
+   "publishDate": "2026-11-25T21:23:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "Plus, tariffs are back on the agenda and Nvidia gets a warning",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Sable Offshore (SOC): Analysts See 1,706% Upside, but Cash Is Running Short",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/sable-offshore-soc-analysts-see-212224283.html",
+   "publishDate": "2026-11-25T21:22:24+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Sable Offshore Corp. (NYSE:SOC) rounded out our recently published list of the 10 Must-Buy Penny Stocks for 2027, taking the tenth spot with 41 hedge fund holders. Why Are Investors Looking Beyond the Market Leaders? Penny stocks are entering 2027 against a backdrop that makes low prices tempting and financial resilience essential. According to Reuters, […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "How major US stock indexes fared Wednesday 11/25/2026",
+   "link": "https://finance.yahoo.com/markets/world-indices/articles/major-us-stock-indexes-fared-211718440.html",
+   "publishDate": "2026-11-25T21:17:18+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Stocks on Wall Street recovered most of their steep early losses as a pullback in AI stocks eased.3% after being down as much as 3.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Privi Speciality Chemicals And 2 Other Indian Growth Stocks To Own",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/privi-speciality-chemicals-2-other-211340482.html",
+   "publishDate": "2026-11-25T21:13:40+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "US plans for fresh tariffs on imports from India have pushed trade risks back onto investors’ radar. When global rules feel less predictable, interest often shifts toward financially sound Indian growth stories that depend more on domestic demand than on export access. This article looks at three such potentially attractive stocks from our screener, highlighting how analysts currently view earnings momentum and how these businesses combine growth prospects with balance sheet discipline. The...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 Penny Stocks With Revenue Growth Up To 20%",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/3-penny-stocks-revenue-growth-211243879.html",
+   "publishDate": "2026-11-25T21:12:43+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Fresh tariffs that the US is preparing against 16 major trading partners are pushing investors to rethink where they put new money. Larger exporters and richly priced leaders can feel the pressure when trade rules shift. Smaller, financially disciplined penny stocks can offer a different way to get exposure, with leaner operations and tighter balance sheets. This article highlights three such candidates from a curated low-priced, financially robust stock pool. The three stocks highlighted...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Fed Beige Book shows slight growth, sticky inflation ahead of Dec meeting",
+   "link": "https://finance.yahoo.com/economy/articles/fed-beige-book-shows-slight-211120530.html",
+   "publishDate": "2026-11-25T21:11:20+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Investing.com -- The U.S. economy grew at a \"slight to moderate\" pace across most of the country in recent weeks, while inflation remained elevated and employment levels rose, according to the Federal Reserve's latest Beige Book report released Wednesday.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "AI spending leads the biggest market risks heading into 2027",
+   "link": "https://finance.yahoo.com/technology/ai/articles/ai-spending-leads-biggest-market-210742225.html",
+   "publishDate": "2026-11-25T21:07:42+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Investing.com -- Of the four major narratives driving market fear currently, AI spending looks the most concerning. Rate hikes are a close second because they amplify it. Tariffs and regulation rank lower. This is a judgment from the coverage below, not a forecast.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Wall Street rebounds amid fragile sentiment as Nasdaq recovers from steep morning drop",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/wall-street-rebounds-amid-fragile-210348853.html",
+   "publishDate": "2026-11-25T21:03:48+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Investing.com -- As of Nov 25, 3:31 PM EST, Wall Street has recovered most of a morning drop. It hasn’t turned the tape positive, apart from the Dow. The signal is fragile dip-buying, not an all-clear.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "SA analyst: Wall Street’s dramatic rebound masks mounting market risks",
+   "link": "https://seekingalpha.com/news/4676688-sa-analyst-wall-streets-dramatic-rebound-masks-mounting-market-risks",
+   "publishDate": "2026-11-25T21:01:21+00:00",
+   "source": "seekingalpha.com",
+   "summary": "Wall Street pared steep losses late Wednesday as AI stocks stayed volatile and October inflation hit 3.8%; analyst Daniel Jones urged caution.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Bitcoin Needs to Return to 'Original Narrative' to Hit $100,000, Bloomberg Analyst Says",
+   "link": "https://www.benzinga.com/crypto/cryptocurrency/26/11/63655723/bitcoin-needs-to-return-to-original-narrative-to-hit-100000-bloomberg-analyst-says",
+   "publishDate": "2026-11-25T20:59:06.736000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Bitcoin could attract new investors above $100K; 91% of ETF holders stayed invested as analysts compare its downturn to gold’s long bear market.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "SpaceX, Elon Musk to give one share each to active Trump accounts",
+   "link": "https://finance.yahoo.com/markets/article/spacex-elon-musk-to-give-one-share-each-to-active-trump-accounts-205719872.html",
+   "publishDate": "2026-11-25T20:57:19+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "SpaceX and Elon Musk promise to donate one share each to active Trump accounts.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Small Caps and Blue Chips Outpace Broader Market Through Midweek Session",
+   "link": "https://www.prnewswire.com/news-releases/small-caps-and-blue-chips-outpace-broader-market-through-midweek-session-302950847.html",
+   "publishDate": "2026-11-25T20:55:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "VANCOUVER, BC, Nov. 25, 2026 /PRNewswire/ -- Stock Preachers News Commentary - Stocks were mixed in afternoon trading Wednesday as the Russell 2000 and Dow Jones Industrial Average pushed to gains while the S&P 500 and Nasdaq Composite slipped on the day. The small-cap and blue-chip...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Brazil's 220,000-Bpd Bacalhau Oil Field Hit by Major Production Outage",
+   "link": "https://finance.yahoo.com/energy/articles/brazils-220-000-bpd-bacalhau-205200049.html",
+   "publishDate": "2026-11-25T20:52:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Production at Brazil's Bacalhau oil field has been suspended for an estimated five to eight weeks following an incident aboard its offshore production vessel, Portuguese energy company Galp announced Wednesday.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "HPQ earnings analysis: questions answered and next catalysts",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/hpq-earnings-analysis-questions-answered-205027854.html",
+   "publishDate": "2026-11-25T20:50:27+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Investing.com -- HP Inc (HPQ) reported FY2026 Q4 on Nov 24, 2026. The stock was trading at $30.90 (+10.58%) as of Nov 25, 3:08 PM EST. That reaction is the surprise. Coverage on the evening of the print was titled \"stock slips\" and \"cautious 2027 outlook hits stock\". The shares then reversed sharply higher during the next session. Possible reasons are a guide that was already priced in, and a stock that had fallen 8% over the prior month.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Deere earnings analysis: questions answered and next catalysts",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/deere-earnings-analysis-questions-answered-204442414.html",
+   "publishDate": "2026-11-25T20:44:42+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Investing.com -- Deere & Company (DE) reported FY2026 Q4 on Nov 25, 2026. EPS missed and revenue beat by a wide margin. The stock opened weak, then reversed. It traded at $642.10 (+4.62%) as of Nov 25, 3:07 PM EST, after a pre-market print of $594.92.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Li Auto earnings analysis: questions answered and next catalysts",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/li-auto-earnings-analysis-questions-204432913.html",
+   "publishDate": "2026-11-25T20:44:32+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Investing.com -- Li Auto Inc (LI) reported Q3 on Nov 25, 2026, and the stock reacted. It was $11.61 (+8.46%) as of Nov 25, 3:07 PM EST, up from a 52-week low of $10.36. The stock is still down about 31% YTD.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Fed Beige Book shows slight growth, sticky inflation ahead of Dec meeting",
+   "link": "https://www.investing.com/news/economy-news/fed-beige-book-shows-slight-growth-sticky-inflation-ahead-of-dec-meeting-5051430",
+   "publishDate": "2026-11-25T20:41:20+00:00",
+   "source": "www.investing.com",
+   "summary": "- The U.S. economy grew at a \"slight to moderate\" pace across most of the country in recent weeks, while inflation remained elevated and employment levels rose, according to the Federal Reserve's latest Beige Book report released Wednesday.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Newly proposed tariffs raise chances of the Fed keeping interest rates higher for longer",
+   "link": "https://finance.yahoo.com/economy/policy/article/newly-proposed-tariffs-raise-chances-of-the-fed-keeping-interest-rates-higher-for-longer-203942898.html",
+   "publishDate": "2026-11-25T20:39:42+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The Federal Reserve may have to raise interest rates and keep them higher for longer to combat inflationary pressures",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Fed survey shows continued economic growth, sticky inflation in recent weeks",
+   "link": "https://finance.yahoo.com/economy/policy/articles/fed-survey-shows-continued-economic-203829038.html",
+   "publishDate": "2026-11-25T20:38:29+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Nov 25 (Reuters) - Economic growth persisted at a \"slight to moderate\" pace across most of the US in recent weeks, while inflation remained sticky and employment levels rose, a Federal Reserve survey",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Tariff inflation was fading. New proposed tariffs could reverse that",
+   "link": "https://finance.yahoo.com/economy/policy/articles/tariff-inflation-fading-proposed-tariffs-203813182.html",
+   "publishDate": "2026-11-25T20:38:13+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Economists saw tariff-driven inflation waning in October. But fresh Trump administration tariff proposals could risk driving prices higher in 2027.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Dollar Erases Early Gains as T-Note Yields Tumble",
+   "link": "https://finance.yahoo.com/markets/currencies/articles/dollar-erases-early-gains-t-203439384.html",
+   "publishDate": "2026-11-25T20:34:39+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The dollar index (DXY00 ) fell by -0.16% on Wednesday. The dollar gave up an early advance on Wednesday and moved lower after the US announced plans to impose new tariffs on China and other countries. Also, lower T-note yields on Wednesday weighed on the dollar after the 10-year T-note...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "XTI Aerospace Eliminates Class B Units and Enters into Warrant Exchange Agreement, Simplifying Capital Structure",
+   "link": "https://www.prnewswire.com/news-releases/xti-aerospace-eliminates-class-b-units-and-enters-into-warrant-exchange-agreement-simplifying-capital-structure-302950835.html",
+   "publishDate": "2026-11-25T20:30:00+00:00",
+   "source": "www.prnewswire.com",
+   "summary": "FORT LAUDERDALE, Fla., Nov. 25, 2026 /PRNewswire/ -- XTI Aerospace, Inc. (Nasdaq: XTIA) (\"XTI Aerospace,\" \"XTI,\" or the \"Company\"), parent company of Drone Nerds, LLC, (\"Drone Nerds\"), a leading drone solutions platform serving commercial, enterprise and government customers, today...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Crude Prices Push Higher on Concerns Over Global Supply Disruptions",
+   "link": "https://finance.yahoo.com/energy/articles/crude-prices-push-higher-concerns-201940109.html",
+   "publishDate": "2026-11-25T20:19:40+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "January WTI crude oil (CLF27 ) closed up +1.63 (+1.99%) on Wednesday, and January RBOB gasoline (RBF27 ) closed down -0.0042 (-0.17%). Crude oil and gasoline prices settled mixed on Wednesday. Crude is climbing amid escalating attacks on shipping in the Persian Gulf and Ukrainian attacks on Russian oil facilities,...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Michael Burry Is ‘Temporarily' Bullish: What His Latest Bets Reveal About the Market",
+   "link": "https://www.benzinga.com/markets/equities/26/11/63653199/michael-burry-is-bullish",
+   "publishDate": "2026-11-25T20:18:14.973000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Michael Burry is temporarily bullish after the selloff, but keeps Palantir and MetLife puts and plans to short Nvidia near $200.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "S&P 500 Pares Losses as Fed Beige Book Signals Optimism: 10 Tech Stocks Bouncing off Lows on Wednesday",
+   "link": "https://www.benzinga.com/markets/equities/26/11/63652957/sp-500-pares-losses-beige-book-nasdaq-100-retest-tech-stocks-bounce",
+   "publishDate": "2026-11-25T20:15:08.335000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "S&P 500 pares losses as the Nasdaq 100 holds Friday's low. Most Fed districts expect growth, and QQQ, Arm and Nebius lead a tech rebound.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Addus HomeCare And 2 Cash Flow Stocks To Watch",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/addus-homecare-2-cash-flow-201301359.html",
+   "publishDate": "2026-11-25T20:13:01+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Fresh US tariff plans on 16 major trading partners have pushed traders back toward one simple question: Which companies generate solid cash and still trade as if the world is falling apart? That gap between healthy cash generation and discounted prices can attract value-focused buyers. This article walks through three stocks from our cash flow undervaluation screen that fit that bill today. The three stocks covered next are only a small sample. The full screen surfaced 104 more companies with...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Goldman Sachs bets on Palantir's 'mega customers' after NYC demo",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/goldman-sachs-bets-palantirs-mega-201300526.html",
+   "publishDate": "2026-11-25T20:13:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Palantir walked Goldman through how small pilot deals grow into bigger contracts. The pace caught analysts’ attention.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Canada Goose Fell While Sales Rose",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/canada-goose-fell-while-sales-201140728.html",
+   "publishDate": "2026-11-25T20:11:40+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "If you had paused on Canada Goose in late 2025, thinking the bullish and bearish analyst reports would roughly offset, the past year might look very different to you today. Investors who held Canada Goose over the past year are down 41.8%, including dividends. With fresh headlines on softer luxury demand, tariff risk, and a new buyback plan, what early assumptions about demand, margins, or capital allocation were already on the record that you could have stress-tested then? If the move has...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "SpaceX, Musk pledge to donate a share each to active Trump Accounts",
+   "link": "https://www.cnbc.com/2026/11/25/spacex-musk-trump-account-stock.html",
+   "publishDate": "2026-11-25T20:07:57+00:00",
+   "source": "www.cnbc.com",
+   "summary": "SpaceX said it will donate one share of the company's class A stock to every active Trump Account, and CEO Elon Musk would match it.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Fed's Beige Book shows evidence of broadening price pressures",
+   "link": "https://finance.yahoo.com/economy/policy/article/feds-beige-book-shows-evidence-of-broadening-price-pressures-200555194.html",
+   "publishDate": "2026-11-25T20:05:55+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "There were \"sustained cost pressures\" in energy, transportation, healthcare, insurance, and tariff-related expenses.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Opendoor (OPEN) Stock Is Up 11.8% Today: Real Estate Stocks Rally",
+   "link": "https://finance.yahoo.com/real-estate/articles/opendoor-open-stock-11-8-200019940.html",
+   "publishDate": "2026-11-25T20:00:19+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Opendoor shares rose 11.8% on Wednesday, Nov. 25, as real estate stocks rallied, with no company-specific news.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Real-World Asset Inflows Are Rotating Into Tokenized Stocks",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/real-world-asset-inflows-rotating-200010997.html",
+   "publishDate": "2026-11-25T20:00:10+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Tokenized stocks reached $3.74 billion in distributed value on October 28, up 17.79% in 30 days, according to RWA.xyz. Over the same stretch, the wider distributed real-world asset market rose 1.38% to $39.30 billion. That gap tells the story. In an asset class built on yield products, the fastest-moving money is now going into assets […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "WaFd-Everbank merger secures early approvals",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/wafd-everbank-merger-secures-early-200000192.html",
+   "publishDate": "2026-11-25T20:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The pending merger of Seattle-based WaFd and EverBank Financial in Florida has secured two regulatory approvals, BBVA is ramping up its US expansion with the creation of a repo and securities financing business, UBS Group suffered a further defeat in the long-running Swiss capital debate, and more in this week's banking news roundup.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "EU says 'strongly' rejects premise of new US tariffs",
+   "link": "https://www.france24.com/en/eu-says-strongly-rejects-premise-of-new-us-tariffs",
+   "publishDate": "2026-11-25T19:48:32+00:00",
+   "source": "www.france24.com",
+   "summary": "The EU said Wednesday that it rejected the premise of new tariffs on its exports proposed by the United States and expected Washington to stick by a deal struck with Brussels last year. The US unveiled proposed tariffs on 14 economies including the European Union and China, after a months-long probe into alleged excess production. FRANCE 24's Dave Keating reports from Brussels.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Why are investors freaking out even as the U.S. economy surges?",
+   "link": "https://finance.yahoo.com/economy/articles/why-investors-freaking-even-u-194538809.html",
+   "publishDate": "2026-11-25T19:45:38+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The economy is sending mixed signals, with growth jumping while stocks gyrate. Here's what economists say is going on.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Eagle Materials (EXP) Stock Is Up 5.7% Today Along With Building Materials Peers",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/eagle-materials-exp-stock-5-194516127.html",
+   "publishDate": "2026-11-25T19:45:16+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Eagle Materials rose 5.7% on Wednesday, Nov. 25, without company-specific news, as construction materials peers and the materials sector also gained.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "⚡Flash Heard: The Yield Curve Gets Flatter. That Can Be a Bad Sign for Stocks.",
+   "link": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-11-25-2026/card/-flash-heard-the-yield-curve-gets-flatter-that-can-be-a-bad-sign-for-stocks--i9SWka5idIyW7jOnn9vw",
+   "publishDate": "2026-11-25T19:41:06.186000+00:00",
+   "source": "www.wsj.com",
+   "summary": "Today the gap between shorter-term Treasury bonds and longer-term bonds has moved to about as narrow as it has been since early 2025.  The way it has gotten there has been through rising yields on two-year Treasury notes and falling yields on 10-year Treasurys this month.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "The Fed says inflation hasn’t gotten any better ahead of its key December vote to raise rates",
+   "link": "https://www.marketwatch.com/story/the-fed-says-inflation-hasnt-gotten-any-better-ahead-of-its-key-december-vote-to-raise-rates-65024d33",
+   "publishDate": "2026-11-25T19:39:00+00:00",
+   "source": "www.marketwatch.com",
+   "summary": "Just ahead of pivotal December vote to raise U.S. interest rates, the Federal Reserve on Wednesday said stubborn inflation remains a thorn in the side of an expanding economy.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Oil Flows in Hormuz Strait 'Forever Altered,' Says Tom Kloza",
+   "link": "https://www.bloomberg.com/news/videos/2026-11-25/oil-flows-in-hormuz-strait-forever-altered-says-kloza-video",
+   "publishDate": "2026-11-25T19:35:11+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "Tom Kloza, chief energy advisor to Gulf Oil, said that he expects a 'major head fake' from the oil market as the 'seeds' for the next oil rally have been planted and could take gas and diesel prices back up in the beginning of 2027.  Kloza also discussed the continued impact that war with Iran has had on the oil market, and said that his view remains that oil flows in the Strait of Hormuz are 'forever altered' by the conflict. (Source: Bloomberg)",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Putin's war death toll reportedly tops 700,000 as Russia scrambles for recruits",
+   "link": "https://www.foxnews.com/world/putins-war-death-toll-reportedly-tops-700000-russia-scrambles-recruits",
+   "publishDate": "2026-11-25T19:34:13+00:00",
+   "source": "www.foxnews.com",
+   "summary": "Kremlin spokesman Dmitry Peskov dismisses an investigation estimating 700,000 Russian troops have died in Vladimir Putin's war against Ukraine.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Compass (COMP) Stock Is Up 9.3% Today as Real Estate Stocks Rally",
+   "link": "https://finance.yahoo.com/real-estate/articles/compass-comp-stock-9-3-193017952.html",
+   "publishDate": "2026-11-25T19:30:17+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Compass shares rose 9.3% on Wednesday, Nov. 25, without company-specific news, as real estate stocks and homebuilders rallied and Treasury yields fell.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Sugar Prices Rally on Expectations of a Smaller Sugar Crop in India",
+   "link": "https://finance.yahoo.com/markets/commodities/articles/sugar-prices-rally-expectations-smaller-192721709.html",
+   "publishDate": "2026-11-25T19:27:21+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "March NY world sugar #11 (SBH27 ) closed up +0.68 (+3.85%) on Wednesday, and March London ICE white sugar #5 (SWH27 ) closed up +16.00 (+3.19%). Sugar prices rallied sharply to 1.5-week highs on Wednesday on the outlook for smaller sugar production in India, the world’s second-largest sugar producer. The...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "UK food inflation could hit 5% next year, Bank of England says",
+   "link": "https://www.theguardian.com/business/2026/nov/25/uk-food-inflation-sharp-rise-next-year-mounting-cost-pressures-bank-of-england",
+   "publishDate": "2026-11-25T19:25:57+00:00",
+   "source": "www.theguardian.com",
+   "summary": "Sharp rise expected as cost pressures mount, with experts factoring in energy price cap hike and potential impact of El NiñoFood price inflation in the UK could hit 5% next year, the Bank of England has said, despite rising less sharply than feared since the onset of the Iran war.The deputy governor Clare Lombardelli told MPs on the cross-party Treasury select committee: “Food price inflation is coming in under what we expected [it] to be, and in fact under what the industry expected it to be.” Continue reading...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "HP Stock Pops After Strong Q4 Results and Guidance",
+   "link": "https://www.benzinga.com/trading-ideas/movers/26/11/63649317/hp-stock-pops-after-strong-q4-results-and-guidance",
+   "publishDate": "2026-11-25T19:19:47.246000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "HP shares are climbing Wednesday after a Q4 earnings beat and upbeat FY27 adjusted EPS guidance, while Barclays raised its price target.",
+   "sentiment": null,
+   "confidence": null
+  }
+ ]
+}

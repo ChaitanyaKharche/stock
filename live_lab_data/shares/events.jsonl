@@ -1752,3 +1752,20 @@
 {"seq":695198,"ts":"2026-11-25T09:31:18.261874","kind":"levels","symbol":"AAPL","yday":"2026-11-24","n_premarket_bars":330,"lines":[{"name":"R1","price":351.7249,"source":"yday premarket high","side":"R"},{"name":"R2","price":354.0856,"source":"today premarket high","side":"R"},{"name":"R3","price":354.4,"source":"yday market high","side":"R"},{"name":"S1","price":350.4,"source":"today premarket low","side":"S"},{"name":"S2","price":345.96,"source":"yday premarket low","side":"S"},{"name":"S3","price":345.88,"source":"yday market low","side":"S"}]}
 {"seq":695199,"ts":"2026-11-25T09:31:18.549882","kind":"levels","symbol":"GOOGL","yday":"2026-11-24","n_premarket_bars":330,"lines":[{"name":"R1","price":281.26,"source":"today premarket high","side":"R"},{"name":"R2","price":281.78,"source":"yday market high","side":"R"},{"name":"R3","price":286.4622,"source":"yday premarket high","side":"R"},{"name":"S1","price":278.0,"source":"yday premarket low","side":"S"},{"name":"S2","price":276.03,"source":"yday market low","side":"S"},{"name":"S3","price":262.23,"source":"today premarket low","side":"S"}]}
 {"seq":695200,"ts":"2026-11-25T09:31:18.644875","kind":"levels","symbol":"WMT","yday":"2026-11-24","n_premarket_bars":296,"lines":[{"name":"R1","price":130.74,"source":"yday premarket high","side":"R"},{"name":"R2","price":132.42,"source":"yday market high","side":"R"},{"name":"R3","price":133.61,"source":"today premarket high","side":"R"},{"name":"S1","price":131.735,"source":"today premarket low","side":"S"},{"name":"S2","price":129.74,"source":"yday market low","side":"S"},{"name":"S3","price":128.24,"source":"yday premarket low","side":"S"}]}
+{"seq":720165,"ts":"2026-11-26T09:06:58.818409","kind":"signals_rolled","sessions":1,"rows":24765,"kept":0}
+{"seq":720166,"ts":"2026-11-26T09:06:58.820410","kind":"start","config_hash":"7c6414fc549315f3","symbols":["SPY","QQQ","IWM","DIA","XLK","XLY","XLI","XLV","XLP","XLE","XLF","NVDA","AAPL","GOOGL","WMT"],"spec":"shares_lab_preregistration.md @ 2026-08-31","notional":10000.0}
+{"seq":720167,"ts":"2026-11-26T09:07:23.910617","kind":"warmup","symbol":"SPY","sessions_used":25,"has_stretch":true}
+{"seq":720168,"ts":"2026-11-26T09:07:48.442781","kind":"warmup","symbol":"QQQ","sessions_used":25,"has_stretch":true}
+{"seq":720169,"ts":"2026-11-26T09:07:58.614696","kind":"warmup","symbol":"IWM","sessions_used":25,"has_stretch":true}
+{"seq":720170,"ts":"2026-11-26T09:08:03.441285","kind":"warmup","symbol":"DIA","sessions_used":25,"has_stretch":true}
+{"seq":720171,"ts":"2026-11-26T09:08:11.251801","kind":"warmup","symbol":"XLK","sessions_used":25,"has_stretch":true}
+{"seq":720172,"ts":"2026-11-26T09:08:16.518923","kind":"warmup","symbol":"XLY","sessions_used":25,"has_stretch":true}
+{"seq":720173,"ts":"2026-11-26T09:08:23.253437","kind":"warmup","symbol":"XLI","sessions_used":25,"has_stretch":true}
+{"seq":720174,"ts":"2026-11-26T09:08:29.607349","kind":"warmup","symbol":"XLV","sessions_used":25,"has_stretch":true}
+{"seq":720175,"ts":"2026-11-26T09:08:36.485981","kind":"warmup","symbol":"XLP","sessions_used":25,"has_stretch":true}
+{"seq":720176,"ts":"2026-11-26T09:08:43.586004","kind":"warmup","symbol":"XLE","sessions_used":25,"has_stretch":true}
+{"seq":720177,"ts":"2026-11-26T09:08:48.688302","kind":"warmup","symbol":"XLF","sessions_used":25,"has_stretch":true}
+{"seq":720178,"ts":"2026-11-26T09:10:33.484494","kind":"warmup","symbol":"NVDA","sessions_used":25,"has_stretch":true}
+{"seq":720179,"ts":"2026-11-26T09:10:56.167284","kind":"warmup","symbol":"AAPL","sessions_used":25,"has_stretch":true}
+{"seq":720180,"ts":"2026-11-26T09:11:23.302933","kind":"warmup","symbol":"GOOGL","sessions_used":25,"has_stretch":true}
+{"seq":720181,"ts":"2026-11-26T09:11:33.260381","kind":"warmup","symbol":"WMT","sessions_used":25,"has_stretch":true}
