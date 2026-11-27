@@ -1,0 +1,857 @@
+{
+ "session": "2026-11-27",
+ "fetched_at_et": "2026-11-27T07:30:18",
+ "query": "(Fed OR \"Federal Reserve\" OR inflation OR CPI OR jobs OR tariff OR tariffs OR war OR Treasury OR shutdown) AND (stocks OR markets OR economy)",
+ "window_from": "2026-11-26T16:00:00",
+ "window_to": "2026-11-27T07:30:18.467389",
+ "page_size": 100,
+ "n": 94,
+ "articles": [
+  {
+   "title": "Gold, Silver Rally as Market Sentiment Improves",
+   "link": "https://www.wsj.com/finance/commodities-futures/gold-fortunes-tied-to-stocks-in-near-term-42ce98be",
+   "publishDate": "2026-11-27T00:11:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "Gold and silver prices rose sharply, likely supported by improving market sentiment as Asian equities and U.S. stock futures advanced.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Cautious consumers gear up for Black Friday as inflation woes bite",
+   "link": "https://www.reuters.com/business/retail-consumer/cautious-consumers-gear-up-black-friday-inflation-woes-bite-2026-11-27/",
+   "publishDate": "2026-11-27T00:03:11.579000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Neither high fuel prices nor stubborn inflation are expected to stop US shoppers from spending robustly as ​their turkey hangovers wear off on Black Friday. But below healthy top-line forecasts lie signs of stress.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Cautious consumers gear up for Black Friday as inflation woes bite",
+   "link": "https://finance.yahoo.com/economy/articles/cautious-consumers-gear-black-friday-000251613.html",
+   "publishDate": "2026-11-27T00:02:51+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "By Nicholas P.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "U.S. stock futures rise in holiday-thinned trade; tech rebound in focus",
+   "link": "https://www.investing.com/news/stock-market-news/us-stock-futures-rise-in-holidaythinned-trade-tech-rebound-in-focus-5052775",
+   "publishDate": "2026-11-27T00:01:22+00:00",
+   "source": "www.investing.com",
+   "summary": "- U.S. stock index futures rose on Thursday evening, with markets holding out for more signs of a rebound in battered technology and artificial intelligence valuations. Trading volumes were dulled by the Thanksgiving holiday, with Wall Street also set for a shortened session on Friday.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Gold Steadies as Fed Rate Path and AI Stocks Frame Volatile Week",
+   "link": "https://www.bloomberg.com/news/articles/2026-11-26/gold-steadies-as-fed-rate-path-and-ai-stocks-frame-volatile-week",
+   "publishDate": "2026-11-26T23:53:35+00:00",
+   "source": "www.bloomberg.com",
+   "summary": "Gold steadied, as traders weighed the prospect of Federal Reserve interest-rate hikes against a wider market recovery spurred by a rebound in US technology stocks.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Gold Steadies as Fed Rate Path and AI Stocks Frame Volatile Week",
+   "link": "https://finance.yahoo.com/markets/commodities/articles/gold-steadies-fed-rate-path-235335603.html",
+   "publishDate": "2026-11-26T23:53:35+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Gold steadied, as traders weighed the prospect of Federal Reserve interest-rate hikes against a wider market recovery spurred by a rebound in US technology stocks.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Core inflation in Japan's capital accelerates in November",
+   "link": "https://www.reuters.com/markets/asia/core-inflation-japans-capital-accelerates-november-2026-11-26/",
+   "publishDate": "2026-11-26T23:42:50.048000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Annual core inflation in Japan's capital ​accelerated in November and stayed above the ​central bank's 2% target for three straight months, ⁠highlighting mounting price pressure and bolstering the ​case for a near-term interest rate hike.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Core inflation in Japan's capital accelerates in November",
+   "link": "https://finance.yahoo.com/economy/policy/articles/core-inflation-japans-capital-accelerates-234240875.html",
+   "publishDate": "2026-11-26T23:42:40+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "By Leika Kihara and Takahiko Wada TOKYO, Nov 27 (Reuters) - Annual core inflation in Japan's capital accelerated in November and stayed above the central bank's 2% target for three straight months,",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Core inflation in Japan's capital accelerates in November",
+   "link": "https://www.channelnewsasia.com/business/core-inflation-in-japans-capital-accelerates-in-november-6586101",
+   "publishDate": "2026-11-26T23:42:40+00:00",
+   "source": "www.channelnewsasia.com",
+   "summary": "TOKYO, Nov 27 : Annual core inflation in Japan's capital accelerated in November and stayed above the central bank's 2 per cent target for three straight months, highlighting mounting price pressure and bolstering the case for a near-term interest rate hike.The data, widely regarded as a leading indicator of",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Core inflation in Tokyo hits 16-month high, bolsters case for BOJ hike",
+   "link": "https://www.channelnewsasia.com/business/core-inflation-in-tokyo-hits-16-month-high-bolsters-case-boj-hike-6586101",
+   "publishDate": "2026-11-26T23:42:40+00:00",
+   "source": "www.channelnewsasia.com",
+   "summary": "TOKYO, Nov 27 : Annual core inflation in Japan's capital accelerated in November at the fastest pace in 16 months, highlighting mounting price pressure and bolstering the case for an interest rate hike as soon as next month.The data, widely regarded as a leading indicator of nationwide trends, will be among f",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Tokyo core inflation at 16-month high, bolsters case for BOJ hike",
+   "link": "https://www.channelnewsasia.com/business/tokyo-core-inflation-16-month-high-bolsters-case-boj-hike-6586101",
+   "publishDate": "2026-11-26T23:42:40+00:00",
+   "source": "www.channelnewsasia.com",
+   "summary": "TOKYO, Nov 27 : Annual core inflation in Japan's capital accelerated in November at the fastest pace in 16 months, highlighting mounting price pressure and bolstering the case for an interest rate hike as soon as next month.The data, widely regarded as a leading indicator of nationwide trends, will be among f",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Tokyo core inflation at 16-month high, bolsters case for BOJ hike",
+   "link": "https://www.channelnewsasia.com/east-asia/tokyo-core-inflation-boj-hike-6586101",
+   "publishDate": "2026-11-26T23:42:00+00:00",
+   "source": "www.channelnewsasia.com",
+   "summary": "TOKYO: Annual core inflation in Japan's capital accelerated in November at the fastest pace in 16 months, highlighting mounting price pressure and bolstering the case for an interest rate hike as soon as next month.The data, widely regarded as a leading indicator of nationwide trends, will be among the factor",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Amazon tried to kill Musk’s plan for 1 million AI satellites. The FCC chair scolded it and gave SpaceX the green light",
+   "link": "https://finance.yahoo.com/technology/ai/articles/amazon-tried-kill-musk-plan-233000718.html",
+   "publishDate": "2026-11-26T23:30:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Musk says moving AI data centers into space could save money and energy, but critics warn his plan could threaten scientific research and the environment.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Australian Parliament passes government plan to reserve 20% of LNG for domestic market",
+   "link": "https://www.reuters.com/business/energy/australian-parliament-passes-government-plan-reserve-20-lng-domestic-market-2026-11-26/",
+   "publishDate": "2026-11-26T23:04:39.201000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Australia's Parliament on Friday passed the centre-left Labor government's gas reservation scheme, ​which will require liquefied natural gas ‌exporters to set aside up to 20% of their production for the domestic market starting in ​2028.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Argentina bans its central bank from printing money for the government",
+   "link": "https://abcnews.com/International/wireStory/argentina-bans-central-bank-printing-money-government-138472438",
+   "publishDate": "2026-11-26T22:53:24+00:00",
+   "source": "abcnews.com",
+   "summary": "Argentina’s Congress has approved a law that bans the central bank from printing money to cover government spending",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "What Aditya Birla Holders Got Wrong Before The Slide",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/aditya-birla-holders-got-wrong-220837944.html",
+   "publishDate": "2026-11-26T22:08:37+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "If you had backed the bullish omni-channel and ethnic wear story at Aditya Birla Fashion and Retail in late 2025, the payoff looked very different to what analysts were sketching out on paper. For Aditya Birla Fashion and Retail shareholders, the loss over the past year was 49.5%, including dividends. With revenue at ₹19,816.6m and a deeper loss in Q2 2027, what did the original thesis miss about margins and capital intensity rather than the whole retail vision being wrong? A Narrative on...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Learn Why The Bull Case For Ollies Stock Could Change Following Upcoming Earnings Report",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/learn-why-bull-case-ollies-220835768.html",
+   "publishDate": "2026-11-26T22:08:35+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Ollie's Bargain Outlet Holdings reported fiscal 2026 second quarter net sales of $741.3 million, net income of $85.5 million, opened 15 new stores, repurchased $84 million of stock, and updated full year guidance for net sales to a range of $2.928 billion to $2.941 billion with adjusted EPS of $4.57 to $4.65. Beneath the upbeat earnings and guidance, Ollie's Bargain Outlet Holdings is still working through softer comparable sales, heavier price investment, and a more promotional competitive...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Unilever (LSE:ULVR) Stock Sees Modest Fair Value Lift As Analysts Split On Outlook",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/unilever-lse-ulvr-stock-sees-220802851.html",
+   "publishDate": "2026-11-26T22:08:02+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Unilever’s fair value price target has shifted from £51.97 to £53.51 per share, reflecting an updated view of what the stock may be worth under refreshed assumptions. Analysts are split on what underpins this change, with some pointing to potential valuation upside linked to business transformation and others flagging execution risks and category headwinds that could limit how much of that thesis shows up in earnings. As you read on, you will see how these differing views shape the evolving...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Steve Cohen’s 5 Biggest Stock Bets for 2027",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/steve-cohen-5-biggest-stock-220614898.html",
+   "publishDate": "2026-11-26T22:06:14+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Steve Cohen’s Point72 Asset Management filed its third-quarter 13F with the SEC on November 16, reporting about $90.0 billion in holdings at September 30, including options, according to 13f.info. That snapshot predates the Nasdaq Composite’s 5.5% drop on November 5, its biggest one-day fall in 19 months, which left the index more than 10% below […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Steve Cohen’s 10 Biggest Bets for 2027",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/steve-cohen-10-biggest-bets-220520211.html",
+   "publishDate": "2026-11-26T22:05:20+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Steve Cohen’s Point72 Asset Management filed its third-quarter 13F with the SEC on November 16, reporting about $90.0 billion in holdings at September 30, including options, according to 13f.info. That snapshot predates the Nasdaq Composite’s 5.5% drop on November 5, its biggest one-day fall in 19 months, which left the index more than 10% below […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "A 30% Bitcoin crash hasn't shaken this asset manager's $1.6 million call",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/30-bitcoin-crash-hasnt-shaken-220000017.html",
+   "publishDate": "2026-11-26T22:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "An asset manager stands by their 2036 Bitcoin target but warns of more pain before the year ends.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Loonie weakens amid Thanksgiving holiday lull, Canadian labor market data",
+   "link": "https://www.investing.com/news/forex-news/loonie-weakens-amid-thanksgiving-holiday-lull-canadian-labor-market-data-5052729",
+   "publishDate": "2026-11-26T21:58:03+00:00",
+   "source": "www.investing.com",
+   "summary": "- The Canadian dollar eased against the greenback on Thursday amid thin trading volumes due to the U.S. Thanksgiving holiday. Traders continued to parse lingering concerns around the artificial intelligence trade on Wall Street and the future path of monetary policy following comments from Bank of C...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Canadian bonds extend rally amid AI jitters, Macklem comments",
+   "link": "https://www.investing.com/news/stock-market-news/canadian-bonds-extend-rally-amid-ai-jitters-macklem-comments-5052727",
+   "publishDate": "2026-11-26T21:41:16+00:00",
+   "source": "www.investing.com",
+   "summary": "- Canadian yields fell on Thursday as traders snapped up bonds in an extended flight towards safe-haven assets, amid lingering worries around a broader rout in the artificial intelligence trade on Wall Street. With the U.S.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Argentina bans its central bank from printing money for the government",
+   "link": "https://apnews.com/article/javier-milei-central-bank-economy-argentina-peso-primaries-paso-e4598186ef6cbcf05ecc598788c52cec",
+   "publishDate": "2026-11-26T21:34:23+00:00",
+   "source": "apnews.com",
+   "summary": "",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Argentina bans its central bank from printing money for the government",
+   "link": "https://finance.yahoo.com/economy/policy/articles/argentina-bans-central-bank-printing-213423853.html",
+   "publishDate": "2026-11-26T21:34:23+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "BUENOS AIRES, Argentina (AP) — Argentina’s Congress voted Thursday to bar the central bank from printing money to pay the government’s bills, enshrining in law a key pillar of President Javier Milei’s fight against the country’s notoriously high inflation.Under the new charter, the central bank’s “primary and fundamental mission” will be to preserve the value of the peso — a goal Milei has pursued in office even though, as a candidate in 2023, he promised to abolish the bank and replace the loca",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 Japanese Founder Led Stocks With Earnings Growth Up To 13%",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/3-japanese-founder-led-stocks-211033825.html",
+   "publishDate": "2026-11-26T21:10:33+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Japanese founder-led companies are facing a fresh test as the United States pushes new tariffs on Japan and other major trading partners. When trade rules feel less predictable, investors often look for leaders with deep skin in the game rather than hired managers on short contracts. This article explores why founder-led Japanese stocks can appeal in this climate and highlights three of the strongest candidates from this focused list. The three stocks highlighted here offer a compelling...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Jim Cramer sends strong words to stock market investors",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-sends-strong-words-210700658.html",
+   "publishDate": "2026-11-26T21:07:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Jim Cramer believes Wall Street is refusing to call this market what it is.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Bitcoin, XRP, Ethereum face brutal crash risk as key levels crack",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-xrp-ethereum-face-brutal-210000313.html",
+   "publishDate": "2026-11-26T21:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Crypto analyst Ali Martinez warns investors to “prepare for the worst” as the top three cryptocurrencies test critical support.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Pablo Hernández de Cos Gets the ECB Job: Analysts Call It Continuity — With a Twist",
+   "link": "https://www.benzinga.com/markets/eurozone/26/11/63663246/hernandez-de-cos-ecb-president-analysts-continuity-twist",
+   "publishDate": "2026-11-26T20:45:07.736000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Pablo Hernández de Cos will succeed Lagarde at the ECB mid-hiking cycle. Analysts call it continuity with a dovish tilt; FEZ in focus.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Vertex Pharmaceuticals Incorporated (VRTX) CF Dominance and Pipeline Strengthen Investment Outlook",
+   "link": "https://finance.yahoo.com/healthcare/articles/vertex-pharmaceuticals-incorporated-vrtx-cf-203631967.html",
+   "publishDate": "2026-11-26T20:36:31+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published our list, 10 Best Healthcare Stocks To Buy for 2027, and Vertex Pharmaceuticals Incorporated ranked 9th on this list. The healthcare sector is emerging as an attractive investment opportunity heading into 2027, supported by rising demand for medical services, pharmaceutical innovation, and advances in biotechnology. Growing investment in treatments for chronic diseases, […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "SAP reportedly weighs at least 10,000 job cuts in AI restructuring",
+   "link": "https://www.investing.com/news/company-news/sap-reportedly-weighs-at-least-10000-job-cuts-in-ai-restructuring-5052712",
+   "publishDate": "2026-11-26T20:22:52+00:00",
+   "source": "www.investing.com",
+   "summary": "- German software giant SAPG is considering eliminating at least 10,000 positions as it further aligns its business to the artificial intelligence boom, Bloomberg News reported on Thursday, citing people familiar with the matter.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Here’s Why KLA Corporation (KLAC) is a Beaten-Down Semiconductor Stock With Strong Growth Prospects",
+   "link": "https://finance.yahoo.com/technology/articles/why-kla-corporation-klac-beaten-194907138.html",
+   "publishDate": "2026-11-26T19:49:07+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "We just published our list, 10 Most Oversold Semiconductor Stocks to Buy for 2027, and KLA Corporation 8th on this list. The semiconductor sector has experienced heightened volatility in 2026, with several stocks retreating significantly from their 52-week highs. These deep pullbacks reflect heightened profit-taking and valuation concerns. They have also been exacerbated by shifting […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "5 Most Oversold Semiconductor Stocks to Buy for 2027",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/5-most-oversold-semiconductor-stocks-194738573.html",
+   "publishDate": "2026-11-26T19:47:38+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The semiconductor sector has experienced heightened volatility in 2026, with several stocks retreating significantly from their 52-week highs. These deep pullbacks reflect heightened profit-taking and valuation concerns. They have also been exacerbated by shifting investor sentiment after the US midterm elections and uncertainty surrounding artificial intelligence (AI) spending. The Philadelphia Semiconductor Index (SOX), which tracks […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "What Could US Tariffs Mean For Puma (XTRA:PUM) Stock?",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/could-us-tariffs-mean-puma-191419072.html",
+   "publishDate": "2026-11-26T19:14:19+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Citi flagged that new US tariffs could materially affect Puma (XTRA:PUM), with the regime scheduled to start in January 2027. The bank warned that the measures may lead to a substantial cut to its 2027 adjusted operating profit forecasts for the sportswear group. Citi indicated that the expected hit to earnings could push Puma to rethink how and where it sources and ships its products. The potential drag from the 2027 US tariff changes on Puma's adjusted operating profit is important but...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "AGCO (AGCO) Stock May Be 31% Undervalued Despite Solar Project Progress",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/agco-agco-stock-may-31-191400817.html",
+   "publishDate": "2026-11-26T19:14:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "AGCO has delivered a 13.6% total return over the past five years, and recent progress on its renewable energy plans puts fresh attention on what investors are really paying for its future cash flows. With the stock closing at US$106.62, the central question is how well that price lines up with the cash the business is expected to generate over time. A 13.6% gain across five years is modest enough that valuation now hinges less on momentum and more on whether AGCO's cash flows justify staying...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "What A.P. Møller Mærsk Buyers Were Betting On",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/p-m-ller-m-rsk-191155074.html",
+   "publishDate": "2026-11-26T19:11:55+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "If you had bought A.P. Møller - Mærsk on 26 November 2025, you would have watched a year of Red Sea route shifts, Iran war disruptions, and repeated profit guidance upgrades reshape the shipping story. For A.P. Møller - Mærsk shareholders, the return over the past year was 54.7%, including dividends. If you were weighing that decision back then, how would you have balanced booming Asian demand against fears of overcapacity and fading freight rate strength? A.P. Møller - Mærsk has already...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "US, Qatar to help Venezuela clear regional development bank arrears, sources say",
+   "link": "https://www.reuters.com/world/middle-east/us-qatar-help-venezuela-clear-regional-development-bank-arrears-sources-say-2026-11-26/",
+   "publishDate": "2026-11-26T19:11:54.491000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Venezuela ​is working on separate bridge loans with the US Treasury and Qatar to clear arrears owed to two ‌regional development banks, a move that could unlock fresh multilateral financing for the cash-strapped country, four sources familiar with the discussions said.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Cavco (CVCO) Stock Looks Fully Priced Given Its Earnings Backdrop",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/cavco-cvco-stock-looks-fully-191124167.html",
+   "publishDate": "2026-11-26T19:11:24+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Cavco Industries has seen its share price move sharply in recent years, which puts a spotlight on whether the current valuation lines up with what the business is earning. With the stock now reflecting a strong track record on the chart, the question is how well those earnings support where the price has landed today. Over the past 3 years Cavco Industries has delivered a 145.7% share price return, so a lot of future profit expectations may already be embedded in the current valuation. The...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Tariff Talks Put Hindalco Stock And Indian Exporters In Focus",
+   "link": "https://finance.yahoo.com/economy/policy/articles/tariff-talks-put-hindalco-stock-191118876.html",
+   "publishDate": "2026-11-26T19:11:18+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Trade tariffs are back in the headlines, and this time India and Vietnam sit closer to the crosshairs as Washington reworks Section 301 duties and links future rates to bilateral deals. That kind of policy reset can shuffle supply chains, shift bargaining power and reward exporters with the right mix of markets. This article walks through three stocks exposed to these talks and explains how the same headlines could either help or hurt your portfolio decisions. The stocks in the list below are...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Taiwan Semiconductor Stocks Slip 1.96% as Taiwan's Market Sinks 4.8% in Chip Rout",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/taiwan-semiconductor-stocks-slip-1-190319001.html",
+   "publishDate": "2026-11-26T19:03:19+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "TSMC fell 3.59% in Taipei as the Taiex posted its sixth-largest point drop on record, a day after a 9% rally.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Retail inventories and goods trade balance among economic data due Friday",
+   "link": "https://www.investing.com/news/stock-market-news/retail-inventories-and-goods-trade-balance-among-economic-data-due-friday-93CH-5052685",
+   "publishDate": "2026-11-26T19:00:41+00:00",
+   "source": "www.investing.com",
+   "summary": "As traders approach another pivotal day for financial markets, a series of economic data releases that could sway market dynamics are expected on Friday, November 27, 2026.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Apple Stocks Rise as AI Selloff Spares the iPhone Maker",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/apple-stocks-rise-ai-selloff-190038273.html",
+   "publishDate": "2026-11-26T19:00:38+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Apple gained while the Nasdaq briefly fell 4.6%, as investors favored device-based AI over cloud spending despite rising memory costs.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Turkey's capital markets catch cold from funds crisis",
+   "link": "https://www.reuters.com/world/middle-east/turkeys-capital-markets-catch-cold-funds-crisis-2026-11-26/",
+   "publishDate": "2026-11-26T18:50:29.163000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Turkey needs to overhaul its financial regulators after an investment fund scandal that has sent a chill through the country's capital markets, five bankers and a former senior official said.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Kazakhstan boosts AI cooperation with Russia, which is hungry for advanced US chips",
+   "link": "https://www.reuters.com/business/finance/kazakhstan-boosts-ai-cooperation-with-russia-which-is-hungry-advanced-us-chips-2026-11-26/",
+   "publishDate": "2026-11-26T18:48:44.656000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Kazakhstan's President Kassym-Jomart Tokayev advanced his country's AI ambitions at Russia's main AI conference on Thursday, telling President Vladimir ​Putin that Russian companies Sberbank and Yandex were welcome in Kazakhstan's market.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Major East Midlands road projects shelved to divert funding to defence",
+   "link": "https://www.theguardian.com/world/2026/nov/26/major-east-midlands-road-projects-shelved-to-divert-funding-to-defence",
+   "publishDate": "2026-11-26T18:47:24+00:00",
+   "source": "www.theguardian.com",
+   "summary": "Regional mayor says cancelling works on A38 at Derby and Newark bypass on A46 ‘disappointing and short-sighted’Two long-awaited major road schemes have been cancelled to divert more than £400m into defence spending, the government has confirmed.Upgrades to roundabouts on the A38 around Derby and to the Newark bypass on the A46 will be shelved. Continue reading...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Goldman Sachs Stocks Edge Lower After Touching a 52-Week Low of $772.74",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/goldman-sachs-stocks-edge-lower-184158246.html",
+   "publishDate": "2026-11-26T18:41:58+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The bank's 8% weekly slide tracks AI-linked risk, including about $44 billion of notes it helped arrange for SpaceX GPUs.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Arista Networks Stocks Fall 2.71% as AI Networking Gets Caught in Chip Rout",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/arista-networks-stocks-fall-2-183806415.html",
+   "publishDate": "2026-11-26T18:38:06+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The data center switch maker slipped with semiconductors, while GuruFocus still rates it a perfect 100 and modestly undervalued.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Mastercard Stocks Rise 1.94% as Payment Networks Gain in AI Selloff Rotation",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/mastercard-stocks-rise-1-94-183721566.html",
+   "publishDate": "2026-11-26T18:37:21+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Mastercard, Visa and American Express all rose while the Nasdaq fell, leaving Mastercard within 2% of its early November record.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Trump calls GDP data released before midterms ‘fake’, demands investigation",
+   "link": "https://www.aljazeera.com/economy/2026/11/26/trump-calls-gdp-data-released-before-midterms-fake-demands-investigation",
+   "publishDate": "2026-11-26T18:27:27+00:00",
+   "source": "www.aljazeera.com",
+   "summary": "President says it was a deliberate decision to release 'fake' growth numbers before US midterm elections.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Alphabet Stocks Slip 2.13% as Credit Swaps Hit Record Amid $9.1 Billion Cash Burn",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/alphabet-stocks-slip-2-13-182601811.html",
+   "publishDate": "2026-11-26T18:26:01+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Five-year default swaps reached a record as third-quarter capex of $51.4 billion pushed free cash flow below zero.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Poundstretcher’s US owner plots sale in new threat for high street",
+   "link": "https://finance.yahoo.com/news/poundstretcher-us-owner-plots-sale-182444503.html",
+   "publishDate": "2026-11-26T18:24:44+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The high street discount retailer Poundstretcher is being lined up for a sale by its US owners just a day after its larger rival Poundland collapsed into administration.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Poundstretcher’s US owner plots sale in new threat for high street",
+   "link": "https://finance.yahoo.com/small-business/articles/poundstretcher-us-owner-plots-sale-182444499.html",
+   "publishDate": "2026-11-26T18:24:44+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The high street discount retailer Poundstretcher is being lined up for a sale by its US owners just a day after its larger rival Poundland collapsed into administration.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Elon Musk doubles SpaceX share pledge for U.S. children",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/elon-musk-doubles-spacex-share-182234919.html",
+   "publishDate": "2026-11-26T18:22:34+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Every child in the U.S. will receive one share of SpaceX from the company and one from Elon Musk.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Inflation May Have Peaked in October: Economists Split on How Many Fed Hikes Are Effectively Needed",
+   "link": "https://www.benzinga.com/markets/economic-data/26/11/63662948/inflation-may-have-peaked-economists-split-fed-hikes",
+   "publishDate": "2026-11-26T18:20:06.104000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "Cleveland Fed nowcast sees flat November consumer prices as inflation may have peaked at 3.8%. Core PCE hit 3.3% and economists split on Fed hikes. TLT rallied.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Some old-school advice for Burnham: boost competition if you want growth | Nils Pratley",
+   "link": "https://www.theguardian.com/business/nils-pratley-on-finance/2026/nov/26/old-school-advice-burnham-boost-competition-if-you-want-growth",
+   "publishDate": "2026-11-26T18:19:14+00:00",
+   "source": "www.theguardian.com",
+   "summary": "Two former Treasury officials say the value of competition and disruption has become ‘the blind spot of UK economic policy’The defenestration of Marcus Bokkerink in the Keir Starmer-Rachel Reeves era is half-forgotten now – but the saga was a big deal in January 2025 and should still matter to those at the top of today’s government.Bokkerink was chair of the Competition and Markets Authority (CMA) until he was turfed out because, it seemed, he was deemed insufficiently aligned with the Starmer-Reeves idea that regulators should “support growth”. Bokkerink hit back by warning of the dangers of political interference and competition authorities becoming “vulnerable to short-term expediency or vested interests”. Continue reading...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Goldman Sachs sends strong signal on Amazon stock before Black Friday",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/goldman-sachs-sends-strong-signal-181700120.html",
+   "publishDate": "2026-11-26T18:17:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "One overlooked detail could change the entire outlook.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Bitcoin Holds Above $60K as Death Cross Clouds Thanksgiving Recovery",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-holds-above-60k-death-181529981.html",
+   "publishDate": "2026-11-26T18:15:29+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Bitcoin and major altcoins rose slightly on Thanksgiving, but a bearish death cross suggests crypto remains weaker than stocks.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "What would be the fallout from a nuclear-armed satellite detonated into space?",
+   "link": "https://www.theguardian.com/world/2026/nov/26/what-would-be-the-fallout-from-a-nuclear-armed-satellite-detonated-into-space",
+   "publishDate": "2026-11-26T18:13:33+00:00",
+   "source": "www.theguardian.com",
+   "summary": "⁠Sputnik-S, a nuclear-enabled satellite has been reportedly assembled by Russia and could be launched in 60 daysRussia is reportedly preparing to launch a nuclear-armed satellite into space later this year, in a scenario that could pose a significant threat to global communications.German media outlets have reported, citing western intelligence agency assessments, that such a satellite could be launched within 60 days and would be operational shortly afterwards. Continue reading...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Sánchez and Socialists Poised to Lose Power in Spain",
+   "link": "https://www.wsj.com/opinion/sanchez-and-socialists-poised-to-lose-power-in-spain-4ccd535d",
+   "publishDate": "2026-11-26T18:03:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "After eight years, the far-left government faces a major challenge from two parties of the right.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Why So Many College Students Are Majoring in Sports Business",
+   "link": "https://www.wsj.com/lifestyle/careers/why-so-many-college-students-are-majoring-in-sports-business-adc82aa1",
+   "publishDate": "2026-11-26T18:00:00+00:00",
+   "source": "www.wsj.com",
+   "summary": "From athlete-branding deals to women’s leagues, booming demand for specialized sports-industry skills is reshaping business majors across the U.S.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Trump demands probe into ‘record setting error’ after third-quarter GDP data gets massive revision higher",
+   "link": "https://www.cnbc.com/2026/11/26/trump-gdp-revision-investigation.html",
+   "publishDate": "2026-11-26T17:57:32+00:00",
+   "source": "www.cnbc.com",
+   "summary": "President Donald Trump on Thursday deemed the latest gross domestic product revision a historic mistake, claiming that it should be \"immediately investigated.\"",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "EU leaders struggle to agree on long-term budget, more money for Ukraine",
+   "link": "https://www.aljazeera.com/economy/2026/11/26/eu-leaders-struggle-to-agree-on-long-term-budget-more-money-for-ukraine",
+   "publishDate": "2026-11-26T17:53:44+00:00",
+   "source": "www.aljazeera.com",
+   "summary": "The bloc is holding an extraordinary summit in Brussels to discuss its budget proposal for 2028 to 2034.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Spain’s Pablo Hernández de Cos wins race to be next ECB president",
+   "link": "https://www.yahoo.com/news/articles/spain-pablo-hern-ndez-cos-175054221.html",
+   "publishDate": "2026-11-26T17:50:54+00:00",
+   "source": "www.yahoo.com",
+   "summary": "Former Bank of Spain governor chosen to succeed Christine Lagarde after winning support of EU’s biggest countries",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Spain’s Pablo Hernández de Cos wins race to be next ECB president",
+   "link": "https://www.theguardian.com/business/2026/nov/26/spain-pablo-hernandez-de-cos-next-ecb-president",
+   "publishDate": "2026-11-26T17:50:54+00:00",
+   "source": "www.theguardian.com",
+   "summary": "Former Bank of Spain governor chosen to succeed Christine Lagarde after winning support of EU’s biggest countriesSpain’s Pablo Hernández de Cos has been chosen as the next president of the European Central Bank, to succeed Christine Lagarde, after winning support from the EU’s biggest countries.The economist and monetary policymaker will become the first Spaniard to lead the ECB, defeating his rival candidate Klaas Knot, the former head of the Dutch central bank. Continue reading...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Fed rate-hike bets deliver fresh blow to your holiday budget",
+   "link": "https://finance.yahoo.com/economy/policy/articles/fed-rate-hike-bets-deliver-174700533.html",
+   "publishDate": "2026-11-26T17:47:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Hot PCE inflation, new tariff proposals strengthen expectations for a December rate hike and more price increases in 2027.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Stock Valuations Just Fell to 2018 Levels: Last Time, the Recession Never Came",
+   "link": "https://www.benzinga.com/markets/equities/26/11/63662867/stock-valuations-2018-levels-recession-yardeni-sp-500-correction",
+   "publishDate": "2026-11-26T17:45:07.451000+00:00",
+   "source": "www.benzinga.com",
+   "summary": "S&P 500 valuations fell to 2018 levels as investors price a recession, but GDP grew 4.3%. Ed Yardeni sees a correction, not a bear market.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "European stocks end higher on easing tariff fears, ECB leadership continuity",
+   "link": "https://finance.yahoo.com/markets/world-indices/articles/european-stocks-end-higher-easing-174244569.html",
+   "publishDate": "2026-11-26T17:42:44+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "By Purvi Agarwal and Johann M Cherian Nov 26 (Reuters) - European shares rose sharply on Thursday, lifted by a broad-based rally as investors took comfort from signs that planned US tariffs on the",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Argentina enters technical recession despite Milei's economic reforms",
+   "link": "https://finance.yahoo.com/economy/articles/argentina-enters-technical-recession-despite-172352384.html",
+   "publishDate": "2026-11-26T17:23:52+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Argentina's economy shrank 1.8% in the third quarter, its second decline, as weak consumption and falling purchasing power cloud Javier Milei's prospects.View on euronews",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "3 Eurozone Bank Stocks Retail Investors Are Watching As ECB Policy Shifts",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/3-eurozone-bank-stocks-retail-171134146.html",
+   "publishDate": "2026-11-26T17:11:34+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Eurozone banks are back in the spotlight as Pablo Hernandez de Cos prepares to take the helm at the ECB, with a more dovish tone on rates and a bigger question over how far Frankfurt goes to shield high debt countries if bond markets flare up. That mix of inflation near double target, shifting board power and possible intervention creates clear winners and bystanders. This article unpacks three euro area banking stocks most exposed to that story and explains why their reactions to this policy...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Mexico urges Asian trade partners to crack down on tariff dodging",
+   "link": "https://www.reuters.com/world/china/mexico-urges-asian-trade-partners-crack-down-tariff-dodging-2026-11-26/",
+   "publishDate": "2026-11-26T17:09:24.105000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Mexico called on its Asian trade partners on Thursday to tighten checks aimed at ​preventing tariff evasion, as the country faces pressure from ‌Washington to curb the flow of Chinese goods through North American supply chains.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Mexico urges Asian trade partners to crack down on tariff dodging",
+   "link": "https://finance.yahoo.com/news/mexico-urges-asian-trade-partners-170916224.html",
+   "publishDate": "2026-11-26T17:09:16+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "MEXICO CITY, Nov 26 (Reuters) - Mexico called on its Asian trade partners on Thursday to tighten checks ‌aimed at preventing tariff evasion, as the country faces ‌pressure from Washington to curb the flow of Chinese goods through North American supply ​chains. Economy Minister Marcelo Ebrard, speaking at a meeting of Pacific Rim trade ministers in Vietnam, urged countries to strengthen enforcement of rules determining where goods are made and whether they qualify for preferential tariffs.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Bank of America issues blunt 2027 hard-landing warning on S&P 500",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/bank-america-issues-blunt-2027-170300642.html",
+   "publishDate": "2026-11-26T17:03:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Wall Street may be missing a bigger threat.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Elon Musk didn’t sell a single share in SpaceX’s record $85.7B IPO. Anthropic’s 7 cofounders cashed out $1.96B in theirs",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/elon-musk-didn-t-sell-170000854.html",
+   "publishDate": "2026-11-26T17:00:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Musk says he has no plans to sell his SpaceX shares, while Anthropic’s founders pocketed nearly $2 billion from their IPO. But insider selling doesn’t necessarily spell trouble for investors.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Spain's former central bank head chosen as next European Central Bank president",
+   "link": "https://abcnews.com/International/wireStory/leaders-choose-spains-former-central-bank-head-european-138468703",
+   "publishDate": "2026-11-26T16:48:04+00:00",
+   "source": "abcnews.com",
+   "summary": "Eurozone leaders have chosen a new president of the European Central Bank",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Hagar hf.: Announcement of Share Buyback by way of a Reverse Offer Process",
+   "link": "https://www.globenewswire.com/news-release/2026/11/26/3410981/0/en/hagar-hf-announcement-of-share-buyback-by-way-of-a-reverse-offer-process.html",
+   "publishDate": "2026-11-26T16:47:47+00:00",
+   "source": "www.globenewswire.com",
+   "summary": "At the Annual General Meeting of Hagar hf. (“the Company”) held on 21 May 2026, the Company was authorised to purchase, within the next 18 months from the date of approval, shares in the Company representing up to 10% of the Company’s total share capital, for the purpose of establishing a formal share buyback programme, including by way of a reverse offer process, establishing market making and/or fulfilling the Company’s obligations under share option agreements in accordance with the Company’s share option plans.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Global stocks move upward despite shock warning from Panmure Liberum analyst who sold all equities in his personal portfolio",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/global-stocks-move-upward-despite-164723346.html",
+   "publishDate": "2026-11-26T16:47:23+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "There is nothing but bad news on the horizon, multiple Wall Street and London City analysts said in emails to Fortune.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Victory Capital Holdings (VCTR) Rose on Record Q2 Results",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/victory-capital-holdings-vctr-rose-164657364.html",
+   "publishDate": "2026-11-26T16:46:57+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Granahan Investment Management, an investment management company, released its third-quarter 2026 investor letter for its “Focused Growth Strategy”. The letter can be downloaded here. In Q3 2026, the Granahan Focused Growth portfolio returned -6.9%, outperforming the Russell 2000 Growth benchmark’s -9.4%. The quarter faced challenges from rising oil prices and interest rates, leading to a […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Trump calls GDP figures 'fake' and demands an investigation of Commerce Department",
+   "link": "https://abcnews.com/Politics/wireStory/trump-calls-gdp-figures-fake-demands-investigation-commerce-138469221",
+   "publishDate": "2026-11-26T16:45:19+00:00",
+   "source": "abcnews.com",
+   "summary": "President Donald Trump is suggesting without evidence a conspiracy within the government to report upwardly revised economic growth figures after the midterm elections that were disastrous for Republicans",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Underappreciated AI Beneficiary Zeta Global (ZETA) Expands Full-Year Guidance Across the Board",
+   "link": "https://finance.yahoo.com/technology/ai/articles/underappreciated-ai-beneficiary-zeta-global-164509491.html",
+   "publishDate": "2026-11-26T16:45:09+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Granahan Investment Management, an investment management company, released its third-quarter 2026 investor letter for its “Focused Growth Strategy”. The letter can be downloaded here. In Q3 2026, the Granahan Focused Growth portfolio returned -6.9%, outperforming the Russell 2000 Growth benchmark’s -9.4%. The quarter faced challenges from rising oil prices and interest rates, leading to a […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "European Central Bank set to appoint its first Spanish leader",
+   "link": "https://finance.yahoo.com/economy/policy/articles/european-central-bank-set-appoint-164435154.html",
+   "publishDate": "2026-11-26T16:44:35+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The European Central Bank looks set to name Pablo Hernández de Cos its next president, marking the first time that Spain will helm one of the world’s most influential central banks.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Here’s What Pulled Back FTAI Aviation Ltd. (FTAI) in Q3",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/pulled-back-ftai-aviation-ltd-163931315.html",
+   "publishDate": "2026-11-26T16:39:31+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Granahan Investment Management, an investment management company, released its third-quarter 2026 investor letter for its “Focused Growth Strategy”. The letter can be downloaded here. In Q3 2026, the Granahan Focused Growth portfolio returned -6.9%, outperforming the Russell 2000 Growth benchmark’s -9.4%. The quarter faced challenges from rising oil prices and interest rates, leading to a […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Germany must prepare for two more difficult years with Trump, DIW's Fratzscher says",
+   "link": "https://www.reuters.com/world/germany-must-prepare-two-more-difficult-years-with-trump-diws-fratzscher-says-2026-11-26/",
+   "publishDate": "2026-11-26T16:37:53.579000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Germany has to prepare for ‌two more very difficult years with President Donald Trump in the White House, DIW president Marcel Fratzscher told Reuters on Thursday, a day after Trump unveiled new tariffs.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Gold jumps 19 spots on the Roundtable 100",
+   "link": "https://finance.yahoo.com/markets/commodities/articles/gold-jumps-19-spots-roundtable-163000928.html",
+   "publishDate": "2026-11-26T16:30:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Gold is trading way lower than its January highs.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Oil Markets Face Another Potential Threat to Household Fuel Costs",
+   "link": "https://finance.yahoo.com/energy/articles/oil-markets-face-another-potential-162336490.html",
+   "publishDate": "2026-11-26T16:23:36+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "A familiar global threat could complicate America's inflation outlook.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Scott Bessent sends the Fed a stern warning it cannot ignore",
+   "link": "https://finance.yahoo.com/economy/policy/articles/scott-bessent-sends-fed-stern-161700193.html",
+   "publishDate": "2026-11-26T16:17:00+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Scott Bessent stepped into the Fed’s most contentious debate of the year. The timing was not an accident.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Sector-Wide Infrastructure De-Rating Pulled Back Forgent Power Solutions (FPS) in Q3",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/sector-wide-infrastructure-rating-pulled-161443951.html",
+   "publishDate": "2026-11-26T16:14:43+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Granahan Investment Management, an investment management company, released its third-quarter 2026 investor letter for its “Focused Growth Strategy”. The letter can be downloaded here. In Q3 2026, the Granahan Focused Growth portfolio returned -6.9%, outperforming the Russell 2000 Growth benchmark’s -9.4%. The quarter faced challenges from rising oil prices and interest rates, leading to a […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Stellantis (BIT:STLAM) Stock Looks Undervalued With Sales Priced Very Low",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/stellantis-bit-stlam-stock-looks-161341983.html",
+   "publishDate": "2026-11-26T16:13:41+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Stellantis has seen its share price fall sharply in recent years, and the slide puts fresh focus on a simple question for investors who care about valuation: what are buyers today really paying for the company’s sales? Over the past 3 years the stock has declined 80.9%, which forces investors to reassess how much value the market is assigning to Stellantis' revenue base. Current headlines around stalled Canadian production, funding disputes and cost inflation highlight how future plant use,...",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Marlboro maker plots takeover of £27bn British tobacco giant",
+   "link": "https://finance.yahoo.com/news/marlboro-maker-plots-takeover-27bn-161207331.html",
+   "publishDate": "2026-11-26T16:12:07+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "The US maker of Marlboro cigarettes is plotting a £27bn takeover of Imperial Brands, in a deal likely to prompt fresh fears over the future of the London Stock Exchange.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Investors’ Concerns Weighed on Indie Semiconductor (INDI) in Q3",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/investors-concerns-weighed-indie-semiconductor-160950684.html",
+   "publishDate": "2026-11-26T16:09:50+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Granahan Investment Management, an investment management company, released its third-quarter 2026 investor letter for its “Focused Growth Strategy”. The letter can be downloaded here. In Q3 2026, the Granahan Focused Growth portfolio returned -6.9%, outperforming the Russell 2000 Growth benchmark’s -9.4%. The quarter faced challenges from rising oil prices and interest rates, leading to a […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Trump calls GDP figures ‘fake’ and demands an investigation of Commerce Department",
+   "link": "https://apnews.com/article/trump-gdp-economy-midterms-4fd800b44005ae11f950f96ff62f876e",
+   "publishDate": "2026-11-26T16:08:14+00:00",
+   "source": "apnews.com",
+   "summary": "",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Walmart, Amazon Face Surprising Shopping Shift",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/walmart-amazon-face-surprising-shopping-160813140.html",
+   "publishDate": "2026-11-26T16:08:13+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "A familiar holiday tradition is exposing deeper economic pressures.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Declining Reinsurance Costs and Capital Building Support Multi-Year Growth for Porch Group (PRCH)",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/declining-reinsurance-costs-capital-building-160416426.html",
+   "publishDate": "2026-11-26T16:04:16+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Granahan Investment Management, an investment management company, released its third-quarter 2026 investor letter for its “Focused Growth Strategy”. The letter can be downloaded here. In Q3 2026, the Granahan Focused Growth portfolio returned -6.9%, outperforming the Russell 2000 Growth benchmark’s -9.4%. The quarter faced challenges from rising oil prices and interest rates, leading to a […]",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "Explainer: Spain's snap election — why it matters and who might win?",
+   "link": "https://www.reuters.com/world/europe/spains-snap-election-why-it-matters-who-might-win-2026-11-26/",
+   "publishDate": "2026-11-26T16:00:42.026000+00:00",
+   "source": "www.reuters.com",
+   "summary": "Spain goes to the polls on Sunday in an early parliamentary election that may usher in a right-wing coalition to replace the Socialist-led minority government of Prime Minister Pedro Sanchez, one of Europe's last leftist leaders.",
+   "sentiment": null,
+   "confidence": null
+  },
+  {
+   "title": "‘I’d Be Having My Thanksgiving Dinner at McDonald’s’: Warren Buffett Credited ‘Uncle Sam’ for Saving His Holiday — And the U.S. Economy",
+   "link": "https://finance.yahoo.com/economy/policy/articles/d-having-thanksgiving-dinner-mcdonald-160002807.html",
+   "publishDate": "2026-11-26T16:00:02+00:00",
+   "source": "finance.yahoo.com",
+   "summary": "Buffett credited the U.S. government’s 2008 bailout response with preventing a financial collapse that could have changed everything.",
+   "sentiment": null,
+   "confidence": null
+  }
+ ]
+}

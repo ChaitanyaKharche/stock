@@ -14300,3 +14300,10 @@
 {"seq":664638,"ts":"2026-11-23T11:49:09.094638","kind":"degraded_bar","detail":"1m gap before 11:48","symbol":"DIA"}
 {"seq":664969,"ts":"2026-11-23T11:56:02.269943","kind":"degraded_bar","detail":"1m gap before 11:55","symbol":"DIA"}
 {"seq":666797,"ts":"2026-11-23T12:33:08.162140","kind":"degraded_bar","detail":"1m gap before 12:32","symbol":"DIA"}
+{"seq":724793,"ts":"2026-11-27T13:00:07.860534","kind":"stale_quote","detail":"XLI age=5.3s"}
+{"seq":724802,"ts":"2026-11-27T13:00:07.890606","kind":"stale_quote","detail":"XLF age=5.5s"}
+{"seq":724839,"ts":"2026-11-27T13:01:05.166129","kind":"stale_quote","detail":"XLY age=61.1s"}
+{"seq":724840,"ts":"2026-11-27T13:01:05.170149","kind":"stale_quote","detail":"XLI age=34.5s"}
+{"seq":724845,"ts":"2026-11-27T13:01:05.181115","kind":"stale_quote","detail":"XLP age=61.5s"}
+{"seq":724846,"ts":"2026-11-27T13:01:05.183107","kind":"stale_quote","detail":"XLE age=34.4s"}
+{"seq":724847,"ts":"2026-11-27T13:01:05.190105","kind":"stale_quote","detail":"XLF age=62.9s"}
